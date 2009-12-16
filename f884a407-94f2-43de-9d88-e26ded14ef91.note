@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простые числа</title>
+  <text xml:space="preserve"><note-content version="0.1">Простые числа
+
+
+<link:internal>Человек который принял жену за шляпу</link:internal>
+
+Два делителя - <link:internal>1</link:internal> и само себя.
+
+*Решето Эратосфена*
+
+Пример для n = 20
+
+Запишем натуральные числа начиная от 2 до 20 в ряд:
+2   3   4   5   6   7   8   9   10   11   12   13   14   15   16   17   18   19   20
+
+Первое число в списке 2 — простое. Пройдём по ряду чисел, вычёркивая все числа кратные 2 (каждое второе, начиная с 2^2 = 4):
+ 2   3   5  7   9  11  13  15  17  19
+ 
+ Следующее невычеркнутое число 3 — простое. Пройдём по ряду чисел, вычёркивая все числа кратные 3 (каждое третье, начиная с 3^2 = 9): 
+  2   3   5  7  11  13  17  19
+  
+Следующее невычеркнутое число 5 — простое. Пройдём по ряду чисел, вычёркивая все числа кратные 5 (каждое пятое, начиная с 5^2 = 25). И т. д.
+
+Необходимо провести вычёркивания кратных для всех простых чисел p, для которых p^2 &lt;= n
+
+_Насколько я понимаю при вычеркивании чисел считать надо и те, которые уже вычеркнуты._
+
+!!! sqrt(n)
+
+&lt;&lt;pre
+from math import ceil
+from math import sqrt
+
+num_count = 100
+
+bit_array = [<link:internal>1</link:internal> for x in range(num_count)]
+
+for num in range(2, ceil(sqrt(num_count))):
+   <link:internal>if</link:internal> (bit_array[num] == <link:internal>1</link:internal>):
+      for j in range(num*2, num_count, num):
+     bit_array[j] = 0
+
+for num in range(2, num_count):
+   <link:internal>if</link:internal> (bit_array[num] == <link:internal>1</link:internal>):
+      print num
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.6279210+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.6279210+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:15:10.3351980+03:00</create-date>
+  <cursor-position>16</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

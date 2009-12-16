@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формат данных ячейки</title>
+  <text xml:space="preserve"><note-content version="0.1">Формат данных ячейки
+
+
+А если нужно число и если длинна номера постоянная, то можно восстанавливать нулями до нужной длинны. 
+_Range("A1").NumberFormat = "0000000"_
+
+_Cells(1,1).NumberFormat:='0,00'_
+</note-content></text>
+  <last-change-date>2008-03-30T07:41:36.5573610+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:41:36.5573610+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:41:34.3752140+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

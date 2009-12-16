@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Горячие клавиши emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Горячие клавиши emacs
+
+C-x C-c - выход
+C-h t - помощь
+
+(С) - посимвольно, (M) - побуквенно
+	p - вверх
+	n - вниз
+	f - вперед
+	b - назад
+	a - начало строки
+	e - конец сроки
+        
+C-v - экран вниз
+M-v - экран вверх
+C+l - центрировать текущую строку
+M &amp;lt; - начало текста
+M &amp;gt; - конец текста
+
+C u &amp;lt;кол-во&amp;gt; C f - квантор движения
+C - q - отменить ввод команды
+
+Ctrl+x 0 Закрыть текущее окно.
+Ctrl+x 1 Закрыть все окна, кроме текущего.
+
+C-d - удалить следующее
+M-d -удалить предыдущее
+C-k - удалить до конца строки
+M-k - удаляет до конца предложения
+
+C+пробел - начать выделение
+С+g сбросить выделение
+C+W-вырезать выделенное
+M+W-скопировать выделенное
+C+y- вставить
+M+y - (похоже) заменить
+
+C+x u - undo
+
+C+x f - открыть файл
+C+x C-s записать файл
+
+C+x C+b - список буферов
+C+x b - выбрать буфер
+
+C+z выйти с запоминанием сессии
+
+<bold>Поиск</bold>
+
+<list><list-item dir="ltr">C+s 	поиск
+</list-item><list-item dir="ltr">С+r 	поиск азад
+</list-item><list-item dir="ltr">Alt+x 	replace-string
+</list-item><list-item dir="ltr">Alt+x query-replace	замена. При каждом появлении найденного образца задаётся вопрос о замене, на который нужно ответить "y" или "n".
+</list-item><list-item dir="ltr">M-w C-s M-y  поиск уже выделенного фрагмента</list-item></list>
+
+C+M+v скроллировать нижнее(?) окно
+C+x o - другое окно
+C+x 4 C+f открыть файл в 4-м окне
+C+x 2 разделить окно по вертикали
+C+x 3 разделить окно по горизонтали
+С+x + балансировка клавиш
+
+C+[[c C]]+c запустить программу на [[<link:internal>python</link:internal>]]'
+M+x number - переходит к строке
+
+Alt+x [[<link:internal>python</link:internal>]]-mode
+Пример выбора основного режима для текущего буфера.
+Часто правильный выбор основного режима происходит автоматически при открытии файла.
+
+Alt+x [[<link:internal>shell</link:internal>]] - Запуск интерактивной оболочки в отдельном буфере *[[<link:internal>shell</link:internal>]]*
+
+</note-content></text>
+  <last-change-date>2009-08-23T00:28:22.9419850+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-23T00:28:22.9419850+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T16:57:36.0659330+03:00</create-date>
+  <cursor-position>1033</cursor-position>
+  <width>688</width>
+  <height>484</height>
+  <x>215</x>
+  <y>338</y>
+  <open-on-startup>False</open-on-startup>
+</note>

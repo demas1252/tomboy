@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Flow Control in Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Flow Control in Clojure
+
+<bold><link:internal>if</link:internal></bold>
+
+	(defn is-small? [number]
+	  (<link:internal>if</link:internal> (&lt; number 100) "yes"))
+
+
+	(defn is-small? [number]
+	  (<link:internal>if</link:internal> (&lt; number 100) "yes" "no"))
+
+	(defn is-small? [number]
+	  (<link:internal>if</link:internal> (&lt; number 100)
+	    "yes"
+	    (do 
+	      (println "Saw a big number" number)
+	      "no")))
+
+<bold>loops</bold>
+
+(loop [result [] x 5]
+  (<link:internal>if</link:internal> (zero? x)
+    result
+    (recur (conj result x) (dec x))))
+
+ здесь 	resuls binds to []
+     		x binds to 5
+
+  при рек вызове
+		results &lt;= result + x
+		x &lt;= dec x
+
+это же можно записать так:
+
+(defn countdown [result x]
+  (<link:internal>if</link:internal> (zero? x)
+    result
+    (recur (conj result x) (dec x))))
+
+(countdown [] 5)
+
+кстати все это можно сделать кучей более простых способов:
+
+	(into [] (take 5 (iterate dec 5)))
+
+или
+
+	(into [] (drop-last (reverse (range 6))))
+
+или
+
+	(vec (reverse (rest (range 6))))
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.4500670+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.4500670+04:00</last-metadata-change-date>
+  <create-date>2009-07-27T10:55:51.4469460+04:00</create-date>
+  <cursor-position>763</cursor-position>
+  <width>450</width>
+  <height>751</height>
+  <x>143</x>
+  <y>67</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка нового винчестера</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка нового винчестера
+
+<link:internal>1</link:internal>. Подключаем винт и смотрим, что его видит bios
+2. GParted - форматируем
+3. sudo lshw -<link:internal>C</link:internal> disk
+   Смотрим в какой /dev/ подключился новый винт
+4. Создаем точку монтирования: sudo mkdir<link:url> /media/mynewdrive</link:url>
+5. ls -lF<link:url> /dev/disk/by-uuid/</link:url> - смотрим UUID
+6. gksudo gedit<link:url> /etc/fstab</link:url>
+  <link:url> /dev/hdd1</link:url>   <link:url> /media/mynewdrive</link:url>   ext3    defaults     0        2
+7. sudo chown -R demas:demas<link:url> /media/mynewdrive</link:url> </note-content></text>
+  <last-change-date>2008-06-15T23:42:46.7345840+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.7345840+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T09:05:20.6509630+04:00</create-date>
+  <cursor-position>23</cursor-position>
+  <width>514</width>
+  <height>360</height>
+  <x>183</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

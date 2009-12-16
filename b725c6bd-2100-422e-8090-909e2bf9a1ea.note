@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реверсирование срок</title>
+  <text xml:space="preserve"><note-content version="0.1">Реверсирование срок
+
+По символам:
+
+revchars = list(astring)       # string -&gt; list of chars
+revchars.reverse(  )           # reverse the list in place
+revchars = ''.join(revchars)   # list of strings -&gt; string
+
+По словам:
+
+revwords = astring.split(  )       # string -&gt; list of words
+revwords.reverse(  )               # reverse the list in place
+revwords = ' '.join(revwords)      # list of strings -&gt; string
+</note-content></text>
+  <last-change-date>2008-03-28T13:10:04.1722920+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T13:10:04.1722920+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:10:02.9641280+03:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

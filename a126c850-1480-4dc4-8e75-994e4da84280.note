@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>processPrepayment()</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>processPrepayment</link:internal>()
+
+Метод перебирает VendTrans где
+	контрагент, ваучер, валюта берутся из фактуры
+        так же проверяется PrepaymentFactureId_W в предоплате = FactureId в накладной (см. <link:internal>Предоплаты полученные. НДС к вычету</link:internal>)
+	prepayment = Yes
+
+	....</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.9180700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.9180700+04:00</last-metadata-change-date>
+  <create-date>2009-01-23T23:34:47.9595250+03:00</create-date>
+  <cursor-position>21</cursor-position>
+  <width>670</width>
+  <height>360</height>
+  <x>956</x>
+  <y>529</y>
+  <open-on-startup>False</open-on-startup>
+</note>

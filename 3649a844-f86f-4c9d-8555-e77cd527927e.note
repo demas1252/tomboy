@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Клавиатурные макросы emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Клавиатурные макросы emacs
+
+Ctrl+x Shift+(
+Начало записи макроса.
+
+Ctrl+x Shift+)
+Конец записи макроса.
+
+Ctrl+x e
+Воспроизведение только что определённого макроса.
+
+Alt+x name-last-kbd-macro
+Задание имени только что определённому макросу.
+
+Alt+x &lt;имя макроса&gt;
+Выполнение макроса по его имени.
+
+Alt+x insert-kbd-macro
+Вставить в текущий буфер LISP-код ранее записанного поименованного макроса.
+Если дополнить этим кодом файл<link:url> ~/.emacs</link:url>, то макрос будет определён при каждом старте <link:internal>emacs</link:internal>.
+
+====================================================================================================
+
+Ctrl+q &lt;восьмеричный код&gt;
+Ввод символов по коду.
+Например, 15 - возврат каретки.</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.9933810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.9933810+04:00</last-metadata-change-date>
+  <create-date>2009-01-02T13:20:06.5013120+03:00</create-date>
+  <cursor-position>260</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>537</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

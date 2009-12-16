@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>WINS</title>
+  <text xml:space="preserve"><note-content version="0.1">WINS
+
+<link:internal>Windows</link:internal> Internet Name Service — cлужба сопоставления netbios-имён компьютеров с ip-адресами узлов.
+
+Сервер WINS осуществляет регистрацию имен, выполнение запросов и освобождение имен. При использовании NetBIOS поверх TCP/IP необходим WINS сервер для определения корректных IP адресов.</note-content></text>
+  <last-change-date>2009-10-12T12:00:32.0858120+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.0858120+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T15:15:21.8192629+04:00</create-date>
+  <cursor-position>258</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

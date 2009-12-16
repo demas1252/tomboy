@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Multiplexing Control Files</title>
+  <text xml:space="preserve"><note-content version="0.1">Multiplexing Control Files
+
+1. Останавливаем <link:internal>Oracle</link:internal> ([<link:internal>Oracle Startup and Shutdown</link:internal>])
+2. Находим папку где лежат contol files и создаем копию одного из них (<link:internal>C</link:internal>:\<link:internal>oracle</link:internal>\product\10.1.0\oradata\orcl)
+3. Находим папку, где лежат [<link:internal>pfile и spfile</link:internal>].  У меня это было (<link:internal>C</link:internal>:\<link:internal>oracle</link:internal>\product\10.1.0\<link:internal>Db</link:internal>_4\database).  Если совсем тяжело найти, можно перемоздать pfile и поискать init&lt;sid&gt;.ora по дате создания.
+4. Удаляем spfile (ибо он пользуется преимуществом и система не подхваит наши изменения в pfile) или переноим его куда-нибудь.
+5. Правим там строку, где перечисляются control_files, добавив новый control_file.
+6. Стартуем <link:internal>Oracle</link:internal> ([<link:internal>Oracle Startup and Shutdown</link:internal>]).
+7. Создаем spfile (как было)  -  create spfile from pfile;
+
+По идее, можно внести изменения сразу в spfileб но у меня <link:internal>oracle</link:internal> ругался на alter system set <link:internal>control files</link:internal> = </note-content></text>
+  <last-change-date>2009-09-24T14:37:02.8755140+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.8755140+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:59:56.8097729+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

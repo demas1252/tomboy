@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Grub</title>
+  <text xml:space="preserve"><note-content version="0.1">Grub
+
+<link:internal>Установка нескольких систем одновременно</link:internal></note-content></text>
+  <last-change-date>2009-11-05T16:12:00.2010920+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:12:00.2010920+03:00</last-metadata-change-date>
+  <create-date>2009-04-05T14:00:30.5363430+04:00</create-date>
+  <cursor-position>6</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>991</x>
+  <y>430</y>
+  <open-on-startup>False</open-on-startup>
+</note>

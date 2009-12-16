@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Кодирование видео</title>
+  <text xml:space="preserve"><note-content version="0.1">Кодирование видео
+
+
+<link:internal>1</link:internal>. Грабим dvd на винчестер.  Есть DvdDecrypter - хорош, но у него один недостаток - не умеет клеить Vob в один файл (если настроить AviSync то, наверное, это будет не важно.  Еще есь vStrop. На первый закладке выбираем vob файлы, на третьей - выходной файл и жмем run.
+2. На второй закладке открываем inf файл, чтобы посмотреть какие там есть аудио потоки и какой из них нам нужен (0x80).
+3. Запускаем gspot - если хотем посмотреть параметры видео. Тут смотрим его формат 4:3 или 16:9.  Разрешение (720x480).
+4. Запускаем VirtualDubMod. Открываем vod и загружаем преднастройки. При открытии указываем звуковую дорожку.
+5. Преднастройки уже практически все установили, но все равно стоит проверить:
+    - Streams - Stream List - Compression - Mpeg Layer 3 - Show All Formats - 56x24000xStereox7
+    - Streams - Stream List - Full Processing Mode
+    - <link:internal>Video</link:internal> - Filters - Resize - Bilinear (если уменьшаем), Bicubicle - если растягиваем. Первый размер - 640.  Второй 640 / размер вильма (720) * размер фильма (480).
+    - <link:internal>Video</link:internal> - Filters - DeInterlace - если наблюдается черезстрочная развертка, но я ее не вижу.
+    - <link:internal>Video</link:internal> - Frame Rate - Process every <link:internal>other</link:internal> frame (decimate by 2)
+    - <link:internal>Video</link:internal> - Color Depth - Везде 24
+    - <link:internal>Video</link:internal> - Compression - Xvid - Single <link:internal>Pass</link:internal> - 800 kbps 
+6. File - Save As
+
+*Примечания*
+
+<link:internal>1</link:internal>. Есть смысл попробовать другие кодеки. Например, платный divX
+2. Если есть время, можно попробовать двухпроходное кодирование
+3. Приемлимое качество выходит при примерно 98kb/s(<link:internal>video</link:internal>). Это примерно 6-7 Мб на минуту видео.
+4. Скорость сжатия - примерно 2x
+
+*Дальнейшее развитие*
+
+<link:internal>1</link:internal>. Довольно перспективная вещь avi synch. Позволяет писать скипты, который соберут фильм из нескольких частей, перекодируют их, нарежут, если необходимо и т.д.
+2. Кодеки</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.0335500+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.0335500+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:51:19.2387520+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

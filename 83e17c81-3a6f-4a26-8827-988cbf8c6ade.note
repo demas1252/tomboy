@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проблемы со вставкой insert recordset</title>
+  <text xml:space="preserve"><note-content version="0.1">Проблемы со вставкой insert recordset
+
+
+<link:url>http://www.axforum.info/forums/showthread.php?p=158913#post158913</link:url>
+
+Запрос:
+&lt;&lt;pre
+<link:internal>insert_recordset</link:internal> 
+    TotalsTmp (itemId, qty,inventLocationId)
+    select itemId, sum(Qty), inventLocationId 
+        from TotalsTrans
+    group by ItemId, InventLocationId
+    where TotalsTrans.SalesDate &gt;= 01\01\2008 &amp;&amp; TotalsTrans.SalesDate &lt;= systemDateGet();
+
+&gt;&gt;
+<link:internal>Трассировка</link:internal>:
+&lt;&lt;pre
+INSERT INTO DKL_TOTALSTMP (ITEMID,QTY,<link:internal>RECID</link:internal>)SELECT F<link:internal>1</link:internal>,F2,47928911+ROWNUM FROM <link:internal>axapta</link:internal>_tmp_dat20707
+ORA-00904: "F2": invalid identifier
+
+&gt;&gt;
+
+<link:internal>Запросы</link:internal> идущие на <link:internal>Oracle</link:internal>:
+&lt;&lt;pre
+CREATE TABLE <link:internal>axapta</link:internal>_tmp_mil511419 AS 
+SELECT SUM(A.QTY) AS f<link:internal>1</link:internal>, 'mil' AS DATAAREAID, 0 AS RECVERSION, 0 AS <link:internal>RECID</link:internal> 
+FROM TOTALSTRANS A 
+WHERE ((SUBSTR(NLS_LOWER(DATAAREAID),<link:internal>1</link:internal>,3)=NLS_LOWER('mil')) AND ((SALESDATE&gt;=TO_DATE('2008-01-01 00:00:00','YYYY-MM-<link:internal>DD</link:internal> HH24:MI:SS')) AND (SALESDATE&lt;=TO_DATE('2008-02-05 00:00:00','YYYY-MM-<link:internal>DD</link:internal> HH24:MI:SS')))) 
+GROUP BY SUBSTR(NLS_LOWER(A.ITEMID),<link:internal>1</link:internal>,10),SUBSTR(NLS_LOWER(A.INVENTLOCATIONID),<link:internal>1</link:internal>,10) 
+ORDER BY SUBSTR(NLS_LOWER(A.ITEMID),<link:internal>1</link:internal>,10),SUBSTR(NLS_LOWER(A.INVENTLOCATIONID),<link:internal>1</link:internal>,10)
+
+INSERT INTO TOTALSTRANSTMP (ITEMID,QTY,DATAAREAID,RECVERSION,<link:internal>RECID</link:internal>)SELECT F<link:internal>1</link:internal>,F2,DATAAREAID,RECVERSION,366563892+ROWNUM FROM <link:internal>axapta</link:internal>_tmp_mil511419
+&gt;&gt;
+
+В первом <link:internal>SQL</link:internal> видно, что <link:internal>Axapta</link:internal> не создала поля F2, которое использует позже в запросе.</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.1655560+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.1655560+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:35:16.1457870+04:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

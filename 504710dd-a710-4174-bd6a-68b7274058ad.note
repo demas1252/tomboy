@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Приведение типов в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Приведение типов в Python
+
+<italic>v = "123"
+print v
+i = int(v)
+print i
+</italic>
+tuple([1,2])</note-content></text>
+  <last-change-date>2009-06-24T11:45:18.6669340+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-24T11:45:18.6669340+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:10:26.1261560+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>335</x>
+  <y>551</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Modal verbs</title>
+  <text xml:space="preserve"><note-content version="0.1">Modal verbs
+
+<italic>Первый способ использования</italic>
+
+can/could = ability
+may/might = permission
+will/would = prediction
+shall = prediction
+should/ought to = duty
+must = total obligation
+needn't = no obligation
+
+1. must не имеет прошедшего времени - had to
+2. want <bold>to</bold> <italic>be able</italic> (not can)
+3. must phone (without <italic>to</italic>)
+4. no (-s) in 3rd person singular
+
+<italic>Второй способ использования
+
+</italic>to express <italic>certainty</italic> or <italic>uncertanty</italic>
+
+He mightt/could/must/can't be right.
+
+past: He must have been right.</note-content></text>
+  <last-change-date>2008-12-28T21:01:18.6963940+03:00</last-change-date>
+  <last-metadata-change-date>2008-12-28T21:01:18.6963940+03:00</last-metadata-change-date>
+  <create-date>2008-12-28T13:52:31.7234650+03:00</create-date>
+  <cursor-position>438</cursor-position>
+  <width>450</width>
+  <height>647</height>
+  <x>29</x>
+  <y>120</y>
+  <open-on-startup>False</open-on-startup>
+</note>

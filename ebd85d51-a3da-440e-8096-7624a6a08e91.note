@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Passwod Security</title>
+  <text xml:space="preserve"><note-content version="0.1">Passwod Security
+
+
+_Профиль_ - набор ограничений на пароль и ресурсы.
+
+FAILED_LOGIN_ATTEMPTS - количество неудачных входов пока аккаунт не будет заблокирован
+PASSWORD_LOCK_TIME - количество дней на сколько ее заблокировали
+PASSWORD_LIFE_TIME - через сколько дней надо менять пароль
+PASSWORD_GRACE_TIME - сколько дней мы еще дадим пользователю, чтобы поменять пароль
+PASSWORD_REUSE_TIME - количество дней, через которые можно повторно использовать старый пароль
+PASSWORD_REUSE_MAX - сколько раз можно использовать старый пароль
+PASSWORD_VERIFY_FUNCTION - функция, проверяющая пароль на сложность
+
+Все ограничения задаются в профиле и профиль назначается пользователю.  Есть default профиль.
+
+[<link:internal>Создание профиля</link:internal>]
+[<link:internal>Изменение профиля</link:internal>]
+[<link:internal>Чувтсвительность пароля к регистру</link:internal>]</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.0025140+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.0025140+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:39:30.9427390+03:00</create-date>
+  <cursor-position>731</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

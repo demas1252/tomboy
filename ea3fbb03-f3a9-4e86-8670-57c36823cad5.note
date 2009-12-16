@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отмена списания ОС</title>
+  <text xml:space="preserve"><note-content version="0.1">Отмена списания ОС
+
+      Было списано 2 ОС. Оказалось, что списывать было не нужно.
+      Аристов написал job (SCR00002701)
+
+      RassetId - номер ОС.
+
+      ttsbegin;
+            Rassettable = Rassettable::<link:internal>find</link:internal>(RassetId, true); // <link:internal>основные средства</link:internal>
+            while select forupdate RassetStandards
+                  where RassetStandards.AssetId == Rassettable.AccountNum // для каждой модели учета ОС
+      {
+            select forupdate RassetTrans // берем проводки ОС
+                  where RassetTrans.AccountNum == Rassettable.AccountNum
+                  &amp;&amp; RassetTrans.assetStandardId == RassetStandards.assetStandardId
+                  &amp;&amp; (RassetTrans.AssetTransType == RassetTransType::Disposal
+                        || RassetTrans.AssetTransType == RassetTransType::DisposalSale
+                        || RassetTrans.AssetTransType == RassetTransType::DisposalScrap); // Тип операции = списание, выбытие(продажа), выбытие(разборка)
+            <link:internal>if</link:internal> (RassetTrans)
+            {
+                  delete_from LedgerJournalTrans where LedgerJournalTrans.Voucher == RassetTrans.Voucher
+                        &amp;&amp; LedgerJournalTrans.TransDate == RassetTrans.TransDate; // строки журналов
+                  delete_from <link:internal>LedgerTrans</link:internal> where <link:internal>LedgerTrans</link:internal>.Voucher == RassetTrans.Voucher
+                        &amp;&amp; <link:internal>LedgerTrans</link:internal>.TransDate == RassetTrans.TransDate; // бух проводки
+
+                  RassetTrans.dodelete();
+                  RassetStandards.DisposalDate = datenull();
+                  RassetStandards.doupdate();
+            }
+            cntDel++;
+      }
+
+      <link:internal>if</link:internal> (cntDel)
+      {
+            Rassettable.DisposalDate = datenull(); // дата списания
+            Rassettable.Status = RassetStatus::Open; // статус основного средства
+            Rassettable.doUpdate();
+      }
+            ttscommit; </note-content></text>
+  <last-change-date>2009-10-17T22:10:58.8176200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.8176200+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:31:27.3789049+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>603</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>pdb</title>
+  <text xml:space="preserve"><note-content version="0.1">pdb
+
+import pdb
+
+pdb.set_trace() # &lt;-- debug from here
+
+n - следующее выражение
+- повторить предыдыущую команду
+q - выйти
+p &lt;&gt; - напечаать значение выражения
+c - продолжить выполнение программы
+l - показать окрестность кода, где мы сейчас находимся
+s - step into
+r - выйти из процедуры
+var1 = "dasd" - изменить значение переменной</note-content></text>
+  <last-change-date>2009-07-09T10:41:24.6083180+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-09T10:41:24.6083180+04:00</last-metadata-change-date>
+  <create-date>2009-07-09T10:40:59.8007500+04:00</create-date>
+  <cursor-position>5</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>664</y>
+  <open-on-startup>False</open-on-startup>
+</note>

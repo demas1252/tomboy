@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировки</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировки
+
+<link:internal>Bubble sort (сортировка пузырьком)</link:internal>
+<link:internal>Cocktail sort (сортировка перемешиванием)</link:internal>
+<link:internal>Srtaight insertion</link:internal>
+<link:internal>Shells method</link:internal> (diminishing increment sort)
+<link:internal>Insertion sort</link:internal>
+<link:internal>Bucket Sort (блочная сортировка)</link:internal>
+<link:internal>Radix sort (поразрядная сортировка)</link:internal>
+<link:internal>Stupid sort (глупая сортировка)</link:internal>
+Быстрая сортировка
+Пирамидальная сортировка
+Сортировка бинарным деревом
+<link:internal>Сортировка подсчетом</link:internal>
+Сортировка слиянием
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.8284330+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.8284330+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:13:54.5228580+03:00</create-date>
+  <cursor-position>267</cursor-position>
+  <width>832</width>
+  <height>335</height>
+  <x>173</x>
+  <y>102</y>
+  <open-on-startup>False</open-on-startup>
+</note>

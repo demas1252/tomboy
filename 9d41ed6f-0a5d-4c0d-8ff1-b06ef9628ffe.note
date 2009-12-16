@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>партионная себестоимость</title>
+  <text xml:space="preserve"><note-content version="0.1">партионная себестоимость
+
+
+Нигде в Dynamics AX нет специальной настройки для включения режима партионной себестоимости. Тем не менее – если в настройках группы складских аналитик поставить галку "Финансовый <link:internal>склад</link:internal>" для складских аналитик "Номер партии" или "Серийный номер", то при закрытии склада по ЛЮБОЙ модели мы и получим режим партионной себестоимости, поскольку сопоставление приходов и расходов будет идти только в рамках одного номера партии или серийного номера. Разумнее всего, для той номенклатуры, у которой включен партионный учет, ставить модель закрытия склада по FIFO, поскольку с технической точки зрения она быстрее всего работает.</note-content></text>
+  <last-change-date>2008-04-06T15:07:09.1048410+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:07:09.1048410+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:30:32.2485010+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

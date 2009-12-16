@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Emacs и Mercurial</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Emacs</link:internal> и Mercurial
+
+<link:url>http://xtalk.msk.su/~ott/ru/writings/emacs-vcs/EmacsMercurial.html</link:url>
+
+(Cx v =)  diff
+(Cc h =) diff по всему репозиторию
+q - закрыть этот буфер
+(Cx v n) commit (пробелом можно выделять файлы)
+	(Ccc - подтвердить)
+	(Cx v =) diff
+	(Cck) abort
+(Cc h a) <link:internal>add</link:internal> file to repo
+(Cc h s) status
+(Cx v l) file <link:internal>history</link:internal>
+(Cc h l) repo <link:internal>history</link:internal>
+
+hg-pull (С-с h &lt;)
+hg-push (С-с h &gt;)
+
+Есть еще aHg, но я его даже не смотрел</note-content></text>
+  <last-change-date>2009-11-23T13:19:49.8807850+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.8807850+03:00</last-metadata-change-date>
+  <create-date>2009-01-02T16:11:59.6924030+03:00</create-date>
+  <cursor-position>320</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1073</x>
+  <y>225</y>
+  <open-on-startup>False</open-on-startup>
+</note>

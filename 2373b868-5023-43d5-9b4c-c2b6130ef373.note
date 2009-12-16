@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>List, Iteration and Recursion</title>
+  <text xml:space="preserve"><note-content version="0.1">List, Iteration and Recursion
+
+<italic>&gt; (length (list "a" "b" "<link:internal>c</link:internal></italic><italic>"))        ; count the elements
+  3
+&gt; (list-ref (list "a" "b" "<link:internal>c</link:internal></italic><italic>") 0)    ; extract by position
+  "a"
+&gt; (list-ref (list "a" "b" "<link:internal>c</link:internal></italic><italic>") 1)
+  "b"
+&gt; (append (list "a" "b") (list "<link:internal>c</link:internal></italic><italic>")) ; combine lists
+  ("a" "b" "<link:internal>c</link:internal></italic><italic>")
+&gt; (reverse (list "a" "b" "<link:internal>c</link:internal></italic><italic>"))       ; reverse order
+  ("<link:internal>c</link:internal></italic><italic>" "b" "a")
+&gt; (member "d" (list "a" "b" "<link:internal>c</link:internal></italic><italic>"))    ; check for an element
+  #f</italic>
+
+<link:internal>Заменить N-ый элемент в списке</link:internal>
+
+<bold>List loops</bold>
+
+<italic>&gt; (<link:internal>map</link:internal></italic><italic> sqrt (list 1 4 9 16))</italic>
+  (1 2 3 4)
+<italic>&gt; (<link:internal>map</link:internal></italic><italic> (<link:internal>lambda</link:internal></italic><italic> (i)
+           (string-append i "!"))
+         (list "peanuts" "popcorn" "crackerjack"))
+</italic>  ("peanuts!" "popcorn!" "crackerjack!")
+
+<italic>&gt; (filter string? (list "a" "b" 6))</italic>
+  ("a" "b")
+<italic>&gt; (filter positive? (list 1 -2 6 7 0))</italic>
+  (1 6 7)
+
+<italic>&gt; (<link:internal>map</link:internal></italic><italic> (<link:internal>lambda</link:internal></italic><italic> (s n) (substring s 0 n))
+         (list "peanuts" "popcorn" "crackerjack")
+         (list 6 3 7))
+</italic>  ("peanut" "pop" "cracker")
+
+<italic>&gt; (foldl (<link:internal>lambda</link:internal></italic><italic> (elem v)
+             (+ v (* elem elem)))
+           0
+           '(1 2 3))
+</italic>  14
+
+<link:internal>Собственная реализация length</link:internal>
+<link:internal>Собственная реализация map</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:36.2445460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.2445460+04:00</last-metadata-change-date>
+  <create-date>2008-10-03T13:19:17.0695020+04:00</create-date>
+  <cursor-position>402</cursor-position>
+  <width>530</width>
+  <height>730</height>
+  <x>498</x>
+  <y>187</y>
+  <open-on-startup>False</open-on-startup>
+</note>

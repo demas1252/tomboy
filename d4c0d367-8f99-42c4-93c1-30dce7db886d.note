@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Контейнеры</title>
+  <text xml:space="preserve"><note-content version="0.1">Контейнеры
+
+<link:internal>C</link:internal> большими конейнерами следует быть поосторожнее.
+Например, на так строку [#macros] = packedValues; компилятор может ругнуться "ошибка компилятора в переполнение стека..."
+Кроме того, надо следить, чтобы #macros + остаок не превысили 1000 символов.
+
+Поэтому запихивать лучше поэлементно:
+&lt;&lt;pre
+for (_i=_start;_i&lt;=_start+_cnt;_i++)
+        _ret += conPeek(_<link:internal>c</link:internal>,_i);
+
+[#Server2Client] = packedServer;
+[#Server2Client_X] = conCopy(packedServer,47,7);
+ return [#Server2Client] + [#Server2Client_X];
+
+&gt;&gt;
+</note-content></text>
+  <last-change-date>2008-03-30T07:34:12.5380960+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:34:12.5380960+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:34:10.2609770+04:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1032</x>
+  <y>518</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Галочки в ячейке excel</title>
+  <text xml:space="preserve"><note-content version="0.1">Галочки в ячейке excel
+
+
+Исходный текс листа, а там:
+
+_'CODE <link:internal>1</link:internal> Ставим флажок, если был одиночный щелчок по ячейке
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+    <link:internal>If</link:internal> Target.Cells.Count &gt; <link:internal>1</link:internal> Then Exit Sub
+        <link:internal>If</link:internal> Not Intersect(Target, Range("A2:A100")) Is Nothing Then
+            Target.Font.Name = "Marlett"
+            <link:internal>If</link:internal> Target = vbNullString Then
+                Target = "a"
+            Else
+                Target = vbNullString
+            End <link:internal>If</link:internal>
+        End <link:internal>If</link:internal>
+End Sub
+
+'CODE 2 Снимаем флажок, если был двойной щелчок по ячейке
+
+Private Sub Worksheet_BeforeDoubleClick(ByVal Target As Range, Cancel As Boolean)
+
+    <link:internal>If</link:internal> Not Intersect(Target, Range("A2:A100")) Is Nothing Then
+        Cancel = True 'Prevent going into Edit Mode
+        Target.Font.Name = "Marlett"
+            <link:internal>If</link:internal> Target = vbNullString Then
+                Target = "a"
+            Else
+                Target = vbNullString
+            End <link:internal>If</link:internal>
+    End <link:internal>If</link:internal>
+End Sub
+_</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.2507460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.2507460+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:05:44.3407790+04:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

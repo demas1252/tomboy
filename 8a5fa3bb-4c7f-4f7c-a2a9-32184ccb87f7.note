@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CreateProcess</title>
+  <text xml:space="preserve"><note-content version="0.1">CreateProcess
+
+
+1. Система создает объект ядра "процесс" с начальным значением счетчика пользователей = 1.  Этот объект - всего лишь структура данных, через которую ОС управляет процессом.
+2. Система создает для процесса виртуальное адресное пространство и загружает в него код и данные.
+3. Система создает объект ядра "поток".
+4. Первичный поток начинает выполнение стартового кода библиотеки С++, которая, в свою очередь, вызывает WinMain.
+
+Пример использования:
+&lt;&lt;pre
+#include &lt;<link:internal>windows</link:internal>.h&gt;
+
+int <link:internal>WINAPI</link:internal> WinMain (HINSTANCE hInstance, HINSTANCE, PSTR szCmdLine, int iCmdShow) {
+   STARTUPINFO si = { sizeof(si) };
+   PROCESS_INFORMATION pi;
+   TCHAR szCommandLine[] = TEXT("NOTEPAD");
+   CreateProcess(NULL, szCommandLine, NULL, NULL, FALSE, 0, NULL, NULL, &amp;si, &amp;pi);
+   return (0);
+}
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-03-27T12:30:24.7423950+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-27T12:30:24.7423950+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:59:28.9483120+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

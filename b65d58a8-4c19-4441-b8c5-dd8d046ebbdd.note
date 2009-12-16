@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Узнать тип объекта в массиве</title>
+  <text xml:space="preserve"><note-content version="0.1">Узнать тип объекта в массиве
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    public abstract class PE {
+    }
+
+    public class Car : PE
+    {
+        public int drive;
+    }
+
+    public class Fly : PE
+    {
+        public string name;
+    }
+
+    class Program
+    {
+        static void Main(string[] <link:internal>args</link:internal>)
+        {
+            PE[] array = new PE[10];
+
+            for (int i = 0; i &lt; 5; i++)
+                array[i] = new Car();
+            for (int i = 5; i &lt; 10; i++)
+                array[i] = new Fly();
+
+            foreach (Object element in array)
+                Console.WriteLine(element.GetType().FullName);
+
+            Console.ReadKey();
+        }
+    }
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.1531310+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.1531310+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:01:37.2444010+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Таблицы в latex</title>
+  <text xml:space="preserve"><note-content version="0.1">Таблицы в latex
+
+\begin{tabular}[<link:internal>c</link:internal>]{l|ll}
+1 &amp; 2 &amp; 3 \\ \hline
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{tabular}
+</note-content></text>
+  <last-change-date>2008-10-16T13:08:49.2085150+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-16T13:08:49.2085150+04:00</last-metadata-change-date>
+  <create-date>2008-10-16T13:07:28.4067500+04:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>557</width>
+  <height>240</height>
+  <x>0</x>
+  <y>29</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перестроить все индексы</title>
+  <text xml:space="preserve"><note-content version="0.1">Перестроить все индексы
+
+<bold>Данного owner-a:</bold>
+
+spool D:\rebuild.<link:internal>sql</link:internal>
+
+SELECT    'Alter index '
+             ||OWNER
+             ||'.'
+             || index_name
+             || ' rebuild' AS action
+        FROM all_indexes
+      where owner in ('Нужный Овнер<link:internal>1</link:internal>', 'Нужный Овнер 2', .......)
+
+spool off
+@D:\rebuild.<link:internal>sql</link:internal> -- предварительно удалив заголовки и расставив точки с запятой в конце каждой строчки
+
+<bold>Все индексы на одной таблице:</bold>
+
+select 'alter index '||index_name||' rebuild;' from user_indexes where table_name=xxx
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.1724850+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.1724850+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:47:43.4679530+03:00</create-date>
+  <cursor-position>110</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>112</x>
+  <y>657</y>
+  <open-on-startup>False</open-on-startup>
+</note>

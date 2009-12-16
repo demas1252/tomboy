@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание индексов ms sql</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание индексов ms sql
+
+
+*Синтаксис*
+
+CREATE INDEX.....
+
+FILLFACTOR - можно задать fillfactor отличный от серверного
+PAD_INDEX - по умолчанию место в индексе резервируется (для fillfactor) только в листьях индекса (данных для кластерного).  PAD_INDEX  говорит серверу использовать fillfactor для всех уровней дерева.
+DROP_EXISTING - выполняет удаление и создание индекса в одной транзакции.  Полезно для кластерного индекса, чтобы избежать перестройки узлов 2 раза.
+IGNORE_DUP_KEY - если всавляется куча записей одна из которых нарушает уникальность, то откатятся все.  Чтобы изменить это поведение используется данная опция.
+SORT_IN_<link:internal>TEMPDB</link:internal> - выполнять <link:internal>сортировки</link:internal> в <link:internal>TEMPDB</link:internal>. По умолчанию в той же filegroup где будет разиещен индекс.
+STATISTICS_NORECOMPUTE - не собирать автоматически статистику по индексу. Перекрывает настройки сервера.
+MAXDOP - количество процессоров, участвующих в построении индекса.  Перекрывает настройки сервера.
+INCLUDE - по умолчанию, индекс включает макс 16 столбцов (или 900 байт).   Included columns включаются только в листья индекса. Это не позволяет воспользоваться фильтрацией и сортировкой по ним, но они могут быть полезны при создании покрывающего индекса.
+
+
+Когда мы создаем PRIMARY KEY или UNIQUE costrains - реально создаеся индекс.  Абсолютно аналогичный простому.  Разница только в удалении.  DROP INDEX - для удаления индекса; ALTER TABLE для удаления индекса связанного с constraint.</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.8432530+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.8432530+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:08:22.1859020+03:00</create-date>
+  <cursor-position>795</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>498</x>
+  <y>604</y>
+  <open-on-startup>False</open-on-startup>
+</note>

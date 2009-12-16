@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MS SQL Profiler</title>
+  <text xml:space="preserve"><note-content version="0.1">MS SQL Profiler
+
+
+Show all events, show all columns
+
+Column Filter: DatabaseId
+Events: Cursor(все кроме Implicit Conversation, Recompile),  Stored Procedure(Deprecated, OutputParameter, Completed, Starting, Completed, Recompile, Starting, StmtCompleted, StmtStarting), <link:internal>TSQL</link:internal>(все кроме XQuery)
+
+Иденитификтор <link:internal>базы данных</link:internal>
+
+<italic>select <link:internal>db</link:internal></italic><italic>_id()</italic></note-content></text>
+  <last-change-date>2009-12-07T15:42:40.9153770+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-07T15:42:40.9153770+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:51:47.2848200+03:00</create-date>
+  <cursor-position>320</cursor-position>
+  <width>489</width>
+  <height>360</height>
+  <x>1155</x>
+  <y>82</y>
+  <open-on-startup>False</open-on-startup>
+</note>

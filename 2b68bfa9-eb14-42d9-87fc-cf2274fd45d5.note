@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перераспределение проводок</title>
+  <text xml:space="preserve"><note-content version="0.1">Перераспределение проводок
+
+   Доступность клавиши определяется как _custVendTransReorgButton.enabled(element.chkCustVendTransReorg());_
+     Здесь мы перебираем все маркировки по данному контрагенту и смотрим: _vendTransLocal.AmountCur &gt;= 0_ - то есть это перераспределение доступно тодько для накладных, но не оплат.
+     Для оплат разбиение похоже бессмысленно:
+     
+     [source: Valery]
+     _Идеологически эта функциональность предназначена для разбиения одной открытой проводки по накладной на несколько с разными датами "оплатить до". Т.к. для платежей дата "оплатить до" бессмысленна, то эта функциональность для них отключена._
+     
+     С другой стороны, там же на форуме (<link:url>http://www.axforum.info/forums/showthread.php?t=9180&amp;highlight=сопоставление+открытых+проводок</link:url>) предложили [<link:internal>код позволяющий разбивать и платежи</link:internal>].
+     
+      Всем этим перераспределением занимается класс CustVendTransReorg*, который запускает форму CustVendTransReorg.
+      Из формы строки разбиения передаются в класс и дергается reorganize().
+      CustVendTransReorg. void reorganize(TmpCustVendTransReorg _tmpCustVendTransReorg) &lt;-- сюда свалилась строка разбиения.  Там создаются новые проводки, а сумма в основной уменьшается, а затем удаляется.</note-content></text>
+  <last-change-date>2009-10-12T12:00:40.4676670+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:40.4676670+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:08:38.6999620+03:00</create-date>
+  <cursor-position>829</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

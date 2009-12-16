@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Vmware in Suse</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Vmware</link:internal> in Suse
+
+&gt; ---first problem-----
+&gt; Your <link:internal>kernel</link:internal> was built with "<link:internal>gcc</link:internal>" version "4.3.1", while you are trying to
+&gt; use "/usr/bin/<link:internal>gcc</link:internal>" version "4.3". This configuration is not recommended and
+&gt; <link:internal>VMware</link:internal> Server may crash <link:internal>if</link:internal> you'll continue. Please try to use exactly same
+&gt; compiler as one <link:internal>used</link:internal> for building your <link:internal>kernel</link:internal>. Do you want to go with
+&gt; compiler "/usr/bin/<link:internal>gcc</link:internal>" version "4.3" anyway?
+&gt; --- end of first problem ---  
+
+This is known problem with the script itself. Just hit yes - it works.
+
+&gt;
+&gt; I know what it means, but wait.. I thought I was under a plain vanilla <link:internal>SuSE</link:internal>.
+&gt; Obviously not. How to I remedy this situation?
+&gt;
+&gt; --- second problem ---
+&gt; The directory of <link:internal>kernel</link:internal> headers (version 2.6.25.11-0.1-pae) does not match
+&gt; your running <link:internal>kernel</link:internal> (version 2.6.25.9-0.2-pae).  Even <link:internal>if</link:internal> the module were to
+&gt; compile successfully, it would not load into the running <link:internal>kernel</link:internal>.
+&gt; ---end of second problem ---
+&gt;
+&gt; No so it doesn't seem. But wait, I didn't touch the bl.... <link:internal>kernel</link:internal>. And I DID
+&gt; update (or so I thought) the <link:internal>kernel</link:internal> source and headers and all. It seems
+&gt; not, though...
+&gt;
+&gt; Any hints?
+&gt; As always, - thanks a million!  
+
+check the versions of the headers and the <link:internal>kernel</link:internal>-sources packages. <link:internal>If</link:internal>
+they match, then you need to perform make cloneconfig &amp;&amp; make
+<link:internal>modules</link:internal>_prepare in<link:url> /usr/src/linux</link:url></note-content></text>
+  <last-change-date>2009-10-17T22:10:53.6517840+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:53.6517840+04:00</last-metadata-change-date>
+  <create-date>2008-09-04T11:15:10.1988600+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>134</x>
+  <y>154</y>
+  <open-on-startup>False</open-on-startup>
+</note>

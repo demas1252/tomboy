@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>ReXml</title>
+  <text xml:space="preserve"><note-content version="0.1">ReXml
+
+require 'rexml/document'
+require 'rexml/streamlistener'
+include REXML
+
+# read xml
+
+file = File.new("bibliography.xml")
+doc = Document.new(file)
+root = doc.root
+
+puts root.elements[1].elements["author"]
+puts root.elements["biblioentry[@id='FHIW13C-1260']"]
+puts root.each_element('//author') { |author|
+  puts author }
+
+# create xml
+
+doc2 = Document.new
+doc2.add_element("bibliography", { "id" =&gt; "philisophy" })
+doc2.root.add_element("biblioentry")
+author = Element.new("author")
+author.add_element("firstname")
+author.elements["firstname"].text = "Bertrand"
+biblioentry = doc2.root.elements[1]
+biblioentry &lt;&lt; author
+puts doc2
+
+# stream parser
+
+class Listener
+  include StreamListener
+  def tag_start(name, attributes)
+    puts "Start #{name}"
+  end
+  def tag_end(name)
+    puts "End #{name}"
+  end
+end
+
+listener = Listener.new
+parser = Parsers::StreamParser.new(File.new("bibliography.xml"), listener)
+parser.parse
+</note-content></text>
+  <last-change-date>2009-07-21T22:30:32.2593780+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-21T22:30:32.2593780+04:00</last-metadata-change-date>
+  <create-date>2009-07-21T22:29:58.0630850+04:00</create-date>
+  <cursor-position>7</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>226</x>
+  <y>349</y>
+  <open-on-startup>False</open-on-startup>
+</note>

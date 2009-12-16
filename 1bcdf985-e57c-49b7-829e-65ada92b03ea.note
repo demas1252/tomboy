@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Примеры операций над вероятностями</title>
+  <text xml:space="preserve"><note-content version="0.1">Примеры операций над вероятностями
+
+<link:internal>Бросок двух монет</link:internal></note-content></text>
+  <last-change-date>2009-06-10T10:02:39.9910000+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:02:39.9910000+04:00</last-metadata-change-date>
+  <create-date>2009-06-10T10:01:49.9293940+04:00</create-date>
+  <cursor-position>36</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1005</x>
+  <y>48</y>
+  <open-on-startup>False</open-on-startup>
+</note>

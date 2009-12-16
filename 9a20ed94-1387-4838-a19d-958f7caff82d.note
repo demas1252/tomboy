@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получить стек вызовов</title>
+  <text xml:space="preserve"><note-content version="0.1">Получить стек вызовов
+
+xSession::xppCallStack();
+
+Возвращает контейнер</note-content></text>
+  <last-change-date>2008-03-28T15:03:30.3389320+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T15:03:30.3389320+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:03:28.8989210+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>10</x>
+  <y>79</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Модули в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Модули в Python
+
+Ну при импорте выполняется последовательно код модуля. Если это объявление класса, функции, метода, то выполняется объявление этих объектов, сами они, естественно, не выполняются при этом.
+
+Код модуля в питоне исполняется при первом импорте. Далее, он запоминает, что модуль импортирован и при последующих импортах код модуля не выполняется.
+
+demas@laptop:~/sources/study/<link:internal>python</link:internal>/<link:internal>modules</link:internal>$ cat m1.py
+<italic>print "1"</italic>
+
+demas@laptop:~/sources/study/<link:internal>python</link:internal>/<link:internal>modules</link:internal>$ cat m2.py
+<italic>import m1
+print "2"
+</italic>
+demas@laptop:~/sources/study/<link:internal>python</link:internal>/<link:internal>modules</link:internal>$ cat m3.py 
+<italic>import m1
+import m2
+print "3"
+</italic>
+demas@laptop:~/sources/study/<link:internal>python</link:internal>/<link:internal>modules</link:internal>$ <link:internal>python</link:internal> m3.py 
+<italic>1
+2
+3
+</italic></note-content></text>
+  <last-change-date>2008-10-08T13:08:36.3654260+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-08T13:08:36.3654260+04:00</last-metadata-change-date>
+  <create-date>2008-09-18T12:01:58.1804520+04:00</create-date>
+  <cursor-position>360</cursor-position>
+  <width>751</width>
+  <height>443</height>
+  <x>828</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

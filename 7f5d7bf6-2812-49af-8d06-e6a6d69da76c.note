@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Excel programming</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Excel</link:internal> programming
+
+<link:internal>Обработка ошибок</link:internal>
+<link:internal>События объектов</link:internal>
+
+<bold><link:internal>Excel</link:internal></bold><bold> Scripts Library</bold>
+
+<link:internal>Worksheet Tab Names</link:internal>
+<link:internal>Перебрать все шрифты</link:internal>
+<link:internal>Обработать изменения на листе</link:internal>
+<link:internal>Запускать макрос при открытии шаблона</link:internal>
+<link:internal>Определить последнюю строку</link:internal>
+<link:internal>Загрытие без запроса о сохранении</link:internal>
+<link:internal>Позиционирование выделенной ячейки</link:internal>
+<link:internal>Перебрать все ячейки определенного типа</link:internal>
+<link:internal>Диапазон - от ячейки и до конца</link:internal>
+<link:internal>Узнать скрыта ли ячейка</link:internal>
+<link:internal>Обновить все ячейки</link:internal>
+<link:internal>Сохранение переиенных между вызовами</link:internal>
+<link:internal>Динамически создавать выпадающий список</link:internal>
+<link:internal>Создание объекта типа Range</link:internal>
+<link:internal>Экспортировать в CVS с произвольным разделителем</link:internal>
+<link:internal>Массив имен выделенных листов</link:internal>
+<link:internal>Имя столбца по его номеру</link:internal>
+<link:internal>Спозиционировать рисунок по размерам range</link:internal>
+<link:internal>Диалог выбора range</link:internal>
+<link:internal>Выделить несколько листов</link:internal>
+<link:internal>Определить установлен ли фильтр</link:internal>
+<link:internal>User Defined Functions</link:internal>
+<link:internal>Суммирование в ячейке всех введенных данных</link:internal>
+<link:internal>Удалить строки по определенному условию</link:internal>
+<link:internal>Галочки в ячейке excel</link:internal>
+<link:internal>Сортировка по цвету шрифта</link:internal>
+<link:internal>Отобразить все зависимости на листе</link:internal>
+<link:internal>Сохранение файла без лишних вопросов</link:internal>
+     
+<bold>Работа с ячейками</bold>
+
+<link:internal>Условная раскраска области</link:internal>
+<link:internal>Формат данных ячейки</link:internal>
+<link:internal>Установить формат ячеек</link:internal>
+<link:internal>Изменение шрифта части ячейки</link:internal>
+<link:internal>Очистить ячейку</link:internal>
+     
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.2901120+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.2901120+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:40:12.1216680+04:00</create-date>
+  <cursor-position>923</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1058</x>
+  <y>457</y>
+  <open-on-startup>False</open-on-startup>
+</note>

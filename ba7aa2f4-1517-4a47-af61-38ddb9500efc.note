@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Экспортировать в CVS с произвольным разделителем</title>
+  <text xml:space="preserve"><note-content version="0.1">Экспортировать в CVS с произвольным разделителем
+
+
+_Sub Макрос<link:internal>1</link:internal>()   
+    ActiveWorkbook.SaveAs Filename:= "<link:internal>C</link:internal>:\Documents and Settings\grebcov\Мои документы\К<link:internal>1</link:internal>.<link:internal>csv</link:internal>", FileFormat:= xlCSVMSDOS, CreateBackup:=False, Local:=","
+End Sub_</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.3133350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.3133350+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:03:42.1996390+04:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

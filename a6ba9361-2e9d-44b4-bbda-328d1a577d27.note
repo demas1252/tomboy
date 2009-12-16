@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Контекстно свободная грамматика</title>
+  <text xml:space="preserve"><note-content version="0.1">Контекстно свободная грамматика
+
+
+Это частный случай [<link:internal>Формальная грамматика</link:internal>] (тип 2 [<link:internal>Типы грамматик</link:internal>]) у которой левые части всех продукций являются нетерминалами.
+Смысл термина «контекстно-свободная» заключается в том, что возможность применить продукцию к нетерминалу, в отличие от общего случая грамматики Хомского, не зависит от контекста этого нетерминала.</note-content></text>
+  <last-change-date>2008-03-28T23:06:41.8174000+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:06:41.8174000+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:05:43.3933340+03:00</create-date>
+  <cursor-position>99</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>46</x>
+  <y>517</y>
+  <open-on-startup>False</open-on-startup>
+</note>

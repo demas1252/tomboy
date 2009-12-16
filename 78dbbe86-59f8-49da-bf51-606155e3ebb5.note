@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Введение</title>
+  <text xml:space="preserve"><note-content version="0.1">Введение
+
+<list><list-item dir="ltr">организм человека в основном состоит из углерода (50%), кислорода(20%), водорода(10%) и азота(8,5%)
+</list-item><list-item dir="ltr">основные сложные молекулы - ДНК, РНК, белки, полисахариды, липиды
+</list-item><list-item dir="ltr">ДНК и РНК называют <italic>нуклеиновыми кислотами</italic>
+</list-item><list-item dir="ltr">строительными блоками белков являются аминокислоты
+</list-item><list-item dir="ltr">полисахариды строятся из углеводов
+</list-item><list-item dir="ltr">липиды строятся из жирных кислот</list-item></list>
+</note-content></text>
+  <last-change-date>2009-07-31T13:21:19.5600980+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-31T13:21:19.5600980+04:00</last-metadata-change-date>
+  <create-date>2009-07-31T13:03:04.5848200+04:00</create-date>
+  <cursor-position>223</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>851</x>
+  <y>372</y>
+  <open-on-startup>False</open-on-startup>
+</note>

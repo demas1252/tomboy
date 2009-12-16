@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск в хеш-таблице</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск в хеш-таблице
+
+<bold>Хеш-таблица</bold> - структура данных,  реализующая интерфейс ассоциативного массива и поддерживающая три операции: добавление новой пары, поиск и удаление пары по ключу.
+
+i = hash(key) - индекс в массиве H
+
+число хранимых элементов / размер массива H - <bold>коэффициент заполнения</bold> хэш таблицы
+
+Все операции выполняются в среднем за время O(1).
+
+<bold>Разрешение коллизий</bold>
+
+<list><list-item dir="ltr">хэш таблица с прямой адресацией (список пар) - коллизия приводит к тому, что появляются списки более одного элемента. Среднее время операция примерно равно коэффициенту заполнения.</list-item></list>
+	
+<list><list-item dir="ltr">хэш таблица с открытой адресацией (массив пар). В случае коллизии алгоритм перемещает ячейку вправо до момента разрешения коллизии.  Шаг смещения вправо может тоже вычисляться с помощью хэш-функции (двойное хэширование с открытой адресацией). </list-item></list>
+
+<link:broken>Пример хэширования на Python</link:broken>
+</note-content></text>
+  <last-change-date>2009-06-09T16:03:32.3058100+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-09T16:03:32.3058100+04:00</last-metadata-change-date>
+  <create-date>2009-06-09T10:47:06.3357040+04:00</create-date>
+  <cursor-position>374</cursor-position>
+  <width>607</width>
+  <height>479</height>
+  <x>873</x>
+  <y>413</y>
+  <open-on-startup>False</open-on-startup>
+</note>

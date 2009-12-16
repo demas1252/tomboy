@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Адресная арифметика</title>
+  <text xml:space="preserve"><note-content version="0.1">Адресная арифметика
+
+Лучше всего рассмотреть на примере простейшего аллокатора памяти:
+
+#define ALLOCSIZE 10000
+
+static char  allocbuf[ALLOCSIZE];   // буфер из которого мы распределяем память
+static char = allocbuf;             // указатель на начало свободного места в буфере
+
+char *alloc(int n)                  // возвращает указатель на выделенную область под n указателей
+{
+   <link:internal>if</link:internal>(allocbuf + ALLOCSIZE - allocp) &gt;= n)   // здесь мы вычли 2 указателя друг из друга и тем самым 
+                                             // ушли от абсолютных адресов к относительным
+                                             // |allocbuf - alloc| - размер занятой области
+   {
+      allocp += n;
+      return allocp - n;
+   }
+   else 
+      return 0;
+}
+
+void afree(char *p)
+{
+   <link:internal>if</link:internal> (p &gt;= allocbuf &amp;&amp; p &lt; allocbuf + ALLOCSIZE)
+     allocp = p;
+}
+
+То есть:
+
+1. Можно вычитать указатели друг из друга, чтобы получить расстояние между ними (в тех единицах, на которые они указывают).
+2. К указателю можно прибавлять/вычитать целое, сдвигая его на соответствующее кол-во единиц того, на что они указывают.
+3. Указатели можно сравнивать между собой.
+4. Указатели можно присваивать друг другу.
+
+<link:internal>Опишите здесь свою новую заметку</link:internal>.</note-content></text>
+  <last-change-date>2009-10-17T22:10:10.9117090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:10.9117090+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:51:22.2785890+03:00</create-date>
+  <cursor-position>20</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

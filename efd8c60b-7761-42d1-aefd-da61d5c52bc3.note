@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ограничения на текстовые поля</title>
+  <text xml:space="preserve"><note-content version="0.1">Ограничения на текстовые поля
+
+
+Коллеги, подскажите...
+Существует-ли возможность выставлять на текстовые поля ограничения типа "только символы ASCII 7" (т.е. латинские)?
+
+===================================================================================================================
+
+_CREATE TABLE Table1 
+(col1 varchar(100) CHECK (col1 NOT LIKE '%[а-Я]%'))
+GO
+
+INSERT Table1 VALUES('a')
+INSERT Table1 VALUES('Z')
+INSERT Table1 VALUES('ю')
+INSERT Table1 VALUES('qweafasdfsfa')
+INSERT Table1 VALUES('qweqweюэък')
+
+SELECT * FROM Table1GODROP TABLE Table1_
+</note-content></text>
+  <last-change-date>2008-03-27T21:52:49.4682930+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:52:49.4682930+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:52:48.3339020+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выполнить код единожды на класс в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Выполнить код единожды на класс в Python
+
+# method 1                                         
+
+class One:
+        print "one's created"    # run even don't create One
+
+        def say(self):
+                print "hello"
+
+
+# method 2
+
+class Two:
+        _shared_state = { 'initialized' : False }
+
+        def __init__(self):
+                self.__dict__ = self._shared_state
+                <link:internal>if</link:internal> self.initialized:
+                        return
+
+                print "run once"
+                self.initialized = True
+
+
+two_1 = Two()
+two_2 = Two()</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.9483610+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.9483610+04:00</last-metadata-change-date>
+  <create-date>2009-10-07T16:56:17.0207430+04:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>455</x>
+  <y>403</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Diff в VIM</title>
+  <text xml:space="preserve"><note-content version="0.1">Diff в <link:internal>VIM</link:internal>
+
+:rightb vert diffsplit<link:url> ~/tmp/2.txt</link:url> - откроет панель справа и сравнит с текущим файлом.</note-content></text>
+  <last-change-date>2009-01-02T01:46:34.7002090+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-02T01:46:34.7002090+03:00</last-metadata-change-date>
+  <create-date>2008-09-14T18:39:23.4715500+04:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>903</x>
+  <y>386</y>
+  <open-on-startup>False</open-on-startup>
+</note>

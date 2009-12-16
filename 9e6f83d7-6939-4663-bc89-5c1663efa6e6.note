@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Viewing a Shared Folder</title>
+  <text xml:space="preserve"><note-content version="0.1">Viewing a Shared Folder
+
+
+Shared folders appear differently, depending on the guest operating system. The following sections describe viewing shared folders in <link:internal>Windows</link:internal> and <link:internal>Linux</link:internal> guests. 
+
+Note: You can use shared folders to share any type of file. However, <link:internal>Windows</link:internal> shortcuts and <link:internal>Linux</link:internal> symbolic links do not work correctly <link:internal>if</link:internal> you try to use them via shared folders. 
+
+Caution: Do not open a file in a shared folder from more than one application at a time. For example, you should not open the same file using an application on the host operating system and <link:internal>another</link:internal> application in the guest operating system. In <link:broken>some</link:broken> circumstances, doing so could cause data corruption in the file. 
+
+*Viewing Shared Folders in a <link:internal>Windows</link:internal> Guest*
+
+In a <link:internal>Windows</link:internal> guest operating system, you can view shared folders using <link:internal>Windows</link:internal> Explorer. Look in My Network Places (Network Neighborhood for a <link:internal>Windows</link:internal> NT guest) under <link:internal>VMware</link:internal> Shared Folders. 
+
+Note: <link:internal>If</link:internal> you have trouble finding a shared folder when using the desktop icon for My Network Places (or Network Neighborhood in <link:internal>Windows</link:internal> NT), instead open <link:internal>Windows</link:internal> Explorer and look in My Network Places (Network Neighborhood). The <link:internal>Windows</link:internal> desktop icon does not display an option for Entire Network. 
+
+For example, <link:internal>if</link:internal> you specify the name <link:internal>Test</link:internal> files for one of your shared folders, you can navigate to it by opening My Network Places &gt; <link:internal>VMware</link:internal> Shared Folders &gt; .host &gt; Shared Folders &gt; <link:internal>Test</link:internal> files. 
+
+You can also go directly to the folder using the UNC path 
+\\.host\Shared Folders\<link:internal>Test</link:internal> files. 
+
+You can <link:internal>map</link:internal> a shared folder to a drive letter just as you would with a network share. 
+
+Note: <link:internal>If</link:internal> your guest operating system has <link:internal>VMware</link:internal> Tools from Workstation 4.0, shared folders appear as folders on a designated drive letter. 
+
+*Viewing Shared Folders in a <link:internal>Linux</link:internal> Guest*
+
+In a <link:internal>Linux</link:internal> virtual machine, shared folders appear under<link:url> /mnt/hgfs</link:url>. 
+
+To change the settings for a shared folder on the list, click the folder's name to highlight it, then click Properties. The Properties dialog box appears. 
+
+Change any settings you wish, then click OK. 
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.9382150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.9382150+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:06:41.2773979+03:00</create-date>
+  <cursor-position>901</cursor-position>
+  <width>471</width>
+  <height>360</height>
+  <x>133</x>
+  <y>662</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формула Пуассона</title>
+  <text xml:space="preserve"><note-content version="0.1">Формула Пуассона
+
+При p близким к 0 или 1 <link:internal>Формула Муавра-Лапласа</link:internal> дает неудовлетворительные результаты (отличающиеся от <link:internal>Формула Бернулли</link:internal>).
+
+Для таких, редко происходящих событий подходит другое приближение:
+
+p(Sn=m) = k^m / m! * e^(-k), k=n*p.
+
+<bold>Пример:</bold>
+
+Какова <link:internal>вероятность</link:internal>, что среди 500 выбранных наугад человек двое родились 1-го мая?
+
+n=500, m=2, p=1/365, k=500/365=1,36.
+P=1,36^2 / 2! * e^(-1,36) = 0,44.</note-content></text>
+  <last-change-date>2009-06-30T11:13:21.5004170+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-30T11:13:21.5004170+04:00</last-metadata-change-date>
+  <create-date>2009-06-30T11:05:17.1499590+04:00</create-date>
+  <cursor-position>251</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>71</x>
+  <y>456</y>
+  <open-on-startup>False</open-on-startup>
+</note>

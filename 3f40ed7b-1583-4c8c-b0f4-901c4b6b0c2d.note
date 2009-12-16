@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структура регулярных выражений в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Структура регулярных выражений в Ruby
+
+=~ - positive match
+!~ - negative match
+
+name = "Fats Waller"
+name =~ /a/ -&gt; 1
+
+$` - pre 
+$&amp; - matched part
+$' - post
+
+Для удобства напишем функцию:
+
+def show_regexp(a, re)
+  <link:internal>if</link:internal> a =~ re
+    "#{$`}&lt;&lt;{$&amp;}&gt;&gt;{$'}"
+  else
+    "no match"
+  end
+end
+
+<link:internal>Patterns in Ruby Regexp</link:internal>
+<link:internal>Anchors in Ruby Regexp</link:internal>
+<link:internal>Character Classes in Ruby Regexp</link:internal>
+<link:internal>Repetition in Ruby Regexp</link:internal>
+<link:internal>Alternation in Ruby Regexp</link:internal>
+<link:internal>Grouping in Ruby Regexp</link:internal>
+<link:internal>Substitution in Ruby Regexp</link:internal>
+<link:internal>Object-oriented regexp in Ruby</link:internal>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.8328280+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.8328280+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:27:07.3495100+03:00</create-date>
+  <cursor-position>113</cursor-position>
+  <width>450</width>
+  <height>656</height>
+  <x>889</x>
+  <y>401</y>
+  <open-on-startup>False</open-on-startup>
+</note>

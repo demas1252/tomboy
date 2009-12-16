@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Паттерны проектирования</title>
+  <text xml:space="preserve"><note-content version="0.1">Паттерны проектирования
+
+<bold>Основные(fundamental)</bold>
+
+<link:internal>Delegation pattern</link:internal> (шаблон делегирования)
+<link:internal>Functional design</link:internal> (шаблон функционального дизайна)
+<link:internal>Immutable</link:internal>
+Interface
+
+<bold>Порождающие(сreational)</bold>
+
+<link:internal>Singleton</link:internal> (одиночка)
+<link:internal>Abstract Factory</link:internal> (абстрактная фабрика)
+<link:internal>Builder</link:internal> (строитель)
+<link:internal>Prototype</link:internal> (прототип)
+Lazy initialization (отложенная инициализация)
+Object Pool (объектный пул)
+
+<bold>Структурные(structural)</bold>
+
+Adapter (адаптер)
+Bridge (мост)
+Composite (комповщик)
+Decorator (декоратор)
+Facade (фасад)
+Flyweight (приспособленец)
+Proxy (замеситель)
+
+<bold>Поведенческие(behavioral)</bold>
+
+Chain of Responsibility (цепочка ответственности)
+<link:internal>Command</link:internal> (команда)
+Interpreter (интерпретатор)
+<link:internal>Iterator</link:internal> (итератор, cursor)
+Mediator (посредник)
+<link:internal>Memento</link:internal>(хранитель)
+<link:internal>Observer</link:internal> (наблюдатель)
+State (состояние)
+Strategy (стратегия)
+
+
+<link:internal>Inversion Controller</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.3483950+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.3483950+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:09:32.6875640+03:00</create-date>
+  <cursor-position>782</cursor-position>
+  <width>450</width>
+  <height>660</height>
+  <x>156</x>
+  <y>129</y>
+  <open-on-startup>False</open-on-startup>
+</note>

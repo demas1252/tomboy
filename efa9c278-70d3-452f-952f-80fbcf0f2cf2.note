@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Refs In Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Refs In Clojure
+
+(def cur-track (ref "Some"))
+(dosync (ref-set cur-track "<link:internal>Another</link:internal>"))
+
+(defstruct message :sender :text
+(struct message "stu" "<link:internal>test</link:internal> message")
+(def messages (ref () ))
+
+;; bad idea
+(defn native-add-message [msg]
+  (dosync (ref-set messages (cons msg @messages))))
+
+;; good way
+;;; conj - is a function (conjoin)
+;;; (cons item sequence)
+;;; (conk sequence item)
+(defn add-message [msg]
+  (dosync (alter messages conj mgs)))
+
+(add-message (struct message "user 1" "hello"))
+(add-message (struct message "user 2" "howdy"))</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.2589270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.2589270+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T11:25:43.8353470+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>372</x>
+  <y>478</y>
+  <open-on-startup>False</open-on-startup>
+</note>

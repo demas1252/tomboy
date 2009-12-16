@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Специальная теория относительности</title>
+  <text xml:space="preserve"><note-content version="0.1">Специальная теория относительности
+
+<link:internal>Опыт Майкельсона-Морли</link:internal>
+
+Так как эфира нет (см <link:internal>Опыт Майкельсона-Морли</link:internal>) - то и нет универсальной системы отсчета. А значит любое движение относительно. То есть, если бы мы были изолированы во Вселенной, то не было бы способа определить, находимся мы в движении или нет.
+
+СТО разработана Энштейном с 1905 и имеет дело с инерциальными системами (системы отсчета движущиеся с постоянной скоростью относительно друг друга).
+
+Два принципа:
+
+<list><list-item dir="ltr">законы физики можно выразить в уравнениях, имеющих одну и ту же форму во всех системах отсчета, движущихся с постоянными скоростями по отношению друг к другу
+</list-item><list-item dir="ltr">скорость света в свободном пространстве имеет одинаковое значение для всех наблюдаетелей независимо от их состояния движения</list-item></list>
+
+<link:internal>Преобразования Галилея</link:internal>
+<link:internal>Преобразования Лоренца</link:internal>
+<link:internal>Пространство - Время</link:internal>
+</note-content></text>
+  <last-change-date>2009-07-30T14:42:32.8908830+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-30T14:42:32.8908830+04:00</last-metadata-change-date>
+  <create-date>2009-07-20T13:12:09.5106110+04:00</create-date>
+  <cursor-position>453</cursor-position>
+  <width>670</width>
+  <height>547</height>
+  <x>232</x>
+  <y>308</y>
+  <open-on-startup>False</open-on-startup>
+</note>

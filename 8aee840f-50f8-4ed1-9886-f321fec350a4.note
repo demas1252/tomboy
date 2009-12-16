@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример резервирования строки заказа</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример резервирования строки заказа
+
+
+static void ReservationSalesLine(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+   SalesLine salesLine;
+   InventMovement inventMoveme;
+   InventUpd_Reservation inventUpdReservation;
+
+
+   while select salesLine where salesLine.SalesId == 'Зк-000212'
+   {
+     inventMovement = InventMovement::construct (salesLine);
+     inventUpdReservation = InventUpd_Reservation::newMovement(inventMovement,
+                                   inventMovement.transQty(),
+                                   false );
+     inventUpdReservation.updateNow();
+   }
+}
+
+     Если кол-во положительное - резервируется,  в противном случае - разрезервируется.
+     false - если нет в наличии, пробовать ли резервировать то, что есть
+     
+     Job не совсем хороший пример, так как данный код должен выполняться на сервере, иначе возможно сообщение о том, что 'По выбранному курсору нельзя инициализировать recordViewCache'.</note-content></text>
+  <last-change-date>2009-10-17T22:10:49.6902010+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:49.6902010+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:53:18.9643690+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>178</x>
+  <y>198</y>
+  <open-on-startup>False</open-on-startup>
+</note>

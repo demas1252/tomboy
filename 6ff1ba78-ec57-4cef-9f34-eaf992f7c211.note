@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пришло не то что заказывали</title>
+  <text xml:space="preserve"><note-content version="0.1">Пришло не то что заказывали
+
+
+<link:url>http://axforum.info/forums/showthread.php?t=5035</link:url>
+
+_товар приходит, абсолютно не тот который заказывали.. и он есть в нашем номенклатурном справочнике.. и его надо оприходовать. но так чтобы можно было сформировать отчет по закупке, в котором было бы сказано, что этот товар на самом деле заказан не был.._
+
+[source: glibs]
+Я бы рекомендовал вам поставку того, что не заказывали, оформлять отдельной закупкой. Возможно, пометив ее каким-нибудь кластером специальным. Ведь по-хорошему этот процесс требует согласования, возможно, процесс прихода растянется во времени.
+
+[source: vals]
+С другой стороны, попробуйте рассмотреть вариант с карантинным складом: Заявка, Приход, Акт приёмки, <link:internal>Склад</link:internal> Карантин, <link:internal>Склад</link:internal> за вычетом перепоставленного. Перепоставленный товар хранится на складе "Карантин" до выяснения обстоятельств.</note-content></text>
+  <last-change-date>2008-03-27T21:36:45.6213969+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:36:45.6213969+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:36:41.4490850+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

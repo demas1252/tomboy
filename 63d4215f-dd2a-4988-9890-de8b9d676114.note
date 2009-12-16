@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Templated Functions</title>
+  <text xml:space="preserve"><note-content version="0.1">Templated Functions
+
+	<italic>template &lt;class type&gt; type func_name(type arg1, ...);
+
+</italic>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+
+template &lt;class type&gt; type add(type a, type b) {
+  return a + b;
+}
+
+template &lt;class rettype, class argtype&gt; rettype cast(argtype x) {
+  return (rettype)x;
+}
+
+main() {
+  int x = add&lt;int&gt;(1, 2);
+  cout &lt;&lt; x &lt;&lt; endl;
+  cout &lt;&lt; cast&lt;double&gt;(10) &lt;&lt; endl;
+}
+
+</note-content></text>
+  <last-change-date>2009-07-31T23:02:34.3452810+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-31T23:02:34.3452810+04:00</last-metadata-change-date>
+  <create-date>2009-07-31T22:54:19.6604310+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>208</x>
+  <y>276</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сопоставить пользователя Axapta c сессией Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Сопоставить пользователя Axapta c</link:internal> сессией Oracle
+
+select SID,SERIAL#, AUDSID, USER#,USERNAME, OWNERID, OSUSER from v$session where audsid = &lt;spid из активных пользователей&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.7276030+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.7276030+04:00</last-metadata-change-date>
+  <create-date>2008-09-28T19:37:21.3926150+04:00</create-date>
+  <cursor-position>141</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>786</x>
+  <y>467</y>
+  <open-on-startup>False</open-on-startup>
+</note>

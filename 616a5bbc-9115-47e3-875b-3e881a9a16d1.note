@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример разрешения зависимостей</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример разрешения зависимостей
+
+Допустим, проблемы возникли с пакетом libpam-<link:internal>modules</link:internal>, который не желает обновляться:
+
+        # <link:internal>apt-get</link:internal> install libpam-<link:internal>modules</link:internal>
+        ...
+        The following packages have unmet dependencies:
+          libpam-<link:internal>modules</link:internal>: Depends: libdb3 (&gt;=3.2.9-19.<link:internal>1</link:internal>) but 3.2.9-19 is to be installed
+        E: Broken packages
+
+Если вы работаете в смешанной системе, для начала попробуйте указать версию:
+    # <link:internal>apt-get</link:internal> install -t stable libpam-<link:internal>modules</link:internal>
+    
+Если это не помогает или система не является смешанной, попробуйте воспользоваться системой разрешения конфликтов Debian:
+    # <link:internal>apt-get</link:internal> -f install
+Затем выполните команду:
+    # <link:internal>dpkg</link:internal> --configure -a
+И снова повторите команду:
+    # <link:internal>apt-get</link:internal> -f install
+Если будет получен следующий ответ, значит, попытка завершилась неудачей:
+    Reading Package Lists... Done
+    Building Dependency Tree... Done
+    0 upgraded, 0 newly installed, 0 to remove and <link:internal>1</link:internal> not upgraded.
+    
+Теперь проверьте, что произойдет при удалении существующего пакета libpam-<link:internal>modules</link:internal>:
+&lt;&lt;pre
+# <link:internal>apt-get</link:internal> remove --dry-run libpam-<link:internal>modules</link:internal>
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following packages will be REMOVED:
+  adduser adminmenu apache at base-config courier-<link:internal>imap</link:internal> courier-<link:internal>imap</link:internal>-ssl courier-pop courier-pop-ssl <link:internal>cron</link:internal> cupsys cupsys-driver-gimpprint dict-elements dict-foldoc dict-gcide dict-jargon dict-vera dict-wn dictd gdm2...
+....
+WARNING: The following essential packages will be removed
+This should NOT be done unless you know exactly what you are doing!
+  login libpam-<link:internal>modules</link:internal> (due to login)
+
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.3684770+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.3684770+03:00</last-metadata-change-date>
+  <create-date>2008-04-19T23:52:37.8844170+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>71</y>
+  <open-on-startup>False</open-on-startup>
+</note>

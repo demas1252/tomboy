@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Учет налогов</title>
+  <text xml:space="preserve"><note-content version="0.1">Учет налогов
+
+<link:internal>Налоговые группы и налоговые группы номенклатуры</link:internal>
+<link:internal>Предварительная настройка для учета налогов</link:internal>
+<link:internal>Бухгалтерская разноска по налогу</link:internal>
+<link:internal>Спецразноска НДС</link:internal>
+Учет оплаченного входящего НДС
+<link:internal>Цена включает налог</link:internal>
+<link:internal>Счет-фактура на налоговую проводку</link:internal>
+<link:internal>Учет налогов при проведении заказов/закупок</link:internal>
+
+<link:internal>Налоги в авансовых отчетах</link:internal>
+<link:internal>Коррекция налогов</link:internal></note-content></text>
+  <last-change-date>2009-06-21T15:45:11.7434570+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-21T15:45:11.7434570+04:00</last-metadata-change-date>
+  <create-date>2009-06-20T15:04:36.8190060+04:00</create-date>
+  <cursor-position>243</cursor-position>
+  <width>415</width>
+  <height>293</height>
+  <x>704</x>
+  <y>427</y>
+  <open-on-startup>False</open-on-startup>
+</note>

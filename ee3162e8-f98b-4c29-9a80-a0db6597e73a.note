@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>см. Реализациия ФЗ 224-Ф3-2.1</title>
+  <text xml:space="preserve"><note-content version="0.1">см. Реализациия ФЗ 224-Ф3-2.1
+
+1. На классе <link:internal>BookDataCalc</link:internal>_VAT_Process_RU создаем метод, возвращающий Query, которая будет вытягивать фактуры созданные на основе предоплат от поставщиков - <italic>initOnDelivery()</italic>. 
+2. В метод <link:internal>BookDataCalc</link:internal>_VAT_Process_RU.initRecordSortedList() добавляем цикл по этой Query со вставкой наших записей в RecordSortedList.
+3. На классе BookTransCalc_VAT_RU создаем метод processVendPrepayment() обрабатывающий <link:internal>предоплаты</link:internal>.
+4. В методе BookTransCalc_RU.<link:internal>calc</link:internal>() добавляем в switch ветку, которая будет направлять <link:internal>предоплаты</link:internal> по поставщикам в наш метод.
+5. В методе BookTransCalc_VAT_RU.<link:internal>createLogTrans</link:internal>() в switch добавляем ветку для нужного нам ключа - <italic>key = [taxCode, dim, ""];</italic>.
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.6324720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.6324720+04:00</last-metadata-change-date>
+  <create-date>2009-01-27T16:44:53.8819710+03:00</create-date>
+  <cursor-position>693</cursor-position>
+  <width>621</width>
+  <height>427</height>
+  <x>978</x>
+  <y>531</y>
+  <open-on-startup>False</open-on-startup>
+</note>

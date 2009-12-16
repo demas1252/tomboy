@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка Clojure на Arch Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка Clojure на Arch Linux
+
+1. С помощью yaourt установил пакеты: <link:internal>clojure</link:internal>-<link:internal>git</link:internal> emacs-<link:internal>clojure</link:internal>-mode-<link:internal>git</link:internal> swank-<link:internal>clojure</link:internal>-<link:internal>git</link:internal>
+
+  У второго пакета не совпадала md2sum, поэтому я просто удалил соответствующую строку из pkgbuild.
+
+2. В .<link:internal>emacs</link:internal> добавил:
+
+;; <link:internal>clojure</link:internal>  
+(require '<link:internal>clojure</link:internal>-mode)
+
+(add-to-list 'load-path "/usr/share/<link:internal>emacs</link:internal>/site-lisp/swank-<link:internal>clojure</link:internal>")
+(require 'swank-<link:internal>clojure</link:internal>-autoload)
+(swank-<link:internal>clojure</link:internal>-config
+ (setq swank-<link:internal>clojure</link:internal>-jar-path "/usr/share/<link:internal>clojure</link:internal>/<link:internal>clojure</link:internal>.jar"))
+
+;; lisp 
+(setq inferior-lisp-program "/usr/bin/clisp")
+(add-to-list 'load-path "/usr/share/<link:internal>emacs</link:internal>/site-lisp/slime/")
+(require 'slime)
+(slime-setup)
+
+3. Проверка
+
+<list><list-item dir="ltr">Запускаем <link:internal>emacs</link:internal>
+</list-item><list-item dir="ltr">Код</list-item></list>
+(defn average [x y] (/ (+ x y) 2))
+(average 5 9)
+(.show (javax.swing.JFrame.))
+
+<list><list-item dir="ltr">C-x 2
+</list-item><list-item dir="ltr">В нижней части - M-x slime
+</list-item><list-item dir="ltr">В верхней выделяем код и в меню <link:internal>clojure</link:internal>-&gt;eval region</list-item></list></note-content></text>
+  <last-change-date>2009-10-12T12:00:24.4112990+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.4112990+04:00</last-metadata-change-date>
+  <create-date>2009-07-19T10:48:49.6030280+04:00</create-date>
+  <cursor-position>654</cursor-position>
+  <width>764</width>
+  <height>523</height>
+  <x>838</x>
+  <y>194</y>
+  <open-on-startup>False</open-on-startup>
+</note>

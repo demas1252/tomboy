@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Strings in Schema</title>
+  <text xml:space="preserve"><note-content version="0.1">Strings in Schema
+
+*Преобразование строки в список и обратно*
+
+&gt; (string-&gt;list "Hello")
+(#\H #\e #\l #\l #\o)
+&gt; (list-&gt;string '(#\S #\<link:internal>c</link:internal> #\h #\e #\m #\e))
+"<link:internal>Scheme</link:internal>"
+
+*Извлечение определенного символа из строки*
+
+&gt; &gt;(string-ref "Hello" 1)
+#\e
+
+*Длина строки*
+
+&gt; (string-length "hello")
+5
+
+*Сложение срок*
+
+&gt; (string-append "Hello" ", " "<link:internal>Scheme</link:internal>" "!")
+"Hello, <link:internal>Scheme</link:internal>!"
+
+*Получение подстроки*
+
+&gt; (substring "Hello, World!" 7 12)
+"World!"</note-content></text>
+  <last-change-date>2009-10-12T12:00:41.0059580+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:41.0059580+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:11:49.6748060+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>163</x>
+  <y>469</y>
+  <open-on-startup>False</open-on-startup>
+</note>

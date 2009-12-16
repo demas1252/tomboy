@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cluster Tables vs Heap Tables</title>
+  <text xml:space="preserve"><note-content version="0.1">Cluster Tables vs Heap Tables
+
+
+*Фрагментация*
+
+Написано по мотивам [<link:internal>Разрастание СУБД в следствие отсутствия кластерных индексов</link:internal>].
+
+Кластерные таблицы имеют преимущества перед heap как минимум по двум причинам.  Во первых, место осовбодившееся в результате удалений и изменений может быть повторно переиспользовано.  Heap-таблицы пишутся всегда в конец.  Во-вторых, кластерные таблицы проще дефрагментировать - rebuild indexes, в то время как в случае heap-таблиц надо либо переливать всю таблицу, либо строить кластерный индекс с его последующим удалением.
+
+[<link:internal>Телега о кластерном индексе</link:internal>]</note-content></text>
+  <last-change-date>2008-10-09T10:33:42.7465110+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-09T10:33:42.7465110+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:30:16.0679970+04:00</create-date>
+  <cursor-position>400</cursor-position>
+  <width>506</width>
+  <height>360</height>
+  <x>199</x>
+  <y>459</y>
+  <open-on-startup>False</open-on-startup>
+</note>

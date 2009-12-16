@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Oracle
+
+<bold>Архитектура</bold>
+<link:internal>Процессы Oracle</link:internal>
+<link:internal>Структуры памяти</link:internal>
+<link:internal>Файлы Oracle</link:internal>
+<link:internal>Объекты Oracle</link:internal>
+
+<bold>Administration</bold>
+<link:internal>Управление пользователями</link:internal>
+<link:internal>Oracle Startup and Shutdown</link:internal>
+<link:internal>Узнать идентификатор своей сессии</link:internal>
+<link:internal>Сколько весит база Oracle</link:internal>
+<link:internal>Real Application Cluster</link:internal>
+<link:internal>Средства резервного копирования Oracle</link:internal>
+<link:internal>Где лежат логи</link:internal>
+<link:internal>Oracle Networking</link:internal>
+<link:internal>Выполнить Job-ы последовательно</link:internal>
+<link:internal>Установка и удаление Oracle</link:internal>
+
+<bold>Oracle Tuning</bold>
+<link:internal>Статистика в Oracle</link:internal>
+<link:internal>Планы запросов в Oracle</link:internal>
+<link:internal>Cost Based Optimizer</link:internal>
+<link:internal>Ожидаемые события</link:internal>
+<link:internal>Трассировка</link:internal>
+<link:internal>StatsPack</link:internal> (TODO)
+<link:internal>Automatic Workload Repository</link:internal>
+<link:internal>Оптимизация запросов</link:internal>
+<link:internal>Блокировка при insert</link:internal>
+<link:internal>Предикаты по Function-Based индексу</link:internal>
+
+<bold><link:internal>Oracle SQL and PL\SQL</link:internal></bold>
+<bold><link:internal>Oracle Tools</link:internal></bold>
+
+<bold><link:internal>Прочее</link:internal></bold>
+<link:internal>Версии Oracle</link:internal>
+<link:internal>Текущий уровень изолированности</link:internal>
+<link:internal>Порядок присвоения значений в update</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-04-07T17:36:46.8295460+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T17:36:46.8295460+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:35:51.3679649+03:00</create-date>
+  <cursor-position>340</cursor-position>
+  <width>459</width>
+  <height>828</height>
+  <x>1186</x>
+  <y>139</y>
+  <open-on-startup>False</open-on-startup>
+</note>

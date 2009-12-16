@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cocktail sort (сортировка перемешиванием)</title>
+  <text xml:space="preserve"><note-content version="0.1">Cocktail sort (сортировка перемешиванием)
+
+O(n*n)
+
+Разновидность Bubble sort. Отличается тем, что просмотры элементов выполняются один за другим в противоположных направлениях, при этом большие элементы стремятся к концу массива, а маленькие - к началу.
+
+Лучший случай для этой <link:internal>сортировки</link:internal> - отсортированный массив (О(n)), худший - отсортированный в обратном порядке (O(n²)).
+
+<italic>def cocktail_sort(list):
+	start = 0
+	finish = len(list)
+	
+	while (finish &gt; start):
+		for i in range(start, finish - 1):
+			<link:internal>if</link:internal></italic><italic> (list[i] &gt; list[i + 1]):
+				(list[i], list[i + 1]) = (list[i + 1], list[i])
+	  	finish = finish - 1
+			
+      				   
+   		for i in range(finish - 1, start, -1):
+			<link:internal>if</link:internal></italic><italic> (list[i] &lt; list[i - 1]):
+				(list[i], list[i - 1]) = (list[i - 1], list[i])		
+		start = start + 1
+
+	return list
+
+print cocktail_sort([1, 20, 5, 3, 18, 2])</italic></note-content></text>
+  <last-change-date>2008-10-25T23:04:12.8488090+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-25T23:04:12.8488090+04:00</last-metadata-change-date>
+  <create-date>2008-10-25T22:14:18.7064800+04:00</create-date>
+  <cursor-position>358</cursor-position>
+  <width>832</width>
+  <height>506</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

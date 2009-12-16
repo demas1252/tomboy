@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Геометрическая прогрессия</title>
+  <text xml:space="preserve"><note-content version="0.1">Геометрическая прогрессия
+
+
+То же самое, что и [<link:internal>Арифмитическая прогрессия</link:internal>], только правим знак в одной функции:
+
+*N-ый член*
+
+&lt;&lt;pre
+(define (a-fives n)
+  (cond
+    [(= n 0) 8]
+    [else (* (a-fives (- n 1)) 5)]
+    ))
+    
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2008-03-28T23:03:01.6392500+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:03:01.6392500+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:02:59.8555000+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

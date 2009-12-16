@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Memento</title>
+  <text xml:space="preserve"><note-content version="0.1">Memento
+
+Сохраняет внутреннее состояние объекта так, чтобы позднее можно было восстановить сам объект.
+
+Проблема в том, что объекты не раскрывают часть своего состояния (private).
+
+<bold>Momento</bold> - хранитель. Сохраняет состояние объекта <bold>Originator</bold>. Запрещает доступ всем другим объектам, кроме хозяина.
+<bold>Originator</bold> - хозяин. Он создает хранитель, который содержит снимок его текущего состояния. По этому снимку он может откатиться на свое предыдущее состояние.
+<bold>CareTaker</bold> - посыльный. Отвечает за сохранение хранителя. Посыльный запрашивает хранитель у хозяина, некоторое время держит его у себя, а затем возвращает хозяину.
+
+Часто реализация просто сводится к добавлению объекту двух методов:
+<list><list-item dir="ltr">Memento CreateMemento() - создает Memento и копирует ему все свои свойства
+</list-item><list-item dir="ltr">SetMemento(Memento) - возвращает себе все свои свойства из Memento</list-item></list>
+
+<link:internal>Реализация Memento на C#</link:internal>
+<link:internal>Реализация Memento на Pyhton</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:26.5056190+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.5056190+04:00</last-metadata-change-date>
+  <create-date>2009-07-01T15:13:54.7555110+04:00</create-date>
+  <cursor-position>857</cursor-position>
+  <width>746</width>
+  <height>380</height>
+  <x>837</x>
+  <y>86</y>
+  <open-on-startup>False</open-on-startup>
+</note>

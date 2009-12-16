@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Pattern Matching in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Pattern Matching in Haskell
+
+<italic>lucky :: (Integral a) =&gt; a -&gt; String
+lucky 7 = "Lucky number seven!"
+lucky x = "Sorry, you're out of luck"
+
+factorial :: (Integral a) =&gt; a -&gt; a
+factorial 0 = 1
+factorial n = n * factorial(n-1)
+</italic>
+<italic>addVectors :: (Num a) =&gt; (a, a) -&gt; (a, a) -&gt; (a, a)
+addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)</italic>
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:16:08.7200520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:16:08.7200520+04:00</last-metadata-change-date>
+  <create-date>2009-10-17T21:53:54.8178940+04:00</create-date>
+  <cursor-position>326</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1127</x>
+  <y>622</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Различие между указателем и массивом</title>
+  <text xml:space="preserve"><note-content version="0.1">Различие между указателем и массивом
+
+<italic>char 		a_var[] = "XXX\x00";
+char 		*p_var  = "XXX";
+
+</italic>The first creates an array of char containing the string. The contents of the array can be modified. The second creates a character pointer which points to a string literal. String literals cannot be modified.<italic>
+</italic>
+
+</note-content></text>
+  <last-change-date>2009-12-10T16:22:38.8259290+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-10T16:22:38.8259290+03:00</last-metadata-change-date>
+  <create-date>2009-12-10T16:19:21.4438120+03:00</create-date>
+  <cursor-position>91</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>861</x>
+  <y>426</y>
+  <open-on-startup>False</open-on-startup>
+</note>

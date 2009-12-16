@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание профиля</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание профиля
+
+
+&lt;&lt;pre
+CREATE PROFILE grace_5 LIMIT
+FAILED_LOGIN_ATTEMPTS 3
+PASSWORD_LOCK_TIME UNLIMITED
+PASSWORD_LIFE_TIME 30
+PASSWORD_REUSE_TIME 30
+PASSWORD_VERIFY_FUNCTION verify_function
+PASSWORD_GRACE_TIME 5;
+
+&gt;&gt;
+
+&lt;&lt;pre
+CREATE PROFILE developer_prof LIMIT
+SESSIONS_PER_USER 2
+CPU_PER_SESSION 10000
+IDLE_TIME 60
+CONNECT_TIME 480;
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-29T06:39:43.4980740+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:39:43.4980740+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:39:41.4398780+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Логи в Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Логи в Linux
+
+Перечень всех логов:<link:url> /etc/syslog.conf</link:url> (нужны права root)
+
+Можно самому писать в логи:
+
+&lt;&lt;pre
+#include &lt;syslog.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+using namespace std;
+
+int main()
+{
+    FILE *f;
+    f = fopen(“not_here”,”r”);
+    <link:internal>if</link:internal>(!f)
+        syslog(LOG_ERR|LOG_USER,”oops - %m\n”);
+    exit(0);
+}
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.4087620+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.4087620+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:39:59.8609480+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

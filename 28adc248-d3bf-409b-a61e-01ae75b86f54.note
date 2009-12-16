@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример программы CouchDbKit</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример программы CouchDbKit
+
+from <link:internal>couchdbkit</link:internal>.schema import Document
+from <link:internal>couchdbkit</link:internal>.schema.properties import *
+
+import datetime
+from <link:internal>couchdbkit</link:internal>.client import Server
+from <link:internal>couchdbkit</link:internal>.session import create_session
+from <link:internal>couchdbkit</link:internal>.loaders import FileSystemDocsLoader
+
+class Greeting(Document):
+    author = StringProperty()
+    content = StringProperty()
+    date = DateTimeProperty()
+
+def create_document(<link:internal>db</link:internal>):
+    greet = Greeting(
+        author = "Sam",
+        content = "Welcome",
+        date = datetime.datetime.utcnow()
+        )
+    <link:internal>db</link:internal>(greet).save()
+    
+def create_view(<link:internal>db</link:internal>):
+    loader = FileSystemDocsLoader('/media/pt_lin/materials/sources/study/<link:internal>python</link:internal>/couch/_design')
+    loader.sync(<link:internal>db</link:internal>, verbose = True)
+
+def query_view(<link:internal>db</link:internal>):
+    Greeting.set_<link:internal>db</link:internal>(<link:internal>db</link:internal>)
+    greets = Greeting.view('greeting/all')
+    for elem in greets.all():
+        print elem.author
+        print elem.content
+        print elem.date
+
+server = Server()
+try:
+    server.create_<link:internal>db</link:internal>("greetings")
+except:
+    <link:internal>pass</link:internal>
+
+<link:internal>db</link:internal> = create_session(server, "greetings")
+#create_document(<link:internal>db</link:internal>)
+#create_view(<link:internal>db</link:internal>)
+query_view(<link:internal>db</link:internal>)
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.3784050+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.3784050+04:00</last-metadata-change-date>
+  <create-date>2009-07-13T09:21:24.3370070+04:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>995</x>
+  <y>539</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Мониторинг Data Pump</title>
+  <text xml:space="preserve"><note-content version="0.1">Мониторинг Data Pump
+
+
+select job_name, state from dba_datapump_jobs;
+
+JOB_NAME                                    STATE
+------------------------------                  ------------------------------
+SYS_EXPORT_FULL_01               EXECUTING
+ttt                                                      NOT RUNNING
+OP                                                   NOT RUNNING
+ESTIMATE000004                           NOT RUNNING</note-content></text>
+  <last-change-date>2008-03-27T22:12:37.9498340+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T22:12:37.9498340+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:12:36.7620230+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

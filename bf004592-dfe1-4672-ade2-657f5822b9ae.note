@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Числа Фибоначчи</title>
+  <text xml:space="preserve"><note-content version="0.1">Числа Фибоначчи
+
+Liber abacci - книга об абаке (Леонардо Фибоначчи из Пизы)
+
+	<italic>u1, u2 ... un, где un = u (n-1) + u (n-2)</italic>
+<italic>	u1 = u2 = 1</italic>  (иначе кол-во последовательностей не ограничено)
+
+<link:internal>Сумма чисел Фибоначчи</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-10T13:51:00.5321900+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-10T13:51:00.5321900+04:00</last-metadata-change-date>
+  <create-date>2009-09-10T13:40:28.7729800+04:00</create-date>
+  <cursor-position>192</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1191</x>
+  <y>576</y>
+  <open-on-startup>False</open-on-startup>
+</note>

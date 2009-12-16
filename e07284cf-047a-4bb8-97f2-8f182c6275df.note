@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BookStructSmallVATAmounts_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">BookStructSmallVATAmounts_Ru
+
+В пределах одной фактуры по строкам фактуры накапливает значения:
+
+Line+Tax
+Line
+Tax</note-content></text>
+  <last-change-date>2009-01-25T12:00:58.7259550+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-25T12:00:58.7259550+03:00</last-metadata-change-date>
+  <create-date>2009-01-25T11:58:36.3090390+03:00</create-date>
+  <cursor-position>106</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1104</x>
+  <y>521</y>
+  <open-on-startup>False</open-on-startup>
+</note>

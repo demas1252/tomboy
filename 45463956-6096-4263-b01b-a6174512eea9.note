@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Direction в профиле разноски по складу</title>
+  <text xml:space="preserve"><note-content version="0.1">Direction в профиле разноски по складу
+
+     [<link:internal>Direction Белой Даче</link:internal>]
+     
+     *История*
+     
+     В <link:internal>InventTrans</link:internal> он присутствовал всю жизнь; в InventTransPosting его добавили; в <link:internal>InventSettlement</link:internal> его нет.
+     
+     *Причины появления поля*
+     
+     1) InventTransPosting нужен для того, чтобы в <link:internal>InventSettlement</link:internal> протянуть бух. счета и фин. аналитики, по которым будут сгенерированы буз проводки коррекции себестоимости.  
+     2) До профиля разноски все складские движения порождали только одну проводку в ГК(!!!), которая требовала коррекции себестоимости.  Для коррекции каждого складского движения нужно было знать только один бух. счет на который разносилось это складское движение и по которому должны будут делаться коррекции.  То есть, для каждого складского движения был нужен только один InventTransPosting.
+     3) <link:internal>Профиль разноски по складу</link:internal> приводит к тому, что журнал переноса начинает геренить бух проводки, причем одно движение - пораждает сразу две бух проводки, в общем случае, между разными считами.  Соответсвенно, при закрытии склада мы должны откорректировать эи две бух проводки, а значит нам где-то надо заполмнить эти два счета на которые разнесся перенос.  Это место - две записи в InventTransPosting.
+     4) Так как у нас получилась ситуация, когда по одному движению(переносу) у нас две записи в InventTransPosting нам нужен механизм, по которому мы сможем отличать одну запись от другой.  В качестве этого механизма и было выбрано поле Direction, которое тянется из <link:internal>InventTrans</link:internal>.
+     
+     *Накат поля на исторические данные*
+     В классе ReleaseUpdateDB_V30GMCS есть 2 метода, позволяющие накатить эту модификацию на базу, где ее ранее не было:
+     
+     * updateInventTransPosting_Direction - протягивает Direction из <link:internal>InventTrans</link:internal> в InventTransPosting
+     * updateInventTransPosting_TrfDirection - перебирает inventTransPosting где Direction=None(фиг его знает, кто и когда их нагенерил - ошибка чья-то) и проставляет там Direction + создает дополнительный InventTransPosting с дополнительным Direction.
+     
+     *Где это поле используется*
+     
+     * InventUpdate.initInventTransPosting() - мы запрашивает у наследников InventMovement Direction и проставляем его в InventTransPosting. Там же, кстати, мы запрашиваем у InventMovement и <link:internal>финансовые аналитики</link:internal>.
+     
+     * InventCostItemDim.<link:internal>initInventSettlement</link:internal>() - тут заполняются счета и фин аналитики в <link:internal>InventSettlement</link:internal> из InventTransPosting. 
+     * InventAdj_Closing.<link:internal>initInventSettlement</link:internal>() - аналогично
+     
+     * InventUpdate.updateInventTransPosting() - затычка Олега для разноски отрицательной отборочной накладной.
+     
+     Остальное - это как правило, методы, возвращающие справочную информацию.
+     
+     </note-content></text>
+  <last-change-date>2009-10-12T12:00:16.7437810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.7437810+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:56:07.8048769+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>147</x>
+  <y>208</y>
+  <open-on-startup>False</open-on-startup>
+</note>

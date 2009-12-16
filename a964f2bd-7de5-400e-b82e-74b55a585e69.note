@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Двоичный поиск на Python</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Двоичный поиск</link:internal> на Python
+
+l = (4, 8, 15, 30, 56, 80, 92)  # массив, в котором ищем
+i = 0                           # границы массива
+j = len(l)                    
+x = 56                          # искомое значение
+
+while 1:
+    k = (i + j) / 2             # середина отрезка [i, j]
+    <link:internal>if</link:internal> x &gt; l[k]:                # если искомое значение больше середины отрезка
+        i = k + 1               # берем вторую половину от деления
+    else:
+        j = k - 1               # иначе первую половину
+
+    <link:internal>if</link:internal> ((l[k] == x) or (i &gt; j)):   # и делаем так пока не найдме то, что ищем или не сожмет отрезок в точку
+        break
+
+print k + 1
+print l[k]
+</note-content></text>
+  <last-change-date>2009-03-23T21:42:35.9871860+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:42:35.9871860+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:42:27.7654400+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

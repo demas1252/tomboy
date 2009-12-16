@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сравнение строк с учетом регистра</title>
+  <text xml:space="preserve"><note-content version="0.1">Сравнение строк с учетом регистра
+
+_declare @a<link:internal>1</link:internal> varchar(10), @a2 varchar(10)
+select @a<link:internal>1</link:internal> = 'abcdef'
+select @a2 = 'ABcdEF'
+<link:internal>if</link:internal> @a<link:internal>1</link:internal>=@a2 collate Cyrillic_General_CS_AI  print 'yes' else print 'no'_</note-content></text>
+  <last-change-date>2008-11-20T22:31:12.8180680+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-20T22:31:12.8180680+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:54:44.9340910+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>133</x>
+  <y>655</y>
+  <open-on-startup>False</open-on-startup>
+</note>

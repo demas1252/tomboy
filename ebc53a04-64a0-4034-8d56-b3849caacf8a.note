@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CentOs</title>
+  <text xml:space="preserve"><note-content version="0.1">CentOs
+
+Это не ответвления.
+<link:internal>Fedora</link:internal> - нестабильный тестовый дитстрибутив.
+CentOS - реинкарнация RHEL, в которой убраны логотипы и торговые марки Red Hat и у которой служба поддержки - это коммунити.
+
+RHEL - Red Hat Enterprise <link:internal>Linux</link:internal> - непосредственно "хлеб" компании Red Hat.
+
+Общая картина для понимания ситуации: компания Red Hat зарабатывает деньги на техсаппорте RHEL, попутно делая под заказ частные решения.
+
+Вышеназванная компания лояльно отногсится к существованию CentOS, ибо использование CentOS благоприятно сказывается на расширении сферы влияния компании - когда какая-нибудь фирма, использующая CentOS, поймёт, что собственный саппорт не справляется полностью, то такая фирма вполне может перейти на сопровождение компанией Red Hat, при этом CentOS практически является RHEL. Что означает безгеморройный для бизнеса фирмочки переход на саппорт от Red Hat
+
+Компания Red Hat также активно продвигает (содействует, спонсирует) дистрибутив <link:internal>Fedora</link:internal> как испытательный полигон. По возможности <link:internal>Fedora</link:internal> более-менее стабилизируется между релизами, но может быть и глючный релиз. Тем не менее, несмотря на тестовую направленность, поклонников <link:internal>Fedora</link:internal> довольно много (в их числе и ваш покорный слуга :) )</note-content></text>
+  <last-change-date>2009-04-04T09:29:40.6667210+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-04T09:29:40.6667210+04:00</last-metadata-change-date>
+  <create-date>2008-11-08T14:57:15.9679940+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1224</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

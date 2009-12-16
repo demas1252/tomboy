@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Локальный репозиторий обновлений</title>
+  <text xml:space="preserve"><note-content version="0.1">Локальный репозиторий обновлений
+
+Все пакеты  из Интернета <link:internal>Ubuntu</link:internal> при закачке собирает в папке<link:url> /var/cache/<link:internal>apt</link:internal></link:url><link:url>/archives</link:url>
+Промежуточной папкой для наших работ будет папка:<link:url> /usr/local/ubuntu</link:url>
+
+<link:internal>1</link:internal>. Копируем все пакеты из кэша в папку<link:url> /usr/local/ubuntu</link:url>
+2. cd<link:url> /usr/local/ubuntu</link:url>
+3. <link:internal>dpkg</link:internal>-scanpackages .<link:url> /dev/null</link:url> | gzip  &gt; Packages.gz
+4. Закатываем все это на болванку
+5. Дома <link:internal>apt-cdrom</link:internal> <link:internal>add</link:internal>
+
+---
+
+Как варинт, менее требовательный к перетасиваемому объему:
+
+<link:internal>1</link:internal>. На болванку катаем только новые пакеты
+2. Дома сбрасываем их в папку <link:url> /usr/local/docs/<link:internal>apt</link:internal></link:url><link:url>_archive</link:url>
+3. Генерим Packages.gz
+        cd<link:url> /usr/local/docs/<link:internal>apt</link:internal></link:url><link:url>_archive</link:url>
+        <link:internal>apt</link:internal>-ftparchive packages .| gzip &gt; Packages.gz
+4. Добавляем источник пакетов (делать только один раз)
+        sudo<link:url> /etc/<link:internal>apt</link:internal></link:url><link:url>/sources.list</link:url>
+        deb file:/ путь к пакетам ./
+5. sudo <link:internal>apt-get</link:internal> install
+6. Зайти в Synoptec и дернуть Обновить (вообще есть консольная команда) sudo <link:internal>apt-get</link:internal> update</note-content></text>
+  <last-change-date>2008-11-20T22:31:12.2960570+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-20T22:31:12.2960570+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:35:08.6284960+03:00</create-date>
+  <cursor-position>789</cursor-position>
+  <width>618</width>
+  <height>662</height>
+  <x>650</x>
+  <y>94</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Настройка сетевых интерфейсов</title>
+  <text xml:space="preserve"><note-content version="0.1">Настройка сетевых интерфейсов
+
+ifconfig
+
+<list><list-item dir="ltr">без параметров возвращает перечень сетевых интерфейсов
+</list-item><list-item dir="ltr">с параметрами - активизирует сетевой интерфейс</list-item></list>
+		ifconfig eth0 172.23.45.67 - актив-ет ethernet карту и присваивает ей ip-адрес	
+	
+</note-content></text>
+  <last-change-date>2008-04-08T22:14:37.9729440+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-08T22:14:37.9729440+04:00</last-metadata-change-date>
+  <create-date>2008-04-08T22:12:14.3311040+04:00</create-date>
+  <cursor-position>231</cursor-position>
+  <width>710</width>
+  <height>360</height>
+  <x>952</x>
+  <y>74</y>
+  <open-on-startup>False</open-on-startup>
+</note>

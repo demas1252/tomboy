@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Concepts of PL</title>
+  <text xml:space="preserve"><note-content version="0.1">Concepts of PL
+
+
+Всего сущестует4 основных типа грамматик - [<link:internal>Типы грамматик</link:internal>].
+
+[<link:internal>Формальная грамматика</link:internal>]
+    [<link:internal>Контекстно свободная грамматика</link:internal>]
+[<link:internal>Attribute grammars</link:internal>]
+
+
+[<link:internal>Parse Tree</link:internal>]</note-content></text>
+  <last-change-date>2008-03-28T23:06:41.6338810+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:06:41.6338810+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:35:39.4150659+03:00</create-date>
+  <cursor-position>142</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>137</x>
+  <y>72</y>
+  <open-on-startup>False</open-on-startup>
+</note>

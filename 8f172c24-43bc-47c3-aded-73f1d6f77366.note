@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Квантовые числа электронов</title>
+  <text xml:space="preserve"><note-content version="0.1">Квантовые числа электронов
+
+<list><list-item dir="ltr">n = 1, 2, 3 ... - главное квантовое число. Определяет энергию электрона.
+</list-item><list-item dir="ltr">l = 0 ... (n - 1) - форму. 0-s, 1-p, 2-d, 3-f, 4-g.
+</list-item><list-item dir="ltr">ml = -l .. 0 .. l - магнитное квантовое
+</list-item><list-item dir="ltr">ms = 1/2, -1/2 - спин.</list-item></list></note-content></text>
+  <last-change-date>2009-06-13T13:19:32.2158120+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-13T13:19:32.2158120+04:00</last-metadata-change-date>
+  <create-date>2009-06-13T13:15:39.0363360+04:00</create-date>
+  <cursor-position>176</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>602</x>
+  <y>349</y>
+  <open-on-startup>False</open-on-startup>
+</note>

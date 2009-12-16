@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Являются ли деревья индекса двоичными</title>
+  <text xml:space="preserve"><note-content version="0.1">Являются ли деревья индекса двоичными
+
+
+Непонятен сам термин "двоичные" применительно к деревьям.
+К деревьям применяется термин "арность". Классические деревья из учебника по программированию для третьего класса школы - бинарные.
+В оракеле применяются N-арные.
+А двоичным может быть, например, поиск по N-арному дереву.
+</note-content></text>
+  <last-change-date>2008-03-29T06:46:51.7938360+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:46:51.7938360+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:46:49.1056980+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

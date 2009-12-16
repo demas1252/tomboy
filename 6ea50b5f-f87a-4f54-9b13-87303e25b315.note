@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>TempDb, Master и прочие системные таблицы</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>TempDb</link:internal>, Master и прочие системные таблицы
+
+<link:internal>Вырос TempDb</link:internal>
+<link:internal>Rebuild Master</link:internal>
+<link:internal>Восстановить базу master SQL 2000 на SQL 2005</link:internal>
+<link:internal>TempDB</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.8793450+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.8793450+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:14:08.3684629+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>433</x>
+  <y>55</y>
+  <open-on-startup>False</open-on-startup>
+</note>

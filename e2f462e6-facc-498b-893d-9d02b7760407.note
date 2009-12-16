@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример простейшей программы на GTK</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример простейшей программы на GTK
+
+#include &lt;<link:internal>gtk</link:internal>/<link:internal>gtk</link:internal>.h&gt;
+int main (int argc, char *argv[])
+{
+    GtkWidget *window;
+      <link:internal>gtk</link:internal>_init(&amp;argc, &amp;argv);
+      window = <link:internal>gtk</link:internal>_window_new(<link:internal>GTK</link:internal>_WINDOW_TOPLEVEL);
+      <link:internal>gtk</link:internal>_widget_show(window);
+      <link:internal>gtk</link:internal>_main ();
+      return 0;
+}
+
+Компилировать(обратить внимание на обратные кавычки): <link:internal>gcc</link:internal> <link:internal>gtk1</link:internal>.<link:internal>c</link:internal> -o <link:internal>gtk1</link:internal> `pkg-config --cflags --libs <link:internal>gtk</link:internal>+-2.0`
+Поставить пакеты: libgtk2.0-dev, libgnome2-dev</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.8080860+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.8080860+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:42:18.5240540+03:00</create-date>
+  <cursor-position>100</cursor-position>
+  <width>508</width>
+  <height>360</height>
+  <x>1</x>
+  <y>21</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структура .git папки</title>
+  <text xml:space="preserve"><note-content version="0.1">Структура .git папки
+
+.
+|-- COMMIT_EDITMSG
+|-- FETCH_HEAD
+|-- HEAD
+|-- ORIG_HEAD
+|-- branches
+|-- config
+|-- description
+|-- hooks
+|   |-- applypatch-msg
+|   |-- commit-msg
+|   |-- post-commit
+|   |-- post-receive
+|   |-- post-update
+|   |-- pre-applypatch
+|   |-- pre-commit
+|   |-- pre-rebase
+|   |-- prepare-commit-msg
+|   `-- update
+|-- index
+|-- info
+|   `-- exclude
+|-- logs
+|   |-- HEAD
+|   `-- refs
+|-- objects
+`-- refs
+    |-- heads
+    |-- remotes
+    |-- stash
+    `-- tags
+
+COMMIT_EDITMSG  -  последнее сообщение при COMMIT
+config - настройки для репозитория 
+
+Далее:  <link:url>http://gitready.com/advanced/2009/03/23/whats-inside-your-git-directory.html</link:url></note-content></text>
+  <last-change-date>2009-03-27T12:43:19.5589360+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-27T12:43:19.5589360+03:00</last-metadata-change-date>
+  <create-date>2009-03-27T12:41:06.5089040+03:00</create-date>
+  <cursor-position>442</cursor-position>
+  <width>963</width>
+  <height>621</height>
+  <x>79</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

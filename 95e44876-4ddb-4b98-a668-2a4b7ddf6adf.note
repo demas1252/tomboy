@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переместить home на отдельную партицию</title>
+  <text xml:space="preserve"><note-content version="0.1">Переместить home на отдельную партицию
+
+<link:internal>1</link:internal>. mount new partition:
+	$mkdir<link:url> /mnt/newhome</link:url>
+	$sudo mount -t ext3<link:url> /dev/hda5 /mnt/newhome</link:url>
+2. копируем на нее home
+3. отмонтируем
+	$sudo umount<link:url> /mnt/newhome</link:url>
+4. переносим старый home
+	$sudo mv /home /old_home
+5. Создаем новый и монтируем на него новый раздел
+	$sudo mkdir /home
+	$sudo mount<link:url> /dev/hda5</link:url> /home
+6. Прописываем в fstab
+<link:url>	/dev/hda5</link:url> /home ext3 nodev,nosuid 0 2
+7. Удаляем
+	$sudo rm -r /old_home
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.1559500+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.1559500+04:00</last-metadata-change-date>
+  <create-date>2008-04-27T08:37:07.4965360+04:00</create-date>
+  <cursor-position>105</cursor-position>
+  <width>506</width>
+  <height>360</height>
+  <x>7</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

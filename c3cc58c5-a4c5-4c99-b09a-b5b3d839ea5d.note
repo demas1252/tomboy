@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные ошибки при расчете нереализованной курсовой</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные ошибки при расчете нереализованной курсовой
+
+<link:internal>Ошибка в суммы в валюте 'RUR'. Необходимо округлить до '0,00'</link:internal></note-content></text>
+  <last-change-date>2009-04-19T11:31:34.6122540+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-19T11:31:34.6122540+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T11:30:59.5894130+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1186</x>
+  <y>334</y>
+  <open-on-startup>False</open-on-startup>
+</note>

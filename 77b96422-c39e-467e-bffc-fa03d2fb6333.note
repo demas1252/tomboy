@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Оконные функции в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Оконные функции в MS SQL
+
+Подготавливаем данные:
+
+<italic>create table sample(
+	id int identity(1,1) primary key,
+	id_<link:broken>c</link:broken></italic><italic> int not null,
+	amount int not null
+)
+
+insert into sample(id_<link:broken>c</link:broken></italic><italic>, amount)
+select				1, 100
+union all select	2, 200
+union all select	2, 50
+union all select	2, 100
+union all select	1, 800
+union all select	2, 20
+union all select	3, 100
+union all select	2, 100
+union all select	1, 100
+union all select	2, 100
+union all select	2, 10
+union all select	1, 100
+union all select	1, 20
+union all select	3, 100
+union all select	3, 15</italic>
+
+Функции бывают - ранжирования и агрегатирования
+
+<bold>1. Агрегатирования</bold>
+
+<italic>select id, id_<link:broken>c</link:broken></italic><italic>, 
+	SUM(amount) over(partition by id_<link:broken>c</link:broken></italic><italic>)
+from sample
+</italic>
+<italic>1	1	1120
+5	1	1120
+9	1	1120
+12	1	1120
+13	1	1120
+8	2	580
+10	2	580
+11	2	580
+6	2	580
+2	2	580
+3	2	580
+4	2	580
+7	3	215
+14	3	215
+15	3	215</italic>
+
+Аналог group by, но позволяет показывать не схлопнутые значения 
+
+<bold>2. Ранжирования</bold>
+
+<italic>select * from sample where id_<link:broken>c</link:broken></italic><italic> = 2
+
+select id_<link:broken>c</link:broken></italic><italic>, amount,
+	ROW_NUMBER() OVER(PARTITION BY id_<link:broken>c</link:broken></italic><italic> order by amount desc) N_Row,
+	RANK() OVER(PARTITION BY id_<link:broken>c</link:broken></italic><italic> order by amount desc) Rank,
+	DENSE_RANK() OVER(PARTITION BY id_<link:broken>c</link:broken></italic><italic> order by amount desc) Dense_Rank,
+	NTILE(2) OVER(PARTITION BY id_<link:broken>c</link:broken></italic><italic> order by amount desc) Ntile
+from sample
+where id_<link:broken>c</link:broken></italic><italic> = 2</italic>
+
+2	2	200
+3	2	50
+4	2	100
+6	2	20
+8	2	100
+10	2	100
+11	2	10
+
+
+2	200	1	1	1	1
+2	100	2	2	2	1
+2	100	3	2	2	1
+2	100	4	2	2	1
+2	50	5	5	3	2
+2	20	6	6	4	2
+2	10	7	7	5	2
+
+ROW_NUMBER, RAW, DENSE_RANK - нумерация строк
+NTITLE - разбиение на N групп (просто по порядку и поровну)
+
+</note-content></text>
+  <last-change-date>2009-02-07T15:39:20.2101930+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:20.2101930+03:00</last-metadata-change-date>
+  <create-date>2009-01-25T20:34:29.9550050+03:00</create-date>
+  <cursor-position>1487</cursor-position>
+  <width>692</width>
+  <height>615</height>
+  <x>913</x>
+  <y>214</y>
+  <open-on-startup>False</open-on-startup>
+</note>

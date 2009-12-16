@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Многопоточность в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Многопоточность в Python
+
+<link:internal>Выполнить несколько функций параллельно в Python</link:internal>
+<link:internal>Модуль Processing</link:internal></note-content></text>
+  <last-change-date>2009-02-02T10:53:12.9548290+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-02T10:53:12.9548290+03:00</last-metadata-change-date>
+  <create-date>2009-01-14T12:26:36.8931740+03:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1080</x>
+  <y>327</y>
+  <open-on-startup>False</open-on-startup>
+</note>

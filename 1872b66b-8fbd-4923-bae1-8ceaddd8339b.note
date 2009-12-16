@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Корректировка себестоимости запасов в наличии</title>
+  <text xml:space="preserve"><note-content version="0.1">Корректировка себестоимости запасов в наличии
+
+  Форма коррекции запасов в наличии: InventAdjInventOnHand
+    Класс отбора данных в форму: InventAdjOnhandSelect
+    
+    Вот здесь:
+        _inventSum::newQuery(queryRun.query(),'',null,inventDimParmCriteria,inventDimParm);_
+     мы строим [<link:internal>query для коррекции запасов в наличии</link:internal>].  
+     *То есть, нам просто нужны ItemId + InventDimId, по которым не закрыты InventSum.*
+    
+     Далее для каждой InventSum мы создаем класс:
+        _openTransact= new InventSumOpenTransact(perDate,inventSum.itemId,inventDim,inventDimParm);_
+        
+     И с помощью этого класса и метода <link:internal>InventTrans</link:internal>.setTransValueDate() считаем количество и себестоимость несопоставленных проводок.
+    
+    *Резюме:*
+ 
+        <link:internal>1</link:internal>. мы берем _открытые_ проводки _с даты последнего закрытия_
+ 
+        2. для них делаем вот так:
+        
+             _this.costAmountPosted  -= <link:internal>inventSettlement</link:internal>.costAmountSettled;
+             this.qty               -= <link:internal>inventSettlement</link:internal>.qtySettled;
+             this.costAmountPosted  += <link:internal>inventSettlement</link:internal>.costAmountAdjustment;_
+             
+             То есть, мы берем только не сопоставленные части проводок.
+             Settlement берем до даты последнего закрытия (то есть, последующие пересчеты не считаются)
+ 
+        3.  все суммируем в переделах одной номенклатуры
+ 
+             _tmpFormLookUp.qty           += openTransact.transQty(x);
+             tmpFormLookUp.postedValue   += openTransact.transValue(x);_
+    
+
+    Если не было не одного закрытия склада, то выбор для коррекции вообще не будет сделан (см. InventSumTrans.new()):
+         _As of date has not been specified._
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.2565460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.2565460+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:12:24.6419810+03:00</create-date>
+  <cursor-position>417</cursor-position>
+  <width>618</width>
+  <height>360</height>
+  <x>283</x>
+  <y>453</y>
+  <open-on-startup>False</open-on-startup>
+</note>

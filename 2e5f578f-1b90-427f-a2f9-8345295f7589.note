@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Влияние типа счета на расчет курсовой разницы</title>
+  <text xml:space="preserve"><note-content version="0.1">Влияние типа счета на расчет курсовой разницы
+
+А как вообще типы счета влияют на <link:internal>расчет курсовой разницы</link:internal>.
+Может кто-нибуть обстоятельно ответить? 
+
+По прибылям/ убыткам не берется начальное сальдо, по балансу берется. </note-content></text>
+  <last-change-date>2008-04-06T12:19:58.9075690+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T12:19:58.9075690+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T12:18:24.2917910+04:00</create-date>
+  <cursor-position>218</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>655</y>
+  <open-on-startup>False</open-on-startup>
+</note>

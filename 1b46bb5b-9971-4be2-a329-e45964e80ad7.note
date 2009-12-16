@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример delegation pattern на java</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Пример delegation pattern</link:internal> на java
+
+interface I 
+ {
+     void f();
+     void g();
+ }
+ 
+ class A 
+   implements I 
+ {
+     public void f() 
+     {
+         System.out.println("A: вызываем метод f()");
+     }
+     public void g() 
+     {
+         System.out.println("A: вызываем метод g()");
+     }
+ }
+ 
+ class B 
+   implements I 
+ {
+     public void f() 
+     {
+         System.out.println("B: вызываем метод f()");
+     }
+     public void g() 
+     {
+         System.out.println("B: вызываем метод g()");
+     }
+ }
+ 
+ class C 
+   implements I 
+ {
+     // Создаём объект, методы которого будем делегировать
+     I i = new A();
+ 
+     public void f() 
+     {
+         i.f();
+     }
+     public void g() 
+     {
+         i.g();
+     }
+ 
+     // Этими методами меняем поле-объект, чьи методы будем делегиролвать
+     void toA() 
+     {
+         i = new A();
+     }
+     void toB() 
+     {
+         i = new B();
+     }
+ }
+ 
+ 
+ public class Main 
+ {
+     public static void main(String[] <link:internal>args</link:internal>) 
+     {
+         C c = new C();
+         c.f();
+         c.g();
+         c.toB();
+         c.f();
+         c.g();
+     }
+ }
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.1117770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.1117770+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:57:43.0696000+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

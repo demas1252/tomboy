@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>повышение доступности данных вследствии париционирования</title>
+  <text xml:space="preserve"><note-content version="0.1">повышение доступности данных вследствии париционирования
+
+&lt;&lt;pre
+-- (1)
+create tablespace tbs1 
+datafile '<link:broken>C</link:broken>:\<link:internal>ORACLE</link:internal>\PRODUCT\10.1.0\ORADATA\ORCL\tbs1.DBF' 
+size 20M autoextend on next 5M maxsize 200M;
+
+create tablespace tbs2 
+datafile '<link:broken>C</link:broken>:\<link:internal>ORACLE</link:internal>\PRODUCT\10.1.0\ORADATA\ORCL\tbs2.DBF' 
+size 20M autoextend on next 5M maxsize 200M;
+
+create table emp(
+	   empno int,
+	   ename varchar2(20))
+partition by hash(empno)
+(partition part_1 tablespace tbs1,
+ partition part_2 tablespace tbs2
+)
+
+insert into emp select empno, ename from scott.emp
+
+select * from emp partition(part_1)
+select * from emp partition(part_2)
+
+-- (2)
+alter tablespace tbs1 offline
+
+-- (3)
+select * from emp
+
+-- (4)
+select * from emp partition(part_2)
+
+&gt;&gt;
+
+1. Два tablespace и таблица, партиции которой лежат в этих tablespace-х
+2. Отключаем одно из tablespace
+3. Видим что все данные не достурны
+4. Но часть их доступна
+
+p.s. Imho, в реальном проекте это мало поможет.  Программу писали без учеа партиционирования (что правильно, так как оно должно быть прозрачно для клиентов) и <link:internal>запросы</link:internal> оно будет посылать без учета партиций, а следовательно будет обламываться.  Единственное, что это может быть полезно админу - перелить живые париции в новую табличку.</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.1147950+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.1147950+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:58:51.6868300+03:00</create-date>
+  <cursor-position>85</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

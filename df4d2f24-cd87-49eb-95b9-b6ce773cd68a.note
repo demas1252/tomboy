@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Строку в Range</title>
+  <text xml:space="preserve"><note-content version="0.1">Строку в Range
+
+# 1
+
+first, last = '20-30'.split("-")
+puts first.to_i..last.to_i
+
+# 2
+
+string = "20-30"
+puts Range.new(*(string.split('-', 2).<link:internal>map</link:internal>{|s| s.to_i}))
+
+</note-content></text>
+  <last-change-date>2009-09-20T22:35:07.4935840+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-20T22:35:07.4935840+04:00</last-metadata-change-date>
+  <create-date>2009-09-20T22:34:15.0810250+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>312</x>
+  <y>180</y>
+  <open-on-startup>False</open-on-startup>
+</note>

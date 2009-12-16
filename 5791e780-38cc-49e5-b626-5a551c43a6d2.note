@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Когда полезен сбор статистики</title>
+  <text xml:space="preserve"><note-content version="0.1">Когда полезен сбор статистики
+
+
+Имеется <link:internal>SQL</link:internal> 2000 Ent SP4, на нем OLTP-база средних размеров (10 гиг). Напустил я на workload-файл tuning advisor от 2005-го, и он советует мне создать аж 200 статистик на разные таблицы. Поскольку гении-разработчики в свое время назвали таблицы TABLE<link:internal>1</link:internal>..TABLEN, а поля - FIELD<link:internal>1</link:internal>..FIELDN :) -навскидку крайне сложно понять смысл создаваемой статистики, а вникать подробно нет возможности. В связи с этим вопрос: может ли хотя бы теоретически упасть производительность от создания статистики? Или это никогда не повредит, и я могу смело запустить все 200 команд?
+
+========================================================================
+
+Имеется <link:internal>SQL</link:internal> 2000 Ent SP4, на нем OLTP-база средних размеров (10 гиг). Напустил я на workload-файл tuning advisor от 2005-го, и он советует мне создать аж 200 статистик на разные таблицы. Поскольку гении-разработчики в свое время назвали таблицы TABLE<link:internal>1</link:internal>..TABLEN, а поля - FIELD<link:internal>1</link:internal>..FIELDN :) -навскидку крайне сложно понять смысл создаваемой статистики, а вникать подробно нет возможности. В связи с этим вопрос: может ли хотя бы теоретически упасть производительность от создания статистики? Или это никогда не повредит, и я могу смело запустить все 200 команд?
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.2147000+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.2147000+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:31:04.4985190+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>578</y>
+  <open-on-startup>False</open-on-startup>
+</note>

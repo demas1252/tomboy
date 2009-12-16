@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Code blocks and functions</title>
+  <text xml:space="preserve"><note-content version="0.1">Code blocks and functions
+
+class Calculator
+  def initialize(name, &amp;block)
+    @name, @block = name, block
+  end
+
+  def calc(amount)
+    return @block.call(amount)
+  end
+end
+
+calc_one = Calculator.new("one") { | value | value * 0.2 }
+calc_two = Calculator.new("two") { | value | value * 0.5 }
+
+puts calc_one.calc(100)
+puts calc_two.calc(100)
+puts calc_one.calc(200)
+puts calc_two.calc(200)
+  
+В общем, это как бы возможность передать указатель на функцию. Но только одну ???</note-content></text>
+  <last-change-date>2009-09-11T11:34:46.1169360+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-11T11:34:46.1169360+04:00</last-metadata-change-date>
+  <create-date>2009-09-11T11:34:03.2683280+04:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>610</x>
+  <y>414</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cost Accounting</title>
+  <text xml:space="preserve"><note-content version="0.1">Cost Accounting
+
+<link:url>http://axforum.info/forums/showthread.php?t=1200&amp;highlight=Учет+затрат</link:url>
+<link:url>http://axforum.info/forums/showthread.php?t=3337&amp;highlight=Учет+затрат</link:url>
+<link:url>http://axforum.info/forums/showthread.php?t=21721&amp;highlight=Учет+затрат</link:url>
+
+<link:internal>Почему в параметрах модуля недоступен флаг 'Категория затрат идентична номеру счета'</link:internal></note-content></text>
+  <last-change-date>2009-11-15T00:43:36.1634430+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-15T00:43:36.1634430+03:00</last-metadata-change-date>
+  <create-date>2009-11-14T22:43:47.6861469+03:00</create-date>
+  <cursor-position>316</cursor-position>
+  <width>622</width>
+  <height>360</height>
+  <x>797</x>
+  <y>499</y>
+  <open-on-startup>False</open-on-startup>
+</note>

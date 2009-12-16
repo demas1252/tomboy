@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Задача Пачоли о разделени выигрыша</title>
+  <text xml:space="preserve"><note-content version="0.1">Задача Пачоли о разделени выигрыша
+
+Игроки договорились играть до m побед - победитель забирает все.
+Но съиграли меньше. Первый выиграл - <italic>a</italic> партий, второй - <italic>b</italic>.
+
+Сам Пачолли задачу не решил - он предложил поделить выигрыш в отношении <italic>a:b</italic>.
+
+Кардано подверг это решение критике, но верного решения не предложил и лишь позднее Паскаль решил эту задачу.
+
+Посмотрим решение на примере <italic>m=3</italic>, <italic>a=2, b=1</italic>.
+
+Если бы игроки съиграли еще одну партию то возможно два варианта:
+
+<list><list-item dir="ltr">выигрывает A и получает всю ставку
+</list-item><list-item dir="ltr">выигрывает B и делят сумму попалам (так как у каждого по 2 выигрыша)</list-item></list>
+
+Возможности у обоих исходов равновероятны.
+
+Таким образом A может выиграть 1 или 1/2 -&gt; среднее 3/4
+B -&gt; 0 или 1/2 -&gt; среднее 1/4
+
+А не 3:1 как предлагал Пачолли</note-content></text>
+  <last-change-date>2009-05-26T13:23:31.2680200+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-26T13:23:31.2680200+04:00</last-metadata-change-date>
+  <create-date>2009-05-26T13:17:21.6055670+04:00</create-date>
+  <cursor-position>393</cursor-position>
+  <width>498</width>
+  <height>516</height>
+  <x>1085</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы в Ruby
+
+<link:internal>Arrays and Hashes in Ruby</link:internal>
+<link:internal>Ranges in Ruby</link:internal>
+<link:internal>Регулярные выражения в Ruby</link:internal>
+
+<link:internal>Строку в Range</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-20T22:34:22.4599680+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-20T22:34:22.4599680+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:24:07.6600510+03:00</create-date>
+  <cursor-position>78</cursor-position>
+  <width>450</width>
+  <height>306</height>
+  <x>976</x>
+  <y>126</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>'for' loop initial declaration used outside C99 mode</title>
+  <text xml:space="preserve"><note-content version="0.1">'for' loop initial declaration used outside C99 mode
+
+<link:internal>gcc</link:internal> -std=c99 foo.c -o foo
+</note-content></text>
+  <last-change-date>2009-06-29T12:35:45.1663480+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T12:35:45.1663480+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T12:35:33.1726400+04:00</create-date>
+  <cursor-position>87</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>193</x>
+  <y>271</y>
+  <open-on-startup>False</open-on-startup>
+</note>

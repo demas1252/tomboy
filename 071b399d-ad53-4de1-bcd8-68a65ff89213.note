@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Хранение сруктур в Mnesia</title>
+  <text xml:space="preserve"><note-content version="0.1">Хранение сруктур в Mnesia
+
+<link:internal>add</link:internal>_<link:internal>plans</link:internal>() -&gt;
+    D1 = #design{id   = {joe,1},
+		 plan = {circle,10}},
+    D2 = #design{id   = fred, 
+		 plan = {rectangle,10,5}},
+    D3 = #design{id   = {jane,{house,23}},
+		 plan = {house,
+			 [{floor,1,
+			   [{doors,3},
+			    {<link:internal>windows</link:internal>,12},
+			    {rooms,5}]},
+			  {floor,2,
+			   [{doors,2},
+			    {rooms,4},
+			    {<link:internal>windows</link:internal>,15}]}]}},
+    F = fun() -&gt; 
+		<link:internal>mnesia</link:internal>:write(D1),
+		<link:internal>mnesia</link:internal>:write(D2),
+		<link:internal>mnesia</link:internal>:write(D3)
+	end,
+    <link:internal>mnesia</link:internal>:transaction(F).
+
+
+
+get_plan(PlanId) -&gt;
+    F = fun() -&gt; <link:internal>mnesia</link:internal>:read({design, PlanId}) end,
+    <link:internal>mnesia</link:internal>:transaction(F).
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.9571800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.9571800+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T16:54:13.3358189+04:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>List Abbreviations</title>
+  <text xml:space="preserve"><note-content version="0.1">List Abbreviations
+
+&lt;val&gt; = (list exp-<link:internal>1</link:internal> .. exp-n)
+(cons exp-<link:internal>1</link:internal> (cons ... (cons exp-n empty)))
+
+Возможны списки списков:
+&lt;&lt;pre
+&gt; (search 20 <link:internal>test</link:internal>)
+true
+&gt; (search 21 <link:internal>test</link:internal>)
+false
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-11-20T22:31:12.7384320+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-20T22:31:12.7384320+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:53:55.5418550+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>190</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

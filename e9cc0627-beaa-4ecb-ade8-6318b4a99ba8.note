@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>tar-gzip</title>
+  <text xml:space="preserve"><note-content version="0.1">tar-gzip
+
+<bold>Создание</bold>
+
+&gt;&gt; tar cvf my_tar.tar *
+file<link:internal>1</link:internal>
+file2
+
+&gt;&gt; ls
+file<link:internal>1</link:internal>
+file2
+my_tar.tar
+
+&gt;&gt; gzip my_tar.tar
+
+&gt;&gt; ls
+file<link:internal>1</link:internal>
+file2
+my_tar.tar.gz
+
+<bold>Извлечение</bold>
+
+&gt;&gt; gzip -d my_tar.tar.gz
+
+&gt;&gt; ls
+my_tar.tar
+
+&gt;&gt; tar xvf my_tar.tar
+file<link:internal>1</link:internal>
+file2
+
+&gt;&gt; ls
+file<link:internal>1</link:internal>
+file2
+my_tar.tar
+
+<bold>Многотомные архивы</bold>
+
+tar -cz &lt;path&gt; | split -b &lt;size&gt; - archive
+насоздает archivexx размером в &lt;size&gt;
+
+cat archive* |tar -xz
+</note-content></text>
+  <last-change-date>2008-12-29T09:30:04.2033080+03:00</last-change-date>
+  <last-metadata-change-date>2008-12-29T09:30:04.2033080+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:38:00.4736930+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>498</width>
+  <height>821</height>
+  <x>1138</x>
+  <y>139</y>
+  <open-on-startup>False</open-on-startup>
+</note>

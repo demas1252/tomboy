@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PK vs Unique</title>
+  <text xml:space="preserve"><note-content version="0.1">PK vs Unique
+
+PK и индекс — это совершенно разные вещи. 
+PK — это фундаментальное понатие теории реляционных баз данных. PK служит для однозначной идентификации строки отношения (таблицы)
+Индексы не являются частью реляционной теории. Индексы — это вспомогательное средство, которое позволяет ускорить поиск
+информации в базе данных и поэтому широко используется на практике.
+
+Например, при создании PK создается уникальный индекс по столбцам, входящим в PK. Это позволяет ускорить выполнение запросов.
+
+Однако, индексы не являются обязательной частью <link:internal>базы данных</link:internal>.
+То есть, база данных, не содержащая индексов, будет работать <link:internal>c</link:internal> функциональной точки зрения точно так же, как и база с индексами, только медленнее.
+Существуют, например, реляционные СУБД, вообще не имеюшие индексов в смысле <link:internal>SQL</link:internal> Server.</note-content></text>
+  <last-change-date>2009-04-01T16:19:19.4390330+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:19:19.4390330+04:00</last-metadata-change-date>
+  <create-date>2008-07-24T13:40:02.6294929+04:00</create-date>
+  <cursor-position>14</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

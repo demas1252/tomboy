@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Параметры отвечающие за размеры различных областей памяти</title>
+  <text xml:space="preserve"><note-content version="0.1">Параметры отвечающие за размеры различных областей памяти
+
+
+sga_max_size -- макс. размер памяти под SGA (без учета <link:internal>PGA</link:internal>)
+<link:internal>db</link:internal>_cache_size -- размер кеша буферов
+shared_pool_size -- размер разделяемого пула
+large_pool_size -- размер большого пула (вероятнее всего, вам не нужен)
+<link:internal>java</link:internal>_pool_size -- размер пула для <link:internal>JAVA</link:internal>
+<link:internal>pga</link:internal>_aggregate_target -- если workarea_size_policy = AUTO; размер областей <link:internal>сортировки</link:internal>, --указывается для экземпляра в целом
+sort_area_size, hash_area_size -- если workarea_size_policy = MANUAL; размеры областей <link:internal>сортировки</link:internal>, --указываются для одного процесса (сессии)
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.7091240+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.7091240+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:08:09.2479889+03:00</create-date>
+  <cursor-position>86</cursor-position>
+  <width>696</width>
+  <height>523</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ассоциирование блока кода с методом</title>
+  <text xml:space="preserve"><note-content version="0.1">Ассоциирование блока кода с методом
+
+def take_block(p1)
+  <link:internal>if</link:internal> block_given?
+    yield(p1)
+  else
+    p1
+  end
+end
+
+take_block("no block")
+take_block("no block") {|s| s.sub(/no /, '')}
+
+или
+
+class TaxCalculator
+  def initialize(name, &amp;block)
+    @name , @block = name, block
+  end
+
+  def get_tax(amount)
+   "#@name on #{amount} = #{ @block.call(amount) }"
+  end
+end
+
+tc = TaxCalculator.new("Sales tax") {|amt| amt * 0.075 }
+tc.get_tax(100)
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.7936390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.7936390+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:38:38.1429950+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

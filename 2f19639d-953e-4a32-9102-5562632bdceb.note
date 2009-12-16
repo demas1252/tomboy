@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ограничение уникальности на дату</title>
+  <text xml:space="preserve"><note-content version="0.1">Ограничение уникальности на дату
+
+
+*Есть атрибут типа смолдататайм, хранит естественно дату+время, как мне надожить ограничение уникальности только на дату????*
+
+_USE pubs
+GO
+CREATE TABLE Table1(col1 smalldatetime, col2 AS CONVERT(char(10), col1, 104) UNIQUE)
+GO
+
+INSERT Table1(col1) SELECT GETDATE()
+GO
+INSERT Table1(col1) SELECT GETDATE()
+GO
+SELECT * FROM Table1
+GO
+DROP TABLE Table1_</note-content></text>
+  <last-change-date>2008-03-27T21:52:40.7947310+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:52:40.7947310+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:52:36.1333467+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>131</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

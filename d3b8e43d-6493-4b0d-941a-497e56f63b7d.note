@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Практический пример построчного чтения файла в Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Практический пример построчного чтения файла в Erlang
+
+-module(ft).
+-export([r/0]).
+
+r()-&gt;
+    {ok, Device} = file:open("data.txt", [read]),
+    get_all_lines(Device, []).
+
+get_all_lines(Device, Accum)-&gt;
+    case io:get_line(Device, "") of
+	eof -&gt;
+	    file:close(Device),
+	    Accum;
+	Line -&gt; get_all_lines(Device, Accum ++ [Line])
+end.
+
+</note-content></text>
+  <last-change-date>2009-03-24T08:44:47.6172860+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:44:47.6172860+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:44:30.9590140+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>413</y>
+  <open-on-startup>False</open-on-startup>
+</note>

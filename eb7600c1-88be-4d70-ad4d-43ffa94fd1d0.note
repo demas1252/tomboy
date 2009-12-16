@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание undo tablespace</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание undo tablespace
+
+
+create undo tablespace undo1
+datafile '&lt;&gt;' size 40M; </note-content></text>
+  <last-change-date>2008-03-28T22:19:10.4450520+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:19:10.4450520+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:19:03.2098730+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>183</x>
+  <y>140</y>
+  <open-on-startup>False</open-on-startup>
+</note>

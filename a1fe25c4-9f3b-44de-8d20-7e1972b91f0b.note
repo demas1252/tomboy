@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>wine</title>
+  <text xml:space="preserve"><note-content version="0.1">wine
+
+Базу данных игр и приложений можно глянуть тут <link:url>http://appdb.winehq.org/appbrowse.php</link:url>
+Базу данных на русском можно глянуть тут (ETERSOFT) <link:url>http://appdb.winehq.org.ru/</link:url>
+
+Запуск:
+
+      В консоли запустить wine НАЗВАНИЕ ФАЙЛА.exe
+
+winecfg - настройка
+
+Как установить DirectX?
+WINE &gt; 0.9.49
+Версия <link:internal>Windows</link:internal> 2000, обязательно!
+Cкачать с инета - mscoree.dll и streamci.dll.
+Заходим в папку<link:url> ~/.wine/drive_<link:broken>c</link:broken></link:url><link:url>/windows/system32</link:url> и делаем резервные копии файлов
+d3d8.dll, d3d9.dll, ddraw.dll, dsound.dll, dsound.vxd, quartz.dll
+путем добавлением к окончанию имени файлов .bak
+Теперь запускаем winecfg. Открываем вкладку "библиотеки" пишем в поле "новое замещение для библиотеки" это - d3d8 и жмем добавить.Внизу появится эта либа, жмем редактировать и выбираем "Родная (<link:internal>Windows</link:internal>)". Тоже самое повторяем с этими именами:
+d3d9, d3dim, d3drm, d3dx8, d3dxof, <link:internal>dciman</link:internal>32, ddrawex, devenum, dinput, dinput8, dmband, dmcompos, dmime, dmloader, dmscript, dmstyle, dmsynth, dmusic, dplay, dplayx, dpnaddr, dpnet, dpnhpast, dswave, dxdiagn, mscoree, quartz и streamci
+Ставим DirectX9<link:broken>c</link:broken>.
+Запускаем снова winecfg, вкладка библиотеки, и выбираем редактировать для этих библиотек:
+d3d8, d3d9, ddrawex, dinput, dinput8
+и выставляем для них "Встроенная (wine)".
+*насколько это помогает в запуске игр пока не очень понятно/известно
+
+Как имитировать перезагрузку <link:internal>Windows</link:internal> в среде Wine ?
+Запустить в консоли wineboot
+
+Как после обновления Wine, обновить рабочий каталог с Wine не удаляя его?
+Запустить в консоли wineprefixcreate
+
+Как редактировать реестр Wine?
+Запустить в консоли regedit
+
+Где почитать документацию о wine?
+Наиболее полная документация (на английском языке):
+<link:url>http://winehq.org/site/documentation</link:url>
+Документация на русском языке (Etersoft):
+<link:url>http://etersoft.ru/content/view/56/1/</link:url>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ярлыки Wine<link:url>
+/home/логин/.local/share/applications/wine
+/home/логин/.config/menus/applications-merged</link:url>
+
+<link:internal>Запуск сервиса из под wine</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:21.2890620+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.2890620+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:58:50.4840020+03:00</create-date>
+  <cursor-position>1758</cursor-position>
+  <width>614</width>
+  <height>360</height>
+  <x>579</x>
+  <y>379</y>
+  <open-on-startup>False</open-on-startup>
+</note>

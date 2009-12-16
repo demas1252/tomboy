@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание пользователей</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание пользователей
+
+
+[status: untested]
+
+<link:internal>useradd</link:internal> -b /home -g users -m -u &lt;uid&gt; &lt;user name&gt;
+sudo passwd &lt;user name&gt;
+
+читать: <link:internal>man</link:internal> usermod
+
+Получилось вот так: <link:internal>useradd</link:internal> -g users -m -u &lt;uid&gt; &lt;user name&gt;
+
+sudo gpasswd [-a имя пользователя] группа</note-content></text>
+  <last-change-date>2009-10-12T12:00:32.3254290+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.3254290+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:38:37.2324330+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

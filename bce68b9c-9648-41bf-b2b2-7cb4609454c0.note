@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Производство азотной кислоты</title>
+  <text xml:space="preserve"><note-content version="0.1">Производство азотной кислоты
+
+Две стадии:
+
+1. Получение оксида озота II
+
+	<italic>4NH3 + 5O2 = 4NO + 6H20</italic>
+
+2. Окисление оксида озота II в оксид озота IV и реакция последнего с водой
+
+	<italic>2NO + 02 &lt;-&gt; 2NO2
+	3NO2 + H2O &lt;-&gt; 2HNO3 + NO</italic>
+
+Нагретую смесь амиака и воздуха пропускают через металлическую проволоку, которая является катализатором.  Результат пропускают через воду.</note-content></text>
+  <last-change-date>2009-08-08T10:22:31.8266860+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-08T10:22:31.8266860+04:00</last-metadata-change-date>
+  <create-date>2009-08-08T10:18:43.8890870+04:00</create-date>
+  <cursor-position>253</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>695</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выборки с повторениями</title>
+  <text xml:space="preserve"><note-content version="0.1">Выборки с повторениями
+
+Из слова 'гамма' можно составить вовсе не 5! слов, а все потому, что некоторые элементы повторяются.
+
+Допустим у нас есть выборка:
+
+aaaaa bbbb ccc .... lll
+
+count(a) = n1
+count(b) = n2
+count(всего)  = n
+
+Если бы они были уникальными мы бы составили n!.
+Из 'a' мы можем составить n1! коомбинаций, которые никак не влияют на конечный результат.
+
+А значит
+
+P(n1n2..) = n! / (n1! * n2! * ... nk!)
+</note-content></text>
+  <last-change-date>2009-06-02T12:23:15.4074570+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-02T12:23:15.4074570+04:00</last-metadata-change-date>
+  <create-date>2009-06-02T12:20:31.3690120+04:00</create-date>
+  <cursor-position>287</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

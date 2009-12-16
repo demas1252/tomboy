@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сборка rpm для Mandriva</title>
+  <text xml:space="preserve"><note-content version="0.1">Сборка rpm для Mandriva
+
+<link:url>http://wiki.mandriva.com/ru/Development/Howto/RPM</link:url>
+
+<link:internal>Пакеты необходимые для сборки rpm</link:internal>
+
+Собирать пакет рекомендуется с правами обычного пользователя.
+<link:internal>Как собирать rpm из под обычного пользователя</link:internal>
+
+Далее помещаем архив исходников в  SOURCES, пишем <link:internal>spec файл</link:internal> и запускаем сборку пакета:  
+
+<italic>rpmbuild -ba <link:internal>emacs</link:internal></italic><italic>.spec</italic>
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.3132690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.3132690+04:00</last-metadata-change-date>
+  <create-date>2009-04-02T15:14:46.5747970+04:00</create-date>
+  <cursor-position>335</cursor-position>
+  <width>826</width>
+  <height>432</height>
+  <x>781</x>
+  <y>528</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ranges in Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Ranges in Ruby
+
+<link:internal>Ruby ranges as Sequences</link:internal>
+<link:internal>Ruby ranges as Conditions</link:internal>
+<link:internal>Ruby ranges as Intervals</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T21:26:06.5082410+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:26:06.5082410+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:24:56.7546700+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1004</x>
+  <y>338</y>
+  <open-on-startup>False</open-on-startup>
+</note>

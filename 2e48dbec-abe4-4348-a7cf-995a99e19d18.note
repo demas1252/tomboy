@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Задвоенные клиенты</title>
+  <text xml:space="preserve"><note-content version="0.1">Задвоенные клиенты
+
+Во первых у GMCS есть функционал <link:internal>Перенос операций с одного поставщика на другого</link:internal>.
+Еще на форуме предлагался вот такой скрипт:
+
+&lt;&lt;pre
+void merge(<link:internal>RecId</link:internal>  mainRecordId,<link:internal>RecId</link:internal> secondRecordId)
+{
+    CustTable       _tableMain;
+    CustTable       _tableLine;
+    SalesJournalAutoSummary     journalSummary;
+    SalesPrintCopies            printCopies;
+    CustBankAccount             custBankAccount;
+    RContractTable              contractTable;
+    RContractTable              contractTableNew;
+
+    LedgerBalancesDimTrans      dimTrans;
+
+    Dimensions                  dim, dimNew;
+    ;
+
+    startLengthyOperation();
+
+    ttsbegin;
+
+    select forUpdate _tableMain
+    where _tableMain.<link:internal>RecId</link:internal> == mainRecordId;
+
+    <link:internal>if</link:internal> (_tableMain.<link:internal>RecId</link:internal> == 0)
+    {
+        ttsabort;
+        throw error('Íåò öåëåâîé çàïèñè!');
+    }
+
+        select forUpdate _tableLine
+        where _tableLine.<link:internal>RecId</link:internal> == secondRecordId;
+
+        <link:internal>if</link:internal> (_tableLine.<link:internal>RecId</link:internal> != 0)
+        {
+            delete_from journalSummary where journalSummary.CustAccount == _tableLine.AccountNum;
+            delete_from printCopies where printCopies.CustAccount == _tableLine.AccountNum;
+            delete_from custBankAccount where custBankAccount.CustAccount == _tableLine.AccountNum;
+
+            while select forUpdate contractTable
+            where contractTable.RContractPartnerType == RContractPartnerType::Cust &amp;&amp;
+                contractTable.RContractPartnerCode == _tableLine.AccountNum
+            exists join contractTableNew
+            where contractTableNew.RContractPartnerType == RContractPartnerType::Cust &amp;&amp;
+                contractTableNew.RContractPartnerCode == _tableMain.AccountNum &amp;&amp;
+                contractTableNew.RContractAccount == contractTable.RContractAccount &amp;&amp;
+                contractTableNew.RContractCode == contractTable.RContractCode
+            {
+                contractTable.delete();
+            }
+
+            select forUpdate dimNew
+            where dimNew.DimensionCode == SysDimension::Partner &amp;&amp;
+                dimNew.Num == _tableMain.AccountNum;
+
+            <link:internal>if</link:internal> (dim.<link:internal>RecId</link:internal> == 0 || dimNew.<link:internal>RecId</link:internal> == 0)
+            {
+                ttsabort;
+                throw error('Íå íàéäåíû àíàëèòèêè, ñîîòâåòñòâóþùèå êîíòðàãåíòàì!');
+            }
+
+            _tableLine.merge(_tableMain);
+            dim.merge(dimNew);
+        }
+
+
+    ttscommit;
+
+    endLengthyOperation();
+}
+&gt;&gt;
+
+Еще: <link:url>http://axapta-lessons-learned.blogspot.com/2005/05/merge-customer-records.html</link:url></note-content></text>
+  <last-change-date>2009-10-17T22:10:51.9786520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.9786520+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:23:06.2427390+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>599</y>
+  <open-on-startup>False</open-on-startup>
+</note>

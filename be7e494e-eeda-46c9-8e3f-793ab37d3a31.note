@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Передача двумерного массива в функцию</title>
+  <text xml:space="preserve"><note-content version="0.1">Передача двумерного массива в функцию
+
+Декларация переменной в функции должна включать количество столбцов. То есть так:
+
+f(int daytab[2][13]) {}
+f(int daytab[][13]) {}
+f(int *daytab[13]) {}
+
+Еще я нашел вот такой пример:
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#define TYPE int
+#define MAX_AGE 130
+#define NUM_GENDERS 2
+
+TYPE* new_array(size_t N) {
+	return (TYPE*)calloc(N,sizeof(TYPE));
+}
+
+TYPE** new_array2d(size_t N,size_t M) {
+	TYPE** tmp=NULL;
+	int i;
+	tmp=(TYPE**)calloc(N,sizeof(TYPE*));
+	<link:internal>if</link:internal> (tmp == NULL)
+		return NULL;
+	for(i=0; i&lt;N; i++) {
+		tmp[i] = new_array(M);
+	}
+	return tmp;
+}
+
+void free_array2d(TYPE** m, size_t N) {
+	int i;
+	for (i=0; i&lt;N; i++) {
+		free(m[i]);
+	}
+	free(m);
+}
+
+void PopulateLoadingArrayP(TYPE **Loading, size_t MaxAge, size_t NumGenders) {
+	size_t Age, Gender;
+
+	for(Age = 0; Age &lt; MaxAge; Age++) {
+		for(Gender = 0; Gender &lt; NumGenders; Gender++)
+			Loading [Age][Gender] = Age + Gender;
+	}
+}
+
+int main()
+{
+	TYPE **Loading;
+	Loading = new_array2d(MAX_AGE, NUM_GENDERS);
+	<link:internal>if</link:internal> (Loading) {
+		PopulateLoadingArrayP(Loading, MAX_AGE, NUM_GENDERS);
+		free_array2d(Loading, MAX_AGE);
+	}
+	return 0;
+}
+
+</note-content></text>
+  <last-change-date>2009-03-24T08:52:50.4691400+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:52:50.4691400+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:52:42.8522120+03:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

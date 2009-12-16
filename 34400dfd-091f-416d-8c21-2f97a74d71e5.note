@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MS SQL Administration</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Administration
+
+<link:internal>Все о размерах в MS SQL</link:internal>
+<link:internal>TempDb, Master и прочие системные таблицы</link:internal>
+<link:internal>Бекапы и MS SQL</link:internal>
+<link:internal>MS SQL и железо</link:internal> 
+<link:internal>Пользователи и их права в MS SQL</link:internal>
+<link:internal>Сетевые настройки MS SQL</link:internal>
+
+<link:internal>Установка MS SQL</link:internal>
+<link:internal>Зеркалирование</link:internal>
+<link:internal>MS SQL Clusters</link:internal>
+<link:internal>Пути к файлам по умолчанию</link:internal>
+<link:internal>Как узнать использовался ли индекс и каким запросом</link:internal>
+<link:internal>Очистить кеш SQL Server</link:internal>
+<link:internal>Сколько сервер использует памяти</link:internal>
+<link:internal>Идентификатор базы данных</link:internal>
+<link:internal>Блокировки</link:internal>
+<link:internal>Перенос job-ов на другой сервер</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-09-24T14:36:59.8591530+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:36:59.8591530+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
+  <cursor-position>402</cursor-position>
+  <width>657</width>
+  <height>810</height>
+  <x>515</x>
+  <y>151</y>
+  <open-on-startup>False</open-on-startup>
+</note>

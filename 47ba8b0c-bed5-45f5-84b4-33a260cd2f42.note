@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Счетчики производительности</title>
+  <text xml:space="preserve"><note-content version="0.1">Счетчики производительности
+
+
+     * Network Interface - Bytes Total/<link:internal>sec</link:internal>
+         Не желательно, чтобы превышало 50% пропускной способности сетевого интерфейса. Сам сетевой интерфейс можно посмотреть в task manager.
+         Gbps = gigabits per second = <link:internal>1</link:internal> 000 000 000 bits
+         GBps = gigabytes per second
+     <link:internal>* SQL</link:internal> Server: Memory Manager - Total Server Memory
+         Это размер памяти, который скушал <link:internal>MS SQL</link:internal> в Kb
+     * PhysicalDisk - Average Disk Queue Length
+         Эффективность дисковой подсистемы. Количество запросов на чтение и запись, которые были поставлены на очередь. Не должно быть больше чем в 1,5-2 раза числа шпинделей физ. дисков (с учетом коэф. 100). 
+
+&lt;-- \\ --
+45 это ахтунг уже. Диски не справляются.                                                                                                                                              
+Вообще считается, что должно быть не больше 2 на один диск, то есть если, например, 4 диска, то длина очереди не должна превышать 8. Хотя не могу сказать насколько верно это         
+утверждение.                                                                                                                                                                                                                                                                                                                                        
+-- \\ --&gt;
+
+     <link:internal>* SQL</link:internal> Server: Cache Manager - Cache Hit Ratio
+         Процент попадания планов запросов в кеш процедур. Желатьльно выше 85%.
+     <link:internal>* SQL</link:internal> Server: Buffer Manager - Buffer Cache Hit Ratio
+         Насколько полно <link:internal>Sql</link:internal> Server может разместить данные в буфере кеша.
+     * Memory - Pages/<link:internal>Sec</link:internal>
+         Число страниц, которые <link:internal>SQL</link:internal> Server считал с диска или записал на диск для того, чтобы разрешить обращения к страницам памяти, которые не были загружены в оперативную память в момент обращения. Эта величина является суммой величин Pages Input/<link:internal>sec</link:internal> и Pages Output/<link:internal>sec</link:internal>, а также учитывает страничный обмен (подкачку/свопинг) системной кэш-памяти для доступа к файлам данных приложений. Кроме того, сюда включается подкачка не кэшированных файлов, непосредственно отображаемых в память. Это основной счетчик, за которым следует следить в том случае, если наблюдается большая нагрузка на использование памяти и связанный с этим избыточный страничный обмен. Этот счётчик характеризует величину свопинга и его нормальное (не пиковое) значение должно быть близко к нолю. Увеличение свопинга говорит о необходимости наращивания ОЗУ или уменьшения числа исполняемых на сервере прикладных программ. 
+     * Processor - Processor Time
+         Если Вы видите продолжительные периоды, когда утилизация процессора выше 80 процентов, ваша система будет более эффективной при использовании большего числа процессоров.
+         
+     Added from BOL:
+     
+     <link:internal>SQL</link:internal> Server: Buffer Manager: Buffer Cache Hit Ratio
+          90% и больше - желательно. Если это не так - добавляйте памяти.
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.0446660+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.0446660+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:34:27.0549350+04:00</create-date>
+  <cursor-position>1239</cursor-position>
+  <width>1170</width>
+  <height>771</height>
+  <x>364</x>
+  <y>128</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Arrays in CPP</title>
+  <text xml:space="preserve"><note-content version="0.1">Arrays in CPP
+
+
+*Array of struct*
+
+&lt;&lt;pre
+typedef struct {
+    int i, j, k;
+    } ThreeDpoint;
+
+int main() {
+  ThreeDpoint p[10];
+  for(int i = 0; i &lt; 10; i++) {
+    p[i].i = i + 1;
+    p[i].j = i + 2;
+    p[i].k = i + 3;
+  }
+}
+
+&gt;&gt;
+
+*Arrays and pointers*
+
+Иденктификатор массива не похож на остальный идентификаторы.  Например, он не lvalue - ему нельзя ничего присвоить.  Скорее это указатель на начало данных массива:
+
+&lt;&lt;pre
+int main() {
+  int a[10];
+  int* ip = a;
+  for(int i = 0; i &lt; 10; i++)
+    ip[i] = i * 10;
+}
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T23:16:13.9146280+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T23:16:13.9146280+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:16:13.2899570+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

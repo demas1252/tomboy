@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление записей без учета DeleteActions</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление записей без учета DeleteActions
+
+
+&lt;&lt;pre
+PurchParmUpdate.skipDataMethods(true);
+PurchParmUpdate.skipDeleteActions(true);
+    delete_from PurchParmUpdate
+        where PurchParmUpdate.ParmId == PurchParmTable.ParmId;  
+
+&gt;&gt;
+
+Выяснил, что SkipDeleteActions() хорошо работает, когда за таблицей НЕ следит журнал БД. А когда следит, нужно перед его вызовом написать SkipDatabaseLog(true) и тогда все будет отлично. </note-content></text>
+  <last-change-date>2008-03-30T07:35:37.4774350+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:35:37.4774350+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:35:35.2271490+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1032</x>
+  <y>518</y>
+  <open-on-startup>False</open-on-startup>
+</note>

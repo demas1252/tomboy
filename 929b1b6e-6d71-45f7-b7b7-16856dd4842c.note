@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Итераторы в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Итераторы в Python
+
+**Итератор**
+
+Класс-контейнер, реализующий два метода:
+
+ - next() - возвращает следующий элемент из контейнера
+ - __iter__() - возвращает собственно итератор
+
+i = iter('abc')
+a = i.next()
+b = i.next()
+c = i.next()
+i.next() -&gt; Exception
+
+**Создание своего итератора**
+
+class MyIterator(object):
+    def __init__(self, step):
+        self.step = step
+
+    def next(self):
+        <link:internal>if</link:internal> self.step == 0:
+            raise StopIteration
+        self.step -= 1
+        return self.step
+    def __iter__(self):
+        return self
+
+for el in MyIterator(4):
+    print el
+
+</note-content></text>
+  <last-change-date>2009-03-24T09:30:27.7915560+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:30:27.7915560+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:30:18.2047490+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>307</x>
+  <y>82</y>
+  <open-on-startup>False</open-on-startup>
+</note>

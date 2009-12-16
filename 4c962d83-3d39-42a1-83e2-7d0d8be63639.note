@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация сортировки подсчетом на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация сортировки подсчетом на Python
+
+d = [1, 4, 5, 1, 2, 6, 4, 2, 3, 1, 1]
+c = []
+result = []
+
+for i in range(10):
+    c.append(0)
+
+for i in d:
+    c[i] = c[i] + 1
+
+for num, i in <link:internal>enumerate</link:internal>(c):
+    for j in range(i):
+        result.append(num)
+
+print result
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.7500440+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.7500440+04:00</last-metadata-change-date>
+  <create-date>2009-05-26T16:23:29.9345750+04:00</create-date>
+  <cursor-position>76</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

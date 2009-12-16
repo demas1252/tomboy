@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>spentExec</title>
+  <text xml:space="preserve"><note-content version="0.1">spentExec
+
+<link:internal>Map</link:internal> spendLines заполянется в init() отчета в методе this.calcSpendAmount().</note-content></text>
+  <last-change-date>2009-06-07T14:16:23.0283660+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-07T14:16:23.0283660+04:00</last-metadata-change-date>
+  <create-date>2009-06-07T14:09:39.6883960+04:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>864</width>
+  <height>515</height>
+  <x>584</x>
+  <y>381</y>
+  <open-on-startup>False</open-on-startup>
+</note>

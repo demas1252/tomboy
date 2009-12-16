@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Git</title>
+  <text xml:space="preserve"><note-content version="0.1">Git
+<bold>Настройка</bold>
+
+<link:internal>Предварительная настройка Git</link:internal>
+<link:internal>Как научить Git игнорировать определенные файлы</link:internal>
+<link:internal>Как включить вывод в цвете в Git</link:internal>
+<link:internal>Убрать whitespace из git diff</link:internal>
+<link:internal>github</link:internal>
+<link:internal>git external diff</link:internal>
+
+<bold>Использование</bold>
+
+<link:internal>git add</link:internal>
+<link:internal>git rm</link:internal>
+<link:internal>git log</link:internal>
+<link:internal>git diff</link:internal>
+<link:internal>git clone</link:internal>
+<link:internal>git commit</link:internal>
+<link:internal>git reset</link:internal>
+
+<link:internal>Разрешение конфликтов в Git</link:internal>
+
+<link:internal>Git Insight</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-11-23T21:12:56.3736420+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T21:12:56.3736420+03:00</last-metadata-change-date>
+  <create-date>2009-01-08T12:42:19.8275610+03:00</create-date>
+  <cursor-position>256</cursor-position>
+  <width>524</width>
+  <height>426</height>
+  <x>960</x>
+  <y>368</y>
+  <open-on-startup>False</open-on-startup>
+</note>

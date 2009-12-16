@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LedgerVoucher</title>
+  <text xml:space="preserve"><note-content version="0.1">LedgerVoucher
+
+
+Этот класс является наиболее общим и объемлющим классом системы создания постингов. Он самым первым создается и вызовом его же метода заканчивается <link:internal>разноска в ГК</link:internal>. В методах parm* этого класса можно задать наиболее глобальные умолчания для создания дальнейших постингов в ГК. Обычно в этом классе используется всего три метода:
+
+static LedgerVoucher newLedgerPost(DetailSummary _detailSummary, SysModule _sysModule, NumberSequenceCode _voucherSeriesCode, TransactionLogType _transactionLogType = TransactionLogType::Unspecified, TransTxt _transactionLogTxt = ”, boolean _approveJournal = false, boolean _posting = true)
+
+Метод-конструктор:
+
+     _detailSummary – уровень детализации (подробности ниже)
+     _sysModule – модуль породивший проводку. Реально – позволяет системе проверить права пользователя на разноску в данном модуле и данном периоде.
+     _voucherSeriesCode – код номерной серии, используемой для генерации номеров ваучера по данному объекту. Как ни странно – данный номер серии не используется системой для АВТОМАТИЧЕСКОЙ генерации номеров ваучера. Реально - он нужен только для некоторых проверок номера ваучера, которые для российских условий не актуальны.
+     _transactionLogType, _TransactionLogTxt – тип и текст операции, которые попадут в аудиторский след (TransactionLog), при разноске.
+     _approveJournal – включается для журналов с режимом утверждения. Я на практике не использовал
+     _posting – отключает собственно финальную запись в данных в таблицу постингов (<link:internal>ledgerTrans</link:internal>). То есть – все проверки проходят, но никаких следов операций не остается. На практике – не использовал.
+     boolean end() - этот метод завершает работу с классом и собственно и приводит к записи (или не записи) данных в таблицу постингов.
+     void addVoucher(<link:internal>LedgerVoucherObject</link:internal> _<link:internal>ledgerVoucherObject</link:internal>) - добавляет к классу объект типа <link:internal>LedgerVoucherObject</link:internal>, который собственно и реализует львиную долю логики работы с ГК.</note-content></text>
+  <last-change-date>2009-10-17T22:11:00.0037980+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:11:00.0037980+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:20:13.2120280+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

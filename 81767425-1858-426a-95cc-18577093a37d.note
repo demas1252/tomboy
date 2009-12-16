@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Bridge networking interface on VirtualBox</title>
+  <text xml:space="preserve"><note-content version="0.1">Bridge networking interface on VirtualBox
+
+sudo <link:internal>apt-get</link:internal> install uml-utilities bridge-utils
+
+1. sudo tunctl -t tap1 -u my_login_name
+2. sudo brctl addbr br0
+3. sudo ifconfig eth1 0.0.0.0 promisc
+4. sudo brctl <link:internal>addif</link:internal> br0 eth1
+5. sudo dhclient br0
+6. sudo brctl <link:internal>addif</link:internal> br0 tap1
+7. sudo ifconfig tap1 up
+8. sudo chmod 0666<link:url> /dev/net/tul</link:url>
+
+В гостевой ОС:
+
+IP - я поставил следующий в данной подсети - 192.168.1.3
+Netmask - 255.255.255.0
+Gateway - 192.168.1.1
+DNS - 192.168.1.1
+
+В версии 2.1.0 все вроде стало гораздо проще: запускаем vboxnetflt и выбираем bridge networking.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.8190090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.8190090+04:00</last-metadata-change-date>
+  <create-date>2008-10-25T14:15:43.9317260+04:00</create-date>
+  <cursor-position>106</cursor-position>
+  <width>514</width>
+  <height>522</height>
+  <x>1131</x>
+  <y>163</y>
+  <open-on-startup>False</open-on-startup>
+</note>

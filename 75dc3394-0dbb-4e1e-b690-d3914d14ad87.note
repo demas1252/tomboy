@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>mapMapFactureAmounts</title>
+  <text xml:space="preserve"><note-content version="0.1">mapMapFactureAmounts
+
+   *Структура <link:internal>map</link:internal>-а:*
+    
+    <link:internal>RecId</link:internal> (VendTrans по заказу) -&gt; mapFactureAmountDetail
+    mapFactureAmountDetail: &lt;2&gt; -&gt; 118/100/18
+    
+    *Принцип его получения:*
+    
+    Пойдем с конца: _<link:internal>mapFactureAmountsDetail</link:internal>=this.calcFactureAmounts();_ (см. FactureCalcSettlement.<link:internal>calc</link:internal>()). Именно этот метод отвечает за подсчет 118/100/18.
+        
+    В этом методе:
+
+    <link:internal>1</link:internal>. создается пустой <link:internal>map</link:internal>
+    2. делается _select sum(FactureTrans)_ три раза для invoiceTrans, headMarkups, lineMarkups с разными условиями
+    3. Для каждого sum вызывается метод _this.addFactureTransAmounts(&lt;<link:internal>map</link:internal> из пункта <link:internal>1</link:internal>&gt;, &lt;sum(FactureTrans&gt;))_ и в этом методе полученные суммы упаковываются в <link:internal>Map</link:internal>. То есть, данные метод отвечает за упаковку подсчитанных сумм.
+    4. возвращается <link:internal>map</link:internal>
+        
+    А <link:internal>recId</link:internal> запихивается в эту структуру чуть ниже в методе <link:internal>calc</link:internal>():
+       
+    _mapMapFactureAmounts.insert(custVendCalcSettledAmounts.mainTrans().<link:internal>RecId</link:internal>, <link:internal>mapFactureAmountsDetail</link:internal>.pack());_
+
+    
+    </note-content></text>
+  <last-change-date>2009-10-17T22:10:55.2434220+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.2434220+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:02:16.5733220+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

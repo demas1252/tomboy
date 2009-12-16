@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Трассировка своей сессии</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Трассировка</link:internal> своей сессии
+
+<italic>alter session set timed_statistics = true; </italic>
+# сервер будет собирать инфо о времени выполнения операций
+
+<italic># alter session set <link:internal>sql</link:internal></italic><italic>_trace = true; </italic>
+# создавать трассировочные файлы (можно и alter system)
+# # <link:internal>запросы</link:internal>, например:
+<italic>select owner, count(*) from all_objects group by owner;</italic>
+
+# # теперь надо <link:internal>узнать id текущей сессии</link:internal>
+
+<italic>show parameter user_dump_dest</italic> 
+# дирекория, куда складываются дампы
+
+# есть смысл проверить максимальный размер файла:
+<italic>select value from v$parameter p where name='max_dump_file_size'</italic>
+
+# в командной строке:
+<italic>tkprof &lt;trc-файл&gt; &lt;txt-файл&gt; </italic>
+# вот мы его и получили</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.4749620+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.4749620+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:54:10.2453660+03:00</create-date>
+  <cursor-position>606</cursor-position>
+  <width>865</width>
+  <height>715</height>
+  <x>713</x>
+  <y>201</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Хранение в контейнерах пользовательских типов данных</title>
+  <text xml:space="preserve"><note-content version="0.1">Хранение в контейнерах пользовательских типов данных
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+
+struct entry {
+  long nr;
+  char name[30];
+  bool operator&lt;(const entry &amp;b) const {
+    return strcmp(name, b.name) &lt; 0;
+  }
+};
+
+int main() {
+  entry a[3] = {{10, "Betty"},
+		{11, "James"},
+		{80, "Jim"}};
+  entry b[2] = {{16, "Fred"},
+		{20, "William"}};
+  entry c[5], *p;
+  
+  merge(a, a + 3, b, b + 2, c);
+
+  for(p = c; p != c + 5; p++)
+    cout &lt;&lt; p-&gt;nr &lt;&lt; " " &lt;&lt; p-&gt;name &lt;&lt; endl;
+  cout &lt;&lt; endl;
+  return 0;
+}
+
+      
+</note-content></text>
+  <last-change-date>2009-08-06T11:37:07.0334950+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-06T11:37:07.0334950+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T11:36:41.6576440+04:00</create-date>
+  <cursor-position>87</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>876</x>
+  <y>196</y>
+  <open-on-startup>False</open-on-startup>
+</note>

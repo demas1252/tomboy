@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>throw в ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">throw в ruby
+
+<italic>def prompt_and_get(prompt)
+  print prompt
+  res = <link:internal>readline</link:internal></italic><italic>.chomp
+  throw :quit_requested <link:internal>if</link:internal></italic><italic> res == "!"
+  res
+end
+
+name = prompt_and_get("Name: ")
+age = prompt_and_get("Age: ")
+sex = prompt_and_get("Sex: ")
+</italic>
+demas@<link:internal>arch</link:internal> <link:url>~/sources/study/<link:internal>ruby</link:internal></link:url> $ <link:internal>ruby</link:internal> ex.rb
+Name: sdaas
+Age: !
+ex.rb:4:in `throw': uncaught throw `quit_requested' (NameError)
+        from ex.rb:4:in `prompt_and_get'
+        from ex.rb:10
+
+А вот так ошибка будет перехвачена:
+
+<italic>catch :quit_requested do
+	name = prompt_and_get("Name: ")
+	age = prompt_and_get("Age: ")
+	sex = prompt_and_get("Sex: ")
+end
+</italic>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:28.7381140+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:28.7381140+04:00</last-metadata-change-date>
+  <create-date>2009-04-26T10:06:15.3761030+04:00</create-date>
+  <cursor-position>570</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>318</x>
+  <y>466</y>
+  <open-on-startup>False</open-on-startup>
+</note>

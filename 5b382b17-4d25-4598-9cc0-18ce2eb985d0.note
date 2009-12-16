@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пересечение и объединение Range</title>
+  <text xml:space="preserve"><note-content version="0.1">Пересечение и объединение Range
+
+
+     Set HelloRange = Range("D3:D10, A3:A10 , F3")
+     Set HelloRange = Range("A<link:internal>1</link:internal>:A20  A8:D8")
+
+     Как Вы видите из предыдущих примеров отличаются типом обьявления - "D3:D10, A3:A10" это объединения, а "A<link:internal>1</link:internal>:A20 A8:D8" это пересечение. Используя пересечения и объединения можно строить область любого уровня сложности. 
+
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.5644980+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.5644980+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:10:50.9437540+04:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

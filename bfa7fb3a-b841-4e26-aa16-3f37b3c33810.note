@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка сигналов</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка сигналов
+
+<italic>#include &lt;signal.h&gt;</italic>
+<italic>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+void ouch(int sig)
+{
+  printf("OUCH! - I got signal %d\n", sig);
+  (void) signal(SIGINT, SIG_DFL);
+}
+
+int main()
+{
+  (void) signal(SIGINT, ouch);
+
+  while(1) {
+    printf("Hello world\n");
+    sleep(1);
+  }
+}
+</italic>
+demas@demashost:~/sources/study/<link:internal>linux</link:internal>$ ./sig1
+Hello world
+^COUCH! - I got signal 2
+Hello world
+^<link:broken>C</link:broken>
+</note-content></text>
+  <last-change-date>2009-08-09T21:35:12.4230240+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T21:35:12.4230240+04:00</last-metadata-change-date>
+  <create-date>2009-02-01T11:30:57.6295509+03:00</create-date>
+  <cursor-position>195</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1379</x>
+  <y>315</y>
+  <open-on-startup>False</open-on-startup>
+</note>

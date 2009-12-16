@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Args</title>
+  <text xml:space="preserve"><note-content version="0.1">Args
+
+
+todo: practice
+
+caller(object) - A reference to the object that created the Args.
+dataset(tableId) - The table that lookupField and record refer too.  However, this is often left null since the proper dataset is implied.
+designName(str) - Which of the designs within a report should be <link:internal>used</link:internal>, null implies the default design.
+lookupField(fieldId) - When showing a form, the field to filter on.
+lookupValue(str) - When showing a form, the value to filter with.
+menuItemName(str) - The name of the menu item that <link:internal>caused</link:internal> the object to be created.
+menuItemType(menuItemType) - The type of the menu item that <link:internal>caused</link:internal> the object to be created.
+name(str) - For reports and forms this is the name of menu item that invoked the form/report
+parentWnd(int) - I have only seen this <link:internal>used</link:internal> internally in the <link:internal>kernel</link:internal> to insure dialogs child <link:internal>windows</link:internal> are properly nested.
+parm(str) - A generic string property.
+parmEnum(int) - One of the values from the base enum specified by parmEnumType.  Works together with the parmEnumType to select different behaviors.
+parmEnumType(int) - The id of the base enum.  Typically you would use the enumnum(<link:broken>some</link:broken>-type) function.
+parmObject(object) - A generic object property.
+record(common)  - A blank record for dataset.  You can create a blank record with the DictTable. makeRecord() method.  Often the lookupField is filled in with the lookupValue.</note-content></text>
+  <last-change-date>2009-10-12T12:00:32.1515990+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.1515990+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:36:44.1814820+04:00</create-date>
+  <cursor-position>33</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1032</x>
+  <y>518</y>
+  <open-on-startup>False</open-on-startup>
+</note>

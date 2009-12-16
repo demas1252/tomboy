@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример работы с DETS</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример работы с DETS
+
+-module(my_dets).
+-export([start/0]).
+
+open(File)-&gt;
+    case dets:open_file('storage_handle', [{file, File}]) of
+	{ok, 'storage_handle'}-&gt;
+	    io:format("dets opened~n");
+	{error, _Reason} -&gt;
+	    io:format("cannot open dets table~n"),
+	    exit(0)
+    end.
+
+close()-&gt;
+    dets:close('storage_handle').
+
+insert(Container)-&gt;
+    dets:insert('storage_handle', [Container]).
+
+lookup(Key)-&gt;
+    [{_, Value}] = dets:lookup('storage_handle', Key),
+    Value.
+
+start()-&gt;
+    open('data'),
+    insert({'One', 'Hello'}),
+    insert({'Two', 'Bye'}),
+    io:format("~p~n", [lookup('One')]),
+    close().
+    
+=======================================
+
+(<link:internal>emacs</link:internal>@xal)29&gt; my_dets:start().
+dets opened
+'Hello'
+ok
+</note-content></text>
+  <last-change-date>2009-03-24T08:47:54.3221170+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:47:54.3221170+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:47:27.9575980+03:00</create-date>
+  <cursor-position>33</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>486</y>
+  <open-on-startup>False</open-on-startup>
+</note>

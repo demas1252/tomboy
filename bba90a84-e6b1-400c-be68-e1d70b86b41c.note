@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка MySql</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка MySql
+
+1. Ищем и устанавливаем пакеты (по mysql).  Важны 4 пакета: server, client, shared, devel.
+2. После установки в<link:url> /etc/rc.d/init.d/</link:url> появится файл mysqld
+3. Запускаем его из под root: mysqld start
+4. Проверяем ps -el | grep mysqld
+5. mysql -u root
+6. select user, host, password from mysql.user;</note-content></text>
+  <last-change-date>2008-03-26T22:35:19.2198770+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:35:19.2198770+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:35:18.1488800+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>8</x>
+  <y>663</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вырос TempDb</title>
+  <text xml:space="preserve"><note-content version="0.1">Вырос TempDb
+
+
+база <link:internal>tempdb</link:internal> размером 100 гигов...
+что могло довести ее до такого состояния?
+как быстро сбросить размер mdf файла без рестарта сервера?
+
+---
+
+Можно посмотреть хитпарад объектов по размерам в <link:internal>tempdb</link:internal>
+
+_use <link:internal>tempdb</link:internal>
+go
+select id, object_name(id) internal_name, name, dpages/128. [<link:internal>used</link:internal>, mb] , reserved/128. [reserved, mb] from sysindexes 
+where id &gt; 100
+order by dpages desc_
+
+---
+
+имхо, в 2005, для <link:internal>tempdb</link:internal> очень поднялася планка требований как к производительности массива, так и объему самой базы, причин много, к примеру, некоторые:
+
+<link:internal>1</link:internal>) Версионность (причем, даже неявная, как онлайновая <link:internal>перестройка индексов</link:internal>)
+2) Deleted и Inserted теперь реализованы не посредством скана лога, а посредством структур в temdb
+
+Да и к тому же, некоторые джоины, временные таблицы, таблицы-переменные, тяжелые <link:internal>сортировки</link:internal>, <link:internal>checkdb</link:internal> требуют достаточного пространства в этой базе.
+</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.4654770+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.4654770+03:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:39:20.2464080+04:00</create-date>
+  <cursor-position>382</cursor-position>
+  <width>508</width>
+  <height>360</height>
+  <x>969</x>
+  <y>476</y>
+  <open-on-startup>False</open-on-startup>
+</note>

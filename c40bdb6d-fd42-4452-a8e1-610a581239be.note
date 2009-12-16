@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Когда и как собирать статистику</title>
+  <text xml:space="preserve"><note-content version="0.1">Когда и как собирать статистику
+
+Если данные не менялись, то статистику пересобирать смысла не имеет(и в старом индексе, и после ребилда получится одно и тоже).
+Если данные ощутимо менялись, то правильный выбор - пересобрать статистику и по таблице, и по ее индексам. Иначе (наиболее типичный вариант) при росте таблицы и ее индексов, если пересобрать статистику только для индексов, их count и др. показатели получится по большему множеству данных по сравнению со старой статистикой для таблицы и мы легко можем получить, к примеру, преимущественное использование доступа напрямую по таблице, а не по индексам.</note-content></text>
+  <last-change-date>2008-03-27T14:50:44.3594400+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T14:50:44.3594400+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:50:43.3032870+03:00</create-date>
+  <cursor-position>611</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>598</y>
+  <open-on-startup>False</open-on-startup>
+</note>

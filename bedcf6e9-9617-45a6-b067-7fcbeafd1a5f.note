@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Emacs и Latex</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Emacs</link:internal> и Latex
+
+<link:url>http://xtalk.msk.su/~ott/ru/writings/emacs-tex/TeXMode.html</link:url>
+
+<link:broken>C</link:broken>+<link:internal>c C</link:internal>+f - обработать
+<link:broken>C</link:broken>+<link:internal>c C</link:internal>+l - последняя строка лога
+С+с С+л - прервать обработку
+
+<link:url>http://xtalk.msk.su/~ott/ru/writings/emacs-tex/AUCTeX.html</link:url>
+
+<link:broken>C</link:broken>+<link:internal>c C</link:internal>+m - элемент текста
+<link:broken>C</link:broken> +cfe - emph
+
+<link:broken>C</link:broken>-<link:internal>c C</link:internal>-t <link:broken>C</link:broken>-p Переключает между выводом в форматах DVI и <link:internal>PDF</link:internal>;
+<link:broken>C</link:broken>-<link:internal>c C</link:internal>-t <link:broken>C</link:broken>-i Включает и выключает интерактивный режим;
+<link:broken>C</link:broken>-<link:internal>c C</link:internal>-t <link:broken>C</link:broken>-s Включает и выключение поддержки специальных тагов исходных текстов;
+<link:broken>C</link:broken>-<link:internal>c C</link:internal>-t <link:broken>C</link:broken>-o Включает и выкулючает использование Omega/<link:internal>lambda</link:internal>.
+
+<link:broken>C</link:broken> cc - компиляция
+<link:internal>C c</link:internal>` - переход на ошибку
+<link:broken>C</link:broken> cv - просмотреть
+
+Cc = - оглавление
+	l - метки</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.6567130+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.6567130+04:00</last-metadata-change-date>
+  <create-date>2009-01-02T15:10:28.6062820+03:00</create-date>
+  <cursor-position>577</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

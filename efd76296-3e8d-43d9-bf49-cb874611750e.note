@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VendTmpPrepaymentTrans_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">VendTmpPrepaymentTrans_Ru
+
+На табличке есть логика , отвечающая за вставку данных.
+Собственно работа с таблицей сводися к:
+
+<italic>initFromLedgerJournalTrans(table)  /  initFromVendTrans(table)
+inset()</italic>
+
+В <italic>initFrom..()</italic> кроме копирования данных из соответствующих проводок еще ищется налоговая проводка и из нее берутся данные о налогах.
+</note-content></text>
+  <last-change-date>2009-01-18T13:57:29.5377180+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-18T13:57:29.5377180+03:00</last-metadata-change-date>
+  <create-date>2009-01-18T13:16:02.1659240+03:00</create-date>
+  <cursor-position>26</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1133</x>
+  <y>378</y>
+  <open-on-startup>False</open-on-startup>
+</note>

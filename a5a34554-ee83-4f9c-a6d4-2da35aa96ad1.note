@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Моя установка Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Моя установка Linux
+
+<link:internal>1</link:internal>. Ставим дистриб
+    sda<link:internal>1</link:internal> - /
+    sda2 - /home
+    sda3 - swap
+    <link:internal>hdb</link:internal> - docs
+    sdb - <link:broken>music</link:broken>
+2. Updates / fstab
+3. Firefox, thunderbird, wiki
+4. vms
+5. <link:internal>other</link:internal> soft
+    + g, gvim, <link:internal>mc</link:internal>, thunderbird, exaile, codecs, <link:broken>mplayer</link:broken>, virtualbox
+    - <link:broken>pidgin</link:broken>, ekiga, rhythmbox, serpentine</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.5153130+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.5153130+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:39:08.3140750+03:00</create-date>
+  <cursor-position>38</cursor-position>
+  <width>479</width>
+  <height>360</height>
+  <x>4</x>
+  <y>641</y>
+  <open-on-startup>False</open-on-startup>
+</note>

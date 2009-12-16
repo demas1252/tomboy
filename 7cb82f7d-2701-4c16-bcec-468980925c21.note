@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вычисление расстояния между точками</title>
+  <text xml:space="preserve"><note-content version="0.1">Вычисление расстояния между точками
+
+create table pif (
+	id varchar(2),
+	x integer,
+	y integer)
+
+create table my_route (
+	id varchar(2)
+	)
+	
+insert into pif values ('a', 1, 5)
+insert into pif values ('b', 9, 2)
+insert into pif values ('c', 3, 3)
+insert into pif values ('d', 6, 9)
+
+insert into my_route values('a')
+insert into my_route values('b')
+insert into my_route values('c')
+
+
+select sum(sqrt((c1.x - c2.x) * (c1.x - c2.x) + (c1.y - c2.y) * (c1.y - c2.y))) as distance
+from
+	(select t1.id as a, min(t2.id) as b
+	from my_route as t1, my_route as t2
+	where t1.id &lt; t2.id
+	group by t1.id) as lines, 
+	pif as c1, pif as c2
+where lines.a = c1.id and lines.b = c2.id
+</note-content></text>
+  <last-change-date>2009-09-20T14:10:05.5414100+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-20T14:10:05.5414100+04:00</last-metadata-change-date>
+  <create-date>2009-09-20T14:09:51.8555980+04:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>330</x>
+  <y>565</y>
+  <open-on-startup>False</open-on-startup>
+</note>

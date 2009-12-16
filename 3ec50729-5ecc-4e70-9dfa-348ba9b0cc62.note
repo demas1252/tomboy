@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация конечного автомата на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация конечного автомата на Python
+
+*Класс конечного автомата*
+&lt;&lt;pre
+class FSM:
+    def __init__(self, initial_state, memory=None):
+        self.state_transitions = {}	        # <link:internal>Map</link:internal> (input_symbol, current_state) --&gt; (action, next_state).
+        self.state_transitions_any = {}		# <link:internal>Map</link:internal> (current_state) --&gt; (action, next_state).
+        self.default_transition = None
+        self.input_symbol = None
+        self.initial_state = initial_state
+        self.current_state = self.initial_state
+        self.next_state = None
+        self.action = None
+        self.memory = memory
+
+    def reset (self):
+        self.current_state = self.initial_state
+        self.input_symbol = None
+
+    def <link:internal>add</link:internal>_transition (self, input_symbol, state, action=None, next_state=None):
+	# (input_symbol, current_state) --&gt; (action, next_state)
+        <link:internal>if</link:internal> next_state is None:
+            next_state = state
+        self.state_transitions[(input_symbol, state)] = (action, next_state)
+
+    def <link:internal>add</link:internal>_transition_list (self, list_input_symbols, state, action=None, next_state=None):
+        <link:internal>if</link:internal> next_state is None:
+            next_state = state
+        for input_symbol in list_input_symbols:
+            self.<link:internal>add</link:internal>_transition (input_symbol, state, action, next_state)
+
+    def <link:internal>add</link:internal>_transition_any (self, state, action=None, next_state=None):
+	# (current_state) --&gt; (action, next_state)
+        <link:internal>if</link:internal> next_state is None:
+            next_state = state
+        self.state_transitions_any [state] = (action, next_state)
+
+    def set_default_transition (self, action, next_state):
+        self.default_transition = (action, next_state)
+
+    def get_transition (self, input_symbol, state):
+        <link:internal>if</link:internal> self.state_transitions.has_key((input_symbol, state)):
+            return self.state_transitions[(input_symbol, state)]
+        elif self.state_transitions_any.has_key (state):
+            return self.state_transitions_any[state]
+        elif self.default_transition is not None:
+            return self.default_transition
+        else:
+            raise ExceptionFSM ('Transition is undefined: (%s, %s).' %
+                (str(input_symbol), str(state)) )
+
+    def process (self, input_symbol):
+        self.input_symbol = input_symbol
+        (self.action, self.next_state) = self.get_transition (self.input_symbol, self.current_state)
+        <link:internal>if</link:internal> self.action is not None:
+            self.action (self)
+        self.current_state = self.next_state
+        self.next_state = None
+
+    def process_list (self, input_symbols):
+        for s in input_symbols:
+            self.process (s)
+
+&gt;&gt;
+
+Вспомогательный класс исключений:
+&lt;&lt;pre
+class ExceptionFSM(Exception):
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return `self.value`
+
+&gt;&gt;
+
+*Пример использования*
+&lt;&lt;pre
+import sys, os, traceback, optparse, time, string
+
+def BeginBuildNumber (fsm):
+    fsm.memory.append (fsm.input_symbol)
+
+def BuildNumber (fsm):
+    s = fsm.memory.pop ()
+    s = s + fsm.input_symbol
+    fsm.memory.append (s)
+
+def EndBuildNumber (fsm):
+    s = fsm.memory.pop ()
+    fsm.memory.append (int(s))
+
+def DoOperator (fsm):
+    ar = fsm.memory.pop()
+    al = fsm.memory.pop()
+    <link:internal>if</link:internal> fsm.input_symbol == '+':
+        fsm.memory.append (al + ar)
+    elif fsm.input_symbol == '-':
+        fsm.memory.append (al - ar)
+    elif fsm.input_symbol == '*':
+        fsm.memory.append (al * ar)
+    elif fsm.input_symbol == '/':
+        fsm.memory.append (al / ar)
+
+def DoEqual (fsm):
+    print str(fsm.memory.pop())
+
+def Error (fsm):
+    print 'That does not compute.'
+    print str(fsm.input_symbol)
+
+# ===================================================================================================
+
+f = FSM ('INIT', []) # "memory" will be <link:internal>used</link:internal> as a stack.
+f.set_default_transition (Error, 'INIT')
+f.<link:internal>add</link:internal>_transition_any  ('INIT', None, 'INIT')
+f.<link:internal>add</link:internal>_transition      ('=',               'INIT',            DoEqual,          'INIT')
+f.<link:internal>add</link:internal>_transition_list (string.digits,     'INIT',            BeginBuildNumber, 'BUILDING_NUMBER')
+f.<link:internal>add</link:internal>_transition_list (string.digits,     'BUILDING_NUMBER', BuildNumber,      'BUILDING_NUMBER')
+f.<link:internal>add</link:internal>_transition_list (string.whitespace, 'BUILDING_NUMBER', EndBuildNumber,   'INIT')
+f.<link:internal>add</link:internal>_transition_list ('+-*/',            'INIT',            DoOperator,       'INIT')
+
+inputstr = raw_input ('&gt; ')
+f.process_list(inputstr)
+
+&gt;&gt;
+
+*Работа*
+&lt;&lt;pre
+&gt; 2 2 + =
+4
+
+&gt;&gt;
+
+*Пояснения*
+
+<link:internal>1</link:internal>. FSM ('INIT', []) - начальное состояние конечного автомата и инициализация памяти, которая будет использоваться потребителями конечного автомата
+2. <link:internal>add</link:internal>_transition* - это мы просто строим граф конечного атомата. Сначала будут просматриваться коомбинации (символ, состояние), потом (состояние) потом (default). См. get_transition().
+3. string.digits возвращает 0123456789
+4. граф строится путем заполнения <link:internal>Map</link:internal>-а (входной символ, текущее состояние) -&gt; (действие выполняемое при переходе, состояние в которое переходим)
+5. действия,выполняемые при переходе из одного состояния в другое описываются в виде функций (beginBuildNumber и т.д.)
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.9707870+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.9707870+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:13:30.8496680+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Fox Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Fox Ruby
+
+<link:url>http://www.fxruby.org/downloads.html</link:url>
+
+Сначала ставим пакет fox, а потом биндинги к <link:internal>ruby</link:internal>. В пакетном менеджере я не нашел, поэтому похоже надо качать исходники с сайта.
+
+Но что-то я пока даже не стал разбираться </note-content></text>
+  <last-change-date>2009-06-30T14:01:43.4436950+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-30T14:01:43.4436950+04:00</last-metadata-change-date>
+  <create-date>2009-06-30T13:53:57.3052270+04:00</create-date>
+  <cursor-position>177</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>762</x>
+  <y>368</y>
+  <open-on-startup>False</open-on-startup>
+</note>

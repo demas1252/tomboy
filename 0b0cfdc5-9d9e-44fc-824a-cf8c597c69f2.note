@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>telepathy</title>
+  <text xml:space="preserve"><note-content version="0.1">telepathy
+
+The Telepathy project is building a unified framework for many different kinds of real-time communications. It uses the D-Bus messaging system to provide a simple interface for client applications, allowing them to quickly take advantage of Telepathy's benefits.
+
+<list><list-item dir="ltr">Real-time: Telepathy supports instant messaging (both one-to-one and in groups), voice calls and <link:internal>video</link:internal> calls; it's less suited for store-and-forward applications like email
+</list-item><list-item dir="ltr">Unified: Many different programs can take advantage of these communications; Telepathy lets these programs work together
+</list-item><list-item dir="ltr">Framework: Telepathy allows the different aspects of communication handling to be divided between different parts of the system, meaning each part is simpler</list-item></list></note-content></text>
+  <last-change-date>2009-10-17T22:10:52.1231230+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.1231230+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T19:26:32.6986260+04:00</create-date>
+  <cursor-position>642</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>974</x>
+  <y>182</y>
+  <open-on-startup>False</open-on-startup>
+</note>

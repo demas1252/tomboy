@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Задания</title>
+  <text xml:space="preserve"><note-content version="0.1">Задания
+
+todo: practice
+
+В win2000 был введен новый объект ядра - задание (job). Он позволяет группировать <link:internal>процессы</link:internal> и помещать их в нечто вроде песочницы, которая определенным образом ограничивает их действия.
+
+&lt;&lt;pre
+// создание job
+HANDLE hjob = CreateJobObject(NULL, TEXT("job1"));
+// помещение процесса в job
+AssignProcessToJobObject(hjob, GetCurrentProcess());
+// задает ограничения на задание
+SetInformationJobObject(...);
+// получение статистической информации о задании
+QueryInformationJobObject(...);
+// завершение всех процессов в задании
+TerminateJobObject(...);
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2008-03-27T21:59:43.1515860+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:59:43.1515860+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:59:42.1171620+03:00</create-date>
+  <cursor-position>36</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

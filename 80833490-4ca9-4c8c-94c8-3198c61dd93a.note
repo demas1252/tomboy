@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Открывающие и закрывающие проводки</title>
+  <text xml:space="preserve"><note-content version="0.1">Открывающие и закрывающие проводки
+
+В Аксапте делается закрытие года (перенос начальных сальдо).
+В результате этого формируются Открывающие и Закрывающие проводки.
+Вопрос. Должны ли эти проводки быть с корреспонденцией?
+Сейчас в системе у этих проводок незаполнены поля BondBatchTrans_RU, BondBatch_RU.
+
+Эти проводки никогда не были с корреспонденцией.</note-content></text>
+  <last-change-date>2008-03-29T22:57:35.0127150+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T22:57:35.0127150+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T22:57:15.7398780+03:00</create-date>
+  <cursor-position>302</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

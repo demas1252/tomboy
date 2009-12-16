@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Указатели на функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Указатели на функции
+
+
+<bold>Объявление</bold>
+
+Указатель на функциию не принимающую аргументов и ничего не возвращающую:
+
+	<italic>void (*funcPtr)(); </italic>
+
+Более сложные случаи:
+
+	<italic>void * (*(*fp1)(int))[10];</italic>    
+	
+	fp1 is a pointer to a function that takes an integer argument and returns a pointer to an array of 10 void pointers
+
+	<italic>float (*(*fp2)(int,int,float))(int);</italic>
+
+	fp2 is a pointer to a function that takes three arguments (int, int, and float) and returns a pointer to a function that takes an integer argument and returns a float.
+
+	<italic>typedef double (*(*(*fp3)())[10])();</italic>
+
+	An fp3 is a pointer to a function that takes no arguments and returns a pointer to an array of 10 pointers to functions that take no arguments and return doubles.
+
+	<italic>int (*(*f4())[10])();</italic>
+
+	f4 is a function that returns a pointer to an array of 10 pointers to functions that return integers.
+
+<bold>Использование</bold>
+
+<italic>#include &lt;iostream&gt;
+using namespace std;
+
+void <link:internal>func</link:internal></italic><italic>() {
+  cout &lt;&lt; "<link:internal>func</link:internal></italic><italic>() called..." &lt;&lt; endl;
+}
+
+int main() {
+  void (*fp)();  // Define a function pointer
+  fp = <link:internal>func</link:internal></italic><italic>;  // Initialize it
+  (*fp)();    // Dereferencing calls the function
+  void (*fp2)() = <link:internal>func</link:internal></italic><italic>;  // Define and initialize
+  (*fp2)();
+}
+</italic>
+<bold><link:internal>Массивы указателей</link:internal></bold><bold> на функции</bold>
+
+<italic>#include &lt;iostream&gt;
+using namespace std;
+
+// A macro to define dummy functions:
+#define <link:broken>DF</link:broken></italic><italic>(N) void N() { \
+   cout &lt;&lt; "function " #N " called..." &lt;&lt; endl; }
+
+<link:broken>DF</link:broken></italic><italic>(a); <link:broken>DF</link:broken></italic><italic>(b); <link:broken>DF</link:broken></italic><italic>(<link:internal>c</link:internal></italic><italic>); <link:broken>DF</link:broken></italic><italic>(d); <link:broken>DF</link:broken></italic><italic>(e); <link:broken>DF</link:broken></italic><italic>(f); <link:broken>DF</link:broken></italic><italic>(g);
+
+void (*<link:internal>func</link:internal></italic><italic>_table[])() = { a, b, <link:internal>c</link:internal></italic><italic>, d, e, f, g };
+
+int main() {
+  while(<link:internal>1</link:internal></italic><italic>) {
+    cout &lt;&lt; "press a key from 'a' to 'g' "
+      "or q to quit" &lt;&lt; endl;
+    char <link:internal>c</link:internal></italic><italic>, cr;
+    cin.get(<link:internal>c</link:internal></italic><italic>); cin.get(cr); // second one for CR
+    <link:internal>if</link:internal></italic><italic> ( <link:internal>c</link:internal></italic><italic> == 'q' ) 
+      break; // ... out of while(<link:internal>1</link:internal></italic><italic>)
+    <link:internal>if</link:internal></italic><italic> ( <link:internal>c</link:internal></italic><italic> &lt; 'a' || <link:internal>c</link:internal></italic><italic> &gt; 'g' ) 
+      continue;
+    (*<link:internal>func</link:internal></italic><italic>_table[<link:internal>c</link:internal></italic><italic> - 'a'])();
+  }
+} 
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:22.4435220+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.4435220+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:14:02.6906609+03:00</create-date>
+  <cursor-position>1165</cursor-position>
+  <width>714</width>
+  <height>708</height>
+  <x>437</x>
+  <y>140</y>
+  <open-on-startup>False</open-on-startup>
+</note>

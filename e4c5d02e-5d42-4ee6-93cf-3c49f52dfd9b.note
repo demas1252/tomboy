@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>см. Реализациия ФЗ 224-Ф3-1.1</title>
+  <text xml:space="preserve"><note-content version="0.1">см. Реализациия ФЗ 224-Ф3-1.1
+
+1. Таблица FactureTrans_Ru добавили поле TransNotes.
+2. Форма FactureJournal_Ru - вытащили поле и конпку.
+3. Форма CustInvoice4PaymDialog_Ru - перенес форму с 4-ки - она отбирает счета для создания перечня номенклатур.
+4. Класс FactureTransDetail_Ru - создает текстовое описание из выбранных фактур
+5. Отчет CustVendFacture_Ru - на него выводим данные из сформированного поля.
+</note-content></text>
+  <last-change-date>2009-01-18T12:42:55.0794500+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-18T12:42:55.0794500+03:00</last-metadata-change-date>
+  <create-date>2009-01-18T12:37:00.3571410+03:00</create-date>
+  <cursor-position>329</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

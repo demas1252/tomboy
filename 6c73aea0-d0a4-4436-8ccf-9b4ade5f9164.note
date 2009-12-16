@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Свойства в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Свойства в Python
+
+class MyClass(object):
+    def __init__(self):
+        self._my_secret_thing = 1
+
+    def _i_get(self):
+        return self._my_secret_thing
+
+    def _i_set(self, value):
+        self._my_secret_thing = value
+
+    def _i_delete(self):
+        print 'neh!'
+
+    my_thing = property(_i_get, _i_set, _i_delete, 'the thing')
+
+cl = MyClass()
+print cl.my_thing
+cl.my_thing = 3
+print cl.my_thing
+del cl.my_thing
+help(cl)
+
+================================
+
+1
+3
+neh!
+Help on MyClass in module __main__ object:
+
+class MyClass(__builtin__.object)
+ |  Methods defined here:
+ |  
+ |  __init__(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (<link:internal>if</link:internal> defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (<link:internal>if</link:internal> defined)
+ |  
+ |  my_thing
+ |      the thing
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.7490090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.7490090+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:28:13.5037640+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Оформление кода в LaTeX</title>
+  <text xml:space="preserve"><note-content version="0.1">Оформление кода в LaTeX
+
+<italic>\usepackage{verbatim}
+
+\begin{verbatim}
+client static void main(<link:internal>Args</link:internal></italic><italic> <link:internal>args</link:internal></italic><italic>)
+{
+  FormRun                 formRun;
+  ;
+  formRun = gm\_reportTypeFormEngine::
+       createFormRun(new gm_reportTypeMSFO());
+  formRun.init();
+  formRun.run();
+  formRun.wait();
+}
+\end{verbatim}
+</italic>
+или лучше:
+
+<italic>\usepackage{listings}
+
+\begin{document}
+\lstset{language=<link:internal>Java</link:internal></italic><italic>}
+
+
+\begin{lstlisting}
+client static void main(<link:internal>Args</link:internal></italic><italic> <link:internal>args</link:internal></italic><italic>)
+{
+  FormRun                 formRun;
+  ;
+  formRun = gm\_reportTypeFormEngine::
+       createFormRun(new gm_reportTypeMSFO());
+  formRun.init();
+  formRun.run();
+  formRun.wait();
+}
+\end{lstlisting}
+
+
+
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:24.3514720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.3514720+04:00</last-metadata-change-date>
+  <create-date>2008-10-16T14:30:59.5965240+04:00</create-date>
+  <cursor-position>309</cursor-position>
+  <width>508</width>
+  <height>360</height>
+  <x>2</x>
+  <y>609</y>
+  <open-on-startup>False</open-on-startup>
+</note>

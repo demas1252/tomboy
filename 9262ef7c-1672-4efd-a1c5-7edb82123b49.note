@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация Memento на Pyhton</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация Memento на Pyhton
+
+class MementoMetaclass(type):    
+    cache = {}
+
+    def __call__(self, *<link:internal>args</link:internal>):
+        print "="*20
+        print "ClassObj:", self
+        print "<link:internal>Args</link:internal>:", <link:internal>args</link:internal>
+        print "="*20
+        cached = self.cache.get(<link:internal>args</link:internal>, None)
+        <link:internal>if</link:internal> not cached:
+            instance = type.__call__(self, *<link:internal>args</link:internal>)
+            self.cache.update({<link:internal>args</link:internal>:instance})
+            return instance
+        return cached
+        
+class Foo(object):
+    __metaclass__ = MementoMetaclass
+    template = ''
+    def __init__(self, arg1, arg2, arg3):
+        self.template = arg1
+
+a = Foo(1,2,3)
+b = Foo(2,3,4)
+c = Foo(1,2,3)
+d = Foo(2,3,4)
+e = Foo(5,6,7)
+f = Foo(5,6,7)
+
+print id(a), id(b), id(c), id(d), id(e), id(f)
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.4581490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.4581490+04:00</last-metadata-change-date>
+  <create-date>2009-07-01T15:44:36.0727680+04:00</create-date>
+  <cursor-position>30</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>569</x>
+  <y>418</y>
+  <open-on-startup>False</open-on-startup>
+</note>

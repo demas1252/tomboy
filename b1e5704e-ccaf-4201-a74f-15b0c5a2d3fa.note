@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Скопировать содержимое консоли</title>
+  <text xml:space="preserve"><note-content version="0.1">Скопировать содержимое консоли
+
+1) Запускаем screen
+Код
+$ screen
+2) Нажимаем Enter. Всё. Мы находимся в нулевом окне консоли.
+3) Выполняем нужные команды, вывод которых необходимо скопировать.
+4) Ctrl+A, Ctrl+[ - мы в режиме копирования. Ставим курсор на начало <link:internal>выделения</link:internal>, жмём пробел, потом ставим курсор на конец <link:internal>выделения</link:internal>, жмём пробел. Текст скопирован в буфер.
+5) Ctrl+A, с - мы создали новое 1-е окно.
+6) Ctrl+A, 1 - мы перешли на 1-е окно.
+7) Открываем любой (?) текстовый редактор (я пробовал в <link:internal>mc</link:internal>), и жмём Ctrl+A, Ctrl+] - текст вставлен. Сохраняем.
+8) Ctrl+A, Ctrl+0 - вернуться обратно в нулевое окно. </note-content></text>
+  <last-change-date>2008-03-27T15:37:30.5680600+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T15:37:30.5680600+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:37:29.3854250+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>882</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

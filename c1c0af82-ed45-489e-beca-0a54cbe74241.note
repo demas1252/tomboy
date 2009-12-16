@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Merge Dimension</title>
+  <text xml:space="preserve"><note-content version="0.1">Merge Dimension
+
+client server static Dimension gmcs_mergeDim(Dimension dim<link:internal>1</link:internal>, Dimension dim2)
+{
+    Dimension   ret;
+    int         i;
+    ;
+    ret = dim<link:internal>1</link:internal>;
+    for (i = <link:internal>1</link:internal>; i &lt;= enumcnt(SysDimension); i++)
+    {
+        <link:internal>if</link:internal> (!ret[i])
+            ret[i] = dim2[i];
+    }
+
+    return ret;
+}</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.8283610+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.8283610+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:02:11.6778790+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

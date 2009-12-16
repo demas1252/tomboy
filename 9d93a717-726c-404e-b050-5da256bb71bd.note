@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проверка наличия временной таблицы в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Проверка наличия временной таблицы в MS SQL
+
+Стандартный сценарий, работающий для постоянных таблиц
+
+<italic><link:internal>IF</link:internal></italic><italic> EXISTS (
+SELECT *
+FROM sys.<link:internal>tables</link:internal></italic><italic>
+WHERE name=‘#temp’)
+DROP TABLE #temp
+CREATE TABLE #temp(id INT ) </italic>
+
+здесь не подойдет.
+
+Временные таблицы видны только в текущей сессии, а значит две сессии могут создать две временные таблицы с одинковыми именами, но в sys.table они будут отображаться как:
+
+#temp____&lt;number&gt;.
+
+Так что для временных таблиц правильно будет так:
+
+<italic><link:internal>IF</link:internal></italic><italic> EXISTS (
+SELECT *
+FROM sys.<link:internal>tables</link:internal></italic><italic>
+WHERE name LIKE ‘#temp%’)
+DROP TABLE #temp
+CREATE TABLE #temp(id INT )
+</italic>
+p.s. Честно говоря я в этом представлении вообще временных таблиц не увидел</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.2651660+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.2651660+03:00</last-metadata-change-date>
+  <create-date>2009-04-12T13:55:51.1317510+04:00</create-date>
+  <cursor-position>575</cursor-position>
+  <width>614</width>
+  <height>643</height>
+  <x>934</x>
+  <y>247</y>
+  <open-on-startup>False</open-on-startup>
+</note>

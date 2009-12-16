@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Авансовые отчеты</title>
+  <text xml:space="preserve"><note-content version="0.1">Авансовые отчеты
+
+<link:internal>Расчеты с поставщиками</link:internal> - Авансовые отчеты
+
+<link:internal>Печатная форма 'Авансовый отчет'</link:internal>
+<link:internal>Что происходит в момент разноски Авансового отчета</link:internal></note-content></text>
+  <last-change-date>2009-06-10T10:59:50.6507819+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:59:50.6507819+04:00</last-metadata-change-date>
+  <create-date>2009-06-04T11:15:02.7211240+04:00</create-date>
+  <cursor-position>144</cursor-position>
+  <width>500</width>
+  <height>360</height>
+  <x>1166</x>
+  <y>51</y>
+  <open-on-startup>False</open-on-startup>
+</note>

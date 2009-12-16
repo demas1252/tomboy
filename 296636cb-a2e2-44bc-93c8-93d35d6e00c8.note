@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Initrd</title>
+  <text xml:space="preserve"><note-content version="0.1">Initrd
+
+Временная файловая система, которую использует ядро перед монирование настоящих фс.  Ведь чтобы смонтировать фс, необходимо считать модуль файловой системы, а чтобы его считать нужна уже смонтированная фс.
+
+Обычно после этого initrd отмонтируется, но во многих встраиваемых системах она так и остается корнем.
+
+Вот так можно посмотреть, что в нем:
+
+<italic>mkdir temp ; cd temp
+cp<link:url> /boot/initrd-2.6.14.2.img</link:url></italic><italic> initrd-2.6.14.2.img.gz
+gunzip initrd-2.6.14.2.img.gz
+cpio -i --make-directories &lt; initrd-2.6.14.2.img
+
+</italic>mkinitrd - помогает создать initrd в процессе установки.  Это обычный <link:internal>shell</link:internal> скрипт.
+
+Хм... все что выше - несколько устарело.  Теперь initramfs.
+
+<italic>
+</italic></note-content></text>
+  <last-change-date>2009-11-05T16:11:59.6799120+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.6799120+03:00</last-metadata-change-date>
+  <create-date>2009-09-19T17:02:19.1052210+04:00</create-date>
+  <cursor-position>651</cursor-position>
+  <width>450</width>
+  <height>552</height>
+  <x>997</x>
+  <y>339</y>
+  <open-on-startup>False</open-on-startup>
+</note>

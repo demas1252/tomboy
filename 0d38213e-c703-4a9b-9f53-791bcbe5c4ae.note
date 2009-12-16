@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Зеркалирование</title>
+  <text xml:space="preserve"><note-content version="0.1">Зеркалирование
+
+     [Описание зеркалирования]
+
+*Господа подскажите пожалуста что можно делать с сервером на которой производится зеркалирование
+например можно ли с него собирать отчетность или он как в оракловский Standby server *
+
+_имхо, если судить по документации - ничего с ним (базой) делать нельзя.
+
+The mirror database has the same database states as the principal database, but because the mirror is always in a nonrecovered state, it never serves the database while in the mirror role.
+
+
+Principal database -&gt; Mirror database -&gt; Snapshot database -&gt; отчеты (состояние данных - на момент создания Snapshot database)
+
+
+Обращение к Snapshot database все равно в большей часте будет обращением к страницам основной базы. В Snapshot database хранятся только первоначальные страницы основной базы, измененные после момента snapshot'а, а неизмененные страницы берутся из файлов основной._</note-content></text>
+  <last-change-date>2008-03-30T17:39:08.0305940+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:39:08.0305940+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:39:05.1026850+04:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>277</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

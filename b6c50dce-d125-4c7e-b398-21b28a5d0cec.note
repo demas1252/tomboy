@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Именованные каналы vs TCP/IP</title>
+  <text xml:space="preserve"><note-content version="0.1">Именованные каналы vs TCP/IP
+
+<link:internal>SC</link:internal>&gt; Кстати, а зачем они нужны, если есть TCP/IP 127.0.0.<link:internal>1</link:internal> ?
+<link:internal>SC</link:internal>&gt; Это не то же самое выходит? Под виндой.
+
+pipe под виндой на локальной машине будет побыстрее, поскольку будет использовать LPC - наиболее быстрое межпроцессное средство коммуникации, хотя если заняться проверками, может оказаться, что выигрыш не значительный. А в случае работы в <link:internal>сети</link:internal> - будет использовать тот же TCP/IP. Основный плюс пайпов и мейлслотов vs сокеты, то, что для них можно задать список доступа и поиметь за бесплатно всю мощь системы безопасности ОС. Для сокетов это нужно делать руками. Поэтому вопрос про актуальность я бы также в этом свете рассматривал - вам нужен "сырой" поток данных между двумя машинами, но при этом нужно регулировать доступ к своей службе? Пайпы - ваш выбор. 
+
+
+Единственная беда с этими пайпами, если использовать их как способ коммуникации с внешним миром, они навсегда привязывают вас к виндовсу.</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.0431670+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.0431670+04:00</last-metadata-change-date>
+  <create-date>2008-05-12T18:37:24.1534540+04:00</create-date>
+  <cursor-position>796</cursor-position>
+  <width>870</width>
+  <height>360</height>
+  <x>651</x>
+  <y>267</y>
+  <open-on-startup>False</open-on-startup>
+</note>

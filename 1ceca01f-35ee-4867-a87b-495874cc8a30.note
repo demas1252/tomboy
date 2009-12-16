@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Одновременная работа двух потоков</title>
+  <text xml:space="preserve"><note-content version="0.1">Одновременная работа двух потоков
+
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;string.h&gt;
+
+void *thread_function(void *arg);
+char message[] = "Hello World";
+int run_now = <link:internal>1</link:internal>;
+
+int main() {
+    int res;
+    pthread_t a_thread;
+    void *thread_result;
+
+    res = pthread_create(&amp;a_thread, NULL, thread_function, (void *)message);
+
+    <link:internal>if</link:internal>(res != 0) {
+        perror("Thread creation failed");    
+        exit(EXIT_FAILURE);
+    }
+
+    int print_count<link:internal>1</link:internal> = 0;
+    while(print_count<link:internal>1</link:internal>++ &lt; 20) {
+        <link:internal>if</link:internal> (run_now == <link:internal>1</link:internal>) {
+            printf("<link:internal>1</link:internal>");
+            run_now = 2;
+        }
+        else {
+            sleep(<link:internal>1</link:internal>);
+        }
+    }
+
+    printf("Waiting for thread to finish... \n");
+    res = pthread_join(a_thread, &amp;thread_result);
+    <link:internal>if</link:internal> (res != 0) {
+        perror("Thread joined failed");
+        exit(EXIT_FAILURE);
+    }
+    printf("Thread joined, it returned %s\n", (char *)thread_result);
+    printf("Message is now %s \n", message);
+    exit(EXIT_SUCCESS);
+}
+
+void *thread_function(void *arg) {
+    printf("thread function is running. argument was %s\n", (char *)arg);
+    
+    int print_count2 = 0;
+    while(print_count2++ &lt; 20) {
+        <link:internal>if</link:internal> (run_now == 2) {
+            printf("2");
+            run_now = <link:internal>1</link:internal>;
+        }
+        else {
+            sleep(<link:internal>1</link:internal>);
+        }
+    }
+
+    pthread_exit("thank you for cpu time");
+}
+</note-content></text>
+  <last-change-date>2009-11-05T16:11:58.9345820+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:58.9345820+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:43:49.3987760+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

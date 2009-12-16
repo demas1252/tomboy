@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Механизм разноски платежного поручения</title>
+  <text xml:space="preserve"><note-content version="0.1">Механизм разноски платежного поручения
+
+ 1. LedgerJournalPost.main()
+        a) вытягиваем из формы LedgerJournalEngine
+        б) Создаем LedgerJournalCheckPost(). В общем случае, это может быть один из его наследников, но в данном случае - это он.
+        в) дергаем метод run()
+     2. LedgerJournalCheckPost.run()
+        а) блокируем журнал
+        б) проверяем журнал
+        в) this.postJournal()
+     3. LedgerJournalCheckPost.postJournal()
+        а) создаем LedgerVoucherPost
+        б) каждую строку журнала пропихиваем в LedgerVoucherPost
+        в) и для каждой строки делаем this.postTrans()
+     4. LedgerJournalCheckPost.postTrans()
+        а) создаем LedgerVoucherTransUpsdate_Cust.
+        б) updateNow()
+     5. LedgerVoucherTransUpsdate_Cust.updateNow
+        а) создаем custVoucher
+        б) custVoucher.post(custTrans); custTrans может быть пустым; основную работу делает предок - CustVendVoucher.post()
+     6. [CustVendVoucher _ post]
+</note-content></text>
+  <last-change-date>2008-03-28T22:06:00.9558839+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:06:00.9558839+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:05:59.4912180+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

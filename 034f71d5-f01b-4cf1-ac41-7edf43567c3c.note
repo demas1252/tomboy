@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сколько занимает объект в памяти</title>
+  <text xml:space="preserve"><note-content version="0.1">Сколько занимает объект в памяти
+
+
+_static void Main(string[] <link:internal>args</link:internal>)
+        {
+            long StopBytes;
+            Car car;
+
+            long StartBytes = System.GC.GetTotalMemory(true);
+            car = new Car();
+            StopBytes = System.GC.GetTotalMemory(true);
+            GC.KeepAlive(car);
+
+            Console.WriteLine("Size is " + ((long)(StopBytes - StartBytes)).ToString());
+            Console.ReadKey();
+        }_
+        
+Потоконезащищенный</note-content></text>
+  <last-change-date>2009-10-12T12:00:39.6028200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.6028200+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:01:47.4931020+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

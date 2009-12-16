@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как определить неактивные индексы</title>
+  <text xml:space="preserve"><note-content version="0.1">Как определить неактивные индексы
+
+
+     Используем Profiler.  Интересующие нас события:
+     
+     Stored Procedures:
+         <link:internal>RPC</link:internal>:Completed
+         SP:SmtmCompleted
+     <link:internal>TSQL</link:internal>:
+         <link:internal>SQL</link:internal>:BatchCompleted
+         <link:internal>SQL</link:internal>:StmtCompleted
+     
+     Также рекомендуется выбрать следующие столбцы:
+        ApplicationName
+        EventClass
+        TextData
+        Duration
+        LoginName
+        Reads
+        NTUserName
+        
+     Скармливаем трейс в Index Tuning Wizard.
+     Результаты -&gt; Save.
+     
+     Создаем таблицу:
+     
+     CREATE TABLE dbo.Analysis ( 
+ Table    to varchar  (50)  COLLATE <link:internal>SQL</link:internal>_Latin<link:internal>1</link:internal>_General_CP<link:internal>1</link:internal>_CI_AI NOT NULL,
+ Indice   to varchar  (100) COLLATE <link:internal>SQL</link:internal>_Latin<link:internal>1</link:internal>_General_CP<link:internal>1</link:internal>_CI_AI NOT NULL,
+ Uso      to varchar  (50)  COLLATE <link:internal>SQL</link:internal>_Latin<link:internal>1</link:internal>_General_CP<link:internal>1</link:internal>_CI_AI NOT NULL,
+ Peso     int                                                    NOT NULL,
+ Base     to varchar  (15) COLLATE <link:internal>SQL</link:internal>_Latin<link:internal>1</link:internal>_General_CP<link:internal>1</link:internal>_CI_AI      NULL,
+ Date     datetime                                               NOT NULL
+) ON PRIMARY
+   
+     С помощью DTS тянем туда файл результатов.
+     
+     CREATE PROCEDURE Indices_Inactivos AS
+        declare
+        @Base varchar(15),
+        @Tabla varchar(50),
+        @Indice varchar(100),
+        @BaseAnt varchar(15),
+        @TablaAnt varchar(50)
+        
+        declare IndicesInactivos cursor for
+        select Base, Table, Indice
+        from Analysis
+        where Indice like ' [ [ ]IX% '
+        group by Base, Table, Indice
+        having sum(convert(money, replace(Uso,',','.'))) = 0
+        
+        open IndicesInactivos
+        fetch next from IndicesInactivos into @Base, @Tabla, @Indice 
+        
+        while (@@FETCH_STATUS &lt; &gt; -<link:internal>1</link:internal>)
+        begin 
+        
+        <link:internal>if</link:internal> @Base &lt; &gt; @BaseAnt
+        begin
+        Print ' BASES: ' + @Base
+        select @BaseAnt = @Base
+        select @TablaAnt = ''
+        end 
+        
+        <link:internal>if</link:internal> @Tabla &lt; &gt; @TablaAnt
+        begin
+        Print ' TABLE: ' + @Tabla
+        Print ' INDICES: '
+        select @TablaAnt = @Tabla
+        end 
+        
+        Print ' ' + @Indice
+        fetch next from IndicesInactivos into @Base, @Tabla, @Indice
+        continue
+        end 
+        
+        close IndicesInactivos
+        deallocate IndicesInactivos
+        GO
+        
+     Далее <link:url>http://www.sql.ru/articles/mssql/2004/04091601HowToIdentifyNonActiveIndexes.shtml</link:url> :)</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.5485390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.5485390+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:32:20.5899710+04:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>578</y>
+  <open-on-startup>False</open-on-startup>
+</note>

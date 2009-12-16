@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Скелет туловища</title>
+  <text xml:space="preserve"><note-content version="0.1">Скелет туловища
+
+<list><list-item dir="ltr">позвоночный столб 
+<list><list-item dir="ltr"><link:internal>позвонки</link:internal>
+</list-item></list></list-item><list-item dir="ltr">грудная <link:internal>клетка</link:internal>
+<list><list-item dir="ltr"><link:internal>ребра</link:internal>
+</list-item><list-item dir="ltr"><link:internal>грудина</link:internal></list-item></list></list-item></list></note-content></text>
+  <last-change-date>2009-08-07T14:44:59.1733850+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T14:44:59.1733850+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T10:09:42.0439000+04:00</create-date>
+  <cursor-position>83</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1044</x>
+  <y>408</y>
+  <open-on-startup>False</open-on-startup>
+</note>

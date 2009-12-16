@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удалось удалить контрагента по которому были операции</title>
+  <text xml:space="preserve"><note-content version="0.1">Удалось удалить контрагента по которому были операции
+
+<italic>SCR0005997</italic>
+
+Люди обнаруживают такую проблему строя оборотку по ГК.  В этом случае оказывается, что операции были созданы через журнал ГК и контрагентом реально является просто одна из фин аналитик (возможно синхронизированная с поставщиками). 
+
+При этом, если в качестве счетов были указаны счета ГК - то реально проводки по контрагентам не было, а значит контрагента можно удалить.</note-content></text>
+  <last-change-date>2009-08-11T10:36:49.1321580+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-11T10:36:49.1321580+04:00</last-metadata-change-date>
+  <create-date>2009-08-11T10:33:54.0080730+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>246</x>
+  <y>526</y>
+  <open-on-startup>False</open-on-startup>
+</note>

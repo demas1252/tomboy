@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Интерфейс sigaction (рекомендуемый)</title>
+  <text xml:space="preserve"><note-content version="0.1">Интерфейс sigaction (рекомендуемый)
+
+<italic>#include &lt;signal.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+void ouch(int sig)
+{
+  printf("OUCH! - I got signal %d\n", sig);
+}
+
+int main()
+{
+  struct sigaction act;
+
+  act.<link:broken>sa</link:broken></italic><italic>_handler = ouch;
+  sigemptyset(&amp;act.<link:broken>sa</link:broken></italic><italic>_mask);
+  act.<link:broken>sa</link:broken></italic><italic>_flags = 0;
+
+  sigaction(SIGINT, &amp;act, 0);
+
+  while(1) {
+    printf("Hello world\n");
+    sleep(1);
+  }
+}
+</italic></note-content></text>
+  <last-change-date>2009-10-17T22:11:26.4000220+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:11:26.4000220+04:00</last-metadata-change-date>
+  <create-date>2009-02-01T16:54:05.6094779+03:00</create-date>
+  <cursor-position>37</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1190</x>
+  <y>500</y>
+  <open-on-startup>False</open-on-startup>
+</note>

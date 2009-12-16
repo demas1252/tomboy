@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Perforce</title>
+  <text xml:space="preserve"><note-content version="0.1">Perforce
+
+<bold>Создать новый репозиорий</bold>
+
+   _p4 deport newdeport_ - в текстовом файле прописываем путь (z:/Sources/...)
+     Потом в графической утилите можно щелкнуть на Workspace и прописать там еще один depot
+     
+     Как операивно переключать юзверя между несколькими depot пока не понял.
+
+<bold>Добавить файл в репозиторий</bold>
+
+    _p4 <link:internal>add</link:internal> z:\Sources\<link:internal>test</link:internal>.txt
+     p4 commit_
+     
+     Как пропихивать в тексовый файл Descripton пока не знаю.</note-content></text>
+  <last-change-date>2008-05-11T09:08:30.4960840+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-11T09:08:30.4960840+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:03:58.3317030+03:00</create-date>
+  <cursor-position>318</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

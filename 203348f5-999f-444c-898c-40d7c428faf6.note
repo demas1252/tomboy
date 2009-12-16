@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Лишнии процессы в Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Лишнии процессы</link:internal> в Oracle
+
+[author: Veselov]
+
+При работе <link:internal>AXAPTA</link:internal> создает коннекции к серверу баз данных <link:internal>Oracle</link:internal>, при этом на сервере создается клиентский процесс, но сессия не открывается. Это приводит к увеличению нагрузки на сервер и невозможности создания новых соединений с сервером БД <link:internal>Oracle</link:internal> из-за превышения количества процессов сервера БД <link:internal>Oracle</link:internal>. 
+
+----- 
+<link:internal>SQL</link:internal>&gt; select count(*) from v$session; 
+
+COUNT(*) 
+---------- 
+142 
+
+<link:internal>SQL</link:internal>&gt; host ps -ef | grep <link:internal>AXAPTA</link:internal> | <link:broken>wc</link:broken> -l 
+463 
+
+Т.е. на сервере около 300 "мертвых" процессов.
+
+---
+
+Уточните, пожалуйста, установлен ли у Вас <link:internal>Kernel</link:internal> Rollup.  Если я не ошибаюсь, уже в первом Kernal Rollup была устранена данная проблема. Если Kernal Rollup не установлен, но Вы используете AOS можно попробовать установить флаг “Leave connection running when idle” на AOS-е. В общем то, данную проблему можно решить и средствами <link:internal>Oracle</link:internal>, например, используя утилиту dbkill.exe для удаления мертвых сессий. В случае, если версия <link:internal>Oracle</link:internal> старше 9.2.0.6 можно использовать серверный механизм Dead Connection Detection.
+А вообще, это известная проблема, про которую, кстати, писали даже сотрудники mbs: <link:url>http://blogs.msdn.com/aeremenk/archive/2006/12/26/1364522.aspx</link:url>
+
+---
+
+В настройках конфигурации тем не менее я нашел флаг “Leave connection running when idle”. Он не установлен. Имеет смысл его установить? 
+
+Насколько я помню, установка этого флага им помогла.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.7641080+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.7641080+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:19:47.1832570+03:00</create-date>
+  <cursor-position>1381</cursor-position>
+  <width>708</width>
+  <height>623</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

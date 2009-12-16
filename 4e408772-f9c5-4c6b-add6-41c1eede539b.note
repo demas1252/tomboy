@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>ООП в CPP</title>
+  <text xml:space="preserve"><note-content version="0.1">ООП в CPP
+
+<link:internal>Конструкторы и деструкторы в C++</link:internal>
+<link:internal>Размер пустого класса</link:internal>
+<link:internal>Инвариант</link:internal>
+<link:internal>Вызов метода без создания класса</link:internal>
+<link:internal>Приватный конструктор</link:internal>
+<link:internal>Виртуальные методы</link:internal></note-content></text>
+  <last-change-date>2009-12-13T10:21:02.9315740+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-13T10:21:02.9315740+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:08:08.3922600+03:00</create-date>
+  <cursor-position>131</cursor-position>
+  <width>450</width>
+  <height>355</height>
+  <x>453</x>
+  <y>421</y>
+  <open-on-startup>False</open-on-startup>
+</note>

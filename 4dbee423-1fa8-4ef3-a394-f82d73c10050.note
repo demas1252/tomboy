@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Functional Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Functional Python
+
+<link:internal>enumerate</link:internal>
+<link:internal>list comprehention</link:internal>
+<link:internal>partial</link:internal>
+<link:internal>closures in python</link:internal>
+<link:internal>итераторы и генераторы</link:internal>
+<link:internal>itertools</link:internal>
+<link:internal>список функций</link:internal>
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.2983350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.2983350+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:36:50.7634990+03:00</create-date>
+  <cursor-position>93</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>616</x>
+  <y>62</y>
+  <open-on-startup>False</open-on-startup>
+</note>

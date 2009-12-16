@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Определение своей функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Определение своей функции
+
+&lt;&lt;pre
+(define (square x) (* x x))
+     
+&gt;&gt;
+    
+Пример сложнее:
+&lt;&lt;pre
+(define (privet imja)
+    (display "Privet ")
+    (display imja)
+    (display "!")
+    (newline))
+     (define (polzovatel)
+        (write "Predstavtes:")
+        (read))
+     (privet (polzovatel))
+     &gt;&gt;
+</note-content></text>
+  <last-change-date>2008-03-26T21:51:10.9820240+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:51:10.9820240+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:51:02.8927760+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>403</height>
+  <x>5</x>
+  <y>612</y>
+  <open-on-startup>False</open-on-startup>
+</note>

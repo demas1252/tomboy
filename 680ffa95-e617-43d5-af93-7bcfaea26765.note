@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Процессы</title>
+  <text xml:space="preserve"><note-content version="0.1">Процессы
+
+Процесс_ - экземпляр выполняемой программы.  
+
+Состоит из двух компоненов:
+    - объект ядра, через который ОС управляет процессом
+    - адресное в пространство, в котором содержится код и данные exe и dll
+    
+_Поток_ - выполняет код, содержащийся в адресном пространстве процесса.  Потоков может быть <link:internal>1</link:internal>..n.  У каждого потока свой набор регистров и стек.
+При создании процесса первый поток создется системой автоматически.
+
+В любом приложении есть входная функция (<link:internal>entry point</link:internal>) на которую передается управление после загрузки файла в память.
+CRT вызывает ее примерно так:
+
+&lt;&lt;pre
+GetStartupInfo(&amp;StartupInfo);
+int nMainReLVal = WinMain(GetModuleHandle(NULL), NULL, pszCommandLineANSI, (StartupInfo.dwFlags &amp; STARTF_USESHOWWINDOW) ? Startupinfo.wShowWindow , SW_SHOWDEFAULT); 
+
+&gt;&gt;
+Для функции:
+&lt;&lt;pre
+int <link:internal>WINAPI</link:internal> WinMain( HINSTANCE hinstExe, HINSTANCE, PSTR pszCmdLine, int nCmdShow);
+
+&gt;&gt;
+
+_HINSTANCE hinstExe_ - уникальный описатель экземпляра - по идее, это базовый адрес в памяти, определяющий ту область памяти в адресном пространстве процесса, куда был загружен exe-образ (определяется комповщиком).
+
+Второй параметр не используется.  Оставлен ради совместимости.
+
+_pszCmdLine_ - параметры командной строки.  С учетом названия программы - GetCommandLine().
+
+см также
+<link:internal>CreateProcess</link:internal></note-content></text>
+  <last-change-date>2009-03-23T22:07:20.5599640+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T22:07:20.5599640+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:58:54.8345069+03:00</create-date>
+  <cursor-position>1292</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

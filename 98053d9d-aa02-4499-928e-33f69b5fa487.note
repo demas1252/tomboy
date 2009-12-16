@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Hyperthreading</title>
+  <text xml:space="preserve"><note-content version="0.1">Hyperthreading
+
+
+<link:url>http://www.<link:internal>sql</link:internal></link:url><link:url>.ru/forum/actualthread.aspx?tid=300624</link:url>
+
+Кто-нибудь может подсказать как <link:internal>MS SQL</link:internal> 2005 работает с HyperThreading'ом.
+Имеет ли смысл его выключить или лучше оставить включённым?
+
+Насколько я помню, в 2005-м сервере сохранились рекомендации для 2000-го (не помню уже ссылку на статью, кажется, Гладченко где-то ее постил; может, даже в рассылке). 
+Рекомендации были примерно следующие: мы вам ничего твердо не обещаем, проверяйте пользу от использования НТ в каждом конкретном случае. Хотя в самом начале при анонсах 2005-го и проскакивали высказывания, что он с НТ уже умеет работать...
+
+*Гладченко:*
+На 2005 если грамотно настроить Soft-NUMA, можно и с включённым HТ работать.
+НТ может мешать при наличии продолжительных, ресурсоёмких запросов. Если же короткие транзакции - от него бывает и польза...
+
+Согласен с уточнением. 
+При запуске мощной SP как при формировании DWH от HT почти всегда потери, т.к. распараллелить по ниткам такой процесс сложно. Одна толстая нитка выигрывает.
+Однако если рядом с данной SP работает еще какой OLTP, то при НТ будет деградация формирования DWH, но OLTP не падает в такой жестокий даун.</note-content></text>
+  <last-change-date>2008-03-30T17:37:26.2498120+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:37:26.2498120+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:37:23.4121510+04:00</create-date>
+  <cursor-position>854</cursor-position>
+  <width>477</width>
+  <height>360</height>
+  <x>95</x>
+  <y>364</y>
+  <open-on-startup>False</open-on-startup>
+</note>

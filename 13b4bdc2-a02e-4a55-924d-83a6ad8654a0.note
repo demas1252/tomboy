@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>СУБД и антивирус на одном сервере</title>
+  <text xml:space="preserve"><note-content version="0.1">СУБД и антивирус на одном сервере
+
+Если уж поставили, то есть смысл исключать директории где лежат файлы данных и логи из области сканирования.
+
+В частности <link:internal>Oracle</link:internal> + Norton Antivirus - последний может блокировать файлы во время сканирования</note-content></text>
+  <last-change-date>2009-01-24T12:27:00.9349970+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-24T12:27:00.9349970+03:00</last-metadata-change-date>
+  <create-date>2009-01-24T12:25:44.5935920+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>830</x>
+  <y>340</y>
+  <open-on-startup>False</open-on-startup>
+</note>

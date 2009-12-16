@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Програмное создание закупки</title>
+  <text xml:space="preserve"><note-content version="0.1">Програмное создание закупки
+
+  [author: andre]
+    
+     Насчет создания - посмотрите например класс ReqTransPoMarkFirm. Метода createPurchTable, createPurchLine - там по потребности и спланированному заказу програмно генериться заказ.
+     
+     Еще обычно рекомендуют смотреть PurchAutoCreate.</note-content></text>
+  <last-change-date>2008-03-27T21:35:38.7836999+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:35:38.7836999+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:35:37.7734609+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

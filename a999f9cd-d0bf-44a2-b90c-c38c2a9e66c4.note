@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Уменьшить размер undo tablespace</title>
+  <text xml:space="preserve"><note-content version="0.1">Уменьшить размер undo tablespace
+
+1. Создать новый undo tablespace
+2. Изменить параметр UNDO_TABLESPACE
+3. Подождать пока старый undo tablespace не перестанет использоваться
+4. Удалить старый tablespace</note-content></text>
+  <last-change-date>2009-01-31T17:34:44.5055800+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-31T17:34:44.5055800+03:00</last-metadata-change-date>
+  <create-date>2009-01-31T17:33:15.1406000+03:00</create-date>
+  <cursor-position>34</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CSharp реализация Builder</title>
+  <text xml:space="preserve"><note-content version="0.1">CSharp реализация Builder
+
+
+&lt;&lt;pre
+using System;
+using System.Collections;
+ 
+namespace <link:internal>Builder</link:internal>  {
+ 
+  public class MainApp  {
+     public static void Main()  {
+      // Create director and builders
+      Director director = new Director();
+      <link:internal>Builder</link:internal> b<link:internal>1</link:internal> = new ConcreteBuilder<link:internal>1</link:internal>();
+      <link:internal>Builder</link:internal> b2 = new ConcreteBuilder2();
+ 
+       // Construct two products
+      director.Construct(b<link:internal>1</link:internal>);
+      Product p<link:internal>1</link:internal> = b<link:internal>1</link:internal>.GetResult();
+      p<link:internal>1</link:internal>.Show();
+ 
+      director.Construct(b2);
+      Product p2 = b2.GetResult();
+      p2.Show();
+ 
+      // Wait for user
+      Console.Read();
+    }
+  }
+ 
+  class Director  {
+    // <link:internal>Builder</link:internal> uses a complex series of steps
+    public void Construct(<link:internal>Builder</link:internal> <link:internal>builder</link:internal>)
+    {
+      <link:internal>builder</link:internal>.BuildPartA();
+      <link:internal>builder</link:internal>.BuildPartB();
+    }
+  }
+ 
+abstract class <link:internal>Builder</link:internal>  {
+    public abstract void BuildPartA();
+    public abstract void BuildPartB();
+    public abstract Product GetResult();
+  }
+ 
+class ConcreteBuilder<link:internal>1</link:internal> : <link:internal>Builder</link:internal>   {
+    private Product product = new Product();
+ 
+    public override void BuildPartA()  {
+      product.<link:internal>Add</link:internal>("PartA");
+    }
+    
+    public override void BuildPartB()   {
+      product.<link:internal>Add</link:internal>("PartB");
+    }
+ 
+    public override Product GetResult()  {
+      return product;
+    }
+  }
+ 
+class ConcreteBuilder2 : <link:internal>Builder</link:internal>   {
+    private Product product = new Product();
+ 
+    public override void BuildPartA()  {
+      product.<link:internal>Add</link:internal>("PartX");
+    }
+ 
+    public override void BuildPartB()  {
+      product.<link:internal>Add</link:internal>("PartY");
+    }
+ 
+    public override Product GetResult()    {
+      return product;
+    }
+  }
+ 
+class Product  {
+    ArrayList parts = new ArrayList();
+ 
+    public void <link:internal>Add</link:internal>(string part)     {
+      parts.<link:internal>Add</link:internal>(part);
+    }
+ 
+    public void Show()     {
+      Console.WriteLine("\nProduct Parts -------");
+      foreach (string part in parts)
+        Console.WriteLine(part);
+    }
+  }
+ }
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.2231690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.2231690+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:02:17.3984120+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>136</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

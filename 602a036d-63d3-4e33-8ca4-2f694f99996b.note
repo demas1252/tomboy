@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Базовые настройки ОС</title>
+  <text xml:space="preserve"><note-content version="0.1">Базовые настройки ОС
+
+
+_Модели учета (RAssetStandardTable)_ - Позволяют учитывать ОС по нескольким моделям сразу. 
+
+_Аммортизационные группы_ - В рамках модели учета. Определяют метод амортизации, срок службы и т.д.
+    _<link:internal>Методы аммортизации</link:internal>_ - способ аммортизации (справочник).  Указывается в аммортизационных группах.
+
+_Группы ОС_ - Существуют вне моделей учета.  Указываются в карточке ОС. Определяют по какми моделям будет учитываться данное ОС и в каких амортизационных группах. То есть,       объединяют Модели учета и Амортизациооные группы и вешают этот признак на ОС.
+
+_Профили разноски_
+
+
+Балансовая стоимость и остаточная - это не одно и то же. Балансовая стоимость - это <link:internal>ввод в эксплуатацию</link:internal> + ремонты +/- дооценки/уценки и пр. Остаточная стоимость = балансовая стоимость - начисленная амортизация (в т.ч. и переоценка начисленной амортизации), т.е. "чистая стоимость" (без износа).</note-content></text>
+  <last-change-date>2008-04-06T19:33:35.6094800+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T19:33:35.6094800+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:26:24.1927360+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>662</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Програмная разноска накладной со строками из нескольких закупок</title>
+  <text xml:space="preserve"><note-content version="0.1">Програмная разноска накладной со строками из нескольких закупок
+
+
+_static void createOneInvoiceFromMultiSales(
+            container       _conSales, //Перечень заказов (SalesId заказов)
+            container       _conLines, //Перечень строк заказов (<link:internal>RecId</link:internal> строк заказов)
+            TransDate       _invoiceDate, //Дата накладной
+            TransDate       _documentDate, //Дата документа
+            SalesUpdate     _specQty,
+            AccountOrder    _sumBy
+            )
+{
+    int             iSales, iLines;
+    SalesFormLetter letter=SalesFormLetter::construct(DocumentStatus::Invoice);
+    SalesParmLine   parmLine;
+    SalesLine       salesLine;
+    SalesParmTable  SalesParmTable;
+    salesParmUpdate salesParmUpdate;
+    SalesId         salesId;
+    SalesTable      salesTable;
+    <link:internal>RecId</link:internal>           <link:internal>recId</link:internal>;
+    ;
+
+    ttsBegin;
+    letter.transDate(systemDateGet());
+    letter.multiForm(true);
+    letter.specQty(_specQty);
+    letter.printFormLetter    (true);
+
+    letter.createParmUpdate();
+    select forupdate firstonly salesParmUpdate where
+        salesParmUpdate.<link:internal>RecId</link:internal> == letter.salesParmUpdate().<link:internal>RecId</link:internal>;
+    salesParmUpdate.SumBy = _sumBy;
+    salesParmUpdate.update();
+    letter.salesParmUpdate(salesParmUpdate);
+
+    letter.initParameters(letter.salesParmUpdate(),
+                        PrintOut::Current);  // Printout
+
+    for (iSales = <link:internal>1</link:internal>; iSales &lt;= conlen(_conSales); iSales ++)
+    {
+        salesId = conpeek(_conSales, iSales);
+        salesTable = salesTable::<link:internal>find</link:internal>(salesId);
+        SalesParmTable.clear();
+        letter.createParmTable(SalesParmTable, salesTable);
+        SalesParmTable.DocumentDate = _documentDate;
+        SalesParmTable.Transdate = _invoiceDate;
+        SalesParmTable.insert();
+    }
+
+    for (iLines = <link:internal>1</link:internal>; iLines &lt;= conlen(_conLines); iLines ++)
+    {
+        <link:internal>recId</link:internal> = conpeek(_conLines, iLines);
+        select firstonly salesLine where salesLine.<link:internal>RecId</link:internal> == <link:internal>recId</link:internal>;
+        letter.createParmLine(salesLine);
+    }
+
+    letter.run();
+    ttscommit;
+} _
+
+Вызов этого метода:
+
+_static void Job13(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+    Container   conSales, conLines;
+    salesLine   salesLine;
+    ;
+    conSales = conins(conSales, <link:internal>1</link:internal>, "000151482");
+    conSales = conins(conSales, 2, "000151483");
+    select firstonly salesLine where salesLine.SalesId == "000151482" &amp;&amp; salesLine.ItemId == "114014010";
+    conLines = conins(conLines, <link:internal>1</link:internal>, salesLine.<link:internal>RecId</link:internal>);
+    select firstonly salesLine where salesLine.SalesId == "000151483" &amp;&amp; salesLine.ItemId == "11401401004";
+    conLines = conins(conLines, 2, salesLine.<link:internal>RecId</link:internal>);
+    MyClass::createOneInvoiceFromMultiSales(
+        conSales, 
+        conLines, 
+        01082007, 
+        02082007, 
+        SalesUpdate::All, 
+        AccountOrder::Account);
+}  _
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:52.4641090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.4641090+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:37:20.3963000+03:00</create-date>
+  <cursor-position>92</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Общий принцип работы книги покупок</title>
+  <text xml:space="preserve"><note-content version="0.1">Общий принцип работы книги покупок
+
+   <link:internal>1</link:internal>. Создается [<link:internal>BookDataCalc</link:internal>_Vat_Ru] и вызывается его метод CreateAndRun()
+    2. Вызывается метод run() его предка (<link:internal>BookDataCalc</link:internal>_Ru)
+    3. Там в цикле while дергается очередная фактура из RecordSortedList в методе fetchNextRecord()
+    4. Для каждой отфетченной фактуры вызывается calcLineData(), в котором создается экземпляр BookTransCalc_VAT_Ru посредством метода initBookTransCalcClass().
+    5. Дергаем метод <link:internal>calc</link:internal>() полученного BookTransCalc_VAT_Ru, в котором в зависимости от типа документа вызывается один из методов process..()
+    6. Вот в этом <link:internal>calc</link:internal>() и начинается самое сложное. По идее, нас интересуют четыре величины (см. [<link:internal>Amounts в книге покупок</link:internal>]) (см. BookTransCac_VAT_Ru.<link:internal>createLogTrans</link:internal>): 
+       
+       * usedAmount и blockedAmount  получаются просто - с помощью статических методов на таблице [<link:internal>PurchBookVATProcessLogTransOper_RU</link:internal>].       
+       * settledAmount распаковывается из [<link:internal>mapMapSettledAmount</link:internal>], который в свою очередь получается как <link:internal>FactureCalcSettlement_Ru</link:internal>.mapMapSettledAmounts().
+       * factureAmount распаковывается из [<link:internal>mapFactureAmountsDetail</link:internal>], который получается примерно так:
+       
+       _<link:internal>mapMapFactureAmounts</link:internal> = factureCalcSettlement._[<link:internal>mapMapFactureAmounts</link:internal>]_();
+       mapFactureAmountsDetails = <link:internal>Map</link:internal>::create(<link:internal>mapMapFactureAmounts</link:internal>.lookup(<link:internal>transRecId</link:internal>));_
+        
+       То есть, назначением класса [<link:internal>FactureCalcSettlement_Ru</link:internal>], а далее иерархии [<link:internal>CustVendCalcSettledAmount_Ru</link:internal>] и является получение этих двух величин.   
+       
+    7. После этого вызываются методы createLines и createLine временных таблиц, создающие те самые записи. Все это дело происходит в BookTransCalc_VAT_RU.process..()</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.1867540+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.1867540+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:59:53.1978890+03:00</create-date>
+  <cursor-position>1567</cursor-position>
+  <width>593</width>
+  <height>622</height>
+  <x>742</x>
+  <y>204</y>
+  <open-on-startup>False</open-on-startup>
+</note>

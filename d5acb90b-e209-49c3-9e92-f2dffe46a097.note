@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перебрать все ячейки определенного типа</title>
+  <text xml:space="preserve"><note-content version="0.1">Перебрать все ячейки определенного типа
+
+
+Sub MUL()
+Dim MyNum As Double
+Dim cell As Range
+
+    MyNum = Application.InputBox("Введите число, на которое умножить", , <link:internal>1</link:internal>, , , , , <link:internal>1</link:internal>)
+    
+    For Each cell In ActiveSheet.Cells.SpecialCells(xlCellTypeConstants, xlNumbers)
+        cell.Value = cell.Value * MyNum
+    Next cell
+    
+End Sub
+
+То же, но на определенном диапазоне:
+
+Sub MUL()
+Dim MyNum As Double
+Dim cell As Range
+Dim targetRng As Range
+
+    MyNum = Application.InputBox("Введите число, на которое умножить", , <link:internal>1</link:internal>, , , , , <link:internal>1</link:internal>)
+    
+    Set targetRng = Application.Intersect(ActiveSheet.Range("<link:internal>C</link:internal>:<link:internal>C</link:internal>"), ActiveSheet.Cells.SpecialCells(xlCellTypeConstants, xlNumbers))
+    
+    For Each cell In targetRng
+        cell.Value = cell.Value * MyNum
+    Next cell
+    
+End Sub</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.9702050+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.9702050+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:02:17.4183040+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

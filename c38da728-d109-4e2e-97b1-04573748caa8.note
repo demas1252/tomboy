@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Упаковка двух списков в список сруктур</title>
+  <text xml:space="preserve"><note-content version="0.1">Упаковка двух списков в список сруктур
+
+&lt;&lt;pre
+(define-struct ph-record (name number))
+
+(define (create-ph-record name number)
+  (make-ph-record name number))
+
+(define (create-ph-book name_list number_list)
+  (cond
+    [(empty? name_list) empty]
+    [else (cons (create-ph-record (first name_list) (first number_list)) 
+                (create-ph-book (rest name_list) (rest number_list)))]))
+
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; (create-ph-book (list 'demas 'anna 'lora) (list 28 20 34))
+(cons (make-ph-record 'demas 28) (cons (make-ph-record 'anna 20) (cons (make-ph-record 'lora 34) empty)))
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:54:30.4918000+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:54:30.4918000+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:54:29.3438499+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>567</x>
+  <y>401</y>
+  <open-on-startup>False</open-on-startup>
+</note>

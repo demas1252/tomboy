@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Apply in Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Apply</link:internal> in Scheme
+
+<italic> (define (avg . l)
+    (/ (<link:internal>apply</link:internal></italic><italic> + l) (length l)))
+
+  &gt; (avg 1 2 3)
+  2
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:36.0418730+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.0418730+04:00</last-metadata-change-date>
+  <create-date>2008-10-26T12:40:00.6973470+03:00</create-date>
+  <cursor-position>89</cursor-position>
+  <width>832</width>
+  <height>1021</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

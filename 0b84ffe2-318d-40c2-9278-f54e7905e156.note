@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Является ли команда TRUNCATE TABLE транзактивной</title>
+  <text xml:space="preserve"><note-content version="0.1">Является ли команда TRUNCATE TABLE транзактивной
+
+
+Да.  Далее приведена репродукция кода, в котором выполняется откат транзакции, содержащей TRUNCATE TABLE:
+
+CREATE TABLE DATA (COL<link:internal>1</link:internal> INT, COL2 INT)
+GO
+INSERT DATA VALUES (<link:internal>1</link:internal>, <link:internal>1</link:internal>)
+GO
+
+BEGIN TRAN
+TRUNCATE TABLE DATA
+ROLLBACK TRAN
+SELECT * FROM DATA
+GO
+
+DROP TABLE DATA
+
+Результат:
+<link:internal>1</link:internal>            <link:internal>1</link:internal>
+
+Вот как это работает:
+
+SET NOCOUNT ON
+CREATE TABLE TruncateTest (<link:internal>c1</link:internal> INT IDENTITY, <link:internal>c</link:internal>2 CHAR (8000) DEFAULT 'A');
+  
+DECLARE @a INT;
+SELECT @a = <link:internal>1</link:internal>;
+WHILE (@a &lt; 20)
+BEGIN
+    INSERT INTO TruncateTest DEFAULT VALUES;
+    SELECT @a = @a + <link:internal>1</link:internal>;
+END;
+
+Воспользуемся недокументированной командой DBCC IND, чтобы увидеть какие страницы и экстенты выделены для нашей экспериментальной таблицы:
+
+DBCC IND (<link:internal>testdb</link:internal>, TruncateTest, 0);
+
+
+    Результат:
+    PageFID PagePID
+    ------- ---------
+    <link:internal>1</link:internal>       193
+    <link:internal>1</link:internal>       192
+    <link:internal>1</link:internal>       194
+    <link:internal>1</link:internal>       195
+    <link:internal>1</link:internal>       196
+    <link:internal>1</link:internal>       197
+    <link:internal>1</link:internal>       198
+    <link:internal>1</link:internal>       199
+    <link:internal>1</link:internal>       200
+    <link:internal>1</link:internal>       224
+    <link:internal>1</link:internal>       225
+    <link:internal>1</link:internal>       226
+    <link:internal>1</link:internal>       227
+    <link:internal>1</link:internal>       228
+    <link:internal>1</link:internal>       229
+    <link:internal>1</link:internal>       230
+    <link:internal>1</link:internal>       231
+    <link:internal>1</link:internal>       232
+    <link:internal>1</link:internal>       233
+    <link:internal>1</link:internal>       234
+    DBCC execution completed. <link:internal>If</link:internal> DBCC printed error messages, contact your system administrator.
+
+Я преднамеренно сократил вывод команды, оставив лишь ID страниц. Мы видим, что эта таблица задействовала 4 экстента (которые начинаются с страниц (<link:internal>1</link:internal>:192), (<link:internal>1</link:internal>:200), (<link:internal>1</link:internal>:224), (<link:internal>1</link:internal>:232)). Теперь, если мы выполним команду TRUNCATE TABLE в транзакции, что покажет DBCC IND?
+
+BEGIN TRAN;
+TRUNCATE TABLE TruncateTest;
+DBCC IND (<link:internal>testdb</link:internal>, TruncateTest, 0);
+
+    DBCC execution completed. <link:internal>If</link:internal> DBCC printed error messages, contact your system administrator.
+    
+Похоже что страницы под таблицу уже не выделены, но где же они? Проверим текущие <link:internal>блокировки</link:internal>. Вместо использования sp_lock я использую ее DMV-замену, sys.dm_tran_locks:
+
+SELECT resource_type, resource_description, request_mode FROM sys.dm_tran_locks WHERE resource_type IN ('EXTENT', 'PAGE');
+
+    resource_type   resource_description   request_mode
+    EXTENT          <link:internal>1</link:internal>:200                  X
+    PAGE            <link:internal>1</link:internal>:198                  X
+    PAGE            <link:internal>1</link:internal>:199                  X
+    PAGE            <link:internal>1</link:internal>:196                  X
+    PAGE            <link:internal>1</link:internal>:197                  X
+    PAGE            <link:internal>1</link:internal>:194                  X
+    PAGE            <link:internal>1</link:internal>:195                  X
+    PAGE            <link:internal>1</link:internal>:192                  X
+    PAGE            <link:internal>1</link:internal>:193                  X
+    EXTENT          <link:internal>1</link:internal>:192                  X
+    PAGE            <link:internal>1</link:internal>:200                  X
+    EXTENT          <link:internal>1</link:internal>:232                  X
+    EXTENT          <link:internal>1</link:internal>:224                  X
+ 
+
+Собственно, все страницы и экстенты заблокированы. Страницы не являются уже выделенными для этой таблицы, но поскольку на них наложены эксклюзивные <link:internal>блокировки</link:internal>, подсистема распределения страниц не может освободить эти страницы пока <link:internal>блокировки</link:internal> не снимутся (произойдет commit транзакции).    Если же произойдет откат транзакции, страницы попросту будут снова отмечены как принадлежащие таблице TruncateTest.     
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.4596050+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.4596050+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:07:53.6893070+03:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

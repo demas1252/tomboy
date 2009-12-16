@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Загрузка данных в Mnesia</title>
+  <text xml:space="preserve"><note-content version="0.1">Загрузка данных в Mnesia
+
+example_<link:internal>tables</link:internal>() -&gt;
+    [%% The shop table
+     {shop, apple,   20,   2.3},
+     {shop, orange,  100,  3.8},
+     {shop, pear,    200,  3.6},
+     {shop, banana,  420,  4.5},
+     {shop, potato,  2456, 1.2},
+     %% The cost table
+     {cost, apple,   1.5},
+     {cost, orange,  2.4},
+     {cost, pear,    2.2},
+     {cost, banana,  1.5},
+     {cost, potato,  0.6}
+    ].
+
+reset_<link:internal>tables</link:internal>() -&gt;
+    <link:internal>mnesia</link:internal>:clear_table(shop),
+    <link:internal>mnesia</link:internal>:clear_table(cost),
+    F = fun() -&gt;
+		foreach(fun <link:internal>mnesia</link:internal>:write/1, example_<link:internal>tables</link:internal>())
+	end,
+    <link:internal>mnesia</link:internal>:transaction(F).
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.0469750+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.0469750+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T16:53:20.6467560+04:00</create-date>
+  <cursor-position>397</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

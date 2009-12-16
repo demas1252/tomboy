@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Списки в Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Списки в Haskell
+
+Содержат элементы строго одного типа.
+
+Объединение списков: [1,2] ++ [3,4]
+
+Обращение к элементам списков:
+
+<italic>   1. <link:internal>ghci</link:internal></italic><italic>&gt; "Steve Buscemi" !! 6  
+   2. 'B'  
+   3. <link:internal>ghci</link:internal></italic><italic>&gt; [9.4,33.2,96.2,11.2,23.25] !! 1  
+   4. 33.2  </italic>
+
+head/tail/last/init(все кроме последнего)/length/null/reverse/take/drop/maximum/minimum/sum/product/elem
+
+<bold>Ranges</bold>
+
+[1..20]
+[2,4..20]
+
+take 10 (cycle [1,2,3])
+
+<link:internal>List comprehension in Haskell</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:09:59.8368960+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:09:59.8368960+04:00</last-metadata-change-date>
+  <create-date>2009-10-11T10:08:00.4225650+04:00</create-date>
+  <cursor-position>17</cursor-position>
+  <width>548</width>
+  <height>507</height>
+  <x>952</x>
+  <y>96</y>
+  <open-on-startup>False</open-on-startup>
+</note>

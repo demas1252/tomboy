@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Журнал инвентаризации</title>
+  <text xml:space="preserve"><note-content version="0.1">Журнал инвентаризации
+
+
+     1. При наличии журналов по той же номенклдатуре и коомбинации складских аналитик система не позволит создать такую же строку в другом журнале (пусть даже и предыдущий журнал разнесен). Предыдущий надо удалить.
+     2. При разноске можно указывать как и посчитанное количество, так и дельту.
+     3. При разноске образуются проводки: Дб Приход - Кт Прибыль, Дб Убыток - Кт Расход (InvJounal: Issue - Loss, Receipt - Profit)
+     4. Списываться то, что потеряли будет по мгновенной. Потом пересчитается по мгновенной.  
+        Costed = мгновенная, Operations = мгновенная =&gt; Costed = мгновенная, Adjustment = коррекция, Operations = мгновенная
+     5. Приходуется либо по указанной (General -&gt; CostAmount), либо по мгновенной (если не указано).
+     6. Задача списать с одного склада и оприходовать на другой в общем смысле не имеет решения.  
+            а) Так как склады разные, то мы не сможем примаркировать.
+            б) Если склады одинаковые - в чем тогда смылс двух строк :)
+            в) Себестоимость все равно будет тянуться с прихода на расход.
+    
+    
+     _См. также:_
+
+<link:internal>Что делать - чтобы различными журналами можно было инвентаризовывать с разных складов одновременно</link:internal>
+<link:internal>Интерактивная инвентаризация</link:internal>
+<link:internal>Tags Counting</link:internal>
+<link:internal>Импорт журнала инвентаризации из внешнего файла</link:internal>
+<link:internal>Not Counted Since</link:internal></note-content></text>
+  <last-change-date>2009-11-05T16:11:58.9901150+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:58.9901150+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:39:06.1052690+03:00</create-date>
+  <cursor-position>1308</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>135</x>
+  <y>334</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Remote Desktop</title>
+  <text xml:space="preserve"><note-content version="0.1">Remote Desktop
+
+rdesktop -u ademidov -d gmcs -p *** -k en-us -g 1450x900 aosserver
+
+Дело в том, что при использовании стандартных клавиш, язык меняется и на рабочей станции, и в терминале. Есть маленький баг. Когда на рабочей станции стоит русский язык, то в терминале писать по русски невозможно, приходится мышкой менять на английский. Если <link:internal>языки</link:internal> совпадают, то всё печатает нормально.
+
+Выйти из полноэкранного режима: Ctrl-Alt-Enter
+
+Note: The remote machine must be booted into <link:internal>Windows</link:internal> XP, so you may have to reboot remotely from <link:internal>Ubuntu</link:internal> to <link:internal>Windows</link:internal> first.
+
+   <link:internal>1</link:internal>. <link:internal>If</link:internal> you can access the remote machine directly:
+
+      rdesktop -r disk:sync=/home/$USER/$SYNC_DIR $SERVER:3389
+
+      where
+          * $SERVER is the hostname or IP of the remote machine
+          * $SYNC_DIR is a directory on the local machine to be shared with the remote machine
+   2. <link:internal>If</link:internal> the remote machine is protected by a bastion host, you will need to create an <link:internal>SSH</link:internal> tunnel through which to access the server:
+
+      <link:internal>ssh</link:internal> -fN -L $LOCAL_PORT:$SERVER:3389 $BASTION
+      rdesktop -r disk:sync=/home/$USER/$SYNC_DIR localhost:$LOCAL_PORT
+
+      where
+          * $LOCAL_PORT is a port on the local machine through which you want to tunnel (e.g., 2001)
+          * $SERVER is the hostname or IP of the remote machine
+          * $BASTION is the hostname or IP of the bastion host
+<list><list-item><list><list-item dir="ltr">$SYNC_DIR is a directory on the local machine to be shared with the remote machine</list-item></list></list-item></list>
+
+не надо никакого патченья и подсовывания кеймапов... достаточно запускать rdesktop с параметром -k common
+ (вместо всяких ru, en-us и т.д.)
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.8999910+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.8999910+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:37:26.9721490+03:00</create-date>
+  <cursor-position>1511</cursor-position>
+  <width>585</width>
+  <height>550</height>
+  <x>484</x>
+  <y>108</y>
+  <open-on-startup>False</open-on-startup>
+</note>

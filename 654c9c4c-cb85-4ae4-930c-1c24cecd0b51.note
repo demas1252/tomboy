@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Еще один пример функционального объекта</title>
+  <text xml:space="preserve"><note-content version="0.1">Еще один пример функционального объекта
+
+<italic>#include &lt;iostream&gt;
+
+using namespace std;
+
+struct sq {
+  int operator() (int x) const { return x * x; }
+};
+
+int main() {
+  cout &lt;&lt; "5 * 5 = " &lt;&lt; sq()(5) &lt;&lt; endl;
+  return 0;
+}</italic>
+
+sq - функциональный класс
+sq() - функциональный объект
+sq()(5) - вызов функции
+
+</note-content></text>
+  <last-change-date>2009-08-13T13:40:04.9844290+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-13T13:40:04.9844290+04:00</last-metadata-change-date>
+  <create-date>2009-08-13T13:26:00.5703420+04:00</create-date>
+  <cursor-position>244</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

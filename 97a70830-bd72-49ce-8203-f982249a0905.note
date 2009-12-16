@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sequences in Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Sequences in Clojure
+
+<italic>(first aseq)
+(rest aseq)
+(cons elem aseq)
+(seq coll) - возвращает seq из любого 
+</italic>
+Мы можем работать с <link:internal>Map</link:internal> как с sequence:
+
+<italic>user=&gt; (first {:fname "some" :lname "<link:internal>other</link:internal></italic><italic>"})
+[:fname "some"]</italic>
+
+А также с Set:
+
+<italic>user=&gt; (rest #{:one :two :three :four})
+(:three :two :four)
+</italic>
+Для <link:internal>сортировки</link:internal> Set и <link:internal>Map</link:internal>:
+
+<italic>user=&gt; (sorted-set :d :r :z :a :c)
+#{:a :c :d :r :z}
+user=&gt; (sorted-<link:internal>map</link:internal></italic><italic> :d 3 :r 1 :z 5 :a 7 :c 2)
+{:a 7, :c 2, :d 3, :r 1, :z 5}
+</italic>
+
+<italic>user=&gt; (conj '(1 2 3) :a)
+(:a 1 2 3)
+user=&gt; (into '(1 2 3) '(:a :b :c))
+(:c :b :a 1 2 3)
+</italic>
+<link:internal>into in Clojure</link:internal>
+<link:internal>Sequence Library</link:internal>
+</note-content></text>
+  <last-change-date>2009-10-18T19:34:59.9808980+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-18T19:34:59.9808980+04:00</last-metadata-change-date>
+  <create-date>2009-07-30T17:07:39.1638690+04:00</create-date>
+  <cursor-position>563</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>201</x>
+  <y>104</y>
+  <open-on-startup>False</open-on-startup>
+</note>

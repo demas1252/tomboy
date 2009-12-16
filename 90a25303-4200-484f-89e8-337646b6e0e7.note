@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Mutex в Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Mutex в Linux
+
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;semaphore.h&gt;
+
+void             *thread_function(void *arg);
+pthread_mutex_t     work_mutex; /* protects both work_area and time_to_exit */
+#define         WORK_SIZE 1024
+char             work_area[WORK_SIZE];
+int             time_to_exit = 0;
+
+int main() {
+   int         res;
+   pthread_t     a_thread;
+   void     *thread_result;
+
+   res = pthread_mutex_init(&amp;work_mutex, NULL);
+   <link:internal>if</link:internal> (res != 0) {
+      perror("Mutex initialization failed");
+      exit(EXIT_FAILURE);
+    }
+
+    res = pthread_create(&amp;a_thread, NULL, thread_function, NULL);
+    <link:internal>if</link:internal> (res != 0) {
+       perror("Thread creation failed");
+       exit(EXIT_FAILURE);
+    }
+
+    pthread_mutex_lock(&amp;work_mutex);
+    printf("Input <link:broken>some</link:broken> text. Enter ‘end’ to finish\n");
+    while(!time_to_exit) {
+       fgets(work_area, WORK_SIZE, stdin);
+       pthread_mutex_unlock(&amp;work_mutex);
+       while(<link:internal>1</link:internal>) {
+      pthread_mutex_lock(&amp;work_mutex);
+      <link:internal>if</link:internal> (work_area[0] != '\0') {
+         pthread_mutex_unlock(&amp;work_mutex);
+             sleep(<link:internal>1</link:internal>);
+      }
+      else {
+         break;
+      }
+       }
+    }
+    
+    pthread_mutex_unlock(&amp;work_mutex);
+    printf("\nWaiting for thread to finish...\n");
+    res = pthread_join(a_thread, &amp;thread_result);
+    <link:internal>if</link:internal> (res != 0) {
+       perror("Thread join failed");
+       exit(EXIT_FAILURE);
+    }
+
+    printf("Thread joined\n");
+    pthread_mutex_destroy(&amp;work_mutex);
+    exit(EXIT_SUCCESS);
+}
+
+void *thread_function(void *arg) {
+   sleep(<link:internal>1</link:internal>);
+   pthread_mutex_lock(&amp;work_mutex);
+   while(strncmp("end", work_area, 3) != 0) {
+      printf("You input %d characters\n", strlen(work_area) -<link:internal>1</link:internal>);
+
+      work_area[0] = '\0';
+      pthread_mutex_unlock(&amp;work_mutex);
+      sleep(<link:internal>1</link:internal>);
+      pthread_mutex_lock(&amp;work_mutex);
+      while (work_area[0] == '\0' ) {
+     pthread_mutex_unlock(&amp;work_mutex);
+           sleep(<link:internal>1</link:internal>);
+           pthread_mutex_lock(&amp;work_mutex);
+      }
+   }
+  
+   time_to_exit = <link:internal>1</link:internal>;
+   work_area[0] = '\0';
+   pthread_mutex_unlock(&amp;work_mutex);
+   pthread_exit(0);
+}
+
+demas@demas-desktop:~/sources$ cc -D_REENTRANT -I/usr/include/npt<link:internal>1</link:internal> mutex.<link:broken>c</link:broken> -o mutex -L/usr/lib/npt<link:internal>1</link:internal> -lpthread
+demas@demas-desktop:~/sources$ ./mutex
+Input <link:broken>some</link:broken> text. Enter ‘end’ to finish
+dasdsad
+You input 7 characters
+fd
+You input 2 characters
+end
+
+Waiting for thread to finish...
+Thread joined
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.2427550+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.2427550+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:44:12.0651400+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

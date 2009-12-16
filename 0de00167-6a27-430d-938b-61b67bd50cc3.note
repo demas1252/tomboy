@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Предикаты по Function-Based индексу</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Предикаты по Function-Based</link:internal> индексу
+
+Смысл в том, что при использовании FBI <link:internal>Oracle</link:internal> должен знать <link:internal>селективность индекса</link:internal>.  
+
+С 10-ки (а может и раньше - просто не владею информацией) возможность получить такую информацию есть - см.  <link:url>http://richardfoote.wordpress.com/2008/12/04/function-based-indexes-and-missing-statistics-no-surprises/</link:url>.
+
+Смысл прост - не забывать использовать 'method_opt=&gt; ‘FOR ALL HIDDEN COLUMNS SIZE 1′ в dbms_stats.gather_table_stats.
+
+С другой стороны dbms_stats.gather_<link:internal>scheme</link:internal>_stats и так собирает эту информацию:
+
+<italic>Connected to:
+<link:internal>Oracle</link:internal></italic><italic> Database 10g Enterprise Edition Release 10.1.0.2.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+demas@ORCL&gt; create table pink_floyd(table_name varchar2(50));
+Table created.
+
+demas@ORCL&gt; insert into pink_floyd values('one');
+1 row created.
+
+demas@ORCL&gt; insert into pink_floyd values('One');
+1 row created.
+
+demas@ORCL&gt; insert into pink_floyd values('ONE');
+1 row created.
+
+demas@ORCL&gt; select * from pink_floyd;
+
+TABLE_NAME
+--------------------------------------------------
+one
+One
+ONE
+
+demas@ORCL&gt; select column_name, num_distinct, hidden_column, virtual_column from dba_tab_cols where 
+table_name='PINK_FLOYD';
+
+COLUMN_NAME                    NUM_DISTINCT HID VIR
+------------------------------ ------------ --- ---
+TABLE_NAME                                  NO  NO
+SYS_NC00002$                                YES YES
+
+
+demas@ORCL&gt; begin
+  2  dbms_stats.gather_schema_stats(ownname=&gt;'DEMAS',cascade=&gt;TRUE);
+  3  end;
+  4  /
+
+PL/<link:internal>SQL</link:internal></italic><italic> procedure successfully completed.
+
+demas@ORCL&gt;  select column_name, num_distinct, hidden_column, virtual_column from dba_tab_cols where
+ table_name='PINK_FLOYD';
+
+COLUMN_NAME                    NUM_DISTINCT HID VIR
+------------------------------ ------------ --- ---
+TABLE_NAME                                3 NO  NO
+SYS_NC00002$                              1 YES YES</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:20.4708940+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:20.4708940+04:00</last-metadata-change-date>
+  <create-date>2009-01-10T19:15:13.4728610+03:00</create-date>
+  <cursor-position>1881</cursor-position>
+  <width>802</width>
+  <height>515</height>
+  <x>512</x>
+  <y>258</y>
+  <open-on-startup>False</open-on-startup>
+</note>

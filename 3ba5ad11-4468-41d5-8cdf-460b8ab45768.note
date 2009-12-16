@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Records in Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Records in Erlang
+
+<italic>-record(todo, {status=reminder,who=joe,text}).</italic>
+
+1&gt; rr("records.hrl")
+
+2&gt; X=#todo{}.
+#todo{status = reminder,who = joe,text = undefined}
+3&gt; X1 = #todo{status=urgent, text="Fix errata in book"}.
+#todo{status = urgent,who = joe,text = "Fix errata in book"}
+4&gt; X2 = X1#todo{status=done}.
+#todo{status = done,who = joe,text = "Fix errata in book"}
+
+5&gt; #todo{who=W, text=Txt} = X2.
+#todo{status = done,who = joe,text = "Fix errata in book"}
+6&gt; W.
+joe
+7&gt; Txt.
+"Fix errata in book"
+
+</note-content></text>
+  <last-change-date>2009-01-08T14:17:40.4907460+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-08T14:17:40.4907460+03:00</last-metadata-change-date>
+  <create-date>2009-01-08T12:15:37.3005600+03:00</create-date>
+  <cursor-position>361</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

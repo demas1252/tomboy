@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание статических библиотек</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание статических библиотек
+
+Создаем функции библиотеки
+
+fred.<link:internal>c</link:internal>:
+
+#include &lt;stdio.h&gt;
+void fred(int arg)
+{
+printf(“fred: you <link:internal>passed</link:internal> %d\n”, arg);
+}
+
+bill.<link:internal>c</link:internal>:
+
+#include &lt;stdio.h&gt;
+void bill(char *arg)
+{
+printf(“bill: you <link:internal>passed</link:internal> %s\n”, arg);
+}
+
+Компилируем
+
+$ <link:internal>gcc</link:internal> -<link:internal>c</link:internal> bill.<link:internal>c</link:internal> fred.<link:internal>c</link:internal>
+$ ls *.o
+bill.o fred.o
+
+Собираем библиотеку
+
+$ ar crv libfoo.a bill.o fred.o
+a - bill.o
+a - fred.o
+$ ranlib libfoo.a
+
+Создаем заголовок для использования библиотеки
+
+lib.h:
+
+void bill(char *);
+void fred(int);
+
+Создаем программу
+
+#include “lib.h”
+int main()
+{
+bill(“Hello World”);
+}
+
+Компилируем
+
+$ <link:internal>gcc</link:internal> -<link:internal>c</link:internal> program.<link:internal>c</link:internal>
+$ <link:internal>gcc</link:internal> -o program program.o libfoo.a
+$ ./program
+bill: you <link:internal>passed</link:internal> Hello World
+</note-content></text>
+  <last-change-date>2009-06-29T12:35:25.9553620+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T12:35:25.9553620+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:46:19.6578530+03:00</create-date>
+  <cursor-position>640</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1229</x>
+  <y>655</y>
+  <open-on-startup>False</open-on-startup>
+</note>

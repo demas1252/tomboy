@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сложение скоростей</title>
+  <text xml:space="preserve"><note-content version="0.1">Сложение скоростей
+
+Мы привыкли, что если бросить мяч со скоростью 10 из машины, движущейся со скоростью 20, то мяч относительно земли будет двигаться со скоростью 30.  Того же мы ожидаем и от света испущенного из движущейся машины: Vмаш+C.  Но это так.
+
+	<italic>V2x = (V1x - v) / (1 - vV1x/C^2)</italic>
+<italic>	V2y = V1y*sqrt(1-v^2/c^2) / (1-vV1x/c^2)</italic>
+
+При малых скоростях эти выражения упрощаются до привычных нам:
+
+	<italic>Vx2 = Vx1-v Vy2=Vy1</italic>
+
+
+Это приводит к интересным эффектам: допустим корабль движется со скоростью 0.9c и мы хотим обогнать его с относительной скоростью 0.5c.  Согласно формулам мы должны двигаться с абсолютной скоростью 0.965c, что всего на 10% больше скорости корабля.
+
+</note-content></text>
+  <last-change-date>2009-08-13T08:50:44.6231510+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-13T08:50:44.6231510+04:00</last-metadata-change-date>
+  <create-date>2009-08-13T08:50:12.7061010+04:00</create-date>
+  <cursor-position>668</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

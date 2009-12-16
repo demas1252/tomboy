@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Map (STL)</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Map</link:internal> (STL)
+
+<italic>	std:<link:internal>map</link:internal></italic><italic> &lt;key_type, date_type, [comparision_function]&gt;</italic>
+
+	<italic>std:<link:internal>map</link:internal></italic><italic> &lt;string, char&gt; grade_list;
+
+</italic>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;<link:internal>map</link:internal>&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+main() {
+  <link:internal>map</link:internal> &lt;string, char&gt; grade_list;
+
+  grade_list["John"] = 'B';
+  grade_list["DemAS"] = 'A';
+
+  std::cout &lt;&lt; "The class is size " &lt;&lt; grade_list.size() &lt;&lt; std::endl;
+
+  <link:internal>if</link:internal>(grade_list.<link:internal>find</link:internal>("Tim") == grade_list.end())
+    std::cout &lt;&lt; "Tim is not in the map!" &lt;&lt; endl;
+
+  std::<link:internal>map</link:internal>&lt;string, char&gt;::<link:internal>iterator</link:internal> grade_<link:internal>iterator</link:internal>;
+
+  for(grade_<link:internal>iterator</link:internal> = grade_list.begin();
+      grade_<link:internal>iterator</link:internal> != grade_list.end();
+      grade_<link:internal>iterator</link:internal>++) 
+    {
+      cout &lt;&lt; grade_<link:internal>iterator</link:internal>-&gt;first &lt;&lt; " : " &lt;&lt; grade_<link:internal>iterator</link:internal>-&gt;second &lt;&lt; endl;
+    }
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.9408000+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.9408000+04:00</last-metadata-change-date>
+  <create-date>2009-07-31T14:04:56.5032820+04:00</create-date>
+  <cursor-position>89</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1168</x>
+  <y>133</y>
+  <open-on-startup>False</open-on-startup>
+</note>

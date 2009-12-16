@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример работы с CouchDb на Ruby (прямые запросы http)</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Пример работы с CouchDb на Ruby (прямые запросы</link:internal> http)
+
+require 'net/http'
+
+module Couch
+
+  class Server
+    def initialize(host, port, options = nil)
+      @host = host
+      @port = port
+      @options = options
+    end
+
+    def delete(<link:internal>uri</link:internal>)
+      request(Net::HTTP::Delete.new(<link:internal>uri</link:internal>))
+    end
+
+    def get(<link:internal>uri</link:internal>)
+      request(Net::HTTP::Get.new(<link:internal>uri</link:internal>))
+    end
+
+    def put(<link:internal>uri</link:internal>, json)
+      req = Net::HTTP::Put.new(<link:internal>uri</link:internal>)
+      req["content-type"] = "application/json"
+      req.body = json
+      request(req)
+    end
+
+    def post(<link:internal>uri</link:internal>, json)
+      req = Net::HTTP:Post.new(<link:internal>uri</link:internal>)
+      req["content-type"] = "application/json"
+      req.body = json
+      request(req)
+    end
+
+    def request(req)
+      res = Net::HTTP.start(@host, @port) { |http|
+        http.request(req)
+      }
+
+      <link:internal>if</link:internal> (not res.kind_of?(Net::HTTPSuccess))
+        handle_error(req, res)
+      end
+
+      res
+    end
+
+    private
+
+    def handle_error(req, res)
+      e = RuntimeError.new("#{res.code}:#{res.message}\nMETHOD:#{req.method}\nURI:#{req.path}\n#{res.body}")
+      raise e
+    end    
+  end
+end
+
+
+def create_<link:internal>db</link:internal>()
+  server = Couch::Server.new("localhost", "5984")
+  server.put("/foo/", "")
+end
+
+def create_doc()
+  server = Couch::Server.new("localhost", "5984")
+  doc = &lt;&lt;-JSON
+{"type":"comment", "body":"First Post!"}
+JSON
+
+  server.put("/foo/doc1", doc)
+end
+
+def get_docum  server = Couch::Server.new("localhost", "5984")ent()
+  server = Couch::Server.new("localhost", "5984")
+  res = server.get("/foo/doc1")
+  json = res.body
+  puts json
+end
+
+</note-content></text>
+  <last-change-date>2009-11-23T13:19:49.4965010+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.4965010+03:00</last-metadata-change-date>
+  <create-date>2009-07-13T16:28:55.5166100+04:00</create-date>
+  <cursor-position>1456</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>958</x>
+  <y>247</y>
+  <open-on-startup>False</open-on-startup>
+</note>

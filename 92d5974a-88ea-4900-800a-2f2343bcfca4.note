@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Горячие клавиши vim</title>
+  <text xml:space="preserve"><note-content version="0.1">Горячие клавиши <link:internal>vim</link:internal>
+
+<link:internal>Перемещение по тексту</link:internal>
+<link:internal>Копирование вставка и удаление</link:internal>
+<link:internal>Правка</link:internal>
+<link:internal>Undo and redo</link:internal>
+<link:internal>Vim Tag</link:internal>
+<link:internal>Поиск в Vim</link:internal>
+<link:internal>Замены</link:internal>
+<link:internal>Diff в VIM</link:internal>
+<link:internal>Выделения</link:internal>
+<link:internal>Vim Bookmarks</link:internal>
+<link:internal>Folding</link:internal>
+<link:internal>Дополнение слов</link:internal>
+<link:internal>Работа с окнами</link:internal>
+<link:internal>Работа с Tab-ам</link:internal>
+<link:internal>Работа с файлами</link:internal>
+<link:internal>Проверка орфографии</link:internal>
+<link:internal>Маппинг клавиш</link:internal>
+<link:internal>Макросы</link:internal>
+<link:internal>Программирование</link:internal>
+<link:internal>Командная строка vim</link:internal>
+</note-content></text>
+  <last-change-date>2009-01-02T01:46:34.6956990+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-02T01:46:34.6956990+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:02:14.2089070+03:00</create-date>
+  <cursor-position>290</cursor-position>
+  <width>569</width>
+  <height>505</height>
+  <x>322</x>
+  <y>272</y>
+  <open-on-startup>False</open-on-startup>
+</note>

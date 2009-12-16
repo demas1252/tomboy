@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Shared Folder in Linux Guest</title>
+  <text xml:space="preserve"><note-content version="0.1">Shared Folder in Linux Guest
+
+1. Ставим Guest Addiction (<link:internal>Устатновка GuestAddiction в Linux Guest</link:internal>).
+2. Перезагружаемся.
+3. В <link:internal>Arch</link:internal> Wiki написано, что нужно стартовать какие-то службы, но я ручками ничего не запускал.
+4. 
+
+<italic>su root
+mkdir<link:url> /media/share</link:url></italic><italic>
+mount -t vboxsf Share<link:url> /media/share</link:url></italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:16.3190700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.3190700+04:00</last-metadata-change-date>
+  <create-date>2008-11-22T14:03:34.1795499+03:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>741</width>
+  <height>360</height>
+  <x>401</x>
+  <y>550</y>
+  <open-on-startup>False</open-on-startup>
+</note>

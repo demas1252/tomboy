@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структуры в C</title>
+  <text xml:space="preserve"><note-content version="0.1">Структуры в C
+
+<bold>Объявление структуры</bold>
+
+struct point {
+   int x;
+   int y;
+}
+
+struct rect {
+  struct point p1;
+  struct point p2;
+}
+
+<bold>Объявление типа</bold>
+
+struct { ... } x, y, z;
+
+или
+
+struct point pt;:T ЖЕ
+
+<bold>Инициализация</bold>
+
+struct maxpt = {320, 200}
+
+<bold>Обращение</bold>
+
+printf("%d%d\n", pt.x, pt.y);
+
+<bold>Допустимые операции</bold>
+
+Можно: копировать, присваивать, взятие адреса &amp;, доступ к членам.
+Нельзя: сравнивать.
+
+<bold>См также</bold>
+<link:internal>Структуры и функции</link:internal>
+<link:internal>Массивы структур</link:internal>
+<link:internal>Указатели на структуры</link:internal>
+<link:internal>Размер структуры</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-08-01T13:35:39.3081910+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-01T13:35:39.3081910+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:58:16.3347970+03:00</create-date>
+  <cursor-position>176</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>185</x>
+  <y>215</y>
+  <open-on-startup>False</open-on-startup>
+</note>

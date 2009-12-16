@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Маска подсети</title>
+  <text xml:space="preserve"><note-content version="0.1">Маска подсети
+
+Битовая маска, определяющая какая часть IP адреса относится к адресу <link:internal>сети</link:internal>, а какая к адресу самого узла в <link:internal>сети</link:internal>.
+
+IP: 12.34.56.78 (маска подсети: 255.255.0.0) -&gt; сеть: 12.34.00.00
+
+Более сложный пример:
+
+IP-адрес:       00001100 00100010 00111000 01001110 (12.34.56.78)
+Маска подсети:  11111111 11111111 11100000 00000000 (255.255.224.0)
+Адрес <link:internal>сети</link:internal>:     00001100 00100010 00100000 00000000 (12.34.32.0)
+
+Иногда встречается запись IP-адресов вида 10.96.0.0/11. Данный вид записи заменяет собой указание диапазона IP-адресов. Число после слэша означает количество единичных разрядов в маске подсети.
+
+Для приведённого примера маска подсети будет иметь двоичный вид 11111111 11100000 00000000 00000000 или то же самое в десятичном виде: 255.224.0.0. 11 разрядов IP-адреса отводятся под номер <link:internal>сети</link:internal>, а остальные 32 - 11 = 21 разрядов полного адреса — под локальный адрес в этой <link:internal>сети</link:internal>. Итого, 10.96.0.0/11 означает диапазон адресов от 10.96.0.0 до 10.127.255.255
+
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.0811990+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.0811990+04:00</last-metadata-change-date>
+  <create-date>2008-04-09T22:16:01.7136640+04:00</create-date>
+  <cursor-position>971</cursor-position>
+  <width>609</width>
+  <height>602</height>
+  <x>994</x>
+  <y>107</y>
+  <open-on-startup>False</open-on-startup>
+</note>

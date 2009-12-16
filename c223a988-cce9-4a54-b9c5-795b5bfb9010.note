@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Маркировка</title>
+  <text xml:space="preserve"><note-content version="0.1">Маркировка
+
+    Пример в методе: InventUpd_Estimated.updateReservation():
+    
+    _markNow = <link:internal>InventTrans</link:internal>::updateMarking(movement.inventRefTransId(), movement.transId(), -reservQty);
+    <link:internal>InventTrans</link:internal>::updateMarking(movement.transId(), movement.inventRefTransId(), markNow);_
+    
+    Мой пример:
+    
+    _static void Marking(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+    {
+       InventQty               markNow;
+       ;
+       markNow = <link:internal>InventTrans</link:internal>::updateMarking('00156_059', '00154_059', -1);
+       <link:internal>InventTrans</link:internal>::updateMarking('00154_059', '00156_059', markNow);
+    }_
+    
+    p.s. Коля говорил, что этот метод не перещелкивает статус промаркированной проводки в Зарезервировано и она продолжает висеть в доступных.</note-content></text>
+  <last-change-date>2009-10-12T12:00:39.6388840+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.6388840+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:52:57.2416490+03:00</create-date>
+  <cursor-position>219</cursor-position>
+  <width>514</width>
+  <height>360</height>
+  <x>1096</x>
+  <y>235</y>
+  <open-on-startup>False</open-on-startup>
+</note>

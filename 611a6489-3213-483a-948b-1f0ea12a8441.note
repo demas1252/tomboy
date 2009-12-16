@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск по дереву с помощью аккумулятора</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск по дереву с помощью аккумулятора
+
+Рекурсивная реализация:
+&lt;&lt;pre
+(define-struct child (father <link:internal>mother</link:internal> name date eyes))
+
+;; all-blue-eyed-ancestors : ftn -&gt; (listof symbol)
+;; to construct a list of all blue-eyed ancestors in a-ftree
+(define (all-blue-eyed-ancestors a-ftree)
+  (cond
+    [(empty? a-ftree) empty]
+    [else (local ((define in-parents
+                    (append (all-blue-eyed-ancestors (child-father a-ftree))
+                            (all-blue-eyed-ancestors (child-<link:internal>mother</link:internal> a-ftree)))))
+            (cond
+              [(symbol=? (child-eyes a-ftree) 'blue)
+               (cons (child-name a-ftree) in-parents)]
+              [else in-parents]))]))
+
+&gt;&gt;
+
+Первая версия с аккумулятором:
+&lt;&lt;pre
+;; all-blue-eyed-ancestors : ftn -&gt; (listof symbol)
+;; to construct a list of all blue-eyed ancestors in a-ftree
+(define (all-blue-eyed-ancestors a-ftree)
+  (local (
+          ;; accumulator is the list of blue-eyed ancestors
+          ;; encountered on <link:internal>the mother</link:internal>-side trees of the path in
+          ;; a-ftree0 to a-ftree
+          (define (all-a a-ftree accumulator)
+            (cond
+              [(empty? a-ftree) accumulator]
+              [else
+               (local ((define in-parents
+                         (all-a (child-father a-ftree)
+                                (all-a (child-<link:internal>mother</link:internal> a-ftree) accumulator))))
+                 (cond
+                   [(symbol=? (child-eyes a-ftree) 'blue)
+                    (cons (child-name a-ftree) in-parents)]
+                   [else in-parents]))])))
+    (all-a a-ftree empty)))
+
+&gt;&gt;
+
+
+Вторая версия с аккумулятором
+&lt;&lt;pre 
+;; all-blue-eyed-ancestors : ftn -&gt; (listof symbol)
+;; to construct a list of all blue-eyed ancestors in a-ftree
+(define (all-blue-eyed-ancestors a-ftree0)
+  (local (;; todo is the list of family trees encountered but not <link:internal>processed</link:internal>
+          (define (all-a a-ftree todo)
+            (cond
+              [(empty? a-ftree)
+               (cond
+                 [(empty? todo) empty]
+                 [else (all-a (first todo) (rest todo))])]
+              [else
+               (local ((define in-parents
+                         (all-a (child-father a-ftree)
+                                (cons (child-<link:internal>mother</link:internal> a-ftree) todo))))
+                 (cond
+                   [(symbol=? (child-eyes a-ftree) 'blue)
+                    (cons (child-name a-ftree) in-parents)]
+                   [else in-parents]))])))
+    (all-a a-ftree0 empty)))
+    
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-05-04T17:28:59.1177420+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-04T17:28:59.1177420+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:02:59.4693140+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>466</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

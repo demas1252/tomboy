@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание своего виджета</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание своего виджета
+
+require 'Qt4'
+
+class MyWidget &lt; Qt::Widget
+  def initialize(parent = nil)
+    super
+    setFixedSize(200, 120)
+
+    quit = Qt::PushButton.new(tr('Quit'), self)
+    quit.setGeometry(62, 40, 75, 30)
+    quit.setFont(Qt::Font.new('Times', 18, Qt::Font::Bold))
+
+    connect(quit, SIGNAL('clicked()'), $qApp, SLOT('quit()'))
+  end
+end
+
+app = Qt::Application.new(ARGV)
+
+widget = MyWidget.new()
+widget.show()
+
+app.exec()
+</note-content></text>
+  <last-change-date>2009-05-31T17:56:08.2783320+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-31T17:56:08.2783320+04:00</last-metadata-change-date>
+  <create-date>2009-05-31T17:55:51.8399820+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

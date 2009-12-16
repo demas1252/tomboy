@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Фосфаты</title>
+  <text xml:space="preserve"><note-content version="0.1">Фосфаты
+
+<list><list-item dir="ltr">оксиды фосфора более устойчивы, чем <link:internal>оксиды азота</link:internal>
+</list-item><list-item dir="ltr">оксид V - оседает в виде белого порошка на стенках сосуда при сгорании фосфора; активно поглощает пары воды из воздуха</list-item></list>
+
+<list><list-item dir="ltr">фосфорная кислота H3PO4
+</list-item><list-item dir="ltr">фосфаты: NaH2PO4, Na2HPO4, Na3PO4</list-item></list></note-content></text>
+  <last-change-date>2009-08-29T19:10:07.8535030+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T19:10:07.8535030+04:00</last-metadata-change-date>
+  <create-date>2009-08-29T19:05:22.1548940+04:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>472</x>
+  <y>542</y>
+  <open-on-startup>False</open-on-startup>
+</note>

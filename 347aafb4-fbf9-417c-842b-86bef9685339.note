@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Casting в CPP</title>
+  <text xml:space="preserve"><note-content version="0.1">Casting в CPP
+
+
+[source: <link:url>http://alenacpp.blogspot.com/2005/08/<link:broken>c</link:broken></link:url><link:url>.html</link:url>]
+
+Лучшая практика по приведению типов: не делать этого. Потому что, если в программе потребовалось приведение типов, значит в этой программе с большой долей вероятности что-то неладно. Для довольно редких ситуаций, когда это все-таки действительно нужно, есть четыре способа приведения типов. Старый, оставшийся со времен <link:broken>C</link:broken>, но все еще работающий, лучше не использовать вовсе. Хотя бы потому, что конструкцию вида (Тип) очень сложно обнаружить при чтении кода программы.
+
+*const_cast*
+
+Самое простое приведение типов. Убирает так называемые cv спецификаторы (cv qualifiers), то есть const и volatile. volatile встречается не очень часто, так что более известно как приведение типов, предназначенное для убирания const. Если приведение типов не удалось, выдается ошибка на этапе компиляции.
+При использовании остальных приведений типов cv спецификаторы останутся как были.
+
+&lt;&lt;pre
+const char *str = "hello";
+char *str<link:internal>1</link:internal> = const_cast&lt;char*&gt;(str);
+
+&gt;&gt;
+
+*static_cast*
+
+Может быть использован для приведения одного типа к другому. Если это встроенные типы, то будут использованы встроенные в <link:broken>C</link:broken>++ правила их приведения. Если это типы, определенные программистом, то будут использованы правила приведения, определенные программистом.
+static_cast между указателями корректно, только если один из указателей - это указатель на void или если это приведение между объектами классов, где один класс является наследником другого. То есть для приведения к какому-либо типу от void\*, который возвращает malloc, следует использовать static_cast.
+
+&lt;&lt;pre
+int * p = static_cast&lt;int*&gt;(malloc(100));
+
+&gt;&gt;
+
+Если приведение не удалось, возникнет ошибка на этапе компиляции. Однако, если это приведение между указателями на объекты классов вниз по иерархии и оно не удалось, результат операции undefined. То есть, возможно такое приведение: static_cast&lt;Derived\*&gt;(pBase), даже если pBase не указывает на Derived, но программа при этом будет вести себя странно.
+
+*dynamic_cast*
+
+Безопасное приведение по иерархии наследования, в том числе и для виртуального наследования.
+
+&lt;&lt;pre
+dynamic_cast&lt;derv_class *&gt;(base_class_ptr_expr)
+
+&gt;&gt;
+
+Используется RTTI (Runtime Type Information), чтобы привести один указатель на объект класса к другому указателю на объект класса. Классы должны быть полиморфными, то есть в базовом классе должна быть хотя бы одна виртуальная функция. Если эти условие не соблюдено, ошибка возникнет на этапе компиляции. Если приведение невозможно, то об этом станет ясно только на этапе выполнения программы и будет возвращен NULL.
+
+dynamic_cast&lt;derv_class &amp;&gt;(base_class_ref_expr)
+
+Работа со ссылками происходит почти как с указателями, но в случае ошибки во время исполнения будет выброшено исключение bad_cast.
+
+*reinterpret_cast*
+
+Самое нахальное приведение типов. Не портируемо, результат может быть некорректным, никаких проверок не делается. Считается, что вы лучше компилятора знаете как на самом деле обстоят дела, а он тихо подчиняется. Не может быть приведено одно значение к другому значению. Обычно используется, чтобы привести указатель к указателю, указатель к целому, целое к указателю. Умеет также работать со ссылками.
+
+&lt;&lt;pre
+reinterpret_cast&lt;whatever *&gt;(<link:broken>some</link:broken> *)
+reinterpret_cast&lt;integer_expression&gt;(<link:broken>some</link:broken> *)
+reinterpret_cast&lt;whatever *&gt;(integer_expression)
+
+&gt;&gt;
+
+Чтобы использовать reinterpret_cast нужны очень и очень веские причины. Используется, например, при приведении указателей на функции.
+
+Что делает приведение типов в стиле С: пытается использовать static_cast, если не получается, использует reinterpret_cast. Далее, если нужно, использует const_cast .
+
+*Примеры*
+
+unsigned* и int* никак не связаны между собой. Есть правило приведения между unsigned (int) и int, но не между указателями на них. И привести их с помощью static_cast не получится, придется использовать reinterpret_cast. То есть вот так работать не будет:
+
+&lt;&lt;pre 
+
+unsigned* v_ptr;
+cout &lt;&lt; *static_cast&lt;int*&gt;(v_ptr) &lt;&lt;endl; 
+
+&gt;&gt;
+
+Приведение вниз по иерархии:
+
+&lt;&lt;pre
+class Base { public: virtual ~Base(void) { } };
+class Derived<link:internal>1</link:internal> : public Base { };
+class Derived2 : public Base { };
+class Unrelated { };
+
+Base* pD<link:internal>1</link:internal> = new Derived<link:internal>1</link:internal>;
+
+&gt;&gt;
+
+Вот такое приведение корректно: dynamic_cast&lt;Derived<link:internal>1</link:internal> *&gt;(pD<link:internal>1</link:internal>);
+А вот такое возвратит NULL: dynamic_cast&lt;Derived2 *&gt;(pD<link:internal>1</link:internal>);
+Никак не связанные указатели можно приводить с помощью reinterpret_cast:
+
+&lt;&lt;pre
+Derived<link:internal>1</link:internal>  derived<link:internal>1</link:internal>;
+Unrelated*  pUnrelated = reinterpret_cast&lt;Unrelated*&gt;(&amp;derived<link:internal>1</link:internal>);
+&gt;&gt;
+
+Пример использования static_cast:
+
+&lt;&lt;pre 
+
+int*   pi;
+void*  vp = pi;
+char*  pch = static_cast&lt;char*&gt;(vp);
+
+&gt;&gt;
+
+Примеры использования reinterpret_cast:
+
+&lt;&lt;pre
+
+float f (float);
+struct S {
+   float x;
+   float f (float);
+   } s;
+void g () {
+   reinterpret_cast&lt;int *&gt;(&amp;s.x);
+   reinterpret_cast&lt;void (*) ()&gt;(&amp;f);
+   reinterpret_cast&lt;int S::*&gt;(&amp;S::x);
+   reinterpret_cast&lt;void (S::*) ()&gt;(&amp;S::f);
+   reinterpret_cast&lt;void**&gt;(reinterpret_cast&lt;long&gt;(f));
+}
+
+&gt;&gt;
+
+Приведение в стиле <link:broken>C</link:broken> можно использовать, чтобы избавиться от значения, возвращаемого функцией. Польза от этого сомнительная, правда...
+
+&lt;&lt;pre 
+
+string sHello("Hello");
+(void)sHello.size();  // Throw away function return
+
+&gt;&gt;
+
+Также я видела использование приведение типов в стиле С для приведения к приватному базовому классу, но для этого можно использовать и reinterpret_cast.</note-content></text>
+  <last-change-date>2009-02-07T15:39:19.9258060+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:19.9258060+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:15:30.9275040+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

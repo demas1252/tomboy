@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Clojure
+
+<link:internal>Установка Clojure на Arch Linux</link:internal>
+<link:internal>Установка Clojure в Ubuntu</link:internal>
+<link:internal>Установка Clojure в Suse</link:internal>
+<link:internal>Подключаем Clojure Contrib</link:internal>
+
+<link:internal>Clojure Forms</link:internal>
+<link:internal>Java &amp; Clojure</link:internal>
+<link:internal>Sequences in Clojure</link:internal>
+<link:internal>Functional Clojure</link:internal>
+<link:internal>Concurrency in Clojure</link:internal>
+<link:internal>Macros in Clojure</link:internal>
+
+<link:internal>Работа со строками в  Clojure</link:internal>
+
+<link:internal>Compojure</link:internal>
+<link:internal>Практические примеры Clojure</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-11-14T22:00:15.8301050+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-14T22:00:15.8301050+03:00</last-metadata-change-date>
+  <create-date>2009-07-19T10:48:17.6049400+04:00</create-date>
+  <cursor-position>131</cursor-position>
+  <width>519</width>
+  <height>368</height>
+  <x>238</x>
+  <y>249</y>
+  <open-on-startup>False</open-on-startup>
+</note>

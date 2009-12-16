@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Backup Compression</title>
+  <text xml:space="preserve"><note-content version="0.1">Backup Compression
+
+Появилось в <link:internal>MS SQL</link:internal> 2008.  
+Не работает в Express редакции.
+
+Для того, чтобы определить насколько эффективной была компрессия можно выполнить запрос:
+
+SELECT 
+  b.database_name 'Database Name', 
+  CONVERT (BIGINT, b.backup_size / 1048576 ) 'UnCompressed Backup Size (MB)', 
+  CONVERT (BIGINT, b.<link:internal>compressed</link:internal>_backup_size / 1048576 ) '<link:internal>Compressed</link:internal> Backup Size (MB)', 
+  CONVERT (NUMERIC (20,2), (CONVERT (FLOAT, b.backup_size) / 
+  CONVERT (FLOAT, b.<link:internal>compressed</link:internal>_backup_size))) 'Compression Ratio', 
+  DATEDIFF (SECOND, b.backup_start_date, b.backup_finish_date) 'Backup Elapsed Time (sec)' 
+FROM 
+  msdb.dbo.backupset b 
+WHERE 
+  DATEDIFF (SECOND, b.backup_start_date, b.backup_finish_date) &gt; 0 
+  AND b.backup_size &gt; 0 
+ORDER BY 
+  b.backup_finish_date DESC
+
+<link:url>http://sqlcat.com/technicalnotes/archive/2008/04/21/tuning-the-performance-of-backup-compression-in-<link:internal>sql</link:internal></link:url><link:url>-server-2008.aspx</link:url>
+<link:url>http://sqlcat.com/technicalnotes/archive/2009/02/16/tuning-backup-compression-part-2.aspx</link:url>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.3981000+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.3981000+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:15:23.0001250+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

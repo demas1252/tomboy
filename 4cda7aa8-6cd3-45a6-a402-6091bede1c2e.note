@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VendCreatePrepaymentFacture_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">VendCreatePrepaymentFacture_Ru
+
+Здесь перебираются фактуры, которые:
+
+<list><list-item dir="ltr">промаркированы
+</list-item><list-item dir="ltr">у которых проставлены поля TaxGroup, TaxItemGroup, FactureData_External, FactureDate, FactureExternalId</list-item></list>
+
+Для каждой записи дергается calcTax() -&gt; calcTaxPosted() и calcTAxUnposted() - создается еще одна запись в tmpTaxTrans путем суммирования записей в уже существующем TaxTrans.
+
+В calcTaxUposted() участвует отдельный класс <link:internal>TaxLedgerJournalCalculate</link:internal> , который я пока не перенес.
+
+Если хоть одна tmpTaxWorkTrans была создана - запускается createJournal() -&gt; createFactureTrans().
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.0531600+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.0531600+04:00</last-metadata-change-date>
+  <create-date>2009-01-18T13:58:07.2406620+03:00</create-date>
+  <cursor-position>192</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>855</x>
+  <y>435</y>
+  <open-on-startup>False</open-on-startup>
+</note>

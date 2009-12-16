@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Guards in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Guards in Haskell
+
+<italic>bmiTell :: (RealFloat a) =&gt; a -&gt; String
+bmiTell bmi
+        | bmi &lt;= 18.5 = "You're underweight"
+        | bmi &lt;= 25.0 = "You're supposedly normal"
+        | bmi &lt;= 30.0 = "You're fat!"
+        | otherwise = "You're whale, congratulations!"
+
+</italic>или лучше так:<italic>
+
+   1. bmiTell :: (RealFloat a) =&gt; a -&gt; a -&gt; String  
+   2. bmiTell weight height  
+   3.     | bmi &lt;= 18.5 = "You're underweight, you emo, you!"  
+   4.     | bmi &lt;= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"  
+   5.     | bmi &lt;= 30.0 = "You're fat! Lose some weight, fatty!"  
+   6.     | otherwise   = "You're a whale, congratulations!"  
+   7.     where bmi = weight / height ^ 2  
+
+</italic>или лучше так:<italic>
+
+bmiTell4 :: (RealFloat a) =&gt; a -&gt; a -&gt; String
+bmiTell4 weight height
+        | bmi &lt;= skinny = "You're underweight"
+        | bmi &lt;= normal = "You're supposed nornal"
+        | bmi &lt;= fat = "You're fat!"        
+        | otherwise   = "You're whale!"
+        where bmi = weight / height ^ 2
+              skinny = 18.5
+              normal = 25.0
+              fat    = 30.0
+
+max' :: (Ord a) =&gt; a-&gt; a-&gt; a
+max' a b
+     | a &gt; b            = a
+     | otherwise        = b
+</italic>
+
+<italic>myCompare :: (Ord a) =&gt; a -&gt; a-&gt; Ordering
+a `myCompare` b
+  | a &gt; b     = GT
+  | a == b    = EQ
+  | otherwise = LT</italic>
+
+<italic>*Main&gt; 3 `compare` 2
+GT
+</italic>
+</note-content></text>
+  <last-change-date>2009-10-29T16:22:05.2132530+03:00</last-change-date>
+  <last-metadata-change-date>2009-10-29T16:22:05.2132530+03:00</last-metadata-change-date>
+  <create-date>2009-10-29T15:18:17.3150620+03:00</create-date>
+  <cursor-position>359</cursor-position>
+  <width>746</width>
+  <height>468</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

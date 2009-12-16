@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление tablespace</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление tablespace
+
+<italic>drop tablespace my_tablespace
+[including contents
+    [and datafiles]];
+</italic>    
+including contents - удалить все сегменты в tablespace. Необходимо указать, если tablespace содержит данные.
+and datafiles - удалить файлы данных (как файлы)</note-content></text>
+  <last-change-date>2009-01-31T17:32:28.3676130+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-31T17:32:28.3676130+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:25:20.2290920+03:00</create-date>
+  <cursor-position>255</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1077</x>
+  <y>32</y>
+  <open-on-startup>False</open-on-startup>
+</note>

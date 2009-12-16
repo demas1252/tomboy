@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа со строками в  Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа со строками в  Clojure
+
+<italic>Строку в последовательность</italic>
+
+(seq "<link:internal>test</link:internal>")</note-content></text>
+  <last-change-date>2009-08-23T00:18:53.0563740+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-23T00:18:53.0563740+04:00</last-metadata-change-date>
+  <create-date>2009-08-23T00:18:19.3176450+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1151</x>
+  <y>146</y>
+  <open-on-startup>False</open-on-startup>
+</note>

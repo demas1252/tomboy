@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример delegation pattern на python</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример delegation pattern на python
+
+class Base(object):
+    def f(self):
+        print "must be implemented"
+    def g(self):
+        print "must be implemented"
+
+
+class A(Base):
+    def f(self):
+        print "A.f"
+    def g(self):
+        print "A.g"
+
+class B(Base):
+    def f(self):
+        print "B.f"
+    def g(self):
+        print "B.g"
+
+class C(Base):
+    def __init__(self):
+        self.obj = A()
+    def f(self):
+        self.obj.f()
+    def g(self):
+        self.obj.g()
+    def toA(self):
+        self.obj = A()
+    def toB(self):
+        self.obj = B()
+
+cl = C()
+cl.f()
+cl.g()
+cl.toB()
+cl.f()
+cl.g()        
+</note-content></text>
+  <last-change-date>2009-03-23T21:57:59.5857490+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:57:59.5857490+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:57:52.9259560+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

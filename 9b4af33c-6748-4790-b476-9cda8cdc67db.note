@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как проверить переоценку курсовой по одной проверке</title>
+  <text xml:space="preserve"><note-content version="0.1">Как проверить переоценку курсовой по одной проверке
+
+класс CustVendExchAdjTrans.processOpenTransaction_W()
+
+здесь поочереди тянутся vendTrans и здесь по ваучеру можно ставить точки останова.</note-content></text>
+  <last-change-date>2009-04-19T17:21:27.2066960+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-19T17:21:27.2066960+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T17:20:15.2564680+04:00</create-date>
+  <cursor-position>108</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>535</x>
+  <y>454</y>
+  <open-on-startup>False</open-on-startup>
+</note>

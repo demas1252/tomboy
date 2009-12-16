@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Еще пример хорошего и правильного использования рекурсии</title>
+  <text xml:space="preserve"><note-content version="0.1">Еще пример хорошего и правильного использования рекурсии
+
+;; F(0) = 1; M(0) = 0
+;; F(n) = n - M(F(n-1)), n &gt; 0
+;; M(n) = n - F(M(n-1)), n &gt; 0
+
+;; works, but very slowly
+
+(declare m f)
+
+(defn m [n]
+  (<link:internal>if</link:internal> (zero? n)
+    0
+    (- n (f (m (dec n))))))
+
+(defn f [n]
+  (<link:internal>if</link:internal> (zero? n)
+    1
+    (- n (m (f (dec n))))))
+
+;; memoize function (but it can broken stack)
+
+(def m (memoize m))
+(def f (memoize f))
+
+;; using sequences
+
+;;; (nth m-seq 250)
+
+(def m-seq (<link:internal>map</link:internal> m (iterate inc 0)))
+(def f-seq (<link:internal>map</link:internal> f (iterate inc 0)))
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.1434270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.1434270+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T10:59:41.5651670+04:00</create-date>
+  <cursor-position>91</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1222</x>
+  <y>607</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обновить все ячейки</title>
+  <text xml:space="preserve"><note-content version="0.1">Обновить все ячейки
+
+
+Возникла такая проблема.
+На листе есть столбец, в котором забита функция.
+В ячейках столбца отображается ошибка #ИМЯ?
+Если в ячейке нажать "F2", то тогда отображается нормальное значение.
+Проблема в том, что таких строк несколько тысяч. :(
+
+---
+
+Сделай поиск и замену какого нибуть символа встречающегося во всех строках на самого же себя
+Например знак равно "="
+
+Columns("AB:AB").Replace What:="=", Replacement:="="
+
+---
+
+А если через клавиши, то так нужно!!!
+
+For i = 2 To 10
+Range("H" &amp; i).Select
+ SendKeys "{F2}", True
+ SendKeys "{ENTER}", True
+Next i
+
+
+Естественно запускается из окна Exel</note-content></text>
+  <last-change-date>2008-04-06T15:02:53.5912950+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:02:53.5912950+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:02:50.9147820+04:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

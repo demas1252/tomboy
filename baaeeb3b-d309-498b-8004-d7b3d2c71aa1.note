@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы грамматик</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы грамматик
+
+
+По иерархии Хомского, грамматики делятся на 4 типа, каждый последующий является более ограниченным подмножеством предыдущего (но и легче поддающимся анализу):
+
+    * тип 0. неограниченные грамматики — возможны любые правила
+    * тип 1. контекстно-зависимые грамматики — левая часть может содержать один нетерминал, окруженный «контекстом» (последовательности символов, в том же виде присутствующие в правой части); сам нетерминал заменяется непустой последовательностью символов в правой части.
+    * тип 2. контекстно-свободные грамматики — левая часть состоит из одного нетерминала.
+    * тип 3. регулярные грамматики — более простые, эквивалентны конечным автоматам.
+</note-content></text>
+  <last-change-date>2008-03-28T23:06:47.5268310+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:06:47.5268310+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:06:40.5237560+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>411</x>
+  <y>348</y>
+  <open-on-startup>False</open-on-startup>
+</note>

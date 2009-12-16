@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Предварительное объявление класса в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Предварительное объявление класса в Python
+
+class Foo:
+  <link:internal>pass</link:internal>
+
+class Bar:
+  <link:internal>pass</link:internal>
+
+Foo.m = Bar()
+Bar.m = Foo()</note-content></text>
+  <last-change-date>2009-04-07T09:45:29.7670460+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T09:45:29.7670460+04:00</last-metadata-change-date>
+  <create-date>2009-04-07T09:45:04.6741740+04:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>48</y>
+  <open-on-startup>False</open-on-startup>
+</note>

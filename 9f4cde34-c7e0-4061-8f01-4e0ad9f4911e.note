@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск в Emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск в Emacs
+
+Ctrl-S + &lt;слово которое ищем&gt; + S
+M-x + occur + &lt;regexp&gt;</note-content></text>
+  <last-change-date>2009-07-17T10:24:27.1815780+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-17T10:24:27.1815780+04:00</last-metadata-change-date>
+  <create-date>2009-07-17T10:23:43.8827010+04:00</create-date>
+  <cursor-position>5</cursor-position>
+  <width>496</width>
+  <height>360</height>
+  <x>783</x>
+  <y>507</y>
+  <open-on-startup>False</open-on-startup>
+</note>

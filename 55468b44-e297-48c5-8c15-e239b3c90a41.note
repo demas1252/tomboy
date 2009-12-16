@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>FIRST_ROWS</title>
+  <text xml:space="preserve"><note-content version="0.1">FIRST_ROWS
+
+Начиная с ядра <link:internal>Kernel</link:internal> Rollup 2 (1951.7500) в Microsoft Dynamics AX 3.0 есть возможность управления подсказкой (хинтом) FIRST_ROWS, которая позволяет определять количество возвращаемых строк в выборке. Как правило, данная возможность актуальна в случае использования <link:internal>Oracle</link:internal> как сервера баз данных для Microsoft Dynamics AX 3.0, и для выборок в формах (процесс скроллирования) или с использованием директив с order by.
+
+Строго говоря, “SELECT /*+ FIRST_ROWS */” управляется параметром 'sqloraclefirstrowsnumber' в поле “Advanced” настроек сервера Microsoft Dynamics AX (AOS). Параметр может принимать значения <link:internal>1</link:internal>, 10, 100 или 1000. Значение 100 – по умолчанию для всех строк с параметром FIRST_ROWS.
+
+Изменить данный параметр можно также в реестре операционной системы, где установлен сервер AOS. Запустите редактор реестра, выберите HKEY_CURRENT_USER\Software\Navision\<link:internal>Axapta</link:internal>\3.0, выберите требуемую конфигурацию экземпляра AOS. Добавьте новый строковый параметр, введите имя ‘sqloraclefirstrowsnumber’ и соответствующий параметр (<link:internal>1</link:internal>,10,100 or 1000).
+
+<link:url>http://blogs.msdn.com/aeremenk/archive/2007/07/20/3970068.aspx</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:31.7165400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.7165400+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:19:34.8944300+03:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

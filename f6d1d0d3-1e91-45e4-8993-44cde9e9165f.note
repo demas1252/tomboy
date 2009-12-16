@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Неизменяемость списков</title>
+  <text xml:space="preserve"><note-content version="0.1">Неизменяемость списков
+
+_def f(x, y = []):
+    y.append(x)
+    return y
+
+print f(23)  # prints [23]
+print f(42)  # prints [23, 42]_</note-content></text>
+  <last-change-date>2008-03-26T23:10:56.7433570+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T23:10:56.7433570+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:10:55.5679430+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Vim Bookmarks</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Vim</link:internal> Bookmarks
+
+m[символ] - установить пометку
+'[символ] - перейти на метку</note-content></text>
+  <last-change-date>2009-01-02T01:46:35.5715330+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-02T01:46:35.5715330+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:03:51.4616270+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

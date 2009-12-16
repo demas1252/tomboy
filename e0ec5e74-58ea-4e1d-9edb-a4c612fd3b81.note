@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Список в структуре</title>
+  <text xml:space="preserve"><note-content version="0.1">Список в структуре
+
+Сруктура: &lt;список детей&gt;, имя, год рождения, цвет глаз
+&lt;&lt;pre
+(define-struct parent (children name date eyes))
+
+&gt;&gt;
+
+Формируем дерево:
+&lt;&lt;pre
+;; Youngest Generation:
+(define Gustav (make-parent empty 'Gustav 1988 'brown))
+(define Fred&amp;Eva (list Gustav))
+
+;; Middle Generation:
+(define Adam (make-parent empty 'Adam 1950 'yellow))
+(define Dave (make-parent empty 'Dave 1955 'black))
+(define Eva (make-parent Fred&amp;Eva 'Eva 1965 'blue))
+(define Fred (make-parent Fred&amp;Eva 'Fred 1966 'pink))
+(define Carl&amp;Bettina (list Adam Dave Eva))
+
+;; Oldest Generation:
+(define Carl (make-parent Carl&amp;Bettina 'Carl 1926 'green))
+(define Bettina (make-parent Carl&amp;Bettina 'Bettina 1926 'green))
+
+&gt;&gt;
+
+Сами функции:
+&lt;&lt;pre
+(define (blue-eyed-descendant? a-parent)
+  (cond
+    [(symbol=? (parent-eyes a-parent) 'blue) true]
+    [else (blue-eyed-children? (parent-children a-parent))]))
+
+(define (blue-eyed-children? aloc)
+  (cond
+    [(empty? aloc) false]
+    [else
+     (cond 
+       [(blue-eyed-descendant? (first aloc)) true]
+       [else (blue-eyed-children? (rest aloc))])]))
+
+&gt;&gt;
+
+Проверка:       
+&lt;&lt;pre       
+&gt; (blue-eyed-descendant? Carl)
+true
+&gt; (blue-eyed-descendant? Eva)
+true
+&gt; (blue-eyed-descendant? Dave)
+false
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:54:17.3338370+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:54:17.3338370+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:54:16.0630980+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>139</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

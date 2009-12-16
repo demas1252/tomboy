@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выверка поставщиков с ГК</title>
+  <text xml:space="preserve"><note-content version="0.1">Выверка поставщиков с ГК
+
+Для выверки используется наша оборотка по контрагентам и наша оборотка по ГК.  Как правило, первая строится в разрезе определенного профиля, а вторая в разрезе определенного счета.
+
+Здесь есть тонкость. Даже если у обороток сходятся входящее сальдо и обороты, развернутое исходящее сальдо может расходиться. Но свернутое все-таки должно совпадать.  Это связано с тем, что исходящее сальдо по контрагентам мы считаем как Amount + ExchAmount - SettleAmount.  Причем посленднее берем на дату - "начало диапазоно отчета"
+
+Для более удобной выверки Макс Езерский породил <link:internal>отладочная версия оборотки по контрагентам</link:internal></note-content></text>
+  <last-change-date>2009-08-15T19:38:57.5712060+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-15T19:38:57.5712060+04:00</last-metadata-change-date>
+  <create-date>2009-08-15T17:22:21.0348060+04:00</create-date>
+  <cursor-position>592</cursor-position>
+  <width>814</width>
+  <height>511</height>
+  <x>187</x>
+  <y>403</y>
+  <open-on-startup>False</open-on-startup>
+</note>

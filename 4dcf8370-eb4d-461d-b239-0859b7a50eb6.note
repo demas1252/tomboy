@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировка списка структур по одному из полей</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировка списка структур по одному из полей
+
+
+&lt;&lt;pre
+(define-struct mail (from date message))
+
+(define m1 (make-mail 'hello 2 'hello))
+(define m2 (make-mail 'bye 3 'bye))
+(define m3 (make-mail '<link:internal>mine</link:internal> 1 '<link:internal>mine</link:internal>))
+
+(define mails (cons m1(cons m2(cons m3 empty))))
+
+(define (insert-mess n alon)
+  (cond
+    [(empty? alon) (cons n empty)]
+    [else (cond
+            [(&gt;= (mail-date n) (mail-date (first alon))) (cons n alon)]
+            [(&lt; (mail-date n) (mail-date (first alon))) (cons (first alon) (insert-mess n (rest alon)))])]))
+
+(define (sort-mess alon)
+  (cond 
+    [(empty? alon) empty]
+    [(cons? alon) (insert-mess (first alon) (sort-mess(rest alon)))]))
+    
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; (sort-mess mails)
+(cons (make-mail 'bye 3 'bye) (cons (make-mail 'hello 2 'hello) (cons (make-mail '<link:internal>mine</link:internal> 1 '<link:internal>mine</link:internal>) empty)))
+
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:49.6747410+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:49.6747410+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:04:49.3829160+03:00</create-date>
+  <cursor-position>74</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

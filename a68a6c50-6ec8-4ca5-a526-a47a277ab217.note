@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>createLogTrans</title>
+  <text xml:space="preserve"><note-content version="0.1">createLogTrans
+
+! switch
+
+totalSettledAmounts &lt;- settledAmounts
+totalUsedAmounts &lt;- <link:internal>PurchBookVatProcessLogTransOper_RU</link:internal>::usedAmounts()
+
+Я так понимаю это из предыдущей истории обработки.
+
+1. Итерируемся по <link:internal>mapFactureAmounts</link:internal>.
+2. 
+
+settledAmounts - ключ из factureTrans(но это только для предоплат) {Tax+Line, Line, Tax}] из <link:internal>mapFactureAmounts</link:internal>.
+factureAmounts - то же самое
+
+finalAmounts = SettlesAmounts - UsedAmounts
+
+<link:internal>PurchBookVatProcessLogTransOper_RU::createLines()</link:internal>
+
+Возвращает [<link:internal>totalAmounts</link:internal>, usedAmounts]
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.4962390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.4962390+04:00</last-metadata-change-date>
+  <create-date>2009-01-25T12:23:14.2882029+03:00</create-date>
+  <cursor-position>465</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1205</x>
+  <y>501</y>
+  <open-on-startup>False</open-on-startup>
+</note>

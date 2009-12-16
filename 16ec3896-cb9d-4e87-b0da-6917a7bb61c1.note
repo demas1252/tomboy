@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Шрифты в Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Шрифты в Linux
+
+Для дома - см scrapbook.
+Для работы - sudo <link:internal>apt-get</link:internal> install msttcorefonts.
+
+fc-cache 
+fc-list
+
+1.<link:url> /etc/X11/xorg.conf</link:url> 
+
+Section "Monitor"
+	Identifier	"Configured Monitor"
+<bold>	DisplaySize	431 272
+	Option		"DPI" "96x96" </bold>
+EndSection
+
+2. .Xresourses
+
+Xft.dpi: 96.0
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.antialias: true
+Xft.rgba: none 
+
+3.  .fonts.conf
+
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
+&lt;fontconfig&gt;
+  &lt;match target="font"&gt;
+    &lt;edit name="autohint" mode="assign"&gt;
+      &lt;bool&gt;false&lt;/bool&gt;
+    &lt;/edit&gt;
+  &lt;/match&gt;
+  &lt;match target="font"&gt;
+    &lt;<link:internal>test</link:internal> name="weight" compare="more"&gt;&lt;const&gt;medium&lt;/const&gt;&lt;/<link:internal>test</link:internal>&gt;
+    &lt;edit name="autohint" mode="assign"&gt;&lt;bool&gt;true&lt;/bool&gt;&lt;/edit&gt;
+  &lt;/match&gt;
+&lt;/fontconfig&gt;
+
+или супер-лучше:
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
+
+&lt;fontconfig&gt;
+  &lt;match target="font"&gt;
+    &lt;edit name="antialias" mode="assign"&gt;&lt;bool&gt;true&lt;/bool&gt;&lt;/edit&gt;
+    &lt;edit name="rgba"      mode="assign"&gt;&lt;const&gt;rgb&lt;/const&gt;&lt;/edit&gt;
+    &lt;edit name="autohint"  mode="assign"&gt;&lt;bool&gt;true&lt;/bool&gt;&lt;/edit&gt;
+    &lt;edit name="hinting"   mode="assign"&gt;&lt;bool&gt;true&lt;/bool&gt;&lt;/edit&gt;
+    &lt;edit name="hintstyle" mode="assign"&gt;&lt;const&gt;hintfull&lt;/const&gt;&lt;/edit&gt;
+    &lt;edit name="lcdfilter" mode="assign"&gt;&lt;const&gt;lcddefault&lt;/const&gt;&lt;/edit&gt;
+          &lt;!-- lcdnone, lcddefault, lcdlight, lcdlegacy --&gt;
+  &lt;/match&gt;
+  &lt;match target="font"&gt;
+    &lt;<link:internal>test</link:internal> name="weight" compare="more"&gt;&lt;const&gt;medium&lt;/const&gt;&lt;/<link:internal>test</link:internal>&gt;
+    &lt;edit name="autohint" mode="assign"&gt;&lt;bool&gt;false&lt;/bool&gt;&lt;/edit&gt;
+    &lt;edit name="hinting" mode="assign"&gt;&lt;bool&gt;false&lt;/bool&gt;&lt;/edit&gt;
+    &lt;edit name="hintstyle" mode="assign"&gt;&lt;const&gt;hintnone&lt;/const&gt;&lt;/edit&gt;
+  &lt;/match&gt;
+  &lt;selectfont&gt;
+    &lt;rejectfont&gt;
+      &lt;pattern&gt;
+        &lt;patelt name="scalable"&gt;&lt;bool&gt;false&lt;/bool&gt;&lt;/patelt&gt;
+      &lt;/pattern&gt;
+    &lt;/rejectfont&gt;
+  &lt;/selectfont&gt;
+&lt;/fontconfig&gt;
+
+
+4.  .gtkrc-2.0
+
+<link:internal>gtk</link:internal>-font-name = "Tahoma 10"
+
+xdpyinfo | grep resolution
+
+Для <link:internal>Suse</link:internal>: <link:url>http://opensuse-community.org/SubpixelHinting</link:url>
+
+Если выглядит смазанным - можно попробовать
+
+$nvidia-settings -a InitialPixmapPlacement=0
+
+<bold>Mandriva</bold>
+
+репозиторий plf, пакет libfeetype6 - но ставить только из этого репозитория</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.5388270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.5388270+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:39:18.2586629+03:00</create-date>
+  <cursor-position>2052</cursor-position>
+  <width>571</width>
+  <height>632</height>
+  <x>1041</x>
+  <y>115</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Более сложный пример поиска в списке на Schema</title>
+  <text xml:space="preserve"><note-content version="0.1">Более сложный пример поиска в списке на Schema
+
+
+Допустим у нас есть список списков (граф):
+
+&lt;&lt;pre
+(define Graph 
+  '(
+    (A (B E))
+    (B (E F))
+    (<link:internal>C</link:internal> (D))
+    (D ())
+    (E (<link:internal>C</link:internal> F))
+    (F (D G))
+    (G ())
+    )
+  )
+
+&gt;&gt;
+
+И надо найти те, у которых первый элемент равен определенной букве:
+
+&lt;&lt;pre
+(define (contains-element? g el)
+  (cond
+    [(empty? g) false]
+    [else (cond [(symbol=? (first (first g)) el) true]
+                [else (contains-element? (rest g) el)])]))
+
+(contains-element? Graph '<link:internal>C</link:internal>)
+
+(contains-element? Graph 'T)
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-28T23:04:10.7048950+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:04:10.7048950+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:04:08.9005820+03:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

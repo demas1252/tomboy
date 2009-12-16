@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление дублирующихся констрейнтов</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление дублирующихся констрейнтов
+
+
+&lt;&lt;pre
+declare
+  type TCons is table of varchar2(32767) index by binary_integer;
+  Cons TCons;
+  i int;
+begin
+  for cTab in (select * from user_<link:internal>tables</link:internal>) loop
+    Cons.delete;
+    for cConstr in
+    ( select * from user_constraints
+        where table_name = cTab.table_name
+          and constraint_type = '<link:broken>C</link:broken>'
+        order by constraint_name
+    ) loop
+      i := dbms_utility.get_hash_value(cConstr.search_condition, -(2**29), 2**30);
+      <link:internal>if</link:internal> Cons.exists(i) and Cons(i) = cConstr.search_condition then
+        dbms_output.put_line /* or execute immediate */
+          ('alter table ' || cTab.table_name || ' drop constraint ' || cConstr.constraint_name);
+      else
+        Cons(i) := cConstr.search_condition;
+      end <link:internal>if</link:internal>;
+    end loop;
+  end loop;
+end;
+/
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.2283080+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.2283080+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:43:24.9737520+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Итераторы STL</title>
+  <text xml:space="preserve"><note-content version="0.1">Итераторы STL
+
+	std:class_class_name&lt;template_parameters&gt;::<link:internal>iterator</link:internal> name
+
+	std::vector&lt;int&gt; myIntVector;
+	std::vector&lt;int&gt;::<link:internal>iterator</link:internal> myIntVectorIterator;
+
+
+Все итераторы можно поделить на пять видов.  Пусть i и j итераторы одного вида, тогда операции i == j, i != j, i = j определаны для всех из них.  Дополнительно поддерживается:
+
+<list><list-item dir="ltr">входной (x=*i, ++i, i++) для всех 4-х контейнеров (<link:internal>find</link:internal>)
+</list-item><list-item dir="ltr">выходной (*i = x, ++i, i++) для всех 4-х (copy)
+</list-item><list-item dir="ltr">прямой (входной + выходной) для всех (replace)
+</list-item><list-item dir="ltr">двунаправленный (как прямой + --i, i--) все (reverse)
+</list-item><list-item dir="ltr">произвольного доступа (двунаправленный + i+n,i-n,i&lt;j,i&gt;j..) массив, vector, <link:internal>deque</link:internal> - (sort)</list-item></list>
+
+<link:internal>Пример STL итератора</link:internal>
+<link:internal>Потоковые итераторы</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:23.5525020+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.5525020+04:00</last-metadata-change-date>
+  <create-date>2009-08-02T07:12:37.8622060+04:00</create-date>
+  <cursor-position>662</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>308</x>
+  <y>272</y>
+  <open-on-startup>False</open-on-startup>
+</note>

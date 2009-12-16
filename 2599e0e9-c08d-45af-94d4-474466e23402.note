@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BookDataCalc_Purch_Process_Ru.initTransitionPeriod()</title>
+  <text xml:space="preserve"><note-content version="0.1">BookDataCalc_Purch_Process_Ru.initTransitionPeriod()
+
+Переходные период - не стал останавливаться на этом.</note-content></text>
+  <last-change-date>2009-01-23T23:14:17.5378890+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-23T23:14:17.5378890+03:00</last-metadata-change-date>
+  <create-date>2009-01-23T23:13:54.9529180+03:00</create-date>
+  <cursor-position>87</cursor-position>
+  <width>634</width>
+  <height>370</height>
+  <x>255</x>
+  <y>445</y>
+  <open-on-startup>False</open-on-startup>
+</note>

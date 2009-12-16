@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Ruby
+
+<link:internal>Типы в Ruby</link:internal>
+<link:internal>Основные синтаксические конструкции в Ruby</link:internal>
+<link:internal>ООП в Ruby</link:internal>
+<link:internal>Block and Iterators in Ruby</link:internal>
+<link:internal>Исключения в Ruby</link:internal>
+<link:internal>Модули в Ruby</link:internal>
+<link:internal>Ввод и вывод в Ruby</link:internal>
+<link:internal>Многопоточность в Ruby</link:internal>
+<link:internal>Разарботка GUI на Ruby</link:internal>
+<link:internal>RubyGems</link:internal>
+<link:internal>Sequel</link:internal>
+<link:internal>Работа с Xml в Ruby</link:internal>
+
+<link:internal>Библиотеки Ruby</link:internal>
+
+<link:internal>Отладка в Ruby</link:internal></note-content></text>
+  <last-change-date>2009-11-23T13:19:27.5719370+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:27.5719370+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:10:41.0662269+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>394</width>
+  <height>419</height>
+  <x>1109</x>
+  <y>173</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ввод по маске</title>
+  <text xml:space="preserve"><note-content version="0.1">Ввод по маске
+
+
+     [source: development-ax]
+     todo: practice
+
+public boolean modified()
+{
+str enteredstring;
+int stringlength;
+str substring;
+str hypenstring,secondHypen;
+boolean ret;
+boolean returnIntegerValue,secondintegervalue;
+;
+ret = super();
+StringEdit.limitTextValue(15);
+enteredstring = StringEdit.valueStr();
+stringlength = strlen(enteredstring);
+substring = substr(enteredstring,<link:internal>1</link:internal>,2);
+hypenstring = substr(enteredstring,3,<link:internal>1</link:internal>);
+secondHypen = substr(enteredstring,6,<link:internal>1</link:internal>);
+returnIntegerValue = Global::isInteger(substr(enteredstring,4,2));
+secondintegervalue = Global::isInteger(substr(enteredstring,7,5));
+<link:internal>if</link:internal>( hypenstring != '-' || secondHypen!= '-'
+|| (!returnIntegerValue)
+|| (!secondintegervalue))
+{
+info("please enter the input in this format AB-01-12345");
+}
+return ret;
+}
+
+
+Belugin предложил лучший вариант:
+
+_<link:internal>if</link:internal> (!<link:url>match(@'&lt;..\-:d:d\-:d:d:d:d:d</link:url>&gt;', enteredString))
+   info("please enter the input in this format AB-01-12345");_</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.2699010+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.2699010+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:40:58.6124660+04:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>generator expressions</title>
+  <text xml:space="preserve"><note-content version="0.1">generator expressions
+
+iter = (x**2 for x in range(10 <link:internal>if</link:internal> x % 2 == 0)
+for el in iter:
+   print el
+
+В отличии от <link:internal>list comprehention</link:internal> последовательность не вычисляется сразу, а только по мере необходимости.
+
+</note-content></text>
+  <last-change-date>2009-03-24T09:31:40.2716600+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:31:40.2716600+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:31:26.9338940+03:00</create-date>
+  <cursor-position>113</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

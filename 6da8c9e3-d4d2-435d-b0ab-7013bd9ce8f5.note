@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>см. Реализациия ФЗ 224-Ф3-1.3</title>
+  <text xml:space="preserve"><note-content version="0.1">см. Реализациия ФЗ 224-Ф3-1.3
+
+1. Выделение проводки при разноски
+
+<list><list-item dir="ltr">поле VendParameters.TaxOnPrepayment + добавляем его в группу PrePayment, чтобы оно появилось на форме.
+</list-item><list-item dir="ltr">таблицы CustLedgerAccounts/VendLedgerAccounts - добавляем поле VATprepaymentAccount для хранения одного из счетов, которые будут подставляться в проводку.  + Методы CustLedgerAccounts.prePaymentAccount() и VendLedgerAccount.vatPrepaymentAccount(), возвращающие эти счета. Ну и на форму VendPosting вытягиваем добавленное поле.
+</list-item><list-item dir="ltr"><link:internal>Map</link:internal> CustVendTrans в mapping VendPrans доделываем недостающий меппинг.
+</list-item><list-item dir="ltr">В LedgerJournalTransUpdateVend.updateNow() добавляем код, который генерит проводку.</list-item></list>
+
+2. Создание сторно проводки при сопоставлении
+
+<list><list-item dir="ltr">VendParameters поле SettlePrepaymentVATType_ru - оно влияет как будет будет создаваться сторно проводка
+</list-item><list-item dir="ltr">класс VendPrePaymentReversal_Ru - создаем метод reverseTax_Ru(), который создает эту реверсирующую проводку и вызывем его из .reversePrePayment_Ru()</list-item></list>
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:53.8493530+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:53.8493530+04:00</last-metadata-change-date>
+  <create-date>2009-01-21T11:35:05.2391220+03:00</create-date>
+  <cursor-position>781</cursor-position>
+  <width>584</width>
+  <height>740</height>
+  <x>1086</x>
+  <y>33</y>
+  <open-on-startup>False</open-on-startup>
+</note>

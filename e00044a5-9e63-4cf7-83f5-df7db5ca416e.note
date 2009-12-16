@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отладка в Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Отладка в Erlang
+
+Например, у нас есть вот такой модуль:
+
+-module(math).
+-export([sum/2, diff/2]).
+
+sum(A, B) -&gt; A + B.
+diff(A, B) -&gt; A - B.
+
+Запускаем отладчик:
+&gt; dbg:tracer()
+
+Say the tracer that you are interested in all calls for all processes:
+&gt; dbg:p(all, c)
+
+Finally, say it that you want to trace the function sum from the module math:
+&gt; dbg:tpl(math, sum, [])
+
+Now, try to call the function, as usual. The tracer is active!
+&gt; math:sum(2, 3).
+
+To stop the trace:
+&gt; dbg:stop().
+
+To trace all the functions within the module math:
+&gt; dbg:tpl(math, [])
+
+To trace the return value for a given function:
+&gt; dbg:tpl(math, sum, dbg:fun2ms(fun(_) -&gt; return_trace() end)).
+
+Дополнительная информация:
+<link:url>http://<link:internal>erlang</link:internal></link:url><link:url>.org/doc/<link:internal>man</link:internal></link:url><link:url>/dbg.html</link:url>
+</note-content></text>
+  <last-change-date>2009-03-24T08:48:54.5256360+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:48:54.5256360+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:48:44.9037030+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>157</x>
+  <y>41</y>
+  <open-on-startup>False</open-on-startup>
+</note>

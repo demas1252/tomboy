@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Копирование файлов</title>
+  <text xml:space="preserve"><note-content version="0.1">Копирование файлов
+
+Побайтно:
+
+#include &lt;unistd.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdlib.h&gt;
+int main()
+{
+    char <link:internal>c</link:internal>;
+    int in, out;
+    in = open(“file.in”, O_RDONLY);
+    out = open(“file.out”, O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+    while(read(in,&amp;<link:internal>c</link:internal>,<link:internal>1</link:internal>) == <link:internal>1</link:internal>)
+        write(out,&amp;<link:internal>c</link:internal>,<link:internal>1</link:internal>);
+    exit(0);
+}
+
+Блочно:
+
+#include &lt;unistd.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdlib.h&gt;
+int main()
+{
+    char block[1024];
+    int in, out;
+    int nread;
+    in = open(“file.in”, O_RDONLY);
+    out = open(“file.out”, O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+    while((nread = read(in,block,sizeof(block))) &gt; 0)
+        write(out,block,nread);
+    exit(0);
+}
+
+С помощью стандартной библиотеки:
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main()
+{
+    int <link:internal>c</link:internal>;
+    FILE *in, *out;
+    in = fopen(“file.in”,”r”);
+    out = fopen(“file.out”,”w”);
+    while((<link:internal>c</link:internal> = fgetc(in)) != EOF)
+        fputc(<link:internal>c</link:internal>,out);
+    exit(0);
+}
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.3400650+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.3400650+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:46:44.6025770+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

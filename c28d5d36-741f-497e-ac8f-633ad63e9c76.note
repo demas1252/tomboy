@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Можно ли откатить TRUNCATE TABLE c помощью transaction logs</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Можно ли откатить TRUNCATE TABLE c</link:internal> помощью transaction logs
+
+
+Возможно ли откатить успешное выполнение TRUNCATE TABLE посредством восстановления транзакционных логов на момент предшествующий запуску команды?
+Краткий ответ: Да.
+
+При выполнении TRUNCATE TABLE в лог не попадают ни удаленные страницы, ни экстенты. Как же тогда возможно восстановить данные таблицы при восстановлении журналов транзакций?
+Ответ кроется в том, что для восстановления данных таблицы, необходимо чтобы в журнал попали факты добавления (и изменения) данных. Или же данные таблицы уже содержались в полном бэкапе. Таким образом, при восстановлении  полного бэкапа, затем журналов транзакций до момента запуска команды TRUNCATE данные таблицы будут восстановлены в полном объеме.
+
+Репродуктивный скрипт:
+
+SET NOCOUNT ON
+CREATE DATABASE <link:internal>TEST</link:internal>
+
+ALTER DATABASE <link:internal>TEST</link:internal> SET RECOVERY FULL
+USE <link:internal>TEST</link:internal>
+
+-- STEP 2. Creating table with <link:broken>some</link:broken> data (100 rows)
+CREATE TABLE data (f<link:internal>1</link:internal> INT IDENTITY)
+INSERT data DEFAULT VALUES
+GO 100
+  
+-- STEP 3. Performing full backup
+BACKUP DATABASE <link:internal>TEST</link:internal> TO DISK='<link:broken>c</link:broken>:\<link:internal>test</link:internal>_full.bak' WITH INIT
+
+-- STEP 4. Performing log backup
+DECLARE @date DATETIME
+  
+--variant<link:internal>1</link:internal>: Date mark just before truncation
+SET @date = DATEADD(s, 0, GETDATE())
+  
+TRUNCATE TABLE data
+WAITFOR DELAY '00:00:03'
+BACKUP LOG <link:internal>TEST</link:internal> TO DISK='<link:broken>c</link:broken>:\<link:internal>test</link:internal>_log.bak' WITH INIT
+  
+-- STEP 5. Restoring <link:internal>Test</link:internal> <link:internal>DB</link:internal>.
+USE MASTER
+RESTORE DATABASE <link:internal>TEST</link:internal> FROM DISK='<link:broken>c</link:broken>:\<link:internal>test</link:internal>_full.bak' WITH NORECOVERY, REPLACE
+RESTORE LOG <link:internal>TEST</link:internal> FROM DISK='<link:broken>c</link:broken>:\<link:internal>test</link:internal>_log.bak' WITH RECOVERY, STOPAT=@date
+GO
+USE <link:internal>TEST</link:internal>
+GO
+select COUNT(*) AS RowCnt FROM data
+go
+USE MASTER
+DROP DATABASE <link:internal>TEST</link:internal>
+   
+    Результат:
+    RowCnt
+    -----
+    100</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.3768950+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.3768950+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:08:07.4742250+03:00</create-date>
+  <cursor-position>88</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

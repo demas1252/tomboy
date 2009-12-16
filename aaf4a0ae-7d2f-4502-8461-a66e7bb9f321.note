@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание пунктов в меню</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание пунктов в меню
+
+rsdn-xtools.directory
+
+<italic>[Desktop Entry]
+Encoding=UTF-8
+Name=RSDN X tools
+</italic>
+rsdn-xterm.desktop
+
+<italic>[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=xterm
+Name=xterm
+</italic>
+rsdn-xclock.desktop
+
+<italic>[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=xclock
+Name=xclock
+</italic>
+Устанавливается вот так:
+
+<italic>xdg-desktop-menu install rsdn-xtools.directory rsdn-xclock.desktop rsdn-xterm.desktop
+</italic>
+Удаляется так:
+
+<italic>xdg-desktop-menu uninstall rsdn-xtools.directory rsdn-xclock.desktop rsdn-xterm.desktop</italic>
+
+<link:url>http://standards.freedesktop.org/menu-spec/<link:internal>latest</link:internal></link:url><link:url>/apcs03.html</link:url>
+</note-content></text>
+  <last-change-date>2008-12-28T18:19:54.6068750+03:00</last-change-date>
+  <last-metadata-change-date>2008-12-28T18:19:54.6068750+03:00</last-metadata-change-date>
+  <create-date>2008-12-28T18:18:47.0671490+03:00</create-date>
+  <cursor-position>501</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>469</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

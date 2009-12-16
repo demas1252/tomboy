@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>sicp 1.16</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>sicp 1</link:internal>.16
+
+(define (fast-expt b n)
+  (fast-expt-iter <link:internal>1</link:internal> b n))
+
+(define (fast-expt-iter a b n)
+  (<link:internal>if</link:internal> (= n 0)
+      a
+      (<link:internal>if</link:internal> (even? n)
+          (fast-expt-iter a (square b) (/ n 2))
+          (fast-expt-iter (* a b) b (- n <link:internal>1</link:internal>)))))
+
+(define (square x)
+  (* x x</note-content></text>
+  <last-change-date>2008-06-15T23:42:45.9475820+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.9475820+04:00</last-metadata-change-date>
+  <create-date>2008-05-29T15:21:42.0706460+04:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Что такое соимость запроса</title>
+  <text xml:space="preserve"><note-content version="0.1">Что такое соимость запроса
+
+According to the CPU costing model:
+
+Cost = (#SRds * sreadtim + #MRds * mreadtim + #CPUCycles / cpuspeed) / sreadtim
+
+where
+
+      #SRDs - number of single block reads
+      #MRDs - number of multi block reads
+      #CPUCycles - number of CPU Cycles
+      sreadtim - single block read time
+      mreadtim - multi block read time
+      cpuspeed - CPU cycles per second</note-content></text>
+  <last-change-date>2008-03-27T14:53:46.4909910+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T14:53:46.4909910+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:53:45.1776388+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

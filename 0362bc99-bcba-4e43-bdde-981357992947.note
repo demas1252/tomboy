@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Pivoy and UnPivot</title>
+  <text xml:space="preserve"><note-content version="0.1">Pivoy and UnPivot
+
+Оператор PIVOT превращает строки в столбцы, выполняя при необходимости агрегацию.
+
+Например, запрос:
+&lt;&lt;pre
+SELECT <link:internal>C</link:internal>.Model,
+	SUM(CASE <link:internal>C</link:internal>.[Year] WHEN 2005 THEN <link:internal>C</link:internal>.Quantity ELSE 0 END) AS [2005],
+	SUM(CASE <link:internal>C</link:internal>.[Year] WHEN 2004 THEN <link:internal>C</link:internal>.Quantity ELSE 0 END) AS [2004]
+FROM (
+	SELECT P.Model, DATEPART(year, O.[Date]) AS [Year], O.Quantity FROM Orders O
+		INNER JOIN Products P ON P.ProductID = O.ProductID
+	) AS <link:internal>C</link:internal>
+GROUP BY <link:internal>C</link:internal>.Model
+
+&gt;&gt;
+
+Можно переписать так:
+&lt;&lt;pre
+SELECT Model, [2005], [2004] FROM (
+	SELECT P.Model, DATEPART(year, O.[Date]) AS [Year], O.Quantity FROM Orders O
+		INNER JOIN Products P ON P.ProductID = O.ProductID
+	) AS <link:internal>C</link:internal>
+PIVOT (SUM(Quantity) FOR [Year] IN ([2005], [2004])) AS PVT
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-04-20T01:31:48.5255800+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-20T01:31:48.5255800+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:57:31.5417460+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

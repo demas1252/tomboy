@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Электронные конфигурации атомов</title>
+  <text xml:space="preserve"><note-content version="0.1">Электронные конфигурации атомов
+
+<bold>Принцип Паули</bold>
+
+В атоме не может быть двух электронов обладающих одинаковыми свойствами (не могут быть одинаковы 4 квантовых числа).
+
+<bold>Правило Гунда</bold>
+
+При данном значении l электроны располагаются таким образом, чтобы суммарный спин был максимальным.
+
+<bold>Принцип наименьшей энергии</bold>
+
+В атоме каждый электрон располагаеся так, чтобы его энергия была минимальной.  Не с минимальным значением <italic>n</italic>, а с минимальным значением <italic>(n+l)</italic>.
+
+1s-2s-2p-3s-3p-4s-3d-4p-5s-4d-5p-6s-4f-5d
+</note-content></text>
+  <last-change-date>2009-06-13T13:23:53.5280610+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-13T13:23:53.5280610+04:00</last-metadata-change-date>
+  <create-date>2009-06-13T13:19:49.0530310+04:00</create-date>
+  <cursor-position>451</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>482</x>
+  <y>351</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Генераторы в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Генераторы в Python
+
+Элегантный способ возвратить список из функции. Позволяют приостановить выдачу результатов с сохранением контекста, а также возобновить ее.
+
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield b
+        a, b = b, a + b
+
+fib = fibonacci()
+print fib.next()
+print fib.next()
+print fib.next()
+print [fib.next() for i in range(10)]
+
+Генераторы удобно выстраивать в цепочки:
+
+def power(values):
+   for value in values:
+       yield value
+
+def adder(values):
+   for value in values:
+      print '%s' % value
+      <link:internal>if</link:internal> value % 2 == 0:
+         yield value + 3
+      else:
+         yield value + 2
+
+<link:internal>Использование генераторов для взаимодействия с кодом</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T09:31:07.9265270+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:31:07.9265270+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:30:37.5855359+03:00</create-date>
+  <cursor-position>401</cursor-position>
+  <width>641</width>
+  <height>562</height>
+  <x>78</x>
+  <y>192</y>
+  <open-on-startup>False</open-on-startup>
+</note>

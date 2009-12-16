@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Amounts в книге покупок</title>
+  <text xml:space="preserve"><note-content version="0.1">Amounts в книге покупок
+
+
+    * settled - сопоставленное 
+    * factured - по фактуре (к возмещению)
+    * <link:internal>used</link:internal> - уже обработанное
+    * blocked - блокированное ([<link:internal>что такое количество в обработке НДС</link:internal>])
+    
+    </note-content></text>
+  <last-change-date>2008-05-04T17:28:59.1049000+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-04T17:28:59.1049000+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:00:18.7348380+03:00</create-date>
+  <cursor-position>211</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

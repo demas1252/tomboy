@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>sicp 1.6</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>sicp 1</link:internal>.6
+
+Отличное упражнение на понимание того, как происходит выполнение процедур.
+Вспомним прошлое упражнение и тот факт, что <link:internal>Scheme</link:internal> при интерпретации использует аппликативный порядок вычислений. Итак, как же будет вычисляться фунция Лизы?
+
+(define (sqrt-iter guess x)
+  (new-<link:internal>if</link:internal> (good-enough? guess x)
+          guess
+          (sqrt-iter (improve guess x)
+                     x)))
+
+При вычислении new-<link:internal>if</link:internal> сначала должны быть вычислены все ее аргументы. С первыми двумя из них проблем нет, а вот при вычислении третьего new-<link:internal>if</link:internal> снова обращается к sqrt-iter, которая затем опять вызовет new-<link:internal>if</link:internal>… и так до бесконечности. Ограничивающего условия, обеспечивающего выход из этого порочного круга, нет. Таким образом программа Лизы, переписанная в таком виде, зациклится.
+
+Почему же такой проблемы не возникает при использовании нормального <link:internal>if</link:internal> вместо new-<link:internal>if</link:internal>? Все просто. Обычный <link:internal>if</link:internal> является особой формой, он вычисляется не так, как стандартные процедуры. Для вычисления его значения не обязательно будут вычислены все операнды (более того, гарантированно будут вычислены только два из трех). Таким образом sqrt-iter будет вычисляться только в случае, когда решение еще не достаточно хорошее, а в противном случае вычисляться не будет, что и гарантирует выход из цикла.</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.3740410+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.3740410+04:00</last-metadata-change-date>
+  <create-date>2008-04-03T15:56:21.8101170+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

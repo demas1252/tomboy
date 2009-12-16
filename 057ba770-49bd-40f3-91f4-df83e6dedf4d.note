@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример курсора</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример курсора
+
+Перебор столбцов таблицы:
+
+<italic>declare
+   cursor <link:internal>c</link:internal></italic><italic>
+   is
+   select *
+   from user_tab_columns 
+   where table_name = 'T1';
+begin
+   for i in <link:internal>c</link:internal></italic><italic> loop
+      dbms_output.put_line('column_name: '||i.column_name);          
+   end loop;           
+end;
+</italic></note-content></text>
+  <last-change-date>2008-09-05T12:41:17.3697340+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-05T12:41:17.3697340+04:00</last-metadata-change-date>
+  <create-date>2008-09-05T12:39:35.6719210+04:00</create-date>
+  <cursor-position>270</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>808</x>
+  <y>207</y>
+  <open-on-startup>False</open-on-startup>
+</note>

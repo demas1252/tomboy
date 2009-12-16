@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>entry point</title>
+  <text xml:space="preserve"><note-content version="0.1">entry point
+
+Рихтер упоминает, что она может быть одной из:
+
+&lt;&lt;pre
+int <link:internal>WINAPI</link:internal> WinMain( HINSTANCE hinstExe, HINSTANCE, PSTR pszCmdLine, int nCmdShow);
+int <link:internal>WINAPT</link:internal> wWinMain( HINSTANCE hinstExe, HINSTANCE, PWSTR pszCmdLine, int nCmdShow);
+int __cdecl main( int argc, char *argv[], char *envp[]);
+int _cdecl wmain( int argc, wchar_t *argv[], wchar_t *envp[]);
+
+&gt;&gt;
+
+w - это Unicode.
+
+Какую именно функцию запускать решается при комповке - в заголовке PE файла есть поле, указывающее адрес - куда надо передавать управление.</note-content></text>
+  <last-change-date>2008-03-27T21:59:16.2618288+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:59:16.2618288+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:59:14.8275970+03:00</create-date>
+  <cursor-position>40</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

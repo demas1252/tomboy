@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Binding in Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Binding in Clojure
+
+<bold>Биндинг в функциях</bold>
+
+(defn ga1 [{name :fn}]
+  (println "Hello, " name))
+
+(defn ga2 [{name :sn}]
+  (println "Hello, " name))
+
+(ga1 {:fn "a" :sn "b"})
+(ga2 {:fn "a" :sn "b"})
+
+</note-content></text>
+  <last-change-date>2009-07-27T10:39:11.4229410+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-27T10:39:11.4229410+04:00</last-metadata-change-date>
+  <create-date>2009-07-27T10:38:38.4391050+04:00</create-date>
+  <cursor-position>38</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1122</x>
+  <y>82</y>
+  <open-on-startup>False</open-on-startup>
+</note>

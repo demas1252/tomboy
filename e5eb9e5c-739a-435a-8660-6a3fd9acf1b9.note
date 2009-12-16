@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Automatic Shared Memory Management ASMM</title>
+  <text xml:space="preserve"><note-content version="0.1">Automatic Shared Memory Management ASMM
+
+Появилось в 10g.
+Можно задать SGA_TARGET(dynamic - ALTER SYSTEM) - общий размер SGA, а по подкомпонентам <link:internal>Oracle</link:internal> посторается сам разбить.
+
+Активно, когда STATISTICS_LEVEL = TYPICAL || ALL и SGA_TARGET &gt; 0.
+
+Конфигурирует: database buffer cache (<link:internal>db</link:internal>_cache_size), shared pool (shared_pool_size), large pool (large_pool_size), <link:internal>java</link:internal> pool (<link:internal>java</link:internal>_pool_size).
+Не трогает: log buffer (log_buffer), <link:internal>other</link:internal> buffer caches (<link:internal>db</link:internal>_keep_cache_size, <link:internal>db</link:internal>_recycle_cache ...) &lt;- но они входят в SGA_TARGET
+
+SGA_TARGET &lt;= SGA_MAX_SIZE
+
+select component, current_size from v$sga_dynamic_components;
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.8073460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.8073460+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:08:20.9837940+03:00</create-date>
+  <cursor-position>246</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

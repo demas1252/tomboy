@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>WikidPad</title>
+  <text xml:space="preserve"><note-content version="0.1">WikidPad
+
+Установка под <link:internal>Linux</link:internal>
+
+   <link:internal>1</link:internal>. Копируем<link:url> /lib/gadfy</link:url> и<link:url> /lib/pwiki</link:url> в<link:url> /usr/lib/<link:internal>python</link:internal></link:url>* (2.4 и 2.5)
+   2. Ставим <link:internal>python</link:internal>-wxgtk-2.6
+   3. Запускаем <link:internal>python</link:internal> WikidPad.py</note-content></text>
+  <last-change-date>2009-08-09T21:35:12.1401180+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T21:35:12.1401180+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:58:00.2005890+03:00</create-date>
+  <cursor-position>37</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

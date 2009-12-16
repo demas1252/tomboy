@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с формами в JS</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с формами в JS
+
+<link:internal>Доступность одного поля ввода в зависимости от данных в другом</link:internal></note-content></text>
+  <last-change-date>2009-04-25T21:53:56.8935660+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T21:53:56.8935660+04:00</last-metadata-change-date>
+  <create-date>2009-04-25T21:53:24.0967850+04:00</create-date>
+  <cursor-position>23</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>602</y>
+  <open-on-startup>False</open-on-startup>
+</note>

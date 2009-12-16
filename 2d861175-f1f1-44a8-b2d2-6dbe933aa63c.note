@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование const</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование const
+
+<link:internal>сonst от Алены</link:internal>
+
+<bold>Неправильное использование:</bold>
+
+    const int i;    <italic>// неинициализированная константная переменная</italic>
+    int&amp; j = 1;     <italic>// компилятор предполагает, что вы захотите изменить величину, на которую ссылается j, а изменить ее нельзя.</italic>  <italic>Неконстантная переменная не может ссылаться на константную величину.</italic>
+
+const int i = 17;  
+# define i 17    <italic>// первое отводит память под переменную, второе нет</italic>
+
+const int* p;  <italic>// указатель на константу
+</italic>int i = 17;
+p = &amp;i;      <italic>// можно</italic>
+*p = 29;    <italic>// </italic>нельзя
+
+int* const p;  <italic>// а вот это константный указатель</italic>
+
+const int* const p;    <italic> // константный указатель на константу</italic>
+    
+void f(const int* p) {};     <italic>// константный аргумент функции</italic>
+int i = 1;
+f(&amp;i);   <italic> // ради бога, передавать можно не константную переменную, другое дело, что в функции изменить ее все равно нельзя</italic>
+    
+    Аналог:
+    void f(const int&amp; p) {}; 
+    int i = 1;
+    f(i);    
+    
+    void f(int* p) {}; 
+    const int i = 1;
+    f(&amp;i);      // нельзя - функция может изменить значение  </note-content></text>
+  <last-change-date>2009-08-25T14:13:19.4008560+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-25T14:13:19.4008560+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:14:54.9816040+03:00</create-date>
+  <cursor-position>519</cursor-position>
+  <width>826</width>
+  <height>457</height>
+  <x>796</x>
+  <y>97</y>
+  <open-on-startup>False</open-on-startup>
+</note>

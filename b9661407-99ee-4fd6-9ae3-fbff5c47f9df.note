@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Угадывание цветов</title>
+  <text xml:space="preserve"><note-content version="0.1">Угадывание цветов
+
+&lt;&lt;pre
+(define COL# (length COLORS))
+
+(define target1 (first COLORS))
+(define target2 (first COLORS))
+
+(define (master)
+  (begin
+    (set! target1 (list-ref COLORS (random COL#)))
+    (set! target2 (list-ref COLORS (random COL#)))
+    )
+  )
+
+(define (master-check guess1 guess2)
+  (check-color guess1 guess2 target1 target2))
+
+// упрощенно
+(define (check-color guess1 guess2 target1 target2)
+  (cond
+    [(symbol=? guess1 target1) true]
+    [else false]))
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T22:01:23.6037610+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:01:23.6037610+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:01:22.7516150+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

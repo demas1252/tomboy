@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Возврат строки из функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Возврат строки из функции
+
+int main() {
+         char *s=NULL;
+         s=mkw();
+         printf("%s\n");
+         return 0;
+}
+
+char *mkw(void) {
+     return "Hzzz";
+}
+
+
+Память под "Hzzz" выделяется при загрузке программы в сегменте данных, а возвращается лишь указатель на сроку.
+
+Это логично, что строка не создается при входе в функцию - ведь нет new.
+И логично, что строка не подчищается после выхода из функции - во первых это неуправляемый язык, а во вторых и убирать то нечего - мы не делали new.
+</note-content></text>
+  <last-change-date>2009-03-24T08:54:02.4281780+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:54:02.4281780+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:53:53.3497070+03:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>145</x>
+  <y>59</y>
+  <open-on-startup>False</open-on-startup>
+</note>

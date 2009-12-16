@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Дефрагментация куч в ms sql 2008</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Дефрагментация куч в ms sql</link:internal> 2008
+
+В <link:internal>SQL</link:internal> Server 2008, задача дефрагментации значительно упростилась. Разработчики добавили команде ALTER TABLE ... REBUILD поддержку куч.
+
+В следующем примере будет создана простая таблица (куча) и вставлено небольшое количество данных. В последствии, каждая запись новой таблицы будет обновлена значениями, которые значительно превышают размеры изначальных.  Результатом станет в меньшей мере фрагментация, но и большое количество указателей (forwarding pointers). Причина появления большого количества указателей кроется в том, что текущие записи больше не могут помещаться на тех же страницах кучи и вынуждены переместится на другие страницы, но оставив указатели на старых страницах. Указатели на записи остаются не изменны в индексах.
+
+Как видите, дефрагментация куч очень упрощена:
+create table heapDemo
+(  
+    value varchar(1000)
+)
+GO
+set nocount on
+insert into heapDemo
+select 'hi'
+go 10000
+--Увеличим размер строки в 500 раз
+update heapDemo
+set value = replicate('hi',500)
+
+Далее следует проверка фрагментации таблицы:
+select index_type_desc, fragment_count, page_count, forwarded_record_count
+from sys.dm_<link:internal>db</link:internal>_index_physical_stats(<link:internal>db</link:internal>_id(),default,default,default,'DETAILED')
+where object_id = object_id('heapDemo')
+
+Что вернет:
+
+index_type_desc       fragment_count       page_count           forwarded_record_count
+--------------------- -------------------- -------------------- ----------------------
+HEAP                  6                    1443                 9961
+
+Далее, дефрагментация кучи и проверка фрагментации:
+alter table heapDemo rebuild
+select index_type_desc, fragment_count, page_count, forwarded_record_count
+from sys.dm_<link:internal>db</link:internal>_index_physical_stats(<link:internal>db</link:internal>_id(),default,default,default,'DETAILED')
+where object_id = object_id('heapDemo')
+
+Результатом стала куча,  в которой отсуствуют указатели – желаемый результат.
+
+index_type_desc       fragment_count       page_count           forwarded_record_count
+--------------------- -------------------- -------------------- ----------------------
+HEAP                  3                    1440                 0
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.4946300+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.4946300+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T16:43:43.2903200+04:00</create-date>
+  <cursor-position>793</cursor-position>
+  <width>704</width>
+  <height>601</height>
+  <x>962</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

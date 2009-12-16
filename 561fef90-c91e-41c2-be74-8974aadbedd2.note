@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Средства резервного копирования Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Средства резервного копирования Oracle
+
+<link:internal>Oracle exp  imp</link:internal>
+<link:internal>Oracle Data Pump</link:internal>
+<link:internal>Периодически обновлять данные в Oracle из MS SQL</link:internal></note-content></text>
+  <last-change-date>2009-04-04T18:35:57.7959960+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-04T18:35:57.7959960+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:10:39.3158790+03:00</create-date>
+  <cursor-position>73</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

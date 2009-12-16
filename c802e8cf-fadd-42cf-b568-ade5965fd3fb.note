@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с view с помощью ecouch</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с view с помощью ecouch
+
+<bold>Создание view</bold>
+
+create_view()-&gt;
+    ecouch:view_create("<link:internal>test</link:internal>", "view_some", {obj, [{"all", {obj, [{<link:internal>map</link:internal>, &lt;&lt;"function(doc) { emit(null, doc) }"&gt;&gt;}]}}]}).
+
+create_view2()-&gt;
+    ecouch:view_create("<link:internal>test</link:internal>", "view_foo_5", {obj, [{"foo5", {obj, [{<link:internal>map</link:internal>, &lt;&lt;"function(doc) { <link:internal>if</link:internal>(doc.foo == 5) emit(doc._id, doc) }"&gt;&gt;}]}}]}).
+
+<bold>Просмотр кода view</bold>
+
+get_view()-&gt;
+    ecouch:view_get("<link:internal>test</link:internal>", "view_some").
+
+% view_foo_5
+get_view(Name)-&gt;
+    ecouch:view_get("<link:internal>test</link:internal>", Name).
+
+<bold>Просмотр документов во view</bold>
+
+view_access()-&gt;
+    ecouch:view_access("<link:internal>test</link:internal>", "view_some", "all", [{limit, 11}]).
+
+% view_foo_5, foo5
+view_access(Section, Name)-&gt;
+    ecouch:view_access("<link:internal>test</link:internal>", Section, Name, [{limit, 11}]).
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.8698590+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.8698590+04:00</last-metadata-change-date>
+  <create-date>2009-07-23T11:22:53.6555340+04:00</create-date>
+  <cursor-position>486</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1047</x>
+  <y>440</y>
+  <open-on-startup>False</open-on-startup>
+</note>

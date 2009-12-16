@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Почему плодятся constraints</title>
+  <text xml:space="preserve"><note-content version="0.1">Почему плодятся constraints
+
+
+Чем объясняется наличие громадного количества повторяющихся check-констрейнтов у таблицы:
+
+&lt;&lt;pre
+constraint_name constraint_type search_condition
+---------------- --------------- -----------------------
+SYS_<link:broken>C</link:broken>0046218 <link:broken>C</link:broken> "DISCOUNT" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046219 <link:broken>C</link:broken> "PRICE" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046220 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046222 <link:broken>C</link:broken> "DISCOUNT" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046223 <link:broken>C</link:broken> "PRICE" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046224 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046225 <link:broken>C</link:broken> "DISCOUNT" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046226 <link:broken>C</link:broken> "PRICE" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046227 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046228 <link:broken>C</link:broken> "PRICE" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046229 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046230 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046231 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046232 <link:broken>C</link:broken> "QUANTITY" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046233 <link:broken>C</link:broken> "DISCOUNT" IS NOT NULL
+SYS_<link:broken>C</link:broken>0046234 <link:broken>C</link:broken> "DISCOUNT" IS NOT NULL
+
+&gt;&gt;    
+
+При импорте количество таких повторяющихся констрейнтов увеличивается, соответственно их включение занимает кучу времени. Как победить сию проблему и чем обусловлено такое "размножение" констрейнтов NOT NULL ?
+
+Эти ограничения имеют сгенерированные имена, поэтому в дамп выгружаются без имён, при импорте генерируются новые имена и поэтому конфликтов имён при повторном импорте не происходит:
+
+- Именовать ограничения
+- imp constraints=n
+<link:internal>Удаление дублирующихся констрейнтов</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:33.9364880+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.9364880+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:43:14.7803270+03:00</create-date>
+  <cursor-position>1311</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>87</x>
+  <y>326</y>
+  <open-on-startup>False</open-on-startup>
+</note>

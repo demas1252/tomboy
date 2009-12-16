@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>or Qquery</title>
+  <text xml:space="preserve"><note-content version="0.1">or Qquery
+
+ [source: development-ax]
+     todo: practice
+
+Hi vijay karthik,
+One solution about your problem is this. 
+querybuilddatasource queryInventtrans;
+query query = new query();
+queryrun qr;
+<link:internal>inventtrans</link:internal> <link:internal>inventtrans</link:internal>;
+;
+queryInventtrans = query.addDataSource(tablenum(<link:internal>inventtrans</link:internal>));
+queryInventtrans.addRange(fieldnum(<link:internal>inventtrans</link:internal>, voucher)).value("101*");
+queryInventtrans.addRange(fieldnum(<link:internal>inventtrans</link:internal>, voucher)).value("103*");
+
+//the query result is -&gt; SELECT * FROM <link:internal>InventTrans</link:internal> WHERE ((Voucher LIKE 101*) OR (Voucher LIKE 103*))
+
+qr = new queryrun(query);
+While (qr.next())
+{
+<link:internal>inventtrans</link:internal> = qr.getNo(<link:internal>1</link:internal>);
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.0503460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.0503460+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:38:45.4605830+04:00</create-date>
+  <cursor-position>38</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1032</x>
+  <y>518</y>
+  <open-on-startup>False</open-on-startup>
+</note>

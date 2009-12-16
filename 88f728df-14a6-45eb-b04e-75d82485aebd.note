@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>query для коррекции запасов в наличии</title>
+  <text xml:space="preserve"><note-content version="0.1">query для коррекции запасов в наличии
+
+
+_    SELECT 
+        SUM(PostedQty), SUM(PostedValue), SUM(PhysicalValue), SUM(Deducted), SUM(Registered),
+        SUM(Received), SUM(Picked), SUM(ReservPhysical), SUM(ReservOrdered), SUM(OnOrder), SUM(Ordered),
+        SUM(Arrived), SUM(QuotationReceipt), SUM(QuotationIssue), SUM(PhysicalInvent),
+        SUM(PostedValueSecCur_RU), SUM(PhysicalValueSecCur_RU), SUM(AvailPhysical), SUM(AvailOrdered)
+    FROM InventSum 
+    GROUP BY InventSum.ItemId <link:internal>ASC</link:internal> 
+    WHERE ((Closed = No)) 
+    JOIN * FROM InventDim 
+    GROUP BY InventDim.configId <link:internal>ASC</link:internal>, InventDim.InventSizeId <link:internal>ASC</link:internal>, 
+                InventDim.InventColorId <link:internal>ASC</link:internal> 
+    WHERE InventSum.InventDimId = InventDim.inventDimId
+_</note-content></text>
+  <last-change-date>2008-05-04T17:28:59.1296190+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-04T17:28:59.1296190+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:12:39.7142690+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

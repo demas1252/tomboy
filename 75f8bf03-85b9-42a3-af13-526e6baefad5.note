@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>spec файл</title>
+  <text xml:space="preserve"><note-content version="0.1">spec файл
+
+%define name    <link:internal>emacs</link:internal> 
+%define version 23
+%define release %mkrel 1 
+
+Name:           %{name}
+Summary:        Text editor
+Version:        %{version} 
+Release:        %{release} 
+Source0:        <link:url>http://www.tuxedo.org/~esr/<link:internal>gif</link:internal></link:url><link:url>2png/%{name}-%{version}.tar.bz2</link:url> 
+URL:            <link:url>http://www.tuxedo.org/~esr/<link:internal>gif</link:internal></link:url><link:url>2png/</link:url> 
+
+Group:          Applications/Multimedia 
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
+License:        MIT-like 
+Requires:       <link:internal>python</link:internal> 
+
+%description
+Tools for converting GIFs to PNGs. The program <link:internal>gif</link:internal>2png converts <link:internal>GIF</link:internal> files
+to PNG files. The <link:internal>Python</link:internal> script <link:internal>web</link:internal>2png converts an entire <link:internal>web</link:internal> tree, also
+patching HTML pages to keep IMG SRC references correct.
+
+%prep 
+%setup -q  
+
+%build 
+%configure --prefix=/usr --localstatedir=/var/lib/<link:internal>emacs</link:internal> --libexecdir=/usr/lib/<link:internal>emacs</link:internal> --with-<link:internal>gif</link:internal>=no
+%make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+%makeinstall
+
+%clean 
+rm -rf $RPM_BUILD_ROOT 
+
+%files 
+%defattr(0755,root,root) 
+%{_datadir}/<link:internal>emacs</link:internal>/*
+%{_localstatedir}/games/<link:internal>emacs</link:internal>/*
+%{_libdir}/<link:internal>emacs</link:internal>/*<link:url>
+/usr/bin/b2m
+/usr/bin/<link:internal>ctags</link:internal></link:url><link:url>
+/usr/bin/ebrowse
+/usr/bin/<link:internal>emacs</link:internal></link:url><link:url>
+/usr/bin/<link:internal>emacs</link:internal></link:url><link:url>-23.0.92
+/usr/bin/emacsclient
+/usr/bin/etags
+/usr/bin/grep-changelog
+/usr/bin/rcs-checkin</link:url>
+<link:url>
+/usr/share/applications/<link:internal>emacs</link:internal></link:url><link:url>.desktop
+/usr/share/icons/hicolor/128x128/apps/<link:internal>emacs</link:internal></link:url><link:url>.png
+/usr/share/icons/hicolor/16x16/apps/<link:internal>emacs</link:internal></link:url><link:url>.png
+/usr/share/icons/hicolor/16x16/apps/<link:internal>emacs</link:internal></link:url><link:url>22.png
+/usr/share/icons/hicolor/24x24/apps/<link:internal>emacs</link:internal></link:url><link:url>.png
+/usr/share/icons/hicolor/24x24/apps/<link:internal>emacs</link:internal></link:url><link:url>22.png
+/usr/share/icons/hicolor/32x32/apps/<link:internal>emacs</link:internal></link:url><link:url>.png
+/usr/share/icons/hicolor/32x32/apps/<link:internal>emacs</link:internal></link:url><link:url>22.png
+/usr/share/icons/hicolor/48x48/apps/<link:internal>emacs</link:internal></link:url><link:url>.png
+/usr/share/icons/hicolor/48x48/apps/<link:internal>emacs</link:internal></link:url><link:url>22.png
+/usr/share/icons/hicolor/scalable/apps/<link:internal>emacs</link:internal></link:url><link:url>.svg
+/usr/share/icons/hicolor/scalable/mimetypes/<link:internal>emacs</link:internal></link:url><link:url>-document.svg
+/usr/share/info/ada-mode.lzma
+/usr/share/info/auth.lzma
+/usr/share/info/autotype.lzma
+/usr/share/info/calc-1.lzma
+/usr/share/info/calc-2.lzma
+/usr/share/info/calc-3.lzma
+/usr/share/info/calc-4.lzma
+/usr/share/info/calc-5.lzma
+/usr/share/info/calc-6.lzma
+/usr/share/info/calc.lzma
+/usr/share/info/ccmode-1.lzma
+/usr/share/info/ccmode-2.lzma
+/usr/share/info/ccmode.lzma
+/usr/share/info/cl.lzma
+/usr/share/info/<link:internal>dbus</link:internal></link:url><link:url>.lzma
+/usr/share/info/dired-x.lzma
+/usr/share/info/ebrowse.lzma
+/usr/share/info/ediff.lzma
+/usr/share/info/efaq.lzma
+/usr/share/info/eintr-1.lzma
+/usr/share/info/eintr-2.lzma
+/usr/share/info/eintr-3.lzma
+/usr/share/info/eintr.lzma
+/usr/share/info/elisp-1.lzma
+/usr/share/info/elisp-10.lzma
+/usr/share/info/elisp-11.lzma
+/usr/share/info/elisp-2.lzma
+/usr/share/info/elisp-3.lzma
+/usr/share/info/elisp-4.lzma
+/usr/share/info/elisp-5.lzma
+/usr/share/info/elisp-6.lzma
+/usr/share/info/elisp-7.lzma
+/usr/share/info/elisp-8.lzma
+/usr/share/info/elisp-9.lzma
+/usr/share/info/elisp.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-1.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-2.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-3.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-4.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-5.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-6.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-7.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-8.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>-mime.lzma
+/usr/share/info/<link:internal>emacs</link:internal></link:url><link:url>.lzma
+/usr/share/info/epa.lzma
+/usr/share/info/erc.lzma
+/usr/share/info/eshell.lzma
+/usr/share/info/eudc.lzma
+/usr/share/info/flymake.lzma
+/usr/share/info/forms.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>-1.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>-2.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>-3.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>-4.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>-5.lzma
+/usr/share/info/<link:internal>gnus</link:internal></link:url><link:url>.lzma
+/usr/share/info/idlwave.lzma
+/usr/share/info/info.lzma
+/usr/share/info/mairix-el.lzma
+/usr/share/info/message.lzma
+/usr/share/info/mh-e-1.lzma
+/usr/share/info/mh-e-2.lzma
+/usr/share/info/mh-e.lzma
+/usr/share/info/newsticker.lzma
+/usr/share/info/nxml-mode.lzma
+/usr/share/info/org-1.lzma
+/usr/share/info/org-2.lzma
+/usr/share/info/org.lzma
+/usr/share/info/pcl-cvs.lzma
+/usr/share/info/pgg.lzma
+/usr/share/info/rcirc.lzma
+/usr/share/info/reftex.lzma
+/usr/share/info/remember.lzma
+/usr/share/info/sasl.lzma
+/usr/share/info/sc.lzma
+/usr/share/info/ses.lzma
+/usr/share/info/sieve.lzma
+/usr/share/info/smtpmail.lzma
+/usr/share/info/speedbar.lzma
+/usr/share/info/tramp.lzma
+/usr/share/info/url.lzma
+/usr/share/info/vip.lzma
+/usr/share/info/viper.lzma
+/usr/share/info/widget.lzma
+/usr/share/info/woman.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/b2m.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/<link:internal>ctags</link:internal></link:url><link:url>.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/ebrowse.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/<link:internal>emacs</link:internal></link:url><link:url>.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/emacsclient.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/etags.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/grep-changelog.1.lzma
+/usr/share/<link:internal>man</link:internal></link:url><link:url>/<link:internal>man</link:internal></link:url><link:url>1/rcs-checkin.1.lzma</link:url>
+
+
+%changelog 
+* Mon Nov 02 1999 Camille Begnis &lt;<link:url>camille@mandrakesoft.com</link:url>&gt; 2.0.1-1mdk
+- Upgraded to 2.0.1 
+
+* Mon Oct 25 1999 Camille Begnis &lt;<link:url>camille@mandrakesoft.com</link:url>&gt; 2.0.0-1mdk
+- Specfile adaptations for Mandrake
+- <link:internal>add</link:internal> <link:internal>python</link:internal> requirement
+- gz to bz2 compression
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.9124350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.9124350+04:00</last-metadata-change-date>
+  <create-date>2009-04-03T16:44:24.1429050+04:00</create-date>
+  <cursor-position>34</cursor-position>
+  <width>635</width>
+  <height>836</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

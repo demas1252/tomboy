@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Оси и плоскости</title>
+  <text xml:space="preserve"><note-content version="0.1">Оси и плоскости
+
+Вертикальная ось - то, что через макушку
+Фронтальная плоскость - делит на перед и  зад
+Горизонтальная плоскость - ниже/выше пояса
+Сагиттальная ось - то что в пупок входит
+Сагиттальная плоскость  - делит тело на право и лево</note-content></text>
+  <last-change-date>2009-08-03T16:59:19.0899740+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-03T16:59:19.0899740+04:00</last-metadata-change-date>
+  <create-date>2009-08-03T16:57:32.4698060+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1189</x>
+  <y>348</y>
+  <open-on-startup>False</open-on-startup>
+</note>

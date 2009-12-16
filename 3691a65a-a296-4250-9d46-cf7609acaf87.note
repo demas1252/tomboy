@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Нарастающий итог</title>
+  <text xml:space="preserve"><note-content version="0.1">Нарастающий итог
+
+На вход подается список, на выходе список просуммированный нарастающим итогом:
+
+&lt;&lt;pre
+;; relative-2-absolute : (listof number) -&gt; (listof number) 
+;; to convert a list of relative distances to a list of absolute distances 
+;; the first item on the list represents the distance to the origin 
+(define (relative-2-absolute alon) 
+  (cond 
+    [(empty? alon) empty] 
+    [else (cons (first alon) 
+          (<link:internal>add</link:internal>-to-each (first alon) (relative-2-absolute (rest alon))))])) 
+ 
+;; <link:internal>add</link:internal>-to-each : number (listof number) -&gt; (listof number) 
+;; to <link:internal>add</link:internal> n to each number on alon 
+(define (<link:internal>add</link:internal>-to-each n alon) 
+  (cond 
+    [(empty? alon) empty] 
+    [else (cons (+ (first alon) n) (<link:internal>add</link:internal>-to-each n (rest alon)))]))
+    
+
+&gt; (relative-2-absolute (list 0 30 20 40 10)) 
+(list 0 30 50 90 100)
+
+&gt;&gt;
+
+<link:internal>add</link:internal>-to-each - прибавляет n ко всем элеменам списка
+
+Тоже самое можно записать с помощью накопления (быстрее и понятнее):
+
+&lt;&lt;pre
+;; relative-2-absolute2 : (listof number) -&gt; (listof number) 
+;; to convert a list of relative distances to a list of absolute distances 
+;; the first item on the list represents the distance to the origin
+(define (relative-2-absolute2 alon) 
+  (local (
+          (define (rel-2-<link:internal>abs</link:internal> alon accu-dist) 
+            (cond 
+              [(empty? alon) empty] 
+              [else (cons (+ (first alon) accu-dist) (rel-2-<link:internal>abs</link:internal> (rest alon) (+ (first alon) accu-dist)))]
+              )
+            )
+          )
+    (rel-2-<link:internal>abs</link:internal> alon 0)
+    )
+  ) 
+  
+&gt; (relative-2-absolute2 (list 0 10 40 20)) 
+(list 0 10 50 70)
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-07-08T16:38:54.4155780+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-08T16:38:54.4155780+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:02:01.0418120+03:00</create-date>
+  <cursor-position>18</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>151</x>
+  <y>115</y>
+  <open-on-startup>False</open-on-startup>
+</note>

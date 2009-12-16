@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример google application engine</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример google application engine
+
+<bold>app.yaml</bold>
+
+application: passwordgenerator
+version: 1
+runtime: <link:internal>python</link:internal>
+api_version: 1
+
+handlers:
+- url: .*
+  script: passwordgenerator.py
+
+<bold>passwordgenerator.py</bold>
+
+#!/usr/bin/env <link:internal>python</link:internal>
+
+import cgi
+import wsgiref.handlers
+
+from google.appengine.ext import webapp
+from google.appengine.ext.webapp.util import run_wsgi_app
+
+BASE = ord('0')
+
+def mainForm():
+  return """
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt; GenPasswd Strong Password Generator&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;div align="center"&gt;
+  &lt;h1&gt; Strong Password Generator &lt;/h1&gt;
+  &lt;form method="POST" name="baseWordCapture" action="/"&gt;
+  &lt;p&gt;Base word:&lt;/p&gt;
+  &lt;input type="text" name="baseWord" cols="24" /&gt; &lt;br /&gt;
+  &lt;input type="submit"/&gt;
+  &lt;input type="reset"/&gt;
+  &lt;p&gt;Password:&lt;/p&gt;
+  &lt;p&gt;n/a&lt;/p&gt;
+  &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+  """
+
+class PasswordGenerator(webapp.RequestHandler):
+  def __process(self, aWord):
+    password = ""
+    <link:internal>if</link:internal> (len(aWord) &gt;= 6):
+      for i in range(len(aWord)):
+        <link:internal>if</link:internal> i in [1, 5, 8, 13, 21]:
+          password += chr(BASE + (ord(aWord[i]) + i) % 10)
+        else:
+          password += aWord[i]
+    return password
+
+  def get(self):
+    self.response.out.write(mainForm())
+
+  def post(self):
+    output = self.response.out
+    baseWord = cgi.escape(self.request.get('baseWord'))
+    password = self.__process(baseWord)
+
+    output.write(mainForm().replace('n/a', password))
+
+def main():
+  application = webapp.WSGIApplication([('/', PasswordGenerator)],
+                                       debug=True)
+  run_wsgi_app(application)
+
+<link:internal>if</link:internal> __name__ == '__main__':
+  main()
+
+<bold>Запуск</bold>
+
+./dev_appserver.py<link:url> ~/sources/study/google_app/samples/genpasswd/</link:url>
+
+<link:url>http://localhost:8080/</link:url></note-content></text>
+  <last-change-date>2009-10-17T22:10:51.5715360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.5715360+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T14:42:32.5528009+04:00</create-date>
+  <cursor-position>1598</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

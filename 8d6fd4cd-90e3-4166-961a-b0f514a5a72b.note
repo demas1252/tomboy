@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример простейшей программы на PyGame</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример простейшей программы на PyGame
+
+<italic>import <link:internal>pygame</link:internal></italic><italic>, sys, os
+from <link:internal>pygame</link:internal></italic><italic>.locals import *
+
+def input(events):
+    for event in events:
+        <link:internal>if</link:internal></italic><italic> event.type == QUIT:
+            sys.exit(0)
+        else:
+            print event
+
+<link:internal>pygame</link:internal></italic><italic>.init()
+window = <link:internal>pygame</link:internal></italic><italic>.display.set_mode((468, 100))
+<link:internal>pygame</link:internal></italic><italic>.display.set_caption('<link:internal>Test</link:internal></italic><italic>')
+screen = <link:internal>pygame</link:internal></italic><italic>.display.get_surface()
+<link:internal>test</link:internal></italic><italic>_surface = <link:internal>pygame</link:internal></italic><italic>.image.load('/home/demas/settings/awn_icons/amarok.png')
+screen.blit(<link:internal>test</link:internal></italic><italic>_surface, (0, 0))
+<link:internal>pygame</link:internal></italic><italic>.display.flip()
+
+while True:
+    input(<link:internal>pygame</link:internal></italic><italic>.event.get())
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:25.9912310+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.9912310+04:00</last-metadata-change-date>
+  <create-date>2009-07-07T09:47:11.2978670+04:00</create-date>
+  <cursor-position>538</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>662</y>
+  <open-on-startup>False</open-on-startup>
+</note>

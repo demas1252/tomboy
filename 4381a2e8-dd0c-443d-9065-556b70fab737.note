@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск элемента в векторе</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск элемента в векторе
+
+Похоже при переборе элементов вектора без вспомогательной функции не обойтись:
+
+&lt;&lt;pre
+(define (cont v)
+  (contains-doll? v (vector-length v))
+  )
+
+(define (contains-doll? v i)
+  (cond
+    [(zero?  i) false]
+    [else (cond 
+            [(symbol=? (vector-ref v (sub1 i)) 'doll) i]
+            [else (contains-doll? v (sub1 i))]
+            )
+          ]
+    )
+  )
+  
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; (cont (vector 'sad 'doll 'sda))
+2
+&gt; (cont (vector 'sad 'dol 'sda))
+false
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:55:35.4647640+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:55:35.4647640+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:55:34.5316039+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>585</x>
+  <y>453</y>
+  <open-on-startup>False</open-on-startup>
+</note>

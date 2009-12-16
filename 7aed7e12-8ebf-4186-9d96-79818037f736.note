@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перемещение datafiles</title>
+  <text xml:space="preserve"><note-content version="0.1">Перемещение datafiles
+
+
+todo: practice
+
+*ALTER TABLESPACE <link:internal>command</link:internal>*
+
+1. Перевод tablespace в offline
+2. Перемещаем файл средствами ОС 
+3. alter tablespace my_tablespace rename datafile '/oradata/data1.dbf' to '/oradata/data2.dbf';
+4. Перевод tablespace в online
+5. Удаляем старый файл данных средствами ОС
+
+*ALTER DATABASE <link:internal>command</link:internal>*
+
+Может быть полезна, например, для SYSTEM tablespace, так как его нельзя перевести в offline.
+
+1. Shutdown the database
+2. Перемещаем файл средствами ОС 
+3. Mount the database
+4. alter database rename file '/oradata/data1.dbf' to '/oradata/data2.dbf';
+5. Open the database.</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.3844250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.3844250+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:26:20.6487610+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

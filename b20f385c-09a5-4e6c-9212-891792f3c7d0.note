@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Последовательно пронумеровать строки</title>
+  <text xml:space="preserve"><note-content version="0.1">Последовательно пронумеровать строки
+
+<italic>DECLARE @T TABLE(col1 int, col2 char(1))
+
+INSERT @T VALUES(0, 'A')
+INSERT @T VALUES(0, 'B')
+INSERT @T VALUES(0, '<link:internal>C</link:internal></italic><italic>')
+
+DECLARE @I int
+SET @I = 0
+
+UPDATE
+  @T
+SET
+  @I = col1 = @I +1
+
+SELECT * FROM @T</italic></note-content></text>
+  <last-change-date>2008-09-19T16:13:32.7238400+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-19T16:13:32.7238400+04:00</last-metadata-change-date>
+  <create-date>2008-09-19T16:13:17.4129940+04:00</create-date>
+  <cursor-position>190</cursor-position>
+  <width>450</width>
+  <height>433</height>
+  <x>1</x>
+  <y>21</y>
+  <open-on-startup>False</open-on-startup>
+</note>

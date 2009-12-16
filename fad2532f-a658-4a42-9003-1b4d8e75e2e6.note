@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перекинуть записи в другую компанию</title>
+  <text xml:space="preserve"><note-content version="0.1">Перекинуть записи в другую компанию
+
+На самом деле невозможно штатными средствами Аксапты изменить поле Dataareaid. Более того - это некорректно. У вас, к примеру, могут <link:internal>RecId</link:internal> быть в одной таблице в разных компаниях одинаковые...
+
+<link:url>http://axforum.info/forums/showthread.php?p=210447#post210447</link:url>
+
+overwriteSystemfields()  - для вновь создаваемых записей - если insert() уже был - поздно боржоми пить</note-content></text>
+  <last-change-date>2009-10-17T21:36:02.0478550+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T21:36:02.0478550+04:00</last-metadata-change-date>
+  <create-date>2009-10-17T21:32:56.2157390+04:00</create-date>
+  <cursor-position>358</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>54</y>
+  <open-on-startup>False</open-on-startup>
+</note>

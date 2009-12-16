@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Let</title>
+  <text xml:space="preserve"><note-content version="0.1">Let
+
+<link:internal>Пояснение - зачем вводится Let</link:internal>
+<link:internal>Два правила работы Let</link:internal>
+<link:internal>Синтаксис Let</link:internal></note-content></text>
+  <last-change-date>2009-06-29T14:00:54.7792400+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T14:00:54.7792400+04:00</last-metadata-change-date>
+  <create-date>2009-04-25T18:32:21.3038410+04:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>656</width>
+  <height>477</height>
+  <x>706</x>
+  <y>249</y>
+  <open-on-startup>False</open-on-startup>
+</note>

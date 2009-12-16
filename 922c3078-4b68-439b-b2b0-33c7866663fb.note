@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>отладочная версия оборотки по контрагентам</title>
+  <text xml:space="preserve"><note-content version="0.1">отладочная версия оборотки по контрагентам
+
+	код проекта - <italic>BAP</italic>
+	changeset - <italic><link:url>http://bitbucket.org/demas/supp_ax/changeset/be57d2ef2e5a/</link:url></italic>
+
+<list><list-item dir="ltr">в таблицу добавлены 4 поля: debug Dt/Kt Amount MST/Cur
+</list-item><list-item dir="ltr">на форму добавлен флаг debug
+</list-item><list-item dir="ltr">в enum gm_moduleOperType добавилось 2 значения: курсовая реализованная/нериализованная
+</list-item><list-item dir="ltr">в классе gm_operTypeClass создана копия метода OperType - DebugOperType; отличия:
+<list><list-item dir="ltr">
+</list-item></list></list-item><list-item dir="ltr">класс gm_custVendTurnoverClass
+<list><list-item dir="ltr">checkTransaction()
+<list><list-item dir="ltr">реализованная
+<list><list-item dir="ltr">
+</list-item></list></list-item><list-item dir="ltr">выф
+</list-item></list></list-item><list-item dir="ltr">getTSettleSum(); отличия:
+<list><list-item dir="ltr">мы не счиаем эти суммы для типов CloseTransaction, StornoCloseTransaction
+</list-item><list-item dir="ltr">а для того, что счиаем берем не все сопоставления, а только за инервал дат (в оригинале с начала времен)
+</list-item></list></list-item><list-item dir="ltr">заполняем новые поля с помощью новой разновидности getTSettleSum</list-item></list></list-item></list>
+
+</note-content></text>
+  <last-change-date>2009-08-15T20:19:35.0275020+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-15T20:19:35.0275020+04:00</last-metadata-change-date>
+  <create-date>2009-08-15T19:38:45.1417710+04:00</create-date>
+  <cursor-position>469</cursor-position>
+  <width>741</width>
+  <height>458</height>
+  <x>52</x>
+  <y>404</y>
+  <open-on-startup>False</open-on-startup>
+</note>

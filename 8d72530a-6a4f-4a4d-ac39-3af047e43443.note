@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Полный экспорт и импорт</title>
+  <text xml:space="preserve"><note-content version="0.1">Полный экспорт и импорт
+
+
+В доке по 7-ке  есть явное упоминание что объекты SYS не экспортируются
+
+_Full Database
+
+Only users with the EXP_FULL_DATABASE role can export in this mode. All objects in the database are exported, except those in the schema of SYS. (Objects owned by SYS are generated during database creation for internal and administrative use. Because they are not exported, you should not create a user table or any <link:internal>other</link:internal> object under SYS.)_
+
+Аналогично при импорте
+
+_Full Database Mode
+All database objects except for those owned by SYS_
+
+Существуют и импортируемые системные объекты:
+
+_Importing System Objects
+To import system objects from a full database export file, the IMP_FULL_DATABASE role must be enabled. The import parameter FULL specifies that system objects are included in the import.
+The system objects are:
+
+profiles
+public database links
+public synonyms
+roles
+rollback segment definitions
+system audit options
+system privileges
+tablespace definitions
+tablespace quotas
+user definitions_</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.1981880+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.1981880+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:11:03.2230340+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>git diff</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>git</link:internal> diff
+
+<link:internal>git</link:internal> diff - различие измененных, но не добавленных файлов по сравнению с последней закоммиченной версией.
+<link:internal>git</link:internal> diff --cached - к предыдущему добавляет добавленные (<link:internal>add</link:internal>), но еще не закоммиченные файлы.
+
+<link:internal>git</link:internal> rev-parse master    - хэш последнего коммита
+<link:internal>git</link:internal> rev-parse master~1  - хэш (последнего-1) коммита
+
+<link:internal>git</link:internal> diff master   - то же, что и <link:internal>git</link:internal> diff - сравниваем с последним commit
+<link:internal>git</link:internal> diff master~1 - сравниваем с (последним - 1) commit
+<link:internal>git</link:internal> diff master~1 -- <link:internal>test</link:internal>.txt - сравниваем с (последним - 1) commit но только один файл
+<link:internal>git</link:internal> diff master~2 master~1 - сравниваем два коммита
+<link:internal>git</link:internal> diff master~2 master~1 --stat - показываем статистику по различиям
+
+<link:internal>git</link:internal> diff --name-status показывает только имена изменившихся файлов
+
+<link:internal>git</link:internal> diff --unified=10 - кол-во отображаемых строк вокруг изменения
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:28.7227830+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:28.7227830+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:38:25.4009550+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

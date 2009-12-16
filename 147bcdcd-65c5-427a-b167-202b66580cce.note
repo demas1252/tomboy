@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с временем в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с временем в Python
+
+import time
+
+DAY = 60 * 60 *24
+today = time.time()
+
+for i in (0, 1, 2, 3):
+    t = time.gmtime(time.time() + i * DAY)
+    print time.strftime('%d.%m.%y, %a', t)
+
+<italic>02.09.08, Tue
+03.09.08, Wed
+04.09.08, Thu
+05.09.08, Fri
+</italic>
+-------------------------------------------------------------
+</note-content></text>
+  <last-change-date>2008-09-02T16:45:56.1423940+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-02T16:45:56.1423940+04:00</last-metadata-change-date>
+  <create-date>2008-09-02T16:45:29.9115920+04:00</create-date>
+  <cursor-position>247</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>8</x>
+  <y>56</y>
+  <open-on-startup>False</open-on-startup>
+</note>

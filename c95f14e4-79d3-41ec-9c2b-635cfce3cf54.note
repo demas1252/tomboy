@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получение данных с сервера</title>
+  <text xml:space="preserve"><note-content version="0.1">Получение данных с сервера
+
+-module(socket1).
+-export([nano_get_url/0]).
+
+nano_get_url()-&gt;
+    nano_get_url("<link:url>www.google.com</link:url>").
+
+nano_get_url(Host)-&gt;
+    {ok, Socket} = gen_tcp:connect(Host, 80, [binary, {packet, 0}]),
+    ok = gen_tcp:send(Socket, "GET / HTTP/1.0\r\n\r\n"),
+    receive_data(Socket, []).
+
+receive_data(Socket, SoFar)-&gt;
+    receive
+	{tcp, Socket, Bin}-&gt;
+	    receive_data(Socket, list_to_binary([SoFar, Bin]));
+	{tcp_<link:internal>closed</link:internal>, Socket} -&gt;
+	    SoFar
+end.
+
+------------------------------------------------------------------------
+
+3&gt; B=socket1:nano_get_url().
+&lt;&lt;"HTTP/1.1 200 OK\r\nVia: 1.1 AX-ISA\r\nConnection: close\r\nProxy-Connection: close\r\nExpires: -1\r\nDate: Mon, 16 Feb 2009 13"...&gt;&gt;
+4&gt; io:format("~p~n", [B]).
+</note-content></text>
+  <last-change-date>2009-03-24T08:45:40.7315810+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:45:40.7315810+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:45:34.6338820+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>486</y>
+  <open-on-startup>False</open-on-startup>
+</note>

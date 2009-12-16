@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>WinAdmin</title>
+  <text xml:space="preserve"><note-content version="0.1">WinAdmin
+
+Now, to get rid of it:
+Start / Run / gpedit.<link:internal>msc</link:internal> / Local Computer Policy / Computer Configuration / Administrative <link:internal>Templates</link:internal> / <link:internal>Windows</link:internal> Components / <link:internal>Windows</link:internal> Update / Re-prompt for restart</note-content></text>
+  <last-change-date>2009-07-31T12:28:31.1150990+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-31T12:28:31.1150990+04:00</last-metadata-change-date>
+  <create-date>2008-09-18T12:18:39.1359360+04:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>825</x>
+  <y>21</y>
+  <open-on-startup>False</open-on-startup>
+</note>

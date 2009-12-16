@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Многоразмерные массивы</title>
+  <text xml:space="preserve"><note-content version="0.1">Многоразмерные массивы
+
+#include &lt;stdio.h&gt;
+
+static char daytab[2][13] = {
+  {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+  {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+};
+
+int day_of_year(int year, int month, int day) {
+  int i, leap;
+
+  leap = year%4 == 0 &amp;&amp; year % 100 != 0 || year%400 == 0;
+
+  for(i = 1; i &lt; month; i++)
+    day += daytab[leap][i];
+
+  return day;
+}
+ 
+void month_day(int year, int yearday, int *pmonth, int *pday) {
+  int i, leap;
+
+  leap = year%4 == 0 &amp;&amp; year % 100 != 0 || year%400 == 0;
+  for(i = 1; yearday &gt; daytab[leap][i]; i++)
+    yearday -= daytab[leap][i];
+
+  *pmonth = i;
+  *pday = yearday;
+}
+
+int main(int argc, char *argv[])
+{
+  printf("%d\n", day_of_year(2009, 2, 9));
+
+  int month, day;
+  month_day(2009, 40, &amp;month, &amp;day);
+  printf("%d %d\n", month, day);
+
+  return 0;
+}
+
+<italic>См также:</italic>
+<link:internal>Передача двумерного массива в функцию</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T08:52:46.7398820+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:52:46.7398820+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:52:09.5197700+03:00</create-date>
+  <cursor-position>832</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

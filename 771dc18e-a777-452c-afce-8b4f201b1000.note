@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SQL задача 1</title>
+  <text xml:space="preserve"><note-content version="0.1">SQL задача 1
+
+
+Такая ситуация, есть таблица
+tab1
+поля тип
+-----------
+num varchar(7)
+pr number
+sum number
+
+num pr sum
+-----------------------
+234 1 67
+234 2 90
+235 1 23
+235 3 76
+235 2 10
+
+у pr может быть з начения 1, 2 или 3.
+
+Нужен запрос который выводил бы данные так
+
+num sum(pr1) sum(pr2) sum(pr3)
+-------------------------------------------
+234 67 90 0
+235 23 10 76
+
+Подскажите как сделать.
+
+---------------------------------------------
+
+select num , 
+       sum(case pr when 1 then sum else 0 end) as sum_pr1,
+       sum(case pr when 2 then sum else 0 end) as sum_pr2,
+       sum(case pr when 3 then sum else 0 end) as sum_pr3,
+       sum(case when pr IS NULL then sum else 0 end) as sum_pr_is_null
+  from table
+group by num</note-content></text>
+  <last-change-date>2009-11-23T13:58:03.5315460+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:58:03.5315460+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:00:18.1253870+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>832</width>
+  <height>998</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

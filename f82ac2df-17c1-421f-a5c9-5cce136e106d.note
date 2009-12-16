@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример Inversion Controller на Python</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Пример Inversion Controller</link:internal> на Python
+
+<link:url>http://pypi.python.org/pypi/PyContainer</link:url>
+
+from pycontainer import PyContainer
+
+class Movie(object):
+	def __init__(self, director):
+		self.director = director
+	def getDirector(self):
+		return self.director
+
+class MovieListener(object):
+	def __init__(self):
+		# self.finder = ColonMovieFinder("movies.txt")
+		<link:internal>pass</link:internal>
+	def moviesDirectedBy(self, arg):
+		allMovies = self.finder.findAll()
+		theMovies = []
+		for movie in allMovies:
+			<link:internal>if</link:internal> movie.getDirector() == arg:
+				theMovies.append(movie)
+		return theMovies
+
+class ColonMovieFinder(object):
+	def __init__(self):
+		#self.filename = filename
+		<link:internal>pass</link:internal>
+	def findAll(self):
+		allMovies = []
+		movie = Movie('a')
+		allMovies.append(movie)
+		movie = Movie('a')
+		allMovies.append(movie)		
+		movie = Movie('a')
+		allMovies.append(movie)		
+		movie = Movie('b')
+		allMovies.append(movie)		
+		movie = Movie('c')
+		allMovies.append(movie)
+		return allMovies
+
+movieAppContainer = PyContainer()
+movieAppContainer.configXml("components.xml")
+listener = movieAppContainer.getInstance("MovieListener")
+# why twice ???
+print listener
+print listener.moviesDirectedBy('a')
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.3001330+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.3001330+04:00</last-metadata-change-date>
+  <create-date>2009-09-18T11:47:53.6175599+04:00</create-date>
+  <cursor-position>80</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>774</x>
+  <y>301</y>
+  <open-on-startup>False</open-on-startup>
+</note>

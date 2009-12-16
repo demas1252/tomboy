@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Математика</title>
+  <text xml:space="preserve"><note-content version="0.1">Математика
+
+<link:internal>Линейное программирование</link:internal>
+<link:internal>Комбинаторика</link:internal>
+<link:internal>Теория вероятности</link:internal>
+<link:internal>Теория игр</link:internal>
+<link:internal>Числа Фибоначчи</link:internal>
+<link:internal>Основная теорема арифметики</link:internal>
+
+<link:internal>Гипотеза Коллатца</link:internal>
+<link:internal>Кристиан Гольдбах</link:internal></note-content></text>
+  <last-change-date>2009-11-04T19:46:55.3025570+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-04T19:46:55.3025570+03:00</last-metadata-change-date>
+  <create-date>2008-11-02T14:13:01.5832260+03:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>966</x>
+  <y>407</y>
+  <open-on-startup>False</open-on-startup>
+</note>

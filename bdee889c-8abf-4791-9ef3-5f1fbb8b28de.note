@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Tags Counting</title>
+  <text xml:space="preserve"><note-content version="0.1">Tags Counting
+
+   Не совсем понятно, чем может быть полезен данный журнал.
+     Точно, что его не стоит использовать только для целей одновременной инвентаризации несколькими пользователями.
+     
+     При разноске журнала, создается простой <link:internal>журнал инвентаризации</link:internal>. Проблема в том, что множество журналов меченой инвентаризации не консолидируются в один общий инвент. журнал.  Поэтому, каждый последующий журнал не учитывает предыдущий в плане изменившегося количества.</note-content></text>
+  <last-change-date>2009-11-05T16:12:00.7849490+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:12:00.7849490+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:41:03.6636580+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

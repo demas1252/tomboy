@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запустить скрипт Oracle из командной строки</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Запустить скрипт Oracle</link:internal> из командной строки
+
+<link:internal>C</link:internal>:\&gt;more <link:internal>test</link:internal>.bat
+<italic>set <link:internal>ORACLE</link:internal></italic><italic>_SID=orcl
+sqlplus demas/<link:internal>pass</link:internal></italic><italic>@orck @<link:internal>c</link:internal></italic><italic>:\main.<link:internal>sql</link:internal></italic><italic>
+</italic>
+<link:internal>C</link:internal>:\&gt;more main.<link:internal>sql</link:internal>
+<italic>select * from dual;
+exit;
+</italic>
+<link:internal>C</link:internal>:\&gt;<link:internal>test</link:internal>.bat
+
+<italic><link:internal>SQL</link:internal></italic><italic>*Plus: Release 10.2.0.3.0 - Production on Wed Sep 3 15:09:55 2008
+Copyright (<link:internal>c</link:internal></italic><italic>) 1982, 2006, <link:internal>Oracle</link:internal></italic><italic>.  All Rights Reserved.
+
+Connected to:
+<link:internal>Oracle</link:internal></italic><italic> Database 10g Express Edition Release 10.2.0.1.0 - Production
+
+D
+-
+X
+
+Elapsed: 00:00:00.00
+Disconnected from <link:internal>Oracle</link:internal></italic><italic> Database 10g Express Edition Release 10.2.0.1.0 - Production
+<link:internal>C</link:internal></italic><italic>:\&gt;</italic></note-content></text>
+  <last-change-date>2009-03-25T20:42:48.5179890+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-25T20:42:48.5179890+03:00</last-metadata-change-date>
+  <create-date>2008-09-17T13:27:10.1512159+04:00</create-date>
+  <cursor-position>123</cursor-position>
+  <width>1443</width>
+  <height>773</height>
+  <x>1</x>
+  <y>21</y>
+  <open-on-startup>False</open-on-startup>
+</note>

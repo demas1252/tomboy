@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>.basrc</title>
+  <text xml:space="preserve"><note-content version="0.1">.basrc
+
+<bold>Алиасы</bold>
+
+alias la='ls -A'
+
+Вот что, например, что на эту тему я надёргал из OpenSuSE и SLES:
+
+alias +='pushd .' # закидывает текущий каталог в стек
+alias -='popd'  # извлекает из стека
+alias ..='cd ..' # экономим целых 3 символа
+alias ...='cd ../..' # ещё круче :-)
+alias beep='echo -en "\007"' # пищалка
+alias cd..='cd ..' # исправление обычной очепятки
+alias dir='<link:internal>ls -l</link:internal>' # длинный формат ls - аналог ll (cм. ниже)
+alias l='ls -alF' # "длинный" ls со скрытыми файлами и символическим обозначением типов
+alias la='ls -la' # "длинный" ls со скрытыми файлами (начинающимися с ".")
+alias ll='<link:internal>ls -l</link:internal>' # "длинный" ls
+alias ls='ls $LS_OPTIONS'
+alias ls-l='<link:internal>ls -l</link:internal>' # ещё одна опечатка
+alias md='mkdir -p' # создаёт полный путь каталога
+alias o='less' #
+alias rd='rmdir'
+alias rehash='hash -r'
+alias unmount='echo "Error: Try the <link:internal>command</link:internal>: umount" <link:internal>1</link:internal>&gt;&amp;2; false' - учимся правильно писать umount
+alias you='su - -<link:broken>c</link:broken> "/sbin/<link:internal>yast</link:internal>2 online_update"' - запуск онлайн обновления <link:internal>SuSE</link:internal> от админа. Я себе заменил на alias you='sudo<link:url> /sbin/yast</link:url> online_update'
+
+ALT <link:internal>Linux</link:internal> (повторы с предыдущим я выкинул):
+
+alias cp='cp -i'
+alias d='ls' - тоже вариант ls
+alias <link:broken>df</link:broken>='<link:broken>df</link:broken> -h -x supermount'
+alias du='du -h' # du сразу выводит размеры "по-человечески"
+alias l='<link:internal>ls -lapt</link:internal>' # ещё один "длинный ls"
+alias ll='ls -laptc'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias p='cd -'
+alias rm='rm -i'
+alias s='cd ..'
+
+<link:internal>if</link:internal> [ "$TERM" != "dumb" ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+    #alias dir='ls --color=auto --format=vertical'
+    #alias vdir='ls --color=auto --format=long'
+fi
+
+Поправить расцветку файлов в консоли:
+	dircolors -p &gt;<link:url> ~/.lscolors</link:url>
+	nano .lscolors
+	nano ~./bashrc
+	eval "`dircolors -b $HOME/.lscolors`"
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.4666140+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.4666140+04:00</last-metadata-change-date>
+  <create-date>2008-05-11T09:19:53.7486380+04:00</create-date>
+  <cursor-position>1349</cursor-position>
+  <width>704</width>
+  <height>533</height>
+  <x>975</x>
+  <y>487</y>
+  <open-on-startup>False</open-on-startup>
+</note>

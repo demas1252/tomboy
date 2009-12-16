@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Function Composition in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Function Composition in Haskell
+
+<italic><link:internal>ghci</link:internal></italic><italic>&gt; <link:internal>map</link:internal></italic><italic> (\x -&gt; negate (<link:internal>abs</link:internal></italic><italic> x)) [5,-3,-6,7,-3,2,-19,24]  
+[-5,-3,-6,-7,-3,-2,-19,-24] 
+</italic>
+эквивалетно:
+
+<italic><link:internal>ghci</link:internal></italic><italic>&gt; <link:internal>map</link:internal></italic><italic> (negate . <link:internal>abs</link:internal></italic><italic>) [5,-3,-6,7,-3,2,-19,24]  
+[-5,-3,-6,-7,-3,-2,-19,-24]  </italic></note-content></text>
+  <last-change-date>2009-11-06T11:58:20.2425440+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-06T11:58:20.2425440+03:00</last-metadata-change-date>
+  <create-date>2009-11-06T11:56:27.7576290+03:00</create-date>
+  <cursor-position>216</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

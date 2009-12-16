@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование linux
+
+
+<link:internal>Screenshots</link:internal>
+<link:internal>WikidPad</link:internal>
+<link:internal>Gnome</link:internal>
+<link:internal>xBindKeys</link:internal>
+<link:internal>wine</link:internal>
+<link:internal>Конвертирование flv</link:internal>
+<link:internal>Отформатировать SDexi Card</link:internal>
+<link:internal>Резервное копирование</link:internal>
+<link:internal>Скрипты для Nautilus</link:internal>
+<link:internal>GnomeDo</link:internal>
+<link:internal>gnome-terminal</link:internal>
+<link:internal>mc</link:internal>
+<link:internal>compizconfig-settings-manager</link:internal>
+<link:internal>vmware</link:internal>
+<link:internal>pdf</link:internal>
+<link:internal>Linux Internet: почта, новости, im, браузеры</link:internal>
+<link:internal>Linux Multimedia</link:internal>
+<link:internal>VmWare</link:internal>
+<link:internal>KDE</link:internal>
+<link:internal>Японский в Linux</link:internal>
+<link:internal>Какой релиз linux я использую</link:internal>
+
+<link:internal>Дистрибутивы</link:internal></note-content></text>
+  <last-change-date>2009-12-08T08:40:04.3773500+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-08T08:40:04.3773500+03:00</last-metadata-change-date>
+  <create-date>2009-03-27T12:26:44.5562320+03:00</create-date>
+  <cursor-position>108</cursor-position>
+  <width>441</width>
+  <height>488</height>
+  <x>1055</x>
+  <y>224</y>
+  <open-on-startup>False</open-on-startup>
+</note>

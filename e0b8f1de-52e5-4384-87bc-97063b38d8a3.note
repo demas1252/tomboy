@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация интерполирующего поиска на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация интерполирующего поиска на Python
+
+def interpol_func(l, h, lv, hv, f):
+    return l + ((f - lv) * (h - l)) / (hv - lv)
+    
+def search(data, to_<link:internal>find</link:internal>):
+    l = 0
+    h = len(data) - 1
+
+    while((data[l] &lt; to_<link:internal>find</link:internal>) and (data[h] &gt;= to_<link:internal>find</link:internal>)):
+        mid = interpol_func(l, h , data[l], data[h], to_<link:internal>find</link:internal>)
+
+        <link:internal>if</link:internal> data[mid] &lt; to_<link:internal>find</link:internal>:
+            l = mid + 1
+        elif data[mid] &lt; to_<link:internal>find</link:internal>:
+            h = mid - 1
+        else:
+            return mid
+
+    <link:internal>if</link:internal>(data[l] == to_<link:internal>find</link:internal>):
+        return l;
+    else:
+        return -1
+
+print search((1, 10, 12, 15, 23, 34, 65, 66, 78), 12)
+</note-content></text>
+  <last-change-date>2009-03-23T21:44:15.8567890+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:44:15.8567890+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:44:03.4550840+03:00</create-date>
+  <cursor-position>79</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

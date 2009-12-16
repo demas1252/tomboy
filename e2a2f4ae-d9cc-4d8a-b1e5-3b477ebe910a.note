@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший итератор на C#</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший итератор на C#
+
+// explicit version
+IEnumerator&lt;MyType&gt; iter = list.GetEnumerator();
+while (iter.MoveNext())
+    Console.WriteLine(iter.Current);
+ 
+// implicit version
+foreach (MyType value in list)
+    Console.WriteLine(value);
+</note-content></text>
+  <last-change-date>2009-03-23T22:06:53.4415200+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T22:06:53.4415200+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:06:46.2225060+03:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

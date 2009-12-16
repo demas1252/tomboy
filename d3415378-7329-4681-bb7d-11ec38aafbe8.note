@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структура индексов</title>
+  <text xml:space="preserve"><note-content version="0.1">Структура индексов
+
+
+*B-Tree*
+
+root -&gt; branch -&gt; leaf
+
+Каждый leaf иожет содержать несколько entities. 
+Index intity = header + n * {column length + column value } + <link:internal>rowid</link:internal>
+
+- Листья соединены в связный список, что позволяет сканировать индекс как в возрастающем, так и в убывающем порядке.
+- Индекс, все столбцы которого = null не хранится.  То есть - это гарантированный tablescan.
+- Если n * {column length + column value } - соответсвует несколько срок (<link:internal>rowid</link:internal>) - то повторяется вся эта структура.
+
+- Ключи в пределах блока хранятся в соритрованном порядке
+- Все листья одной и той же глубины
+- Все блоки в среднем на 75% заполнены
+
+<link:internal>Виды Btree индексов</link:internal>
+<link:internal>Indexes Limits</link:internal>
+<link:internal>BLevel vs Heigth</link:internal>
+<link:internal>Сжатие узлов индекса</link:internal>
+<link:internal>Являются ли деревья индекса двоичными</link:internal>
+
+Корневые узлы отличаются для уникального(на 1 байт меньше) и неуникального индексов.
+
+*Bitmap*
+
+Это тоже b-tree, но листьями которого являются битовые карты.:
+
+&lt;key=blue,    <link:internal>rowid</link:internal>_start=10.0.3, rowidend=12.8.3, 10010010100&gt;
+&lt;key=green, <link:internal>rowid</link:internal>_start=10.0.3, rowidend=12.8.3, 01000101011&gt;
+&lt;key=red,     <link:internal>rowid</link:internal>_start=10.0.3, rowidend=12.8.3, 00100000000&gt;
+
+Удобно, когда:
+- маленькая селективность
+- or в выражении where
+- мало update ибо update блокирует индекс и треть таблицы (в данном случае)</note-content></text>
+  <last-change-date>2008-03-30T07:34:39.3965550+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:34:39.3965550+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:45:40.1645560+03:00</create-date>
+  <cursor-position>745</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>113</x>
+  <y>657</y>
+  <open-on-startup>False</open-on-startup>
+</note>

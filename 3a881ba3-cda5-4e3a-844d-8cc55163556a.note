@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>git log</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>git</link:internal> log
+
+<link:internal>git</link:internal> log --stat            - добавляет статистику в лог
+<link:internal>git</link:internal> log --shortstat
+
+<link:internal>git</link:internal> log --name-status     - информация о файлах, затронутых коммитом
+got log -p                - показывает еще и diff
+
+<link:internal>git</link:internal> log --pretty=short    - вроде бы обычный формат
+<link:internal>git</link:internal> log --pretty=oneline  - больше влазит на экран
+<link:internal>git</link:internal> log --pretty=full
+
+<link:internal>git</link:internal> log --since="3 weeks ago"
+        --since="2007-12-01" --until="28 days ago"
+
+<link:internal>git</link:internal> log --pretty=format:"%h by %an - %ar"
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.4917320+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.4917320+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:38:40.0051880+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

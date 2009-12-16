@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример использования Ruby совместно с Glade</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример использования Ruby совместно с Glade
+
+1. Рисуем интерфейс в Glade, создаем нужные нам события (для закрытия формы delete_event)
+2. <link:internal>ruby</link:internal>-glade-create-template helloworld3.glade &gt; helloworld3.rb
+3. Дописываем (наверное, лучше наследоваться), чтобы была возможность перегенерить класс.
+
+#!/usr/bin/env <link:internal>ruby</link:internal>
+#
+# This file is gererated by <link:internal>ruby</link:internal>-glade-create-template 1.1.4.
+#
+require 'libglade2'
+
+class <link:internal>Test</link:internal>2Glade
+  include GetText
+
+  attr :glade
+  
+  def initialize(path_or_data, root = nil, domain = nil, localedir = nil, flag = GladeXML::FILE)
+    bindtextdomain(domain, localedir, nil, "UTF-8")
+    @glade = GladeXML.new(path_or_data, root, domain, localedir, flag) {|handler| method(handler)}
+    @window = @glade.get_widget("window1")
+    @entry = @glade.get_widget("entry1")
+    @window.show
+  end
+
+  def on_button1_clicked(widget)
+    @window.title = 'some'
+    @entry.set_text('some')
+  end
+
+  def on_quit(widget, arg0)
+    <link:internal>Gtk</link:internal>.main_quit
+  end
+end
+
+# Main program
+<link:internal>if</link:internal> __FILE__ == $0
+  # Set values as your own application. 
+  PROG_PATH = "<link:internal>test</link:internal>2.glade"
+  PROG_NAME = "YOUR_APPLICATION_NAME"
+  <link:internal>Test</link:internal>2Glade.new(PROG_PATH, nil, PROG_NAME)
+  <link:internal>Gtk</link:internal>.main
+end
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.7037820+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.7037820+04:00</last-metadata-change-date>
+  <create-date>2009-06-30T13:40:15.1463888+04:00</create-date>
+  <cursor-position>1158</cursor-position>
+  <width>826</width>
+  <height>433</height>
+  <x>696</x>
+  <y>160</y>
+  <open-on-startup>False</open-on-startup>
+</note>

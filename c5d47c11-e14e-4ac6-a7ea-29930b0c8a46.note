@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример самописного итератора на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример самописного итератора на Python
+
+class Aggregate():
+    def createIterator(self):
+        print "must be overriden"
+
+class ConcreteAggregate(Aggregate):
+    def __init__(self):
+        self._items = []
+
+    def createIterator(self):
+        return ConcreteIterator(self)
+
+    def _Count(self):
+        return len(self._items)
+
+    Count = property(_Count, None, None, 'count')
+
+    def _Get(self, idx):
+        return self._items[idx]
+
+    def _Set(self, idx, value):
+        self._items.insert(idx, value)
+
+class <link:internal>Iterator</link:internal>():
+    def First(self):
+        print "must be overriden"
+    def Next(self):
+        print "must be overriden"
+    def IsDone(self):
+        print "must be overriden"
+    def CurrentItem(self):
+        print "must be overriden"
+        
+class ConcreteIterator(<link:internal>Iterator</link:internal>):
+    def __init__(self, aggregate):
+        self._current = 0
+        self._aggregate = aggregate
+
+    def First(self):
+        return self._aggregate.Get(0)
+
+    def Next(self):
+        <link:internal>if</link:internal> (self._current &lt; self._aggregate.Count -1):
+            self._current = self._current + 1
+            return self._aggregate.Get(self._current)
+        else:
+            return None
+
+    def CurrentItem(self):
+        return self._aggregate.Get(self._current)
+
+    def IsDone(self):
+        <link:internal>if</link:internal> self._current &gt;=  self._aggregate.Count:
+            return True
+        else:
+            return False
+
+
+a = ConcreteAggregate()
+a.Set(0, "A")
+a.Set(1, "B")
+a.Set(2, "C")
+a.Set(3, "D")
+
+i = ConcreteIterator(a)
+item = i.First()
+while(item != None):
+    print item
+    item = i.Next()
+    
+        
+    
+</note-content></text>
+  <last-change-date>2009-03-23T22:06:14.5271010+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T22:06:14.5271010+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:05:57.4800740+03:00</create-date>
+  <cursor-position>73</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

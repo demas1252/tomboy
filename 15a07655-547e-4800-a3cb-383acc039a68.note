@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Login failed for user Reason Not associated with a trusted SQL Server Connection</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Login failed for user Reason Not associated with a trusted SQL</link:internal> Server Connection
+
+
+Причин может быть две.
+
+<link:internal>1</link:internal>. С помощю чего ты подключаешься? Посмотри какая строка <link:internal>подключения</link:internal> и явно укажи uid и pwd, и чтобы там trusted connections ни где не стояло.
+2. Сервер настроен авторизовать только NT'евых юзеров, надо перевести его в смешанный режим авторизации, делается либо через EM, либо, если EM нет, в реестре есть ключик, его и надо поменять:
+xp_regwrite N'HKEY_LOCAL_MACHINE', N'SOFTWARE\Microsoft\MSSQLServer\MSSQLServer', 'LoginMode', N'REG_DWORD', 2
+ 
+цифра меняется в зависимости от выбранного способа
+2 — смешанная
+<link:internal>1</link:internal> — WinNT
+</note-content></text>
+  <last-change-date>2008-07-08T10:56:29.0881450+04:00</last-change-date>
+  <last-metadata-change-date>2008-07-08T10:56:29.0881450+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:37:35.7507560+04:00</create-date>
+  <cursor-position>109</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>277</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

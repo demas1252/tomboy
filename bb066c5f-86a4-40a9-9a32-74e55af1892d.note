@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Условное суммирование при группировке</title>
+  <text xml:space="preserve"><note-content version="0.1">Условное суммирование при группировке
+
+ Есть таблица:
+     
+     type   num
+     
+     <link:internal>1</link:internal>	    546	
+     <link:internal>1</link:internal>	    655	
+     4	    987	
+     4	    987	
+     <link:internal>1</link:internal>	    546	
+     <link:internal>1</link:internal>	    987	
+     4	    546
+     
+     Надо получить:
+     
+     num        type<link:internal>1</link:internal>   type2
+     546	    2	    <link:internal>1</link:internal>
+     655	    <link:internal>1</link:internal>	    0
+     987	    <link:internal>1</link:internal>	    2	
+     
+     Мое решение на ansi:
+     
+     select num<link:internal>1</link:internal>, sum(type<link:internal>1</link:internal>), sum(type2) from (
+        select num<link:internal>1</link:internal>, count(type) as type<link:internal>1</link:internal>, 0 as type2
+        from <link:internal>test</link:internal>_table
+        where type = <link:internal>1</link:internal>
+        group by num<link:internal>1</link:internal>
+            union all
+        select num<link:internal>1</link:internal>, 0 as type<link:internal>1</link:internal>,  count(type) as type2
+        from <link:internal>test</link:internal>_table
+        where type = 4
+        group by num<link:internal>1</link:internal>) t
+     group by num<link:internal>1</link:internal>
+     
+     Решение на <link:internal>TSQL</link:internal>:
+     
+     SELECT num<link:internal>1</link:internal>, 
+            COUNT(CASE [type] WHEN <link:internal>1</link:internal> THEN type END))[type=<link:internal>1</link:internal>], 
+            COUNT(CASE [type] WHEN 4 THEN type END)[type=4]
+     FROM table<link:internal>1</link:internal>
+     GROUP BY num<link:internal>1</link:internal>
+
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.1057950+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.1057950+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:55:11.1584009+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

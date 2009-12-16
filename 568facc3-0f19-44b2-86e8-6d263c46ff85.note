@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример использования алгоритмов и потоков</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример использования алгоритмов и потоков
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;<link:internal>iterator</link:internal>&gt;
+
+using namespace std;
+
+main(int argc, char *argv[]) {
+  int n = atoi(argv[1]);
+  
+  vector&lt;int&gt; v;
+
+  for(int i = 0; i &lt; n; i++)
+    v.push_back(i);
+
+  random_shuffle(v.begin(), v.end());
+  copy(v.begin(), v.end(), ostream_<link:internal>iterator</link:internal>&lt;int&gt; (cout, "\n"));
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.4486230+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.4486230+04:00</last-metadata-change-date>
+  <create-date>2009-07-31T10:21:59.1171160+04:00</create-date>
+  <cursor-position>76</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

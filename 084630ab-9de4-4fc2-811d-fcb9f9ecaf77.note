@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>ABS</title>
+  <text xml:space="preserve"><note-content version="0.1">ABS
+
+<link:internal>pacman</link:internal> -S abs base-devel
+<link:internal>vim</link:internal> <link:url>/etc/abs.conf</link:url>
+abs -&gt; <link:url>/var/abs</link:url>
+
+<link:url>/etc/makepkg.conf</link:url> - это ключи для сборки програм
+
+<bold>Чтобы собрать</bold>
+
+cp -r <link:url>/var/abs/extra/slim/</link:url> <link:url>/home/yourusername/abs</link:url>
+cd <link:url>/home/yourusername/abs/slim</link:url>
+
+<italic>makepkg -g &gt;&gt;PKGBUILD</italic> (если нет контрольной суммы)
+
+makepkg -s
+<link:internal>pacman</link:internal> -U slim 1.3.0-2-i686.pkg.tar.gz
+
+
+</note-content></text>
+  <last-change-date>2009-11-15T10:52:04.1700400+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-15T10:52:04.1700400+03:00</last-metadata-change-date>
+  <create-date>2009-07-08T16:38:44.8300570+04:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>485</width>
+  <height>360</height>
+  <x>1132</x>
+  <y>51</y>
+  <open-on-startup>False</open-on-startup>
+</note>

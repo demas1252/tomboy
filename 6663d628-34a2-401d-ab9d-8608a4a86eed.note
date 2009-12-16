@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>TCP-сервер на Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">TCP-сервер на Erlang
+
+-module(socket2).
+-export([start_nano_server/0, nano_client_eval/1]).
+
+start_nano_server()-&gt;
+    {ok, Listen} = gen_tcp:listen(2345, [binary, {packet, 4},
+					 {reuseaddr, true},
+					 {active, true}]),
+    {ok, Socket} = gen_tcp:accept(Listen),
+    gen_tcp:close(Listen),
+    loop(Socket).
+
+loop(Socket)-&gt;
+    receive
+	{tcp, Socket, Bin}-&gt;
+	    io:format("Server received binary = ~p~n", [Bin]),
+	    Str = binary_to_term(Bin),
+	    io:format("Server (unpacked) ~p~n", [Str]),
+	    Reply = lists:reverse(Str),
+	    io:format("Server replying = ~p~n", [Reply]),
+	    gen_tcp:send(Socket, term_to_binary(Reply)),
+	    loop(Socket);
+	{tcp_<link:internal>closed</link:internal>, Socked} -&gt;
+	    io:format("Server socket <link:internal>closed</link:internal>~n")
+end.
+
+nano_client_eval(Str)-&gt;
+    {ok, Socket} = gen_tcp:connect("localhost", 2345, [binary, {packet, 4}]),
+    ok = gen_tcp:send(Socket, term_to_binary(Str)),
+    receive
+	{tcp, Socket, Bin}-&gt;
+	    io:format("Client received binary = ~p~n", [Bin]),
+	    Val = binary_to_term(Bin),
+	    io:format("Client result = ~p~n", [Val]),
+	    gen_tcp:close(Socket)
+end.
+
+
+
+Теперь в одной консоли запускаем сервер: 
+
+1&gt; socket2:start_nano_server().
+Server received binary = &lt;&lt;131,107,0,4,116,101,115,116&gt;&gt;
+Server (unpacked) "<link:internal>test</link:internal>"
+Server replying = "tset"
+Server socket <link:internal>closed</link:internal>
+ok
+
+А в другой клиент:
+
+5&gt; socket2:nano_client_eval("<link:internal>erlang</link:internal>").
+Client received binary = &lt;&lt;131,107,0,6,103,110,97,108,114,101&gt;&gt;
+Client result = "gnalre"
+ok
+</note-content></text>
+  <last-change-date>2009-03-24T08:46:16.5668160+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:46:16.5668160+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:45:45.7045560+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>486</y>
+  <open-on-startup>False</open-on-startup>
+</note>

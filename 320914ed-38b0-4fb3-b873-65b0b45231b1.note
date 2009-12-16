@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация Observer на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация Observer на Python
+
+
+
+class Subject(object):
+    def __init__(self):
+        self.observers = []
+ 
+    def <link:internal>add</link:internal>_<link:internal>observer</link:internal>(self,<link:internal>observer</link:internal>_obj):
+        <link:internal>if</link:internal> not isinstance(<link:internal>observer</link:internal>_obj,<link:internal>Observer</link:internal>):
+            raise Exception("Only the types of <link:internal>Observer</link:internal> are allowed")
+ 
+        <link:internal>if</link:internal> not <link:internal>observer</link:internal>_obj in self.observers:
+            self.observers.append(<link:internal>observer</link:internal>_obj)
+ 
+    def remove_<link:internal>observer</link:internal>(self,<link:internal>observer</link:internal>_obj):
+        try:
+            self.observers.remove(<link:internal>observer</link:internal>_obj)
+        except ValueError,e:
+            print e
+ 
+    def notify_all(self):
+        for <link:internal>observer</link:internal> in self.observers:
+            <link:internal>observer</link:internal>.update(self)
+ 
+class <link:internal>Observer</link:internal>(object):
+    def update(self,subject_obj,**kwargs):
+        <link:internal>pass</link:internal>
+ 
+ 
+class ConcreteSubject(Subject):
+    my_x = 0
+    my_y = 0
+ 
+    def values_changed(self):
+        self.notify_all()
+ 
+    def __str__(self):
+        return "Here is my values %d and %d "%(self.my_x,self.my_y)
+ 
+class ObserverX(<link:internal>Observer</link:internal>):
+    def update(self, subject_obj, **kwargs):
+        print "Im X <link:internal>observer</link:internal> and got : ", subject_obj.my_x
+ 
+class ObserverGeneral(<link:internal>Observer</link:internal>):    
+    def update(self, subject_obj, **kwargs):
+        print "I got all of them ",str(subject_obj)
+ 
+ 
+<link:internal>if</link:internal> __name__ == "__main__":
+    <link:internal>pass</link:internal>
+
+
+
+print "I creatte the our subject"
+c_s = ConcreteSubject()
+c_s.my_x = 22
+c_s.my_y =33
+
+print "I notify my subscribers :"
+c_s.values_changed() 
+
+print "Lets <link:internal>add</link:internal> a new XObserver"
+x_o = ObserverX()
+g_o = ObserverGeneral()
+c_s.<link:internal>add</link:internal>_<link:internal>observer</link:internal>(x_o)
+
+print "I notify my subscribers :"
+c_s.values_changed() 
+
+print "Lets <link:internal>add</link:internal> a new <link:internal>GeneralObserver</link:internal>"
+c_s.<link:internal>add</link:internal>_<link:internal>observer</link:internal>(g_o)
+
+print "I notify my subscribers :"
+c_s.values_changed() 
+
+print "The X <link:internal>observer</link:internal> doesnt want to know anything about us remove him"
+c_s.remove_<link:internal>observer</link:internal>(x_o)
+
+print "I notify my subscribers :"
+c_s.values_changed()
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.1281690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.1281690+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:00:33.2074380+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>906</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

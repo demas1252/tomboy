@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>c compile faq</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>c</link:internal> compile faq
+
+# stdio.h: No such file or directory
+sudo <link:internal>apt-get</link:internal> install build-essential
+# whateverThirdPartyHeader.h: No such file or directory.
+Установить соответствующий dev пакет.
+<link:internal>gcc</link:internal> main.cpp -o <link:internal>test</link:internal> -I/path/to/the/library/includes/
+#include &lt;whateverThirdPartyHeader.h&gt; // &lt;...&gt; NOT "..."
+# undefined reference to 'function_<link:internal>prototype</link:internal>(whatever)'
+<link:internal>gcc</link:internal> main.cpp -o <link:internal>test</link:internal> -lfoo
+# undefined reference to '<link:internal>acos</link:internal>' (or to any <link:internal>other</link:internal> function defined in math.h)
+use the -lm <link:internal>command</link:internal> line switch
+# usr/bin/ld: cannot <link:internal>find</link:internal> -lfoo
+looks like libfoo.so is not in the compiler's library search path.
+<link:internal>gcc</link:internal> main.cpp -o <link:internal>test</link:internal> -L/path/to/the/library/ -lfoo
+# sudo <link:internal>apt-get</link:internal> install manpages-dev to help you make sense of compiler warnings and errors.
+# the -g flag instructs the compiler to include debugging information, so that you can debug your program with gdb itself or any gdb frontend.
+# -Wall Wextra -pedantic</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.9954180+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.9954180+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:41:08.4055720+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>143</x>
+  <y>655</y>
+  <open-on-startup>False</open-on-startup>
+</note>

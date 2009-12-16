@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>github</title>
+  <text xml:space="preserve"><note-content version="0.1">github
+
+<link:internal>Как получить SSH ключ для github</link:internal>
+
+<link:internal>git</link:internal> remote <link:internal>add</link:internal> origin <link:url>git@github.com:demas/reptool_docs.git</link:url>
+<link:internal>git</link:internal> push origin master
+</note-content></text>
+  <last-change-date>2009-04-21T10:05:40.1375670+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-21T10:05:40.1375670+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:40:11.2571870+03:00</create-date>
+  <cursor-position>125</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>348</x>
+  <y>445</y>
+  <open-on-startup>False</open-on-startup>
+</note>

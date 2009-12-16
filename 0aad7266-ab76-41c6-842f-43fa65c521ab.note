@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Axapta</title>
+  <text xml:space="preserve"><note-content version="0.1">Axapta
+
+<link:internal>Axapta Functional</link:internal>                        
+<link:internal>Axapta Development</link:internal>                                    
+<link:internal>AxAdmin</link:internal>
+<link:internal>AxOther</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:31.6218720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.6218720+04:00</last-metadata-change-date>
+  <create-date>2009-04-01T16:14:32.9740270+04:00</create-date>
+  <cursor-position>18</cursor-position>
+  <width>450</width>
+  <height>269</height>
+  <x>330</x>
+  <y>216</y>
+  <open-on-startup>False</open-on-startup>
+</note>

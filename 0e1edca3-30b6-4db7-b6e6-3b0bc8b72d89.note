@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>event_handler in erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">event_handler in erlang
+
+У нас есть модель которому посылаются все события в системе:
+
+<italic>-module(event_handler).
+-export([make/1, <link:internal>add</link:internal></italic><italic>_handler/2, event/2]).
+
+make(Name)-&gt;
+    register(Name, spawn(fun() -&gt;
+				 my_handler(fun no_op/1) end)).
+
+<link:internal>add</link:internal></italic><italic>_handler(Name, Fun)-&gt;
+    Name ! {<link:internal>add</link:internal></italic><italic>, Fun}.
+
+event(Name, X) -&gt;
+    Name ! {event, X}.
+
+my_handler(Fun)-&gt;
+    receive {<link:internal>add</link:internal></italic><italic>, Fun1}-&gt;
+	    my_handler(Fun1);
+	    {event, Any}-&gt;
+	    (catch Fun(Any)),
+	    my_handler(Fun)
+end.
+
+no_op(_)-&gt;
+    void.
+</italic>
+Вот так:
+
+<italic>1&gt; c(event_handler).
+{ok,event_handler}
+3&gt; event_handler:make(errors). 
+true
+4&gt; event_handler:event(errors, hi).
+{event,hi}
+</italic>
+И у нас есть ряд модулей в системе, которые заинтересованы в получении событий.  Поэтому они регистрируют себя у handler-а, чтобы он им рассылал эти события, когда они придут к нему:
+
+<italic>-module(motor_controller).
+-export([<link:internal>add</link:internal></italic><italic>_event_handler/0]).
+
+<link:internal>add</link:internal></italic><italic>_event_handler()-&gt;
+    event_handler:<link:internal>add</link:internal></italic><italic>_handler(errors, fun controller/1).
+
+controller(too_hot)-&gt;
+    io:format("Turn off the motor~n");
+controller(X)-&gt;
+    io:format("~w ignored event: ~p~n", [?MODULE, X]).</italic>
+
+Вот как это работает:
+
+<italic>5&gt; c(motor_controller).
+{ok,motor_controller}
+6&gt; motor_controller:<link:internal>add</link:internal></italic><italic>_event_handler().
+{<link:internal>add</link:internal></italic><italic>,#Fun&lt;motor_controller.0.62038464&gt;}
+8&gt; event_handler:event(errors, cool). 
+motor_controller ignored event: cool
+{event,cool}
+9&gt; event_handler:event(errors, too_hot).
+Turn off the motor
+{event,too_hot}
+</italic></note-content></text>
+  <last-change-date>2009-04-11T21:34:59.2242300+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-11T21:34:59.2242300+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T21:21:07.5804310+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>747</width>
+  <height>638</height>
+  <x>776</x>
+  <y>141</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Class Templates</title>
+  <text xml:space="preserve"><note-content version="0.1">Class Templates
+
+Общий вид:
+
+	<italic>template &lt;class a_type&gt; class a_class { .. };
+	templa</italic>te&lt;class a_type&gt; void a_class&lt;a_type&gt;::a_function() { .. }
+	<italic>a_class&lt;int&gt; an_example_class;</italic>
+
+Пример:
+
+class calc {
+public:
+  int multiply(int x, int y);
+  int add(int x, int y);
+};
+
+int calc::multiply(int x, int y) {
+  return x * y;
+}
+
+int calc::add(int x, int y) {
+  return x + y;
+}
+
+Преобразовываем в:
+
+template &lt;class A_Type&gt; class calc {
+public:
+  A_Type multiply(A_Type x, A_Type y);
+  A_Type add(A_Type x, A_Type y);
+};
+
+template &lt;class A_Type&gt; A_Type calc&lt;A_Type&gt;::multiply(A_Type x, A_Type y) {
+  return x * y;
+}
+
+template &lt;class A_Type&gt; A_Type calc&lt;A_Type&gt;::add(A_Type x, A_Type y) {
+  return x + y;
+}
+
+
+main() {
+  calc&lt;int&gt;  a_calc_class;
+  printf("%d\n", a_calc_class.add(2.0, 3.3));
+}
+</note-content></text>
+  <last-change-date>2009-07-31T22:54:08.3670390+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-31T22:54:08.3670390+04:00</last-metadata-change-date>
+  <create-date>2009-07-31T22:53:52.1450850+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

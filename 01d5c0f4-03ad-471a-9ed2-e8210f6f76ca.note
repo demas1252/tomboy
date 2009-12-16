@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Emacs и Git</title>
+  <text xml:space="preserve"><note-content version="0.1">Emacs и Git
+
+<link:internal>magit</link:internal>-status
+	
+<list><list-item dir="ltr">клавиши курсора
+</list-item><list-item dir="ltr">1-4 перемещение между блоками
+</list-item><list-item dir="ltr">k - удаление неизвесного или откат измененного 
+</list-item><list-item dir="ltr">i - поместить в список игнорирования
+</list-item><list-item dir="ltr">I только для текущего репозитория
+</list-item><list-item dir="ltr">RET
+</list-item><list-item dir="ltr">s - переместить в список для commit (u - отмена)
+</list-item><list-item dir="ltr">c и C коммит - произволная и стандартная форма лога
+</list-item><list-item dir="ltr">TAB - изменения
+</list-item><list-item dir="ltr">d - сравнение с веткой
+</list-item><list-item dir="ltr">l и L - лог
+<list><list-item dir="ltr">. на одной ревизии
+</list-item><list-item dir="ltr">= на другой -&gt; сравнение</list-item></list></list-item></list>
+</note-content></text>
+  <last-change-date>2009-09-19T01:32:35.9226540+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-19T01:32:35.9226540+04:00</last-metadata-change-date>
+  <create-date>2009-09-16T22:07:10.7543270+04:00</create-date>
+  <cursor-position>313</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>82</x>
+  <y>411</y>
+  <open-on-startup>False</open-on-startup>
+</note>

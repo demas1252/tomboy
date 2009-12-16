@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>propertyHelp()</title>
+  <text xml:space="preserve"><note-content version="0.1">propertyHelp()
+
+По поводу propertyHelp()
+
+Основное предназначение этого метода - получение подсказки для свойств в AOT.
+
+Поясню на примере.
+Если выбрать в AOT любую форму (ей соответствует класс FORM) и вызвать окно свойств, то в нем будут показан список, соответствующий методам класса Form, возвращающим истину при вызове propertyMethod() класса DictMethod, созданного для этого метода. При этом propertyHelp() вернет строку помощи, отображаемую при выделении свойства в статусной строке (или в хинте при наведении мыши на свойство).
+Если в форме выделить любой датасоурс (если он есть), то отобразятся свойства, соответствующие классу FormDataSource
+
+Сами значения, возвращаемые методом propertyHelp(), хранятся в ktd-файле (как, впрочем, и отображаемые названия свойств)
+
+Еще propertyHelp() используется при динамическом формировании хелпа для выбранного метода в \System Documentation\Classes, если он (хелп) не был создан
+
+Ну и вот вывод методов, возвращающих значение для propertyHelp()
+
+static void GetPropertyHelp(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+    TreeNode treeNode = TreeNode::findNode("\\System Documentation\\Classes");
+    DictClass   dictClass;
+    DictMethod  dictMethod;
+    int i;
+    ;
+    SetPrefix("Список методов с установленной строкой помощи");
+    treeNode = treeNode.AOTfirstChild();
+    while (treeNode)
+    {
+        dictClass = new DictClass(className2Id(treeNode.treeNodeName()));
+        <link:internal>if</link:internal> (dictClass)
+        {
+            SetPrefix(dictClass.name());
+            for (i=<link:internal>1</link:internal>;i&lt;=dictClass.objectMethodCnt();i++)
+            {
+                dictMethod = dictClass.objectMethodObject(i);
+                <link:internal>if</link:internal> (dictMethod &amp;&amp; dictMethod.propertyMethod() &amp;&amp; dictMethod.propertyHelp())
+                {
+                    info(strfmt("%3::%<link:internal>1</link:internal>::%2", dictMethod.propertyMethod()==<link:internal>1</link:internal>, dictMethod.propertyHelp(), dictMethod.name()));
+                }
+            }
+        }
+        treeNode = treeNode.AOTnextSibling();
+    }
+}</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.3366400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.3366400+04:00</last-metadata-change-date>
+  <create-date>2008-06-08T21:12:16.5733390+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

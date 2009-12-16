@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Shells method</title>
+  <text xml:space="preserve"><note-content version="0.1">Shells method
+
+     Более сложный и немного более производительный вариант [<link:internal>Srtaight insertion</link:internal>].
+     
+     Идея в том, что если у нас массив элементов(например n0..n15), то мы сначала сорируем 8 пар - (n0, n8), (n<link:internal>1</link:internal>, n9)....
+     Потом четверки (n0, n4, n8, n12), (n<link:internal>1</link:internal>, n5, n9, n13)....
+     И наконец всю последовательность (n0..n15)
+     Сортируем с помощью [<link:internal>Srtaight insertion</link:internal>].
+     
+     Предварительная сортировка маленьких групп позволит нам делать меньше последовательных перемещений, когда мы будем сортировать большой массив.
+     
+     list = [4, <link:internal>1</link:internal>, 9, 2, 5, 2, 9]
+
+     # 4, (13), 40, 121 .... (функция определяющая шаг, для определения размеров групп)
+     def getInc(n):
+         <link:internal>inc</link:internal> = <link:internal>1</link:internal>
+         while <link:internal>inc</link:internal> &lt; n:
+             <link:internal>inc</link:internal> = <link:internal>inc</link:internal> * 3
+             <link:internal>inc</link:internal> = <link:internal>inc</link:internal> + <link:internal>1</link:internal>
+         return <link:internal>inc</link:internal>		
+
+
+     <link:internal>inc</link:internal> = getInc(len(list))
+
+     while <link:internal>inc</link:internal> &gt; <link:internal>1</link:internal>:
+         <link:internal>inc</link:internal> = <link:internal>inc</link:internal> / 3  	# 40, 13, (4), <link:internal>1</link:internal>
+         for i in range(<link:internal>inc</link:internal>, len(list), <link:internal>1</link:internal>):
+             v = list[i]
+             j = i
+             while (list[j - <link:internal>inc</link:internal>] &gt; v):
+                 list[j] = list[j - <link:internal>inc</link:internal>]
+                 j = j - <link:internal>inc</link:internal>
+                 <link:internal>if</link:internal> j &lt; <link:internal>inc</link:internal>:
+                     break
+             list[j] = v
+
+     print list	</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.9740920+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.9740920+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:14:20.9564970+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>875</width>
+  <height>671</height>
+  <x>9</x>
+  <y>319</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Плодятся процесс под Win</title>
+  <text xml:space="preserve"><note-content version="0.1">Плодятся процесс под Win
+
+Вдруг сервер стал плодить нити. В среднем 1 новая каждые 5 секунд. Даже если база в mount. Через 5-15 минут после старта сервера и такого "размножения" - естественно имеем ORA-00020: Maximum number of processes exceeded. В логах ничего.
+В v$process одни только <link:internal>процессы Oracle</link:internal>.exe. Размножаются не background.
+
+Известная проблема, приложение по каким-то причинам не может приконнектиться, т.е. сессия не создается, но поток остается висеть, потом приложение пытается коннектится еще раз, создается еще один поток, и т.д. до возникновения ORA-00020. Чтобы повторить - попробуй перевести базу в mount и запустить этого клиента. Если проблема повторится - пинай разработчиков этого клиента, чтобы фиксили багу.
+
+Оракл различает подключение и сессию. Т.е. это разные ресурсы. Сначала приложение создаёт подключение к сервису СУБД, потом логинится и создаёт сессию. Видимо ошибка в программе. А количество подключений ограничить надо не знаю как.</note-content></text>
+  <last-change-date>2008-03-27T21:58:55.3978140+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:58:55.3978140+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:06:25.4493380+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

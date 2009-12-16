@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Library Cache</title>
+  <text xml:space="preserve"><note-content version="0.1">Library Cache
+
+    Состоит из shared <link:internal>SQL</link:internal> areas и private <link:internal>SQL</link:internal> areas
+         shared <link:internal>SQL</link:internal> areas - the <link:internal>parse tree</link:internal> and execution plan for a given <link:internal>SQL</link:internal> statement
+         private <link:internal>SQL</link:internal> areas - bind information and runtimememory structures
+     
+     Можно мониторить V$<link:internal>DB</link:internal>_OBJECT_CACHE
+     
+     alter system flush shared_pool;
+     select * from <link:internal>test</link:internal>_table;
+     select * from v$<link:internal>db</link:internal>_object_cache where name like '%<link:internal>test</link:internal>_table%';
+     
+     Правда, там почему то задваивается строка запроса....
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.9038480+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.9038480+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:07:56.2702570+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

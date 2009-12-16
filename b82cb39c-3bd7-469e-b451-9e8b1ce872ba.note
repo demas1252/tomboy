@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример создания своего класса для работы с with</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример создания своего класса для работы с with
+
+class Context(object):
+    def __enter__(self):
+        print 'enter'
+    def __exit__(self, exception_type, exception_value, exception_traceback):
+        print 'leaving'
+        <link:internal>if</link:internal> exception_type is None:
+            print 'with no error'
+        else:
+            print 'with an error (%s)' % exception_value
+
+with Context():
+    print 'here we are'
+
+print '============='
+
+with Context():
+    print 'here is a dangerous zone'
+    raise TypeError('bug')
+
+
+
+enter
+here we are
+leaving
+with no error
+=============
+enter
+here is a dangerous zone
+leaving
+with an error (bug)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 18, in &lt;module&gt;
+TypeError: bug
+
+
+То есть, реализуя в своем классе 2 метода - __enter__() и __exit__(), мы можем использовать наш класс с конструкцией with. При этом <link:internal>python</link:internal> гарантированно вызовет __enter__ при вызове with и __exit__() при выходе из блока.
+</note-content></text>
+  <last-change-date>2009-03-24T09:26:44.8169830+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:26:44.8169830+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:26:36.5876510+03:00</create-date>
+  <cursor-position>82</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>438</x>
+  <y>146</y>
+  <open-on-startup>False</open-on-startup>
+</note>

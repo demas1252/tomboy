@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сопоставить пользователя Axapta c сессией MS SQL Server</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Сопоставить пользователя Axapta c сессией MS SQL</link:internal> Server
+
+todo: practice
+
+     <link:internal>1</link:internal>. Порождаем блокировку:
+     
+_static void dev3_lock<link:internal>1</link:internal>(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+    LedgerTable ledgerTable; 
+
+    ttsbegin; 
+    while select forupdate ledgerTable
+    {
+       ledgerTable.AccountName += " <link:internal>Test</link:internal>";
+       ledgerTable.update(); 
+
+       pause; // висим и можем отследить блокировку
+    } 
+    ttscommit; 
+}_
+
+     2. Смотрим <link:internal>блокировки</link:internal> (mode *X)
+     
+_use master 
+go
+exec sp_lock;
+go_
+     --&gt; spid, objectid
+     
+     3. Проверяем - тот ли это объект:
+     
+_use dynamics // наша база
+go
+select name, id, xtype, type from sysobjects where id = object_id_
+
+     4. Перепроверяемся:
+     
+_use master
+go
+select spid, kpid, blocked, dbid, ecid, open_tran from sysprocesses_
+
+     Для нужного нам spid следует посмотреть open_trans
+     
+     5. Смотрим кто же это:
+     
+_use master
+go
+exec sp_who 52;
+go_
+
+     hostname совпадает с именем компа в форме Активных пользователей.
+
+
+    
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.4992150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.4992150+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:57:52.2715000+03:00</create-date>
+  <cursor-position>84</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>7</x>
+  <y>458</y>
+  <open-on-startup>False</open-on-startup>
+</note>

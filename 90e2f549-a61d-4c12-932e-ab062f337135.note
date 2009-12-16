@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>File Locking</title>
+  <text xml:space="preserve"><note-content version="0.1">File Locking
+
+Основная идея в блокировании файлов в <link:internal>linux</link:internal> заключается в том, что все <link:internal>блокировки</link:internal> - advisory.
+То есть, прежде чем открыть файл - мы спрашиваем, а не заблокирован ли он (точнее существует ли файл lock).
+Но если мы не спросим - то никто не будет против.
+
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;errno.h&gt;
+
+const char *lock_file = “/tmp/LCK.<link:internal>test</link:internal>2”;
+
+int main() {
+    int file_desc;
+    int tries = 10;
+
+    while (tries—) {
+        file_desc = open(lock_file, O_RDWR | O_CREAT | O_EXCL, 0444);
+        <link:internal>if</link:internal> (file_desc == -<link:internal>1</link:internal>) {
+            printf(“%d - Lock already present\n”, getpid());
+            sleep(3);
+        }
+        else {
+            printf(“%d - I have exclusive access\n”, getpid());
+            sleep(<link:internal>1</link:internal>);
+            close(file_desc);
+            unlink(lock_file);
+            sleep(2);
+        }
+    }
+exit(EXIT_SUCCESS);
+}
+</note-content></text>
+  <last-change-date>2009-04-01T16:18:08.9533920+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:18:08.9533920+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:47:14.4262550+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

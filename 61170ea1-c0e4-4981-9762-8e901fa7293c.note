@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типичный сценарий работы с Mercurial</title>
+  <text xml:space="preserve"><note-content version="0.1">Типичный сценарий работы с Mercurial
+
+   <link:internal>1</link:internal>. Создаем каталог (aka репозиторий)
+      mkdir project
+      cd project
+      hg init
+   2. Добавляем перую версию файла в репозиторий
+      Создаем файл в этой директории file.<link:internal>c</link:internal>
+      hg status
+      hg <link:internal>add</link:internal> file.<link:internal>c</link:internal>
+      hg commit -m "message"
+   3. Первое изменение
+      Изменяем файл
+      hg status
+      hg diff
+      hg commit -m "message"
+      hg log
+   4. Порождаем дочерний репозиторий
+      cd ..
+      mkdir project-child
+      cd project child
+      hg log
+   5. Вносим изменения в дочерний репозиторий
+      Изменяем файл
+      hg status
+      hg diff
+      hg commit -m "message"
+      hg log
+   6. Затягиваем изменения в родительский репозиторий
+      cd ..
+      cd project
+      hg incoming ../project-child
+      hg pull ../project-child
+   7. Обновляем файлы в основном проекте
+      hg update</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.4400670+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.4400670+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:35:53.6216150+03:00</create-date>
+  <cursor-position>401</cursor-position>
+  <width>450</width>
+  <height>674</height>
+  <x>1219</x>
+  <y>104</y>
+  <open-on-startup>False</open-on-startup>
+</note>

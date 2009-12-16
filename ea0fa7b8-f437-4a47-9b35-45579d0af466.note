@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>что такое количество в обработке НДС</title>
+  <text xml:space="preserve"><note-content version="0.1">что такое количество в обработке НДС
+
+
+andrey.demidov, 06.07.2006 16:46 :
+а что такое Blocked Amounts в книжке не знаешь ?
+Denis Fedotenko, 06.07.2006 16:47 :
+На заблокированные от обработки количества
+andrey.demidov, 06.07.2006 16:47 :
+или заблокированные ?
+andrey.demidov, 06.07.2006 16:47 :
+они у меня 0
+andrey.demidov, 06.07.2006 16:47 :
+хотя Settled, Factured не 0
+Denis Fedotenko, 06.07.2006 16:47 :
+ну значит ничего не заблокировано
+andrey.demidov, 06.07.2006 16:47 :
+а в чем смысл блокирования?
+Denis Fedotenko, 06.07.2006 16:48 :
+запретить зачет части НДС
+Denis Fedotenko, 06.07.2006 16:48 :
+например при лизинге его зачитывают частями
+Denis Fedotenko, 06.07.2006 16:48 :
+каждый месяц по кусочку
+Denis Fedotenko, 06.07.2006 16:48 :
+а по ОС зачитывают только после ввода таковых в эксплуатацию
+andrey.demidov, 06.07.2006 16:48 :
+то есть, это то, что через форму обработки делается ?
+с помощью флажка
+Denis Fedotenko, 06.07.2006 16:48 :
+там строчка фактуры в форме зачета расщепляется</note-content></text>
+  <last-change-date>2008-03-28T22:00:31.5938240+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:00:31.5938240+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:00:29.6481240+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

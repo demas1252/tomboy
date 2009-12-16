@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример текста для LaTeX</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример текста для LaTeX
+
+
+&lt;&lt;pre
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,<link:internal>english</link:internal>]{babel}
+\usepackage[pdftex,unicode]{hyperref}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\begin{document}
+This is our first <link:internal>LaTeX</link:internal> document. Привет.
+\end{document}
+
+&gt;&gt;
+
+примечание:
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+Это две строчки, отвечающие за поддержку русского.
+Должен стоять <link:internal>latex</link:internal>-ucs.</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.5068770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.5068770+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:41:04.5823980+03:00</create-date>
+  <cursor-position>302</cursor-position>
+  <width>549</width>
+  <height>453</height>
+  <x>9</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

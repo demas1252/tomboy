@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вложенные транзакции</title>
+  <text xml:space="preserve"><note-content version="0.1">Вложенные транзакции
+
+Вложенных (автономных) транзакций в <link:internal>MS SQL</link:internal> нет.
+
+&lt;&lt;pre
+select * from <link:internal>test</link:internal>_table
+
+begin transaction
+begin transaction
+update <link:internal>test</link:internal>_table set qty = 10 where id = 2
+select * from <link:internal>test</link:internal>_table
+commit 
+update <link:internal>test</link:internal>_table set qty = 10 where id = 3
+select * from <link:internal>test</link:internal>_table
+rollback 
+
+select * from <link:internal>test</link:internal>_table
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.6977440+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.6977440+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:57:09.7008610+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>611</y>
+  <open-on-startup>False</open-on-startup>
+</note>

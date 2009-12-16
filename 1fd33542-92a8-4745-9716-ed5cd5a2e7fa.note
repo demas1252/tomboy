@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Transportable Tablespaces</title>
+  <text xml:space="preserve"><note-content version="0.1">Transportable Tablespaces
+
+
+todo: practice
+
+8i, 9i: когда инстансы <link:internal>Oracle</link:internal> работают на одной и той же архитектуре и ОС.  10g: независимо от платформы.
+
+Каждая ОС поддерживает либо big-Endian, либо little-Endian формат хранения числовых значений.  Если мы собираемся перемещать tablespace между системами с различными endian - необходимо конвертировать datafiles с помощью rman.
+Чтобы узнать где-какая endian можно использовать запрос:
+&lt;&lt;pre
+select platform_id, platform_name, endian_format
+from v$transportable_platform
+order by platform_name
+
+&gt;&gt;
+
+*Перемещение transportable tablespace*
+
+1. Опредеяем endian
+2. Проверяем
+&lt;&lt;pre
+exec dbms_tts.transport_set_check('sales_data, sales_index', true)
+
+&gt;&gt;
+3. Делаем tablespace read-only:
+&lt;&lt;pre
+alter tablespace sales_data read only;
+alter tablespace sales_index read only;
+
+&gt;&gt;
+4. Выгружаем метаданные:
+&lt;&lt;pre
+$ expdp system dumpfile=sales_tts.dmp logfile=sales_tts.log 
+directory=dumplocation transport_full_check=y 
+transport_<link:internal>tablespaces</link:internal>=sales_data, sales_index
+
+&gt;&gt;
+5. Если необходимо, преобразуем datafiles к нужному endian (не пробовал).
+6. Копируем файлы
+7. Импортируем метаданные:
+&lt;&lt;pre
+$ impdp system dumpfile=sales_tts.dmp logfile=sales_tts.log 
+directory=data_dump_dir transport_datafiles='/oradata/sales_data.dbf',
+'/oradata/sales_index.dbf'
+
+&gt;&gt;
+8. Переводим <link:internal>tablespaces</link:internal> в режим read-write:
+&lt;&lt;pre
+alter tablespace sales_data read write; 
+alter tablespace sales_index read write;
+&gt;&gt;
+
+См. также:
+[<link:internal>External tables</link:internal>]</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.6510940+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.6510940+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:22:20.2747980+03:00</create-date>
+  <cursor-position>1444</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>75</x>
+  <y>152</y>
+  <open-on-startup>False</open-on-startup>
+</note>

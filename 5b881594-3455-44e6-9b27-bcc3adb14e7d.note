@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Троичный поиск</title>
+  <text xml:space="preserve"><note-content version="0.1">Троичный поиск
+
+Метод поиска максимумов и минимумов функции, которая сначала строго возрастает, а затем строго убывает. Или наоборот.  Троичный поиск определяет, что минимум или максимум не может лежать либо в первой, либо в последней трети области, и затем повторяет поиск на оставшихся двух третях. Троичный поиск демонстрирует парадигму программирования «разделяй и властвуй».
+
+Предположим, что мы ищем максимум функции f(x), и что нам известно, что максимум лежит между A и B. Чтобы алгоритм был применим, должно существовать некоторое значение x, такое что
+
+    - для всех a,b, для которых A ≤ a &lt; b ≤ x, выполняется f(a) &lt; f(b), и
+    - для всех a,b, для которых x ≤ a &lt; b ≤ B, выполняется f(a) &gt; f(b).
+
+<link:internal>Реализация троичного поиска на Python</link:internal></note-content></text>
+  <last-change-date>2009-05-25T16:08:02.6161570+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-25T16:08:02.6161570+04:00</last-metadata-change-date>
+  <create-date>2009-05-25T14:16:52.4415160+04:00</create-date>
+  <cursor-position>710</cursor-position>
+  <width>666</width>
+  <height>529</height>
+  <x>850</x>
+  <y>278</y>
+  <open-on-startup>False</open-on-startup>
+</note>

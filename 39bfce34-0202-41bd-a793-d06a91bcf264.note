@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>STL</title>
+  <text xml:space="preserve"><note-content version="0.1">STL
+
+<link:internal>Templates</link:internal>
+<link:internal>Алгоритмы STL</link:internal>
+<link:internal>Контейнеры STL</link:internal>
+<link:internal>Итераторы STL</link:internal>
+<link:internal>Функциональные объекты STL</link:internal>
+<link:internal>Адаптеры STL</link:internal>
+<link:internal>Управление памятью в STL</link:internal>
+
+<link:internal>Сортировка Vector</link:internal>
+<link:internal>Пример использования алгоритмов и потоков</link:internal>
+</note-content></text>
+  <last-change-date>2009-08-09T08:23:31.5604610+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T08:23:31.5604610+04:00</last-metadata-change-date>
+  <create-date>2009-07-06T12:53:18.8281170+04:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>597</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

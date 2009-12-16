@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример sequel</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример sequel
+
+Собственно с самого сайта <link:internal>sequel</link:internal>:
+
+<italic>require "<link:internal>rubygems</link:internal></italic><italic>"
+require "<link:internal>sequel</link:internal></italic><italic>"
+
+<link:internal>DB</link:internal></italic><italic> = <link:internal>Sequel</link:internal></italic><italic>.<link:internal>sqlite</link:internal></italic><italic>
+
+<link:internal>DB</link:internal></italic><italic>.create_table :items do
+  primary_key :id
+  String :name
+  Float :price
+end
+
+items =<link:internal>DB</link:internal></italic><italic>[:items]
+
+items.insert(:name =&gt; 'abc', :price =&gt; 10)
+items.insert(:name =&gt; 'def', :price =&gt; 16)
+items.insert(:name =&gt; 'ghi', :price =&gt; 40)
+
+puts "Items count: #{items.count}"
+puts "The average price is: #{items.avg(:price)}"</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5680170+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5680170+04:00</last-metadata-change-date>
+  <create-date>2009-07-04T22:14:43.4833130+04:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1002</x>
+  <y>445</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Clojure fuctions</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Clojure</link:internal> fuctions
+
+(defn name doc-string? attr-<link:internal>map</link:internal>? [params*] body)
+
+<link:internal>Multimethods in Clojure</link:internal>
+
+<bold>Значение функции по умолчанию</bold>
+
+(defn greeting
+  ([] (greeting "world"))
+  ([username] (str "Hello, " username)))
+
+&gt; (greeting)
+  "Hello, world"
+&gt; (greeting "grome")
+  "Hello, grome"
+
+<bold>Фунции с переменным числом параметров</bold>
+
+(defn date [p1 p2 &amp; oth]
+  (println p1 "and" p2 "with" (count oth)))
+
+user=&gt; (date "one" "two" "three" "four")
+one and two with 2
+
+<bold>Мультиметоды</bold>
+
+Это вид полиформизма - когда есть одна функция диспечер, которая в зависисимости от переданной функции определяет какую из подфункций вызвать.
+
+<size:small><monospace>См. <link:internal>Преобразование рекурсии в lazy</link:internal></monospace></size:small>
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.1629790+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.1629790+04:00</last-metadata-change-date>
+  <create-date>2009-07-26T05:42:56.8777990+04:00</create-date>
+  <cursor-position>257</cursor-position>
+  <width>529</width>
+  <height>676</height>
+  <x>923</x>
+  <y>67</y>
+  <open-on-startup>False</open-on-startup>
+</note>

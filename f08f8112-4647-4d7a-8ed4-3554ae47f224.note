@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Буддология</title>
+  <text xml:space="preserve"><note-content version="0.1">Буддология
+
+<link:internal>Основый буддийского учения</link:internal>
+<link:internal>Школы и направления буддизма</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-08-29T21:43:58.5225320+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T21:43:58.5225320+04:00</last-metadata-change-date>
+  <create-date>2009-08-14T12:30:24.0535250+04:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1045</x>
+  <y>462</y>
+  <open-on-startup>False</open-on-startup>
+</note>

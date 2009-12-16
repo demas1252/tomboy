@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>отступ при вставке новой строки</title>
+  <text xml:space="preserve"><note-content version="0.1">отступ при вставке новой строки
+
+<link:internal>1</link:internal>. в gm_reports_base.newLine() есть переменная, указывающая сколько строк мы собрали
+	rowCount++;
+2. в makeExcel() есть вот такой код:
+  	<link:internal>if</link:internal> (textBuffer.size() != 0)
+        {
+            excelDoc.insertRange(textBuffer, gm_reportSettingsTable::getExcelBookmarkPrefix());
+            excelDoc.extendBookmark(gm_reportSettingsTable::<link:internal>find</link:internal>().ExcelBookmarkPrefix, rowCount - <link:internal>1</link:internal>, 50 - <link:internal>1</link:internal>);
+        }
+
+   То есть, добавив в ExcelDocument метод .insertRows(from, count) (а может уже есть insertRow(), insertRows()) мы можем здесь перед вставкой textBuffer вставлять нужное кол-во строк.
+
+3. Добавить в list_mode отчет метод boolean mustBeRowsInserted() по умолчанию возвращающий false и подвесить на него вызов в пункте 2
+
+p.s. Надо подумать, что будет с консолидацией
+
+Ее тоже надо дорабатывать:
+
+<link:internal>1</link:internal>. Если консолидируется отчет mustBeRowsInserted() == true
+	2. при выделении метки label определяем кол-во строк в ней
+	3. сдвигаем footer на нужную величину</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.3330360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.3330360+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T12:49:59.1524800+04:00</create-date>
+  <cursor-position>852</cursor-position>
+  <width>847</width>
+  <height>779</height>
+  <x>104</x>
+  <y>171</y>
+  <open-on-startup>False</open-on-startup>
+</note>

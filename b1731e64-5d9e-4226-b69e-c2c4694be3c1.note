@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вероятность</title>
+  <text xml:space="preserve"><note-content version="0.1">Вероятность
+
+P(A) = m / n
+
+n - общее число событий
+m - число тех событий, когда происходит нужный исход
+
+<link:internal>Более сложные примеры определения вероятности</link:internal>
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-06-10T10:01:04.7028570+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:01:04.7028570+04:00</last-metadata-change-date>
+  <create-date>2009-05-26T13:24:45.8967130+04:00</create-date>
+  <cursor-position>155</cursor-position>
+  <width>628</width>
+  <height>566</height>
+  <x>366</x>
+  <y>94</y>
+  <open-on-startup>False</open-on-startup>
+</note>

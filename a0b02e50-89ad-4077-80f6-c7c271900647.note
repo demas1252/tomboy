@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Преобразования Лоренца</title>
+  <text xml:space="preserve"><note-content version="0.1">Преобразования Лоренца
+
+	<italic>x1 = (x - vt) / sqrt(1 - v^2 / c^2)
+	y1 = y
+	z1 = z
+	t1 = [t - (vx/c^2)] / sqrt(1-v^2/c^2)</italic>
+
+Следствия:
+
+<list><list-item dir="ltr">два события, происходящие в одной системе отсчета одновременно в разных местах, могут не быть одновременными в другой системе;</list-item></list>
+
+<link:internal>Сокращени длины по Лоренцу-Фицджеральду</link:internal>
+<link:internal>Замедление времени</link:internal>
+<link:internal>Одновременность</link:internal></note-content></text>
+  <last-change-date>2009-11-05T16:11:59.8498430+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.8498430+03:00</last-metadata-change-date>
+  <create-date>2009-07-29T15:10:29.1225640+04:00</create-date>
+  <cursor-position>318</cursor-position>
+  <width>517</width>
+  <height>457</height>
+  <x>1116</x>
+  <y>231</y>
+  <open-on-startup>False</open-on-startup>
+</note>

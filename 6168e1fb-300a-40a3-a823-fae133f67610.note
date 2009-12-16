@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вставить запись со своим значением IDENTITY</title>
+  <text xml:space="preserve"><note-content version="0.1">Вставить запись со своим значением IDENTITY
+
+-- Create products table.
+CREATE TABLE products (id int IDENTITY PRIMARY KEY, product varchar(40))
+GO
+-- Inserting values into products table.
+INSERT INTO products (product) VALUES ('screwdriver')
+INSERT INTO products (product) VALUES ('hammer')
+INSERT INTO products (product) VALUES ('saw')
+INSERT INTO products (product) VALUES ('shovel')
+GO
+
+-- Create a gap in the identity values.
+DELETE products
+WHERE product = 'saw'
+GO
+
+SELECT *
+FROM products
+GO
+
+-- Attempt to insert an explicit ID value of 3;
+-- should return a warning.
+INSERT INTO products (id, product) VALUES(3, 'garden shovel')
+GO
+-- SET IDENTITY_INSERT to ON.
+SET IDENTITY_INSERT products ON
+GO
+
+-- Attempt to insert an explicit ID value of 3
+INSERT INTO products (id, product) VALUES(3, 'garden shovel')
+GO
+
+SELECT *
+FROM products
+GO
+-- Drop products table.
+DROP TABLE products
+GO
+</note-content></text>
+  <last-change-date>2009-04-05T13:41:56.7638310+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-05T13:41:56.7638310+04:00</last-metadata-change-date>
+  <create-date>2009-04-05T13:41:41.9632660+04:00</create-date>
+  <cursor-position>78</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>77</y>
+  <open-on-startup>False</open-on-startup>
+</note>

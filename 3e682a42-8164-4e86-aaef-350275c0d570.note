@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Собственная реализация map</title>
+  <text xml:space="preserve"><note-content version="0.1">Собственная реализация map
+
+<italic>(define (my-<link:internal>map</link:internal></italic><italic> f lst)
+    (cond
+     [(empty? lst) empty]
+     [else (cons (f (first lst))
+                 (my-<link:internal>map</link:internal></italic><italic> f (rest lst)))]))
+</italic>
+  &gt; (my-<link:internal>map</link:internal> string-upcase (list "ready" "set" "go"))
+  ("READY" "SET" "GO")</note-content></text>
+  <last-change-date>2008-10-03T13:31:32.2098450+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-03T13:31:32.2098450+04:00</last-metadata-change-date>
+  <create-date>2008-10-03T13:31:14.1972869+04:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>485</width>
+  <height>376</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

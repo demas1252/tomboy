@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Указатели и ссылки</title>
+  <text xml:space="preserve"><note-content version="0.1">Указатели и ссылки
+
+<link:internal>Определение указателей и ссылок</link:internal>
+
+<link:internal>Передача параметров по значению и ссылке</link:internal>
+<link:internal>Адресная арифметика</link:internal>
+<link:internal>Массивы указателей</link:internal>
+<link:internal>Многоразмерные массивы</link:internal>
+<link:internal>Инициализация массива указателей</link:internal>
+<link:internal>Различие между массивом указателей и многомерным массивом</link:internal>
+<link:internal>Возврат массива из функции</link:internal>
+<link:internal>Инициализация массива строк в функции</link:internal>
+<link:internal>Возврат строки из функции</link:internal>
+<link:internal>Аргументы командной строки</link:internal>
+<link:internal>Различие между указателем и ссылкой</link:internal>
+<link:internal>Указатели на функции</link:internal>
+
+<italic>см. также</italic>
+<link:internal>Cast from void pointer</link:internal>
+<link:internal>Стековые и динамические объекты</link:internal>
+</note-content></text>
+  <last-change-date>2009-07-14T09:56:31.2769100+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-14T09:56:31.2769100+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:13:17.0639389+03:00</create-date>
+  <cursor-position>274</cursor-position>
+  <width>656</width>
+  <height>582</height>
+  <x>891</x>
+  <y>255</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Too many different cell formats</title>
+  <text xml:space="preserve"><note-content version="0.1">Too many different cell formats
+
+<link:url>http://support.microsoft.com/default.aspx?scid=kb;en-us;213904</link:url>
+
+<bold>Причина</bold>
+This problem occurs when the workbook contains more than approximately 4,000 different combinations of cell formats. A combination is defined as a unique set of formatting elements that are applied to a cell. A combination includes all font formatting (for example: typeface, font size, italic, bold, and underline), borders (for example: location, weight, and color), cell patterns, number formatting, alignment, and cell protection.
+
+<bold>Примечание</bold>
+<link:internal>If</link:internal> two or more cells share exactly the same formatting, they use one formatting combination. However, <link:internal>if</link:internal> there are any differences in formatting between the cells, each cell uses a different combination.
+
+<bold>Решение</bold>
+To resolve this problem, simplify the formatting in the workbook. For example, the following are suggestions for simplifying formatting:
+•	Use a standard font.
+
+Using the same font for all cells reduces the number of formatting combinations.
+•	<link:internal>If</link:internal> you use borders in a worksheet, use them consistently.
+
+<bold>Примечание</bold>
+<link:internal>If</link:internal> you <link:internal>apply</link:internal> a border to the right side of a cell, it is not necessary to <link:internal>apply</link:internal> a border to the left side of the cell that is to the right because the borders overlap.
+•	<link:internal>If</link:internal> you <link:internal>apply</link:internal> patterns to the cells, remove the patterns by clicking No Color in the Patterns tab of the Format Cells dialog box.
+<bold>Примечание</bold>
+After you simplify or standardize the formatting in the workbook, save, close, and then reopen the workbook before you <link:internal>apply</link:internal> additional cell formatting.</note-content></text>
+  <last-change-date>2009-10-17T22:10:49.9245690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:49.9245690+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T08:12:24.3791660+04:00</create-date>
+  <cursor-position>540</cursor-position>
+  <width>1087</width>
+  <height>834</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

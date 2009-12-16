@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выделить несколько листов</title>
+  <text xml:space="preserve"><note-content version="0.1">Выделить несколько листов
+
+
+_Dim arrItem()
+ReDim arrItem(<link:internal>1</link:internal>)
+arrItem(0) = Sheets(<link:internal>1</link:internal>).Name
+arrItem(<link:internal>1</link:internal>) = Sheets(2).Name
+Sheets(arrItem()).Select_</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.9585590+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.9585590+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:04:41.7215939+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>позвонки</title>
+  <text xml:space="preserve"><note-content version="0.1">позвонки
+
+33-34 позвонка, из которых:
+
+<list><list-item dir="ltr">свободные: 7 шейных, 12 грудных, 5 поясничных
+</list-item><list-item dir="ltr">срослись друг с другом: 5 крестцовых, 3-5 копчиковых</list-item></list>
+
+Шейные: 
+<list><list-item dir="ltr">atlant (I)
+</list-item><list-item dir="ltr">axis (II) - содержит зуб, на котором вращается первых позвонок, сочлененный с черепом</list-item></list>
+Грудные: T(I) - T(XII)
+<list><list-item dir="ltr">с II по IX содержат реберные ямки</list-item></list>
+
+Крестец состоит из 5 позвонков, который еще в юношеском возрасте начинает срастаться в единую кость.
+
+Копчик является <link:internal>гомологом</link:internal> хвостового скелета.
+	
+
+
+
+ </note-content></text>
+  <last-change-date>2009-08-06T10:32:26.0999420+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-06T10:32:26.0999420+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T10:10:42.1099100+04:00</create-date>
+  <cursor-position>460</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>708</x>
+  <y>192</y>
+  <open-on-startup>False</open-on-startup>
+</note>

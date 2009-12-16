@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>checkByBalance</title>
+  <text xml:space="preserve"><note-content version="0.1">checkByBalance
+
+Здесь формируется Query:
+
+EmplTrans
+	<bold>group by</bold> TransType (это нам нужно, чтобы отдельно вычленить тип ExchAdj.
+	<bold>sum</bold> AmountMST
+	<bold>filter </bold>EmplAccount, PostingProfile, TransDate=..date-1, Reversed=No
+
+В результате мы получаем некую сумму balanceMST, которая соответствует открытому сальдо по данному контрагенту на дату предшесвующую отчету, но для целей отчета в будущем может быть немного подкорректирована.
+
+Например может быть добавлена сумма ExchAdjustUnrealized из EmplTrans по данному подотчетнику, TransType = ExchAdj и TransDate = date.
+
+Потом мы делаем действие, которое мне не совсем поняно. Мы перебираем все проводки (TransType != ExchAdj) за дату date, не покрытые авансовыми отчетами и по сопоставлениям ищем парную им. Если в этой парной дата оказалась == date - то все. Если мы не нашли такой проводки или дата там оказалась другая то мы += сумму этой проводки и заполяем ею balanceMap.
+	</note-content></text>
+  <last-change-date>2009-06-07T13:08:00.0985860+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-07T13:08:00.0985860+04:00</last-metadata-change-date>
+  <create-date>2009-06-07T12:56:57.2808590+04:00</create-date>
+  <cursor-position>276</cursor-position>
+  <width>749</width>
+  <height>483</height>
+  <x>773</x>
+  <y>298</y>
+  <open-on-startup>False</open-on-startup>
+</note>

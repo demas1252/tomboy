@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с QT на C++</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с QT на C++
+
+<link:internal>Сборка qt проектов</link:internal>
+
+<link:broken>Пример простой gui программы на qt</link:broken> (<link:url>http://bitbucket.org/demas/study/changeset/4f18f16e54d4/</link:url>)
+
+<link:internal>Указатели в Qt</link:internal>
+<link:internal>QtOpenGL</link:internal></note-content></text>
+  <last-change-date>2009-08-25T13:34:41.6414390+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-25T13:34:41.6414390+04:00</last-metadata-change-date>
+  <create-date>2009-08-01T06:47:17.6405750+04:00</create-date>
+  <cursor-position>135</cursor-position>
+  <width>507</width>
+  <height>300</height>
+  <x>811</x>
+  <y>449</y>
+  <open-on-startup>False</open-on-startup>
+</note>

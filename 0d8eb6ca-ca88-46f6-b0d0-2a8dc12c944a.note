@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Преобразование рекурсии в lazy</title>
+  <text xml:space="preserve"><note-content version="0.1">Преобразование рекурсии в lazy
+
+(declare replace-symbol replace-symbol-expression)
+
+;; (replace-symbol (deeply-nested 5) 'bottom 'deepest)
+;; ((((((deepest))))))
+
+;; но это плохой способ - так как рвет стек
+
+(defn replace-symbol [coll oldsym newsym]
+  (<link:internal>if</link:internal> (empty? coll)
+    ()
+    (cons (replace-symbol-expression
+	   (first coll) oldsym newsym)
+	  (replace-symbol (rest coll) oldsym newsym))))
+
+(defn replace-symbol-expression [symbol-expr oldsym newsym]
+  (<link:internal>if</link:internal> (symbol? symbol-expr)
+    (<link:internal>if</link:internal> (= symbol-expr oldsym)
+      newsym
+      symbol-expr)
+    (replace-symbol symbol-expr oldsym newsym)))
+
+;; (deeply-nested 5)   
+;; ((((((bottom))))))
+
+(defn deeply-nested [n]
+  (loop [n n result '(bottom)]
+    (<link:internal>if</link:internal> (= n 0)
+      result
+      (recur (dec n) (list result)))))
+
+
+;; попробуем преобразовать в lazy
+
+;;; coll-or-scalar - dispathing -&gt; какую из функций вызывать
+
+(defn coll-or-scalar [x &amp; _] 
+  (<link:internal>if</link:internal> (coll? x)
+    :collection
+    :scalar))
+
+(defmulti replace-symbol coll-or-scalar)
+
+(defmethod replace-symbol :collection [coll oldsym newsym]
+  (lazy-seq
+    (when (seq coll)
+      (cons (replace-symbol (first coll) oldsym newsym)
+	    (replace-symbol (rest coll) oldsym newsym)))))
+
+(defmethod replace-symbol :scalar [obj oldsym newsym]
+  (<link:internal>if</link:internal> (= obj oldsym) newsym obj))
+  
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.1951760+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.1951760+04:00</last-metadata-change-date>
+  <create-date>2009-08-19T14:41:38.3685399+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>815</x>
+  <y>148</y>
+  <open-on-startup>False</open-on-startup>
+</note>

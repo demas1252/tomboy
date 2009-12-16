@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переименовать столбец</title>
+  <text xml:space="preserve"><note-content version="0.1">Переименовать столбец
+
+<italic>create table testing(a integer)
+
+insert into testing values(1)
+
+select * from testing
+
+sp_rename 'testing.a', 'b', 'column'
+
+select * from testing
+
+drop table testing</italic></note-content></text>
+  <last-change-date>2009-04-06T22:42:38.8952850+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-06T22:42:38.8952850+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:53:08.4708770+03:00</create-date>
+  <cursor-position>189</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>658</y>
+  <open-on-startup>False</open-on-startup>
+</note>

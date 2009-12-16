@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Различие между указателем и ссылкой</title>
+  <text xml:space="preserve"><note-content version="0.1">Различие между указателем и ссылкой
+
+
+<italic>Б.Страуструп ("Язык прграммирования С++. Специальное издание", стор. 138): </italic>
+
+... Несмотря на форму записи, ни один оператор не выполняет действий над ссылкой. Например: 
+
+<italic>void g()  {
+    int ii = 0;
+    int&amp; rr = ii;
+    rr++;              //ii увеличивается на 1
+    int* pp = &amp;rr;     //pp указывает на ii
+}
+</italic>
+Выражение rr++ допустимо, но не увеличивает ссылку rr; ++ примееняется к целому значению ii. Как следствие значение ссылки нельзя изменить после инициализации. 
+
+Очевидной реализацией ссылки является (константный) указатель, при каждом использовании которого происходит разыменование. 
+... ссылка, в отличие от указателя, не является объектом, над которым можно выполнять операции. 
+
+<italic>Кодт</italic>
+
+Указатель можно инициализировать 
+- адресом валидного объекта 
+- адресом "за концом массива" 
+- нулевым указателем 
+- мусором (адресом разрушенного объекта) 
+(В трёх последних случаях запрещено разыменовывать; в двух последних - запрещена <link:internal>адресная арифметика</link:internal>). 
+
+Ссылку же можно инициализировать только (адресом) валидного объекта. В дальнейшем ссылка может инвалидироваться, но это совершенно другой разговор. 
+Все остальные случаи - это UB.
+
+И еще:
+
+Summary from answers and links below:
+
+   1. A pointer can be re-assigned any number of times while a reference can not be reassigned after initialization.
+   2. A pointer can point to NULL while reference can never point to NULL
+   3. You can't take the address of a reference like you can with pointers
+   4. There's no "reference arithmetics" (but you can take the address of an object pointed by a reference and do pointer arithmetics on it as in &amp;obj + 5).
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.4377820+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.4377820+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:13:50.3483250+03:00</create-date>
+  <cursor-position>1653</cursor-position>
+  <width>1108</width>
+  <height>742</height>
+  <x>253</x>
+  <y>248</y>
+  <open-on-startup>False</open-on-startup>
+</note>

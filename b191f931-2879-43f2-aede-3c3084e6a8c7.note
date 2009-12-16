@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как работает реализованная курсовая разница по поставщикам</title>
+  <text xml:space="preserve"><note-content version="0.1">Как работает реализованная курсовая разница по поставщикам
+
+Форма сопоставления <italic>VendOpenTrans</italic>_<italic>Ru</italic>
+Маркируем фактуру и платеж и жмем сопоставить:
+	VendTrans::settleTransact(vendTable)
+Класс CustVendSettle
+	::settleNow() - Это <link:internal>Сопоставление платежей с оплатами</link:internal>
+		
+<link:internal>Принятие решение о том, что отводим курсовую</link:internal>
+<link:internal>Создание VendTrans по курсовой</link:internal>  (ГК там же)</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.8911830+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.8911830+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T11:43:06.3417580+04:00</create-date>
+  <cursor-position>336</cursor-position>
+  <width>671</width>
+  <height>384</height>
+  <x>533</x>
+  <y>561</y>
+  <open-on-startup>False</open-on-startup>
+</note>

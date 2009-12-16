@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Параметризированные модули в Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Параметризированные модули в Erlang
+
+Это модули в которые при их импорте можно передать переменные:
+
+<bold>Модуль:</bold>
+
+<italic>-module(xx,[A,B]).
+-compile(export_all).
+
+<link:internal>test</link:internal></italic><italic>()-&gt;
+    io:format("A=~w,B=~w~n",[A,B]).
+</italic>
+<bold>Пример работы с ним:</bold>
+
+<italic>Eshell V5.6.5  (abort with ^G)
+1&gt; B=xx:new(abc,"hehe").
+{xx,abc,"hehe"}
+2&gt; B:<link:internal>test</link:internal></italic><italic>().
+A=abc,B=[104,101,104,101]
+ok</italic>
+
+</note-content></text>
+  <last-change-date>2009-04-13T14:20:36.2077630+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-13T14:20:36.2077630+04:00</last-metadata-change-date>
+  <create-date>2009-04-13T14:18:58.9869910+04:00</create-date>
+  <cursor-position>335</cursor-position>
+  <width>450</width>
+  <height>628</height>
+  <x>1094</x>
+  <y>342</y>
+  <open-on-startup>False</open-on-startup>
+</note>

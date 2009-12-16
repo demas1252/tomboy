@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Взаимодействие Erlang с внешними программами</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Взаимодействие Erlang</link:internal> с внешними программами
+
+Создаем внешнюю <link:broken>C</link:broken> программу, которая будет уметь возводить числа в квадрат  и складывать их:
+
+<bold>example1.<link:broken>c</link:broken></bold>
+
+<italic>int twice(int x) {
+  return x * x;
+}
+
+int sum(int x, int y) {
+  return x + y;
+}
+</italic>
+<bold>example1_driver.<link:broken>c</link:broken></bold>
+
+<italic>#include &lt;stdio.h&gt;
+typedef unsigned char byte;
+
+int read_cmd(byte *buff);
+int write_cmd(byte *buff, int len);
+
+int main() {
+  int fn, arg1, arg2, result;
+  byte buff[100];
+
+  while(read_cmd(buff) &gt; 0) {
+    fn = buff[0];
+    
+    <link:internal>if</link:internal></italic><italic>(fn == 1) {
+      arg1 = buff[1];
+      result = twice(arg1);
+    } else <link:internal>if</link:internal></italic><italic> (fn == 2) {
+      arg1 = buff[1];
+      arg2 = buff[2];
+      result = sum(arg1, arg2);
+    }
+
+    buff[0] = result;
+    write_cmd(buff, 1);
+  }
+}
+</italic>
+<bold>erl_comm.<link:broken>c</link:broken></bold>
+
+<italic>include &lt;unistd.h&gt;
+
+typedef unsigned char byte;
+
+int read_cmd(byte *buf);
+int write_cmd(byte *buf, int len);
+int read_exact(byte *buf, int len);
+int write_exact(byte *buf, int len);
+
+int read_cmd(byte *buf) {
+  int len;
+
+  <link:internal>if</link:internal></italic><italic>(read_exact(buf, 2) != 2)
+    return -1;
+  
+  len = (buf[0] &lt;&lt; 8) | buf[1];
+  return read_exact(buf, len);
+}
+
+int write_cmd(byte *buf, int len)
+{
+  byte li;
+
+  li = (len &gt;&gt; 8) &amp; 0xff;
+  write_exact(&amp;li, 1);
+  
+  li = len &amp; 0xff;
+  write_exact(&amp;li, 1);
+
+  return write_exact(buf, len);
+}
+
+int read_exact(byte *buf, int len)
+{
+  int i, got = 0;
+
+  do {
+    <link:internal>if</link:internal></italic><italic>((i = read(0, buf + got, len - got)) &lt;= 0)
+      return i;
+    got += i;
+  } while (got &lt; len);
+
+  return len;
+}
+
+int write_exact(byte *buf, int len) {
+  int i, wrote = 0;
+
+  do {
+    <link:internal>if</link:internal></italic><italic> ((i = write(1, buf + wrote, len - wrote)) &lt;= 0)
+      return i;
+    wrote += i;
+  } while (wrote &lt; len);
+
+  return len;
+}
+</italic>
+<bold>Собираем исполняемый модуль</bold>
+
+<italic><link:internal>gcc</link:internal></italic><italic> -o example1_drv.so -fpic -shared example1.<link:broken>c</link:broken></italic><italic> example1_lid.<link:broken>c</link:broken></italic>
+<italic><link:internal>gcc</link:internal></italic><italic> -o example1 example1.<link:broken>c</link:broken></italic><italic> erl_comm.<link:broken>c</link:broken></italic><italic> example1_driver.<link:broken>c</link:broken></italic><italic>
+
+</italic><bold><link:internal>Erlang</link:internal></bold><bold> программа</bold>
+
+<italic>-module(example1).
+-export([start/0, stop/0]).
+-export([twice/1, sum/2]).
+
+start()-&gt;
+    spawn(fun()-&gt;
+		  register(example1, self()),
+		  process_flag(trap_exit, true),
+		  Port = open_port({spawn, "./example1"}, [{packet, 2}]),
+		  loop(Port)
+	  end).
+
+stop() -&gt;
+    example1 ! stop.
+
+twice(X) -&gt;
+    call_port({twice, X}).
+
+sum(X, Y) -&gt;
+    call_port({sum, X, Y}).
+
+call_port(Msg) -&gt;
+    example1 ! {call, self(), Msg},
+    receive
+	{example1, Result} -&gt;
+	    Result
+end.
+
+loop(Port)-&gt;
+    receive
+	{call, Caller, Msg} -&gt;
+	    Port ! {self(), {<link:internal>command</link:internal></italic><italic>, encode(Msg)}},
+	    receive
+		{Port, {data, Data}} -&gt;
+		    Caller ! {example1, decode(Data)}
+	    end,
+	    loop(Port);
+	stop -&gt;
+	    Port ! {self(), close},
+	    receive
+		{Port, <link:internal>closed</link:internal></italic><italic>} -&gt;
+		    exit(normal)
+	    end;
+	{'EXIT', Port, Reason} -&gt;
+	    exit({port_terminated, Reason})
+end.
+
+encode({twice, X})-&gt;
+    [1, X];
+encode({sum, X, Y}) -&gt;
+    [2, X, Y].
+
+decode([Int])-&gt;
+    Int.
+</italic>
+<bold>Демонстрация</bold>
+
+&gt; example1:start().
+&gt; example1:sum(3,23).
+
+
+
+</note-content></text>
+  <last-change-date>2009-06-29T12:35:26.1412380+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T12:35:26.1412380+04:00</last-metadata-change-date>
+  <create-date>2009-02-04T17:19:15.3619200+03:00</create-date>
+  <cursor-position>2736</cursor-position>
+  <width>802</width>
+  <height>681</height>
+  <x>1012</x>
+  <y>38</y>
+  <open-on-startup>False</open-on-startup>
+</note>

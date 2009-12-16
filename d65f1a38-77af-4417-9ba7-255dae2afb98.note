@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Subversion Crash Course</title>
+  <text xml:space="preserve"><note-content version="0.1">Subversion Crash Course
+
+<bold>Cоздание репозитория</bold>
+
+svnadmin create f:\\depot
+
+<bold>Создание проекта</bold>
+
+cd &lt;import file folder&gt;
+svn import -m "importing" . <link:url>file:///f:/_depot/myproject</link:url>
+
+Здесь: . - брать файлы из текущего каталога;  путь - куда в репозитории заливать фалы
+
+<bold>Получение файлов из репозитория (начало работы)</bold>
+
+cd &lt;work folder&gt;
+svn co <link:url>file:///_depot/my_project</link:url> my_project
+
+Извлекает из каталога указанную папку и помещает ее в подпапку my_project текущей папки.
+
+<bold>Изменения файлов</bold>
+
+Меняем файл.
+cd &lt;work folder&gt;\my_project
+svn status file.txt
+
+Показывает изменился ли файл локально (М).
+
+Меняем файл.
+cd &lt;work folder&gt;\my_project
+svn diff file.txt
+
+Показывает, что именно изменилось.
+
+<bold>Внесение изменений в репозиторий</bold>
+
+cd &lt;parent_dir&gt;
+svn commit -m "first change"
+
+<bold>Добавление файлов и папок</bold>
+
+cd &lt;parent_dir&gt;
+svn <link:internal>add</link:internal> o2.txt
+svn <link:internal>add</link:internal> new_folder
+svn commit -m "second change"</note-content></text>
+  <last-change-date>2009-09-08T13:18:07.9582600+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-08T13:18:07.9582600+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:04:52.1431410+03:00</create-date>
+  <cursor-position>867</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>869</x>
+  <y>380</y>
+  <open-on-startup>False</open-on-startup>
+</note>

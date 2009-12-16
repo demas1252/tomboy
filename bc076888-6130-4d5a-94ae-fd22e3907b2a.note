@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>git reset</title>
+  <text xml:space="preserve"><note-content version="0.1">git reset
+
+Если брать самые частые случаи, когда нужно так или иначе отменить последний коммит или изменения после оного, то это будет команды <link:internal>git</link:internal> reset (она же <link:internal>git</link:internal> reset --mixed HEAD) и <link:internal>git</link:internal> reset --hard. Первая удаляет из индекса последний коммит, но не трогает изменения в файлах, вторая же беспощадно приводит и индекс, и файлы к первозданному виду^W^Wсостоянию на момент указанного коммита.
+Иными словами, отменить правки, пусть даже и за`stage`нные через <link:internal>git add</link:internal>, можно сделав $ <link:internal>git</link:internal> reset HEAD (помните альяс <link:internal>git</link:internal> unstage?).
+А полностью дропнуть, скажем, последний коммит (т.е. отмотать время на момент предпоследнего коммита) — $ <link:internal>git</link:internal> reset --hard HEAD^.</note-content></text>
+  <last-change-date>2009-12-08T13:12:14.9869280+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-08T13:12:14.9869280+03:00</last-metadata-change-date>
+  <create-date>2009-11-23T21:12:47.8217569+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

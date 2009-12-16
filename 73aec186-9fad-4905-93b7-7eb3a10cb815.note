@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Операции недоступные в режиме совместного доступа</title>
+  <text xml:space="preserve"><note-content version="0.1">Операции недоступные в режиме совместного доступа
+
+
+Unavailable features 
+
+<link:internal>1</link:internal>. Insert or delete blocks of cells 
+Alternative: You can insert entire rows and columns. 
+
+2. Delete worksheets 
+Alternative: None 
+
+3. Merge cells or split merged cells 
+Alternative: None 
+
+4. <link:internal>Add</link:internal> or change conditional formats 
+Alternative: Existing conditional formats continue to appear as cell values change, but you can't change these formats or redefine the conditions. 
+
+5. <link:internal>Add</link:internal> or change data validation 
+Alternative: Cells continue to be validated when you type new values, but you can't change existing data validation settings. 
+
+6. Create or change charts or PivotChart reports 
+Alternative: You can view existing charts and reports. 
+
+7. Insert or change pictures or <link:internal>other</link:internal> objects 
+Alternative: You can view existing pictures and objects. 
+
+8. Insert or change hyperlinks 
+Alternative: Existing hyperlinks continue to work. 
+
+9. Use drawing tools 
+Alternative: You can view existing drawings and graphics. 
+
+10. Assign, change, or remove passwords 
+Alternative: Existing passwords remain in effect. 
+
+11. Protect or unprotect worksheets or the workbook 
+Alternative: Existing protection remains in effect. 
+
+12. Create, change, or view scenarios 
+Alternative: None 
+
+13. Group or outline data 
+Alternative: You can continue to use existing outlines. 
+
+14. Insert <link:internal>automatic</link:internal> subtotals 
+Alternative: You can view existing subtotals. 
+
+15. Create data <link:internal>tables</link:internal> 
+Alternative: You can view existing data <link:internal>tables</link:internal>. 
+
+16. Create or change PivotTable reports 
+Alternative: You can view existing reports. 
+
+17. Write, record, change, view, or assign macros 
+Alternative: You can run existing macros that don't access unavailable features. You can record shared workbook operations into a macro stored in <link:internal>another</link:internal> non-shared workbook. 
+
+18. <link:internal>Add</link:internal> or change Microsoft <link:internal>Excel</link:internal> 4 dialog sheets 
+Alternative: None 
+
+19. Change or delete array formulas 
+Alternative: Existing array formulas continue to calculate correctly.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.9883020+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.9883020+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:10:37.0595520+04:00</create-date>
+  <cursor-position>78</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

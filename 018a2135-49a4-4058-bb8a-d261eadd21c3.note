@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сумма с учетом НДС в накладных на услуги</title>
+  <text xml:space="preserve"><note-content version="0.1">Сумма с учетом НДС в накладных на услуги
+
+
+     [source: axforum]
+     [author: EVGL]
+     
+     _Да нет никакого бага. Тыщу раз писали: нет в накладной на услуги возможности считать налоги от суммы, включающей НДС. Такая возможность есть только в заказах, закупках и журналах ГК._</note-content></text>
+  <last-change-date>2008-03-28T22:05:34.1470310+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:05:34.1470310+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:05:32.5699020+03:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

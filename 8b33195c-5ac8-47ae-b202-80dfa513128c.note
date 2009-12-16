@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>ВПР</title>
+  <text xml:space="preserve"><note-content version="0.1">ВПР
+
+
+     =ВПР(ячейка поиска, таблица, номер возвращаемого столбца)
+     
+     Допустим у нас есть справочник:
+     <link:internal>1</link:internal> стол
+     2 стул
+     3 диван
+     4 шкаф
+     
+     И мы хотим организовать еще таблицу, где пользователь будет вводить id(<link:internal>1</link:internal>,2,3,4), а <link:internal>Excel</link:internal> в соседний столбец будет вытягивать наименование.
+     Тогда мы в ячейку куда будет вытягиваться наименование пишем формулу.  Первый параметр - соседняя ячейка(номер), второй - таблица(выше), третий - номер столбца таблицы из которого будет вытягиваться значение для подстановки - 2.</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.5673730+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.5673730+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:07:16.7690890+04:00</create-date>
+  <cursor-position>32</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Журнал платежей клиента</title>
+  <text xml:space="preserve"><note-content version="0.1">Журнал платежей клиента
+
+    Формируемая проводка: Банк - Сальдо по клиенту
+     Банк - задается пользователем
+     Сальдо по клиенту - Итоговый счет из Профиля разноски по клиентам
+     
+     _Валюты_
+     Платеж может быть в валюте, отличной от основной валюты компании. Для каждого платежа можно указать курс, отличный от стандартного.
+     В custTrans пишется AmountCur - валюта операции (то есть gb, например); AmountMST - пересчитанное в валюту (rur).
+     
+     См. также:
+     [<link:internal>Механизм разноски платежного поручения</link:internal>]
+     [<link:internal>Создание платежа через ГК</link:internal>]
+     [<link:internal>Предоплаты</link:internal>]
+     [<link:internal>Налоги в платежах</link:internal>]
+     </note-content></text>
+  <last-change-date>2008-03-28T22:06:32.7955240+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:06:32.7955240+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:05:48.1618730+03:00</create-date>
+  <cursor-position>583</cursor-position>
+  <width>822</width>
+  <height>703</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

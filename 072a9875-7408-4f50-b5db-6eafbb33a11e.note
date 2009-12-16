@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример поиска в глубину на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример поиска в глубину на Python
+
+class Vertex:
+    def __init__(self, data):
+        self.data = data
+        self.successors = []
+
+def petersenGraph():
+    v = [Vertex(i) for i in xrange(10)]
+
+    edges = \
+          [(0,1), (1,0), (1,2), (2,1), (2,3), (3,2), (3,4), (4,3), (4,0), (0,4),
+           (5,6), (6,5), (6,7), (7,6), (7,8), (8,7), (8,9), (9,8), (9,5), (5,9),
+           (5,0), (0,5), (6,2), (2,6), (7,4), (4,7), (8,1), (1,8), (9,3), (3,9)]
+
+    for a, b in edges:
+        v[a].successors.append(v[b])
+
+    
+    return v
+
+def depthFirstSearch(start, isGoal, result):
+    # check for cycles
+    <link:internal>if</link:internal> start in result:
+        return False
+
+    result.append(start)
+
+    <link:internal>if</link:internal> isGoal(start):
+        return True
+    
+    for v in start.successors:
+        <link:internal>if</link:internal> depthFirstSearch(v, isGoal, result):
+            return True
+
+    result.pop
+    return False
+
+<link:internal>if</link:internal> __name__ == "__main__":
+    v = petersenGraph()
+    path = []
+    <link:internal>if</link:internal> depthFirstSearch(v[0], (<link:internal>lambda</link:internal> v: v.data == 7), path):
+        print "Found path:", [u.data for u in path]
+    else:
+        print "No path found"
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.7080770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.7080770+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:45:06.8549560+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>823</width>
+  <height>559</height>
+  <x>536</x>
+  <y>207</y>
+  <open-on-startup>False</open-on-startup>
+</note>

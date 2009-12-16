@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка LaTeX</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка LaTeX
+
+&gt;&gt; #<link:internal>aptitude</link:internal> install tetex-bin tetex-extra <link:internal>latex</link:internal>-ucs
+
+В процессе установки дома у меня заругалось на то, что не может найти пакеты texlive_base_bin и texlive_font_utils.  Почему то <link:internal>apt</link:internal> искал их на updates.  Убрал updates из sources.<link:internal>list apt</link:internal> их нашел.</note-content></text>
+  <last-change-date>2008-04-20T00:17:50.0243740+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-20T00:17:50.0243740+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:40:46.7278690+03:00</create-date>
+  <cursor-position>21</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>923</x>
+  <y>186</y>
+  <open-on-startup>False</open-on-startup>
+</note>

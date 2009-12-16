@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Parallel Let</title>
+  <text xml:space="preserve"><note-content version="0.1">Parallel Let
+
+(<link:internal>let</link:internal> ([id expr] ...) body ...+)
+
+&gt; (<link:internal>let</link:internal> ([<link:internal>me</link:internal> "Bob"]
+          [myself "Robert"]
+          [I "Bobby"])
+      (list <link:internal>me</link:internal> myself I))
+
+Просто попарно присваиваем</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.7291250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.7291250+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T14:34:41.5668600+04:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>276</height>
+  <x>736</x>
+  <y>418</y>
+  <open-on-startup>False</open-on-startup>
+</note>

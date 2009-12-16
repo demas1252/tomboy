@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Erlang List Comprehention</title>
+  <text xml:space="preserve"><note-content version="0.1">Erlang List Comprehention
+
+Пример 1:
+
+<italic>qsort([]) -&gt; [];
+qsort([Pivot|T]) -&gt;
+        qsort([X || X &lt;- T, X &lt; Pivot])
+        ++ [Pivot] ++
+        qsort([X || X &lt;- T, X &gt;= Pivot]).
+</italic>
+Пример 2:
+
+<italic>pythag(N) -&gt;
+    [ {A,B,<link:broken>C</link:broken></italic><italic>} ||
+        A &lt;- lists:seq(1,N),
+        B &lt;- lists:seq(1,N),
+        <link:broken>C</link:broken></italic><italic> &lt;- lists:seq(1,N),
+        A+B+<link:broken>C</link:broken></italic><italic> =&lt; N,
+        A*A+B*B =:= <link:broken>C</link:broken></italic><italic>*<link:broken>C</link:broken></italic><italic>
+    ].
+</italic></note-content></text>
+  <last-change-date>2009-02-07T15:39:19.7549550+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:19.7549550+03:00</last-metadata-change-date>
+  <create-date>2009-01-08T11:55:26.0308900+03:00</create-date>
+  <cursor-position>189</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>882</x>
+  <y>516</y>
+  <open-on-startup>False</open-on-startup>
+</note>

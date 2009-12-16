@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проводка уже отмечена для сопоставления</title>
+  <text xml:space="preserve"><note-content version="0.1">Проводка уже отмечена для сопоставления
+
+
+[note: return]
+
+<link:url>http://www.axforum.info/forums/showthread.php?t=6867&amp;highlight=сопоставление+открытых+проводок</link:url>
+
+Поводка отмечена красным кружком и далее производить с ней операции невозможно.
+Каковы причины ее появления и как избавиться от этой ошибки?
+
+----
+
+Это значит, что проводка была промаркирована для сопоставления из открытого заказа/<link:internal>закупки</link:internal> или из неразнесенной строки платежа. И при разноске этого платежа она будет с ним автоматически сопоставлена.
+А чтобы убрать красный кружок, надо найти, из какой <link:internal>закупки</link:internal>, заказа, платежа она отмечена для сопоставления, и снять маркировку.</note-content></text>
+  <last-change-date>2008-03-28T22:09:10.7468829+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:09:10.7468829+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:09:09.2863150+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

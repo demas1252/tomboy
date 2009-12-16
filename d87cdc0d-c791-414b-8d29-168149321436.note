@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Oracle Indexes</title>
+  <text xml:space="preserve"><note-content version="0.1">Oracle Indexes
+
+<link:internal>Структура индексов</link:internal>
+<link:internal>Перестройка индексов</link:internal>
+<link:internal>Проверка индекса</link:internal>
+<link:internal>Поиск неиспользуемых индексов</link:internal>
+<link:internal>Информация об индексах</link:internal>
+<link:internal>Перестроить все индексы</link:internal>
+<link:internal>Селективность индекса</link:internal>
+<link:internal>Имеет ли смысл хранить индексы в отдельном tablespace</link:internal>
+<link:internal>Узнать размер индекса</link:internal>
+<link:internal>Function-Based Indexes</link:internal></note-content></text>
+  <last-change-date>2009-01-12T10:49:02.0653710+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-12T10:49:02.0653710+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:45:19.4668140+03:00</create-date>
+  <cursor-position>248</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>579</x>
+  <y>528</y>
+  <open-on-startup>False</open-on-startup>
+</note>

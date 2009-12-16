@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Shared vs Dedicated</title>
+  <text xml:space="preserve"><note-content version="0.1">Shared vs Dedicated
+
+Короче, конфигурация shared по сравнению с dedicated дает экономию на структурах ядра ОС за счет уменьшения количества объектов (процессов/потоков и связанных с ними структур), обслуживаемых ядром. Цена экономии - дополнительные структуры в SGA (curcuit, request/response queues), потенциальные избыточные висяки (при недостатке свободных shared процессов/потоков), задержки (на синхронизацию shared-dispatcher, занятый диспетчер при отсылке большого объема данных клиенту), баги (поскольку не самая часто используемая конфигурация), сложности в настройке (<link:internal>трассировка</link:internal> всех shared процессов) и прочие мелочи.
+
+дядечка Кайт описывая архитектуру Shared и dedicated 
+выделил четко область применения MTS
+это быстрые короткие транцакии ООТ систем
+именно сдесь потенциал раскрывается полностью и интуитивно это понятно
+накой леший держать 5000 серверных процессов выполняющих по 1 селекту с одним условием
+а также четко написано когда НЕ стоит использовать MTS в системах с длительностью запроса больше нескольких десятях секунды
+думаю разница при 5000 выделнных и 100 разделяемых серверных процесскх скажется 
+в не зависимости от UNIX или <link:internal>WINDOWS</link:internal> системах
+для скажем сайта новостей с 1000000 пользователей в день смысл dedicated server
+вызывает сомнения
+</note-content></text>
+  <last-change-date>2009-03-27T12:30:26.0574010+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-27T12:30:26.0574010+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:06:50.1624848+03:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

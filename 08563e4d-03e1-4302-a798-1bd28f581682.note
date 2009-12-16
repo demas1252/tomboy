@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Партицианирование таблиц</title>
+  <text xml:space="preserve"><note-content version="0.1">Партицианирование таблиц
+
+<link:internal>1</link:internal>. По ключу
+&lt;&lt;pre
+create table (
+... 
+range_key_column date,
+...
+)
+partition by range(range_key_column date)
+(partition part_<link:internal>1</link:internal> values less than
+    (to_date('01-jan-1995', '<link:internal>dd</link:internal>-mon-yyyy')),
+ partition part_2 values less than
+    (to_date('01-jan-1996', '<link:internal>dd</link:internal>-mon-yyyy'))
+)    
+
+&gt;&gt;
+
+range_column можно изменять до тех пор пока запиь не мигрирует в другую партицию.
+Если мигрирует - следует явно это разрешить:  alter table &lt;&gt; enable row movement.  Учесть, что <link:internal>rowid</link:internal> при этом изменится.
+
+2. По хешу
+&lt;&lt;pre
+create table emp(
+	   empno int,
+	   ename varchar2(20))
+partition by hash(empno)
+(partition part_<link:internal>1</link:internal> tablespace tbs<link:internal>1</link:internal>,
+ partition part_2 tablespace tbs2
+)
+
+&gt;&gt;
+
+Желательно, чтобы кол-во партиций было степенями 2-ки.  Необходимо, чтобы столбец имел разнообразные значения - иначе все ляжет в одну партицию.
+
+3. По ключу и хешу
+&lt;&lt;pre
+create table(
+...
+range_key_column date,
+range_hash_column int,
+...)
+partition by range(range_key_column)
+subpartition by hash(hash_key_column) subpartitions 2
+{
+    partition part_<link:internal>1</link:internal>
+        values less than(...)
+            (subpartition p<link:internal>1</link:internal>_s<link:internal>1</link:internal>,
+             subpartition p<link:internal>1</link:internal>_s2),
+    partition part_2
+    ...
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.7086790+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.7086790+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:58:11.1964400+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>72</x>
+  <y>387</y>
+  <open-on-startup>False</open-on-startup>
+</note>

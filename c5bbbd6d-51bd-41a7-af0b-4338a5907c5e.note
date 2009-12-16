@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>totalAmounts</title>
+  <text xml:space="preserve"><note-content version="0.1">totalAmounts
+
+<link:internal>Опишите здесь свою новую заметку</link:internal>.</note-content></text>
+  <last-change-date>2009-10-17T22:10:10.9651630+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:10.9651630+04:00</last-metadata-change-date>
+  <create-date>2009-01-25T12:23:22.3183429+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1151</x>
+  <y>616</y>
+  <open-on-startup>False</open-on-startup>
+</note>

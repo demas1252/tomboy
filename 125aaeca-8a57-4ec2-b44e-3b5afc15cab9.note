@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировка подсчетом</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировка подсчетом
+
+Используется диапазон чисел сортируемого массива для подсчета совпадающих элементов.
+Алгоритм имеет преимущества, если нужно отсортировать много чисел из небольшого диапазона.
+
+<bold>Простейший алгоритм</bold>
+
+Создаем вспомогательный массив С[0..n-1], состоящий из 0, а затем последовательно перебирая исходный массив A, для каждого A[i] увеличиваем С[A[i]] на единицу.  А потом пробегаемся по C и для каждого элемента последовательно проставляем элемент нужное кол-во раз.
+
+<link:internal>Реализация сортировки подсчетом на Python</link:internal></note-content></text>
+  <last-change-date>2009-07-05T15:29:10.3382750+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-05T15:29:10.3382750+04:00</last-metadata-change-date>
+  <create-date>2009-05-26T15:57:38.5686079+04:00</create-date>
+  <cursor-position>485</cursor-position>
+  <width>615</width>
+  <height>536</height>
+  <x>788</x>
+  <y>277</y>
+  <open-on-startup>False</open-on-startup>
+</note>

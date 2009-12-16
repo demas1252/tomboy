@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>QtRuby</title>
+  <text xml:space="preserve"><note-content version="0.1">QtRuby
+
+<italic>rbqtapi Qt::AbstractItemView</italic>
+
+<link:internal>Простейшая программа на Ruby с Qt</link:internal>
+<link:internal>Пример обработки событий</link:internal>
+<link:internal>Расположение виджета в пределах другого</link:internal>
+<link:internal>Создание своего виджета</link:internal>
+<link:internal>Привязка выхода одного виджета к входу другого</link:internal></note-content></text>
+  <last-change-date>2009-07-08T16:38:51.4385260+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-08T16:38:51.4385260+04:00</last-metadata-change-date>
+  <create-date>2009-05-31T11:51:51.7267270+04:00</create-date>
+  <cursor-position>177</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>931</x>
+  <y>266</y>
+  <open-on-startup>False</open-on-startup>
+</note>

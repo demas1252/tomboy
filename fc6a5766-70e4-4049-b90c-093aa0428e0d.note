@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сборка ОС из комплектующих</title>
+  <text xml:space="preserve"><note-content version="0.1">Сборка ОС из комплектующих
+
+При сборке происходит автоматическое списание комплектующих со склада (по мгновенной).
+
+   1. Создаем карточку ОС
+   2. Прочие -&gt; Комплектующие
+   3. Журнал ОС - <link:internal>Ввод в эксплуатацию</link:internal>
+
+      См также:
+      [<link:internal>Переоценка ОС вследсвии пересчета склада</link:internal>]</note-content></text>
+  <last-change-date>2008-03-27T15:28:44.6695740+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T15:28:44.6695740+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:28:21.2896990+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

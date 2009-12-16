@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LAMB на Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">LAMB на Linux
+
+1. pacman -S apache php mysql
+2. В файле <link:url>/etc/httpd/conf/httpd.conf</link:url> комментарим строку 
+           LoadModule unique_id_module        <link:internal>modules</link:internal>/<link:internal>mod</link:internal>_unique_id.so
+3. useradd http
+4. Проверяем конфиг apachectl configtest
+5. Стартуем сервер <link:url>/etc/rc.d/httpd</link:url> start
+6. Если сервер не стартует есть смысл:
+	a) проверить пользователя и группу в конфиге
+	б) проверить что сущесвует директория, указанная в конфиге <link:url>/svr/http</link:url>
+
+7. В файл <link:url>/etc/httpd/conf/httpd.conf</link:url> добавляем
+
+LoadModule php5_module <link:internal>modules</link:internal>/libphp5.so
+
+&lt;IfModule <link:internal>mod</link:internal>_php5.c&gt;
+ DirectoryIndex index.php index.html
+ AddType application/x-httpd-php .php
+ AddType application/x-httpd-php-source .phps
+&lt;/IfModule&gt;
+
+DirectoryIndex index.html index.html.var
+DirectoryIndex index.php index.phtml index.html
+
+8. В <link:url>/etc/php/php.ini</link:url> проверяем:
+
+open_basedir = <link:url>/srv/http</link:url>:...
+
+9. Перезапуск <link:url>/etc/rc.d/httpd</link:url> restart
+10. Тест 
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;PHP <link:internal>Test</link:internal> Page&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+This is <link:internal>Arch</link:internal> <link:internal>Linux</link:internal>, running PHP.
+
+&lt;?php
+  phpinfo();
+?&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+11. 
+
+
+</note-content></text>
+  <last-change-date>2009-05-24T10:03:05.4701320+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-24T10:03:05.4701320+04:00</last-metadata-change-date>
+  <create-date>2009-05-24T09:48:10.9790670+04:00</create-date>
+  <cursor-position>865</cursor-position>
+  <width>528</width>
+  <height>429</height>
+  <x>1048</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

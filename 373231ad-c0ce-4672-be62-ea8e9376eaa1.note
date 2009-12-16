@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запись в файл в Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Запись в файл в Erlang
+
+- запись списка термов (напишем свою процедуру, обратную consult):
+
+unconsult(File, L) -&gt;
+   {ok, S} = file:open(File, write),
+   lists:foreach(fun(X) -&gt; io:format(S, "~p.~n", [X]) end, L),
+   file:close(S).
+
+1&gt; lib_misc:unconsult("<link:internal>test</link:internal>1.dat", 
+                       [{cats, ["zorrow", "daisy"]},
+                        {weather, snowing}]).
+
+- запись строки в файл:
+
+{ok, S} = file:open("<link:internal>test</link:internal>2.dat", write).
+io:format(S, "~s~n", ["Hello"]).
+file:close(S).
+
+- целый файл:
+
+file:write_file(File, IO).
+
+<italic>см также:</italic>
+<link:internal>Пример записи в файл из Erlang</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T08:44:11.2463020+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:44:11.2463020+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:43:40.9082840+03:00</create-date>
+  <cursor-position>537</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>413</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Object-oriented regexp in Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Object-oriented regexp in Ruby
+
+re = /(\d+):(\d+)/
+md = re.match("Time: 12:34am")
+md.class -&gt; MatchData
+md[0] -&gt; 12:34
+md[1] - &gt; 12
+md[2] - &gt; 34
+md.pre_match -&gt; Time:
+md.post_match -&gt; am
+</note-content></text>
+  <last-change-date>2009-03-23T21:29:18.6254690+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:29:18.6254690+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:29:11.9693060+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>454</y>
+  <open-on-startup>False</open-on-startup>
+</note>

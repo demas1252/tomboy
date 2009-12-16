@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Построчное чтение файла</title>
+  <text xml:space="preserve"><note-content version="0.1">Построчное чтение файла
+
+File.open("/home/demas/temp/links.html") do |file|
+  while line = file.gets
+    puts line
+  end
+end
+
+или лучше так:
+
+File.open("/home/demas/temp/links.html") do |file|
+  file.each_line{|line| puts line }
+end
+</note-content></text>
+  <last-change-date>2009-05-22T12:35:33.0298620+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-22T12:35:33.0298620+04:00</last-metadata-change-date>
+  <create-date>2009-05-22T12:34:06.5561340+04:00</create-date>
+  <cursor-position>120</cursor-position>
+  <width>450</width>
+  <height>416</height>
+  <x>19</x>
+  <y>570</y>
+  <open-on-startup>False</open-on-startup>
+</note>

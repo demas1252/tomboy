@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>list comprehention</title>
+  <text xml:space="preserve"><note-content version="0.1">list comprehention
+
+<bold>пример <link:internal>1</link:internal></bold><bold>:</bold>
+
+a = [<link:internal>1</link:internal>, 2, 3, 4, 5]
+a = [x + 5 for x in a]
+print a
+
+<bold>пример 2:</bold>
+
+&gt;&gt;&gt; [x**2 for x in range(10)]
+[0, <link:internal>1</link:internal>, 4, 9, 16, 25, 36, 49, 64, 81]
+&gt;&gt;&gt; [x**2 for x in range(10) <link:internal>if</link:internal> x%2==0]
+[0, 4, 16, 36, 64]
+
+<bold>При работе с файлами:</bold>
+
+myfile = file('testfile.txt', 'r')
+[<link:broken>c</link:broken> for line in myfile for <link:broken>c</link:broken> in line]
+myfile.close()
+
+<bold>Примеры обработки нескольких последовательностей:</bold>
+
+&gt;&gt;&gt; [(x,y) for x in range(3) for y in range(2)]
+[(0, 0), (0, <link:internal>1</link:internal>), (<link:internal>1</link:internal>, 0), (<link:internal>1</link:internal>, <link:internal>1</link:internal>), (2, 0), (2, <link:internal>1</link:internal>)]
+&gt;&gt;&gt; [(x,y) for x in range(3) for y in range(2) <link:internal>if</link:internal> x&gt;0]
+[(<link:internal>1</link:internal>, 0), (<link:internal>1</link:internal>, <link:internal>1</link:internal>), (2, 0), (2, <link:internal>1</link:internal>)]
+&gt;&gt;&gt; [(x,y) for x in range(3) for y in range(2) <link:internal>if</link:internal> x&gt;0 <link:internal>if</link:internal> y&lt;<link:internal>1</link:internal>]
+[(<link:internal>1</link:internal>, 0), (2, 0)]
+&gt;&gt;&gt; [x+y for x in range(3) for y in range(6)]
+[0, <link:internal>1</link:internal>, 2, 3, 4, 5, <link:internal>1</link:internal>, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 7]
+&gt;&gt;&gt; [(x,y) for x in 'abc' for y in range(2)]
+[('a', 0), ('a', <link:internal>1</link:internal>), ('b', 0), ('b', <link:internal>1</link:internal>), ('<link:broken>c</link:broken>', 0), ('<link:broken>c</link:broken>', <link:internal>1</link:internal>)]
+
+<bold>Как замена <link:internal>map</link:internal></bold><bold> и filter:</bold>
+
+&gt;&gt;&gt; a = [<link:internal>1</link:internal>, 4, 3, 5, 2]
+&gt;&gt;&gt; <link:internal>map</link:internal>(<link:internal>lambda</link:internal> x: x**3-3, a)
+[-2, 61, 24, 122, 5]
+&gt;&gt;&gt; [x**3-3 for x in a]
+[-2, 61, 24, 122, 5]
+&gt;&gt;&gt; b = [-3, -2, -<link:internal>1</link:internal>, 0, <link:internal>1</link:internal>, 2, 3]
+&gt;&gt;&gt; filter(<link:internal>lambda</link:internal> x: x&gt;0, b)
+[<link:internal>1</link:internal>, 2, 3]
+&gt;&gt;&gt; [x for x in b <link:internal>if</link:internal> x&gt;0]
+[<link:internal>1</link:internal>, 2, 3]
+
+<bold>Пример 3: вывести из файла только те строка, которые содержат определенную подстроку:</bold>
+
+import sys
+
+file_name = sys.argv[<link:internal>1</link:internal>]
+searched_string = sys.argv[2]
+
+result = [(line_number+<link:internal>1</link:internal>, line) for line_number, line in <link:internal>enumerate</link:internal>(open(file_name)) <link:internal>if</link:internal> searched_string in line]
+print result
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.9201030+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.9201030+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:08:54.4943690+03:00</create-date>
+  <cursor-position>161</cursor-position>
+  <width>621</width>
+  <height>704</height>
+  <x>913</x>
+  <y>254</y>
+  <open-on-startup>False</open-on-startup>
+</note>

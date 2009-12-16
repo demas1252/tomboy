@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Binding: Late/Early &amp; Weakly/Strong</title>
+  <text xml:space="preserve"><note-content version="0.1">Binding: Late/Early &amp; Weakly/Strong
+
+Late binding == Dynamic Binding - если своими словами, то нельзя до момента выполнения сказать, какой тип здесь окажется. Например, в силу полиформизма.
+
+Но <italic>late binding != weakly typed &amp;&amp; early binding != strongly binding</italic>.
+
+Forth - weakly typed - нет разницы между указателем и целым; но early binding - в момент компиляции уже известны типы.
+
+Weakly/Strong typed - насколько компилятор напрягается, чтобы понять какие тут типы;
+
+Early/Late - когда он это делает.</note-content></text>
+  <last-change-date>2008-10-20T22:32:25.7710740+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-20T22:32:25.7710740+04:00</last-metadata-change-date>
+  <create-date>2008-10-20T22:27:13.9324490+04:00</create-date>
+  <cursor-position>415</cursor-position>
+  <width>481</width>
+  <height>360</height>
+  <x>1094</x>
+  <y>520</y>
+  <open-on-startup>False</open-on-startup>
+</note>

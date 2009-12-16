@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Двоичный поиск</title>
+  <text xml:space="preserve"><note-content version="0.1">Двоичный поиск
+
+Также известен как метод деления пополам или дихотомия - алгоритм поиска элемента в отсортированном массиве.
+Также применяется для поиска значения монотонной функции. Основывается на <link:internal>теореме о промежуточном значении</link:internal>.
+
+<bold>Описание метода</bold>
+
+Таким образом, если мы ищем ноль, то на концах отрезка функция должна быть разных знаков. Разделим отрезок пополам и возьмём ту из половинок, для которой на концах функция по-прежнему принимает значения разных знаков. Если серединная точка оказалось искомым нулём, то процесс завершается. Если задана точность вычисления (e), то процедуру следует продолжать до тех пор, пока длина отрезка не станет меньше (e).
+
+Для поиска произвольного значения достаточно вычесть из значения функции искомое значение и искать ноль получившейся функции.
+
+Поиск за время log(a), где a = 1/e.
+Когда алгоритм дискретен - 1 + log(N)
+
+<link:internal>Двоичный поиск на Python</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T21:43:13.2358560+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:43:13.2358560+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:42:09.3718500+03:00</create-date>
+  <cursor-position>231</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

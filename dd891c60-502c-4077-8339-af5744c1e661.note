@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Командная строка vim</title>
+  <text xml:space="preserve"><note-content version="0.1">Командная строка <link:internal>vim</link:internal>
+
+<italic>Вставка текста в командную строку</italic>
+
+1. Выделяем строку (v) и копируем ее в регистр (например 0) (y)
+2. В командной строке Ctrl+R {0}</note-content></text>
+  <last-change-date>2009-01-02T01:46:34.6916520+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-02T01:46:34.6916520+03:00</last-metadata-change-date>
+  <create-date>2008-09-19T21:30:10.8932290+04:00</create-date>
+  <cursor-position>152</cursor-position>
+  <width>559</width>
+  <height>258</height>
+  <x>711</x>
+  <y>451</y>
+  <open-on-startup>False</open-on-startup>
+</note>

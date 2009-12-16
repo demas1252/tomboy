@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LedgerTrans</title>
+  <text xml:space="preserve"><note-content version="0.1">LedgerTrans
+
+
+     AccountNum 	Счет ГК
+     TransDate 	Дата проводки
+     Voucher 	Номер ваучера.
+     Txt 	Текст проводки
+     AmountMST 	Сумма в валюте учета
+     AmountCur 	Сумма в валюте операции
+     CurrencyCode 	Код валюты
+     DocumentDate 	Дата исходного документа
+     DocumentNum 	Номер исходного документа
+     TransType 	Тип транзакции. В первом приближении – модуль – источник проводки. Информационное поле
+     Qty 	Количество
+     JournalNum 	Номер журнала ГК. Для проводок из прочих источников не заполняется
+     Posting 	Тип разноски. В большинстве случаев – чисто информационный. Однако – время от времени используется в механизме корреспонденции счетов.
+     Correct 	Признак сторнирования.
+     Crediting 	Признак кредитовой проводки
+     AmountMSTSecond 	Сумма во вторичной валюте учета
+     EuroTriangulation 	Признак триангуляции
+     <link:internal>PeriodCode</link:internal> 	Позволяет различить открывающие/закрывающие и нормальные проводки
+     OperationsTax 	Зона учета
+     taxRefId 	Поле используется для связи с taxTrans. Генерируется системой автоматически.
+     BondBatch_ru и BondBatchTrans_ru 	Ссылка на вторую половинку проводки – постинг на корсчет. Подробности о механизме корреспонденции счетов – в следующих разделах</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.6170960+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.6170960+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:18:36.8784340+03:00</create-date>
+  <cursor-position>6</cursor-position>
+  <width>498</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

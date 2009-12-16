@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Another on assigment example</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Another</link:internal> on assigment example
+
+
+&lt;&lt;pre
+(define x <link:internal>1</link:internal>)
+(define y 2)
+
+(define (f x0 y0)
+  (begin 
+    (set! x y)
+    y))
+
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; x
+<link:internal>1</link:internal>
+&gt; y
+2
+&gt; (f x y)
+2  // &lt;- y return from functon
+&gt; x
+2
+&gt; y
+2
+
+&gt;&gt;  
+
+-------------------
+
+&lt;&lt;pre
+(define x 3)
+
+(define (<link:internal>inc</link:internal>-x)
+  (begin 
+    (set! x (+ x <link:internal>1</link:internal>))
+    x))
+    
+    
+&gt; (<link:internal>inc</link:internal>-x)
+4
+&gt; (<link:internal>inc</link:internal>-x)
+5
+&gt; (<link:internal>inc</link:internal>-x)
+6 
+    
+
+&gt;&gt;
+
+-------------------
+
+&lt;&lt;pre
+(define x 0)
+(define y <link:internal>1</link:internal>)
+
+(define (ch-3 z)
+  (begin 
+    (set! y 3)
+    z))
+    
+
+&gt; (ch-3 x)
+0
+&gt; x
+0
+&gt; y
+3    
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.1818020+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.1818020+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:00:24.5163210+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формула Муавра-Лапласа</title>
+  <text xml:space="preserve"><note-content version="0.1">Формула Муавра-Лапласа
+
+<bold>Условие:</bold> 94% полуивших прививку не заболевают.
+<bold>Задача:</bold> Какова <link:internal>вероятность</link:internal>, что из 100 000 привитых, 5 800 заболеют?
+
+Можно воспользоваться <link:internal>Формула Бернулли</link:internal> -&gt; n=100000, m=5800, p=0,06, q=0,94, но считать это не реально.
+
+Поэтому эти два товарища предложили следующее приближение:
+
+P(Sn=m) = fi(x) / sqrt(npq), x = (m-np)/sqrt(npq).
+
+А fi(x) мы смотрим по заранее расчитанным таблицам.</note-content></text>
+  <last-change-date>2009-06-29T13:32:03.8387460+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T13:32:03.8387460+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T13:24:30.3303740+04:00</create-date>
+  <cursor-position>345</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>614</x>
+  <y>216</y>
+  <open-on-startup>False</open-on-startup>
+</note>

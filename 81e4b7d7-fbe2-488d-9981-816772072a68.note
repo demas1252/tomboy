@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Несколько sum в одном запросе</title>
+  <text xml:space="preserve"><note-content version="0.1">Несколько sum в одном запросе
+
+&lt;&lt;pre
+SELECT Shifr,
+ SUM(CASE Kachestvo WHEN 'положительно' THEN 1 ELSE 0 END)[положительно],
+ SUM(CASE Kachestvo WHEN 'негативно' THEN 1 ELSE 0 END)[негативно],
+ SUM(CASE Kachestvo WHEN 'разъяснено' THEN 1 ELSE 0 END)[разъяснено]
+FROM Uslugi
+GROUP BY Shifr
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-27T21:57:52.6505800+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:57:52.6505800+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:57:51.5674360+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка и удаление Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка и удаление Oracle
+
+<link:internal>Удалить SID</link:internal></note-content></text>
+  <last-change-date>2009-04-07T17:37:22.1330210+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T17:37:22.1330210+04:00</last-metadata-change-date>
+  <create-date>2009-04-07T17:36:41.0336410+04:00</create-date>
+  <cursor-position>29</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>939</x>
+  <y>457</y>
+  <open-on-startup>False</open-on-startup>
+</note>

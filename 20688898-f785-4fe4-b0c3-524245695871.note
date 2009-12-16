@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>mapMapSettledAmount</title>
+  <text xml:space="preserve"><note-content version="0.1">mapMapSettledAmount
+
+   *Структура <link:internal>map</link:internal>-а:*
+    
+    SettledAmountsKey(#7)-&gt; mapSmallSettledAmounts, где 
+    mapSmallSettledAmounts: [keyInvoice2Facture] -&gt; smallSettledAmount(50/42/7).
+    
+    *Принцип его получения:*
+    
+    Вот для получения этой величины и нужна помощь [CustVendCalcSettledAmounts_Ru]. Оттуда к нам приходит уже практически готовые данные - нам остается только пробежаться по ним и слегка их подкорректировать. 
+    
+    1. Из классов [CustVendCalcSettledAmounts_Ru] получаем mapMapInvoiceSettledAmount: &lt;7&gt; --&gt; facture2Invoice -&gt; -118/-100/-18.
+    2. Извлекаем mapSmallSettledAmounts: facture2Invoice -&gt; -118/-100/-18.
+    3. Вот тут мы что-то делаем:
+        a. связанное с oldFacture
+           
+            Цель этих манипуляций - исключить данные предыдущих фактур, так или иначе связанной с данной.
+            Прежде всего получаем перечень "старых" фактур - [<link:internal>calc old factures</link:internal>].
+             
+        б. что-то еще, что взяимно влияет на mapSmallSettledAmounts и <link:internal>mapFactureAmountsDetail</link:internal>
+        
+    4. В mapMapSettlementAmount запихиваем ранее извлеченные ключ и mapSmallSettledAmounts.
+        
+    Собственно, все данные о сопоставленных суммах предотсавляет [CustVendCalcSettledAmounts_Ru], а FactureCalcSettlemnt_Ru всего лишь их как-то перерабатывает. Таким образом, задача - понять, что даелается с этими <link:internal>map</link:internal>-ми между их извлечением и запихиванием обратно.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.6044520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.6044520+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:01:23.0342230+03:00</create-date>
+  <cursor-position>908</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

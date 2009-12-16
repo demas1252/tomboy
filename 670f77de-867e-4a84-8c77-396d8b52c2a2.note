@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>эксперимент warm по поводу кэширования</title>
+  <text xml:space="preserve"><note-content version="0.1">эксперимент warm по поводу кэширования
+
+
+     [author: warm]
+     
+     Для опытов я выбрал табличку InventLocation.
+     
+     static void Job5(<link:internal>Args</link:internal> _<link:internal>args</link:internal>) 
+     { 
+       InventLocation      inventLocation; 
+       InventLocationId    locId = 'MW', bug = 'Нет склада'; 
+       ; 
+        flush inventLocation; 
+        
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId, true); 
+
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug, true); 
+
+        ttsbegin; 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId, true); 
+
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug, true); 
+        ttscommit; 
+
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(locId, true); 
+
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug); 
+        inventLocation = InventLocation::<link:internal>find</link:internal>(bug, true); 
+     }  
+
+И вот какая картина в профайлере <link:internal>SQL</link:internal>:
+
+*None *
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+TTSBEGIN
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='Нет склада'
+TTSCOMMIT
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+
+*NoneInTTS*
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+TTSBEGIN
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='Нет склада'
+TTSCOMMIT
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+
+*Found*
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+TTSBEGIN
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='Нет склада'
+TTSCOMMIT
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+SELECT * FROM InventLocation A WHERE INVENTLOCATIONID='Нет склада'
+
+*FoundAndEmpty*
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(NOLOCK) WHERE INVENTLOCATIONID='Нет склада'
+TTSBEGIN
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='MW'
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='Нет склада'
+TTSCOMMIT
+
+*EntireTable*
+SELECT * FROM InventLocation A(NOLOCK)
+TTSBEGIN
+SELECT * FROM InventLocation A(UPDLOCK) WHERE INVENTLOCATIONID='MW'
+TTSCOMMIT
+</note-content></text>
+  <last-change-date>2008-04-06T19:24:20.2947690+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T19:24:20.2947690+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:37:35.7857180+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

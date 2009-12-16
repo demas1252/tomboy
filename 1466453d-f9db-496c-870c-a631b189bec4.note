@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Чтение из файлов в Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Чтение из файлов в Erlang
+
+Допустим у нас есть файл data1.dat
+
+{person, "joe", "armstrong",
+	 [{occupation, progrrammer},
+	  {favoriteLanguage, <link:internal>erlang</link:internal>}]}.
+
+{cat, {name, "zorro"},
+      {owner, "joe"}}.
+
+Тогда:
+
+- Чтение всех терм в файле:
+
+file:consult("data1.dat").
+
+- Чтение по одной терме за раз:
+
+{ok, S} = file:open("data1.dat", read).
+io:read(S, '').
+file:close(S).
+
+- Построчное чтение:
+
+{ok, S} = file:open("data1.dat", read).
+io:get_line(S, '').
+file:close(S).
+
+- Чтение двоичного файла:
+
+file:read_file("data1.dat").
+
+- Чтение с произвольным доступом:
+
+{ok, S} = file:open("data1.dat", [read, binary, raw]).
+file:pread(S, 22, 46).
+file:close(S).
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.4540720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.4540720+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:43:28.9246550+03:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>413</y>
+  <open-on-startup>False</open-on-startup>
+</note>

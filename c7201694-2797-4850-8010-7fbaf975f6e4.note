@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Конвертирование ape в mp3</title>
+  <text xml:space="preserve"><note-content version="0.1">Конвертирование ape в mp3
+
+wget <link:url>http://members.iinet.net.au/~aidanjm/mac-3.99-u4_b3-1_i386.deb</link:url>
+sudo <link:internal>dpkg</link:internal> -i mac-3.99-u4_b3-1_i386.deb
+
+sudo <link:internal>apt-get</link:internal> install lame mp3splt vorbis-tools
+
+wget <link:url>http://home.wanadoo.nl/squell/files/id3mtag_0.78_i386.deb</link:url>
+sudo <link:internal>dpkg</link:internal> -i id3mtag_0.78_i386.deb
+
+Скрипт: <link:url>http://gimpel.funpic.de/files/cueape.sh</link:url>
+
+mp3: cueape.sh file.ape file.cue -m  
+ogg: cueape.sh file.ape file.cue -o
+
+aur/mac lame mp3splt vorbis-tools
+</note-content></text>
+  <last-change-date>2009-10-11T10:46:58.3507250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-11T10:46:58.3507250+04:00</last-metadata-change-date>
+  <create-date>2009-03-29T16:08:04.0069990+04:00</create-date>
+  <cursor-position>290</cursor-position>
+  <width>474</width>
+  <height>360</height>
+  <x>26</x>
+  <y>132</y>
+  <open-on-startup>False</open-on-startup>
+</note>

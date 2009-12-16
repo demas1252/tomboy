@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Python OOP</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Python</link:internal> OOP
+
+<link:internal>Статические переменные</link:internal>
+<link:internal>Наследование</link:internal>
+<link:internal>Переменные класса</link:internal>
+<link:internal>Копирование объектов</link:internal>
+<link:internal>Паттерны проектирования в Python</link:internal>
+<link:internal>Создание класса по его имени</link:internal>
+<link:internal>Создать экземпляр своего же класса</link:internal>
+<link:internal>Предварительное объявление класса в Python</link:internal>
+<link:internal>Выполнить код единожды на класс в Python</link:internal></note-content></text>
+  <last-change-date>2009-10-07T16:56:25.6396710+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-07T16:56:25.6396710+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:05:12.8237110+03:00</create-date>
+  <cursor-position>227</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1104</x>
+  <y>132</y>
+  <open-on-startup>False</open-on-startup>
+</note>

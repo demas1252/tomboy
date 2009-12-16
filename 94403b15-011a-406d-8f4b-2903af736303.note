@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Где лежат логи</title>
+  <text xml:space="preserve"><note-content version="0.1">Где лежат логи
+
+<link:internal>SQL</link:internal>&gt; show parameter '%dump%'
+
+NAME                                 TYPE        VALUE
+------------------------------------ ----------- ------------------------------
+background_core_dump                 string      <link:internal>partial</link:internal>
+background_dump_dest                 string      E:\<link:internal>ORACLE</link:internal>\ADMIN\ORCL\BDUMP
+core_dump_dest                       string      E:\<link:internal>ORACLE</link:internal>\PRODUCT\10.2.0\<link:internal>DB</link:internal>_<link:internal>1</link:internal>\DATABASE\CORE
+max_dump_file_size                   string      UNLIMITED
+shadow_core_dump                     string      <link:internal>partial</link:internal>
+user_dump_dest                       string      E:\<link:internal>ORACLE</link:internal>\ADMIN\ORCL\UDUMP
+<link:internal>SQL</link:internal>&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.4741900+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.4741900+04:00</last-metadata-change-date>
+  <create-date>2008-04-07T13:06:37.2678060+04:00</create-date>
+  <cursor-position>393</cursor-position>
+  <width>912</width>
+  <height>360</height>
+  <x>11</x>
+  <y>95</y>
+  <open-on-startup>False</open-on-startup>
+</note>

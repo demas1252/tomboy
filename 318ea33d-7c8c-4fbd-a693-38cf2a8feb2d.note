@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Действия при запуске Аксапты</title>
+  <text xml:space="preserve"><note-content version="0.1">Действия при запуске Аксапты
+
+# Код не должен располагаться в классе Application (см. <link:internal>Руководство</link:internal> Разработчика по слову SysStartupCmd)
+# Весь код, который должен выполняться при запуске следует выносить в иерархию SysStartupCmd
+# Иерархия SysStartupCmd выполняется только в том случае, если в конф. утилите есть какой-нибудь параметр. (!)
+# Как Application, так и SysStartupCmd не отлаживаются при запуске. Поэтому код, выполняющийся при запуске следует писать так, чтобы для него можно было легко написать Unit-тест.</note-content></text>
+  <last-change-date>2008-03-28T15:01:30.1470880+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T15:01:30.1470880+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:01:28.4681980+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

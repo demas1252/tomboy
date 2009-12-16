@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перебрать диапазон чисел</title>
+  <text xml:space="preserve"><note-content version="0.1">Перебрать диапазон чисел
+
+<italic>for i in {1..5};
+	do echo $i;
+done</italic>
+
+Задача усложняется, если одна из границ диапазона задана переменной. Так уже не работает:
+
+<italic>end=5
+for i in {1..$end};
+	do echo $i;
+done</italic>
+
+Варианта 2.  Либо воспользоваться программой seq:
+
+<italic>#!/bin/bash
+end=5
+for i in `seq 1 $end`;
+	do echo $i;
+done
+</italic>
+Но это не всегда хорошо ибо seq это отдельный процесс -&gt; потери производительности.
+
+Тогда можно так:
+
+<italic>#!/bin/bash
+typeset -i i end
+<link:internal>let</link:internal></italic><italic> end=5 i=1
+
+while((i&lt;=end));do
+	echo $i;
+	<link:internal>let</link:internal></italic><italic> i++
+done
+</italic></note-content></text>
+  <last-change-date>2009-08-07T13:37:30.1776040+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T13:37:30.1776040+04:00</last-metadata-change-date>
+  <create-date>2008-10-04T13:27:52.8902080+04:00</create-date>
+  <cursor-position>499</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1131</x>
+  <y>612</y>
+  <open-on-startup>False</open-on-startup>
+</note>

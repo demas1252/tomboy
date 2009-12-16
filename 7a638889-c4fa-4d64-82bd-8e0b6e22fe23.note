@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация методов амортизации в с системе</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация методов амортизации в с системе
+
+<link:internal>1</link:internal>. enum::RAssetDeprMethod - это методы амортизации
+2. Класс RAssetTableMethod и его наследники - они считают амортизацию по одному из методов (см <link:internal>calc</link:internal>())
+    Конкретный экземпляр создается в предке class::RAssetTableMethod::construct()
+3. Есть class::RAssetTableMethodIterator, который вроде бы и вызывает RAssetTableMethod
+    А он, в свою очередь вызывается из class::RAssetProposalDeprication.createJournalLines()</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.4909340+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.4909340+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T19:55:55.2538180+04:00</create-date>
+  <cursor-position>460</cursor-position>
+  <width>943</width>
+  <height>630</height>
+  <x>57</x>
+  <y>245</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Инвариант</title>
+  <text xml:space="preserve"><note-content version="0.1">Инвариант
+
+<italic>Инвариант класса</italic> - это утверждение, которое (должно быть) истинно применительно к любому объекту данного класса в любой момент времени (за исключением переходных процессов в методах объекта).
+Как говорит нам gramota.ru, инвариант - это "элемент системы, остающийся неизменным при всех ее модификациях". </note-content></text>
+  <last-change-date>2009-02-05T10:30:51.5070150+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-05T10:30:51.5070150+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:04:49.4228290+03:00</create-date>
+  <cursor-position>27</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

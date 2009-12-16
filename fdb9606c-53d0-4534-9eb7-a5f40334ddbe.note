@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Функция, возвращающая функцию на Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Функция, возвращающая функцию на Erlang
+
+print_list([])-&gt;
+    io:format("done.", []);
+print_list([Head | Rest])-&gt;
+    io:format("~p~n", [Head]),
+    print_list(Rest).
+
+foo()-&gt;
+    Fruit = [apple, pear, orange],
+    MakeTest = fun(L)-&gt;
+		       (fun(X)-&gt;
+				lists:member(X, L) end) end,
+    IsFruit = MakeTest(Fruit),
+    print_list(lists:filter(IsFruit, [dog,orange,cat,apple,bear])).</note-content></text>
+  <last-change-date>2009-01-05T14:06:59.5960240+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-05T14:06:59.5960240+03:00</last-metadata-change-date>
+  <create-date>2009-01-05T14:06:48.6290989+03:00</create-date>
+  <cursor-position>385</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>785</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Диаграммы в ячейке Excel</title>
+  <text xml:space="preserve"><note-content version="0.1">Диаграммы в ячейке Excel
+
+
+<link:internal>1</link:internal>. В столбец B пишем числа (сколько раз повторить)
+2. Столбец A (шрифт = Webdings) =ПОВТОР(СИМВОЛ(103); B<link:internal>1</link:internal>)
+3. Столбец <link:internal>C</link:internal> (шрифт = Wingdings) =ПОВТОР(СИМВОЛ(110); B<link:internal>1</link:internal>)</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.5552150+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.5552150+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:12:10.9152930+04:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SICP</title>
+  <text xml:space="preserve"><note-content version="0.1">SICP
+
+<link:internal>sicp 1.5</link:internal>
+<link:internal>sicp 1.6</link:internal>
+<link:internal>sicp 1.7</link:internal>
+<link:internal>sicp 1.8</link:internal>
+<link:internal>sicp 1.11 (древовидная рекурсия)</link:internal>
+<link:internal>sicp 1.12 (треугольник паскаля)</link:internal>
+<link:internal>sicp 1.16</link:internal>
+<link:internal>sicp 1.17 (умножение с помощью сложения)</link:internal></note-content></text>
+  <last-change-date>2008-06-15T23:42:45.9439760+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.9439760+04:00</last-metadata-change-date>
+  <create-date>2008-04-03T15:52:57.8382389+04:00</create-date>
+  <cursor-position>31</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1120</x>
+  <y>189</y>
+  <open-on-startup>False</open-on-startup>
+</note>

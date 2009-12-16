@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>RowID</title>
+  <text xml:space="preserve"><note-content version="0.1">RowID
+
+
+DataObjectNumber-RelativeFileumber-BlockNumber-RowNumber
+
+Помогите разобраться: на сколько я предствлял себе, ROWID - идентификатор строки на уровне базы.
+&gt;&gt; Не совсем так. Ближе к реальности слова "указатель на строку". (softwarer)
+&gt;&gt; Еще ближе - физический адрес строки в "пространстве данных" <link:internal>oracle</link:internal>. (andrey_anonymous)
+Соответственно перечень случаев, когда он меняется, связан с физическим перемещением строк:
+- реорганизация таблицы
+- <link:internal>экспорт</link:internal>-импорт
+- rowmovement в секционированной таблице
+и т.д.
+Именно поэтому не следует делать persistent-ссылок на rowid - они перестанут быть валидными после одной из административных операций.
+
+Но вот начав листать книгу "Секреты <link:internal>Oracle SQL</link:internal>" наткнулся на фразу: "никогда не ссылайтесь на них (ROWID) за пределами транзакции, в которой они были получены, т.к. в определенный ситуациях значение ROWID для строки может поменяться". Может я не что-то не так понимаю, какая такая ситуация может сменить ROWID?
+&gt;&gt; Собственно и внутри одной могут поменяться, когда ROW MOVEMENT ENABLE и своими действиями провоцируете переезд из партиции в партицию
+
+<link:internal>SQL</link:internal>&gt; create table part (id integer, value varchar2(100))
+  2  partition by range (id)
+  3  (partition p<link:internal>1</link:internal> values less than (100), partition p2 values less than (200));
+
+Table created
+
+<link:internal>SQL</link:internal>&gt; alter table part enable row movement;
+
+Table altered
+
+<link:internal>SQL</link:internal>&gt; insert into part values (<link:internal>1</link:internal>, 'Данные');
+
+<link:internal>1</link:internal> row inserted
+
+<link:internal>SQL</link:internal>&gt; select rowid from part where value = 'Данные';
+
+ROWID
+------------------
+AAAF70AAEAAACkFAAA
+
+<link:internal>SQL</link:internal>&gt; update part set id = 101 where id = <link:internal>1</link:internal>;
+
+<link:internal>1</link:internal> row updated
+
+<link:internal>SQL</link:internal>&gt; select rowid from part where value = 'Данные';
+
+ROWID
+------------------
+AAAF71AAEAAACklAAA
+
+
+&gt;&gt; Index-Organized <link:internal>Tables</link:internal>
+
+An index-organized table has a storage organization that is a variant of a primary
+B-tree. Unlike an ordinary (heap-organized) table whose data is stored as an
+unordered collection (heap), data for an index-organized table is stored in a B-tree
+index structure in a primary key sorted manner.
+......
+Because rows in index-organized <link:internal>tables</link:internal> do not have permanent physical addresses, the physical
+guesses can become stale when rows are moved to new blocks.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.8971000+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.8971000+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:48:40.5021280+03:00</create-date>
+  <cursor-position>34</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

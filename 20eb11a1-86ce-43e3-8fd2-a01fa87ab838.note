@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Archivelogs на сетевой диск</title>
+  <text xml:space="preserve"><note-content version="0.1">Archivelogs на сетевой диск
+
+1) вместо буквы сетевого диска написать полный путь к каталогу с архивлогами
+2) запустить инстанс <link:internal>Oracle</link:internal> не от SYSTEM (как по умолчанию), а от другого пользователя с правами админа, у которого есть доступ на чтение/запись и к сетевой папке.</note-content></text>
+  <last-change-date>2008-11-20T22:31:13.8874770+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-20T22:31:13.8874770+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:02:11.0016850+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>571</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

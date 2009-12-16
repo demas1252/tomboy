@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>apt-get</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>apt</link:internal>-get
+
+Установка
+	# <link:internal>apt</link:internal>-get install tuxkart
+	# <link:internal>apt</link:internal>-get install --reinstall tuxkart  --  перезапись файлов
+	# <link:internal>apt</link:internal>-get install tuxkart gltron frozen-bubble  --  установка сразу нескольких пакетов
+	# <link:internal>apt</link:internal>-get -d install tuxkart  -- загрузка без установки
+
+Удаление
+	# <link:internal>apt</link:internal>-get remove tuxpaint
+	# <link:internal>apt</link:internal>-get --purge remove tuxpaint  -- включая конфиги
+
+Установка из исходников
+	получаем исходники:
+	    # cd<link:url> /usr/src</link:url>
+	    # <link:internal>apt</link:internal>-get build-dep tuxkart
+
+	загрузка и сборка пакета
+	    # <link:internal>apt</link:internal>-get -b source tuxkart
+    
+	установка пакета
+	    # <link:internal>dpkg</link:internal> -i tuxkart.deb
+
+Обновление системы
+.	<link:url> /etc/<link:internal>apt</link:internal></link:url><link:url>/sourcs.list</link:url>
+	# <link:internal>apt</link:internal>-get update
+	# <link:internal>apt</link:internal>-get -u upgrade  --  обновляет все установленные пакеты, но не удаляет пакеты для разрешения зависимостей
+	# <link:internal>apt</link:internal>-get -u dist-upgrade -- обновление всех установленных пакетов с удалением или установкой пакетов по мере необходимости для разрешения всех зависимостей
+
+Обновление версии Debian
+Прежде всего отредактируйте файл<link:url> /etc/<link:internal>apt</link:internal></link:url><link:url>/sources.list</link:url>, чтобы в нем содержались только записи Sarge. Затем выполните следующие команды:
+	# <link:internal>apt</link:internal>-get update
+	# <link:internal>apt</link:internal>-get -u upgrade
+	# <link:internal>apt</link:internal>-get -u dist-upgrade
+
+Создание смешанной системы<link:url>
+/etc/<link:internal>apt</link:internal></link:url><link:url>/<link:internal>apt</link:internal></link:url><link:url>.conf</link:url> -- прописываем версию по умолчанию:
+    // Версия системы по умолчанию.
+    // Допустимые значения: woody, sarge, sid
+    // (или stable, testing, unstable)
+    <link:internal>APT</link:internal>::Default-Release "stable";
+    
+# <link:internal>apt</link:internal>-get update
+# <link:internal>apt</link:internal>-get install tuxkart -- стабильная
+# <link:internal>apt</link:internal>-get -t testing install tuxkart -- тестовая
+# <link:internal>apt</link:internal>-get install tuxkart=0.2.0-3 -- конкреный пакет
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.8769950+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.8769950+04:00</last-metadata-change-date>
+  <create-date>2008-04-20T00:04:34.6198529+04:00</create-date>
+  <cursor-position>607</cursor-position>
+  <width>615</width>
+  <height>698</height>
+  <x>429</x>
+  <y>232</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Примеры запросов Mnesia</title>
+  <text xml:space="preserve"><note-content version="0.1">Примеры запросов Mnesia
+
+%% <link:internal>SQL</link:internal> equivalent
+%%  SELECT * FROM shop;
+
+demo(select_shop) -&gt;
+    do(qlc:q([X || X &lt;- <link:internal>mnesia</link:internal>:table(shop)]));
+
+
+
+
+%% <link:internal>SQL</link:internal> equivalent
+%%  SELECT item, quantity FROM shop;
+
+demo(select_some) -&gt;
+    do(qlc:q([{X#shop.item, X#shop.quantity} || X &lt;- <link:internal>mnesia</link:internal>:table(shop)]));
+
+ 
+
+
+%% <link:internal>SQL</link:internal> equivalent
+%%   SELECT shop.item FROM shop
+%%   WHERE  shop.quantity &lt; 250;
+
+demo(reorder) -&gt;
+    do(qlc:q([X#shop.item || X &lt;- <link:internal>mnesia</link:internal>:table(shop),
+			     X#shop.quantity &lt; 250
+				]));
+
+
+%% <link:internal>SQL</link:internal> equivalent
+%%   SELECT shop.item, shop.quantity, cost.name, cost.price
+%%   FROM shop, cost 
+%%   WHERE shop.item = cost.name 
+%%     AND cost.price &lt; 2
+%%     AND shop.quantity &lt; 250
+
+demo(join) -&gt;
+    do(qlc:q([X#shop.item || X &lt;- <link:internal>mnesia</link:internal>:table(shop),
+			     X#shop.quantity &lt; 250,
+			     Y &lt;- <link:internal>mnesia</link:internal>:table(cost),
+			     X#shop.item =:= Y#cost.name,
+			     Y#cost.price &lt; 2
+				])).
+
+
+
+do(Q) -&gt;
+    F = fun() -&gt; qlc:e(Q) end,
+    {atomic, Val} = <link:internal>mnesia</link:internal>:transaction(F),
+    Val.
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.4071620+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.4071620+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T16:51:07.3034570+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

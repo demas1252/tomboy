@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Excel User Experience</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Excel</link:internal> User Experience
+
+<link:internal>Отображать формулы вместо результатов</link:internal>
+<link:internal>Не посылать на принтер определенные места документа</link:internal>
+<link:internal>Операции недоступные в режиме совместного доступа</link:internal>
+<link:internal>Пересечение и объединение Range</link:internal>
+<link:internal>Разделение данных по столбцам</link:internal>
+<link:internal>Выпадающий список для ячейки</link:internal>
+<link:internal>Заголовки строк и столбцов</link:internal>
+<link:internal>Заранее определенное число символов в ячейке</link:internal>
+<link:internal>Выделение дубликатов цветом</link:internal>
+<link:internal>Оглавление книги excel</link:internal>
+<link:internal>Диаграммы в ячейке Excel</link:internal>
+<link:internal>Скрытые листы Excel</link:internal>
+<link:internal>Too many different cell formats</link:internal></note-content></text>
+  <last-change-date>2008-04-12T08:12:26.2025170+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-12T08:12:26.2025170+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:07:36.9387540+04:00</create-date>
+  <cursor-position>422</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>693</x>
+  <y>245</y>
+  <open-on-startup>False</open-on-startup>
+</note>

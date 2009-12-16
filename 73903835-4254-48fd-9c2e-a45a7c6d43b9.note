@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Axapta Development</title>
+  <text xml:space="preserve"><note-content version="0.1">Axapta Development
+
+<link:internal>По элементам AOT</link:internal>
+<link:internal>Взаимодействие Axapta с СУБД</link:internal>
+<link:internal>AxCore</link:internal>
+<link:internal>Инструменты</link:internal>
+
+<bold>Приемы</bold>
+<link:internal>Работа с Dimension</link:internal>
+<link:internal>Действия при запуске Аксапты</link:internal>
+<link:internal>Encryption</link:internal>
+<link:internal>Работа с окружением</link:internal>
+
+
+<link:internal>Предупреждения Best Practices и как с ними бороться</link:internal>
+
+<link:internal>ComConnector</link:internal>
+<link:internal>Net Business Connector</link:internal></note-content></text>
+  <last-change-date>2009-10-17T21:32:05.0242080+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T21:32:05.0242080+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T17:03:00.7570329+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>477</width>
+  <height>411</height>
+  <x>612</x>
+  <y>311</y>
+  <open-on-startup>False</open-on-startup>
+</note>

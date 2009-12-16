@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Линейный поиск</title>
+  <text xml:space="preserve"><note-content version="0.1">Линейный поиск
+
+Алгоритм нахождения заданного значения функции на некотором отрезке. В отличии от [[<link:internal>Двоичный поиск</link:internal>]] не накладывает ограничений на функцию (монотонность/отсортированность).
+
+Поиск значения функции осуществляется простым сравнением очередного рассматриваемого значения (как правило поиск происходит слева направо, то есть от меньших значений аргумента к большим) и, если значения совпадают (с той или иной точностью), то поиск считается завершённым.
+
+O(n).
+
+def search(l, v):
+  for el in l:
+    <link:internal>if</link:internal> el = v:
+      break
+
+</note-content></text>
+  <last-change-date>2009-03-23T21:44:41.4023870+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:44:41.4023870+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:44:36.0040880+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

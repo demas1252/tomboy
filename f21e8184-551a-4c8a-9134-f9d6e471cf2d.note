@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Iterator</title>
+  <text xml:space="preserve"><note-content version="0.1">Iterator
+
+Объект, который позволяет перебирать объекты коллекции, независимо от ее реализации. В контексте баз данных этот паттерн часто называется курсором.  Итератор удобно представить как указатель, поддерживающий две операции - получение текущего объекта и перемещение на следующий объект коллекции. Основное предназначение - позволить обработать каждый элемент коллекции изолирую пользователя от знаний внутреннего устройства коллекции.
+
+Некоторые <link:internal>языки</link:internal>, такие как Perl, <link:internal>Python</link:internal>, C#, <link:internal>Ruby</link:internal> поддерживают итераторы на уровне языка:
+
+for value in iterable:
+  print value
+
+
+iterable.each do |value|
+   print value
+
+<link:internal>Языки</link:internal>, поддерживающие <link:internal>list comprehention</link:internal> могут использовать их для итерирования:
+
+names = [person.name for person in roster <link:internal>if</link:internal> person.male]
+
+С++ поддерживает <link:internal>макрос for</link:internal>_each(), похожий на такой же итератор. Кроме того, С++ содержит итераторы в <link:internal>STL</link:internal>.
+В C# итераторы называются энумераторами и представлены IEnumerable интерфейсом. См. Простейший итератор на C#.
+В <link:internal>Java</link:internal> есть соответствующий интерфейс <link:internal>java</link:internal>.util.Iterator.
+
+В <link:internal>Ruby</link:internal> это выглядит так:
+
+(0..42).each do |n|
+  puts n
+end
+
+или 
+
+for n in 0..42
+  puts n
+end
+
+Еще один способ реализации итератра - генераторы (<link:internal>Генераторы в Python</link:internal>).
+
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield b
+        a, b = b, a + b
+
+for number in fibonacci():
+   print number
+
+Если бы <link:internal>Python</link:internal> не поддерживал итераторы на уровне языка его можно было бы реализовать так:
+
+<link:internal>Пример самописного итератора на Python</link:internal>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.4432130+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.4432130+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:04:56.2600090+03:00</create-date>
+  <cursor-position>947</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

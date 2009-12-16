@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Освобождение ресурсов сессии</title>
+  <text xml:space="preserve"><note-content version="0.1">Освобождение ресурсов сессии
+
+В старых версиях Microsoft Dynamics AX, до <link:internal>Kernel</link:internal> Rollup, существовала проблема (в особенности под <link:internal>Oracle</link:internal>), когда DAX не закрывал сессии <link:internal>базы данных</link:internal> корректно. Например, можно было увидеть, что DAX вроде как закрыл сессию и в OEM, если брать в качестве примера <link:internal>Oracle</link:internal>, сессия исчезла, но процесс <link:internal>Oracle</link:internal> не был закрыт.
+
+Отслеживать данную ситуацию можно с помощью простого скрипта, запуская его в <link:internal>SQL Plus</link:internal>:
+
+select count() total,
+
+sum(decode(s.sid,null,0,<link:internal>1</link:internal>)) with_session
+
+sum(decode(s.sid,null,<link:internal>1</link:internal>,0)) without_session
+
+from v$session s,v$process p
+
+where s.paddr(+) = p.addr
+
+
+
+В качестве результата можем получить:
+
+TOTAL with_SESSION without_SESSION
+
+      115 11 104
+
+
+With_SESSION – число процессов, задействованных для открытых сессий пользователей.
+
+Without_SESSION – число процессов, задействованных закрытыми сессиями. Данный результат можно получить при установке в конфигурации DAX параметра 'Time out connection running when idle’.
+
+Если же число, полученное как TOTAL, равно числу процессов в инициализационном файле <link:internal>Oracle</link:internal> (init.ora), то можем получить сообщение об ошибке ORA-04030.
+
+
+
+Для того, чтобы обойти данную проблему необходимо установить в конфигурации DAX параметр 'Leave connection running when idle’.
+
+
+
+Есть и другой путь, со стороны <link:internal>Oracle</link:internal>. Можно много дискуссировать, где проблема (например, данная проблема может проявляться потому, что по умолчанию <link:internal>Oracle</link:internal> держит процесс 30 минут), но решение есть в базе данных. В <link:internal>Oracle</link:internal> можно использовать нижеследующий сценарий и использовать утилиту DBkill.exe для удаления 'мертвых' сессий в <link:internal>Oracle</link:internal>. Если же в качестве <link:internal>базы данных</link:internal> <link:internal>Oracle</link:internal> используется версия 9.2.0.6 или более старшая, то можно использовать другой процесс, называемый "Dead Connection Detection".
+
+
+
+Самый простой путь – использовать сценарий, очищающий 'мертвые' сессии каждые 5-10 минут.
+
+Желательно также установить параметры конфигурации DAX 'Number of retries when creating connection’ и 'Retry delay when creating connection’, например первый параметр в 2, а второй в 100 мс. Это позволяет уменьшить число соединений, поскольку пул соединений AOS будет запрашиваться дважды с заданным интервалом для обнаружения уже существующей сессии, свободной для использования (вместо открытия новой каждый раз).
+
+
+
+Итак, как найти идентификатор процесса?
+
+Select s.saddr, s.paddr, s.sid, p.spid THREADID, p.pid, p.addr from v$session s full join v$process p on s.paddr = p.addr;
+
+Затем можно использовать Orakill.exe (утилита доступна только на платформе Win32): Orakill , где SID – экземпляр <link:internal>Oracle</link:internal>, а TreadID – идентификатор процесса для очистки.
+
+
+
+Также для брошенных сессий актуальными параметрами являются параметры протокола TCPIP, в частности KeepAliveTime. В части настройки протоколов это актуально и для сервера <link:internal>MS SQL</link:internal> Server. Детали можно посмотреть на сайте Microsoft: “How to troubleshoot orphaned connections in <link:internal>SQL</link:internal> Server” или “How to Determine Loss of Client/Server Connection”. Можно уменьшить, например, параметр KeepAliveTime <link:internal>c</link:internal> 2 часов по умолчанию до 5-10 минут (180000-300000 в десятичном выражении).
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.9570360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.9570360+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:04:34.4709930+03:00</create-date>
+  <cursor-position>1073</cursor-position>
+  <width>513</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

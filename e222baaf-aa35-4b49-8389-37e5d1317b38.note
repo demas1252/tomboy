@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Загрузка данных из внешней таблицы</title>
+  <text xml:space="preserve"><note-content version="0.1">Загрузка данных из внешней таблицы
+
+
+1. Создаем внешний текстовый файл
+&lt;&lt;pre
+&gt; cat employee.dat
+smith   clerk       800
+scott   analyst     3000
+adams   clerk       1100
+miller  clerk       1300
+
+&gt;&gt;
+2. Создаем внешнюю таблицу:
+&lt;&lt;pre
+create table employees (
+ename varchar2(10),
+title varchar2(10),
+salary number(8))
+organization external(
+type <link:internal>oracle</link:internal>_loader default directory work_dir
+    access parameters (record delimited by new line fields(
+        ename char(10), title char(10), salary char(8)))
+location ('employee.dat'))
+parallel
+
+&gt;&gt;
+3. Проверяем
+&lt;&lt;pre
+select * from employees;
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.4327910+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.4327910+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:22:55.2536950+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

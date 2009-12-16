@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>file permissios</title>
+  <text xml:space="preserve"><note-content version="0.1">file permissios
+
+r=4, w=2, x=<link:internal>1</link:internal>
+user, group, owner
+
+chmod 744 myfile
+chmod u+x,a+r myfile
+chmod u=rwx,g=r,o=r myfile</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.1406930+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.1406930+04:00</last-metadata-change-date>
+  <create-date>2008-05-11T09:39:02.7019210+04:00</create-date>
+  <cursor-position>17</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>987</x>
+  <y>167</y>
+  <open-on-startup>False</open-on-startup>
+</note>

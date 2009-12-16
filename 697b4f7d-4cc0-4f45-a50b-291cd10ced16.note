@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Импорт журнала инвентаризации из внешнего файла</title>
+  <text xml:space="preserve"><note-content version="0.1">Импорт журнала инвентаризации из внешнего файла
+
+// Created on 22 Ноя 2004 at 12:22:09 by Dozer 
+void importInventoryQty() 
+{ 
+    AsciiIO io = new AsciiIO( Path + "invent.dat", "R" ); // открываем файл для чтения 
+    InventJournalTrans          _inventJTrans, newtrans, _temp; // строки номенклатур 
+//    InventJournalTable          _inventJTable; // типа журналы тут все 
+    WMSPallet                   _wmsPallet; 
+    WMSLocation                 _wmsLocation; 
+    InventLocation              _invLocation; 
+    JournalTransMap             journalTrans_orig, journalTrans; 
+    FormDataSource              journalTrans_ds, 
+                                journalTable_ds, 
+                                inventDim_ds; 
+    InventColor                 _inventColor; 
+
+    <link:internal>Args</link:internal>  _<link:internal>args</link:internal>; 
+
+    Barcode                     barcode; 
+    container                   barCont; 
+    ItemBarcode                 itemBarcode; 
+
+    Object  <link:internal>InventTrans</link:internal>_ds, 
+             _transFormCaller, 
+             _tableFormCaller; 
+//FormRun 
+
+    container cnt; 
+    ItemId ItemId; 
+    TmpItemQty ItemQty; 
+    InventQty QtyToLoad, delta; 
+    int linenum; 
+    real qty; 
+    boolean _isAllLinesPassed = false, 
+            _isError = false, 
+            _isErrorRet = true; 
+
+    JournalTableData        journalTableData; 
+    JournalTransData        journalTransData; 
+    InventJournalFormTable  _inventJFTable; 
+
+    Dialog      _dBox = new Dialog('Выбор инвентаризационной единицы.'); 
+    DialogField _fldInvLoc = _dBox.addField( typeId( inventLocationId ), '<link:internal>Склад</link:internal>', 'Укажите <link:internal>склад</link:internal> для инвенторизации' ); 
+    DialogField _fldWMSLoc = _dBox.addField( typeId( wMSLocationId ), 'Ячейка', 'Укажите ячейку для инвенторизации' ); 
+    DialogField _fldPallet = _dBox.addField( typeId( wMSPalletId ), 'Палета', 'Укажите палету для инвентаризации' ); 
+    InventDim       dim, newDim; 
+    InventDimID     dimID; 
+
+    ; 
+
+    <link:internal>if</link:internal> ( _dBox.run() ) 
+        <link:internal>if</link:internal> ( _fldPallet.value() ) 
+        { 
+            select _wmsPallet where _wmsPallet.wMSPalletId == _fldPallet.value(); 
+            <link:internal>if</link:internal> ( !_fldWMSLoc.value() ) select _wmsLocation where _wmsLocation.wMSLocationId == _wmsPallet.wMSLocationId; 
+            else select _wmsLocation where _wmsLocation.wMSLocationId == _fldWMSLoc.value(); 
+            <link:internal>if</link:internal> ( !_fldInvLoc.value() ) select _invLocation where _invLocation.InventLocationId == _wmsPallet.inventLocationId; 
+            else select _invLocation where _invLocation.InventLocationId == _fldInvLoc.value(); 
+        } 
+        else <link:internal>if</link:internal> ( _fldWMSLoc.value() &amp;&amp; _fldInvLoc.value() ) 
+        { 
+            select _wmsLocation where _wmsLocation.wMSLocationId == _fldWMSLoc.value(); 
+            select _invLocation where _invLocation.InventLocationId == _fldInvLoc.value(); 
+        } else <link:internal>if</link:internal> ( _fldInvLoc.value() ) 
+        { 
+            select _invLocation where _invLocation.InventLocationId == _fldInvLoc.value(); 
+        } 
+        else throw error( 'Вы должны что нибудь выбрать!' ); 
+    else return; 
+
+// init 
+
+    _temp = <link:internal>args</link:internal>.record(); 
+    <link:internal>if</link:internal> (!_temp.JournalId) throw error ( 'Не выбран <link:internal>журнал инвентаризации</link:internal>!' ); 
+
+    _transFormCaller = <link:internal>args</link:internal>.caller(); 
+    _<link:internal>args</link:internal> = _transFormCaller.<link:internal>args</link:internal>(); 
+    _tableFormCaller = _<link:internal>args</link:internal>.caller(); 
+
+    <link:internal>InventTrans</link:internal>_ds = _temp.dataSource(); 
+
+    _inventJFTable = _tableFormCaller.journalForm(); 
+    journalTableData = _inventJFTable.JournalTableData(); 
+    journalTable_ds = _inventJFTable.journalTable_DS(); 
+
+    // Закачиваем данные из файла 
+    io.inFieldDelimiter( "," ); 
+    ttsbegin; 
+    while ( true ) 
+    { 
+        cnt = io.read(); 
+        <link:internal>if</link:internal> ( io.status() != IO_Status::Ok ) 
+            break; 
+        ItemId = conpeek( cnt, 2 ); 
+        qty = str2num( conpeek( cnt, 6 ) ); 
+        ItemQty.ItemId = ItemId; 
+        ItemQty.Qty = qty; 
+        itemBarcode = conpeek( cnt, <link:internal>1</link:internal> ); // Dozer добавочка 
+        info( ItemId ); 
+        info( itemBarcode ); 
+        barcode = Barcode::constructByUniqueStr( itemBarcode ); 
+        barCont = barcode.findInventItem(); 
+        dimID = conPeek( barCont, 4 ); 
+        ItemQty.InventDimID = dimID; 
+        ItemQty.insert(); 
+    } 
+    ttscommit; 
+
+
+    // Сворачиваем всю эту фигню и начинаем умопомрачительный процесс загрузки данных 
+    ttsbegin; 
+    select maxof( lineNum ) from _inventJTrans where _inventJTrans.journalId == _temp.journalId; 
+    lineNum = _inventJTrans.lineNum + <link:internal>1</link:internal>; 
+    // сюда вставляем всякие дефолты для новой строки 
+
+    while select InventDimID, sum( Qty ) from ItemQty group by InventDimID, ItemId 
+    { 
+        QtyToLoad = ItemQty.Qty; 
+        _isAllLinesPassed = false; 
+        newDim.clear(); 
+        newDim = InventDim::<link:internal>find</link:internal>( ItemQty.InventDimID ); 
+
+        // если такой номенклатуры нету, то добавляем строку 
+            <link:internal>if</link:internal> ( _wmsPallet ) 
+            { 
+                select _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.wMSPalletId == _wmsPallet.wMSPalletId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } else <link:internal>if</link:internal> ( _wmsLocation &amp;&amp; _invLocation ) 
+            { 
+                select _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.wMSLocationId == _wmsLocation.wMSLocationId &amp;&amp; 
+                                    dim.InventLocationId == _invLocation.InventLocationId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } else <link:internal>if</link:internal> ( _invLocation ) 
+            { 
+                select _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.InventLocationId == _invLocation.InventLocationId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } 
+            else 
+                throw error( "Укажите <link:internal>склад</link:internal>!" ); 
+        <link:internal>if</link:internal> ( !_inventJTrans ) 
+        { 
+            info( 'Отсутствуют строки по номенклатуре ' + ItemQty.ItemId ); 
+
+            journalTrans = newTrans; 
+
+            newdim.wMSLocationId = _wmsLocation.wMSLocationId; 
+            newdim.InventLocationId = _invLocation.InventLocationId; 
+            newdim.wMSPalletId = _wmsPallet.wMSPalletId; 
+//            _inventColor = InventColor::<link:internal>find</link:internal>( 'Норма', ItemQty.ItemId ); 
+//            newDim.InventColorId = _inventColor.InventColorId; 
+            newDim = InventDim::findOrCreate( newDim ); 
+
+                newtrans.clear(); 
+                newtrans.journalId = _temp.JournalId;   // ---- <link:internal>mod</link:internal> 
+                newtrans.lineNum = lineNum;                     // ---- <link:internal>mod</link:internal> 
+                newtrans.JournalType = InventJournalType::Count; 
+                lineNum++; 
+
+                journalTransData = new JournalTransData( newtrans, journalTableData); 
+                journalTransData.initFromJournalTable(); 
+
+                journalTrans.TransDate = systemDateGet(); 
+                journalTransData.initFromJournalTable(); 
+                newTrans.initValue(); 
+                <link:internal>if</link:internal> (JournalTableData) 
+                { 
+//                    journalTrans.transDate   = journalTrans_last.<link:internal>recId</link:internal> ? journalTrans_last.transDate : systemdateGet(); 
+
+                    <link:internal>if</link:internal> (journalTableData.journalVoucherNum() &amp;&amp; journalTableData.journalTable().voucherDraw == JournalVoucherDraw::Entering) 
+                        journalTransData.initVoucher(journalTrans.voucher,true); 
+                } 
+                newtrans.InventDimId = newDim.inventDimId; 
+
+// конец создания. Дальше модифицируем. 
+                newtrans.itemId = ItemQty.ItemId; // ---- <link:internal>mod</link:internal> 
+
+                newTrans.inventMovement().JournalSetItemId(newDim); 
+
+//                newDim.initFromInventTable(newTrans.inventMovement().InventTable()); 
+
+                <link:internal>if</link:internal> (journalTableData.journalVoucherNum() &amp;&amp; journalTableData.journalTable().voucherDraw == JournalVoucherDraw::Entering) 
+                    journalTransData.initVoucher(journalTrans.voucher,true); 
+
+                newTrans.ProjLinePropertyId   = ProjLinePropertySetup::findLinePropertyId(newTrans.ProjId, newTrans.ProjCategoryId); 
+                newTrans.ProjTaxItemGroupId   = ProjParameters::taxItemGroupItem(newTrans.ProjCategoryId,newTrans.ItemId); 
+                newtrans.inventMovement().journalSetInventDimField(newDim); 
+                    // ---------- end <link:internal>mod</link:internal> 
+
+// validate 
+                <link:internal>if</link:internal> (! journalTrans.<link:internal>RecId</link:internal> &amp;&amp; journalTableData.journalVoucherNum()                    &amp;&amp; 
+                    journalTableData.journalVoucherNum().voucherFetched()                           &amp;&amp; 
+                    journalTableData.journalVoucherNum().voucherFetched() != journalTrans.voucher   &amp;&amp; 
+                   !journalTableData.journalVoucherNum().checkChangeNumber(journalTrans.Voucher)) 
+                { 
+                    journalTrans.Voucher = journalTableData.journalVoucherNum().voucherFetched(); 
+//                    journalTrans_ds.refresh(); 
+
+                    _isErrorRet = false; 
+                    <link:internal>if</link:internal> (InventItemLocation::isCountingStarted(newTrans.ItemId, newDim, newtrans.JournalId)) 
+                        _isErrorRet = checkFailed(strFmt("@SYS59534", newTrans.itemId, newDim.inventLocationId)); 
+
+                } 
+                <link:internal>if</link:internal> ( !_isErrorRet ) 
+                    throw error( 'Ошибка при попытке создать новую строку.' ); 
+// end of validate! 
+
+// -- а теперь запишем. 
+                newtrans.inventDimId = InventDim::findOrCreate(newDim).inventDimId; 
+
+//                journalTrans_orig = journalTrans.<link:internal>recId</link:internal> ? journalTrans.orig() : null; 
+
+                <link:internal>if</link:internal> (journalTableData.journalTable().posted) 
+                    throw error("@SYS21497"); 
+
+            <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+            { 
+                    <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                        journalTableData.journalVoucherList().addJournalTransData(journalTransData,journalTrans.voucher != journalTableData.journalVoucherNum().voucherFetched()); 
+            } 
+
+
+                InventMovement::SetAutoReserving(newtrans); 
+
+                    newtrans.insert(); // ----------------------------------- 
+
+                <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+                { 
+                    <link:internal>if</link:internal> (journalTrans.voucher) 
+                    { 
+                        <link:internal>if</link:internal> (journalTrans.voucher == journalTableData.journalVoucherNum().voucherFetched()) 
+                            journalTableData.journalVoucherNum().<link:internal>used</link:internal>(journalTrans.voucher); 
+                        else 
+                            journalTableData.journalVoucherNum().reserve(journalTrans.voucher); 
+                    } 
+
+                    <link:internal>if</link:internal> (journalTrans.voucher &amp;&amp; journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                        journalTableData.journalVoucherList().item().addTotal(journalTrans,false); 
+                } 
+
+                    journalTableData.addTotal(journalTrans,false); 
+//                    journalFormTable.updateFormCacheCurrent(journalTableData.journalTable(),true); 
+                    _inventJFTable.updateFormCacheCurrent(journalTableData.journalTable(),true); 
+
+//                    info( int2str(_inventJTable.NumOfLines) ); 
+//                   _inventJTable.NumOfLines += <link:internal>1</link:internal>; 
+//                    _inventJTable.update(); 
+//                    info( int2str(_inventJTable.NumOfLines) ); 
+
+//                    _inventJTable.data( journalTableData.journalTable() ); 
+//                    _inventJTable.update(); 
+//                journalTable_ds.setCurrent(); 
+//                journalTable_ds.refresh(); 
+
+//                <link:internal>if</link:internal> (newTrans.inventDimId != newDim.inventDimId) 
+//                { 
+//                    newDim.data(InventDim::<link:internal>find</link:internal>(newTrans.inventDimId)); 
+//                    inventDim_ds.setCurrent(); 
+//                } 
+
+// --- записали... 
+        } 
+
+// а теперь разноска количества наменклатуры по строкам 
+        do 
+        { 
+            <link:internal>if</link:internal> ( _wmsPallet ) 
+            { 
+                select forupdate _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.wMSPalletId == _wmsPallet.wMSPalletId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } else <link:internal>if</link:internal> ( _wmsLocation &amp;&amp; _invLocation ) 
+            { 
+                select forupdate _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.wMSLocationId == _wmsLocation.wMSLocationId &amp;&amp; 
+                                    dim.InventLocationId == _invLocation.InventLocationId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } else <link:internal>if</link:internal> ( _invLocation ) 
+            { 
+                select forupdate _inventJTrans where _inventJTrans.journalId == _temp.journalId &amp;&amp; 
+                                _inventJTrans.itemId == ItemQty.ItemId 
+                        exists Join dim where dim.inventDimId == _inventJTrans.InventDimId &amp;&amp; 
+                                    dim.InventLocationId == _invLocation.InventLocationId &amp;&amp; 
+                                    dim.InventColorId == newDim.InventColorId &amp;&amp; 
+                                    dim.InventSizeId == newDim.InventSizeId &amp;&amp; 
+                                    dim.configId == newDim.configId; 
+            } 
+            else 
+                throw error( "Укажите <link:internal>склад</link:internal>!" ); 
+            while ( _inventJTrans ) 
+            { 
+                journalTransData = new JournalTransData( _inventJTrans, journalTableData); 
+                journalTrans = _inventJTrans; 
+                dim = InventDim::<link:internal>find</link:internal>( _inventJTrans.InventDimId ); 
+
+                <link:internal>if</link:internal> ( _inventJTrans.Counted &lt; _inventJTrans.InventOnHand ) 
+                { 
+                    // Будем добивать эту строку 
+                    <link:internal>if</link:internal> ( _inventJTrans.InventOnHand - _inventJTrans.Counted &gt;= QtyToLoad ) 
+                        delta = QtyToLoad; 
+                    else delta = _inventJTrans.InventOnHand - _inventJTrans.Counted; 
+                    _inventJTrans.Counted += delta; 
+//  .......................... <link:internal>modif</link:internal> 
+                    <link:internal>if</link:internal> (!_inventJTrans.EmplId) 
+                        _inventJTrans.EmplId = _inventJTrans.InventJournalTable().EmplId; 
+                    _inventJTrans.inventMovement().JournalSetCounted(); 
+//  .......................... end <link:internal>modif</link:internal>; start write 
+
+                    _inventJTrans.inventDimId = InventDim::findOrCreate(dim).inventDimId; 
+                    journalTrans_orig = journalTrans.<link:internal>recId</link:internal> ? journalTrans.orig() : null; 
+
+                    <link:internal>if</link:internal> (journalTableData.journalTable().posted) 
+                        throw error("@SYS21497"); 
+
+                    <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+                    { 
+                        <link:internal>if</link:internal> (journalTrans_orig.<link:internal>recId</link:internal>) 
+                        { 
+                            <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                                journalTableData.journalVoucherList().addJournalTransData(journalTransData,true); 
+
+                            <link:internal>if</link:internal> (journalTrans.voucher != journalTrans_orig.voucher &amp;&amp; journalTrans_orig.voucher) 
+                            { 
+                                <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans_orig.voucher)) 
+                                    journalTableData.journalVoucherList().addJournalTransData(journalTransData.newJournalTransDataOrig(journalTrans_orig),true); 
+                            } 
+                        } 
+                        else 
+                        { 
+                            <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                                journalTableData.journalVoucherList().addJournalTransData(journalTransData,journalTrans.voucher != journalTableData.journalVoucherNum().voucherFetched()); 
+                        } 
+                    } 
+
+                    InventMovement::SetAutoReserving(_inventJTrans); 
+
+
+                    _inventJtrans.update(); // ----------------------------------- 
+
+                    <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+                    { 
+                        <link:internal>if</link:internal> (journalTrans.voucher) 
+                        { 
+                            <link:internal>if</link:internal> (journalTrans.voucher == journalTableData.journalVoucherNum().voucherFetched()) 
+                                journalTableData.journalVoucherNum().<link:internal>used</link:internal>(journalTrans.voucher); 
+                            else 
+                                journalTableData.journalVoucherNum().reserve(journalTrans.voucher); 
+                        } 
+
+                        <link:internal>if</link:internal> (journalTrans_orig.<link:internal>recId</link:internal>) // update 
+                        { 
+                            <link:internal>if</link:internal> (journalTrans.voucher != journalTrans_orig.voucher &amp;&amp; journalTrans_orig.voucher) 
+                                journalTableData.journalVoucherNum().Release(journalTrans_orig.voucher); 
+
+                            <link:internal>if</link:internal> (journalTrans_orig.voucher &amp;&amp; journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans_orig.voucher)) 
+                                journalTableData.journalVoucherList().item().addTotal(journalTrans_orig,true); 
+                        } 
+
+                        <link:internal>if</link:internal> (journalTrans.voucher &amp;&amp; journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                            journalTableData.journalVoucherList().item().addTotal(journalTrans,false); 
+                    } 
+
+// -------------------------------------- 
+
+                    QtyToLoad -= delta; 
+                } 
+                else 
+                { 
+                    // в строке уже ровно или перебор, 
+                    // соответственно если еще что-то осталось сгрузить, сливаем в нее 
+                    <link:internal>if</link:internal> ( QtyToLoad &gt; 0 &amp;&amp; _isAllLinesPassed ) 
+                    { 
+                        _inventJTrans.Counted += QtyToLoad; 
+
+                        <link:internal>if</link:internal> (!_inventJTrans.EmplId) 
+                            _inventJTrans.EmplId = _inventJTrans.InventJournalTable().EmplId; 
+                        _inventJTrans.inventMovement().JournalSetCounted(); 
+
+//  .......................... 
+                    _inventJTrans.inventDimId = InventDim::findOrCreate(dim).inventDimId; 
+                    journalTrans_orig = journalTrans.<link:internal>recId</link:internal> ? journalTrans.orig() : null; 
+
+                    <link:internal>if</link:internal> (journalTableData.journalTable().posted) 
+                        throw error("@SYS21497"); 
+
+                    <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+                    { 
+                        <link:internal>if</link:internal> (journalTrans_orig.<link:internal>recId</link:internal>) 
+                        { 
+                            <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                                journalTableData.journalVoucherList().addJournalTransData(journalTransData,true); 
+
+                            <link:internal>if</link:internal> (journalTrans.voucher != journalTrans_orig.voucher &amp;&amp; journalTrans_orig.voucher) 
+                            { 
+                                <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans_orig.voucher)) 
+                                    journalTableData.journalVoucherList().addJournalTransData(journalTransData.newJournalTransDataOrig(journalTrans_orig),true); 
+                            } 
+                        } 
+                        else 
+                        { 
+                            <link:internal>if</link:internal> (! journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                                journalTableData.journalVoucherList().addJournalTransData(journalTransData,journalTrans.voucher != journalTableData.journalVoucherNum().voucherFetched()); 
+                        } 
+                    } 
+
+                    InventMovement::SetAutoReserving(_inventJTrans); 
+
+
+                    _inventJtrans.update(); // ----------------------------------- 
+
+                    <link:internal>if</link:internal> (journalTableData.journalVoucherNum()) 
+                    { 
+                        <link:internal>if</link:internal> (journalTrans.voucher) 
+                        { 
+                            <link:internal>if</link:internal> (journalTrans.voucher == journalTableData.journalVoucherNum().voucherFetched()) 
+                                journalTableData.journalVoucherNum().<link:internal>used</link:internal>(journalTrans.voucher); 
+                            else 
+                                journalTableData.journalVoucherNum().reserve(journalTrans.voucher); 
+                        } 
+
+                        <link:internal>if</link:internal> (journalTrans_orig.<link:internal>recId</link:internal>) // update 
+                        { 
+                            <link:internal>if</link:internal> (journalTrans.voucher != journalTrans_orig.voucher &amp;&amp; journalTrans_orig.voucher) 
+                                journalTableData.journalVoucherNum().Release(journalTrans_orig.voucher); 
+
+                            <link:internal>if</link:internal> (journalTrans_orig.voucher &amp;&amp; journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans_orig.voucher)) 
+                                journalTableData.journalVoucherList().item().addTotal(journalTrans_orig,true); 
+                        } 
+
+                        <link:internal>if</link:internal> (journalTrans.voucher &amp;&amp; journalTableData.journalVoucherList().<link:internal>find</link:internal>(journalTrans.voucher)) 
+                            journalTableData.journalVoucherList().item().addTotal(journalTrans,false); 
+                    } 
+
+// -------------------------------------- 
+// Кошмар! Если это заработает, значит есть все таки у программеров ангел хранитель... 
+
+                        QtyToLoad = 0; 
+                    } 
+                } 
+
+                _isAllLinesPassed = true; 
+                <link:internal>if</link:internal> ( QtyToLoad &lt;= 0 ) 
+                    break; 
+                next _inventJTrans; 
+            } 
+
+        } while ( QtyToLoad != 0 ); 
+    } 
+    <link:internal>if</link:internal> ( _isError ) throw error( "Загрузка отменена!" ); 
+    ttscommit; 
+    info( "Загрузка закончена успешно." ); 
+//    journalTableData.updateBlock(JournalBlockLevel::None, JournalBlockLevel::None); 
+//    _inventJFTable.updateFormCacheCurrent(journalTableData.journalTable(), true); 
+    <link:internal>InventTrans</link:internal>_ds.research(); 
+}  
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.9219600+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.9219600+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:41:32.0983980+03:00</create-date>
+  <cursor-position>1028</cursor-position>
+  <width>508</width>
+  <height>360</height>
+  <x>222</x>
+  <y>640</y>
+  <open-on-startup>False</open-on-startup>
+</note>

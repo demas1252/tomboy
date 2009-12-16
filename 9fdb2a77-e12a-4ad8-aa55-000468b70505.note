@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировка по цвету шрифта</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировка по цвету шрифта
+
+
+_Sub SortColorFont()
+' Сортировка по цыету шрифта в первой колонке диапазона
+Dim myRange As Range
+Dim iCel As Range
+
+' диапазон который нужно отсортировать без заголовков
+Set myRange = Range("A2:E10")
+With myRange
+  .Columns(<link:internal>1</link:internal>).EntireColumn.Insert
+  For Each iCel In .Columns(<link:internal>1</link:internal>).Cells
+   iCel.Offset(, -<link:internal>1</link:internal>).Value = iCel.Font.ColorIndex
+  Next
+  .Offset(, -<link:internal>1</link:internal>).Resize(.Rows.Count, .Columns.Count + <link:internal>1</link:internal>).Sort .Cells(<link:internal>1</link:internal>, <link:internal>1</link:internal>).Offset(<link:internal>1</link:internal>, -<link:internal>1</link:internal>)
+  .Columns(<link:internal>1</link:internal>).Offset(, -<link:internal>1</link:internal>).EntireColumn.Delete
+End With
+End Sub_</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.9528680+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.9528680+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:05:54.4858790+04:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

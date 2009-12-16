@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример делегата на C#</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример делегата на C#
+
+<italic>using System;
+
+delegate string <link:internal>Test</link:internal></italic><italic>(int arg1, string arg2);
+
+class Program
+{
+  static void Main(string[] <link:internal>args</link:internal></italic><italic>)
+  {
+    <link:internal>Test</link:internal></italic><italic> <link:internal>test</link:internal></italic><italic> = (arg1, arg2) =&gt; arg2 + " " + arg1;
+    Console.WriteLine(<link:internal>test</link:internal></italic><italic>(123, "<link:internal>Test</link:internal></italic><italic>"));
+  }
+}</italic></note-content></text>
+  <last-change-date>2009-01-24T21:25:56.4731710+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-24T21:25:56.4731710+03:00</last-metadata-change-date>
+  <create-date>2009-01-24T21:25:44.5616340+03:00</create-date>
+  <cursor-position>23</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Повесить javascript код на link</title>
+  <text xml:space="preserve"><note-content version="0.1">Повесить javascript код на link
+
+&lt;html&gt;
+&lt;body&gt;
+    &lt;script language="<link:internal>Javascript</link:internal>" type="text/<link:internal>javascript</link:internal>"&gt;
+        function somescript() {
+                window.location.href = document.<link:internal>getElementById</link:internal>('ololo').href;
+        }
+    &lt;/script&gt;
+
+    &lt;a href="<link:internal>javascript</link:internal>:alert('<link:internal>test</link:internal>');" id="ololo"&gt;<link:internal>test</link:internal>&lt;/a&gt;
+    &lt;br /&gt;
+
+    &lt;a href="<link:internal>javascript</link:internal>:somescript()"&gt;click <link:internal>me</link:internal>&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</note-content></text>
+  <last-change-date>2009-11-23T17:12:22.6448589+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T17:12:22.6448589+03:00</last-metadata-change-date>
+  <create-date>2009-11-23T17:12:07.6552820+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

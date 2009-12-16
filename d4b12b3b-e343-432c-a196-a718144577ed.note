@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проверка данных с помощью js</title>
+  <text xml:space="preserve"><note-content version="0.1">Проверка данных с помощью js
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;date example&lt;/title&gt;
+    &lt;script type="text/<link:internal>javascript</link:internal>" scr="d.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;event search&lt;/h1&gt;
+    &lt;form method="post" onsubmit="return checkDate();"&gt;
+    &lt;p&gt;
+      &lt;label for="date"&gt;Date in format <link:internal>DD</link:internal>/MM/YYYY:&lt;/label&gt; &lt;br/&gt;
+      &lt;input type="text" id="date" name="date"/&gt;
+      &lt;input type="submit" value="Check" /&gt;
+      &lt;br/&gt;(example 26/04/1975) &lt;span class="error"&gt; &lt;/span&gt;
+    &lt;/p&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+	  
+function checkDate() {
+    alert('dasd');
+    <link:internal>if</link:internal>(!document.<link:internal>getElementById</link:internal> || !document.createTextNode)
+	{ return; }
+    var dateField = document.<link:internal>getElementById</link:internal>('date');
+    <link:internal>if</link:internal>(!dateField)
+	{ return; }
+    var errorContainer = dataField.parentNode.getElementByTagName('span')[0];
+    <link:internal>if</link:internal>(!errorContainer)
+	{ return; }
+    var checkPattern = new RegExp("\\d{2}/\\d{2}/\\d{4}");
+    var errorMessage = '';
+    errorContainer.frstChild.nodeValue = '';
+    var dateValue = dateField.value;
+    <link:internal>if</link:internal>(dateValue == '')
+	{
+	    errorMessage = 'Please provide a date.';
+	}
+    else <link:internal>if</link:internal>(!checkPattern.<link:internal>test</link:internal>(dateValue))
+	{
+	    errorMessage = 'Please provide the date in the defined format';
+	}
+    <link:internal>if</link:internal>(errorMessage != '')
+	{
+	    errorContainer.firstChild.nodeValue = errorMessage;
+	    dateField.focus();
+	    return false;
+	}
+    else
+	{
+	    return true;
+	}
+}
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:54.8615560+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:54.8615560+04:00</last-metadata-change-date>
+  <create-date>2009-04-05T18:38:33.9777670+04:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

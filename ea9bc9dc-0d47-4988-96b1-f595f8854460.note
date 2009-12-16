@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Уменьшение производительности в следствии выполнения SHRINKDATABASE</title>
+  <text xml:space="preserve"><note-content version="0.1">Уменьшение производительности в следствии выполнения SHRINKDATABASE
+
+             
+Усекает не только лог, а всю базу данных. Перемещает страницы так чтобы свободное место в файле <link:internal>базы данных</link:internal> осталось только в конце, чтобы потом усечь файл <link:internal>базы данных</link:internal>, высвободив  пространство для операционной системы. При таком раскладе B-tree орнанизация индексов идет лесом. Вместе с просадкой производительности сервера на то время пока выполняется шринк базы, а после шринка последующие автоприросты.
+
+После шринка обычно работа замедляется до следующего реиндекса если конечно таблицы и индексы по разным файлгруппам не разложены.
+                                                 
+
+Data file shrink operations cause massive fragmentation of indexes. The reason is that data file shrink starts at the end of the data file and moves a single page at a time to a free space below the shrink threshold. In the process of doing so, it perfectly reverses the physical order of the pages comprising the leaf level of an index – thus perfectly fragmenting it!!
+
+Я считаю, что основная вина на чрезмерном использовании SHRINK DATABASE лежит на самой же майкрософт, а точнее на отделе разработки интсрументальных средств <link:internal>SQL</link:internal> Server 2000. Они ведь разместили реиндексацию, обновление статистики и шринк на одной вкладке: "Оптимизация".
+
+Мало того, что Maintenance Plan в 2000 для реиндексации используется DBREINDEX, после которой обновление статистики вообще противопоказано, но еще и последним пунктом стоит шринк, чтобы совсем убрать эффект реиндексации.
+
+Вот демонстрация:
+
+CREATE DATABASE shrinktest;
+USE shrinktest;
+SET NOCOUNT ON;
+
+Создаем таблицу, которую после грохнем и сделаем SHRINK:
+
+CREATE TABLE filler (c1 INT IDENTITY, c2 VARCHAR(8000))
+
+DECLARE @a INT;
+SELECT @a = 1;
+WHILE (@a &lt; 1280) -- insert 10MB
+BEGIN
+      INSERT INTO filler VALUES (REPLICATE ('a', 5000));
+      SELECT @a = @a + 1;
+END;
+
+Создаем рабочую табличку, которую будем анализировать:
+
+CREATE TABLE production (c1 INT IDENTITY, c2 VARCHAR (8000));
+CREATE CLUSTERED INDEX prod_cl ON production (c1);
+
+DECLARE @a INT;
+SELECT @a = 1;
+WHILE (@a &lt; 1280) -- insert 10MB
+BEGIN
+      INSERT INTO production VALUES (REPLICATE ('a', 5000));
+      SELECT @a = @a + 1;
+END;
+
+Смотрим фрагментацию и видим, что она близка к 0:
+
+SELECT avg_fragmentation_in_percent, fragment_count FROM sys.dm_<link:internal>db</link:internal>_index_physical_stats (
+      <link:internal>DB</link:internal>_ID ('shrinktest'), OBJECT_ID ('production'), 1, NULL, 'LIMITED');
+
+DROP TABLE filler;
+DBCC SHRINKDATABASE (shrinktest);
+
+SELECT avg_fragmentation_in_percent, fragment_count FROM sys.dm_<link:internal>db</link:internal>_index_physical_stats (
+      <link:internal>DB</link:internal>_ID ('shrinktest'), OBJECT_ID ('production'), 1, NULL, 'LIMITED');
+
+<link:url>http://www.<link:internal>sql</link:internal></link:url><link:url>.ru/articles/mssql/2007/051403ExtentUsageAndBehavioursWhenUsingDBREINDEXAndSHRINKFILE.shtml</link:url>
+<link:url>http://sqlskills.com/BLOGS/PAUL/post/Auto-shrink-e28093-turn-it-OFF!.aspx</link:url>
+<link:url>http://www.karaszi.com/SQLServer/info_dont_shrink.asp</link:url>
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.0128700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.0128700+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:13:40.9727180+03:00</create-date>
+  <cursor-position>102</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

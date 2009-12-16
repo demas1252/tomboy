@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Верхняя конечность</title>
+  <text xml:space="preserve"><note-content version="0.1">Верхняя конечность
+
+<link:internal>Лопатка</link:internal>
+<link:internal>Ключица</link:internal>
+
+<bold>Плечевая кость</bold>
+
+<list><list-item dir="ltr">тело несколько скручено вокруг своей оси
+</list-item><list-item dir="ltr">вверху цилиндр; внизу трехгранный
+</list-item><list-item dir="ltr">дельтовидная бугристость (tuberositas deltoidea) - крепятся дельтовидная мышца</list-item></list>
+
+<bold>Предплечье</bold>
+
+<list><list-item dir="ltr">2 кости: локтевая кость и лучевая кость
+</list-item><list-item dir="ltr"></list-item></list>
+
+
+</note-content></text>
+  <last-change-date>2009-08-17T17:16:22.4052140+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-17T17:16:22.4052140+04:00</last-metadata-change-date>
+  <create-date>2009-08-13T14:24:02.7774440+04:00</create-date>
+  <cursor-position>224</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1170</x>
+  <y>578</y>
+  <open-on-startup>False</open-on-startup>
+</note>

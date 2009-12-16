@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка LeafNode в Ubuntu</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка LeafNode в Ubuntu
+
+1. В <link:url>/etc/hosts</link:url>:
+	127.0.1.1	osiris.home.local	osiris
+2. Перезагрузка
+3. sudo <link:internal>aptitude</link:internal> install leafnode
+4. <link:url>/etc/news/leafnode/config</link:url>
+5. sudo touch <link:url>/etc/news/leafnode/local.groups</link:url>
+6. sudo <link:internal>vim</link:internal> <link:url>/etc/inetd.conf</link:url>
+	nntp stream  tcp nowait  news <link:url>/usr/sbin/tcpd</link:url> <link:url>/usr/sbin/leafnode</link:url>
+7. <link:url>/etc/hosts.allow</link:url>
+8. <link:url>/etc/hosts.deny</link:url>
+
+<link:internal>cron</link:internal>
+
+$ sudo fetchnews -vvv
+$ sudo texpire -vvv
+
+logging</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.8590010+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.8590010+04:00</last-metadata-change-date>
+  <create-date>2009-09-07T20:49:58.6188940+04:00</create-date>
+  <cursor-position>339</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>810</x>
+  <y>376</y>
+  <open-on-startup>False</open-on-startup>
+</note>

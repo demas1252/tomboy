@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Позиционирование на записи</title>
+  <text xml:space="preserve"><note-content version="0.1">Позиционирование на записи
+
+void doRefresh()
+{
+    gm_reports      _report;
+    ;
+    _report = gm_Reports::<link:internal>find</link:internal>(reports.ReportId);
+
+    Reports_ds.refresh();
+    Reports_ds.reread();
+    this.setButtonsState();
+
+    reports_ds.findRecord(_report);
+}</note-content></text>
+  <last-change-date>2008-04-06T19:24:20.2163100+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T19:24:20.2163100+04:00</last-metadata-change-date>
+  <create-date>2008-04-03T13:16:30.5851920+04:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

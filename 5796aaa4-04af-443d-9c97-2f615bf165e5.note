@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>см. Реализациия ФЗ 224-Ф3-1.2</title>
+  <text xml:space="preserve"><note-content version="0.1">см. Реализациия ФЗ 224-Ф3-1.2
+
+1. MI: <link:internal>VendCreatePrepaymentFacture_Ru</link:internal>.
+2. Форма <link:internal>VendCreatePrepaymentFacture_Ru</link:internal>.  Эта форма показа и маркировки отобранных фактур.
+3. При нажатии на клавишу <italic>Выбрать</italic> запускается класс <link:internal>VendSelectPrepayment_Ru</link:internal>, который по введенным пользователем критериям отбирает <link:internal>предоплаты</link:internal> и запихивает их во временную таблицу <link:internal>VendTmpPrepaymentTrans_Ru</link:internal>, которая и отображается на форме (пункт 2).
+4. Класс <link:internal>VendCreatePrepaymentFacture_Ru</link:internal> на основе выбранных предоплат создает фактуры.</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.0908980+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.0908980+03:00</last-metadata-change-date>
+  <create-date>2009-01-18T12:43:38.8780490+03:00</create-date>
+  <cursor-position>206</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>541</x>
+  <y>432</y>
+  <open-on-startup>False</open-on-startup>
+</note>

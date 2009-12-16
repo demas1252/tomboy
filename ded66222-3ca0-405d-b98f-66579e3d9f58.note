@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Суммирование в ячейке всех введенных данных</title>
+  <text xml:space="preserve"><note-content version="0.1">Суммирование в ячейке всех введенных данных
+
+
+Щелкните правой кнопкой мыши по ярлычку листа и выберите в контекстном меню Исходный текст (Source Code). В открывшееся окно редактора Visual <link:internal>Basic</link:internal> скопируйте и вставьте код простого макроса:
+
+_Private Sub Worksheet_Change(ByVal Target As <link:internal>Excel</link:internal>.Range)
+      With Target
+         <link:internal>If</link:internal> .Address(False, False) = "A<link:internal>1</link:internal>" Then
+            <link:internal>If</link:internal> IsNumeric(.Value) Then
+               Application.EnableEvents = False
+               Range("A2").Value = Range("A2").Value + .Value
+               Application.EnableEvents = True
+            End <link:internal>If</link:internal>
+         End <link:internal>If</link:internal>
+      End With
+End Sub_</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.9369100+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.9369100+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:05:20.0450800+04:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

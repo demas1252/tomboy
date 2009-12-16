@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Оптимизация разбиения журналов ГК</title>
+  <text xml:space="preserve"><note-content version="0.1">Оптимизация разбиения журналов ГК
+
+subj: Оптимизация разбиения журанала ГК
+source: Сделано Денисом Захаровым для АиЖК
+
+description:
+
+Как я понимаю, основная проблема была в том, что при разбиении журнала в цикле (метод distributeJournalLines() для каждого ваучера, а следовательно и строки вызывался метод isEligableDistributionBeforePost(), который дергал метод numOfJournalsIfDistributed(), определяя стоит ли дальше разбивать.  
+
+С учетом того, что сам метод numOfJournalsIfDistributed() был не оптимален - все работало крайне медленно.
+
+Поэтому:
+
+<link:internal>1</link:internal>. Вызов метода isEligableDistributionBeforePost() Денис заменил на более простую проверку условия: 
+	<link:internal>if</link:internal> (currNumOfLines - distributedLines &lt;= this.linesLimitBeforeDistribution)
+	   // первоначальное вол-во строк в журнале - уже перенесенное &lt;= порог
+
+2. Переписал метод numOfJournalsIfDisrtibuted(). Раньше он группировкой сосавлял перечень ваучеров и потом по каждому ваучеру считал кол-во строк.  Денис переделал на один запрос возвращающий набор Voucher-&gt;кол-во записей.
+
+3. Кстати, в методу distributeJournalLines() есть (может быть) еще возможность оптимизации.  Там для каждого ваучера выполняется такой код:
+
+while select forUpdate ledgerJournalTrans
+   where ledgerJournalTrans.journalNum == this.journalNum &amp;&amp;
+   ledgerJournalTrans.voucher    == voucherListEnumerator.current()
+   {
+       ledgerJournalTrans.journalNum = newLedgerJournalTable.journalNum;
+       ledgerJournalTrans.doUpdate();
+   }
+
+   distributedLines = newLedgerJournalTable.numOfLines();
+
+numOfLines() - это подсчет количества строк в созданном журнале.  Есть сильное подозрение, что если добавить счетчик добавленных строк в цикл выше - будет эффективнее.
+
+p.s. Есть проект <italic>DistributeLedgerJournalOptimization</italic>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.7188570+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.7188570+04:00</last-metadata-change-date>
+  <create-date>2008-04-05T19:17:24.6343610+04:00</create-date>
+  <cursor-position>1520</cursor-position>
+  <width>559</width>
+  <height>693</height>
+  <x>1036</x>
+  <y>146</y>
+  <open-on-startup>False</open-on-startup>
+</note>

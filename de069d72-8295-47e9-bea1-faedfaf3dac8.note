@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CPP реализация AbstractFactory</title>
+  <text xml:space="preserve"><note-content version="0.1">CPP реализация AbstractFactory
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+ 
+// widgets
+ 
+class Button {
+    public:
+        virtual ~Button() { }
+        virtual void paint() = 0;
+};
+ 
+class WinButton : public Button {
+    public:
+        void paint()     {
+            cout&lt;&lt;"I'm a WinButton: ";
+        }
+};
+ 
+class OSXButton : public Button {
+public:
+    void paint()  {
+        cout&lt;&lt;"I'm an OSXButton: ";
+    }
+};
+ 
+// factories 
+ 
+class GUIFactory  {
+public:
+    virtual ~GUIFactory() { }
+    virtual Button* createButton() = 0;
+    static GUIFactory* getFactory();
+};
+ 
+class WinFactory : public GUIFactory {
+    public:
+        Button* createButton()  {
+            return new WinButton();
+        }
+};
+ 
+class OSXFactory : public GUIFactory {
+    public:
+        Button* createButton()    {
+            return new OSXButton();
+    }
+};
+ 
+GUIFactory* GUIFactory::getFactory()  {
+    string sys(getenv("OS"));
+    <link:internal>if</link:internal> (sys.<link:internal>find</link:internal>("<link:internal>Windows</link:internal>") != string::npos )
+        return new WinFactory();
+    else 
+        return new OSXFactory();
+}
+
+// apps
+ 
+int main()
+{
+    GUIFactory* factory = GUIFactory::getFactory();
+    Button* button = factory-&gt;createButton();
+    button-&gt;paint();
+ 
+    delete factory;
+    delete button;
+ 
+    return 0;
+}
+// Output is either:
+//   "I'm a WinButton:"
+// or:
+//   "I'm an OSXButton:"
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.8157490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.8157490+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:07:10.8581800+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

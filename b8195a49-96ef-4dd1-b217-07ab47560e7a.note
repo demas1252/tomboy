@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Linux Internet: почта, новости, im, браузеры</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Linux</link:internal> Internet: почта, новости, im, браузеры
+
+<bold><link:broken>Mutt</link:broken></bold>
+
+W - сбросить флаг (unread)
+$ - purge
+Не забыть установить msmpt
+t - пометить письмо
+;s - переместить все помеченное
+
+<bold><link:broken>Slrn</link:broken></bold>
+
+slrnpull -d<link:url> ~/news/gmane</link:url> -h news.gmane.org
+
+<bold>Pidgin</bold>
+
+Проблема такая - в pidgin сообщения в оффлайн мне приходили знаками вопроса (не определялась кодировка). В онлайновом общении всё было норм. В настройках стояла cp1251, вроде всё правильно... В своё время бился-бился, плюнул, а решение оказалось таким - надо было вместо cp1251 выставить CP1251.
+
+sudo <link:internal>apt-get</link:internal> install pidgin-extprefs
+
+<bold>Kopete</bold>
+
+name: <link:url>andrey.demidov@gmail.com</link:url>
+password
+connection: 3 галочки - use ssl, plain-text, override
+talk.google.com 5223
+
+<bold><link:broken>Wget</link:broken></bold>
+
+-O "filename"
+
+<bold><link:broken>wget</link:broken></bold><bold> --limit-rate=50k -с -i download.lst</bold>
+
+ Позволяет скачать список файлов из файла download.lst. URL каждого файла записывается на отдельной строчке.
+
+    *
+      Ключик -i &lt;file&gt; указывает на файл со списком.
+    *
+      Ключик –limit-rate=&lt;rate&gt; позволяет ограничить скорость скачивания.
+    *
+      Ключик -<link:broken>c</link:broken> указывает, что если файл с таким именем уже существует, его следует докачать. Иначе файл будет скачан в новый файл с добавленым числовым индексом.
+
+<bold><link:broken>wget</link:broken></bold><bold> -r -np -<link:broken>c</link:broken></bold><bold> &lt;site_url&gt;</bold>
+
+ Позволяет выкачать сайт целиком. Рекурсивно проходится по всем найденным на странице ссылкам, выкачивает их. Если выкачана новая страница - повторяет. В результате весь сайт с картинками и файлами у вас в кармане.
+
+    *
+      Ключик -r указывает, что надо рекурсивно ходить по ссылкам.
+    *
+      Ключик -np не даёт <link:broken>wget</link:broken>'у выкачать весь сайт целиком, если вам нужна только какая-то часть. К примеру, если вы задали URL <link:url>http://www.linuxcenter.ru/lib/articles/programming/?pid=4706</link:url> то будут выкачаны только статьи по программированию.
+
+<bold><link:broken>wget</link:broken></bold><bold> -p -k &lt;page_url&gt;</bold>
+
+ Выкачивает указанную страницу с картинками и оформлением.
+
+    *
+      Ключ -p указывает, что дополнительно к странице нужно скачать файлы необходимые для корректного отображения страницы в оффлайн.
+    *
+      Ключ -k заставляет <link:broken>wget</link:broken> преобразовать все внешние, по отношению к странице, ссылки таким образом, что бы они вели на оригинальный сайт.
+
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.6063330+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.6063330+04:00</last-metadata-change-date>
+  <create-date>2008-06-12T17:12:59.7378420+04:00</create-date>
+  <cursor-position>690</cursor-position>
+  <width>1013</width>
+  <height>745</height>
+  <x>381</x>
+  <y>198</y>
+  <open-on-startup>False</open-on-startup>
+</note>

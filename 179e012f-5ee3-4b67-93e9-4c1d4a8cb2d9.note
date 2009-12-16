@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сохранение файла без лишних вопросов</title>
+  <text xml:space="preserve"><note-content version="0.1">Сохранение файла без лишних вопросов
+
+
+после сохранения <link:internal>Excel</link:internal> спрашивает:
+Файл "Resume.xlw" уже существует. Сохранить?
+---
+<link:internal>Excel</link:internal>.DisplayAlerts = False
+---
+Не использовать Application.SaveWorkspace (а <link:internal>Excel</link:internal>.Save именно им и является).
+Использовать Workbook.Save (или SaveAs).
+Или сразу использовать <link:internal>Excel</link:internal>.Workbook.Close(True): сигнатура метода Close выглядит так :
+"<link:internal>Excel</link:internal>.Workbook.Close([SaveChanges], [Filename], [RouteWorkbook])".</note-content></text>
+  <last-change-date>2009-10-17T22:10:49.7572490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:49.7572490+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:06:17.1839740+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

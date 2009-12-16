@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация алгоритма Дейкстры на Pyhton</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация алгоритма Дейкстры на Pyhton
+
+import random
+
+random.seed()
+
+class Vertex(object):
+    __slots__ = ('name',)
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return self.name
+
+    def __repr__(self):
+        return self.name
+
+
+class Edge(object):
+    __slots__ = ('u', 'v', 'd')
+    def __init__(self, u, v, d):
+        assert isinstance(u, Vertex) # source vertex
+        assert isinstance(v, Vertex) # destination vertex
+        assert isinstance(d, float) # distance, or cost
+        self.u = u
+        self.v = v
+        self.d = d
+    def __str__(self):
+        return "[%s --%3.2f--&gt; %s]" % (self.u.name, self.d, self.v.name)
+    def __repr__(self):
+        return str(self)
+
+class Graph(object):
+    def __init__(self):
+        V = []
+
+        for n in xrange(20):
+            V.append(Vertex(str(n + 1)))
+
+        E = []
+        for n in xrange(10*len(V)):
+            u = V[random.randint(0, len(V) - 1)]
+            while True:
+                v = V[random.randint(0, len(V) - 1)]
+                <link:internal>if</link:internal> v is not u:
+                    break
+            E.append(Edge(u, v, random.uniform(10, 100)))
+
+        self.V = V
+        self.E = E
+
+    def distance(self, s, S):
+        for edge in (e for e in G.E <link:internal>if</link:internal> e.u == s and e.v == S[0]):
+            d = edge.d
+            break
+        else:
+            raise AssertionError
+
+        for u, v in <link:internal>zip</link:internal>(S[:-1], S[1:]):
+            for edge in (e for e in G.E <link:internal>if</link:internal> e.u == u and e.v == v):
+                d += edge.d
+                break
+            else:
+                raise AssertionError
+        return d
+
+
+def dijkstra(G, t, s):
+    d = {}
+    previous = {}
+    for v in G.V:
+        d[v] = 1e50 # infinity
+        previous[v] = None
+    del v
+    d[s] = 0
+    S = []
+    Q = list(G.V)
+
+    def Extract_Min(Q):
+        m = None
+        md = None
+        for u in Q:
+            <link:internal>if</link:internal> m is None:
+                m = u
+                md = d[u]
+            else:
+                <link:internal>if</link:internal> d[u] &lt; md:
+                    md = d[u]
+                    m = u
+        Q.remove(m)
+        return m
+
+    while Q:
+        u = Extract_Min(Q)
+        <link:internal>if</link:internal> u == t:
+            break
+        S.append(u)
+        for edge in (e for e in G.E <link:internal>if</link:internal> e.u == u):
+            <link:internal>if</link:internal> d[u] + edge.d &lt; d[edge.v]:
+                d[edge.v] = d[u] + edge.d
+                previous[edge.v] = u
+
+    S = []
+    u = t
+    while previous[u] is not None:
+        S.insert(0, u)
+        u = previous[u]
+    return S
+ 
+<link:internal>if</link:internal> __name__ == '__main__':
+    G = Graph()
+    s = G.V[random.randint(0, len(G.V) - 1)]
+    while True:
+        t = G.V[random.randint(0, len(G.V) - 1)]
+        <link:internal>if</link:internal> t is not s:
+            break
+    S = dijkstra(G, t, s)
+    <link:internal>if</link:internal> S:
+        print "dijkstra %s ---&gt; %s: " % (s, t), S, G.distance(s, S)
+        for inter in S[:-1]:
+            S1 = dijkstra(G, t, inter)
+            print "\t =&gt; dijkstra %s ---&gt; %s: " % (inter, t), S1, G.distance(inter, S1)
+            <link:internal>if</link:internal> S1 != S[ (len(S) - len(S1)) : ]:
+                print "************ ALARM! **************"
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.6654940+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.6654940+04:00</last-metadata-change-date>
+  <create-date>2009-07-01T13:06:07.2288990+04:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>1045</width>
+  <height>916</height>
+  <x>73</x>
+  <y>28</y>
+  <open-on-startup>False</open-on-startup>
+</note>

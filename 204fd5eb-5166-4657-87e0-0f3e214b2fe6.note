@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ubuntu убивает винты</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Ubuntu</link:internal> убивает винты
+
+Мне тут сегодня прислали коммент к моей новости по сабжу на nixp. В нем толково разъясняют:
+
+Если же открыть исходники и посмотреть туда, то механизм работы будет совсем иной.  Во-первых,<link:url> /etc/acpi/power.sh</link:url> делает <link:internal>hdparm</link:internal> -B <link:internal>1</link:internal> ТОЛЬКО если включена переменная ENABLE_LAPTOP_MODE, а она по-умолчанию выключена и включается только ручной правкой конфига<link:url> /etc/default/acpi-support</link:url>. То есть линукс просто не производит правку режима работы и винт работает так, как его выставит BIOS (читай: производитель ноутбука).
+
+Во-вторых, указанный "фикс" тоже работает не в 100% случаев. Для ряда винтов надо не отключать ACPI (<link:internal>hdparm</link:internal> -B 255), а переводить его в наиболее щадящий режим (<link:internal>hdparm</link:internal> -B 254), а отключение ACPI такими винтами просто игнорируется.
+
+Ну и наконец, более правильно исправить ситуацию можно внеся в<link:url> /etc/hdparm.conf</link:url> строчки<link:url>
+/dev/sda</link:url> {
+apm = 255
+}
+либо apm=254, затем включив запуск <link:internal>hdparm</link:internal> при старте системы:
+update-rc.d <link:internal>hdparm</link:internal> defaults
+
+-- </note-content></text>
+  <last-change-date>2008-11-01T23:31:10.2313900+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-01T23:31:10.2313900+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:36:21.7205019+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

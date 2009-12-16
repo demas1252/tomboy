@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sql задача 3</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Sql</link:internal> задача 3
+
+<italic>DECLARE @Table TABLE (
+	[ID] [int] NULL,
+	[_date] [datetime] NULL,
+	[tct] [varchar](50) COLLATE Cyrillic_General_CI_AS NULL,
+	[int] [int] NULL
+)
+
+INSERT INTO @Table VALUES(100,'20081025 21:25:06.130','a',1)
+INSERT INTO @Table VALUES(100,'20081025 21:25:06.130','a',2)
+INSERT INTO @Table VALUES(75,'20081025 21:25:06.130','a',3)
+INSERT INTO @Table VALUES(100,'20081025 20:00:00.000','a',4)
+INSERT INTO @Table VALUES(75,'20081025 21:25:31.997','a',5)
+INSERT INTO @Table VALUES(100,'20081025 21:25:44.233','a',6)
+INSERT INTO @Table VALUES(100,'20081025 21:25:44.233','a',7)
+INSERT INTO @Table VALUES(75,'20081025 21:25:51.337','a',8)
+
+select * from @Table</italic>
+
+Надо получить набор int, таких, чтобы для всех _date ID равнялось 100.
+
+<link:internal>Sql</link:internal> answer:
+
+<italic>SELECT *
+FROM @Table 
+WHERE [ID] = 100
+AND [_date] NOT IN (SELECT [_date] FROM @Table WHERE [ID] &lt;&gt; 100)
+</italic>
+Мой извращенный вариант:
+
+<italic>select * from @Table where _date in
+(select _date from @Table group by _date having sum(id) / count(id) = 100)</italic>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.9108520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.9108520+04:00</last-metadata-change-date>
+  <create-date>2008-10-26T20:51:52.7958020+03:00</create-date>
+  <cursor-position>884</cursor-position>
+  <width>832</width>
+  <height>1021</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

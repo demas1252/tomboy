@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Момент снятия блокировки</title>
+  <text xml:space="preserve"><note-content version="0.1">Момент снятия блокировки
+
+
+Не раньше последнего ttsCommit
+Возможно что у вас этот код был внутри другой транзакции - потому <link:internal>блокировки</link:internal> не снимались и вы не видели их Lock Release.
+Посомтрите в коде значение
+Application.ttsLevel()
+Пока её значение отлично от 0 - не должно быть освобождения от блокировок.
+В отладчике можно непосредственно увидеть в строке статуса уровень вложенности текущей транзакции, так что можно просто отладчиком пройтись.</note-content></text>
+  <last-change-date>2008-03-30T17:33:30.1538160+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:33:30.1538160+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:36:27.1890340+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

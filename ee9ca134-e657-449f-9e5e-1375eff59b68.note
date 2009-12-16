@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Периодически обновлять данные в Oracle из MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Периодически обновлять данные в Oracle</link:internal> из MS SQL
+
+Том Кайт пишет, что выбрал бы такой способ:
+
+ - load the <link:internal>sql</link:internal> server jdbc drivers into <link:internal>Oracle</link:internal>
+ - write a <link:internal>java</link:internal> stored procedure in <link:internal>Oracle</link:internal> that connects to <link:internal>sql</link:internal> server and opens a result  set.
+ - it'll delete from the existing <link:internal>oracle</link:internal> table
+ - it'll insert the rows it fetches
+ - you would use DBMS_JOB to schedule that procedure to run every N minutes
+
+no muss, no fuss -- all done in the database.
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.7230940+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.7230940+04:00</last-metadata-change-date>
+  <create-date>2009-04-04T18:35:50.2036200+04:00</create-date>
+  <cursor-position>322</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>20</x>
+  <y>109</y>
+  <open-on-startup>False</open-on-startup>
+</note>

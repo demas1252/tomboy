@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Array Javascript Object</title>
+  <text xml:space="preserve"><note-content version="0.1">Array Javascript Object
+
+a = new Array("a", "b", "c");
+b = new Array(3);
+b[1] = "q";
+
+slice = a(1, 5)
+new_a = a.join(b, slice)
+str = new_a.join(', ')
+new_new_a = str.split(', ')
+
+sorted = new_new_a.sort()
+
+</note-content></text>
+  <last-change-date>2009-03-23T21:06:33.0948260+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:06:33.0948260+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:05:44.8203400+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

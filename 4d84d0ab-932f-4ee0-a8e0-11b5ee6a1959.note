@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные средства</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные средства
+
+<bold>Настройки</bold>
+<link:internal>Базовые настройки ОС</link:internal>
+<link:internal>Методы аммортизации</link:internal>
+
+<bold>Операции с ОС</bold>
+<link:internal>Создание ОС</link:internal>    
+<link:internal>Приобретение ОС</link:internal>
+<link:internal>Ввод в эксплуатацию</link:internal>
+<link:internal>Сборка ОС из комплектующих</link:internal>
+<link:internal>Начисление аммортизации</link:internal>
+<link:internal>Сторнирование аммортизации</link:internal>
+<link:internal>Консервация ОС</link:internal>
+<link:internal>Изменение стоимости ОС</link:internal>
+<link:internal>Перемещение ОС</link:internal>
+    
+<bold>Выбытие ОС</bold>
+<link:internal>Продажа ОС</link:internal>
+<link:internal>Разборка ОС</link:internal>
+    
+<bold>Детали</bold>
+<link:internal>Отмена списания ОС</link:internal>
+
+<bold>Архитектура</bold>
+<link:internal>Архитектура модуля ОС</link:internal>
+
+<bold>См.также:</bold>
+<link:internal>Отчет Состояние ОС не смотрит на дату</link:internal>
+<link:internal>Неправильно указали группы амортизации и начислили ее</link:internal></note-content></text>
+  <last-change-date>2008-04-07T14:38:15.1884620+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-07T14:38:15.1884620+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:26:12.3414320+03:00</create-date>
+  <cursor-position>422</cursor-position>
+  <width>614</width>
+  <height>743</height>
+  <x>801</x>
+  <y>109</y>
+  <open-on-startup>False</open-on-startup>
+</note>

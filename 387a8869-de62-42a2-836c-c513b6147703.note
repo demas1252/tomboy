@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Изменение параметров ADDM</title>
+  <text xml:space="preserve"><note-content version="0.1">Изменение параметров ADDM
+
+<link:internal>SQL</link:internal>&gt; SELECT parameter_name, parameter_value
+  2 FROM    dba_advisor_def_parameters
+  3 WHERE advisor_name = 'ADDM';
+
+<link:internal>SQL</link:internal>&gt; EXEC dbms_advisor.set_default_task_parameter ( -
+'ADDM', 'DBIO_EXPECTED', 16000);
+PL/<link:internal>SQL</link:internal> procedure successfully completed.</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5232110+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5232110+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:55:58.4832750+03:00</create-date>
+  <cursor-position>271</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>569</y>
+  <open-on-startup>False</open-on-startup>
+</note>

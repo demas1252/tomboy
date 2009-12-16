@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Книга покупок</title>
+  <text xml:space="preserve"><note-content version="0.1">Книга покупок
+
+<link:internal>Параметры обработки НДС</link:internal>
+<link:internal>Обрабока входящего НДС</link:internal>
+<link:internal>Общий принцип работы книги покупок</link:internal>
+<link:internal>Amounts в книге покупок</link:internal>
+<link:internal>Изменение сумм в обработке НДС или BookProcessVATEngine_Ru</link:internal>
+    
+
+Таблица <link:internal>CustVendTransPostingLog_RU</link:internal> - НДС по тем накладным, по которым была оплата
+<link:internal>Важные мелочи по книге покупок</link:internal>
+
+<link:internal>Опимизация производительности книжек</link:internal>
+<link:internal>Почему в обработку входящего попадают отрицательные суммы</link:internal></note-content></text>
+  <last-change-date>2009-09-18T13:43:42.2985880+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-18T13:43:42.2985880+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:59:35.5481610+03:00</create-date>
+  <cursor-position>14</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>401</x>
+  <y>401</y>
+  <open-on-startup>False</open-on-startup>
+</note>

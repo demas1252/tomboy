@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LedgerBondClient_ru</title>
+  <text xml:space="preserve"><note-content version="0.1">LedgerBondClient_ru
+
+
+     Для получения экземпляра класса LedgerBondCLient_ru предназначен метод ledgerBondClient_ru класса <link:internal>ledgerVoucherObject</link:internal>.
+    
+     Далее описаны основные методы класса ledgerBondCLient
+    
+     *Скобки корреспондирования*
+
+        Для создания открывающей скобки корреспондирования используется вызов addNewLogObject().
+        Для закрытия скобки корреспонденции используется вызов removeCurrentLogObject()
+        
+     *Работа с логом корреспондирования*
+
+     Ссылкой на единичный постинг в логе корреспондирования является объект типа LedgerBondVrefId_RU. В принципе – это просто целое число, которое ссылается на порядковый номер постинга в логе корреспондирования. Для получения эой ссылки используются следующие методы:
+
+     public LedgerBondVrefId_RU lastVrefId(int _offset = 0) – возвращает ссылку на последний созданный постинг. Если _offset==-<link:internal>1</link:internal> – на предпоследний и так далее. Метод используется достаточно часто. Для того чтобы закорреспондировать две последние созданные проводки используется устойчивый паттерн: ledgerBondClient.bondVRef2VRef(ledgerBondClient.lastVrefId(), ledgerBondClient.lastVrefId(-1));
+
+     public LedgerBondVrefId_RU findVRefByPostingType(LedgerPostingType _postingType, TransDate _transDate = <link:internal>ledgerVoucherObject</link:internal>.parmTransDate(), boolean _completelyBonded = false)
+
+     Метод используется для получения ссылки на последний созданный постинг с posting==_postingType. _TransDate – позволяет искать только среди постингов на некоторую дату, _completlyBonded – разрешает искать среди уже полностью откорреспондированых постингов. Метод используется, например, в классе salesFormLetter_invoice.postJournal(), чтобы добится того чтобы все созданные постинги реализации корреспондировали с постингом задолжености (который как раз ищется по LedgerPostingType::CustBalance)
+
+     public LedgerBondLog_RU getCreditLog(TransDate _transDate = <link:internal>ledgerVoucherObject</link:internal>.parmTransDate(), LedgerBondLog_RU _log = this.currentLog(_transDate));public LedgerBondLog_RU getDebitLog(TransDate _transDate = <link:internal>ledgerVoucherObject</link:internal>.parmTransDate(), LedgerBondLog_RU _log = this.currentLog(_transDate));
+
+     Методы возвращают кредитовый и дебитовый логи постингов. Пример использования – метод LedgerJournalCheckPost.bondJournalVoucher(). В этом методе дебетовый и кредитовый логи сортируются по <link:internal>recId</link:internal> исходной записи и корреспондируются друг с другом. Вообще в российском учете этот метод редко бывает полезным.
+
+     public TmpLedgerBondLogTable_RU log2Table(LedgerBondLog_RU _log)
+
+     Метод позволяет превратить лог корреспонденции во временную таблицу типа tmpLedgerBondLogTable_ru. В некоторых, особо тяжелых случаях, эта таблица используется для того чтобы можно было побродить по логу корреспонденции. Пример использования – метод markupAdjustment.doBondProportional(), который корреспондирует все счета кредита по накладным расходам со всеми счетами дебета по складским проводкам, при доначислении накладных расходов по закупочной накладной.
+
+     public LedgerBondLog_RU currentLog(TransDate _transDate = <link:internal>ledgerVoucherObject</link:internal>.parmTransDate(), boolean _excludeCompletelyBonded = true). Возвращает текущий лог корреспондирования без разделения на дебетовую и кредитовую части.
+
+     public void flushCurrentLog() – очищает текущий лог корреспондирования
+Методы корреспондирования
+
+     Ниже описаны собственно методы, указывающие какие два постинга должны быть закорреспондированы.
+
+     public void bondVRef2VRef(LedgerBondVrefId_RU _vRefId<link:internal>1</link:internal>, LedgerBondVrefId_RU _vRefId2, Amount _amount = 0.0, LedgerBondAmountType_RU _amountType = LedgerBondAmountType_RU::Currency, LedgerBondOrder_RU _bondOrder = LedgerBondOrder_RU::Auto, boolean _roundToCredit = false)
+
+     Главный и фундаментальный метод указания корреспондирования. Все остальные являются надстройками на bondVRef2VRef.
+
+         Параметры:
+             _vRefId<link:internal>1</link:internal>,_vRefId2 – ссылки на постинги, которые должны быть закорреспондированы.
+             _amount – сумма корреспондирования. В какой валюте эта сумма – указывается следующим параметром
+             _AmountType – указывает – в чем задана сумма корреспондирования предыдущего параметра. Варианты – в валюте операции, в первичной валюте учета, во вторичной валюте учета. По умолчанию – в валюте операции.
+             _bondOrder – задает – кто из _vRefId<link:internal>1</link:internal> и _vRefId2 относится к кредитовому постингу, а кто – к дебитовому. В случае -_bondOrder== LedgerBondOrder_RU::CreditToDebit – первый VrefId – кредитовый, второй – дебетовый. В случае _bondOrder== LedgerBondOrder_RU::DebitToCredit – первый VRefId – дебетовый; второй – кредитовый. По умолчанию - _bondOrder==LedgerBondOrder_RU::Auto. В этом варианте – система заглядывает в данные о первом из постингов и исходя из того – кредитовый он или дебетовый – сама решает где у нас дебет, а где кредит…
+             _roundToCredit – при расчете корреспондируемых суммы – округлять результат по кредитовому постингу.
+             
+     Теперь немножко о том, зачем появилась необходимость в параметрах _AmountType и _roundToCredit. Дело в том, что в принципе – если забыть про возможность корреспонденции счетов и российский учет, в DAX вполне можно создать по одному документу 5 разносок В РАЗНЫХ валютах. Главное, чтобы обороты в первичной и вторичной валютах по данному документу ГК равнялись нолю (точнее – были бы меньше границы округления в национальной и вторичной валюте). Так вот – в принципе, механизм корреспонденции в DAX позволяет откорреспондировать два постинга в РАЗНЫХ валютах. Хотя с точки зрения российского учета, проводка у которой по дебету и кредиту стоят разные валюты операций является изрядным абсурдом, но тем не менее, и использованием механизма корреспонденции подобную проводку можно создать. Помниться в ранних версиях механизма авансовых отчетов, система как раз порождала по закрытию проводки с разными валютами по дебету и кредиту. Так вот – для того чтобы корректно отслеживать сумму корреспондирования во всех трех валютах (валюте операции, первичной валюте учета и вторичной валюте учета), система рассчитывает сумму корреспондирования в двух оставшихся валютах (то есть – не в той которая была передана в bondVRef2VRef) через пропорцию. Так вот параметр roundToCredit и позволяет регулировать – суммы из какого из постингов будут использоваться для расчета этой пропорции – из дебетового или кредитового.
+
+     public void bondVRef2Log(LedgerBondVrefId_RU _vRefId, container _log = this.currentLog())
+
+     Корреспондирует указанный Vref со всеми остальными проводками в неком логе корреспонденции (по умолчанию – в текущем). Подразумевается что постинг определяемый _VrefId и все остальные постинги в логе находятся по разным сторонам проводок.
+
+     public void bondLastVRef2CurrentLog(TransDate _transDate = <link:internal>ledgerVoucherObject</link:internal>.parmTransDate())
+
+     Корреспондирует последний постинг в текущем логе корреспонденции со всеми остальными. По большому счету – частный случай предыдущей функции. Передаваемый параметр позволяет ограничить корреспондирование постингами на некую дату. Не припоминаю чтобы данный параметр где-то использовался.
+
+     Существует еще два метода корреспондирования bondLog2Log и bondLogBySourceRecId. Они предназначены для корреспондирования множества кредитовых и дебетовых проводок по одному ваучеру и как правило применяются для проводок порожденных по многострочным документам (типа журналов). Поскольку штука это достаточно экзотическая, я не буду про них здесь писать.
+
+     Заканчивая разговор о методах корреспондирования, хочу еще раз подчеркнуть, что они лишь создают в памяти некую структуру, описывающую правила корреспондирования. Реальное расщепление постингов происходит где-то в недрах кода, вызываемого из класса <link:internal>ledgerVoucher</link:internal>.end().
+</note-content></text>
+  <last-change-date>2009-11-05T16:11:58.9054760+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:58.9054760+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:22:52.0853780+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>498</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

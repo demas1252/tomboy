@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Local Binding with define, let и let*</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Local Binding with define, let и let</link:internal>*
+
+<bold>Define</bold>
+Lang: Essential....
+
+<italic>(define (converse s)
+
+  (define (starts? s2) ; local to converse
+      (define len2 (string-length s2))  ; local to starts?
+      (and (&gt;= (string-length s) len2)
+           (equal? s2 (substring s 0 len2))))
+
+    (cond
+     [(starts? "hello") "hi!"]
+     [(starts? "goodbye") "bye!"]
+     [else "huh?"]
+    )
+)</italic>
+
+&gt; (converse "hello")
+"hi!"
+&gt; (converse "hell")
+"huh?"
+&gt; (converse "hello!!!")
+"hi!"
+
+&gt; starts? ; outside of converse, so...
+reference to undefined identifier: starts?
+
+<bold><link:internal>Let</link:internal></bold>
+Lang: advanced student
+
+<italic>(<link:internal>let</link:internal></italic><italic> ([x 1] [y 2])
+  (format "adding ~s and ~s produces ~s" x y (+ x y)))</italic>
+
+"adding 1 and 2 produces 3"
+
+<bold><link:internal>Let</link:internal></bold><bold>*</bold>
+
+<italic>&gt; (<link:internal>let</link:internal></italic><italic>* ([x 1]
+           [y 2]
+           [z (+ x y)])
+      (format "adding ~s and ~s produces ~s" x y z))
+</italic>
+  "adding 1 and 2 produces 3"</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.3392920+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.3392920+04:00</last-metadata-change-date>
+  <create-date>2008-10-07T14:48:57.5207830+04:00</create-date>
+  <cursor-position>649</cursor-position>
+  <width>746</width>
+  <height>685</height>
+  <x>0</x>
+  <y>30</y>
+  <open-on-startup>False</open-on-startup>
+</note>

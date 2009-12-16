@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Functions That Produce Functions</title>
+  <text xml:space="preserve"><note-content version="0.1">Functions That Produce Functions
+
+Пример <link:internal>1</link:internal>:
+&lt;&lt;pre
+(define (<link:internal>add</link:internal> x)
+  (local ((define (x-adder y) (+ x y)))
+    x-adder))
+
+&gt; (define f (<link:internal>add</link:internal> 5))
+&gt; (f 10)
+15 
+   
+&gt;&gt;
+Пример 2:
+&lt;&lt;pre
+(define (filter2 rel-op)
+  (local ((define (<link:internal>abs</link:internal>-fun alon t)
+            (cond
+              [(empty? alon) empty]
+              [else
+               (cond
+                 [(rel-op (first alon) t) (cons (first alon) (<link:internal>abs</link:internal>-fun (rest alon) t))]
+                 [else (<link:internal>abs</link:internal>-fun (rest alon) t)]
+                 )
+               ]
+              )
+            ))
+    <link:internal>abs</link:internal>-fun)
+  )
+  
+&gt; (define below2 (filter2 &lt;))
+&gt; (below2 (list <link:internal>1</link:internal> 2 3 4 5 6) 4)
+(list <link:internal>1</link:internal> 2 3)
+
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2009-07-08T16:38:54.4432360+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-08T16:38:54.4432360+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:56:42.4794500+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>139</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

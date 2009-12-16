@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритмы поиска</title>
+  <text xml:space="preserve"><note-content version="0.1">Алгоритмы поиска
+
+<link:internal>Двоичный поиск</link:internal>
+<link:internal>Интерполирующий поиск</link:internal>
+<link:internal>Линейный поиск</link:internal>
+<link:internal>Поиск в глубину</link:internal>
+<link:internal>Поиск в ширину</link:internal>
+<link:internal>Троичный поиск</link:internal>
+<link:internal>Поиск в хеш-таблице</link:internal>
+</note-content></text>
+  <last-change-date>2009-07-01T12:02:17.3709180+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-01T12:02:17.3709180+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:41:44.9804070+03:00</create-date>
+  <cursor-position>116</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>542</x>
+  <y>166</y>
+  <open-on-startup>False</open-on-startup>
+</note>

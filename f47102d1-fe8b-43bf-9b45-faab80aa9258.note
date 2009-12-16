@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные понятия теории игр</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные понятия теории игр
+
+<list><list-item dir="ltr"><italic>Игра с нулевой суммой</italic> - если один игрок выигрывает то, что проигрывает другой.
+</list-item><list-item dir="ltr"><italic>Ход</italic> - выбор одного из предусмотренных правилами игры вариантов.
+</list-item><list-item dir="ltr"><italic>Личный ход</italic>  - сознательный выбор (в отличии от случайного хода)
+</list-item><list-item dir="ltr"><italic>Игра с полной информацией</italic> - игрок при каждом личном ходе знает результаты всех предыдущих ходов, как личных, так и случайных.
+</list-item><list-item dir="ltr"> <italic>Конечной</italic> называется игра, если у игрока есть конечное число стратегий.</list-item></list>
+
+
+<list><list-item dir="ltr">Пусть у игрока A есть m стратегий, а у игрока B - n стратегий.
+</list-item><list-item dir="ltr">A1...An - наши стратегии; B1..Bn - стратегии противника
+</list-item><list-item dir="ltr">Выбор Ai и Bj определяет исход игры - наш выигрыщ aij.
+</list-item><list-item dir="ltr">Если игра содержит случайные ходы - в этом случае оценкой ожидаемого выигрыша является его среднее значение (мат ожидание)
+</list-item><list-item dir="ltr">Платежной матрицой (матрицей игры) наз-ся таблица, где на пересечениях Ai и Bj стоит aij.</list-item></list>
+
+<bold>Пример
+
+</bold>Два игрока ложат не глядя друг на друга по монете на стол. Если стороны совпали - выиграл один; если нет - другой.
+
+Оба хода личные; с неполной информацией
+
+Матрица
+
+     1  -1
+     -1  1
+
+
+</note-content></text>
+  <last-change-date>2009-08-20T10:24:40.6790680+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-20T10:24:40.6790680+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T10:18:22.6025660+04:00</create-date>
+  <cursor-position>625</cursor-position>
+  <width>487</width>
+  <height>742</height>
+  <x>1131</x>
+  <y>143</y>
+  <open-on-startup>False</open-on-startup>
+</note>

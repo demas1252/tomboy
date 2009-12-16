@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Excel Formulas</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Excel</link:internal> Formulas
+
+<link:internal>Соответствие формул Engl-Rus</link:internal>
+     
+<link:internal>IF</link:internal>
+<link:internal>ВПР</link:internal></note-content></text>
+  <last-change-date>2008-04-06T15:07:19.0417720+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:07:19.0417720+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:06:29.9588130+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>506</x>
+  <y>234</y>
+  <open-on-startup>False</open-on-startup>
+</note>

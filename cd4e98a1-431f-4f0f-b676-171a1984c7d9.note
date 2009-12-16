@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Inserter adapter</title>
+  <text xml:space="preserve"><note-content version="0.1">Inserter adapter
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;list&gt;
+
+using namespace std;
+
+int main() {
+  int a[4] = {10, 20, 30, 40};
+  vector&lt;int&gt; v(a, a + 4);
+  list&lt;int&gt; L(5, 123);
+  list&lt;int&gt;::<link:internal>iterator</link:internal> i = L.begin();
+  ++i;
+  ++i;
+  copy(v.begin(), v.end(), inserter(L, i));
+  for (i = L.begin(); i != L.end(); ++i)
+    cout &lt;&lt; *i &lt;&lt; " ";
+  cout &lt;&lt; endl;
+  return 0;
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.6091400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.6091400+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T11:22:15.0425680+04:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>765</x>
+  <y>140</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>connect as sysdba</title>
+  <text xml:space="preserve"><note-content version="0.1">connect as sysdba
+
+Как "/ sysdba" изначально может войти только тот пользователь операционной системы, из под кого устанавливался <link:internal>Oracle</link:internal>. Как правило это Administrator. Если из под другого, то нужно добавить этого пользователя добавить в группу ORA_DBA.
+
+Поэтому:
+
+1. В sqlnet.ora пишем:
+<italic>SQLNET.AUTHENTICATION_SERVICES= (NTS)</italic>
+
+2. Устанавливаем переменную <link:internal>ORACLE</link:internal>_SID
+3. Добавляем текущего пользователя в ORA_DBA
+4.
+
+<italic><link:internal>SQL</link:internal></italic><italic>&gt; conn / as sysdba</italic></note-content></text>
+  <last-change-date>2009-09-24T14:37:02.1572270+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.1572270+04:00</last-metadata-change-date>
+  <create-date>2008-09-25T14:40:58.4296510+04:00</create-date>
+  <cursor-position>415</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

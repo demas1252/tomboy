@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Привязка выхода одного виджета к входу другого</title>
+  <text xml:space="preserve"><note-content version="0.1">Привязка выхода одного виджета к входу другого
+
+require 'Qt4'
+
+class MyWidget &lt; Qt::Widget
+  def initialize()
+    super()
+    
+    quit = Qt::PushButton.new('Quit')
+    quit.setFont(Qt::Font.new('Times', 18, Qt::Font::Bold))
+
+    lcd =Qt::LCDNumber.new(2)
+
+    slider = Qt::Slider.new(Qt::Horizontal)
+    slider.setRange(0, 99)
+    slider.setValue(0)
+
+    connect(quit, SIGNAL('clicked()'), $qApp, SLOT('quit()'))
+    connect(slider, SIGNAL('valueChanged(int)'), lcd, SLOT('display(int)'))
+
+    layout = Qt::VBoxLayout.new()
+    layout.addWidget(quit)
+    layout.addWidget(lcd)
+    layout.addWidget(slider)
+    setLayout(layout)
+    end
+end
+
+app = Qt::Application.new(ARGV)
+widget = MyWidget.new()
+widget.show()
+app.exec()
+</note-content></text>
+  <last-change-date>2009-06-02T16:46:17.7865340+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-02T16:46:17.7865340+04:00</last-metadata-change-date>
+  <create-date>2009-06-02T16:45:48.2442160+04:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>620</width>
+  <height>688</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

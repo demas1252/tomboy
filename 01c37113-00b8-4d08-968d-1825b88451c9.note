@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VNC</title>
+  <text xml:space="preserve"><note-content version="0.1">VNC
+
+<bold>Сервер</bold>
+
+1. <link:internal>yum</link:internal> install vnc-server
+2. <link:internal>vim</link:internal><link:url> /etc/sysconfig/vncservers</link:url>
+
+VNCSERVERS="2:demas"
+VNCSERVERARGS[2]="-geometry 1024x768"
+
+3. vncpasswd (из под demas)
+4.<link:url> /home/demas/.vnc/xstartup</link:url> 
+
+unset SESSION_MANAGER
+exec<link:url> /etc/X11/xinit/xinitrc</link:url>
+
+5.<link:url> /etc/init.d/vncserver</link:url> start
+
+<bold>Клиент</bold>
+
+1. <link:internal>yum</link:internal> install vinagre
+2. localhost:2
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:30.7353790+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:30.7353790+04:00</last-metadata-change-date>
+  <create-date>2009-04-18T23:13:16.2299480+04:00</create-date>
+  <cursor-position>192</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>157</x>
+  <y>191</y>
+  <open-on-startup>False</open-on-startup>
+</note>

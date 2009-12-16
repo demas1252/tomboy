@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>pudb</title>
+  <text xml:space="preserve"><note-content version="0.1">pudb
+
+from pudb import set_trace; 
+
+for s in range(5):
+    print "hello"
+
+set_trace()
+
+for i in range(10):
+    print i
+</note-content></text>
+  <last-change-date>2009-07-09T10:42:27.4598890+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-09T10:42:27.4598890+04:00</last-metadata-change-date>
+  <create-date>2009-07-09T10:41:58.7943800+04:00</create-date>
+  <cursor-position>6</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>664</y>
+  <open-on-startup>False</open-on-startup>
+</note>

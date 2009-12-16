@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Неправильно указали группы амортизации и начислили ее</title>
+  <text xml:space="preserve"><note-content version="0.1">Неправильно указали группы амортизации и начислили ее
+
+scr0003180
+
+Ввели ОС в эксплуатацию с неправильной группой амортизации и амортизировали.
+Как исправить группу амортизации и поправить сформированные проводки.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+Exportfile for AOT version <link:internal>1</link:internal>.0 or later
+Formatversion: <link:internal>1</link:internal>
+
+***Element: JOB
+
+; Microsoft Business Solutions-<link:internal>Axapta</link:internal> Job: FixRAsset, выгружен Четверг 27.03.2008
+; --------------------------------------------------------------------------------
+  JOBVERSION <link:internal>1</link:internal>
+  
+  SOURCE #FixRAsset
+    #static void FixRAsset(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+    #{
+    #// джоб, который для конкретного ОС и конкретной модели учета
+    #// производил бы следующие действия:
+    #// <link:internal>1</link:internal>. изменял некорректно проставленную группу амортизации ОС
+    #// в соответствии с группой ОС.
+    #// 2. изменял Бухг.счет в проводках с типом операции "<link:internal>Ввод в эксплуатацию</link:internal>"
+    #// на Бухг.счет, указанный профиле разноски для Ввода в эксплуатацию,
+    #// соответствующий исправленной группе амортизации.
+    #
+    #    RAssetTable             RAssetTable;
+    #    RAssetStandards         RAssetStandards;
+    #    RAssetTrans             RAssetTrans;
+    #    <link:internal>LedgerTrans</link:internal>             <link:internal>LedgerTrans</link:internal>;
+    #//    RAssetMainGroup         RAssetMainGroup;
+    #    RAssetMainGroupMember   RAssetMainGroupMember;
+    #    RAssetLedgerAccounts    RAssetLedgerAccounts;
+    #    LedgerAccount           oldLedgerAccount;
+    #    LedgerAccount           newLedgerAccount;
+    #    Voucher                 Voucher;
+    #    boolean                 ret;
+    #    RassetId                RassetId = "МСКНМ0000001";
+    #    RAssetStandardId        RAssetStandardId = "РСБУ";
+    #
+    #    ttsbegin;
+    #    RAssetStandards = RAssetStandards::<link:internal>find</link:internal>(RassetId,RAssetStandardId,true);
+    #    <link:internal>if</link:internal> (RAssetStandards)
+    #    {
+    #        RAssetTable = RAssetTable::<link:internal>find</link:internal>(RassetId);
+    #//        RAssetMainGroup = RAssetMainGroup::<link:internal>Find</link:internal>(RAssetTable.AssetGroup);
+    #        RAssetMainGroupMember = RAssetMainGroupMember::<link:internal>Find</link:internal>(RAssetTable.AssetGroup,RAssetStandardId);
+    #        oldLedgerAccount = RAssetLedgerAccounts::assetLedgerAccount(RassetId,RAssetTransType::Acquisition,RAssetStandardId,RAssetStandards.PostingProfile);
+    #        <link:internal>if</link:internal> (oldLedgerAccount &amp;&amp; RAssetStandards.AssetGroup != RAssetMainGroupMember.assetGroup)
+    #        {
+    #            RAssetStandards.AssetGroup = RAssetMainGroupMember.assetGroup;
+    #            RAssetStandards.doUpdate();
+    #            newLedgerAccount = RAssetLedgerAccounts::assetLedgerAccount(RassetId,RAssetTransType::Acquisition,RAssetStandardId,RAssetStandards.PostingProfile);
+    #            <link:internal>if</link:internal> (oldLedgerAccount != newLedgerAccount)
+    #            {
+    #                RAssetTrans = RAssetTrans::findFirstType(RassetId,RAssetStandardId,RAssetTransType::Acquisition);
+    #                Voucher = RAssetTrans.Voucher;
+    #                while select forupdate <link:internal>LedgerTrans</link:internal> where
+    #                    <link:internal>LedgerTrans</link:internal>.Voucher == Voucher &amp;&amp;
+    #                    <link:internal>LedgerTrans</link:internal>.AccountNum == oldLedgerAccount
+    #                {
+    #                    <link:internal>LedgerTrans</link:internal>.AccountNum = newLedgerAccount;
+    #                    <link:internal>LedgerTrans</link:internal>.doUpdate();
+    #                    ret = true;
+    #                }
+    #                <link:internal>if</link:internal> (ret)
+    #                    info(strfmt("Операция с %<link:internal>1</link:internal> проведена",RassetId));
+    #            }
+    #        }
+    #        else
+    #        {
+    #            info(strfmt("Не найден счет разноски или группы одинаковы",RassetId,RAssetStandardId));
+    #        }
+    #    }
+    #    else
+    #    {
+    #        info(strfmt("Модель ОС отсутствует %<link:internal>1</link:internal> %2",RassetId,RAssetStandardId));
+    #    }
+    #    ttscommit;
+    #}
+  ENDSOURCE
+
+***Element: PRN
+
+; Microsoft Business Solutions-<link:internal>Axapta</link:internal> Project : JobGotek unloaded at Четверг 27.03.2008
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #JobGotek
+   PRIVATE
+  PROPERTIES
+    Name                #JobGotek
+  ENDPROPERTIES
+  
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 5
+      UTILOBJECTID 0
+      NODETYPE 215
+      NAME #FixRAsset
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.8625150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.8625150+04:00</last-metadata-change-date>
+  <create-date>2008-04-07T14:38:13.6559560+04:00</create-date>
+  <cursor-position>165</cursor-position>
+  <width>805</width>
+  <height>360</height>
+  <x>716</x>
+  <y>521</y>
+  <open-on-startup>False</open-on-startup>
+</note>

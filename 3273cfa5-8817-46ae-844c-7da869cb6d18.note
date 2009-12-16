@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>GHCi</title>
+  <text xml:space="preserve"><note-content version="0.1">GHCi
+
+<bold>Загрузить скрипт</bold>
+
+:cd dir
+:load file</note-content></text>
+  <last-change-date>2009-10-17T22:10:34.4077600+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:34.4077600+04:00</last-metadata-change-date>
+  <create-date>2009-10-17T22:09:50.7447880+04:00</create-date>
+  <cursor-position>22</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>582</x>
+  <y>499</y>
+  <open-on-startup>False</open-on-startup>
+</note>

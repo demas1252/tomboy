@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Poetry</title>
+  <text xml:space="preserve"><note-content version="0.1">Poetry
+
+    * [<link:internal>Блок</link:internal>]
+    * [<link:internal>Есенин</link:internal>]
+    * [<link:internal>Ахматова</link:internal>]
+    * [<link:internal>Цветаева</link:internal>]
+    * [<link:internal>Mine</link:internal>]</note-content></text>
+  <last-change-date>2008-03-28T22:53:50.5259860+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:53:50.5259860+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:52:45.0510710+03:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>129</x>
+  <y>204</y>
+  <open-on-startup>False</open-on-startup>
+</note>

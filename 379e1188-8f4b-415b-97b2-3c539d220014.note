@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Доступность одного поля ввода в зависимости от данных в другом</title>
+  <text xml:space="preserve"><note-content version="0.1">Доступность одного поля ввода в зависимости от данных в другом
+
+&lt;input type="text" name="n1" ID="n1" onkeyup="f();"&gt;                                                                                              
+&lt;input type="text" name="n2" ID="n2" disabled&gt;                                                                                                    
+                                                                                                                                                  
+&lt;script&gt;                                                                                                                                          
+function f(){                                                                                                                                     
+<link:internal>if</link:internal>(document.<link:internal>getElementById</link:internal>("n1").value.length&gt;0){                                                                                                 
+document.<link:internal>getElementById</link:internal>("n2").disabled=false;                                                                                                     
+}else{                                                                                                                                            
+document.<link:internal>getElementById</link:internal>("n2").disabled=true;                                                                                                      
+}                                                                                                                                                 
+}                                                                                                                                                 
+&lt;/script&gt;                                                                                                                                         
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:52.8533810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.8533810+04:00</last-metadata-change-date>
+  <create-date>2009-04-25T21:53:50.7400450+04:00</create-date>
+  <cursor-position>1681</cursor-position>
+  <width>982</width>
+  <height>558</height>
+  <x>688</x>
+  <y>76</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получить физическое наличие</title>
+  <text xml:space="preserve"><note-content version="0.1">Получить физическое наличие
+
+
+&lt;&lt;pre
+static void InventOnHandExample(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+    InventDim       inventDim;
+    InventDimParm inventDimParm;
+    #define.InventLocationId("MW")
+    #define.ItemId("ESB-005")
+    ;
+    inventDim.InventLocationId = #InventLocationId;
+    inventDimParm.initFromInventDim(InventDim); // галочки берем из непустых полей InventDim
+
+    info(strFmt("%1",
+        InventOnHand::newItemDim(#ItemId,inventDim,inventDimParm).availPhysical()
+    ));
+}
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-30T07:36:45.5079570+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:36:45.5079570+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:24:54.6852310+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

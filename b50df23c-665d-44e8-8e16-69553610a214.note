@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Настройка сети VmWare</title>
+  <text xml:space="preserve"><note-content version="0.1">Настройка сети VmWare
+
+
+<link:internal>1</link:internal>. Для виртуальной машины включаем Bridging Networking.
+2. ipconfig на виртуалке - по этому адресу можно лезть с хоста на виртуальку
+3. ipconfig на хоста - по этому адресу можно лезть с виртуальки на хост
+4. Не забыть отключить firewall
+5. Если мы хотим с хоста обращаться с файловой системой виртуалки - надо там расшарить хотя бы одну папку.  Там в шаринге может быть придется кликнуть на линк 'Да я знаю об опасности но все равно хочу'.</note-content></text>
+  <last-change-date>2008-11-08T15:22:13.1321000+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-08T15:22:13.1321000+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:06:55.7744450+03:00</create-date>
+  <cursor-position>21</cursor-position>
+  <width>471</width>
+  <height>360</height>
+  <x>133</x>
+  <y>632</y>
+  <open-on-startup>False</open-on-startup>
+</note>

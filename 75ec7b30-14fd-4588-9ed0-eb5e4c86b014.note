@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как найти исходный код модуля Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Как найти исходный код модуля Erlang
+
+1&gt; code:which(file).
+"/usr/lib/<link:internal>erlang</link:internal>/lib/<link:internal>kernel</link:internal>-2.12.5/ebin/file.beam"
+</note-content></text>
+  <last-change-date>2009-03-24T08:48:35.1674720+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:48:35.1674720+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:48:28.1239220+03:00</create-date>
+  <cursor-position>71</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>141</x>
+  <y>33</y>
+  <open-on-startup>False</open-on-startup>
+</note>

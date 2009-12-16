@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выбор версии Excel с которой мы хотим работать</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Выбор версии Excel</link:internal> с которой мы хотим работать
+
+
+Насколько я понимаю, <link:internal>Excel</link:internal> не поддерживает версионность COM-интерфейса. Т.е. чтобы физически была возможность запустить разные версии <link:internal>Excel</link:internal> через COM-интерфейс в реестре должны быть разные CLSID для разных версий. Но реально CLSID одинаковый для любой версии <link:internal>Excel</link:internal>.
+
+Бытует мнение, что при автоматизации Office в системе, где установлены пакеты несколько версий Office, можно указать загружаемую версию приложения с помощью программного идентификатора PROGID, который уникален для каждой версии продукта (например, для загрузки <link:internal>Excel</link:internal> 2000 служит идентификатор <link:internal>Excel</link:internal>.Application.9, <link:internal>Excel</link:internal> 2002 соответствует <link:internal>Excel</link:internal>.Application.10, а Office <link:internal>Excel</link:internal> 2003 — <link:internal>Excel</link:internal>.Application.11). В действительности это не так. Для <link:internal>Excel</link:internal> 2000, 2002 и 2003 используется один и тот же идентификатор класса (CLSID), а это значит, что версия приложения, загружаемая с одним из программных идентификаторов (PROGID), определяется только порядком установки версий программы.</note-content></text>
+  <last-change-date>2008-03-28T15:00:19.9662020+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T15:00:19.9662020+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:00:18.2652570+03:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

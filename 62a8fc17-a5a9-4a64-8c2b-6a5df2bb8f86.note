@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VPN на примере Gmcs</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>VPN</link:internal> на примере Gmcs
+
+remotename gmcs
+ipparam gmcs
+pty "pptp 93.186.51.202 --nolaunchpppd"
+password star_id
+name ademidov
+usepeerdns
+require-mppe-128
+refuse-eap
+lcp-echo-failure 30
+lcp-echo-interval 5
+debug
+noauth
+nobsdcomp
+nodeflate
+noproxyarp
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.2490150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.2490150+04:00</last-metadata-change-date>
+  <create-date>2009-06-14T00:05:26.2952890+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>955</x>
+  <y>288</y>
+  <open-on-startup>False</open-on-startup>
+</note>

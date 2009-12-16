@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Газификация топлива</title>
+  <text xml:space="preserve"><note-content version="0.1">Газификация топлива
+
+CO - газ без цвета и запаха, получается при сгорании углеродосодержащих веществ, с водой, кислотами и щелачами не взаимодействует.
+
+Очень активно отбирает кислород:
+
+2CO + O2 = CO2
+Cu + CO = Cu + CO2
+
+Очень ядовит, так как соединяется с гемоблогином крови и лишает его способности переносить кислород.
+
+Газофикация топлива - преобразование угля, древисины в газообразное топливо:
+
+C + O2 - CO2
+C + CO2 = 2CO</note-content></text>
+  <last-change-date>2009-08-29T19:58:05.9591640+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T19:58:05.9591640+04:00</last-metadata-change-date>
+  <create-date>2009-08-29T19:46:45.0859410+04:00</create-date>
+  <cursor-position>415</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>235</x>
+  <y>232</y>
+  <open-on-startup>False</open-on-startup>
+</note>

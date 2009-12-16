@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Классы c префиксом CC</title>
+  <text xml:space="preserve"><note-content version="0.1">Классы c префиксом CC
+
+Это какой-то коннектор.
+позволяет получать внешние данные в различных модулях, в том числе в Balanced Scorecard.
+В ax3.0 настраивается в Главное меню \ Управление персоналом \ Настройки \ Источники данных.
+в ax4.0, ax5.0 Главное меню \ Взаимосвязанные показатели \ Настройки \ Источники данных.
+Также есть форма CCDataLinkTable
+
+кроме того, здесь есть форма произвольного запроса к произвольной таблице.
+эта форма используется для запросов в модуле Взаимосвязанные показатели
+\Menus\MainMenu\Взаимосвязанные показатели\<link:internal>Запросы</link:internal>\Статистика\Подсчет проводок
+
+В трешке объектов с префиксом CC было больше.</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.4310400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.4310400+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:36:29.9255160+04:00</create-date>
+  <cursor-position>134</cursor-position>
+  <width>475</width>
+  <height>360</height>
+  <x>1037</x>
+  <y>541</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы разноски накладных расходов</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы разноски накладных расходов
+
+   Сумма по сроке 10.
+    <link:internal>Накладные расходы</link:internal> 20.
+
+    1. Номенклатура - Поставщик
+    
+        <link:internal>inventTrans</link:internal>.Posted = 30
+        гк: номенклатура = 30
+            поставщик = -30
+    
+    2. Номенклатура - Счет
+    
+        <link:internal>inventTrans</link:internal>.Posted = 10, Adjustment = 20
+        гк: 
+            номенклатура    30
+            поставщик       -10
+            счет            -20
+
+    3. Счет - Счет
+    
+        <link:internal>inventTrans</link:internal>.Posted = 10
+        гк: 
+            номенклатура    10
+            поставщик       -10
+            счет 1          20
+            счет 2          -20    
+    
+    4. Счет - Поставщик
+
+        <link:internal>inventTrans</link:internal>.Posted = 10
+        гк: 
+            номенклатура    10
+            поставщик       -30
+            счет            20
+            
+        Отдельная строка по накладным расходам
+
+    5. Поставщик - счет
+    
+        <link:internal>inventTrans</link:internal>.Posted = 10
+        гк: 
+            номенклатура    10
+            поставщик       10
+            счет            -20
+        
+        Возврат товара поставщику?
+    </note-content></text>
+  <last-change-date>2009-10-12T12:00:40.0282770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:40.0282770+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:51:22.9004440+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>639</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

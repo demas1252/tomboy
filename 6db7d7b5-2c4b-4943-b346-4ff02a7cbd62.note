@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Фосфор</title>
+  <text xml:space="preserve"><note-content version="0.1">Фосфор
+
+<italic>2s2sp3</italic>
+
+
+<list><list-item dir="ltr"><link:internal>фосфаты</link:internal> кальция входят в состав костей и зубов, придавая им твердость
+</list-item><list-item dir="ltr">в свободном виде не встречаеся из-за высокой активности
+</list-item><list-item dir="ltr">в рганизме человека около 1% (по массе)
+</list-item><list-item dir="ltr"><bold><italic>белый</italic></bold> фосфор P4
+<list><list-item dir="ltr">легкоплавок, летуч 
+</list-item><list-item dir="ltr">ядовит: поражения костей, костного мозга, некроз челюстей; летальная доза для взрослого человека - 0,05-0,1 г
+</list-item><list-item dir="ltr">растворяется в органических растворителях, воспламеняеся при 50C; хранят под водой и в темноте; окисляется при обычных условиях - сопровождается свечением</list-item></list></list-item></list>
+
+<list><list-item dir="ltr"><bold><italic>красный</italic></bold> - менее активен, воспламеняется при 250С
+</list-item><list-item dir="ltr"><bold><italic>черный</italic></bold>
+</list-item><list-item dir="ltr"><bold><italic>металлический</italic></bold> - в условиях сверхвысоких давлений</list-item></list>
+
+<list><list-item dir="ltr">Получение:</list-item></list>
+
+	<italic>2Ca3(PO4)2 + 10C + 6SiO2 = P4 + 10CO + 6CaSiO3</italic>
+
+<list><list-item dir="ltr">Применяется для производства фосфорной кислоты, дымовых шашек, красный - для спичек: сульфид сурьмы(горючее в-во) + бертолева соль (окислитель) + фосфор (воспламенитель)</list-item></list>
+</note-content></text>
+  <last-change-date>2009-08-29T19:05:29.4789470+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T19:05:29.4789470+04:00</last-metadata-change-date>
+  <create-date>2009-08-08T12:19:40.7547400+04:00</create-date>
+  <cursor-position>239</cursor-position>
+  <width>508</width>
+  <height>505</height>
+  <x>375</x>
+  <y>258</y>
+  <open-on-startup>False</open-on-startup>
+</note>

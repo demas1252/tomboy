@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Case в select</title>
+  <text xml:space="preserve"><note-content version="0.1">Case в select
+
+<bold>Задача:</bold>
+
+Данные в Таблице Docs:
+
+id | title | text
+1 | Тема дня | text
+2 | Договор | text
+3 | Сотрудники | text
+4 | Статья о Васе | text
+
+Данные в Таблице DocGroupRelation
+
+id | docId | groupId
+1 | 1 | g12
+2 | 1 | g13
+3 | 2 | g12
+4 | 4 | g13
+
+результат:
+Когда открывается Группа g12:
+
+Тема дня | true
+Договор | true
+Сотрудники | false
+Статья о Васе | false
+
+Когда открывается Группа g13:
+
+Тема дня | true
+Договор | false
+Сотрудники | false
+Статья о Васе | true
+
+<bold>Решение:</bold>
+
+<italic>declare @docs table(id int, title varchar(20), [text] varchar(20))
+insert into @docs(id, title, [text])
+select 1, 'Тема дня',      'text' union all
+select 2, 'Договор',       'text' union all
+select 3, 'Сотрудники',    'text' union all
+select 4, 'Статья о Васе', 'text'
+
+declare @doc_group_relation table(id int, doc_id int, group_id varchar(10))
+insert into @doc_group_relation(id, doc_id, group_id)
+select 1, 1, 'g12' union all
+select 2, 1, 'g13' union all
+select 3, 2, 'g12' union all
+select 4, 4, 'g13'
+
+select title
+      ,case when exists (select 1
+                           from @doc_group_relation as r
+                          where r.doc_id = d.id
+                            and group_id = 'g12')
+            then 'true'
+            else 'false'
+        end as flag                         
+  from @docs as d
+</italic>
+title                flag
+-------------------- -----
+Тема дня             true
+Договор              true
+Сотрудники           false
+Статья о Васе        false
+
+(4 row(s) affected)</note-content></text>
+  <last-change-date>2009-01-18T11:16:27.4992550+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-18T11:16:27.4992550+03:00</last-metadata-change-date>
+  <create-date>2009-01-18T11:15:15.7082310+03:00</create-date>
+  <cursor-position>1309</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Статические переменные в C++</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Статические переменные в C</link:internal>++
+
+&lt;&lt;pre
+#include &lt;iostream&gt;
+using namespace std;
+
+void <link:internal>func</link:internal>() {
+   static int i = 0;
+   cout &lt;&lt; "i = " &lt;&lt; ++i &lt;&lt; endl;
+}
+
+int main() {
+   for (int x = 0; x &lt;10; x++)
+      <link:internal>func</link:internal>();
+}
+
+&gt;
+1
+2
+...
+10
+&gt;&gt;
+
+То есть, инициализация переменной происходит только один раз.
+Если сделать так:
+
+&lt;&lt;pre
+   static int i = 0;
+   i = 0;
+   
+&gt;&gt;
+
+то результатом будут единицы.</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.3542160+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.3542160+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:15:57.2653380+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

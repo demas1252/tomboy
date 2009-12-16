@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск всех инверсий в перестановке</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск всех инверсий в перестановке
+
+&lt;&lt;pre
+a = (2, 7, <link:internal>1</link:internal>, 8, 4, 5, 9, 3, 6)
+n = len(a)
+
+for i in range(n):
+	for j in range(i, n):
+		<link:internal>if</link:internal> a[i] &gt; a[j]:
+			print "%s,%s : (%s, %s)"  % (i+<link:internal>1</link:internal>, j+<link:internal>1</link:internal>, a[i], a[j])
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.6191720+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.6191720+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:12:32.9122220+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

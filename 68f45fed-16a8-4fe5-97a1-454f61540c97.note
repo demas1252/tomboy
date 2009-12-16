@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PL\SQL в SqlPlus</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>PL\SQL</link:internal> в SqlPlus
+
+BEGIN
+  dbms_output.put_line('Hello World!');
+END;
+/
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:02.1615840+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.1615840+04:00</last-metadata-change-date>
+  <create-date>2008-09-24T17:07:49.8068040+04:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>472</y>
+  <open-on-startup>False</open-on-startup>
+</note>

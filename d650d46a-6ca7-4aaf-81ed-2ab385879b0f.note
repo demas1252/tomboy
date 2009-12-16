@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>closures in python</title>
+  <text xml:space="preserve"><note-content version="0.1">closures in python
+
+<italic>&gt;&gt;&gt; def makeConstantAdder(x):
+...     constant = x
+...     def adder(y):
+...         return y + constant
+...     return adder
+</italic> 
+<italic>&gt;&gt;&gt; f = makeConstantAdder(12)
+&gt;&gt;&gt; f(3)
+</italic>
+15
+
+<italic>&gt;&gt;&gt; g = makeConstantAdder(4)
+&gt;&gt;&gt; g(3)
+</italic>
+7</note-content></text>
+  <last-change-date>2009-01-24T11:35:30.6181350+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-24T11:35:30.6181350+03:00</last-metadata-change-date>
+  <create-date>2009-01-24T11:34:26.5174710+03:00</create-date>
+  <cursor-position>230</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1006</x>
+  <y>482</y>
+  <open-on-startup>False</open-on-startup>
+</note>

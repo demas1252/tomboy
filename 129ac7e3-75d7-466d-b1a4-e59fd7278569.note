@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ruby ranges as Sequences</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Ruby</link:internal> ranges as Sequences
+
+.. - inclusive range
+...  - excludes range
+
+Преобразование range в список: (1..10).to_a
+
+Создание своего range:
+
+class VU
+  include Comparable
+  attr :volume
+  
+  def initialize(volume)
+    @volume = volume
+  end
+
+  def inspect
+    '#' * @volume
+  end
+
+  def &lt;=&gt;(<link:internal>other</link:internal>)
+    self.volume &lt;=&gt; <link:internal>other</link:internal>.volume
+  end
+
+  def succ
+    raise(IndexError, "Volume to big") <link:internal>if</link:internal> @volume &gt;= 9
+    <link:url>VU.new(@volume.succ</link:url>)
+  end
+end
+
+mv = VU.new(4)..VU.new(7)
+puts mv.min.inspect
+puts mv.max.inspect
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.6988170+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.6988170+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:25:25.2198210+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>478</y>
+  <open-on-startup>False</open-on-startup>
+</note>

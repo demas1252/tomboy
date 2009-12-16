@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Почему размер восстановленной базы больше размера файла backup-а</title>
+  <text xml:space="preserve"><note-content version="0.1">Почему размер восстановленной базы больше размера файла backup-а
+
+
+Вопрос: Каким образом с файла бекапа получается 2 файла мдф и лдф которые значительно больше чем сам бекап? К примеру с дампа 350Мб получилось 360 мдф и 20Гб+ лог.лдф ....???  Откуда стоко? (Зы Бекап делался с такого лога после чего он полетел =( )
+
+=============================================================================================
+
+Потому что в бэкапе хранится толдько данные а при ресторе восстанавливаются оригинальные размеры файлов.
+</note-content></text>
+  <last-change-date>2008-03-30T17:38:28.4515800+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:38:28.4515800+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:38:23.6258970+04:00</create-date>
+  <cursor-position>93</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>669</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

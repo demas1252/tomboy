@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ошибка игрока</title>
+  <text xml:space="preserve"><note-content version="0.1">Ошибка игрока
+
+gambler's fallacy
+
+Монета подбрасывается 10 раз подряд. Если видим 10 решек подряд, то для многих людей кажется очевидным, что при следующем броске <link:internal>вероятность</link:internal> выпадения орла будет больше,  Такой вывод ошибочен. <link:internal>Вероятность</link:internal> следующего орла или решки - 1/2.
+
+	<italic>Past events have no influence over future events.</italic>
+
+Да, серия из 10 решек имеет <link:internal>вероятность</link:internal> 1/2*1/2... = 1/1024.  Но когда мы бросаем 10-й раз монету предыдущие 9 бросков уже произошли.  Они свершились.  И их <link:internal>вероятность</link:internal> уже не 1/2, а 1.</note-content></text>
+  <last-change-date>2009-08-02T19:56:32.2888010+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-02T19:56:32.2888010+04:00</last-metadata-change-date>
+  <create-date>2009-08-02T19:44:46.4541450+04:00</create-date>
+  <cursor-position>323</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>715</x>
+  <y>477</y>
+  <open-on-startup>False</open-on-startup>
+</note>

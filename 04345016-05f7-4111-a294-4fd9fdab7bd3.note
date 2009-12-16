@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Копирование объектов</title>
+  <text xml:space="preserve"><note-content version="0.1">Копирование объектов
+
+Прежде всего следует различать <link:internal>Shallow vs Deep Copies</link:internal>. Еще иногда упоминается <link:internal>Lazy Copy</link:internal>.
+
+import copy
+
+class <link:internal>C</link:internal>: <link:internal>pass</link:internal>
+
+#
+o1 = <link:internal>C</link:internal>()
+o1.lst = [1,2,3]
+o1.str = "spam"
+o2 = o1
+o1.lst.append(17)
+print o2.lst
+
+o1.str = 'eggs'
+print o2.str
+
+# [1, 2, 3, 17] - o1 и o2 указатели на одну и ту же область памяти, которая содержит указатель на список и строку
+# eggs
+
+# shallow copy
+o1 = <link:internal>C</link:internal>()
+o1.lst = [1,2,3]
+o1.str = "spam"
+o2 = copy.copy(o1)
+o1.lst.append(17)
+print o2.lst
+
+o1.str = 'eggs'
+print o2.str
+
+# [1, 2, 3, 17] - скопировалось поле-строка и скопировался указатель на список - но реально оба указаетля смотрят на один и тот же список
+# spam
+
+# deep copy
+o1 = <link:internal>C</link:internal>()
+o1.lst = [1,2,3]
+o1.str = "spam"
+o2 = copy.deepcopy(o1)
+o1.lst.append(17)
+print o2.lst
+
+o1.str = 'eggs'
+print o2.str
+
+# [1, 2, 3] - при копировании создался новый список (копия оригинального) и указатель нового объекта смотрит на новый список.
+# spam</note-content></text>
+  <last-change-date>2009-03-25T20:42:49.1183850+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-25T20:42:49.1183850+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:05:51.7088320+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

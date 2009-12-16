@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">MS SQL
+
+<bold>Объекты</bold>
+
+<link:internal>Таблицы в MS SQL</link:internal>
+<link:internal>Индексы в MS SQL</link:internal>
+<link:internal>Журнал транзакций</link:internal>
+
+<bold>Architecture</bold>
+
+<link:internal>Блокировки - уровни изоляций - concurrency</link:internal>
+
+<bold>Administration</bold>
+
+<link:internal>MS SQL Administration</link:internal>
+<link:internal>MS SQL Perfomance</link:internal>
+<link:internal>MS SQL Collation</link:internal>
+
+<bold><link:internal>Вопросы</link:internal></bold><bold> <link:internal>SQL</link:internal></bold>
+
+<link:internal>DDL operations</link:internal>
+<link:internal>SQL questions</link:internal>
+<link:internal>TSQL</link:internal>
+MS SQL XML
+<link:internal>MS SQL .Net</link:internal>
+MS SQL for <link:internal>web</link:internal>
+Object Spaces
+Service Broker
+Notification Services
+
+<bold><link:internal>Прочее</link:internal></bold>
+
+<link:internal>Usefull scripts</link:internal>
+<link:internal>MS SQL Profiler</link:internal>
+<link:internal>Sqlcmd - isql - osql</link:internal></note-content></text>
+  <last-change-date>2009-08-04T13:34:46.7235040+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-04T13:34:46.7235040+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:35:55.2242980+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>525</width>
+  <height>697</height>
+  <x>487</x>
+  <y>127</y>
+  <open-on-startup>False</open-on-startup>
+</note>

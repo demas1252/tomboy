@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Группы номерных серий</title>
+  <text xml:space="preserve"><note-content version="0.1">Группы номерных серий
+
+Насколько я понимаю, нужно там, где нужно использовать несколько номерных серий там, где предусмотрена одна. Например, если мы хотим нумеровать **приходные** и **расходные** кассовые ордера из различных номерных серий.
+
+
+Расшифровки:
+п 1. Заходим в настройки модуля "Управление запасами" на закладку "<link:internal>Номерные серии</link:internal>". Ищем там ссылку "Номенклатура" (предполагается, что Вы уже поставили для этой ссылки свойство groupEnabled = true). Жмем кнопку [Группа] и в появившейся форме добавляем необходимое количество групп, присваивая каждой из них свою настроенную номерную серию.
+п 2. в таблицу номенклатурных групп добавляем поле "Группа номерных серий" с сылкой на таблицу групп номерных серий (это есть Extended DataType NumberSequenceGroupId). Привязываем к номенклатурным группам группы номерных серий, настроенные в п.1
+п. 3 для того, чтобы выяснить, по какой номерной серии инициализировать код номенклатуры, нам нужно знать код группы номенклатуры до того, как выполниться код метода \Forms\InventTable\Data Sources\InventTable\Methods\create, а в нем element.numberSeqFormHandler().formMethodDataSourceCreate();. Т.е. тут нужно подумать как его инициализировать.
+п.4 Здесь по ссылке "ном. группа - группа номерных серий" находим номерную серию, и по ней инициализируем код номенклатуры 
+
+
+====
+
+Нужно в методе \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\InventParameters\Methods\allowedNumSeqGroup_RU добавить еще один элемент контайнера: InventParameters::numRefItemId().dataTypeId.
+После этого при добавлении новой группы, на закладке "Ссылка" будет видна строка: Управление запасами; Номенклатура. Тут нужно только подставить свою номерную серию.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.0813490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.0813490+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T17:07:54.7650219+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>88</y>
+  <open-on-startup>False</open-on-startup>
+</note>

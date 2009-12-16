@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>apt-file</title>
+  <text xml:space="preserve"><note-content version="0.1">apt-file
+
+хм.. почему то у меня нет..
+
+<link:internal>apt</link:internal>-file update - обновит информацию о<link:url> /usr/cache/apt</link:url>
+<link:internal>apt</link:internal>-file search &lt;file&gt; - ищет пакет, к которому относится file
+<link:internal>apt</link:internal>-file list пакет - выдает перечень файлов даже не установленного пакета</note-content></text>
+  <last-change-date>2009-08-31T14:33:55.8991280+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-31T14:33:55.8991280+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T23:53:24.8133160+04:00</create-date>
+  <cursor-position>115</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>578</x>
+  <y>213</y>
+  <open-on-startup>False</open-on-startup>
+</note>

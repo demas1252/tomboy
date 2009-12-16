@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разметка винта на ноуте</title>
+  <text xml:space="preserve"><note-content version="0.1">Разметка винта на ноуте
+
+win 15 ntfs
+extended
+	\boot 	256mb 	ext2
+	\     		25	  	raiserfs
+	\home	20		ext3
+	\media	33		xfs
+	swap	<link:internal>1</link:internal>		swap </note-content></text>
+  <last-change-date>2008-06-15T23:42:47.1625730+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.1625730+04:00</last-metadata-change-date>
+  <create-date>2008-04-26T07:21:28.5793020+04:00</create-date>
+  <cursor-position>105</cursor-position>
+  <width>506</width>
+  <height>360</height>
+  <x>8</x>
+  <y>71</y>
+  <open-on-startup>False</open-on-startup>
+</note>

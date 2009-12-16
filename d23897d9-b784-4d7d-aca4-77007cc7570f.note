@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Код события 178</title>
+  <text xml:space="preserve"><note-content version="0.1">Код события 178
+
+
+В журнале винды лезут такие ошибки:
+
+---------------
+Тип события: Предупреждение
+Источник события: <link:internal>Axapta</link:internal> Object Server
+Категория события: Отсутствует
+Код события: 178
+Дата: 11.09.2007
+Время: 16:13:18
+Пользователь: Н/Д
+Компьютер: AAS
+Описание:
+Object Server AxRepTest01: Performance info: The complete data cache has been flushed due to request from session 4 (-AOS-).
+
+Дополнительные сведения можно найти в центре справки и поддержки, в "<link:url>http://go.microsoft.com/fwlink/events.asp</link:url>".
+
+
+Кто-то в сессии с номером 4 выполнил метод flush();
+Скорее всего кто-то нажал Сервис\Средства разработки\Объекты приложения\Обновление данных
+
+Это сам АОС раз в 24 часа сбрасывает свой кэш. </note-content></text>
+  <last-change-date>2009-04-25T18:32:27.5838810+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:27.5838810+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:58:30.6724730+03:00</create-date>
+  <cursor-position>298</cursor-position>
+  <width>471</width>
+  <height>360</height>
+  <x>5</x>
+  <y>458</y>
+  <open-on-startup>False</open-on-startup>
+</note>

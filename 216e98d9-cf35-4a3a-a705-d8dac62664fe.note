@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Backup and rectore</title>
+  <text xml:space="preserve"><note-content version="0.1">Backup and rectore
+
+<link:internal>Почему размер восстановленной базы больше размера файла backup-а</link:internal>
+<link:internal>Стриммер</link:internal>
+<link:internal>Пример restore</link:internal>
+<link:internal>Удаление старых backup файлов</link:internal></note-content></text>
+  <last-change-date>2008-04-06T17:04:36.3443499+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T17:04:36.3443499+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:38:08.5302440+04:00</create-date>
+  <cursor-position>109</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>282</x>
+  <y>637</y>
+  <open-on-startup>False</open-on-startup>
+</note>

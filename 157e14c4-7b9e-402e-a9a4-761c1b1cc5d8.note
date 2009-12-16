@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Параметры обработки НДС</title>
+  <text xml:space="preserve"><note-content version="0.1">Параметры обработки НДС
+
+<italic>Расч с пост - Пер опер - <link:internal>книга покупок</link:internal></italic><italic> - параметры обработки НДС</italic>
+
+бух счет - счет на который будут отнесены суммы налога
+по умолчанию - признак операции по умолчанию
+в книгу - включать в книгу покупок</note-content></text>
+  <last-change-date>2009-06-23T12:05:14.5579730+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-23T12:05:14.5579730+04:00</last-metadata-change-date>
+  <create-date>2009-06-23T12:03:03.4273360+04:00</create-date>
+  <cursor-position>191</cursor-position>
+  <width>481</width>
+  <height>306</height>
+  <x>70</x>
+  <y>85</y>
+  <open-on-startup>False</open-on-startup>
+</note>

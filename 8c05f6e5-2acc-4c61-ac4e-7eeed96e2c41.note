@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация поиска в ширину на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация поиска в ширину на Python
+
+<bold>Код:</bold>
+
+<italic># a sample graph
+graph = {'A': ['B', 'C','E'],
+             'B': ['A','C', 'D'],
+             'C': ['D'],
+             'D': ['C'],
+             'E': ['F','D'],
+             'F': ['C']}
+
+class MyQUEUE: # just an implementation of a queue
+    def __init__(self):
+        self.holder = []
+
+    def enqueue(self,val):
+        self.holder.append(val)
+		
+    def dequeue(self):
+	val = None
+	try:
+            val = self.holder[0]
+            <link:internal>if</link:internal></italic><italic> len(self.holder) == 1:
+                self.holder = []
+            else:
+                self.holder = self.holder[1:]
+        except:
+            <link:internal>pass</link:internal></italic><italic>
+			
+        return val	
+		
+    def IsEmpty(self):
+        result = False
+	<link:internal>if</link:internal></italic><italic> len(self.holder) == 0:
+            result = True
+        return result
+
+
+path_queue = MyQUEUE() # now we make a queue
+
+def BFS(graph, start, end, q):
+    temp_path = [start]
+    q.enqueue(temp_path)
+
+    while q.IsEmpty() == False:
+        tmp_path = q.dequeue()
+        last_node = tmp_path[len(tmp_path)-1]
+        print tmp_path
+
+        <link:internal>if</link:internal></italic><italic> last_node == end:
+            print "VALID_PATH : ",tmp_path
+        for link_node in graph[last_node]:
+            <link:internal>if</link:internal></italic><italic> link_node not in tmp_path:
+                new_path = []
+                new_path = tmp_path + [link_node]
+                q.enqueue(new_path)
+
+BFS(graph, "A", "D", path_queue)
+</italic>
+<bold>Результат:</bold>
+
+['A']
+['A', 'B']
+['A', 'C']
+['A', 'E']
+['A', 'B', 'C']
+['A', 'B', 'D']
+VALID_PATH :  ['A', 'B', 'D']
+['A', 'C', 'D']
+VALID_PATH :  ['A', 'C', 'D']
+['A', 'E', 'F']
+['A', 'E', 'D']
+VALID_PATH :  ['A', 'E', 'D']
+['A', 'B', 'C', 'D']
+VALID_PATH :  ['A', 'B', 'C', 'D']
+['A', 'B', 'D', 'C']
+['A', 'E', 'F', 'C']
+['A', 'E', 'D', 'C']
+['A', 'E', 'F', 'C', 'D']
+VALID_PATH :  ['A', 'E', 'F', 'C', 'D']
+
+<bold>Пояснения:</bold>
+
+1. Берем исходную вершину и считаем что это налаьный путь. 
+2. Помещаем жтот начальны путь в очередь и извлекаем го оттуда.
+3. Извлекаем из очереди очередной путь
+4. Берем последний элемент из пути
+5. Ищем всех соседей последнего элемнета
+6. Если сосед - искомый элемент - путь найден
+7. Если нет - закидываем новую цепочку в очередь
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.3671760+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.3671760+04:00</last-metadata-change-date>
+  <create-date>2009-04-09T12:21:10.3014250+04:00</create-date>
+  <cursor-position>1604</cursor-position>
+  <width>842</width>
+  <height>578</height>
+  <x>400</x>
+  <y>153</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Извлечение документов с помощью ecouch</title>
+  <text xml:space="preserve"><note-content version="0.1">Извлечение документов с помощью ecouch
+
+get_all_docs()-&gt;
+    ecouch:doc_get_all("<link:internal>test</link:internal>").
+
+get_doc(Id)-&gt;
+    ecouch:doc_get("<link:internal>test</link:internal>", Id).
+
+</note-content></text>
+  <last-change-date>2009-07-23T10:09:44.3417030+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-23T10:09:44.3417030+04:00</last-metadata-change-date>
+  <create-date>2009-07-23T10:09:15.4516350+04:00</create-date>
+  <cursor-position>73</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>959</x>
+  <y>513</y>
+  <open-on-startup>False</open-on-startup>
+</note>

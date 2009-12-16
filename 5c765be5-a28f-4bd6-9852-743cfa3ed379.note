@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Backus-Naur Form</title>
+  <text xml:space="preserve"><note-content version="0.1">Backus-Naur Form
+
+
+BNF (Форма Бэкуса — Наура) 
+
+Формальная система описания синтаксиса, в которой одни синтаксические категории последовательно определяются через другие категории. БНФ эквивалентно контекстно-свободным формальным грамматикам ([<link:internal>Формальная грамматика</link:internal>]).
+
+БНФ-конструкция определяет конечное число символов (нетерминалов). Кроме того, она определяет правила <link:internal>замены</link:internal> символа на какую-то последовательность букв (терминалов) и символов. Процесс получения цепочки букв, можно определить поэтапно: изначально имеется один символ (символы обычно заключаются в угловые скобки, а их название не несёт никакой информации). Затем этот символ заменяется на некоторую последовательность букв и символов, согласно одному из правил. Затем процесс повторяется (на каждом шаге один из символов заменяется на последовательность, согласно правилу). В конце концов, получается цепочка, состоящая из букв (и не содержащая символов). Это означает, что полученная цепочка может быть выведена из начального символа.
+
+*Пример*
+
+&lt;<link:internal>if</link:internal>-stmt&gt; -&gt; <link:internal>if</link:internal> &lt;<link:internal>logic</link:internal>_expr&gt; then &lt;stmt&gt;
+&lt;<link:internal>if</link:internal>-stmt&gt; -&gt; <link:internal>if</link:internal> &lt;<link:internal>logic</link:internal>_expr&gt; then &lt;stmt&gt; else &lt;stmt&gt;
+
+&lt;ident_list&gt; -&gt; identifier
+                 -&gt; identifier, &lt;ident_list&gt;
+
+Однако, ряд языков имеют грамматические структуры, которые тяжело, или не возможно описать в рамках BNF.   Например, контроль типов, в BNF описывается очень громоздко, а необходимость объявления переменной перед ее использованием вообще указать нельзя.  Такие правила получили наименование [static semantics] и для их ипосания Кнут предложил механизм - [<link:internal>Attribute grammars</link:internal>].
+</note-content></text>
+  <last-change-date>2008-04-06T15:07:09.1962830+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:07:09.1962830+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:06:07.0094900+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>56</x>
+  <y>421</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировка списков</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировка списков
+
+
+&lt;&lt;pre
+(define (sort alon)
+  (cond 
+    [(empty? alon) empty]
+    [(cons? alon) (insert (first alon) (sort(rest alon)))]))    [<link:internal>1</link:internal>]
+
+(define (insert n alon)
+  (cond
+    [(empty? alon) (cons n empty)]
+    [else (cond
+            [(&gt;= n (first alon)) (cons n alon)]                 [2]
+            [(&lt; n (first alon)) (cons (first alon) (insert n (rest alon)))])]))  [3]
+
+(define <link:internal>test</link:internal> (cons 12(cons 20(cons -5 empty))))
+
+&gt;&gt;
+
+[<link:internal>1</link:internal>] - вставить первый элемент списка в предварительно отсортированный остаток списка
+[2] - если n больше первого элемента, то он больше всего остального, а следовательно просто пишем его в начало
+[3] - если нет, то мы пытаемся его вставить в остаток списка, а потом к началу припишем первый элемент
+
+&lt;&lt;pre
+&gt; (sort <link:internal>test</link:internal>)
+    (cons 20 (cons 12 (cons -5 empty)))
+&gt;&gt;
+
+Sort is <link:internal>based</link:internal> on structural recursion and qsort is <link:internal>based</link:internal> on generative recursion ([<link:internal>Quick Sort in Schema</link:internal>]).
+
+Как более сложное упражнение на эту тему - [<link:internal>Сортировка списка структур по одному из полей</link:internal>]
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.0351820+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.0351820+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:04:36.5406970+03:00</create-date>
+  <cursor-position>1002</cursor-position>
+  <width>450</width>
+  <height>745</height>
+  <x>45</x>
+  <y>101</y>
+  <open-on-startup>False</open-on-startup>
+</note>

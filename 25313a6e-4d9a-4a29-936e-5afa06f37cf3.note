@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>GUI in Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1">GUI in Scheme
+
+Запускаем <link:internal>c</link:internal>:\\Program Files\\PLT\\collects\\teachpack\\htdp\\gui.ss.
+
+Далее можно так:
+&lt;&lt;pre
+(create-window (list (list (make-button "Close" hide-window))))
+
+&gt;&gt;
+
+Пример сложнее:
+&lt;&lt;pre
+&gt; (define a-text-field 
+  (make-text "Enter Text:")) 
+&gt; (define a-message 
+  (make-message "`Hello World' is a silly program."))
+&gt; (define (echo-message e) 
+  (draw-message a-message (text-contents a-text-field))) 
+&gt; (create-window 
+ (list (list a-text-field a-message) 
+       (list (make-button "Copy Now" echo-message))))
+       
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T22:16:35.3810910+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:16:35.3810910+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:56:27.6226129+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>144</x>
+  <y>637</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Преобразования Data Pump</title>
+  <text xml:space="preserve"><note-content version="0.1">Преобразования Data Pump
+
+Примеры взяы из докуменации:
+
+<link:internal>remap</link:internal>_datafile='...dat' : '...dat'
+<link:internal>remap</link:internal>_<link:internal>scheme</link:internal>
+<link:internal>remap</link:internal>_tablespace
+
+contet=data_only schemas traiding query=trainins.student:"where dept='1st'"</note-content></text>
+  <last-change-date>2009-10-12T12:00:39.7346400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.7346400+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:11:36.2226680+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>101</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

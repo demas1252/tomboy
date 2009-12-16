@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные синтаксические конструкции в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные синтаксические конструкции в Ruby
+
+<link:internal>Циклы в Ruby</link:internal>
+<link:internal>Итераторы в Ruby</link:internal>
+<link:internal>Условия в Ruby</link:internal>
+<link:internal>Перегрузка стандартных операций в Ruby</link:internal>
+<link:internal>Command Expression in Ruby</link:internal>
+<link:internal>Присвоение в Ruby</link:internal>
+<link:internal>Функции Ruby</link:internal></note-content></text>
+  <last-change-date>2009-11-14T21:44:03.3475880+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-14T21:44:03.3475880+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:31:37.2068980+03:00</create-date>
+  <cursor-position>82</cursor-position>
+  <width>531</width>
+  <height>441</height>
+  <x>481</x>
+  <y>463</y>
+  <open-on-startup>False</open-on-startup>
+</note>

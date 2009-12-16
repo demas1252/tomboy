@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как получилось то или иное значение по счетчику</title>
+  <text xml:space="preserve"><note-content version="0.1">Как получилось то или иное значение по счетчику
+
+
+
+   <link:internal>1</link:internal>. Убеждаемся, что данное значение действительно получено по счетчику. Для этого в <link:internal>Calc</link:internal> классе находим характерные строки, типа:
+
+      registerValues = [ currentRegLine.LineName, // Гр<link:internal>1</link:internal>. Наименование
+      currentRegLine.LineCode, // Гр2. Код стр.
+      profitLedgerSetup.LedgerAccountCriteria, // Гр3. счет
+      0.0, // Гр4. сумма по данным бухгалтерского учета
+      0.0, // Гр5. сумма, принимаемая по данным налогового учета
+      currentRegLine.RefRegisterIdSource ? currentRegLine.RefRegisterIdSource : "x", // Гр6. РНУ
+      currentRegLine.RefLineSource ? currentRegLine.RefLineSource : "x", // Гр7. Строка
+      currentRegLine.RefFieldSource ? currentRegLine.RefFieldSource : "x", // Гр8. Столбец
+      0.0, // Гр9. Разница
+      "", // Гр10. Дт
+      "", // Гр11. Кт
+      0.0 ]; // Гр12. Сумма
+
+      Графы 4 и 5 здесь заполняются сначала нулями,а где-то после расчитываются.
+   2. Следующая точка - this.calcSequence() - здесь вполне могли расчитаться нащи счетчики. Чтобы в этом убедиться можно после этого выражения вставить строку:
+
+      info(con2str(registerValues));
+
+      и проконтролировать заполнение полей контейнера.
+
+      (Расходы, связанные с регистрацией объектов недвижимости, включая оформление в БТИ непром.объектов,2050,91.02.02,8000,2000,ВР-09,итого 28,6,0,,,0) - заполнилось.
+   3. Теперь мы уверены, что данное поле получилось по счетчику. Хорошо бы узнать что это именно за счетчик.
+
+      Переходим к настройкам регистров. -&gt; Строки РНУ. -&gt; Находим нужную строку -&gt; Смотрим последовательность.
+   4. Теперь мы знаем номер последовательности. Можно лезть снова в код.
+      Проваливаемся в метод calcSequence(). Там есть такой код:
+
+      while (qr.next())
+      {
+      seq = qr.get(tablenum(RTax25StdSeq));
+      <link:internal>calc</link:internal>(seq.SeqNum);
+      }
+
+      Здесь мы перебираем последовательности. По полю SeqNum мы можем найти нужную нам последовательность.
+      Далее: <link:internal>calc</link:internal>() -&gt; this.calcExpression(expressionTable); -&gt; stdExpression.<link:internal>calc</link:internal>(); -&gt; и, скорее всего, this.<link:internal>preCalc</link:internal>();
+
+      Тут мы перебираем строки счетчика. Вот здесь:
+
+      operandCashe[expressionLine.LineNum] = operandType.operand();
+
+      обсчитывается каждая строка.
+      Найти нужную строку можно либо по номеру expressionLine, либо просто в первом проходе обсчитав их все и увидев, какая из них возвращает искомый результат.
+   5. Зная номер строки последовательности продолжаем наши исследования.
+
+      Заходим в operand().
+      while select + traverseNode мы опускаем - здесь всего лишь исследуется иерархия (на ОГК ее нет).
+      А вот в <link:internal>setIterator</link:internal> мы и считаем значение:
+      [OGK4_flag, OGK4_amount] = this.OGK4_extendedOperand(si.value());
+
+      -&gt; OGK4_extendedOperand():
+
+      profitLedgerSetup - это мы вытянули настройки фильтров, которые будут наложены на ГК.
+      q = expression.OGK4_getRegCalc().modifyOperandLedgerFilter(q); - это мы достраиваем запрос в соответствии со спецификой данного конкретного регистра. Именно в корявости данного запроса закрыто большинство ошибок.
+
+      После выполнения этой строки мы получаем строку <link:internal>axapta</link:internal>-запроса, который будет послан на <link:internal>sql</link:internal> server и посчитает нужный нам результат.
+      Если обозрения этого запроса достаточно, чтобы объяснить число, то все. Если нет - читаем дальше.
+   6. Дальше скорее всего нам понадобится query analizer. Включаем выдачу <link:internal>sql</link:internal> запросов в infolog, повторяем все эти шаги и захватываем чистый <link:internal>sql</link:internal> запрос.
+      Выполняем запрос в queryAnalyzer, параллельно смотрим modifyOperandLedgerFilter(). Выясняем, из чего сложился именно такой результат и что нужно изменить в modify, чтобы получить нужный результат.
+
+
+      ---
+
+      p.s. В общем то, при повторном заходе можно в RTax25StdOPerandType_Profit.OGK4_extendedOperand() поставить нужное условие:
+
+      <link:internal>if</link:internal> (_profitId == 'ДР-03:211.4')
+      info('');
+
+      При этом следует учесть, что это условие будет вызываться для каждой строки, для которой считается данное условие.
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.8162940+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.8162940+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:32:14.1301110+03:00</create-date>
+  <cursor-position>76</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>68</y>
+  <open-on-startup>False</open-on-startup>
+</note>

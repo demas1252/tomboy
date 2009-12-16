@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Подключения</title>
+  <text xml:space="preserve"><note-content version="0.1">Подключения
+
+<bold>Stora Enso</bold>
+<link:internal>vpn</link:internal> = 62.148.129.118 (login = gmcsbb  password = r?7*$~oR4bT$ )
+terminal = 147.44.178.6 (login = gmcsbb  password = r?7*$~oR4bT$ )
+
+2195 сергей
+
+
+<bold>КПД</bold>
+
+(11:10:41) 173066982: 213.171.57.30
+dial
+K.,k.Hf,th
+10.16.0.4
+server
+server108</note-content></text>
+  <last-change-date>2009-06-13T23:58:46.0099210+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-13T23:58:46.0099210+04:00</last-metadata-change-date>
+  <create-date>2008-07-08T10:56:26.3930100+04:00</create-date>
+  <cursor-position>27</cursor-position>
+  <width>617</width>
+  <height>676</height>
+  <x>1</x>
+  <y>514</y>
+  <open-on-startup>False</open-on-startup>
+</note>

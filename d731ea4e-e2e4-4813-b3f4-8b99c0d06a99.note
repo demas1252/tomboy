@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Устатновка GuestAddiction в Linux Guest</title>
+  <text xml:space="preserve"><note-content version="0.1">Устатновка GuestAddiction в Linux Guest
+
+<italic>       mkdir<link:url> /media/cd</link:url></italic><italic>
+       mount<link:url> /dev/cdrom /media/cd</link:url></italic><italic>
+</italic>
+<italic>sh ./VBoxLinuxAdditions.run</italic>
+
+Если ругается так:
+	<italic>Please install the build and header files for your current <link:internal>Linux kernel</link:internal></italic><italic>.</italic>
+
+То под <link:internal>ubuntu</link:internal>:
+	<italic>sudo <link:internal>aptitude</link:internal></italic><italic> install build-essential <link:internal>kernel</link:internal></italic><italic>-header-`uname -r`</italic>
+
+под debian:
+	<italic><link:internal>apt-get</link:internal></italic><italic> install build-essential <link:internal>linux</link:internal></italic><italic>-headers-`uname -r`</italic>
+<link:url>
+/etc/X11/xorg.conf</link:url>:
+
+Section "Screen"
+Identifier "Default Screen"
+Device "VirtualBox graphics card"
+Monitor "Generic Monitor"
+DefaultDepth 24
+SubSection "Display"
+Depth 24
+Modes "2048x800" "800x600" "640x480"
+EndSubSection
+EndSection 
+
+Под <link:internal>Arch</link:internal> linix все автоматом заработало.  
+Надо только обратить внимание, чтобы GuestAddiction был 2.0.4.</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.6661330+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.6661330+04:00</last-metadata-change-date>
+  <create-date>2008-11-09T13:51:58.5162919+03:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>627</height>
+  <x>1206</x>
+  <y>306</y>
+  <open-on-startup>False</open-on-startup>
+</note>

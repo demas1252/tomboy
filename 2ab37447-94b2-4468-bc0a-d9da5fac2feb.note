@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>как постинги в ГК и записи в регистры создаются например при разноске накладной по заказу</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>как постинги в ГК и записи в регистры</link:internal> создаются например при разноске накладной по заказу
+
+
+   <link:internal>1</link:internal>. Создается объект <link:internal>ledgerVoucher</link:internal>
+   2. Для каждой строки накладной вызывается метод updateInventory, который с помощью классов inventMovement и inventUpd_financial создает проводки списания в таблице <link:internal>inventTrans</link:internal> и постинги списания по ГК
+   3. Для каждой строки накладной со скидкой создается два постинга на сумму скидки
+   4. Для каждой строки накладной создается запись в таблице строк накладных (custInvoiceTrans)
+   5. Для каждой строки накладной создается (ну или не создается J ) запись и разноска по комиссии продавца. (Comission.run)
+   6. Для каждой строки накладной разносится в ГК сумма выручки.
+   7. Для каждой строки накладной разносятся в ГК <link:internal>накладные расходы</link:internal> по данной строке
+   8. После того, как обработка всех построчных операций завершена, система рассчитывает общую сумму накладной
+   9. Создается шапка накладной (custInvoiceJour)
+  10. Разносятся в ГК <link:internal>накладные расходы</link:internal>, не привязанные к строке накладной (markup.post)
+  11. Разносятся в ГК и в таблицу проводок по налогам (taxTrans) налоги по заказу. (В классе taxSalesInvoice)
+  12. Разносится в ГК и в таблицу проводок по клиенту (custTrans) информация о клиентской задолженности.
+  13. Разносится в ГК общая скидка по накладной.
+  14. Объект <link:internal>ledgerVoucher</link:internal> завершается вызовом метода end().</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.1214230+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.1214230+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:21:21.5401470+03:00</create-date>
+  <cursor-position>118</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

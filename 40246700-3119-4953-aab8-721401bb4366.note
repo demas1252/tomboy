@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Два правила работы Let</title>
+  <text xml:space="preserve"><note-content version="0.1">Два правила работы Let
+
+1. <link:internal>Let</link:internal> связывае значение и переменную как можно ближе к месту, где она используется.
+
+Если x=5, то
+
+(+ (<link:internal>let</link:internal> ((x 3))
+	(+ x (* x 10)))
+x)
+
+-&gt; 38
+
+2. Значение переменных вычисляются на основе значений вне блока <link:internal>let</link:internal>.
+
+Если x = 2, то
+
+(<link:internal>let</link:internal> ((x 3)
+	(y (+ x 2))
+	(* x y))
+
+-&gt; 12 (так как y = 4 = 2+2)</note-content></text>
+  <last-change-date>2009-04-25T18:45:28.4877400+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:45:28.4877400+04:00</last-metadata-change-date>
+  <create-date>2009-04-25T18:42:43.3044970+04:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>418</x>
+  <y>377</y>
+  <open-on-startup>False</open-on-startup>
+</note>

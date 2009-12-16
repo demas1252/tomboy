@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>optimizer_mode</title>
+  <text xml:space="preserve"><note-content version="0.1">optimizer_mode
+
+Параметр оптимизатора:
+&gt; show parameter optimizer_mode
+
+Три варианта: all_rows (по умолчанию), <link:internal>first_rows</link:internal>_N, <link:internal>first_rows</link:internal> (deprecated in 9i).</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.8950810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.8950810+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:53:34.9780860+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

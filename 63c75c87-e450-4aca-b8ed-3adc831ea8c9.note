@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Резервирование</title>
+  <text xml:space="preserve"><note-content version="0.1">Резервирование
+
+     InventUpd_Estimated.updateReservation() -&gt; InventUpdateReservation. updateReserveLoss() / updateReserveMore()
+
+
+     *Резервирование из кода*
+     
+     <link:internal>Пример резервирования строки заказа</link:internal>
+     
+     *Автоматическое резервирование*
+      - ведется по методу ФИФО с учетом складской аналитики ([source: <link:internal>axapta</link:internal> user guide])
+
+     *Известные проблемы с резервированием*
+     
+     * <link:internal>Резервирование при переносах</link:internal></note-content></text>
+  <last-change-date>2009-04-01T16:14:37.9417650+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:14:37.9417650+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:53:02.9940460+03:00</create-date>
+  <cursor-position>429</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>88</x>
+  <y>312</y>
+  <open-on-startup>False</open-on-startup>
+</note>

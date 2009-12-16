@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sequel - создание таблицы</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Sequel</link:internal> - создание таблицы
+
+<italic>require "<link:internal>rubygems</link:internal></italic><italic>"
+require "<link:internal>sequel</link:internal></italic><italic>"
+
+<link:internal>DB</link:internal></italic><italic> = <link:internal>Sequel</link:internal></italic><italic>.<link:internal>sqlite</link:internal></italic><italic>
+
+<link:internal>DB</link:internal></italic><italic>.create_table :items do
+  primary_key :id
+  String :name
+  Float :price
+  Ssadas :float
+end
+</italic>
+Вот важная часть стека:
+
+<list><list-item dir="ltr">from <link:url>/var/lib/gems/1.8/gems/sequel-3.4.0/lib/sequel/database.rb:306:in</link:url> `execute_ddl'
+</list-item><list-item dir="ltr">from <link:url>/var/lib/gems/1.8/gems/sequel-3.4.0/lib/sequel/database/schema_methods.rb:188:in</link:url> `create_table_from_generator'
+</list-item><list-item dir="ltr">from <link:url>/var/lib/gems/1.8/gems/sequel-3.4.0/lib/sequel/database/schema_methods.rb:73:in</link:url> `create_table'</list-item></list>
+
+Пояснения:
+<list><list-item dir="ltr">create_table</list-item></list>
+	Здесь мы получаем имя таблицы и &amp;block. На основании block мы создаем Schema::Generator и вызываем
+<list><list-item dir="ltr">create_table_from_generator</list-item></list>
+	Получаем имя таблицы и Schema::Generator, полученный на предыдущем шаге и конструируем <link:internal>sql</link:internal> с помощью createTableSql()
+	createTableSql() :: -&gt; database/schema_<link:internal>sql</link:internal>.rb - конструирует запрос, создавая части <link:internal>sql</link:internal> выражения с помощью своих же методов, например column_list_<link:internal>sql</link:internal>()
+<list><list-item dir="ltr">execute ddl </list-item></list>
+	Здесь мы получаем на вход уже полноценный <link:internal>Sql</link:internal></note-content></text>
+  <last-change-date>2009-10-17T22:10:55.4690690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.4690690+04:00</last-metadata-change-date>
+  <create-date>2009-09-12T22:16:59.1737808+04:00</create-date>
+  <cursor-position>913</cursor-position>
+  <width>848</width>
+  <height>534</height>
+  <x>36</x>
+  <y>345</y>
+  <open-on-startup>False</open-on-startup>
+</note>

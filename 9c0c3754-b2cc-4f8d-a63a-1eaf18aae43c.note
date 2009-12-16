@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формула Лапласа</title>
+  <text xml:space="preserve"><note-content version="0.1">Формула Лапласа
+
+<bold>Задача:</bold>  Какова <link:internal>вероятность</link:internal>, что при n испытаниях событие А произойдет не менее <italic>a</italic> и не более <italic>b</italic> раз?
+
+p=ф(...) - ф(...) - по таблице
+
+<bold>Пример</bold>:  Какова <link:internal>вероятность</link:internal>, что при 200-кратном бросании монеты число появления герба будет между 95&lt;=..&lt;=105.
+
+n=200, a=95, b=105, p=q=1/2.
+
+(a-np) / sqrt(npq) = -0,7
+(b-np) / sqrt(npq) = 0,7
+P = Ф(0,7) - Ф(-0,7) = 0,52</note-content></text>
+  <last-change-date>2009-06-30T11:44:18.2513900+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-30T11:44:18.2513900+04:00</last-metadata-change-date>
+  <create-date>2009-06-30T11:17:02.2982270+04:00</create-date>
+  <cursor-position>146</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>153</x>
+  <y>141</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>sicp 1.11 (древовидная рекурсия)</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>sicp 1.11</link:internal> (древовидная рекурсия)
+
+f (n) = n, если n &lt; 3, и f (n) = f (n − <link:internal>1</link:internal>) + f (n − 2) + f (n − 3)
+
+<italic>Рекурсивное решение</italic>
+
+(define (f n)
+  (<link:internal>if</link:internal> (&lt; n 3)
+      n
+      (+ (f (- n <link:internal>1</link:internal>))
+         (f (- n 2))
+         (f (- n 3)))))
+
+<italic>Итеративное решение</italic>
+
+Будем использовать следующую трансформацию:
+
+	a &lt;- a + b + <link:internal>c</link:internal>
+	b &lt;- a
+	<link:internal>c</link:internal> &lt;- b
+
+(define (f n)
+  (f-iter 2 <link:internal>1</link:internal> 0 n))
+
+(define (f-iter a b <link:internal>c</link:internal> count)
+  (<link:internal>if</link:internal> (= count 0)
+      <link:internal>c</link:internal>
+      (f-iter (+ a b <link:internal>c</link:internal>) a b (- count <link:internal>1</link:internal>))))</note-content></text>
+  <last-change-date>2008-06-15T23:42:45.9873730+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.9873730+04:00</last-metadata-change-date>
+  <create-date>2008-04-13T13:37:46.7723389+04:00</create-date>
+  <cursor-position>358</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

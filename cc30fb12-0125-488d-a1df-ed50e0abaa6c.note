@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разбиение журналов</title>
+  <text xml:space="preserve"><note-content version="0.1">Разбиение журналов
+
+
+*Настройка*
+LedgerJournalName.linesLimitBeforeDistribution - для типа журнала устанавливается кол-во строк
+В LedgerJournalTable.initFromLedgerJournalName() - это кол-во протягиается в LedgerJournalTable
+
+*Реализация*
+
+На LedgerJournalTable есть два метода:
+
+numOfJournalsIfDistributed() - кол-во журналов, которое получится в результате разбиения
+    здесь мы строим список ваучеров в журнале и формируем кол-во журналов так, чтобы один ваучер не оказался размазан по нескольким журналам
+
+distributeJournalLines() - сам метод разбиения
+isEligableForDistributionBeforePost() - ??
+
+*Как это работает*
+
+(<link:broken>C</link:broken>) \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\LedgerJournalTable\Methods\isEligableForDistributionBeforePost - line 6
+(<link:broken>C</link:broken>) \Classes\LedgerJournalPost\distributeAndPostLargeJournal - line 23
+(<link:broken>C</link:broken>) \Classes\LedgerJournalPost\main - line 32
+
+transfer = <link:internal>args</link:internal>.parmEnum();
+<link:internal>if</link:internal> (LedgerJournalPost::distributeAndPostLargeJournal(<link:internal>args</link:internal>.record(), transfer))  return;
+
+
+<link:internal>if</link:internal> (ledgerJournalTable.isEligableForDistributionBeforePost())
+    {
+        journalsToPost = ledgerJournalTable.distributeJournalLines();
+        journalsToPost.ins(ledgerJournalTable);         // <link:internal>Add</link:internal> the main table
+
+        parmBuffer.transferErrors = parmBuffer.transferErrors;
+
+        LedgerJournalTable::insertJournalsInLedgerJournalMultiPost(journalsToPost, parmBuffer).run();
+
+        postedAsLargeJournal = true;
+
+        <link:internal>if</link:internal> (ledgerJournalTrans &amp;&amp; ledgerJournalTrans.dataSource())
+            ledgerJournalTrans.dataSource().research();
+    }
+
+<link:internal>Оптимизация разбиения журналов ГК</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:26.1006530+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.1006530+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:16:39.6277930+03:00</create-date>
+  <cursor-position>9</cursor-position>
+  <width>1014</width>
+  <height>813</height>
+  <x>14</x>
+  <y>98</y>
+  <open-on-startup>False</open-on-startup>
+</note>

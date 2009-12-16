@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как воспроизвести реализованные курсовые по поставщику</title>
+  <text xml:space="preserve"><note-content version="0.1">Как воспроизвести реализованные курсовые по поставщику
+
+<link:internal>1</link:internal>. USD и курс валют, различный на 2 даты
+2. Закупка(USD) и фактура на первую дату
+3. Платеж(USD) на вторую дату (<link:internal>Денежные средства</link:internal> - &gt; Общий журнал платежей)
+4. Сопоставляем платеж и фактуру
+5. В проводках по поставщику появляется новая проводка (0 - в валюте операции, рубли в валюте компании)
+6. Если встать на проводку по платежу (или фактуре) и сказать "Проводки по сопоставлению", то увидим эти проводки</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.0014440+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.0014440+04:00</last-metadata-change-date>
+  <create-date>2008-04-04T13:40:22.6140060+04:00</create-date>
+  <cursor-position>464</cursor-position>
+  <width>614</width>
+  <height>360</height>
+  <x>10</x>
+  <y>71</y>
+  <open-on-startup>False</open-on-startup>
+</note>

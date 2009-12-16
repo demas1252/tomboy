@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Arrays and Hashes in Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Arrays and Hashes in Ruby
+
+a = [1, 'cat', 3.14]
+a[0]
+a[2] = nil
+puts a[1..3]
+
+inssec = {
+  'one' = &gt; 'two'
+  'three' =&gt; 'four'
+}
+
+insec['one']
+insec['three'] = 'five'
+
+<link:internal>Перестановки в Ruby с помощью Array</link:internal>
+</note-content></text>
+  <last-change-date>2009-06-26T14:07:46.8063480+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-26T14:07:46.8063480+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:24:21.7579310+03:00</create-date>
+  <cursor-position>168</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1205</x>
+  <y>436</y>
+  <open-on-startup>False</open-on-startup>
+</note>

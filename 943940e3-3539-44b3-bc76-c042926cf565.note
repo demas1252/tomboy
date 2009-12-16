@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Подавление COM ошибок</title>
+  <text xml:space="preserve"><note-content version="0.1">Подавление COM ошибок
+
+// modified by adem - catch errors
+COM getComRange(BookMark _bookMark, int _workSheet = <link:internal>1</link:internal>)
+{
+// 01.12.2004, author Kirilyuk, RT, KirilyukAllRAsset_InventoryCommission
+
+      COM comRange,
+            comApplication;
+      int errorsPerBatch;
+      ;
+
+      //comRange = this.findRange(_bookMark, _workSheet);
+
+      <link:internal>if</link:internal> (m_comDocument)
+      {
+            comApplication = m_comDocument.application();
+            <link:internal>if</link:internal> (comApplication)
+            {
+                  errorsPerBatch = infolog.errorsPerBatch();
+                  infolog.errorsPerBatch(-1);
+                  try {
+                        comRange = comApplication.range(_bookMark);
+                        infolog.errorsPerBatch(errorsPerBatch);
+                  }
+                  catch
+                  {
+                        infolog.errorsPerBatch(errorsPerBatch);
+                        throw error(strfmt('Не найден заданный диапазон %<link:internal>1</link:internal> на листе %2', _bookMark, _workSheet));
+                  }
+            }
+      }
+      return comRange;
+
+} </note-content></text>
+  <last-change-date>2009-10-12T12:00:37.2478540+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.2478540+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:00:06.5272030+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

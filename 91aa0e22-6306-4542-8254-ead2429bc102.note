@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>DocTest</title>
+  <text xml:space="preserve"><note-content version="0.1">DocTest
+
+import doctest
+
+def fib(n):
+    """Return the nth fibonacci number
+    
+    Arguments:
+    - `n`:
+
+    &gt;&gt;&gt; fib(0)
+    0
+    &gt;&gt;&gt; fib(1)
+    1
+    &gt;&gt;&gt; fib(2)
+    1
+    &gt;&gt;&gt; fib(3)
+    5
+    """
+    
+    <link:internal>if</link:internal> n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+    
+doctest.<link:internal>testmod</link:internal>()
+
+-----------------------------------------------------
+
+**********************************************************************
+File "&lt;stdin&gt;", line 15, in __main__.fib
+Failed example:
+    fib(3)
+Expected:
+    5
+Got:
+    2
+**********************************************************************
+1 items had failures:
+   1 of   4 in __main__.fib
+***<link:internal>Test</link:internal> Failed*** 1 failures.
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.3342310+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.3342310+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:21:27.0100480+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>174</x>
+  <y>83</y>
+  <open-on-startup>False</open-on-startup>
+</note>

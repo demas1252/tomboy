@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Local Difinition</title>
+  <text xml:space="preserve"><note-content version="0.1">Local Difinition
+
+Одно из самых сложных понятий (как я понял).  Требует смены языка до Intermediate Student.  
+
+В частности, например, вот эти две связанные функции:
+
+&lt;&lt;pre
+;; sort : list-of-numbers -&gt; list-of-numbers
+(define (sort alon)
+    (cond
+        [(empty? alon) empty]
+        [(cons? alon) (insert (first alon) (sort (rest alon)))]))
+
+;; insert : number list-of-numbers (sorted) -&gt; list-of-numbers
+(define (insert an alon)
+    (cond
+        [(empty? alon) (list an)]
+        [else (cond
+            [(&gt; an (first alon)) (cons an alon)]
+            [else (cons (first alon) (insert an (rest alon)))])]))
+
+&gt;&gt;
+
+Мы сможем переписать так:
+
+&lt;&lt;pre
+;; sort : list-of-numbers -&gt; list-of-numbers
+(define (sort alon)
+    (local 
+        ((define (sort alon)
+            (cond
+                [(empty? alon) empty]
+                [(cons? alon) (insert (first alon) (sort (rest alon)))]))
+                
+        (define (insert an alon)
+            (cond
+                [(empty? alon) (list an)]
+                [else (cond
+                    [(&gt; an (first alon)) (cons an alon)]
+                [else (cons (first alon) (insert an (rest alon)))])])))
+            (sort alon)))
+
+&gt;&gt;
+
+Еще пример:
+&lt;&lt;pre
+(define (mult10 alon)
+    (cond
+        [(empty? alon) empty]
+        [else (local ((define a-digit (first alon))
+                            (define the-rest (rest alon))
+                            (define p (length the-rest)))
+        ;; ------------------------------------------------------
+        (cons (* (expt 10 p) a-digit) (mult10 the-rest)))]))
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:57:54.4146119+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:57:54.4146119+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:57:53.4995570+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>139</x>
+  <y>601</y>
+  <open-on-startup>False</open-on-startup>
+</note>

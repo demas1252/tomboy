@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>db_file_multiblock_read_count</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>db</link:internal>_file_multiblock_read_count
+
+Default value 8
+Parameter class Dynamic: ALTER SESSION, ALTER SYSTEM
+
+One of the parameters you can use to minimize I/O during table scans. It specifies the maximum number of blocks read in one I/O operation during a sequential scan. The total number of I/Os needed to perform a full table scan depends on such factors as the size of the table, the multiblock read count, and whether parallel execution is being utilized for the operation.
+
+The optimizer is more likely to choose a full table scan over an index <link:internal>if</link:internal> the value of this parameter is high.
+
+The maximum value is always less than the operating system's maximum I/O size <link:internal>expressed</link:internal> as <link:internal>Oracle</link:internal> blocks ((max I/O size)/<link:internal>DB</link:internal>_BLOCK_SIZE). <link:internal>If</link:internal> you set this parameter to a value greater than the maximum, <link:internal>Oracle</link:internal> uses the maximum.</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.4051990+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.4051990+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:10:08.6385870+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

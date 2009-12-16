@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Logical Query Processing Phases</title>
+  <text xml:space="preserve"><note-content version="0.1">Logical Query Processing Phases
+
+
+(8) select (9) distinct (11) &lt;top&gt; &lt;select list&gt;
+(1) from &lt;left table&gt;
+(3) &lt;join type&gt; join &lt;right_table&gt;
+(2) on &lt;join_condition&gt;
+(4) where &lt;where_condition&gt;
+(5) group by &lt;group_by_list&gt;
+(6) with { cube | rollup }
+(7) having &lt;having_codition&gt;
+(10) order by &lt;order_by_list&gt;</note-content></text>
+  <last-change-date>2008-03-30T07:43:53.5442430+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:43:53.5442430+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:43:48.6146070+04:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

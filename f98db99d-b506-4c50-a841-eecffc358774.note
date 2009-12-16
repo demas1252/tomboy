@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Инвертирование списка</title>
+  <text xml:space="preserve"><note-content version="0.1">Инвертирование списка
+
+Это уже пример обощенного подхода к построению алгоритмов данного типа:
+&lt;&lt;pre
+;; invert : (listof X) -&gt; (listof X)
+;; to construct the reverse of alox
+(define (invert alox0)
+  (local (;; accumulator is the reversed list of all those items
+       ;; on alox0 that precede alox
+       (define (rev alox accumulator)
+     (cond
+       [(empty? alox) accumulator]
+       [else
+         (rev (rest alox) (cons (first alox) accumulator))])))
+(rev alox0 empty)))
+
+&gt;&gt;
+
+Ключем является решение о том, что именно у нас будет аккумулятором.   В данном случае аккумулятором является уже реверсированный список.</note-content></text>
+  <last-change-date>2008-03-26T22:02:36.6942880+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:02:36.6942880+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:02:35.9638910+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

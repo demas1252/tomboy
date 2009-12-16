@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>IMTS</title>
+  <text xml:space="preserve"><note-content version="0.1">IMTS
+
+
+От пользователей, работающих со старыми версиями Dynamics AX, достаточно часто приходится слышать жалобы на низкую производительность модуля логистики. Если в такой ситуации запустить <link:internal>SQL</link:internal> <link:internal>Enterprise Manager</link:internal> или <link:internal>SQL</link:internal> Server Management Studio, то можно увидеть длинную очередь блокировок процессов, причем все блокированные <link:internal>процессы</link:internal> ожидают освобождения записей в таблице inventSum (Запасы в наличии). Грубо говоря – данная таблица содержит в себе информацию о складском остатке (ну и о количестве зарезервированного, скомплектованного, принятого и т.п. товара) в разрезе кодов номенклатур и кодов складской аналитики. 
+
+[<link:internal>Описание работы система при отключенном MTS</link:internal>]
+
+Для того чтобы преодолеть эту проблему, в третьей версии Dynamics AX, был реализован механизм под названием Inventory MultiTransaction System – IMTS. (Строго говоря – он также был включен в версию 2.5Sp6, но она, помниться, вышла уже после выхода третьей версии).
+
+[<link:internal>Работа IMTS в третьей версии</link:internal>]
+
+Поскольку при проектировании четвертой версии Dynamics AX, <link:internal>вопросы</link:internal> повышения производительности системы при работе большого количества пользователей были одними из самых первостепенных, разработчики предприняли еще одну попытку (и как мне кажется – на сей раз безоговорочно успешную) разрешения проблем <link:internal>блокировки</link:internal> складских остатков. Из предыдущего опыта понятно что:
+
+<link:internal>1</link:internal>. Блокировать информацию об остатках надолго – нельзя – начинается разрастание дерева блокировок.
+2. Обновлять информацию в отдельной транзакции – тоже нехорошо. Отказ обход стандартного транзакционного механизма может порождать больше проблем чем решать…
+
+[<link:internal>Работа IMTS в четверой версии</link:internal>]
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.4165800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.4165800+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:25:18.9494400+03:00</create-date>
+  <cursor-position>626</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>425</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Quasiquotation</title>
+  <text xml:space="preserve"><note-content version="0.1">Quasiquotation
+
+То же самое,  что и <link:internal>макросы</link:internal>?
+Возможность преобразовывать выражения lisp к другим выражениям.
+
+<italic>(define onelist '("this" "is" "a" "list"))
+(define twolist `("something" ,onelist "<link:internal>another</link:internal></italic><italic>"))
+
+&gt; (display (list-ref twolist 1))
+(this is a list)
+&gt; (list-ref twolist 1)
+("this" "is" "a" "list")</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:35.5126410+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.5126410+04:00</last-metadata-change-date>
+  <create-date>2008-10-22T14:31:20.2879439+04:00</create-date>
+  <cursor-position>81</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>880</x>
+  <y>425</y>
+  <open-on-startup>False</open-on-startup>
+</note>

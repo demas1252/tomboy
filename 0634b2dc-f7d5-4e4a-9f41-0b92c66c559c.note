@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Эффект Вавилова-Черенкова</title>
+  <text xml:space="preserve"><note-content version="0.1">Эффект Вавилова-Черенкова
+
+Из <link:internal>относительность массы</link:internal> следует, что с приближением скорости v к скорости света c его масса стремится к бесконечности.  Для ускорения тела до бесконечно большой скорости нужна бесконечно большая сила, но таких сил в природе нет - скорость не может быть больше скорости света.
+
+То есть, рельно есть в-ва в которых скорость света меньше, чем скорость света в вакуумеи атомные частицы могут двигаться в них быстрее скорости света, но никогда не быстрее скорости света в вакууме.
+
+Когда электрически заряженная частица двжиется в среде со скоростью, превышающей скорость света в этой среде, испускается конус световых волн, известных под названием <italic>черенковского излучения</italic>.
+
+
+
+</note-content></text>
+  <last-change-date>2009-08-17T15:30:55.5825850+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-17T15:30:55.5825850+04:00</last-metadata-change-date>
+  <create-date>2009-08-17T15:25:42.1449950+04:00</create-date>
+  <cursor-position>696</cursor-position>
+  <width>478</width>
+  <height>428</height>
+  <x>312</x>
+  <y>229</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Reporting queued error faulting application Ax32Serv version x faulting module Ax32Serv version y fault address 0x003471f</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Reporting queued error faulting application Ax32Serv version x faulting module Ax32Serv version y fault address 0x003471</link:internal>f
+
+
+Сервер - Microsoft <link:internal>Windows</link:internal> 2003 Server R2 Sp2 x64. Microsoft <link:internal>SQL</link:internal> 2005. Microsoft Dynamix AX SP<link:internal>1</link:internal> с RPayroll для SP<link:internal>1</link:internal>. База данных, aos, приложение установлены на одном сервере.
+Клиенты - <link:internal>Windows</link:internal> 2000, XP, Vista.
+
+Периодически (иногда один, иногда несколько раз в день) останавливается служба AOS с ошибкой.
+
+Reporting queued error: faulting application Ax32Serv.exe, version 4.0.2163.0, faulting module Ax32Serv.exe, version 4.0.2163.0, fault address 0x003471f8.
+
+Иногда сначала возникает ошибка в приложении .Net Runtime 2.0 Error Reporting.
+Faulting application ax32serv.exe, version 4.0.2163.0, stamp 455e7fa7, faulting module ax32serv.exe, version 4.0.2163.0, stamp 455e7fa7, debug? 0, fault address 0x003471f8.
+
+Т.к. ошибка ни разу не возникала ночью - есть предположение, что ошибку сервера вызывают некие действия, некоторого пользователя.
+
+Подскажите, пожалуйста, какими средствами можно воспользоваться для определения кто, когда и что делает в системе в момент возникновения ошибки? Или подскажите, пожалуйста, какие логи еще стоит посмотреть для более точной диагностики.
+
+---
+
+Тут, видимо, либо какая-то неточность в данных об ошибке, либо у вас по каким-то причинам ax32serv.exe грузится в память не по тем адресам, которые для него прописаны в PE-заголовке... Если у вас ошибка возникает всегда по одному и тому же адресу (fault address), то после запуска AOS и до того, как он свалится, посмотрите, по каким адресам какие модули загружены. Дело в том, что в PE-заголовке ax32serv.exe 4.0.2163.0 указаны image base 0x01000000 и base of code 0x00001000, поэтому секция кода самого ax32serv.exe должна грузиться начиная с адреса 0x01001000, а по адресу 0x003471f8, видимо, загружено что-то другое - интересно было бы узнать, что именно. Как вариант, поставьте какой-нить JIT-отладчик, запустите AOS как обычное приложение, а не как сервис, и, когда вылезет ошибка, согласитесь на отладку - тогда можно будет точнее определить, где именно она возникает. В любом случае, опеределить, какой пользователь что делает в системе в момент возникновения ошибки, вам вряд ли удастся, а так хотя бы можно будет узнать, что в этот момент делает сам AOS.</note-content></text>
+  <last-change-date>2009-10-12T12:00:32.1003830+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.1003830+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:58:46.1633260+03:00</create-date>
+  <cursor-position>150</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

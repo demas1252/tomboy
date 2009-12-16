@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>mmap</title>
+  <text xml:space="preserve"><note-content version="0.1">mmap
+
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;sys/<link:internal>mman</link:internal>.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct {
+    int integer;
+    char string[24];
+} RECORD;
+
+#define NRECORDS (100)
+
+int main()
+{
+    RECORD record, *mapped;
+    int i, f;
+    FILE *fp;
+    
+    // формируем файл, с которым мы будем работать
+    fp = fopen(“records.dat”,”w+”);
+    for(i=0; i&lt;NRECORDS; i++) {
+        record.integer = i;
+        sprintf(record.string,”RECORD-%d”,i);
+        fwrite(&amp;record,sizeof(record),<link:internal>1</link:internal>,fp);
+    }
+    fclose(fp);
+    
+    // меняем одну из записей с помощью стандартной библиотеки
+    fp = fopen(“records.dat”,”r+”);
+    fseek(fp,43*sizeof(record),SEEK_SET);
+    fread(&amp;record,sizeof(record),<link:internal>1</link:internal>,fp);
+    record.integer = 143;
+    sprintf(record.string,”RECORD-%d”,record.integer);
+    fseek(fp,43*sizeof(record),SEEK_SET);
+    fwrite(&amp;record,sizeof(record),<link:internal>1</link:internal>,fp);
+    fclose(fp);
+    
+    // а теперь с помощью mmap
+    f = open(“records.dat”,O_RDWR);
+    mapped = (RECORD *)mmap(0, NRECORDS*sizeof(record), PROT_READ|PROT_WRITE, <link:internal>MAP</link:internal>_SHARED, f, 0);  
+        // 0 - allocated automatically
+        // NRECORDS*sizeof(record) - размер области
+        // PROT_READ|PROT_WRITE, <link:internal>MAP</link:internal>_SHARED - access permission
+        // 0 - offset
+    mapped[43].integer = 243;
+    sprintf(mapped[43].string,”RECORD-%d”,mapped[43].integer);
+    msync((void *)mapped, NRECORDS*sizeof(record), MS_ASYNC);
+    munmap((void *)mapped, NRECORDS*sizeof(record));
+    close(f);
+    
+    exit(0);
+}</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.3926400+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.3926400+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:47:04.0985420+03:00</create-date>
+  <cursor-position>33</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>641</y>
+  <open-on-startup>False</open-on-startup>
+</note>

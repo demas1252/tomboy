@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Теория игр</title>
+  <text xml:space="preserve"><note-content version="0.1">Теория игр
+
+<link:internal>Основные понятия теории игр</link:internal>
+<link:internal>Принцип Минимакса</link:internal>
+<link:internal>Смешанные стратегии</link:internal>
+<link:internal>Элементарные методы решения игр</link:internal>
+<link:internal>Общие методы решения конечных игр</link:internal>
+<link:internal>Приближенные методы решения игр</link:internal>
+<link:internal>Методы решения некоторых бесконечных игр</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-01T11:26:25.6064760+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-01T11:26:25.6064760+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T10:07:42.2851650+04:00</create-date>
+  <cursor-position>10</cursor-position>
+  <width>505</width>
+  <height>397</height>
+  <x>970</x>
+  <y>508</y>
+  <open-on-startup>False</open-on-startup>
+</note>

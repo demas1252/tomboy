@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Долгая выборка из пустой таблицы</title>
+  <text xml:space="preserve"><note-content version="0.1">Долгая выборка из пустой таблицы
+
+select count(1) from object_locks
+через 714,047 секунд получаем
+no rows selected (таблица в самом деле пустая).
+
+Предполагаю, что когда-то эта таблица была "очень полная". Потом ее почистили командой DELETE и она стала "пустой". Но при этом High Water Mark (HWM) осталась там же, где была до очистки таблицы.
+Если есть возможность, то выполните
+
+ALTER TABLE object_locks MOVE ...
+
+Это опустит HWM вниз, и будете получать no rows selected мгновенно...</note-content></text>
+  <last-change-date>2008-03-30T08:06:08.8748130+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T08:06:08.8748130+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T08:05:38.6347550+04:00</create-date>
+  <cursor-position>413</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>8</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

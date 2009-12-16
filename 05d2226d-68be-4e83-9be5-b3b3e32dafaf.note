@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Зеркалирование репозитория Ubuntu</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Зеркалирование</link:internal> репозитория Ubuntu
+
+<link:url>/usr/bin/debmirror</link:url> --nosource -m --passive --host=archive.<link:internal>ubuntu</link:internal>.com \
+--root=<link:internal>ubuntu</link:internal> --method=http --progress \
+--dist=hardy,hardy-updates,hardy-<link:internal>proposed</link:internal>,hardy-backports,hardy-security \
+--ignore-release-gpg --section=main,multiverse,restricted,universe \
+--<link:internal>arch</link:internal>=i386 <link:internal>ubuntu</link:internal>/</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.0617630+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.0617630+03:00</last-metadata-change-date>
+  <create-date>2009-04-08T21:10:57.3338929+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>77</y>
+  <open-on-startup>False</open-on-startup>
+</note>

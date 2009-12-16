@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Let in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Let in Haskell
+
+Как <italic>where</italic>, но видимость локальная:
+
+<italic>cylinder :: (RealFloat a) =&gt; a -&gt; a -&gt; a
+cylinder r h =
+         <link:internal>let</link:internal></italic><italic> sideArea = 2 * pi * r * h
+             topArea = pi * r ^ 2
+         in sideArea + 2 * topArea</italic>
+
+<link:internal>let</link:internal> &lt;bindings&gt; in &lt;expression&gt;
+
+<italic>1. <link:internal>ghci</link:internal></italic><italic>&gt; [<link:internal>let</link:internal></italic><italic> square x = x * x in (square 5, square 3, square 2)]  
+2. [(25,9,4)]  </italic>
+
+</note-content></text>
+  <last-change-date>2009-10-29T16:46:37.9445500+03:00</last-change-date>
+  <last-metadata-change-date>2009-10-29T16:46:37.9445500+03:00</last-metadata-change-date>
+  <create-date>2009-10-29T16:38:09.4604090+03:00</create-date>
+  <cursor-position>332</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отладка в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Отладка в Ruby
+
+sudo gem install <link:internal>ruby</link:internal>-debug
+
+В Ubutu он его не фига не видел и я сделал link в <link:url>/usr/bin</link:url>:
+	sudo ln -s <link:url>/var/lib/gems/1.8/gems/ruby-debug-0.10.3/bin/rdebug</link:url>
+
+rdebug source.rb
+
+<bold>Вызов по требованию</bold>
+
+require '<link:internal>ruby</link:internal>-debug'
+
+debugger
+
+<bold>Команды</bold>
+
+list - показать кусок кода
+ввод переменной - показать ее значение
+where - стек
+up2 / 1 - путешествие по стеку
+step
+next
+b 69 - на номер строки
+b [[file:]line]
+b 72 <link:internal>if</link:internal> params['user'] == 'admin'
+
+<link:url>http://bashdb.sourceforge.net/<link:internal>ruby</link:internal></link:url><link:url>-debug.html</link:url></note-content></text>
+  <last-change-date>2009-09-24T14:37:00.0644480+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.0644480+04:00</last-metadata-change-date>
+  <create-date>2009-09-13T08:09:40.6093309+04:00</create-date>
+  <cursor-position>248</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1024</x>
+  <y>475</y>
+  <open-on-startup>False</open-on-startup>
+</note>

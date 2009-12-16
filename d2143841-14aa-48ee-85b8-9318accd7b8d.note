@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритмы</title>
+  <text xml:space="preserve"><note-content version="0.1">Алгоритмы
+
+Комбинаторные алгоритмы
+Структуры данных
+<link:internal>Алгоритмы на графах</link:internal>
+<link:internal>Алгоритмы поиска</link:internal>
+<link:internal>Сортировки</link:internal>
+Алгоритмы на строках
+Алгоритмы сжатия данных
+Компьютерная графика
+Криптографические алгоритмы
+Алгоритмы разработки ПО
+Нейронные <link:internal>сети</link:internal>
+<link:internal>Вычислительная алгебра</link:internal>
+Числовые алгоритмы
+Численные методы
+Алгоритмы опимизации
+Грамматический разбор
+Регулярные выражения
+
+<link:internal>Задачи для интервью</link:internal>
+
+<link:internal>Простые числа</link:internal>
+<link:internal>Наименьший общий делитель</link:internal>
+<link:internal>Разбиение слов на слога</link:internal>
+
+<link:internal>Конечные автоматы</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-07-02T13:02:52.2693390+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-02T13:02:52.2693390+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:11:43.0272660+03:00</create-date>
+  <cursor-position>88</cursor-position>
+  <width>474</width>
+  <height>526</height>
+  <x>35</x>
+  <y>287</y>
+  <open-on-startup>False</open-on-startup>
+</note>

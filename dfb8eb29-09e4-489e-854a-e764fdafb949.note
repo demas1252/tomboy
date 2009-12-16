@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Закрытие финансового года</title>
+  <text xml:space="preserve"><note-content version="0.1">Закрытие финансового года
+
+<link:internal>Открывающие и закрывающие проводки</link:internal></note-content></text>
+  <last-change-date>2008-03-29T22:57:17.5682629+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T22:57:17.5682629+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T22:56:58.4182240+03:00</create-date>
+  <cursor-position>27</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>917</x>
+  <y>666</y>
+  <open-on-startup>False</open-on-startup>
+</note>

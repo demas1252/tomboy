@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Db</title>
+  <text xml:space="preserve"><note-content version="0.1">Db
+
+<bold>Восстановление и <link:internal>резервирование</link:internal></bold><bold> <link:internal>grub</link:internal></bold>
+
+Команда, которая скопирует нам MBR в файл backup.mbr выглядит так:
+
+<italic># <link:internal>dd</link:internal></italic><italic> <link:internal>if</link:internal></italic><italic>=/dev/hda of=backup.mbr bs=512 count=1
+1+0 записей считано
+1+0 записей написано
+скопировано 512 байт (512 B), 0,000358146 секунд, 1,4 MB/s
+</italic>
+Резервная копия создана, теперь главное не забыть, где она лежит. И если какой-нибудь вредный дистрибутив криво установит нам загрузчик <link:internal>Grub</link:internal>, то мы спокойно проделаем обратную операцию:
+
+<italic># <link:internal>dd</link:internal></italic><italic> <link:internal>if</link:internal></italic><italic>=backup.mbr of=/dev/hda bs=512 count=1</italic>
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:43.6397620+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:43.6397620+04:00</last-metadata-change-date>
+  <create-date>2009-09-24T14:36:53.9914970+04:00</create-date>
+  <cursor-position>489</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>851</x>
+  <y>396</y>
+  <open-on-startup>False</open-on-startup>
+</note>

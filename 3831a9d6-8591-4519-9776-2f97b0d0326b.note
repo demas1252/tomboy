@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Yum</title>
+  <text xml:space="preserve"><note-content version="0.1">Yum
+
+<link:internal>Заблокировать пакет от обновления в Fedora</link:internal>
+
+Какому пакету принадлежит данный файл (даже не установленный):
+	<italic>yum provides some.so.6</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:16.3085380+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.3085380+04:00</last-metadata-change-date>
+  <create-date>2009-04-18T23:01:30.4119100+04:00</create-date>
+  <cursor-position>86</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>880</x>
+  <y>51</y>
+  <open-on-startup>False</open-on-startup>
+</note>

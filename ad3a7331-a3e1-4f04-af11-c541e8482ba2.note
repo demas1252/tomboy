@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание класса по его имени</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание класса по его имени
+
+def InstanceFactory(classname):
+    cls = globals()[classname]
+    return cls() 
+
+class A(object):
+    def start(self):
+        print "a.start"
+
+class B(object):
+    def start(self):
+        print "b.start"
+
+InstanceFactory("A").start()
+InstanceFactory("B").start()
+
+Если класс расположен в другом модуле:
+
+def InstanceFactory(modulename, classname):
+    <link:internal>if</link:internal> '.' in modulename:
+        raise ValueError, "can't handle dotted <link:internal>modules</link:internal> yet"
+    <link:internal>mod</link:internal> = __import__(modulename)
+    cls = getattr(<link:internal>mod</link:internal>, classname]
+    return cls() 
+    </note-content></text>
+  <last-change-date>2009-10-12T12:00:36.1957860+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.1957860+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:07:09.1856230+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>885</width>
+  <height>783</height>
+  <x>2</x>
+  <y>60</y>
+  <open-on-startup>False</open-on-startup>
+</note>

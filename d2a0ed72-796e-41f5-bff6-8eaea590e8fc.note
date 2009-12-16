@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Скелет головы</title>
+  <text xml:space="preserve"><note-content version="0.1">Скелет головы
+
+<bold>Кости черепа</bold>: лобная, теменная, затылочная, височная, клиновидная (небольшая вставка между височной и глазом), решетчатая
+
+<bold>Кости лицевого отдела</bold>: верхняя челюсть (достаточно большая - в нее входит и нос), слезная, скуловая, небная, нижняя челюсть, носовая кость, нижняя носовая раковина, сошник
+
+<bold>Швы черепа</bold>: венечный, ламбовидный....
+
+<italic>Лобная кость</italic> : свод черепа : лобная чешуя
+
+<italic>Черепной указатель</italic> - отношение максимальной ширины мозговой коробки к ее максимальной длине.
+<italic>Акрокефалия - </italic>аномально вытянутая башнеобразная форма головы, вызванная преждевременным зарастанием венечного шва.</note-content></text>
+  <last-change-date>2009-08-12T16:56:57.3134970+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-12T16:56:57.3134970+04:00</last-metadata-change-date>
+  <create-date>2009-08-09T11:16:40.2291790+04:00</create-date>
+  <cursor-position>164</cursor-position>
+  <width>576</width>
+  <height>503</height>
+  <x>68</x>
+  <y>405</y>
+  <open-on-startup>False</open-on-startup>
+</note>

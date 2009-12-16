@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Примонтировать smb ресурс</title>
+  <text xml:space="preserve"><note-content version="0.1">Примонтировать smb ресурс
+
+sudo <link:internal>aptitude</link:internal> install smbfs
+sudo mkdir<link:url> /media/sharename</link:url>
+
+sudo nano<link:url> /etc/nsswitch.conf</link:url>
+search through the file and look for the line that looks something like so:
+hosts: files dns
+and <link:internal>add</link:internal> "<link:internal>wins</link:internal>" to the end of the line so it looks something like this:
+hosts: files <link:internal>wins</link:internal> dns
+
+sudo <link:internal>aptitude</link:internal> install winbind
+
+reboot
+
+sudo mount -t cifs <link:url>//fileserver/Public/Ademidov</link:url> <link:url>/home/ademidov/my_public_folder/</link:url> -o username=ademidov,password=star_id,iocharset=utf8,file_mode=0777,dir_mode=0777
+
+mount -t cifs <link:url>//10.50.1.104/<link:internal>Axapta</link:internal></link:url> <link:url>/root/<link:internal>test</link:internal></link:url><link:url>/</link:url> -o username=ademidov,password=star_id,iocharset=utf8,file_mode=0777,dir_mode=0777</note-content></text>
+  <last-change-date>2009-10-12T12:00:28.6706070+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:28.6706070+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:37:13.9795750+03:00</create-date>
+  <cursor-position>501</cursor-position>
+  <width>768</width>
+  <height>604</height>
+  <x>790</x>
+  <y>271</y>
+  <open-on-startup>False</open-on-startup>
+</note>

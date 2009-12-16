@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>GetElementById</title>
+  <text xml:space="preserve"><note-content version="0.1">GetElementById
+
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "<link:url>http://www.w3.org/TR/html4/strict.dtd</link:url>"&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;title&gt;Search Example&lt;/title&gt;
+    &lt;script type="text/<link:internal>javascript</link:internal>"&gt;
+      function checkSearch()
+      {
+        <link:internal>if</link:internal>(!document.getElementById('search')) { return; }
+        var searchValue = document.getElementById('search').value;
+        <link:internal>if</link:internal>(searchValue == '')
+        {
+           alert('Please enter a search term');
+           return false;
+        }
+        else
+        {
+           return true;
+        }
+      }
+      &lt;/script&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action="sitesearch.php" method="post" onsubmit="return checkSearch();"&gt;
+      &lt;p&gt;
+	&lt;label for="search"&gt;Search the site:&lt;/label&gt;
+	&lt;input type="text" id="search" name="search"/&gt;
+	&lt;input type="submit" value="Search"/&gt;
+      &lt;/p&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.0924660+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.0924660+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:09:20.5380080+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

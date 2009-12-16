@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Архитектура модуля ОС</title>
+  <text xml:space="preserve"><note-content version="0.1">Архитектура модуля ОС
+
+Таблицы
+
+
+
+Классы
+
+RAssetOperationType*
+
+RAssetTrans::createTrans()
+
+RAssetStatusType и его наследники (по наследнику для каждого статуса ОС) - задают набор методов (allow*) которые говорят о том, можно ли с ОС в данном статусе проводить ту или иную операцию (списание, амортизация, продажа).
+RAssetPost... - набор классов участвующих в разноске операций по ОС (как правило черех журнал ОС). Перекрывая методы базового класса наследники добиваются тех или иных действий.
+
+
+RAssetTransType::DisposalSale - <link:internal>Продажа ОС</link:internal> через заказ
+
+RAssetSumCalc и его наследники считают текущие суммы по ОСУ
+
+    rAssetSumTrans   = RAssetSumCalc_Trans::newAssetPeriod(lJournalTrans.AccountNum, lJournalTrans.rassetStandardId, lJournalTrans.transDate);
+    rAssetSumTrans.netBookValue() 
+
+<link:internal>Реализация методов амортизации в с системе</link:internal></note-content></text>
+  <last-change-date>2009-10-17T22:11:00.0478570+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:11:00.0478570+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:31:47.3428260+03:00</create-date>
+  <cursor-position>30</cursor-position>
+  <width>614</width>
+  <height>360</height>
+  <x>870</x>
+  <y>155</y>
+  <open-on-startup>False</open-on-startup>
+</note>

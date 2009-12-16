@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Mnesia</title>
+  <text xml:space="preserve"><note-content version="0.1">Mnesia
+
+<link:internal>Полный пример работы с Mnesia</link:internal>
+
+<bold>Важные моменты из полного примера</bold>
+
+<link:internal>Примеры запросов Mnesia</link:internal>
+<link:internal>Добавление записей в Mnesia</link:internal>
+<link:internal>Удаление записей в Mnesia</link:internal>
+<link:internal>Работа с транзакциями в Mnesia</link:internal>
+<link:internal>Загрузка данных в Mnesia</link:internal>
+<link:internal>Хранение сруктур в Mnesia</link:internal></note-content></text>
+  <last-change-date>2009-04-11T16:54:19.4820470+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-11T16:54:19.4820470+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T15:35:05.1641620+04:00</create-date>
+  <cursor-position>208</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>24</x>
+  <y>83</y>
+  <open-on-startup>False</open-on-startup>
+</note>

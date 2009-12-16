@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>NULL значения в при использовании count</title>
+  <text xml:space="preserve"><note-content version="0.1">NULL значения в при использовании count
+
+<italic>create table t1 (id int, n int)
+
+insert into t1(id) values(1)
+insert into t1(id) values(2)
+insert into t1(id) values(3)
+
+select count(id) from t1
+select count(n) from t1
+select count(*) from t1 </italic>
+
+Вернет:
+
+<italic>3
+0
+3
+</italic></note-content></text>
+  <last-change-date>2009-04-07T22:37:06.6191680+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T22:37:06.6191680+04:00</last-metadata-change-date>
+  <create-date>2009-04-07T22:36:27.4234010+04:00</create-date>
+  <cursor-position>250</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание VendTrans по курсовой</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание VendTrans по курсовой
+
+(<highlight>S) \Classes\CustVendSettle\postExchRateDiff_RU - line 84</highlight>
+(S) \Classes\CustVendSettle\settleNow - line 827
+(S) \<link:internal>Data Dictionary</link:internal>\Maps\CustVendTrans\Methods\updateOffsetVoucher - line 28
+(S) \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\VendTrans\Methods\updateOffsetVoucher - line 7
+(S) \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\VendTrans\Methods\settleTransact - line 39
+
+Здесь:
+     exchTrans - создаваемый vendTrans по курсовой
+     vendTrans - это оригинальная проводка, по которой создавали курсовую
+
+exch.offsetRecId = trans.<link:internal>recId</link:internal>
+exch.paymReference = ?
+accountNum = accountNum
+Invoice = Invoice
+TransType = ExchAdjustment
+AmountMst = дельта
+Dimension = Dimension
+ExchAdjustment = - дельта
+ExchAdjustmentRealized = - дельта
+SettleAmountMST = дельта
+AmountCur = SettleAmountCur = 0 !!!
+LastSettleVoucher = Voucher
+LastSettleDate = TransDate
+RContactCode, RContractAccount = RContactCode, RContractAccount
+
+Потом мы переворачиваем суммы, вставляем запись и обратно их переворачиваем.  :)  -&gt;
+   -&gt; <bold>Здесь же вставляется Settlement
+
+</bold>Потом мы изменяем значения в vendTrans:
+
+exchAdjustmentRealized += дельта
+exchAdjustment += дельта
+settleAmountMST += дельта
+
+<bold>Тут еще могут быть курсовые по налоговой проводке.
+
+</bold>this.postExchRateLedgerTrans() - &gt; <bold>в ГК.</bold>
+
+<bold>Тут еще CustVendTransPostingLog</bold></note-content></text>
+  <last-change-date>2009-10-17T22:10:51.6024100+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.6024100+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T12:04:08.9741919+04:00</create-date>
+  <cursor-position>1154</cursor-position>
+  <width>733</width>
+  <height>546</height>
+  <x>744</x>
+  <y>361</y>
+  <open-on-startup>False</open-on-startup>
+</note>

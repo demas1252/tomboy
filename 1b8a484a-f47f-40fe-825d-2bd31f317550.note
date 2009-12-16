@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример auto_ptr</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример auto_ptr
+
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+
+using namespace std;
+
+int main() {
+  auto_ptr&lt;int&gt; a(new int), b;
+  *a.get() = 123;
+  cout &lt;&lt; "*a.get() = " &lt;&lt; *a.get() &lt;&lt; endl;
+  b = a;
+  cout &lt;&lt; "now :\n";
+  <link:internal>if</link:internal> (a.get() == NULL)
+    cout &lt;&lt; "a.get is NULL\n";
+  cout &lt;&lt; "*b.get() = " &lt;&lt; *b.get() &lt;&lt; endl;
+  return 0;
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.0364800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.0364800+04:00</last-metadata-change-date>
+  <create-date>2009-08-09T08:23:45.0776870+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>840</x>
+  <y>170</y>
+  <open-on-startup>False</open-on-startup>
+</note>

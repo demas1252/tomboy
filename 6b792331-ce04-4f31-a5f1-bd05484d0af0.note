@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Держать запущенным n экземпляров приложения</title>
+  <text xml:space="preserve"><note-content version="0.1">Держать запущенным n экземпляров приложения
+
+import random
+import subprocess
+import sys
+import time
+from <link:internal>itertools</link:internal> import <link:internal>islice</link:internal>
+from functools import <link:internal>partial</link:internal>
+
+PROCESSES = 100
+SIMULTANEOUS = 10
+
+def info(*<link:internal>args</link:internal>):
+
+      print &gt;&gt; sys.stderr, " ".join(str(a) for a in <link:internal>args</link:internal>)
+
+class Process(object):
+
+      def _init_(self, index):
+            self.index = index
+            info("starting process #%d" % index)
+            self.process = subprocess.Popen(["ping", "localhost", "-w", "%d" %
+
+random.randrange(<link:internal>1</link:internal>, 6)])
+
+      def _nonzero_(self):
+            running = self.process.poll() is None
+            <link:internal>if</link:internal> not running:
+                  # XXX ugly side effect
+                  info("process #%d terminated" % self.index)
+            return running
+
+def processes():
+
+      for i in range(PROCESSES):
+            yield <link:internal>partial</link:internal>(Process, i)
+
+def main():
+
+      starters = processes()
+      running = [sp() for sp in <link:internal>islice</link:internal>(starters, SIMULTANEOUS)]
+      while running:
+            before = len(running)
+            running = [p for p in running <link:internal>if</link:internal> p]
+            after = len(running)
+            <link:internal>if</link:internal> before == after:
+                  info("waiting")
+                  time.sleep(<link:internal>1</link:internal>)
+            else:
+                  running.extend(sp() for sp in <link:internal>islice</link:internal>(starters, SIMULTANEOUS -
+
+len(running)))
+
+      info("that's all, folks")
+
+<link:internal>if</link:internal> _name_ == "_main_":
+
+      main()</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.2663650+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.2663650+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:12:05.9074179+03:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

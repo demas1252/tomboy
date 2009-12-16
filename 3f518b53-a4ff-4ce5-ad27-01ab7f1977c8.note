@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>dd</title>
+  <text xml:space="preserve"><note-content version="0.1">dd
+
+<italic>Только зануды делают резервные копии:
+настоящие мужчины просто закачивают все важное на ftp, позволяя остальным отзеркалировать это.
+	Линус Торвальдс</italic>
+
+<link:internal>1</link:internal>. Копирование винчесера на другой рездаел или другой винчестер:
+
+# dd <link:internal>if</link:internal>=/dev/hda conv=sync,noerror bs=64K | gzip -<link:internal>c</link:internal> &gt;<link:url> /mnt/sda1/hda.img.gz</link:url>
+
+2. Удаленно по <link:internal>сети</link:internal> <link:internal>SSH</link:internal>:
+
+# dd <link:internal>if</link:internal>=/dev/hda conv=sync,noerror bs=64K | gzip -<link:internal>c</link:internal> | <link:internal>ssh</link:internal> -<link:internal>c</link:internal> blowfish user@hostname "dd of=hda.img.gz bs=64k"
+
+3. Восстанавливаем данные:
+
+a) # gzip -x<link:url> /mnt/sda1/hda.img.gz</link:url> | dd of=/dev/hda conv=sync,noerror bs=64K 
+б) # dd <link:internal>if</link:internal>=hda.img.gz | <link:internal>ssh</link:internal> -<link:internal>c</link:internal> blowfish user@deadhost "gunzip -<link:internal>c</link:internal> | dd of=/dev/hda<link:internal>1</link:internal> bs=64k
+
+4. Порезать файлы:
+
+dd <link:internal>if</link:internal>=/dev/<link:internal>hdb1</link:internal> | gzip | split -d -b 2G <link:internal>hdb1</link:internal>_img_
+Получатся файлы <link:internal>hdb1</link:internal>_img_0, _<link:internal>1</link:internal>, ...
+
+5. <link:broken>Слить партицию в image</link:broken>
+
+# dd <link:internal>if</link:internal>=/dev/dsk/<link:internal>c</link:internal>4d0s2 of=img.dat</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.0847880+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.0847880+04:00</last-metadata-change-date>
+  <create-date>2008-05-11T09:08:27.8005000+04:00</create-date>
+  <cursor-position>764</cursor-position>
+  <width>789</width>
+  <height>493</height>
+  <x>551</x>
+  <y>308</y>
+  <open-on-startup>False</open-on-startup>
+</note>

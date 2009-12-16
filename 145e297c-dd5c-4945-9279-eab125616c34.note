@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Стоит ли всегда использовать сжатие индекса</title>
+  <text xml:space="preserve"><note-content version="0.1">Стоит ли всегда использовать сжатие индекса
+
+<link:url>http://asktom.oracle.com/pls/asktom/f?p=100:11:0::::P11_QUESTION_ID:1137728800346310680</link:url>
+
+Нет.  Если лидирующие столбцы не содержат достаточного количества повторяющихся значений - индекс может только вырасти после компрессии:
+
+<italic>create table t as select object_name, object_id from all_objects;
+create index t_idx_uncompressed on t(object_id,object_name);
+analyze index t_idx_uncompressed validate structure;
+create table idx_stats as select * from index_stats;
+
+drop index t_idx_uncompressed;
+create index t_idx_compressed on t(object_id,object_name) <bold>compress 1;</bold></italic><italic>
+analyze index t_idx_compressed validate structure;
+insert into idx_stats select * from index_stats;
+
+select name, lf_blks, btree_space, <link:internal>used</link:internal></italic><italic>_space, opt_cmpr_count, 
+opt_cmpr_pctsave from idx_stats;
+
+NAME                              LF_BLKS        BTREE_SPACE  <link:internal>USED</link:internal></italic><italic>_SPACE   OPT_CMPR_COUNT  OPT_CMPR_PCTSAVE
+T_IDX_UNCOMPRESSED                  280     2246908          2007267                0                    0
+T_IDX_COMPRESSED                      323     2589444          2308047                0                   12
+</italic></note-content></text>
+  <last-change-date>2008-09-12T12:37:27.0551860+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-12T12:37:27.0551860+04:00</last-metadata-change-date>
+  <create-date>2008-09-12T12:22:54.5144430+04:00</create-date>
+  <cursor-position>504</cursor-position>
+  <width>966</width>
+  <height>625</height>
+  <x>531</x>
+  <y>147</y>
+  <open-on-startup>False</open-on-startup>
+</note>

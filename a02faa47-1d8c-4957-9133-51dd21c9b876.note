@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Общие методы решения конечных игр</title>
+  <text xml:space="preserve"><note-content version="0.1">Общие методы решения конечных игр
+
+При увеличении m x n - подход не меняется, увеличивается лишь количество вычислений.
+В случае 3 x n - это будет трехмерная пространственная модель.  Далее - сложность возрастает и переходят к аналитическим методам - например, линейному программированию.
+
+Наша оптимальная стратегия обладает свойством:
+
+<italic>p1a11 + p2a21 + .. + pm am1 &gt;= v
+p1a12 + p2a22 + .. + pm am2 &gt;= v
+....
+</italic>
+<bold>f1=p1/v, .... -&gt;</bold>
+
+<italic>f1a11 +fp2a21 + .. + fm am1 &gt;= 1
+p1a12 + p2a22 + .. + fm am2 &gt;= 1
+....  (1)
+</italic>
+<bold>Так как p1+p2.. = 1</bold>
+
+<italic>f1+f2...=1/v</italic> (2)
+
+-&gt; наша задача найт f1...fm, удовлетворяющие условиям (1), так, чтобы сумма Ф=f1..fm была бы минимальной (так как в этом случае выигрыш максимальный (2)).
+
+А это классическая задача линейного программирования.
+</note-content></text>
+  <last-change-date>2009-09-01T11:24:26.2562500+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-01T11:24:26.2562500+04:00</last-metadata-change-date>
+  <create-date>2009-09-01T11:13:13.6905090+04:00</create-date>
+  <cursor-position>696</cursor-position>
+  <width>641</width>
+  <height>507</height>
+  <x>959</x>
+  <y>190</y>
+  <open-on-startup>False</open-on-startup>
+</note>

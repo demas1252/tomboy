@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработать изменения на листе</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработать изменения на листе
+
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+  
+  With Target.Interior
+    .Pattern = xlSolid
+    .PatternColorIndex = xlAutomatic
+    .Color = 65535
+    .TintAndShade = 0
+    .PatternTintAndShade = 0
+  End With
+  
+  <link:internal>If</link:internal> Target.Column &lt;&gt; <link:internal>1</link:internal> Then Exit Sub
+  Target.Offset(, <link:internal>1</link:internal>) = Time
+  
+End Sub
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.0163130+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.0163130+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:01:16.2139460+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Gnome</title>
+  <text xml:space="preserve"><note-content version="0.1">Gnome
+
+<link:internal>gnome-menu</link:internal>
+<link:internal>Поменять иконку в gnome меню</link:internal>
+<link:internal>Сменить тему иконок</link:internal>
+
+gconf-editor
+
+Горячие клавиши
+
+Alt-F2 - Run 
+
+gconftool -t boolean -s<link:url> /desktop/gnome/interface/can_change_accels</link:url> 1
+echo <link:internal>gtk</link:internal>-can-change-accels = 1 &gt;&gt; <link:url>~/.gtkrc-2.0</link:url>
+
+Как поменять в Gnome местами кнопки OK и Cancel?
+
+В <link:url>~/.gtkrc-2.0</link:url> прописать <link:internal>gtk</link:internal>-alternative-button-order=1
+
+Как запустить <link:internal>GTK</link:internal> приложение с определенной темой?
+
+Например так: 
+user@<link:internal>linux</link:internal>:~$ <link:internal>GTK</link:internal>2_RC_FILES=/usr/share/themes/Glider/<link:internal>gtk</link:internal>-2.0/gtkrc gedit
+
+<link:internal>galago</link:internal>
+<link:internal>telepathy</link:internal>
+<link:internal>f-spot</link:internal>
+
+Q: Where to start?
+
+A: Yeah, that's right, it takes months to start being familiar with the whole code base... So developers marked <link:broken>some</link:broken> bugs as gnome-love (<link:url>http://live.gnome.org/GnomeLove</link:url>) (now they appears with a cute red heart in the bugzilla list). Those bugs should be suitable for new developers. Most of them will require few hours to be completed. Looks like a good starting point, no?
+
+For those bugs, developers will try to be as helpful as possible, provide reviews, and commit them as soon as the code is right enough. Choose your bug from the list (<link:url>http://bugzilla.gnome.org/reports/keyword-search.cgi?product=<link:internal>f-spot</link:internal></link:url><link:url>&amp;keyword=gnome-love</link:url>)!
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.3473810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.3473810+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:58:20.2649360+03:00</create-date>
+  <cursor-position>223</cursor-position>
+  <width>618</width>
+  <height>561</height>
+  <x>136</x>
+  <y>269</y>
+  <open-on-startup>False</open-on-startup>
+</note>

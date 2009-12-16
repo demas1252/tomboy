@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>awk</title>
+  <text xml:space="preserve"><note-content version="0.1">awk
+
+Входной поток - список записей. 
+Новая строка - новая запись.
+Пробел/табуляция - новое поле.
+
+<italic>Примеры:</italic>
+<list><list-item dir="ltr">"Hello world!":</list-item></list>
+		BEGIN{print "Hello world!"; exit; }
+<list><list-item dir="ltr">Печать длины самой длинной строки:</list-item></list>
+		{<link:internal>if</link:internal>(length($0)&gt;max) max=length($0)}
+		END {print max}
+<list><list-item dir="ltr">Печать всех строк длиннее 80 символов:</list-item></list>
+		length($0)&gt;80
+<list><list-item dir="ltr">Печать всех строк, имеющих хотя бы одно поле:</list-item></list>
+		NF&gt;0
+<list><list-item dir="ltr">Печать кол-ва строк в файле:</list-item></list>
+		END{print NR}
+<list><list-item dir="ltr">Печать строк, номера которых кратны 3:</list-item></list>
+		NR%3==0
+
+<list><list-item dir="ltr">$ awk '/до/ {print("Привет!")}' file </list-item></list>
+		Для всех строк, где есть 'до' выведет 'Привет!' .
+
+$0 - вся строка; $<link:internal>1</link:internal>-n - поля
+$awk -F&lt;разделитель&gt; '' file
+$awk -f awk_program file
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.9040170+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.9040170+04:00</last-metadata-change-date>
+  <create-date>2008-05-04T18:30:45.8726969+04:00</create-date>
+  <cursor-position>200</cursor-position>
+  <width>424</width>
+  <height>593</height>
+  <x>1244</x>
+  <y>422</y>
+  <open-on-startup>False</open-on-startup>
+</note>

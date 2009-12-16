@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Трассировка любой сессии</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Трассировка</link:internal> любой сессии
+
+      Здесь чуть сложнее по сравнению с <link:internal>Трассировка своей сессии</link:internal>.
+      После alter session надо сделать следующее:
+
+    * нам нужны sid и serial# сессии
+      select sid,serial# from v$session where &lt;тут по одному из полей надо вытянуть сессию&gt;
+    * теперь включаем трассировку
+      begin
+      sys.dbms_system.set_ev(sid, serial#, 10046, 12, '');
+      end;
+
+      12 - максимальный уровень трассировки (<link:internal>1</link:internal> - стандартный, 0 - выключить)</note-content></text>
+  <last-change-date>2009-09-24T14:37:02.1679980+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.1679980+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:54:21.0215558+03:00</create-date>
+  <cursor-position>142</cursor-position>
+  <width>980</width>
+  <height>563</height>
+  <x>644</x>
+  <y>66</y>
+  <open-on-startup>False</open-on-startup>
+</note>

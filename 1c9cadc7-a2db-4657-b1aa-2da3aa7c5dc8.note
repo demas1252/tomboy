@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>The tense system</title>
+  <text xml:space="preserve"><note-content version="0.1">The tense system
+
+<bold>The simple aspect</bold>
+
+<link:internal>1</link:internal>. The simple aspect describes an action that is seen to be complete.  The action is viewed as a whole unit.
+
+<italic>The sun <bold>rises</bold></italic><italic> in the east. (= all time)
+When I<bold>'ve read </bold></italic><italic>the book, I'll lend it to you. (= complete)	
+She <bold>has</bold></italic><italic> red hair. (= permanent)
+He always <bold>wore</bold></italic><italic> a suit. (= a habit)
+It <bold>rained</bold></italic><italic> every day of our <link:internal>holiday</link:internal></italic><italic>. (= the whole two weeks)
+This shop <bold>will close</bold></italic><italic> at 7.00 this evening. (= a fact)
+</italic>
+2. The verbs that rarely take the continuous.
+
+<italic>Verbs of the mind: know understand believe think mean
+Verbs of emotions: love hate like prefer care
+Verbs of posession: have own belong
+Certain <link:internal>other</link:internal></italic><italic> verbs: cost need contain depend
+</italic>
+3. The simple aspect expresses a completed action. For this reason we must use the smple, not the continuous, <link:internal>if</link:internal> the sentence contains a number that refers to 'things done'.
+
+<italic>She'<bold>s written three</bold></italic><italic> letters this morning.
+I <bold>drink ten cups</bold></italic><italic> of a tea a day.
+He <bold>read five</bold></italic><italic> books while he was on <link:internal>holiday</link:internal></italic><italic>.</italic>
+
+<bold>The continuous aspect</bold>
+
+<link:internal>1</link:internal>. The sontinuous aspect focuses on the duration of an activity.  We are aware of the passing of time between the beginning ad the end of the activity. The activity is not permanent.
+
+<italic>I<bold>'m staying</bold></italic><italic> with friends until I <link:internal>find</link:internal></italic><italic> a flat. (= temporary)
+What <bold>are</bold></italic><italic> you <bold>doing</bold></italic><italic> on your hands and knees? (= in progress)
+I'<bold>ve been learning </bold></italic><italic><link:internal>English</link:internal></italic><italic> for years. (And I still am)
+Don't phone at 8.00. We<bold>'ll be eating</bold></italic><italic>. (= in progress)</italic>
+
+2. Because the activity is seen in progress, it can be interrupted.
+
+<italic>We <bold>were walking</bold></italic><italic> across a field when we were attacked by a bull.
+'<bold>Am I disturbing </bold></italic><italic>you?' 'No. I'<bold>m </bold></italic><italic>just <bold>doing</bold></italic><italic> the ironing.'
+</italic>
+3. The activity may not be complete.
+
+<italic>I <bold>was writing</bold></italic><italic> a report on the flight home. (I didn't finish it.)
+He <bold>was drowing</bold></italic><italic>, but we saved him. (He didn't die)
+Who'<bold>s been drinkig</bold></italic><italic> my beer? (There's <link:broken>some</link:broken></italic><italic> left.)
+</italic>
+4. The action of <link:broken>some</link:broken> verbs, by difinition, lasts a long time, for example, <italic>live, work, play</italic>.  The contnuous gives these actions limited duration and makes them temporary.
+
+<italic>Hans <bold>is living</bold></italic><italic> in London while he<bold>'s learning</bold></italic><italic> <link:internal>English</link:internal></italic><italic>.
+I<bold>'m working</bold></italic><italic> as a waiter until I go to university.
+Henman <bold>has been playing</bold></italic><italic> well recently. Maybe he'll win Wimbledon.
+</italic>
+5. The action of <link:broken>some</link:broken> <link:internal>other</link:internal> verbs lasts a short time, for example,<italic> lose, break, cut, hit, crash</italic>.  They are often found in the simple.
+
+<italic>I <bold>lost</bold></italic><italic> all my money.
+She'<bold>s cut</bold></italic><italic> her finger.
+
+</italic>In the continuous, the action of these verbs seems longer or habital.
+
+<italic>I<bold>'ve been cutting</bold></italic><italic> the grass. (= for hours)
+He <bold>was hitting </bold></italic><italic><link:internal>me</link:internal></italic><italic>. (= again and again)
+</italic>
+<bold>The perfect aspect</bold>
+
+<link:internal>1</link:internal>. The action is completed before <link:internal>another</link:internal> time.
+
+<bold><italic>Have</italic></bold><italic> you ever <bold>been</bold></italic><italic> to America? (= <link:broken>some</link:broken></italic><italic> time before now)
+When I arrived, Peter <bold>had left</bold></italic><italic>. (= <link:broken>some</link:broken></italic><italic> time before I arrived)
+I<bold>'ll have finished</bold></italic><italic> the report by 10.00. (= <link:broken>some</link:broken></italic><italic> time before then)
+
+</italic>2. The exact time of the verb action is not important. The perfect aspect refers to indefinite time.
+
+<bold><italic>Have</italic></bold><italic> you <bold>seen</bold></italic><italic> my wallet anywhere? I've lost it. (= before now)
+We<bold>'ll have arrived </bold></italic><italic>by this evening. (= before the evening)
+</italic>
+exception - past perfect
+
+<italic>I recognized him immediately. I <bold>had met</bold></italic><italic> him<bold> in 1992</bold></italic><italic> at uiversity.
+</italic>
+
+
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:52.0963310+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.0963310+04:00</last-metadata-change-date>
+  <create-date>2008-05-11T18:05:52.7834770+04:00</create-date>
+  <cursor-position>2530</cursor-position>
+  <width>630</width>
+  <height>582</height>
+  <x>106</x>
+  <y>254</y>
+  <tags>
+    <tag>system:notebook:English</tag>
+  </tags>
+  <open-on-startup>False</open-on-startup>
+</note>

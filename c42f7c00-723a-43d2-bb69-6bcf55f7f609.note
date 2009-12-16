@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Скопировать группу пользователей и ограничить ей права</title>
+  <text xml:space="preserve"><note-content version="0.1">Скопировать группу пользователей и ограничить ей права
+
+<italic>static void SYS_CopyUserGroup(<link:internal>Args</link:internal></italic><italic> _<link:internal>args</link:internal></italic><italic>)
+{
+    UserGroupInfo userGroup;
+    UserGroup groupID;
+    str domain = 'cnt';
+    int i;
+    // source groups
+    container groups=[
+        'DGP_Office', 'DGP_OffAg',
+        'DGP_Expert', 'DGP_Main',
+        'DGP_Inspec', 'DGP_Agent',
+        'DGP_View', 'DGP_Anal'
+    ];
+    // menu items, to restrict access
+    container menuItems = [
+        [menuItemDisplayStr(ASP_AgentDemoList), AccessRecordType::MenuItemDisplay],
+        [menuItemDisplayStr(ASP_Agent), AccessRecordType::MenuItemDisplay],
+        [menuItemDisplayStr(ASP_CreateOnBasis), AccessRecordType::MenuItemDisplay]
+    ];
+    
+    void disableMenuItems(SecurityKeySet _securitySet)
+    {
+        str name;
+        AccessRecordType recordType;
+        int idx;
+        AccessType accessType;
+        for (idx = <link:internal>1</link:internal></italic><italic>; idx &lt;= conLen(menuItems); idx++)
+        {
+            [name, recordType] = conpeek(menuItems, idx);
+            accessType = _securitySet.menuItemAccess(name, recordType);
+            <link:internal>if</link:internal></italic><italic> (accessType!= AccessType::NoAccess)
+            {
+                info(strFmt('%<link:internal>1</link:internal></italic><italic>:%2, %3', name, recordType, accessType));
+                _securitySet.menuItemAccess(name, recordType, AccessType::NoAccess);
+            }
+        }
+    }
+ 
+    void processGroup(UserGroupInfo _group)
+    {
+        UserGroupInfo localGroup;
+        SecurityKeySet securitySet = SysSecurity::constructSecurityKeySet();
+    ;
+        setPrefix(_group.caption());
+        // make a new ID
+        localGroup.Id = strReplace(_group.Id, 'DGP_', 'DMS_');
+        info(localGroup.Id);
+        // make a new name
+        localGroup.name = _group.name + ' (<link:broken>some</link:broken></italic><italic> suffix)';
+        localGroup.insert();        
+        securitySet.loadGroupRights(_group.Id, domain);
+        disableMenuItems(securitySet);
+        xAccessRightsList::saveSecurityRights(securitySet.pack(), localGroup.Id, domain);
+    }
+;
+    setPrefix("Copy groups");
+    for (i=<link:internal>1</link:internal></italic><italic>; i&lt;=conLen(groups); i++)
+    {
+        groupID = conPeek(groups, i);
+        select userGroup where userGroup.Id == groupID;
+        <link:internal>if</link:internal></italic><italic> (userGroup)
+            processGroup(userGroup);
+        else
+            warning('!found');
+    }
+    info('ok');
+}
+
+</italic></note-content></text>
+  <last-change-date>2009-11-23T13:19:49.7497660+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.7497660+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:20:21.9056520+03:00</create-date>
+  <cursor-position>2241</cursor-position>
+  <width>952</width>
+  <height>761</height>
+  <x>303</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

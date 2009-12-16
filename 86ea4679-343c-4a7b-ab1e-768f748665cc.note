@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример использования rescue</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример использования rescue
+
+@esmtp = true
+begin
+	<link:internal>if</link:internal> @esmtp then
+		@<link:internal>command</link:internal>.ehlo(helodom)
+	else
+		@<link:internal>command</link:internal>.hel(helodom)
+	end
+
+	rescue ProtocolError
+		<link:internal>if</link:internal> @esmtp then
+			@esmtp = false
+			retry
+		else
+			raise
+		end
+end
+
+То есть, мы сначала пытаемся использовать одну версию протокола, а если обламываемся - пробуем с другой.</note-content></text>
+  <last-change-date>2009-04-26T09:58:13.1024690+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-26T09:58:13.1024690+04:00</last-metadata-change-date>
+  <create-date>2009-04-26T09:55:53.4909210+04:00</create-date>
+  <cursor-position>169</cursor-position>
+  <width>569</width>
+  <height>447</height>
+  <x>309</x>
+  <y>394</y>
+  <open-on-startup>False</open-on-startup>
+</note>

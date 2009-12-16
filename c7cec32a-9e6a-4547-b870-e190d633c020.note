@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск в ширину</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск в ширину
+
+<bold>breadth-first search</bold>
+
+Метод обхода и разметки вершин графа.
+
+Началу обхода s приписывается метка 0, смежным с ней вершинам — метка 1. Затем поочередно рассматривается окружение всех вершин с метками 1, и каждой из входящих в эти окружения вершин приписываем метку 2 и т. д.
+
+Дерево - слева-направо:
+                           9
+                  5       10
+        2        6
+
+1      3
+
+        4        7        11
+                            12
+                  8
+
+<link:internal>Реализация поиска в ширину на Python</link:internal></note-content></text>
+  <last-change-date>2009-04-09T12:21:14.9781170+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-09T12:21:14.9781170+04:00</last-metadata-change-date>
+  <create-date>2009-04-09T12:16:54.1300780+04:00</create-date>
+  <cursor-position>16</cursor-position>
+  <width>841</width>
+  <height>529</height>
+  <x>260</x>
+  <y>98</y>
+  <open-on-startup>False</open-on-startup>
+</note>

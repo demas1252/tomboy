@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа из Erlang c двоичными данными</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа из Erlang c двоичными данными
+
+<italic>-module(checksum).
+-export([checksum/1, <link:internal>test</link:internal></italic><italic>/0]).
+
+<link:internal>test</link:internal></italic><italic>()-&gt;
+    checksum(&lt;&lt;10, 20, 30, 40, 50, 60, 70, 80, 90&gt;&gt;).
+
+checksum(Binary)-&gt;
+    checksum(Binary, 0).
+
+checksum(&lt;&lt;&gt;&gt;, Csum)-&gt;
+    Csum;
+checksum(&lt;&lt;N, Rest/binary&gt;&gt;, Csum)-&gt;
+    checksum(Rest, Csum bxor N).
+</italic>
+</note-content></text>
+  <last-change-date>2009-04-07T13:48:54.8397090+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T13:48:54.8397090+04:00</last-metadata-change-date>
+  <create-date>2009-04-07T13:48:33.4818070+04:00</create-date>
+  <cursor-position>196</cursor-position>
+  <width>467</width>
+  <height>411</height>
+  <x>59</x>
+  <y>87</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сторно vs реверс</title>
+  <text xml:space="preserve"><note-content version="0.1">Сторно vs реверс
+
+<link:url>http://axforum.info/forums/showthread.php?p=210151#post210151</link:url>
+
+Аксапта поддерживает оба. Причем еще нелокализованная.
+Аксапта может и реверсировать, и сторнировать (красное сторно).
+
+<bold>Реверс</bold> - это обратный оборот: был дебет, стал кредит.
+<bold>Сторно</bold> - это минус тот же оборот: был дебет, стал минус дебет.
+
+Теперь посмотрим в стандартный функционал, который получает Сальдо.
+Аксапта может получить:
+= сводное сальдо (дебет минус кредит)
+= сводный оборот (дебет минус кредит)
+= отдельно дебетовый оборот (дебет минус сторно дебета)
+= отдельно кредитовый оборот (кредит минус сторно кредита)
+
+В 4-ке появилась таблица TransactionReversalTrans, но на просмотренных мною базах она вроде пуста</note-content></text>
+  <last-change-date>2009-10-17T21:28:27.5987810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T21:28:27.5987810+04:00</last-metadata-change-date>
+  <create-date>2009-10-17T21:05:54.3721140+04:00</create-date>
+  <cursor-position>317</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>906</x>
+  <y>355</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разноска в ГК и корреспонденция</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Разноска в ГК</link:internal> и корреспонденция
+
+   
+     *Что такое ваучер?*
+     
+     Это некий идентификатор хозоперации, который позволяет связать проведенные документы с записями в регистрах и в главной книге.
+    
+     *Таблица проводок*
+          <link:internal>LedgerTrans</link:internal>
+     
+     <link:internal>1</link:internal>) В общем то система позволяет по одному ваучеру создать несколько проводок с разными данными. Например, задать задание ваучера вручную и вбить в журнал несколько строк с одним ваучером, но разными датами. Но реально не используется.
+     2) Дата и номер исходного документа нужны, скорее, для удобства бухгалтера, чем для работы самой системы. 
+     3) Поле количество заполняется достаточно редко. Насколько я понимаю – это некий рудимент идеи, в соответствии с которой те организации, которые не купили модуль логистики все-таки могут вести количественный учет с помощью КОЛИЧЕСТВЕННЫХ оборотов по главной книге. Реально идея не прижилась. Насколько я помню, это поле заполняется только для постингов по модулю проектов.
+     4) Флажок correct реверсирует логику проставления признака проставления crediting. Для обычных постингов этот флажок ставиться для при отрицательной сумме; Для сторнирующих постингов – при положительной.
+     5) Зона учета - <link:internal>PeriodCode</link:internal>
+    
+     *LedgerBalancesTrans и ledgerBalancesDimTrans*
+     
+     Для быстрого подсчета оборотов по счету за период и обновляются при добавлении данных в <link:internal>ledgerTrans</link:internal>. В них лежит номер счета (или номер счета и аналитика), дата и сумма различных оборотов по дебету и кредиту данного счета. Более интересным является использование поля <link:internal>LedgerBalancesVariant</link:internal>. 
+    
+     *API для создания постингов*
+     
+     <link:internal>LedgerVoucherObject</link:internal> – это класс инкапсулирующий ваучер, 
+     <link:internal>LedgerVoucherTransObject</link:internal> – это класс, который инкапсулирует один постинг; 
+     а <link:internal>LedgerVoucher</link:internal> – это несколько загадочный класс, которы инкапсулирует несколько ваучеров. Зачем нужен последний класс – я не совсем понял; В версии 2.<link:internal>1</link:internal> и 2.5 его аналогов не было. Возможно – разработчики решили сделать его как некую как-бы транзакционную обертку, которая позволяет создавать несколько взаимосвязанных ваучеров одной операцией – так чтобы они либо все попали в таблицу <link:internal>LedgerTrans</link:internal>, либо все не попали.
+     
+     Теперь немного о том как всем этим пользоваться:
+
+     <link:internal>1</link:internal>. Создаем объект типа <link:internal>LedgerVoucher</link:internal>.
+     2. Создаем объект типа <link:internal>LedgerVoucherObject</link:internal> и добавляем его к объекту <link:internal>LedgerVoucher</link:internal> методом addVoucher()
+     3. Создаем нужное количество классов <link:internal>LedgerVoucherTransObject</link:internal>, и добавляем каждый из них к объекту <link:internal>LedgerVoucherObject</link:internal> методом addTrans().
+     4. Вызываем метод end() класса <link:internal>LedgerVoucher</link:internal>. При этом проводки сталкиваются из структур в памяти в обычную таблицу постингов.
+
+     Некоторое примечание. В принципе – можно добавлять объекты <link:internal>LedgerVoucherTransObject</link:internal> напрямую к объекту ;edgerVoucher, с помощью метода addTrans. В этом случае, система сама найдет (или создаст) объект <link:internal>LedgerVoucherObject</link:internal> внутри данного <link:internal>LedgerVoucher</link:internal> и затем добавит к нему объект <link:internal>LedgerVoucherTransObject</link:internal>. Мне, правда, вариант с ручным созданием <link:internal>LedgerVoucherObject</link:internal> нравится больше, поскольку этот объект нам все равно понадобится для работу с корреспонденцией.
+    
+     *Примечания*
+     
+     <link:internal>1</link:internal>) Существует [<link:internal>два уровня детализации разноски в ГК</link:internal>] “Детально” и “Сводка”. 
+     2) [<link:internal>Округления при разноске в ГК</link:internal>]
+     3) [<link:internal>Проверка ошибок при разноске в ГК</link:internal>]
+    
+     *Корреспонденция*
+    
+     Прежде чем говорить о проблеме корреспонденции счетов, которую я так старательно избегал в предыдущем изложении, давайте посмотрим на то [<link:internal>как постинги в ГК и записи в регистры создаются например при разноске накладной по заказу</link:internal>], которая выполняется в классе salesForm_letterInvoice:
+
+     [<link:internal>В российской учетной традиции не принято делать сложные проводки</link:internal>]. Попробуем представить, что мы занимаемся локализацией DAX и у нас стоит задача [<link:internal>как-то добиться того чтобы все проводки в системе были простыми</link:internal>].
+    
+         *Небольшое оступление*
+         [<link:internal>Открывающие и закрывающие периоды</link:internal>] 
+     
+     Процедурой корреспондирования счетов называется процедура, которая:
+         <link:internal>1</link:internal>. Расщепляет постинги, которым соответствует более одного корреспондирующего постинга
+         2. Связывает друг с другом (например – заполняя какое-то ключевое поле) корреспондирующие друг с другом постинги по дебету и кредиту.
+     
+     В версии 2.5 Sp<link:internal>1</link:internal>HF<link:internal>1</link:internal> был реализован принципиально [<link:internal>новый механизм корреспондирования</link:internal>]. 
+    
+     *API корреспондирования*
+     
+     При разработке новой версии модуля корреспондирования, разработчики решили постараться по минимуму модифицировать стандартные международные классы <link:internal>LedgerVoucher</link:internal>, <link:internal>LedgerVoucherObject</link:internal> и <link:internal>LedgerVoucherTransObject</link:internal>. Большая часть самого кода корреспондирования находится в классе LedgerBondServer_ru, методы которого активно вызываются внутренними методами классов разноски в ГК. Тем не менее – методы этого класса не предназначены для вызова прикладным кодом. Прикладной API представляется методами класса [<link:internal>LedgerBondClient_ru</link:internal>], который инкапуслирует обращения к внутренней логике системы корреспондирования.
+
+
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.1267960+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.1267960+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:17:49.2289670+03:00</create-date>
+  <cursor-position>1196</cursor-position>
+  <width>1050</width>
+  <height>736</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

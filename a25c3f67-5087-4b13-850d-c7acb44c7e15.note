@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование блоков в Ruby для транзакционности</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование блоков в Ruby для транзакционности
+
+Например, чтобы гарантировать закрытие файла:
+
+class File
+   def File.open_and_process(*<link:internal>args</link:internal>)
+     f = File.open(*<link:internal>args</link:internal>)
+     yield f
+     f.close()
+   end
+end
+
+File.open_and_process("file", "r") do |file|
+  while line = file.gets
+   puts line
+  end
+end
+</note-content></text>
+  <last-change-date>2009-06-15T16:23:14.5092200+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-15T16:23:14.5092200+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:39:43.1179030+03:00</create-date>
+  <cursor-position>83</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

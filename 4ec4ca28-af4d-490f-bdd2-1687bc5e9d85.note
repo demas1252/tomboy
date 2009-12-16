@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Маленькие буквы при работе с Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Маленькие буквы при работе с Oracle
+
+
+&lt;&lt;pre
+static void <link:internal>Test</link:internal>_OracleGroupBy(<link:internal>Args</link:internal> _<link:internal>args</link:internal>)
+{
+    EmplTable   emplTable;
+    ;
+
+    while select Name from emplTable // просто или order by Name
+    {
+        info(emplTable.Name); // Иванов Иван Иванович
+    }
+
+    while select Name from emplTable GROUP BY Name
+    {
+        info(emplTable.Name); // иванов иван иванович
+    }
+}
+
+&gt;&gt;
+
+[author: fed]
+
++<link:internal>1</link:internal> - это <link:internal>Oracle</link:internal>. Подноготная всего этого такова: В Аксапте все сравнения строк и <link:internal>сортировки</link:internal> по определению case insensitive. В <link:internal>MS SQL</link:internal> этот эффект достигается установкой case-insensitive кодовой страницы БД. В <link:internal>Oracle</link:internal> аналогичной функциональности долгое время не было (хотя, говорят,в 10 версии что-то появилось). Поэтому в старых версиях Аксапты (2.<link:internal>1</link:internal>,2.5) при записи в любое поле, которое было включено в индекс, данные переводились в нижний регистр, что изрядно нервировало пользователей (Как-то неприятно когда ФИО в emplId пишется и выводится на экран в нижнем регистре) . Поэтому начиная с версии Аксапта 3.0 (которая работала с ораклом 9 и выше, в котором уже можно было строить индекс не по полю, а по функции от поля), при указании в запросе сравнения по строчному полю или <link:internal>сортировки</link:internal>/группировки по таковому, поле заключается в функцию NLS_LOWER. Кроме того, при построении индексов, вместо строчных полей туда включается значение NLS_LOWER от поля. Таким образом - в большинстве случаев, в отличие от старых версий Аксапты, для пользователя незаметны внутренние махинации системы с регистром. Единственное исключение - как раз группировка. Ведь если мы сгруппировали по NLS_LOWER(emplId), то в списке полей в select мы тоже должны указать NLS_LOWER(emplId), поскольку в список полей агреггирующего запроса можно включать только значения выражений группировки и агрегатные функции. Поэтому, если строчное поле включено в список группировки, то и в списке группировки и в список полей в запросе оно включается с помощью NLS_LOWER()</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.1722710+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.1722710+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:38:25.9243220+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

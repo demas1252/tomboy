@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вставка сразу в несколько таблиц</title>
+  <text xml:space="preserve"><note-content version="0.1">Вставка сразу в несколько таблиц
+
+Multi table insert
+
+create table TAB<link:internal>1</link:internal> (COL<link:internal>1</link:internal> NUMBER(30), COL2 NUMBER(30) );
+Table created.
+
+create table TAB2 (COL3 NUMBER(30), COL4 DATE);
+Table created.
+
+CREATE SEQUENCE <link:internal>TEST</link:internal>_SEQ INCREMENT BY <link:internal>1</link:internal>;
+Sequence created.
+
+insert
+when <link:internal>mod</link:internal>( object_id, 2 ) = <link:internal>1</link:internal> then
+into TAB<link:internal>1</link:internal> ( COL<link:internal>1</link:internal>, COL2 ) values ( <link:internal>test</link:internal>_seq.nextval, object_id )
+when <link:internal>mod</link:internal>( object_id, 2 ) = 0 then
+into TAB2 ( COL3, COL4 ) values ( <link:internal>test</link:internal>_seq.nextval, created )
+select object_id, created from all_objects
+/</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.2929390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.2929390+04:00</last-metadata-change-date>
+  <create-date>2008-04-05T19:32:23.3775730+04:00</create-date>
+  <cursor-position>494</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

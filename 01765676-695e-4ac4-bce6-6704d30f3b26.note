@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PKGBUILD для иконок</title>
+  <text xml:space="preserve"><note-content version="0.1">PKGBUILD для иконок
+
+# Maintainer: Maskawanian &lt;<link:url>aur@cryingwolf.org</link:url>&gt;
+
+pkgname=<link:internal>gnome</link:internal>-colours
+pkgver=5.5
+pkgrel=1
+pkgdesc="This is an extensive set of icon themes based on <link:internal>GNOME</link:internal> and Tango, with some inspiration from Human, Tango Generator, Elementary, and <link:internal>other</link:internal> open source projects."
+<link:internal>arch</link:internal>=(any)
+license=('GPL')
+url=('<link:url>http://www.<link:internal>gnome</link:internal></link:url><link:url>-look.org/content/show.php/<link:internal>GNOME</link:internal></link:url><link:url>-colors?content=82562</link:url>')
+source=(
+	<link:url>http://<link:internal>gnome</link:internal></link:url><link:url>-colors.googlecode.com/files/<link:internal>gnome</link:internal></link:url><link:url>-colors-5.5.tar.gz</link:url>
+	)
+md5sums=(
+	905bed4d6d9c1f6bb897586d36b9f118
+	)
+
+build() {
+	mkdir -p ${startdir}/pkg/usr/share/icons || return 1
+	
+	cd ${startdir}/src || return 1
+	cp -r <link:internal>gnome</link:internal>-brave <link:internal>gnome</link:internal>-colors-common <link:internal>gnome</link:internal>-dust <link:internal>gnome</link:internal>-human <link:internal>gnome</link:internal>-illustrious <link:internal>gnome</link:internal>-noble <link:internal>gnome</link:internal>-<link:internal>wine</link:internal> <link:internal>gnome</link:internal>-wise ${startdir}/pkg/usr/share/icons || return 1</note-content></text>
+  <last-change-date>2009-11-08T14:24:31.9595410+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-08T14:24:31.9595410+03:00</last-metadata-change-date>
+  <create-date>2009-11-08T14:24:08.0965320+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>863</width>
+  <height>708</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

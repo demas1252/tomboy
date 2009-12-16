@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>compizconfig-settings-manager</title>
+  <text xml:space="preserve"><note-content version="0.1">compizconfig-settings-manager
+
+Alt + mouse wheel - регулировать прозрачность окна
+
+<link:internal>ADD</link:internal> Helper - Win+P - затемнять неактивные приложения
+Sho mouse - Win+K - подсветить курсор мыши
+Expo Win+E- preview рабочих столов 
+
+<link:internal>Compiz Plugins</link:internal>
+
+Лекарство от розовых теней:
+sudo ln -sf<link:url> /usr/lib/nvidia/libwfb.so.xserver-xorg-core /usr/lib/xorg/modules/libwfb.so</link:url></note-content></text>
+  <last-change-date>2008-10-08T13:08:36.2492320+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-08T13:08:36.2492320+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T23:07:30.1259160+03:00</create-date>
+  <cursor-position>230</cursor-position>
+  <width>618</width>
+  <height>360</height>
+  <x>567</x>
+  <y>429</y>
+  <open-on-startup>False</open-on-startup>
+</note>

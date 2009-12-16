@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Maps and Filters Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Maps and Filters Haskell
+
+largestDivisible :: (Integral a) =&gt; a
+largestDivisible = head (filter p [1000000,999999..])
+                 where p x = x `<link:internal>mod</link:internal>` 3829 == 0
+
+chain :: (Integral a) =&gt; a -&gt; [a]
+chain 1 = [1]
+chain n 
+      | even n = n : chain(n `div` 2)
+      | odd n  = n : chain(n * 3 + 1)
+
+numLongChains :: Int
+numLongChains = length (filter isLong (<link:internal>map</link:internal> chain [1..100]))
+              where isLong xs = length xs &gt; 15</note-content></text>
+  <last-change-date>2009-11-04T19:09:01.9212390+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-04T19:09:01.9212390+03:00</last-metadata-change-date>
+  <create-date>2009-11-04T19:07:29.3168860+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

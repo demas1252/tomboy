@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Массивы структур</title>
+  <text xml:space="preserve"><note-content version="0.1">Массивы структур
+
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+struct key {
+  char *word;
+  int count;
+} keytab[] = {
+  "one", 1,
+  "two", 2,
+  "three", 3
+};
+
+int main(int argc, char *argv[])
+{
+  int n;
+
+  for (n = 0; n &lt; 3; n++) 
+    <link:internal>if</link:internal>(strcmp("three", keytab[n].word) &lt; 0) 
+      keytab[n].count++;
+
+  for (n = 0; n &lt; 3; n++) 
+    printf("%s %d\n", keytab[n].word, keytab[n].count);    
+      
+  return 0;
+}
+
+</note-content></text>
+  <last-change-date>2009-03-24T09:01:10.8851890+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:01:10.8851890+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:01:02.9885550+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

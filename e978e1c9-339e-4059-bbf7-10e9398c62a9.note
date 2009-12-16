@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Арифмитическая прогрессия</title>
+  <text xml:space="preserve"><note-content version="0.1">Арифмитическая прогрессия
+
+
+0 -&gt; 8; 1-&gt;13; 2-&gt;18 ...
+
+*N-ый член*
+
+&lt;&lt;pre
+(define (a-fives n)
+  (cond
+    [(= n 0) 8]
+    [else (+ (a-fives (- n 1)) 5)]
+    ))
+    
+&gt; (a-fives 0)
+8
+&gt; (a-fives 1)
+13
+&gt; (a-fives 2)
+18
+
+&gt;&gt;
+
+*Сумма n-первых членов*
+
+Универсальная функция вычисляющая сумму любой последовательности (n, <link:internal>func</link:internal> -&gt; n):
+
+&lt;&lt;pre
+(define (series n a-term) 
+  (cond 
+    [(= n 0) (a-term n)] 
+    [else (+ (a-term n) (series (- n 1) a-term))])) 
+
+&gt;&gt;
+
+Частная функция a-term, вычисляющая n-ый член:
+&lt;&lt;pre
+(define (a-fives n)
+  (cond
+    [(= n 0) 8]
+    [else (+ (a-fives (- n 1)) 5)]
+    ))
+&gt;&gt;
+
+Основная функция:
+&lt;&lt;pre
+(define (sum-a-fives n)
+  (series n a-fives))
+  
+&gt;&gt;
+
+Пример:
+&lt;&lt;pre
+&gt; (sum-a-fives 0)
+8
+&gt; (sum-a-fives 1)
+21
+&gt; (sum-a-fives 2)
+39
+
+&gt;&gt;
+
+*Получение первых n - членов*
+
+&lt;&lt;pre
+(define (a-fives n)
+  (cond
+    [(= n 0) 8]
+    [else (+ (a-fives (- n 1)) 5)]
+    ))
+    
+(define (create-a-fives n)  
+  (cond
+    [(&lt; n 0) empty]
+    [else (cons (a-fives n) (create-a-fives (- n 1)))
+    ]
+    )
+  )
+
+&gt; (create-a-fives 1)
+(list 13 8)
+&gt; (create-a-fives 2)
+(list 18 13 8)
+&gt; (create-a-fives 0)
+(list 8)
+&gt;&gt;
+</note-content></text>
+  <last-change-date>2008-03-28T23:02:51.7734929+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:02:51.7734929+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:02:42.7984989+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>167</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

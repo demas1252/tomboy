@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>find</title>
+  <text xml:space="preserve"><note-content version="0.1">find
+
+find <link:url>/media/sdb1</link:url> -iname "*deep*
+
+grep substring -R path-to-directory
+
+find /dir -type f | xargs file | <link:internal>awk</link:internal> -F':' '$2 ~ /text/ {print $1}' | xargs grep "$text"</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.0808280+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.0808280+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T19:24:18.1347560+04:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>506</width>
+  <height>360</height>
+  <x>723</x>
+  <y>527</y>
+  <tags>
+    <tag>system:notebook:Linux</tag>
+  </tags>
+  <open-on-startup>False</open-on-startup>
+</note>

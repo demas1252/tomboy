@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CustVendTransPostingLog_RU</title>
+  <text xml:space="preserve"><note-content version="0.1">CustVendTransPostingLog_RU
+
+
+16:29 adem: а зачем нужен CustVendTransPostingLog_RU?   
+16:29 adem: есть же VendTrans   
+16:29 fed: ну первоначально это была такая помойка   
+16:29 fed: куда складывались проводки в ГК по сопоставлению   
+16:29 fed: изначально идиотская идея   
+16:29 fed: но потом эти московские гиганты мысли   
+16:29 fed: вместо того чтобы вводить понятие оплаченного налога с движениями по taxTrans как я им советовал   
+16:30 fed: решили косвенным образом из этой помойки собирать данные по оплаченным налогам   
+16:31 adem: оплаченные налоги == налоги, которые мы уже заплотили в налоговый орган ?   
+16:31 fed: нет   
+16:31 fed: это налоги по накладным   
+16:31 fed: которые либо мы либо нам уже оплатили   
+16:31 fed: после реформы НДС с нового года и перехода на политику по отгрзке   
+16:31 adem: это НДС, который нам уже возместили ?   
+16:31 fed: все это вообще не имеет смысла   
+16:32 fed: нет   
+16:32 fed: это просто произведение суммы оплаты накладной на сумму налога по накладной   
+16:32 fed: в первом приближении   
+
+Похоже, что это НДС по тем накладным, по которым была оплата.</note-content></text>
+  <last-change-date>2008-03-28T22:04:15.2339300+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:04:15.2339300+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:04:10.3000440+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

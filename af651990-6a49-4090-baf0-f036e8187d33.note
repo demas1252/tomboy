@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проблемы Аксапты со шрифтами</title>
+  <text xml:space="preserve"><note-content version="0.1">Проблемы Аксапты со шрифтами
+
+*ax4 + vista*
+
+    Обычная админская проблема с локализацией. У Сергея нет проблем, т.к. у него Buiseness версия с русским интерфейсом. А вот для английского интерфейса для версии Buiseness переход на русскую локаль простым способом не получится: нету для этой версии LP. Но зато можно переустановить Vist-у, взяв русскую версию Buiseness, благо валидация ключей одинаковая. Если заморачиваться не хочется, то остаемся на английском интерфейсе, ставим поддержку русского языка и читаем все про решение "кракозябр" в английских версиях W2K и W2K3.</note-content></text>
+  <last-change-date>2008-03-26T22:20:56.0347939+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:20:56.0347939+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:20:55.2512570+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>galago</title>
+  <text xml:space="preserve"><note-content version="0.1">galago
+
+Galago is a desktop presence framework, designed to transmit presence information between programs. To put it in simpler terms, it takes information on who is online and their away/idle states from an instant messenger (such as gaim) or <link:internal>other</link:internal> similar programs and lets <link:internal>other</link:internal> programs (such as Ximian's Evolution) to make use of it.
+
+The advantage of such a framework is that it brings your programs closer together. When you receive an e-mail from a friend who is in your buddy list, you'll be able to immediately tell their online status, for example.
+
+Galago is desktop-neutral, and will in time provide easy to use widgets for <link:internal>Gtk</link:internal>+ and Qt applications. Currently, <link:internal>Gtk</link:internal>+ widgets are available in our <link:internal>Subversion</link:internal> repository under the module name libgalago-<link:internal>gtk</link:internal>. Qt widgets will be available in time.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.0933080+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.0933080+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T15:40:35.6265380+04:00</create-date>
+  <cursor-position>328</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>11</x>
+  <y>97</y>
+  <open-on-startup>False</open-on-startup>
+</note>

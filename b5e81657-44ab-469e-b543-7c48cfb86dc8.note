@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>AJAX</title>
+  <text xml:space="preserve"><note-content version="0.1">AJAX
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Customer Data Screen&lt;/title&gt;
+    
+    &lt;script type="text/<link:internal>JavaScript</link:internal>"&gt;
+      var xhr;
+      
+      function getZipData(zipCode) {
+      xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = processZipData;
+      xhr.open("GET", "rool");
+      xhr.send(null);
+      }
+
+      function processZipData() {
+      <link:internal>if</link:internal>(xhr.readyState == 4) {
+      var data = xhr.responseText;
+      var cityState = data.split(',');
+      document.<link:internal>getElementById</link:internal>("city").value = cityState[0];
+      document.<link:internal>getElementById</link:internal>("state").value = cityState[1];
+      }
+      }
+    &lt;/script&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; Corporate CRM System &lt;/h1&gt;
+    &lt;h2&gt; Enter Customer Data &lt;/h2&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+	&lt;th&gt;Customer Name:&lt;/th&gt;
+	&lt;td&gt;&lt;input type="text" name="name"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+	&lt;th&gt;Address:&lt;/th&gt;
+	&lt;td&gt;&lt;input type="text" name="address"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+	&lt;th&gt;City:&lt;/th&gt;
+	&lt;td&gt;&lt;input type="text" name="city" id="city"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+	&lt;th&gt;State:&lt;/th&gt;
+	&lt;td&gt;&lt;input type="text" name="state" id="state"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;      
+      &lt;tr&gt;
+	&lt;th&gt;<link:internal>Zip</link:internal>:&lt;/th&gt;
+	&lt;td&gt;&lt;input onblur="getZipData(this.value)" type="text" name="<link:internal>zip</link:internal>"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+	&lt;th&gt;&lt;/th&gt;
+	&lt;td&gt;&lt;input type="Submit" value="Add Customer"/&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+<bold>Пояснения:</bold>
+
+<list><list-item dir="ltr">когда поле <link:internal>zip</link:internal> теряет фокус, оно запускает на выполнение getZipData
+</list-item><list-item dir="ltr">getZipData обращаетс к любому <link:internal>web</link:internal> ресурсу, причем url веб ресурса может собираться из переданных параметров;  мы же просто обращаемся к локальному файлу
+</list-item><list-item dir="ltr">вычитываем из него два слова, разделенных запятой
+</list-item><list-item dir="ltr">и записываем эти слова в другие поля</list-item></list></note-content></text>
+  <last-change-date>2009-10-12T12:00:22.0315430+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.0315430+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T14:16:56.6276250+04:00</create-date>
+  <cursor-position>1387</cursor-position>
+  <width>809</width>
+  <height>675</height>
+  <x>761</x>
+  <y>188</y>
+  <open-on-startup>False</open-on-startup>
+</note>

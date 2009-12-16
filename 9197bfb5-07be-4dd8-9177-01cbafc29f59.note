@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>curl</title>
+  <text xml:space="preserve"><note-content version="0.1">curl
+
+curl <link:url>www.ya.ru</link:url> - скачать текст стринички
+curl -i <link:url>www.ya.ru</link:url> - показывая заголовки запросов
+curl -I <link:url>www.ya.ru</link:url> - только заголовки запросов
+
+<bold>get</bold>
+
+curl "<link:url>www.hotmail.com/when/junk.cgi?birthyear=1905&amp;press=OK</link:url>"
+
+<bold>post</bold>
+
+curl -d "birthyear=1905&amp;press=%20OK%20" <link:url>www.hotmail.com/when/junk.cgi</link:url>
+
+<bold>put</bold>
+
+curl -T uploadfile <link:url>www.uploadhttp.com/receive.cgi</link:url>
+
+см <link:url>http://curl.haxx.se/docs/httpscripting.html</link:url>
+
+</note-content></text>
+  <last-change-date>2009-07-18T20:05:16.7235050+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-18T20:05:16.7235050+04:00</last-metadata-change-date>
+  <create-date>2009-07-18T19:49:42.2164610+04:00</create-date>
+  <cursor-position>342</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1005</x>
+  <y>384</y>
+  <open-on-startup>False</open-on-startup>
+</note>

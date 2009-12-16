@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Automatic Workload Repository</title>
+  <text xml:space="preserve"><note-content version="0.1">Automatic Workload Repository
+
+Чтобы эта штука работала инициал. параметр STATISTICS_LEVEL должен быть TYPICAL(default) or ALL (не <link:internal>BASIC</link:internal>).
+Проверить: select statistics_name, activation_level from v$statistics_level;
+
+Результатом работы является In-memory statistics(SGA) и AWR Snapshots.
+
+Snapshots
+
+Собираются автоматически и вручную.
+<link:internal>Изменение и просмотр настроек автоматической сборки snaposhots</link:internal>
+<link:internal>Ручной сбор и удаление snapshots</link:internal>
+<link:internal>Получение информации из snapshots</link:internal>
+
+Statistics
+
+<link:internal>Automatic</link:internal> Database Diagnostic Monitor - клиент для достура к этой информации.
+Работает каждый раз, когда делается snapshot.
+Результаты нанализа храняться в Dictionary View и доступны через EM.
+
+<link:internal>Получение ADDM инфомации через Dictionary View</link:internal>
+<link:internal>Изменение параметров ADDM</link:internal>
+
+p.s. Еще можно настроить систему alert-ов, когда какой-либо параметр превышает порог.</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.4011500+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.4011500+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:54:44.4544310+03:00</create-date>
+  <cursor-position>215</cursor-position>
+  <width>623</width>
+  <height>677</height>
+  <x>978</x>
+  <y>311</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Quick Sort in Schema</title>
+  <text xml:space="preserve"><note-content version="0.1">Quick Sort in Schema
+
+<link:internal>1</link:internal>. Берем первый элемент списка (list (first alon))
+2. Формируем еще 2 списка - элементов, которые меньше выбранного, и элементы, которые больше первого.
+3. Для каждого списка вызываем рекурентно quick-sort
+4. Первый список помещаем перед первым элементов, второй - после
+
+&lt;&lt;pre
+;; quick-sort : (listof number) -&gt; (listof number) 
+;; to create a list of numbers with the same numbers as 
+;; alon sorted in ascending order 
+(define (quick-sort alon) 
+  (cond 
+    [(empty? alon) empty] 
+    [(empty? (rest alon) alon]
+    [else (append  
+      (quick-sort (smaller-items alon (first alon)))  
+      (list (first alon))  
+      (quick-sort (larger-items alon (first alon))))])) 
+ 
+;; larger-items : (listof number) number -&gt; (listof number) 
+;; to create a list with all those numbers on alon  
+;; that are larger than threshold 
+(define (larger-items alon threshold) 
+  (cond 
+    [(empty? alon) empty] 
+    [else (<link:internal>if</link:internal> (&gt; (first alon) threshold)  
+        (cons (first alon) (larger-items (rest alon) threshold)) 
+        (larger-items (rest alon) threshold))])) 
+ 
+;; smaller-items : (listof number) number -&gt; (listof number) 
+;; to create a list with all those numbers on alon  
+;; that are smaller than threshold 
+(define (smaller-items alon threshold) 
+  (cond 
+    [(empty? alon) empty] 
+    [else (<link:internal>if</link:internal> (&lt; (first alon) threshold) 
+              (cons 
+               (first alon) 
+               (smaller-items (rest alon) threshold)
+               )
+              (smaller-items (rest alon) threshold))])) 
+&gt;&gt;
+
+Sort is <link:internal>based</link:internal> on structural recursion and qsort is <link:internal>based</link:internal> on generative recursion. ([<link:internal>Сортировка списков</link:internal>])
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.0941700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.0941700+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:03:39.5835069+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>650</width>
+  <height>563</height>
+  <x>125</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

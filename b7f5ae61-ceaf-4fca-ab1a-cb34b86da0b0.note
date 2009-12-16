@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ввод и вывод в Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1">Ввод и вывод в Scheme
+
+<bold>Сериализация данных</bold>
+
+<link:url>http://schemecookbook.org/Cookbook/IdiomSerializeToFile</link:url>
+
+Language: Essential of Programming Languages
+
+<italic>(require (lib "pconvert.ss"))
+
+(define (write-converted data filename)
+  (with-output-to-file filename
+    (<link:internal>lambda</link:internal></italic><italic> ()
+      (write (print-convert data)))
+    'replace))</italic>
+
+<italic>&gt; (define data '(1 2 3 #(a b)))
+&gt; (write-converted data "data.<link:internal>scheme</link:internal></italic><italic>")</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:34.4990390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.4990390+04:00</last-metadata-change-date>
+  <create-date>2008-10-26T14:16:29.4751760+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>832</width>
+  <height>713</height>
+  <x>50</x>
+  <y>92</y>
+  <open-on-startup>False</open-on-startup>
+</note>

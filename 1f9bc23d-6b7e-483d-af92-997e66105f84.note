@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Клетка</title>
+  <text xml:space="preserve"><note-content version="0.1">Клетка
+
+<list><list-item dir="ltr">Два надцарства - прокариоты (предъядерные) и эукариоты (ядерные)
+</list-item><list-item dir="ltr">Состоит из клеточной мембраны, ядра, цитоплазмы
+</list-item><list-item dir="ltr">Ядро хранит генетическую информацию и участвует в синтезе белка
+</list-item><list-item dir="ltr">Эритроциты ядра не имеют
+</list-item><list-item dir="ltr">Ядро заполнено нуклеоплазмой, в которой содержится ядрыко
+</list-item><list-item dir="ltr">Гиалоплазма - основное вещество цитоплазмы. Содержит полисахариды, белки, нуклеидовые кислоты и т.д.
+</list-item><list-item dir="ltr">Митохондрии - энергетические органы клетки. Участвуют в процессах окисления, фосфорилирования.
+</list-item><list-item dir="ltr">Комплекс Гольджи - синтезирует полисахариды. Участвует в выведении продуктов жизнедеятельности клетки наружи.
+</list-item><list-item dir="ltr">Эндоплазмаическая сеть - синтез белка.
+</list-item><list-item dir="ltr">Рибосомы - биосинтез белка из аминокислот на основе генетической информации предоставляемой ДНК
+</list-item><list-item dir="ltr">Клетка размножается путем деления: митоз (непрямое деление); амитоз (прямое деление).  Особый вид - мейоз - уменьшение вдвое числа хромосом.
+</list-item><list-item dir="ltr"><link:internal>Вирусы</link:internal> не состоят из клеток (неклеточная форма жизни)</list-item></list>
+
+TODO: после доразбираться по wikipedia</note-content></text>
+  <last-change-date>2009-08-08T12:19:49.6148460+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-08T12:19:49.6148460+04:00</last-metadata-change-date>
+  <create-date>2009-08-03T17:01:13.2671939+04:00</create-date>
+  <cursor-position>927</cursor-position>
+  <width>466</width>
+  <height>368</height>
+  <x>736</x>
+  <y>455</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритм for_each</title>
+  <text xml:space="preserve"><note-content version="0.1">Алгоритм for_each
+
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+void display(int x) {
+  static int i = 0;
+  cout &lt;&lt; "a[" &lt;&lt; i++ &lt;&lt; "]" &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+  const int N = 4;
+  int a[N] = {1234, 5432, 8943, 3346};
+  for_each(a, a + N, display);
+  return 0;
+}
+</note-content></text>
+  <last-change-date>2009-08-09T13:04:01.4235800+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T13:04:01.4235800+04:00</last-metadata-change-date>
+  <create-date>2009-08-09T13:03:48.0914170+04:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>464</x>
+  <y>301</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Видимость переменных в функциях</title>
+  <text xml:space="preserve"><note-content version="0.1">Видимость переменных в функциях
+
+Запускаем:
+
+<italic>a,b,<link:broken>c</link:broken></italic><italic> = (1, 2, 3)
+print a, b, <link:broken>c</link:broken></italic><italic>
+
+def <link:internal>test</link:internal></italic><italic>():   
+    print (a)
+    print (b)
+    print (<link:broken>c</link:broken></italic><italic>)
+    #<link:broken>c</link:broken></italic><italic> = <link:broken>c</link:broken></italic><italic> + 1
+
+<link:internal>test</link:internal></italic><italic>()
+</italic>
+Получаем вполне предсказуемый результат.
+
+1 2 3
+1 
+2
+3
+
+А теперь:
+
+<italic>a,b,<link:broken>c</link:broken></italic><italic> = (1, 2, 3)
+print a, b, <link:broken>c</link:broken></italic><italic>
+
+def <link:internal>test</link:internal></italic><italic>():   
+    print (a)
+    print (b)
+    print (<link:broken>c</link:broken></italic><italic>)
+    <link:broken>c</link:broken></italic><italic> = <link:broken>c</link:broken></italic><italic> + 1
+
+<link:internal>test</link:internal></italic><italic>()</italic>
+
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 13, in &lt;module&gt;
+  File "&lt;stdin&gt;", line 10, in <link:internal>test</link:internal>
+UnboundLocalError: local variable '<link:broken>c</link:broken>' referenced before assignment
+
+Это связано с тем, что переменные в функциях считаются глобальными до тех пор, пока их значение не присваивается в функции.
+
+Если хочется в функции изменить эту глобальную переменную, то можно сделать так:
+
+<italic>a,b,<link:broken>c</link:broken></italic><italic> = (1, 2, 3)
+print a, b, <link:broken>c</link:broken></italic><italic>
+
+def <link:internal>test</link:internal></italic><italic>():   
+    global <link:broken>c</link:broken></italic><italic>
+    print (a)
+    print (b)
+    print (<link:broken>c</link:broken></italic><italic>)
+    <link:broken>c</link:broken></italic><italic> = <link:broken>c</link:broken></italic><italic> + 1
+
+<link:internal>test</link:internal></italic><italic>()</italic>
+
+Хотя, IMHO, криво.</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.0854840+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.0854840+04:00</last-metadata-change-date>
+  <create-date>2009-01-24T19:37:25.8638310+03:00</create-date>
+  <cursor-position>848</cursor-position>
+  <width>546</width>
+  <height>606</height>
+  <x>143</x>
+  <y>76</y>
+  <open-on-startup>False</open-on-startup>
+</note>

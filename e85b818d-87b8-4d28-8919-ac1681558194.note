@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Mercurial</title>
+  <text xml:space="preserve"><note-content version="0.1">Mercurial
+
+В отличии от <link:internal>Subversion</link:internal> репозиторий в Mercurial находтися в той же папке, что и рабочие файлы.
+
+<link:internal>Типичный сценарий работы с Mercurial</link:internal>
+<link:internal>Файл настроек mercurial</link:internal>
+<link:internal>Mercurial faq</link:internal>
+<link:internal>Получить список changelist-ов, в которых затрагивался мой файл</link:internal>
+
+См также:
+<link:internal>failed to import extension hgext qct No module named qct</link:internal>
+
+hg clone <link:url>http://freehg.org/u/demas1252/study/</link:url> 
+hg push <link:url>http://freehg.org/u/demas1252/tracker/</link:url></note-content></text>
+  <last-change-date>2009-11-23T13:19:50.4339900+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.4339900+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:35:36.5213810+03:00</create-date>
+  <cursor-position>120</cursor-position>
+  <width>523</width>
+  <height>360</height>
+  <x>1147</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

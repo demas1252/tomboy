@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сравнение типов таблиц в ETS</title>
+  <text xml:space="preserve"><note-content version="0.1">Сравнение типов таблиц в ETS
+
+-module(ets1).
+-export([start/0]).
+
+start()-&gt;
+    lists:foreach(fun <link:internal>test</link:internal>_ets/1, [set, ordered_set, bag, duplicate_bag]).
+
+<link:internal>test</link:internal>_ets(Mode)-&gt;
+    TableId = ets:new(<link:internal>test</link:internal>, [Mode]),
+    ets:insert(TableId, {a, 1}),
+    ets:insert(TableId, {b, 2}),
+    ets:insert(TableId, {a, 1}),
+    ets:insert(TableId, {a, 3}),
+    List = ets:tab2list(TableId),
+    io:format("~-13w =&gt; ~p~n", [Mode, List]),
+    ets:delete(TableId).
+
+
+
+&gt; ets1:start().
+set           =&gt; [{b,2},{a,3}]
+ordered_set   =&gt; [{a,3},{b,2}]
+bag           =&gt; [{b,2},{a,1},{a,3}]
+duplicate_bag =&gt; [{b,2},{a,1},{a,1},{a,3}]
+ok
+</note-content></text>
+  <last-change-date>2009-04-25T18:32:29.9110890+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:29.9110890+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:47:16.6012370+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>486</y>
+  <open-on-startup>False</open-on-startup>
+</note>

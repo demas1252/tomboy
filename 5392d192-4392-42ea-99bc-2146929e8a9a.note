@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Механизм разноски накладной на услуги</title>
+  <text xml:space="preserve"><note-content version="0.1">Механизм разноски накладной на услуги
+
+
+     <link:internal>1</link:internal>. CustPostInvoiceJob.main()
+        a) custInvoiceTable - накладная по клиенту
+        б) updateQueryBuild() - выбираем накладные по account+date+posted+<link:internal>recid</link:internal>
+        в) CustPostInvoiceJob.run()
+     2. CustPostInvoiceJob.run()
+        a) создаем CustPostInvoice
+        б) CostPostInvoice.run()
+     3. CostPostInvoice.run()
+        а) создаем CustFreeInvoiceCalcTotals
+        б) CustFreeInvoiceCalcTotals.<link:internal>calc</link:internal>() - скидки, налоги, <link:internal>накладные расходы</link:internal>
+        в) InvoiceId, Voucher - из номерных серий
+        г) создаем CustInvoiceJour (связка с CustInvoiceTable по invoiceId)
+        д) создаем CustInvoiceSalesLink 
+        е) <link:internal>LedgerVoucher</link:internal> и <link:internal>LedgerVoucherObject</link:internal>
+        ж) для каждой строки CustInvoiceLine добавляем бух. транз (.addTrans())
+        з) для каждой строки CustInvoiceLine создаем CustInvoiceTrans
+        и) создаем CustVoucherFreeInvoice
+        к) CustVoucherFreeInvoice.post() (смотри [CustVendVoucher _ post])</note-content></text>
+  <last-change-date>2009-10-17T22:10:59.7954780+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:59.7954780+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:05:20.5689580+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

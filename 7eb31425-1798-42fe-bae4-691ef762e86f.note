@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>pdf</title>
+  <text xml:space="preserve"><note-content version="0.1">pdf
+
+Склеить PDF:
+pdftk Example<link:internal>1</link:internal>.pdf Example2.pdf cat output Example3.pdf verbose</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.4378490+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.4378490+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T10:01:05.5533740+04:00</create-date>
+  <cursor-position>32</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>506</x>
+  <y>50</y>
+  <open-on-startup>False</open-on-startup>
+</note>

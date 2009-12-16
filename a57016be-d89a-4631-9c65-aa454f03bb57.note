@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Bucket Sort (блочная сортировка)</title>
+  <text xml:space="preserve"><note-content version="0.1">Bucket Sort (блочная сортировка)
+
+Еще называется **карманной сортировкой**.
+
+Элементы делятся на конечное число отдельных блоков (корзин) так, что все элементы в одной корзине всегда больше (или меньше), чем в другой. Каждый <link:internal>блок</link:internal> затем сортируется отдельно, либо рекурсивно тем же методом, либо иным другим. Затем элементы помещаются обратно в массив. Этот тип <link:internal>сортировки</link:internal> может обладать линейным временем исполнения.
+
+**Преимущества:** относится к классу быстрых алгоритмов с линейным временем исполнения O(N) (на удачных входных данных).
+
+**Недостатки:** сильно деградирует при большом количестве мало отличных элементов, или же на неудачной функции получения номера корзины по содержимому элемента.
+
+</note-content></text>
+  <last-change-date>2009-03-23T21:47:40.5517510+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:47:40.5517510+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:47:33.8388240+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

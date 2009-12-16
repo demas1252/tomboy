@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Свой порядок сортировки в Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Свой порядок сортировки</link:internal> в Oracle
+
+Есть допустим вот такой селект :
+
+cursor <link:internal>c</link:internal>_take_codes
+select data
+from x_table
+where kod in ('S','T','A')
+
+Как сделать так чтобы сначала курсор вынимал данные , где код 'S' , потом 'T', потом 'A'?
+то есть можно ли указать <link:internal>свой порядок сортировки</link:internal> ?
+
+ORDER BY decode(kod,'S',1,'T',2,'A',3)
+
+select x,y from a order by decode(user,'VASYA',a.x,a.y</note-content></text>
+  <last-change-date>2008-03-27T14:48:57.1073490+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T14:48:57.1073490+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:48:55.6699310+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

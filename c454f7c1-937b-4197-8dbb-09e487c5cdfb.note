@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Distributed Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Distributed Erlang
+
+Напишем простейший сервер имен, который хранит хеши (ключ -&gt; значение):
+
+<italic>-module(kvs).
+-export([start/0, store/2, lookup/1]).
+
+start()-&gt;
+    register(kvs, spawn(fun()-&gt;
+				loop() end)).
+
+store(Key, Value)-&gt;
+    <link:internal>rpc</link:internal></italic><italic>({store, Key, Value}).
+
+
+lookup(Key)-&gt;
+    <link:internal>rpc</link:internal></italic><italic>({lookup, Key}).
+
+<link:internal>rpc</link:internal></italic><italic>(Q)-&gt;
+    kvs ! {self(), Q},
+    receive 
+	{kvs, Reply}-&gt;
+	    Reply
+end.
+
+loop()-&gt;
+    receive
+	{From, {store, Key, Value}}-&gt;
+	    put(Key, {ok, Value}),
+	    From ! {kvs, true},
+	    loop();
+	{From, {lookup, Key}} -&gt;
+	    From ! {kvs, get(Key)},
+	    loop()
+end.
+</italic>		    
+Теперь запускаем 2 сеанса <link:internal>erlang</link:internal>:
+
+1. 
+<italic>&amp;</italic> <italic>erl -sname gandalf
+&gt; kvs:start().</italic>
+
+2.
+<italic>&amp; erl -sname bilbo
+&gt; <link:internal>rpc</link:internal></italic><italic>:call(gandalf@xal, kvs, store, [1, 'one']).
+true
+&gt; <link:internal>rpc</link:internal></italic><italic>:call(gandalf@xal, kvs, lookup, [1]).
+{ok, one}</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:25.0083520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.0083520+04:00</last-metadata-change-date>
+  <create-date>2009-01-31T20:08:52.1959529+03:00</create-date>
+  <cursor-position>206</cursor-position>
+  <width>628</width>
+  <height>791</height>
+  <x>429</x>
+  <y>115</y>
+  <open-on-startup>False</open-on-startup>
+</note>

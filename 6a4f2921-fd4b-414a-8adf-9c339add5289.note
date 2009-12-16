@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Накладная на услуги</title>
+  <text xml:space="preserve"><note-content version="0.1">Накладная на услуги
+
+
+     [source: axforum]
+     __"Текстовая фактура" это аналог Заказа, для которого отсутствует цикл обработки и возможность указать       номенклатуру. Используется для реализации услуг, которые не включаются в номенклатурный справочник, для реализации ОС и для прочих операций, которые необходимо по правилам бух. учета отражать как реализацию. В SP4 переименована в "Накладная на услуги".__
+     
+     _С переводом вообще старая история. Мне вообще кажется, что переводить надо было не подыскивая аналогии в документах, а исходя из экономической сути предлагаемой функциональной сущности. Т.е. "Текстовая фактура" = "Накладная на услуги" можно бы было перевести как "Реализация прочих активов" - что-то вроде этого._
+     
+        
+     CustInvoiceTable, CustInvoiceLine
+     Журнал накладных: CustInvoiceJour, CustInvoiceTrans
+     
+     В момент разноски порождаются проводки:
+     Бух. счет указанный в строке фактуры   - сумма указанная в строке (1)
+     Налоги (VAT)                           - сумма налога (2)
+     Сальдо по клиенту                      - (1) + (2) - (Итоговый счет из профиля разноски по клиентам)
+     
+     См. также:
+     [<link:internal>Механизм разноски накладной на услуги</link:internal>]
+     [<link:internal>Сумма с учетом НДС в накладных на услуги</link:internal>]</note-content></text>
+  <last-change-date>2008-03-28T22:05:33.4501550+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:05:33.4501550+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:05:07.0953890+03:00</create-date>
+  <cursor-position>1219</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

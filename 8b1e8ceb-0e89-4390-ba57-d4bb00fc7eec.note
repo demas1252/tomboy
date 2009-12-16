@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Развертка дерева на Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Развертка дерева на Oracle
+
+create table <link:internal>test</link:internal>_table(
+
+      id integer,
+      p_id integer,
+      n varchar2(10)
+
+)
+
+insert into <link:internal>test</link:internal>_table values(<link:internal>1</link:internal>, 0, 'a')
+insert into <link:internal>test</link:internal>_table values(2, <link:internal>1</link:internal>, 'b')
+insert into <link:internal>test</link:internal>_table values(3, <link:internal>1</link:internal>, '<link:broken>c</link:broken>')
+insert into <link:internal>test</link:internal>_table values(4, 2, 'd')
+insert into <link:internal>test</link:internal>_table values(5, 2, 'e')
+insert into <link:internal>test</link:internal>_table values(6, 5, 'f')
+insert into <link:internal>test</link:internal>_table values(7, 6, 'g')
+
+select id, n, p_id
+from <link:internal>test</link:internal>_table
+start with id = 7
+connect by prior p_id = id</note-content></text>
+  <last-change-date>2009-02-07T15:39:21.6461960+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:21.6461960+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:48:40.4559350+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

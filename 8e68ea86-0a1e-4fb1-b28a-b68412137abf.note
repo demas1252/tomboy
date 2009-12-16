@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пошаговое руководство установки Arch</title>
+  <text xml:space="preserve"><note-content version="0.1">Пошаговое руководство установки Arch
+
+1. Грузимся и логинимся под root -&gt;<link:url> /arch/setup</link:url>
+2. Prepare Hard Drive - если все делали автоматом - монтировать узлы не надо - все само смонтировалось (для моего винта: 1 - win, 2 - <link:internal>arch</link:internal>, 3 - <link:internal>fedora</link:internal>, 4 -swap)
+3. Ставим с CD
+4.<link:url> /ect/rc.conf</link:url>:
+
+   <italic> LOCALE="ru_RU.UTF-8"
+    HARDWARECLOCK="localtime"
+    TIMEZONE="Europe/Moscow"
+    KEYMAP="ru-utf"
+    CONSOLEFONT="/usr/share/kbd/consolefonts/cyr-sun16.psfu.gz"
+    CONSOLEMAP="/usr/share/kbd/consoletrans/cp866_to_uni.trans"
+    USECOLOR="yes"
+    Настраиваем сеть в этом же файле:
+
+    HOSTNAME="host" # host заменить на желаемое "имя" компа
+    eth0="<link:internal>dhcp</link:internal></italic><italic>"
+
+    INTERFACES=(eth0)
+  
+    # gateway="default dev eth0" #в инете сидим через eth0
+    gateway="default gw 192.168.0.1"
+    ROUTES=(gateway)</italic>
+
+5. root password
+6. <link:internal>grub</link:internal> install
+7. reboot
+8. ставим guest addiction (если это <link:internal>virtual box</link:internal>): -&gt;  <link:internal>Устатновка GuestAddiction в Linux Guest</link:internal>
+9. создаем локальный каталог пакетов
+       <link:internal>Shared Folder in Linux Guest</link:internal>
+       Создаем оглавление каталога (<link:internal>Локальный репозиторий pacman</link:internal>)
+       Если это мой винт - то sdb6.
+       <link:internal>pacman</link:internal>.conf
+10. Обновляем базовую подсистему:
+        rm<link:url> /usr/lib/klibc/include/asm</link:url> (на новом дистриб. не надо)
+        <link:internal>pacman</link:internal> -Syu
+11. Ставим X-ы и <link:internal>прочее</link:internal>:
+        <link:internal>pacman</link:internal> -S xorg kbd-ru-keymaps iptables alsa-utils gdm hwd aspell-ru hal gedit (nvidia)  sudo <link:internal>gnome-terminal</link:internal> xf86-<link:internal>video</link:internal>-intel
+12.  Настраиваем:
+         hwd -u
+         (nvidia-xconfig)
+         alsaconf (проверяем<link:url> /usr/share/sounds/alsa</link:url> - aplay)
+         alsactl store
+         nano<link:url> /etc/inittab</link:url>
+
+	<italic>    #id:3:initdefault: #эту строчку нужно за комментировать
+	    # Boot to X11
+	    id:5:initdefault: # а эту наоборот рас комментировать
+
+	    #x:5:respawn:/usr/bin/xdm -nodaemon #эту за комментируем
+	    x:5:respawn:/usr/sbin/gdm -nodaemon #а эту рас комментируем</italic>
+	    #x:5:respawn:/usr/bin/slim &gt;&amp;<link:url> /dev/null</link:url>
+
+		<link:internal>other/create_default_user.sh</link:internal><italic>
+
+		В<link:url> /etc/rc.conf</link:url></italic><italic>:
+			DAEMONS=(syslog-ng hal iptables network fuse netfs crond alsa) &lt; -- fuse???
+
+</italic>13. Проверяем локаль:
+	<link:internal>vim</link:internal><link:url> /etc/locale.gen</link:url> (<italic>ru_RU.UTF-8</italic>)
+        locale-gen<italic>
+</italic>14. Ставим <link:internal>gnome</link:internal> и <link:internal>kde</link:internal>: 	<link:internal>pacman</link:internal> -S <link:internal>gnome</link:internal> <link:internal>gnome</link:internal>-extra <link:internal>kde</link:internal>
+15. ставим софт: см. sh файлы
+16. Сглаживание:
+
+	<italic>[archlinuxfr]
+	# The french Archlinux communities packages
+	Server = <link:url>http://repo.archlinux.fr/i686</link:url></italic><italic>
+
+	<link:internal>pacman</link:internal></italic><italic> -Sy yaourt
+	<link:internal>pacman</link:internal></italic><italic> -Rd freetype2 libxft <link:internal>cairo</link:internal></italic><italic>
+	<link:internal>pacman</link:internal></italic><italic> -S <link:internal>gcc</link:internal></italic><italic> make patch</italic> <italic>fakeroot</italic> <italic>pkgconfig</italic>
+	<italic>yaourt -S freetype2-cleartype libxft-cleartype <link:internal>cairo</link:internal></italic><italic>-cleartype mesa --noconfirm</italic> 
+
+	(есть смысл попробовать сглаживание с <link:internal>ubuntu</link:internal> патчами)
+
+17. Добавляем репозитории
+
+	<italic>[<link:internal>kde</link:internal></italic><italic>-unstable]
+	Include =<link:url> /etc/pacman.d/mirrorlist</link:url></italic><italic>
+</italic>
+<italic>	[compiz-fusion]
+	Server = <link:url>http://compiz.dreamz-box.de/i686</link:url></italic><italic>
+</italic>	
+	games??
+
+18. Если нужно, настраиваем <link:internal>Роутинг в Arch</link:internal>
+19. Для TrueCrypt добавляем необходимые модули
+
+<link:url>/etc/rc.conf</link:url>
+--skip--
+<link:internal>MODULES</link:internal>=(fuse loop)
+<italic><link:internal>groupadd</link:internal></italic><italic> truecrypt
+
+visudo
+# Users in the truecrypt group are allowed to run TrueCrypt as root.
+%truecrypt ALL=(root) NOPASSWD:/usr/bin/truecrypt
+</italic>
+# nano<link:url> /etc/bash/bashrc</link:url>
+
+alias tc='sudo truecrypt'
+alias tcm='tc -M uid=$(id -u),gid=$(id -g)'
+
+# gpasswd -a USER_1 truecrypt
+
+20. Для печати ставим пакеты - &gt; <link:internal>pacman</link:internal> -S cups ghostscript hplip
+21. Устанавливаем <link:internal>Virtual Box</link:internal>. См. <link:internal>VirtualBox в Arch</link:internal>.
+22. Stardict: в .stardict/dic копируем нужные словари
+23. KDM || <link:internal>настройка slim</link:internal>
+
+<link:internal>vim</link:internal><link:url> /etc/inittab</link:url> -&gt;<link:url> /usr/bin/kdm</link:url>
+kdesu systemsettings
+
+24. Монтируем остальные винты
+
+<link:url>/dev/sdc6</link:url> / reiserfs defaults 0 1<link:url>
+/dev/sdc9 /usr/local</link:url> xfs defaults 0 1<link:url>
+/dev/sdc7</link:url> /home reiserfs defaults 0 1<link:url>
+/dev/sdc5</link:url> /boot ext2 defaults 0 1
+
+UUID=d81e6113-7e95-4654-a3a7-<link:internal>ec</link:internal>43033d3d1f<link:url> /usr/local/vms</link:url> ext3 defaults 0 0
+UUID=02f5113b-<link:broken>c</link:broken>0ef-479f-a529-84456aef3e28<link:url> /usr/local/docs</link:url> ext3 defaults 0 0
+UUID=9<link:internal>dd</link:internal>3<link:broken>c</link:broken>17f-a9<link:broken>df</link:broken>-4<link:broken>c</link:broken>29-8ff6-a06bda4910de<link:url> /usr/local/<link:broken>music</link:broken></link:url> ext3 defaults 0 0
+
+<link:internal>other/create_mount_points.sh</link:internal>
+
+25. Создаем No-X вариант загрузки (копия оригинала с 3-ой на конце)
+
+# (0) <link:internal>Arch</link:internal> <link:internal>Linux</link:internal> no X11
+title  <link:internal>Arch</link:internal> <link:internal>Linux</link:internal> no X11
+root   (hd0,4)
+<link:internal>kernel</link:internal> /vmlinuz26 root=/dev/disk/by-uuid/36767494-6838-45d3-a6e0-87d76bc73<link:broken>c</link:broken>6b ro 3
+<link:internal>initrd</link:internal> /<link:internal>kernel</link:internal>26.img
+
+26. <link:internal>Ставим news-server leafnode</link:internal>
+27. Создаем линки
+28. Настраиваем <link:internal>KDE</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.9394190+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.9394190+04:00</last-metadata-change-date>
+  <create-date>2008-11-24T12:21:03.7860800+03:00</create-date>
+  <cursor-position>2508</cursor-position>
+  <width>797</width>
+  <height>834</height>
+  <x>821</x>
+  <y>68</y>
+  <open-on-startup>False</open-on-startup>
+</note>

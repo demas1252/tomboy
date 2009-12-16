@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритмы STL</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Алгоритмы</link:internal> STL
+
+<link:internal>Алгоритм find</link:internal>
+<link:internal>Алгоритм copy</link:internal>
+<link:internal>Алгоритм copy с пользовательской функцией</link:internal>
+<link:internal>Алгоритм replace</link:internal>
+<link:internal>Алгоритм reverse</link:internal>
+<link:internal>Алгоритм remove_if</link:internal>
+<link:internal>Алгоритм for_each</link:internal></note-content></text>
+  <last-change-date>2009-08-09T13:03:55.2164000+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T13:03:55.2164000+04:00</last-metadata-change-date>
+  <create-date>2009-08-04T16:57:27.0871320+04:00</create-date>
+  <cursor-position>138</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>208</x>
+  <y>409</y>
+  <open-on-startup>False</open-on-startup>
+</note>

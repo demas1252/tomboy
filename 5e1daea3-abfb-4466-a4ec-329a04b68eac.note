@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Повторение строки</title>
+  <text xml:space="preserve"><note-content version="0.1">Повторение строки
+
+    Есть таблица вида:
+     create table #TABL<link:internal>1</link:internal> (ID int IDENTITY (<link:internal>1</link:internal>, <link:internal>1</link:internal>) NOT NULL, CODE int , QTY int)
+     Надо вернуть CODE QTY-раз.
+
+     drop table <link:internal>test</link:internal>_table
+
+     create table <link:internal>test</link:internal>_table(
+        id int,
+        code varchar(5),
+        qty int
+     )
+
+     insert into <link:internal>test</link:internal>_table values(<link:internal>1</link:internal>, 'a', 2)
+     insert into <link:internal>test</link:internal>_table values(2, 'b', <link:internal>1</link:internal>)
+     insert into <link:internal>test</link:internal>_table values(3, '<link:broken>c</link:broken>', 5)
+     insert into <link:internal>test</link:internal>_table values(4, 'd', 3)
+
+     select code from <link:internal>test</link:internal>_table t
+     join master.dbo.spt_values v
+     ON t.qty &gt; v.number AND v.type='P'
+
+     В этой табличке (master.dbo.spt_values) для type = 'p' лежат целые числа от 0 до 2 с чем то тысяч.</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.8647380+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.8647380+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:55:31.2790580+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

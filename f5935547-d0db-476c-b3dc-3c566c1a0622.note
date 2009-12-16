@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>WHERE - IF</title>
+  <text xml:space="preserve"><note-content version="0.1">WHERE - IF
+
+MR&gt; Подскажите как написать запрос, где условие WHERE меняется в зависимости от значения переменной. 
+
+&gt; Использовать OR? 
+
+MR&gt;select * from [Tbl] where [SomeDate] (в зависимости от...)
+MR&gt;<link:internal>if</link:internal> param = 0
+MR&gt; [SomeDate] BETWEEN d<link:internal>1</link:internal> AND d2
+MR&gt;<link:internal>if</link:internal> param = <link:internal>1</link:internal> 
+MR&gt; [SomeDate] &gt;= d<link:internal>1</link:internal>
+MR&gt;<link:internal>if</link:internal> param = 2 
+MR&gt; [SomeDate] &lt;= d2
+MR&gt;<link:internal>if</link:internal> param = 3
+MR&gt; TRUE
+MR&gt;Как это правильно записать?
+
+where (param = 0 and [SomeDate] between d<link:internal>1</link:internal> and d2)
+   or (param = <link:internal>1</link:internal> and [SomeDate] &gt;= d<link:internal>1</link:internal>)
+   or (param = 2 and [SomeDate] &lt;= d2)
+   or (param = 3)
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.4904530+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.4904530+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:55:20.3900150+03:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

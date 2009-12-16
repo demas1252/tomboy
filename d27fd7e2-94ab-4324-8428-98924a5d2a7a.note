@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перечень модулей для Emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Перечень модулей для Emacs
+
+<link:url>http://code.google.com/p/yasnippet/</link:url></note-content></text>
+  <last-change-date>2009-09-14T16:12:01.8723830+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-14T16:12:01.8723830+04:00</last-metadata-change-date>
+  <create-date>2009-09-14T16:11:43.3695610+04:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>954</x>
+  <y>322</y>
+  <open-on-startup>False</open-on-startup>
+</note>

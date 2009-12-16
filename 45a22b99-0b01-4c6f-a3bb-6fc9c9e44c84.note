@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>92-93. Relative clauses with who/that/which</title>
+  <text xml:space="preserve"><note-content version="0.1">92-93. Relative clauses with who/that/which
+
+<list><list-item dir="ltr">The woman <italic>who lives next door</italic> is a doctor.</list-item></list>
+
+	The woman -- she lives next door -- is a doctor --&gt;
+	The woman who lives next door is a doctor.
+
+	We know a lot of people -- they live in the country.
+	We know a lot of people who live in the country.
+	
+	An architect is someone <bold>who designs</bold> buildings.
+	What was the name of the person <bold>who phoned</bold> you?
+	Anyone <bold>who wants to <link:internal>apply</link:internal></bold> for the job must do so by Friday.
+
+<list><list-item dir="ltr">We can use <bold>that</bold> instead who, but you can't use <bold>which</bold> for people.
+</list-item><list-item dir="ltr">We use <bold>that</bold> or <bold>which</bold> for things.</list-item></list>
+
+	where is the cheese? - it was in the fridge
+	Where is the cheese <bold>that/what was</bold> in the fridge?
+
+<list><list-item dir="ltr"><bold>What</bold> = 'the thing(s) that'</list-item></list>
+
+	<bold>What</bold> happened was my fault. ( = the thing that happened)
+	Everything <bold>that</bold> happened was my fault.
+
+<list><list-item dir="ltr">The woman <bold>who lives next door</bold> is a doctor.</list-item></list>
+
+	Это subject и мы обязаны использовать частицы who/that/which
+
+<list><list-item dir="ltr">The woman <bold>who I wanted to see</bold> was away on <link:internal>holiday</link:internal>.</list-item></list>
+
+	Это object и частицу мы можем опустить.
+
+<list><list-item dir="ltr">Tom is talkin <bold>to</bold> a woman - do you know her?</list-item></list>
+
+	Do you know the woman (who/that) <bold>Tom is talking to</bold>?
+	
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.9321650+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.9321650+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T15:45:58.2592910+04:00</create-date>
+  <cursor-position>1093</cursor-position>
+  <width>622</width>
+  <height>604</height>
+  <x>194</x>
+  <y>76</y>
+  <open-on-startup>False</open-on-startup>
+</note>

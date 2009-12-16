@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Послать сигнал програмно</title>
+  <text xml:space="preserve"><note-content version="0.1">Послать сигнал програмно
+
+<italic>#include &lt;sys/types.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+static int alarm_fired = 0;
+
+void ding(int sig)
+{
+  alarm_fired = 1;
+}
+
+int main()
+{
+  pid_t pid;
+  
+  printf("alarm application starting\n");
+
+  pid = fork();
+
+  switch(pid) {
+  case -1:
+    // failure
+    perror("fork failed");
+    exit(1);
+  case 0:
+    // child
+    sleep(5);
+    kill(getppid(), SIGALRM);
+    exit(0);
+  }
+
+  // parent
+  printf("waitng for alarm to go off\n");
+  (void) signal(SIGALRM, ding);
+  pause();
+  <link:internal>if</link:internal></italic><italic>(alarm_fired)
+    printf("Ding\n");
+  printf("done\n");
+  exit(0);
+}
+</italic>
+<italic>demas@demashost:~/sources/study/<link:internal>linux</link:internal></italic><italic>$ ./sig2</italic>
+	alarm application starting
+	waitng for alarm to go off
+	Ding
+	done
+
+
+</note-content></text>
+  <last-change-date>2009-04-01T16:18:08.5631930+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:18:08.5631930+04:00</last-metadata-change-date>
+  <create-date>2009-02-01T13:00:35.3093230+03:00</create-date>
+  <cursor-position>716</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>595</x>
+  <y>229</y>
+  <open-on-startup>False</open-on-startup>
+</note>

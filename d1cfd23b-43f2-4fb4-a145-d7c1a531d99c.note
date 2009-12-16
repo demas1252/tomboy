@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удалить строки по определенному условию</title>
+  <text xml:space="preserve"><note-content version="0.1">Удалить строки по определенному условию
+
+
+Удаляет все строки, у которых нет значения != 'agt'
+
+_Sub Loop_Example()
+   Dim Firstrow As Long
+   Dim Lastrow As Long
+   Dim Lrow As Long
+   Dim CalcMode As Long
+   Dim ViewMode As Long
+   Dim ArrNames As Variant
+
+   With Application
+       CalcMode = .Calculation
+       .Calculation = xlCalculationManual
+       .ScreenUpdating = False
+   End With
+
+   'We use the ActiveSheet but you can replace this with
+   'Sheets("MySheet")<link:internal>if</link:internal> you want
+   With ActiveSheet
+
+       'We select the sheet so we can change the window view
+       .Select
+
+       '<link:internal>If</link:internal> you are in Page Break Preview Or Page Layout view go
+       'back to normal view, we do this for speed
+       ViewMode = ActiveWindow.View
+       ActiveWindow.View = xlNormalView
+
+       'Turn off Page Breaks, we do this for speed
+       .DisplayPageBreaks = False
+
+       'Set the first and last row to loop through
+       Firstrow = .UsedRange.Cells(<link:internal>1</link:internal>).Row
+       Lastrow = .UsedRange.Rows(.UsedRange.Rows.Count).Row
+
+       'array with names that we want to keep
+       ArrNames = Array("Agt", "Agent")
+
+       'We loop from Lastrow to Firstrow (bottom to top)
+       For Lrow = Lastrow To Firstrow Step -<link:internal>1</link:internal>
+
+           'We check the values in the A column in this example
+           With .Cells(Lrow, "A")
+
+               <link:internal>If</link:internal> Not IsError(.Value) Then
+
+                   <link:internal>If</link:internal> IsError(Application.Match(.Value, ArrNames, 0)) Then .EntireRow.Delete
+
+               End <link:internal>If</link:internal>
+
+           End With
+
+       Next Lrow
+
+   End With
+
+   ActiveWindow.View = ViewMode
+   With Application
+       .ScreenUpdating = True
+       .Calculation = CalcMode
+   End With
+
+End Sub_</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.2126620+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.2126620+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:05:32.0295760+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

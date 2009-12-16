@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запуск трассировки с помощью триггера на вход</title>
+  <text xml:space="preserve"><note-content version="0.1">Запуск трассировки с помощью триггера на вход
+
+CREATE OR REPLACE TRIGGER SYS.TRACE_A_USER
+AFTER
+LOGON ON &lt;<link:broken>some</link:broken>_<link:internal>db</link:internal>_user&gt;.SCHEMA
+DECLARE
+user_sid NUMBER;
+user_serial# NUMBER;
+user_program VARCHAR2(48);
+BEGIN
+-- Collect the current user session details.
+SELECT sid, serial#, UPPER(program)
+INTO user_sid, user_serial#, user_program
+FROM v$session
+WHERE audsid = USERENV('SESSIONID');
+-- Start tracing <link:internal>if</link:internal> the user is running the identified application.
+<link:internal>IF</link:internal> user_program = 'SOMECODE.EXE' THEN
+-- Enable tracing. Note level 12 tracing includes bind variable
+-- and wait statistics.
+sys.dbms_system.set_ev(user_sid, user_serial#, 10046, 12, '');
+END <link:internal>IF</link:internal>;
+END;</note-content></text>
+  <last-change-date>2009-10-12T12:00:18.0189800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:18.0189800+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:54:33.3102269+03:00</create-date>
+  <cursor-position>650</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

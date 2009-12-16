@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cast from void pointer</title>
+  <text xml:space="preserve"><note-content version="0.1">Cast from void pointer
+
+&lt;&lt;pre
+int main() {
+  int i = 99;
+  void* vp = &amp;i;
+  // Can't dereference a void pointer:
+  // *vp = 3; // Compile-time error
+  // Must cast back to int before dereferencing:
+  *((int*)vp) = 3;
+} 
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T23:14:13.7207809+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T23:14:13.7207809+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:14:12.5230089+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

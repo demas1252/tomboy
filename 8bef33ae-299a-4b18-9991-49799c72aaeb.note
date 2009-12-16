@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разбить exp-файл на несколько</title>
+  <text xml:space="preserve"><note-content version="0.1">Разбить exp-файл на несколько
+
+$ exp userid=scott/tiger filesize=16384 buffer=16384 file='(out1,out2,out3,out4,out5,out6)'
+$ <link:internal>ls -l</link:internal> 
+...
+-rw-r--r--   1 orapb4e  dbapb4e       16384 Jan 11 15:18 out1.dmp
+-rw-r--r--   1 orapb4e  dbapb4e       12288 Jan 11 15:19 out2.dmp</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.9676330+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.9676330+04:00</last-metadata-change-date>
+  <create-date>2009-01-11T15:43:22.4134900+03:00</create-date>
+  <cursor-position>83</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

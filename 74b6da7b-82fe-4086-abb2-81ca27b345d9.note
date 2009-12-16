@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Информацию о TempDb можно запросить удаленно с помощью запроса</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Информацию о TempDb</link:internal> можно запросить удаленно с помощью запроса
+
+<italic>SELECT 
+    name AS FileName, 
+    size*1.0/128 AS FileSizeinMB,
+    CASE max_size 
+        WHEN 0 THEN 'Autogrowth is off.'
+        WHEN -1 THEN 'Autogrowth is on.'
+        ELSE 'Log file will grow to a maximum size of 2 TB.'
+    END,
+    growth AS 'GrowthValue',
+    'GrowthIncrement' = 
+        CASE
+            WHEN growth = 0 THEN 'Size is fixed and will not grow.'
+            WHEN growth &gt; 0 AND is_percent_growth = 0 
+                THEN 'Growth value is in 8-KB pages.'
+            ELSE 'Growth value is a percentage.'
+        END
+FROM <link:internal>tempdb</link:internal></italic><italic>.sys.database_files;
+GO
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.6547490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.6547490+04:00</last-metadata-change-date>
+  <create-date>2008-11-22T20:04:23.4968120+03:00</create-date>
+  <cursor-position>234</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>5</x>
+  <y>83</y>
+  <open-on-startup>False</open-on-startup>
+</note>

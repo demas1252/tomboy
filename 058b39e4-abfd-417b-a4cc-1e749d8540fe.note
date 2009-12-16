@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритм copy с пользовательской функцией</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Алгоритм copy</link:internal> с пользовательской функцией
+
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;fstream&gt;
+#include &lt;<link:internal>iterator</link:internal>&gt;
+
+using namespace std;
+
+bool comparefun(int x, int y) {
+  return x &gt; y;
+}
+
+int main() {
+  const int N = 8;
+  int a[N] = {1234, 5432, 8943, 3346, 9831, 7842, 8863, 9820};
+  cout &lt;&lt; "Before sorting:\n";
+  copy(a, a + N, ostream_<link:internal>iterator</link:internal>&lt;int&gt;(cout, " "));
+  cout &lt;&lt; endl;
+  sort(a, a + N, comparefun);
+  cout &lt;&lt; "After sorting in descending order:\n";
+  copy(a, a + N, ostream_<link:internal>iterator</link:internal>&lt;int&gt;(cout, " "));
+  cout &lt;&lt; endl;
+  return 0;
+}
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.4021860+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.4021860+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T16:51:14.6940720+04:00</create-date>
+  <cursor-position>76</cursor-position>
+  <width>450</width>
+  <height>613</height>
+  <x>347</x>
+  <y>410</y>
+  <open-on-startup>False</open-on-startup>
+</note>

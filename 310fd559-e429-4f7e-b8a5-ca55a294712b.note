@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>External tables</title>
+  <text xml:space="preserve"><note-content version="0.1">External tables
+
+
+todo: practice
+
+9i - read-only; 10g - read-write + parallel + [<link:internal>projected column feature</link:internal>]
+
+Раньше <link:internal>Oracle</link:internal> Loader был единственным способом(драйвером) для работы с внешними файлами. Но он позволял только читать их. В 10g появился новый драйвер - <link:internal>Oracle</link:internal>_Datapump, который позволяет писать. Но он не совместим с Loader и вообще имеет свой, проприетарный формат.
+
+[<link:internal>Загрузка данных из внешней таблицы</link:internal>]
+[<link:internal>Выгрузка данных во внешнюю таблицу</link:internal>]
+
+[<link:internal>projected column feature</link:internal>]
+
+См. также:
+[<link:internal>Transportable Tablespaces</link:internal>]
+
+
+
+</note-content></text>
+  <last-change-date>2008-03-30T07:34:39.8418090+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:34:39.8418090+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:22:32.1952850+03:00</create-date>
+  <cursor-position>16</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

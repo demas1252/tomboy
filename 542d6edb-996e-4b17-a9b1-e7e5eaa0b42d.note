@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ручной сбор и удаление snapshots</title>
+  <text xml:space="preserve"><note-content version="0.1">Ручной сбор и удаление snapshots
+
+<link:internal>SQL</link:internal>&gt; SELECT sys.dbms_workload_repository.create_snapshot() FROM    dual;
+
+SYS.DBMS_WORKLOAD_REPOSITORY.CREATE_SNAPSHOT()
+----------------------------------------------
+                                           453
+
+<link:internal>SQL</link:internal>&gt; SELECT snap_id id, begin_interval_time,
+  2         end_interval_time
+  3  FROM   dba_hist_snapshot
+  4  WHERE snap_id &gt; 450
+<link:internal>SQL</link:internal>&gt; /
+
+ ID BEGIN_INTERVAL_TIME       END_INTERVAL_TIME
+--- ------------------------- -------------------------
+451 13-MAY-04 09.00.43.893 AM 13-MAY-04 10.00.08.258 AM
+452 13-MAY-04 10.00.08.258 AM 13-MAY-04 10.31.37.335 AM
+453 13-MAY-04 10.31.37.335 AM 13-MAY-04 10.32.06.113 AM
+
+<link:internal>SQL</link:internal>&gt; EXEC dbms_workload_repository.drop_snapshot_range -
+ &gt;    (200,250);
+
+<link:internal>SQL</link:internal>&gt; BEGIN
+  2  dbms_workload_repository.create_baseline (
+  3   start_snap_id =&gt; 426,
+  4   end_snap_id =&gt; 435,
+  5   baseline_name =&gt; 'ONLINE PEAK');
+  6  END;
+  7  /
+PL/<link:internal>SQL</link:internal> procedure successfully completed.
+
+<link:internal>SQL</link:internal>&gt; SELECT baseline_name, start_snap_time, end_snap_time FROM dba_hist_baseline;
+BASELINE_NA START_SNAP_TIME        END_SNAP_TIME
+------------ --------------------- ---------------------
+ONLINE PEAK 12-MAY-04 09.00.35 AM 12-MAY-04 06.00.23 PM
+
+<link:internal>SQL</link:internal>&gt; EXEC dbms_workload_repository.drop_baseline -
+ &gt;        ('ONLINE PEAK');</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5414760+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5414760+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:55:15.2008390+03:00</create-date>
+  <cursor-position>1269</cursor-position>
+  <width>550</width>
+  <height>620</height>
+  <x>1118</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

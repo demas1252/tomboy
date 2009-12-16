@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CacheLookup</title>
+  <text xml:space="preserve"><note-content version="0.1">CacheLookup
+
+
+     *Что это значит*
+         * None - кэширование не используется
+         * NoneInTTS - кэшируются только те записи, которые не используются в транзакции (как я понимаю, ради того, чтобы <link:internal>блокировки</link:internal> были - как средство обеспечения целостности)
+         * Found - все найденные по запросу записи будут попадать в кэш. Внутри транзакции мы все равно полезем в базу данных, но после обновим кэш.
+         * FoundAndEmpty - найденные по запросу и не существующие записи будут кэшироваться
+     
+     По этому поводу есть [<link:internal>эксперимент warm по поводу кэширования</link:internal>]
+     
+     *Рекомендации по значениям*
+         * Парамерические (LedgerParameters): EntireTable
+         * Транзакционные (<link:internal>LedgerTrans</link:internal>): None
+         * Картотеки (InventTable): Found(объемная и часто обновляемая), EntireTable (статическаяи небольшая)
+         * Журналы (LedgerJournalTable): NonInTTS
+         * Строки журналов (LedgerJournalTrans): Found(среднии), None(большие)
+     
+     Синхронизация с БД происходит каждые 60 секунд и в полночь.
+     
+     *Чтобы запись попала в кэш*
+         * таблица должна иметь уникальный индекс
+         * select * - то есть, должны выбираться все значения
+     
+     *Результат запроса извлекется из кэша*
+         * если в условии будут по равенству накладываться условия на ключ
+     
+     *Дополнительно*
+         * Поосторожнее со значением EntireTable.  Во первых, записей может оказаться много и вычитываться в кэш они будут долго. Да и вообще, ведет себя глюкаво при различных join-х. То есть, если есть жалобы, что какой-то запрос не выбирает нужных данных, или данные не видны пользователю - есть смысл обратить внимание на кэширование. 
+    </note-content></text>
+  <last-change-date>2009-10-12T12:00:39.5386320+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.5386320+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:37:22.3352540+03:00</create-date>
+  <cursor-position>572</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Virtual Box</title>
+  <text xml:space="preserve"><note-content version="0.1">Virtual Box
+
+<link:internal>Клонировать виртуальный диск</link:internal><link:url>
+</link:url><link:internal>Запустить определенную виртуальную машину</link:internal><link:url>
+</link:url><link:internal>При установке нового ядра сделать следующее</link:internal>
+
+<link:internal>Bridge networking interface on VirtualBox</link:internal>
+<link:internal>Устатновка GuestAddiction в Linux Guest</link:internal>
+<link:internal>Shared Folder in Linux Guest</link:internal>
+
+<link:internal>Apache на VirtualBox</link:internal>
+
+<link:internal>VirtualBox в Arch</link:internal>
+<link:internal>VirtualBox в Fedora</link:internal>
+
+<link:url>www.ya.ru</link:url></note-content></text>
+  <last-change-date>2009-09-26T22:09:54.3535450+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-26T22:09:54.3535450+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:07:25.5517660+03:00</create-date>
+  <cursor-position>311</cursor-position>
+  <width>618</width>
+  <height>434</height>
+  <x>972</x>
+  <y>429</y>
+  <open-on-startup>False</open-on-startup>
+</note>

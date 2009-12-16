@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Две суммы в одной таблице</title>
+  <text xml:space="preserve"><note-content version="0.1">Две суммы в одной таблице
+
+Есть таблица Users, с полями NAME(ФИО пользователя), DOB (дата рождения), SEX (пол).
+Необходимо выбрать 3 колонки следующего содержания: число мальчиков и девочек, родившихся с 1980 по 2008 год.
+
+Пример таблицы вот такой.
+---------------------------------------------------------------
+| ГОД | Кол-во мальчиков | Кол-во двочек |
+---------------------------------------------------------------
+1980 10 12
+1981 11 6
+1982 16 19
+................
+2008 15 17
+
+<italic>SELECT TRUNC(dob,'yyyy'), 
+       SUM(DECODE(sex,'M',1,0)), /* кол-во мальчиков */  
+       SUM(DECODE(sex,'W',1,0)), /* кол-во девочек */  
+ FROM users
+WHERE dob BETWEEN :dat1 AND :dat2
+GROUP BY TRUNC(dob,'yyyy');</italic></note-content></text>
+  <last-change-date>2009-02-03T11:25:36.6582920+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-03T11:25:36.6582920+03:00</last-metadata-change-date>
+  <create-date>2009-02-03T11:24:46.9073130+03:00</create-date>
+  <cursor-position>695</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>621</x>
+  <y>408</y>
+  <open-on-startup>False</open-on-startup>
+</note>

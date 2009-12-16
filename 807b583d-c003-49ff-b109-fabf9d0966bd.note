@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Связки по recID</title>
+  <text xml:space="preserve"><note-content version="0.1">Связки по recID
+
+Мне лично связка по <link:internal>RecId</link:internal> не очень нравится.
+- Нет перехода к основной таблице (его надо делать, автоматически его нет).
+- Неясное (ненаглядное) название полей и когда рыщещь обозревателем таблиц или что еще хуже - на уровне БД - тоскливо разбирать данные
++ Универсальность связки. Когда несколько исходных документов прилинковываются к одному журналу - это удобно.
+- Перенос данных. Особенно - если это настройки. Все делабельно... но только на уровне Аксапты - т.е. уже минуя Аксапты это не сделаешь. А иногда (перенос между разработческой, тестовой и рабочей БД) - есть потребность перенести данные не заморачиваясь <link:broken>c</link:broken> <link:internal>RecId</link:internal>
+- Опускание в слой. Если таблички свои - то при смене их ID нужно не забыть про уже созданные данные со ссылками по TableId.
+
+В общем-то - это все так... личные предпочтения. Как было замечено выше - при правильном (по MS) подходе - все будет ок.
+Но когда-то ранее уже всплывали темки типа а как перейти с <link:internal>SQL</link:internal> Server на <link:internal>Oracle</link:internal>, которые в принципе по MS-ному не делаются . Но при желании делаются в жизни. Так и тут. Я лично предпочту по максимуму избежать связок по <link:internal>RecId</link:internal> именно в рамках облегчения администрирования.</note-content></text>
+  <last-change-date>2009-02-07T15:39:20.9989320+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:20.9989320+03:00</last-metadata-change-date>
+  <create-date>2008-12-23T10:22:58.9663230+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

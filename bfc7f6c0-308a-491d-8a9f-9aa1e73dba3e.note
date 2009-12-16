@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Oracle Tables</title>
+  <text xml:space="preserve"><note-content version="0.1">Oracle Tables
+
+
+<link:internal>Перемещение таблицы в другой tablespace</link:internal>
+<link:internal>Oracle Temporary Tables</link:internal>
+<link:internal>External tables</link:internal>
+<link:internal>RowID</link:internal>
+<link:internal>Получение информации о таблицах</link:internal>
+<link:internal>Навешивание комментария на таблицу</link:internal></note-content></text>
+  <last-change-date>2008-06-08T15:42:58.6777050+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-08T15:42:58.6777050+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:48:06.9323400+03:00</create-date>
+  <cursor-position>80</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>458</y>
+  <open-on-startup>False</open-on-startup>
+</note>

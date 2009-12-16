@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>20_10_08</title>
+  <text xml:space="preserve"><note-content version="0.1">20_10_08
+
+Deb:
+
+1. Обновления
+2. Firefox
+4. newsb*
+7. круговое меню
+
+Выкачать wget-ом доки:
+
+5. configure / m4 / autotools
+
+Sources:
+
+1. mozilla
+2. thunderbird
+
+
+</note-content></text>
+  <last-change-date>2008-10-24T16:50:03.0117200+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-24T16:50:03.0117200+04:00</last-metadata-change-date>
+  <create-date>2008-10-19T18:35:43.9367000+04:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>784</width>
+  <height>570</height>
+  <x>725</x>
+  <y>267</y>
+  <open-on-startup>False</open-on-startup>
+</note>

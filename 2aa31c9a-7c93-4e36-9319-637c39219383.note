@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cron</title>
+  <text xml:space="preserve"><note-content version="0.1">Cron
+
+<bold>Практика</bold>
+
+<link:internal>1</link:internal>. Создаем файл crontest:
+    <link:internal>SHELL</link:internal>=/bin/bash
+    0-59 * * * * date &gt;&gt;<link:url> /tmp/crontest</link:url>
+2. crontab <link:url>~/test</link:url>
+3. Проверяем: crontab -l
+4. Удаляем: crontab -r
+
+<bold>Теория</bold>
+
+crontab -e -- редактировать
+
+&lt;&lt;pre
+* * * * * выполняемая команда
+- - - - -
+| | | | |
+| | | | ----- День недели (0 - 7) (Воскресенье =0 или =7)
+| | | ------- Месяц (<link:internal>1</link:internal> - 12)
+| | --------- День (<link:internal>1</link:internal> - 31)
+| ----------- Час (0 - 23)
+------------- Минута (0 - 59)
+
+&gt;&gt;
+
+Запускать скрипт после перезагрузки:  @reboot<link:url> /home/username/cgi-bin/имя_программы.pl</link:url>
+
+Есть еще anacron - его задача запустить те <link:internal>задания</link:internal>, которые должен был выполнить cron, но не выполнил, так как машина была отключена.  Там для каждой задачи указывается срок последнего выполнения (например <link:internal>1</link:internal> день) поcле которого принимается решение о повторном запуске задачи и время которое надо выждать прежде чем данное задание запускать (чтобы все задачи не стартовали одновременно).
+Но в настройках данного демона (/etc/anacron), как правило, прописан старт задач cron-а, так что дополнительная настройка не требуется.</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.3539120+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.3539120+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:38:28.3597080+03:00</create-date>
+  <cursor-position>137</cursor-position>
+  <width>508</width>
+  <height>457</height>
+  <x>1152</x>
+  <y>515</y>
+  <open-on-startup>False</open-on-startup>
+</note>

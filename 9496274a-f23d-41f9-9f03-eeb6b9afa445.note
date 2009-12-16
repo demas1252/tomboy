@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пакеты необходимые для сборки rpm</title>
+  <text xml:space="preserve"><note-content version="0.1">Пакеты необходимые для сборки rpm
+
+<italic>rpm-build</italic> - обязательно
+
+Если не было в зависимостях - поставить отдельно:
+<italic><link:internal>gcc</link:internal></italic><italic>, cpp, <link:internal>gcc</link:internal></italic><italic>-c++, libstdc++, libstdc++-devel, libgcc</italic> </note-content></text>
+  <last-change-date>2009-06-29T12:35:25.6575640+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T12:35:25.6575640+04:00</last-metadata-change-date>
+  <create-date>2009-04-03T12:21:34.0244950+04:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>864</x>
+  <y>548</y>
+  <open-on-startup>False</open-on-startup>
+</note>

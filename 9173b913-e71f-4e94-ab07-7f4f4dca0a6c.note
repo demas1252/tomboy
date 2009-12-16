@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Продажа ОС</title>
+  <text xml:space="preserve"><note-content version="0.1">Продажа ОС
+
+Через
+- Расчеты с клиентами
+
+      - Заказ на продажу
+      - <link:internal>Накладная на услуги</link:internal>
+
+- <link:internal>Основные средства</link:internal>.
+
+Заказ на продажу
+
+Только ОС, имеющиеся в списке номенклатур.
+
+   1. Создаем заказ
+   2. Выбираем номенклатуру, соответствующую ОС
+   3. На закладке Разное указываем инвентарный номер ОС
+   4. Разносим заказ
+
+      Накладеая на услуги
+   5. Расчеты с клиенами
+   6. <link:internal>Накладная на услуги</link:internal>
+   7. В строках на закладке разное указываем номер ОС
+   8. На первой закладке указываем счет, количество и цену
+   9. Разносим накладную</note-content></text>
+  <last-change-date>2008-03-28T22:05:07.7102360+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:05:07.7102360+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:30:48.9171580+03:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>603</y>
+  <open-on-startup>False</open-on-startup>
+</note>

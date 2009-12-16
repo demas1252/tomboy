@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LedgerVoucherTransObject</title>
+  <text xml:space="preserve"><note-content version="0.1">LedgerVoucherTransObject
+
+
+     Класс инкапсулирует один постинг. В общем-то, в животке этого класса содержится приватная переменная типа <link:internal>ledgerTrans</link:internal>; Соответственно – большая часть методов просто изменяет или возвращает поля этой таблицы.
+
+     AmountCur parmAmountCur(AmountCur _amountCur = <link:internal>ledgerTrans</link:internal>.AmountCur) – сумма постинга в валюте операции
+     AmountMST parmAmountMST(AmountMST _amountMST = <link:internal>ledgerTrans</link:internal>.AmountMST) – сумма постинга в первичной валюте учета.
+     AmountMSTSecondary parmAmountMSTSecondary(AmountMSTSecondary _amountMSTSecondary = <link:internal>ledgerTrans</link:internal>.AmountMSTSecond) – сумма постинга во вторичной валюте учета
+     CurrencyCode parmCurrencyCode(CurrencyCode _currencyCode = <link:internal>ledgerTrans</link:internal>.CurrencyCode) – код валюты операции
+     EUROTriangulation parmEUROTriangulation(EUROTriangulation _EUROTriangulation = <link:internal>ledgerTrans</link:internal>.EUROTriangulation) – признак использования триангуляции.
+
+Обратим внимание на тот факт, что в общем случае – можно задавать суммы в валютах учета и валюте операции совершенно без относительного какого-то курса (все равно – системного или введенного в ручную для данного ваучера). Однако, с точки зрения соответствия учета принципу сравнимости, прямые манипуляции с суммами в проводке (да и к слову сказать - использование курса валюты, отличающихся от системного), является дурным тоном.
+
+     NoYes parmCorrect(NoYes _parmCorrect = <link:internal>ledgerTrans</link:internal>.Correct) – признак сторнирования в постинге
+     Dimension parmDimension(Dimension _dimension = <link:internal>ledgerTrans</link:internal>.Dimension) – аналитика постинга
+     DocumentDate parmDocumentDate(DocumentDate _documentDate = <link:internal>ledgerTrans</link:internal>.DocumentDate) – дата первичного документа
+     DocumentNum parmDocumentNum(DocumentNum _documentNum = <link:internal>ledgerTrans</link:internal>.DocumentNum) – номер первичного документа
+     LedgerAccount parmLedgerAccount(LedgerAccount _ledgerAccount = <link:internal>ledgerTrans</link:internal>.AccountNum) – номер счета ГК
+     LedgerDetailLevel parmLedgerDetailLevel(LedgerDetailLevel _ledgerDetailLevel = ledgerDetailLevel) – уровень детализации
+     LedgerJournalId parmLedgerJournalId(LedgerJournalId _ledgerJournalId = <link:internal>ledgerTrans</link:internal>.JournalNum) – номер журнала
+     LedgerPostingType parmLedgerPostingType(LedgerPostingType _ledgerPostingType = <link:internal>ledgerTrans</link:internal>.Posting) – тип разноски
+     LedgerTransType parmLedgerTransType(LedgerTransType _ledgerTransType = <link:internal>ledgerTrans</link:internal>.TransType) – тип транзации
+     OperationsTax parmOperationsTax(OperationsTax _operationsTax = <link:internal>ledgerTrans</link:internal>.OperationsTax) – зона учета
+     <link:internal>PeriodCode</link:internal> parmPeriodCode(<link:internal>PeriodCode</link:internal> _<link:internal>periodCode</link:internal> = <link:internal>ledgerTrans</link:internal>.<link:internal>PeriodCode</link:internal>) – тип периода учета (открывающий/закрывающий/обычный)
+     Qty parmQty(Qty _qty = <link:internal>ledgerTrans</link:internal>.Qty) – количество
+     <link:internal>recId</link:internal> parmSourceRecId(<link:internal>recId</link:internal> _<link:internal>recId</link:internal> = sourceRecId)
+     public tableId parmSourceTableId(tableId _sourceTableId = sourceTableId) – <link:internal>RecId</link:internal> и tableid той записи в таблице исходных документов, на основании которой был сгенерирован постинг. Используется не часто (по моему – только при разноске журналов ГК). Судя по всему – критично для генерации значения taxRefId, связывающего постинги и налоговые проводки в taxTrans. Кроме того – в режиме детализации “Сводка”, система не схлопывает постинги с разными <link:internal>recId</link:internal> исходного документа.
+     TransDate parmTransDate(TransDate _transDate = <link:internal>ledgerTrans</link:internal>.TransDate) – дата операции
+     TransTxt parmTransTxt(TransTxt _transTxt = <link:internal>ledgerTrans</link:internal>.Txt) – текст постинга. Если выбран режим детализации “Детально”, то у каждого постинга может быть свой собственный текст в поле Txt.
+     Voucher parmVoucher(Voucher _voucher = <link:internal>ledgerTrans</link:internal>.Voucher) – номер ваучера
+
+Конструкторы:
+
+     static LedgerVoucherTransObject newCreateTrans( <link:internal>LedgerVoucherObject</link:internal> _<link:internal>ledgerVoucherObject</link:internal>, LedgerPostingType _ledgerPostingType, LedgerAccount _ledgerAccount, Dimension _dimension, CurrencyCode _currencyCode, AmountCur _amountCur, tableId _sourceTableId, <link:internal>recId</link:internal> _sourceRecId, LedgerQty _qty = 0, ExchRate _exchRate = 0, ExchRate _exchRateSecond = 0, ExchRatesTriangulation _exchRatesTriangulation = UnknownNoYes::Unknown, boolean _markBridging = false, ProjLedger _projLedger = null, AmountMST _amountMST = 0)
+
+     Конструктор для обычных постингов. Сумма в валютах учета рассчитывается на основании указаных курсов или по системным курсам (если вместо курсов передали ноли).
+
+     static LedgerVoucherTransObject newTransExchAdj(LedgerPostingType _posting, Voucher _voucher, TransDate _transDate, LedgerAccount _ledgerAccount, Dimension _dimension, CurrencyCode _currencyCode, AmountMST _amountMST, AmountMSTSecondary _amountMSTSecondary = 0, boolean _correct = NoYes::No, EUROTriangulation _EUROTriangulation = NoYes::No)
+
+     Конструктор для постингов по курсовой разнице. Странненький – включает режим сторнирования только если указан флажок сторнирования и сумма курсовой меньше ноля.
+
+     public static LedgerVoucherTransObject newTransExchAdjMST_RU(<link:internal>LedgerVoucherObject</link:internal> _<link:internal>ledgerVoucherObject</link:internal>, LedgerPostingType _posting, LedgerAccount _ledgerAccount, Dimension _dimension, CurrencyCode _currencyCode, AmountMST _amountMST, boolean _correct = _<link:internal>ledgerVoucherObject</link:internal>.parmCorrection())
+
+     Еще один конструктор для постингов по курсовой разнице. Более правильный – лишен побочных эффектов на тему флажка сторнирования.
+
+     public static LedgerVoucherTransObject newTransExchAdjSecondary_RU(<link:internal>LedgerVoucherObject</link:internal> _<link:internal>ledgerVoucherObject</link:internal>, LedgerPostingType _posting, LedgerAccount _ledgerAccount, Dimension _dimension, CurrencyCode _currencyCode, AmountMSTSecondary _amountMSTSecondary = 0.0, boolean _correct = NoYes::No, OperationsTax _operationsTax = OperationsTax::Current)
+
+     Конструктор для постингов по курсовой разнице во вторичной валюте
+
+     static LedgerVoucherTransObject newTransRoundOff(LedgerPostingType _posting, Voucher _voucher, TransDate _transDate, LedgerAccount _ledgerAccount, Dimension _dimension, CurrencyCode _currencyCode, AmountMST _amountMST, AmountMSTSecondary _amountMSTSecondary = 0)
+
+     Задумывался как конструктор для постингов по округлениям (о них – ниже). Зачастую используется как конструктор постингов по курсовой разнице.</note-content></text>
+  <last-change-date>2009-10-12T12:00:39.4616420+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.4616420+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:19:54.2831980+03:00</create-date>
+  <cursor-position>144</cursor-position>
+  <width>498</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

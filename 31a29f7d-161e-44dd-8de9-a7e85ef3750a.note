@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Функциональные объекты STL</title>
+  <text xml:space="preserve"><note-content version="0.1">Функциональные объекты STL
+
+<link:internal>Пример простого функционального объекта</link:internal>
+<link:internal>Еще один пример функционального объекта</link:internal>
+<link:internal>Более сложный пример функционального объекта</link:internal></note-content></text>
+  <last-change-date>2009-08-13T14:11:56.2285560+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-13T14:11:56.2285560+04:00</last-metadata-change-date>
+  <create-date>2009-08-08T22:28:22.5114760+04:00</create-date>
+  <cursor-position>108</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>995</x>
+  <y>381</y>
+  <open-on-startup>False</open-on-startup>
+</note>

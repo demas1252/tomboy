@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Локальный репозиторий pacman</title>
+  <text xml:space="preserve"><note-content version="0.1">Локальный репозиторий pacman
+
+repo-<link:internal>add</link:internal><link:url> /home/pkgs/custom.db.tar.gz /home/pkgs/*.pkg.tar.gz</link:url>
+
+Если будет ругаться так:
+	<italic>bsdtar: failed to set dafault locale</italic>
+То, надо в файле<link:url> /etc/locale.gen</link:url> раскомментировать свою локаль и выполнить:
+	<italic>locale-gen
+</italic></note-content></text>
+  <last-change-date>2009-09-24T14:37:01.2424340+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.2424340+04:00</last-metadata-change-date>
+  <create-date>2008-11-20T21:44:50.0446640+03:00</create-date>
+  <cursor-position>243</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>89</x>
+  <y>72</y>
+  <open-on-startup>False</open-on-startup>
+</note>

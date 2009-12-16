@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Concurrency in Erlang 1</title>
+  <text xml:space="preserve"><note-content version="0.1">Concurrency in Erlang 1
+
+<italic>-module(area_server).
+-export([loop/0]).
+
+loop() -&gt;
+    receive
+	{rectangle, Width, Ht} -&gt;
+	    io:format("Area of rectangle is ~p~n", [Width * Ht]),
+	    loop();
+	{circle, R} -&gt;
+	    io:format("Area of circle is ~p~n", [3.14 * R * R]),
+	    loop();
+	<link:internal>Other</link:internal></italic><italic> -&gt;
+	    io:format("I don't know what the area of a ~p is ~n", [<link:internal>Other</link:internal></italic><italic>]),
+	    loop()
+end.</italic>
+
+
+<italic>2&gt; Pid = spawn(fun area_server:loop/0).</italic>
+&lt;0.38.0&gt;
+
+<italic>3&gt; Pid ! {rectangle, 6, 10}.</italic>
+Area of rectangle is 60
+{rectangle,6,10}
+</note-content></text>
+  <last-change-date>2009-01-21T22:47:59.5307450+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-21T22:47:59.5307450+03:00</last-metadata-change-date>
+  <create-date>2009-01-21T22:47:47.2647170+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>745</x>
+  <y>565</y>
+  <open-on-startup>False</open-on-startup>
+</note>

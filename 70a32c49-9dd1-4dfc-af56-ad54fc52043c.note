@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выделение дубликатов цветом</title>
+  <text xml:space="preserve"><note-content version="0.1">Выделение дубликатов цветом
+
+
+<link:internal>1</link:internal>. выделяем список
+2. условное форматирование
+3. вариант Формула
+4. =СЧЁТЕСЛИ($A:$A;A2)&gt;<link:internal>1</link:internal> (=COUNTIF($A:$A;A2)&gt;<link:internal>1</link:internal>)</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.5578640+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.5578640+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:11:47.1864590+04:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>10</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

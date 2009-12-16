@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Масса и энергия</title>
+  <text xml:space="preserve"><note-content version="0.1">Масса и энергия
+
+Из определения кинетической энергии T = интеграл от силы, то есть энергии затрачиваемой на перемещение.  F = d(mv)/dt
+
+-&gt;<italic> T = m * c^2 - m0 * c^2</italic>.
+
+Или:<italic> 	m * c^2 = m0 * c^2 + T</italic>.
+
+<italic>m * c^2</italic> - полная энергия тела и если тело покоится (T=0), то оно, тем не менее обладает энергией покоя <italic>m0 * c^2</italic>.
+
+То есть, кроме кинетической, потенциальной, электромагнитной, тепловой и других известных нам энергий она может проявляться и в связи с наличием у тела массы.
+
+1 кг в-ва обладает энергией 9*10^16 Дж.
+
+То есть, масса и энергия зависимые понятия. Масса может возникать и уничтожаться, но параллельно должно возникать или исчезать соответсвующее кол-во теплоты.
+
+</note-content></text>
+  <last-change-date>2009-08-17T15:40:38.6907250+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-17T15:40:38.6907250+04:00</last-metadata-change-date>
+  <create-date>2009-08-17T15:31:40.0100410+04:00</create-date>
+  <cursor-position>667</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1159</x>
+  <y>485</y>
+  <open-on-startup>False</open-on-startup>
+</note>

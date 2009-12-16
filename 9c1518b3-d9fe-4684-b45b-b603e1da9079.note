@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Текущий уровень изолированности</title>
+  <text xml:space="preserve"><note-content version="0.1">Текущий уровень изолированности
+
+<link:internal>SQL</link:internal>&gt; select * from dual where 1=0 for update;
+
+DUMMY
+-----
+
+<link:internal>SQL</link:internal>&gt; select to_char(flag,'XXXXXXXX') from v$transaction;
+
+TO_CHAR(FLAG,'XXXXXXXX')
+------------------------
+     1603
+
+<link:internal>SQL</link:internal>&gt; rollback;
+
+Rollback complete
+
+<link:internal>SQL</link:internal>&gt; alter session set isolation_level=serializable;
+
+Session altered
+
+<link:internal>SQL</link:internal>&gt; select to_char(flag,'XXXXXXXX') from v$transaction;
+
+TO_CHAR(FLAG,'XXXXXXXX')
+------------------------
+ 10001603
+
+<link:internal>SQL</link:internal>&gt; </note-content></text>
+  <last-change-date>2009-10-17T22:10:58.7749090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.7749090+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:03:17.2856960+03:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

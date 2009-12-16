@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>List comprehension in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">List comprehension in Haskell
+
+   1. <link:internal>ghci</link:internal>&gt; [x*2 | x &lt;- [1..10]]  
+   2. [2,4,6,8,10,12,14,16,18,20]  
+
+   1. <link:internal>ghci</link:internal>&gt; [x*2 | x &lt;- [1..10], x*2 &gt;= 12]  
+   2. [12,14,16,18,20]  
+
+   # <link:internal>ghci</link:internal>&gt; [ x | x &lt;- [50..100], x `<link:internal>mod</link:internal>` 7 == 3]  
+   # [52,59,66,73,80,87,94]
+
+   1. boomBangs xs = [ <link:internal>if</link:internal> x &lt; 10 then "BOOM!" else "BANG!" | x &lt;- xs, odd x]   
+   2. <link:internal>ghci</link:internal>&gt; boomBangs [7..13]  
+   3. ["BOOM!","BOOM!","BANG!","BANG!"]   
+
+   1. <link:internal>ghci</link:internal>&gt; [ x*y | x &lt;- [2,5,10], y &lt;- [8,10,11]]  
+   2. [16,20,22,40,50,55,80,100,110]   
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:09:59.8266200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:09:59.8266200+04:00</last-metadata-change-date>
+  <create-date>2009-10-11T11:53:06.7591280+04:00</create-date>
+  <cursor-position>410</cursor-position>
+  <width>585</width>
+  <height>329</height>
+  <x>1036</x>
+  <y>603</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Принятие решение о том, что отводим курсовую</title>
+  <text xml:space="preserve"><note-content version="0.1">Принятие решение о том, что отводим курсовую
+
+<italic>Если рублевые суммы по сопоставляемым проводкам не равны -&gt; курсовая.</italic>
+
+(S) \Classes\CustVendSettle\settleNow - line 827:
+
+<link:internal>if</link:internal> (Currency::amount(<highlight>settleAmountMSTDebet</highlight>  + usedCashDiscMSTDebet  + creditNoteUsedCashDiscMSTDebet + <highlight>settleAmountMSTCredit</highlight> + usedCashDiscMSTCredit + creditNoteUsedCashDiscMSTCredit) != 0)
+
+settleAMountMSTDebet и settleAmountMSTCredit - это сумма платежа на дату счета-фактуры в рублях и сумма платежа на дату платежа (у меня платеж меньше счета-фактуры - иначе было бы наоборот).
+
+Вот где они получаются:
+
+620:
+
+            // *** Calculate currency difference to be posted into the GL ***
+            <link:internal>if</link:internal> (custVendTransDebet.amountCur == custVendTransDebet.settleAmountCur)
+            {
+		....
+<highlight>                settleAmountMSTDebet        = custVendTransDebet.amountMST - (custVendTransDebet.settleAmountMST - custVendTransDebet.exchAdjustmentRealized);</highlight>   // 10(платеж) * с-ф в рублях / с-ф в баксах
+                ....
+            }
+            else
+            {
+
+657:
+
+            <link:internal>if</link:internal> (custVendTransCredit.amountCur == custVendTransCredit.settleAmountCur)
+            {
+		....
+<highlight>                settleAmountMSTCredit       = custVendTransCredit.amountMST - (custVendTransCredit.settleAmountMST - custVendTransCredit.ExchAdjustmentRealized); //SEKL, Reappraisal document</highlight>   -258.88 (0)
+                .... 
+            }
+            else
+            {
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.5272400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.5272400+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T12:01:32.2509190+04:00</create-date>
+  <cursor-position>1137</cursor-position>
+  <width>959</width>
+  <height>700</height>
+  <x>0</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

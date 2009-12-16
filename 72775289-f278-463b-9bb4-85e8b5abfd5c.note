@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы в Cpp</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы в Cpp
+
+<link:internal>Declaration vs Difinition</link:internal>
+<link:internal>Массивы в C</link:internal>
+<link:internal>Структуры в C</link:internal>
+<link:internal>Область видимости</link:internal>
+<link:internal>Использование const</link:internal>
+<link:internal>Статические переменные и функции</link:internal>
+<link:internal>Casting в CPP</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T09:06:07.7146970+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:06:07.7146970+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:54:36.5202010+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>411</x>
+  <y>43</y>
+  <open-on-startup>False</open-on-startup>
+</note>

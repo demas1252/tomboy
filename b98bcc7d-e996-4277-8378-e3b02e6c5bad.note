@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация троичного поиска на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация троичного поиска на Python
+
+def f(x):
+    return x*x
+
+def ternarySearch(f, left, right, precision):
+    <link:internal>if</link:internal>(right - left &lt; precision):
+        return (left + right) / 2
+
+    leftThird = ((left * 2) + right) / 3
+    rightThird = (left + (right * 2)) / 3
+
+    <link:internal>if</link:internal>(f(leftThird) &gt; f(rightThird)):
+        return ternarySearch(f, leftThird, right, precision)
+    else:
+        return ternarySearch(f, left, rightThird, precision)
+
+print ternarySearch(f, -10.0, 10.0, 0.01)
+</note-content></text>
+  <last-change-date>2009-05-25T16:08:13.1403700+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-25T16:08:13.1403700+04:00</last-metadata-change-date>
+  <create-date>2009-05-25T16:07:57.4434940+04:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>apt-cdrom</title>
+  <text xml:space="preserve"><note-content version="0.1">apt-cdrom
+
+<link:internal>apt</link:internal>-cdrom <link:internal>add</link:internal>
+<link:internal>apt</link:internal>-cdrom -d /cdrom<link:internal>1</link:internal> <link:internal>add</link:internal>
+</note-content></text>
+  <last-change-date>2008-09-01T12:46:37.6569580+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-01T12:46:37.6569580+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T23:51:50.7763360+04:00</create-date>
+  <cursor-position>25</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>71</y>
+  <open-on-startup>False</open-on-startup>
+</note>

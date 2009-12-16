@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ряды Тейлора</title>
+  <text xml:space="preserve"><note-content version="0.1">Ряды Тейлора
+
+e^x = <link:internal>1</link:internal> + x / <link:internal>1</link:internal>! + x^2 / 2! + x^3 / 3! ....
+
+Очень красивое решение:
+
+&lt;&lt;pre
+(define (e-power x) 
+  (local (
+          (define (e-taylor i) 
+            (/ (expt x i) (! i)))
+          
+          (define (! n) 
+            (cond 
+              [(= n 0) <link:internal>1</link:internal>] 
+              [else (* n (! (sub<link:internal>1</link:internal> n)))]))
+          
+          ) 
+    (series 10 e-taylor)
+    )
+  )
+
+(define (series n a-term) 
+  (cond 
+    [(= n 0) (a-term n)] 
+    [else (+ (a-term n) (series (- n <link:internal>1</link:internal>) a-term))])) 
+    
+&gt; (e-power <link:internal>1</link:internal>)
+2.7182818011463844797178130...    
+&gt;&gt;
+
+<link:internal>1</link:internal>. Когда мы вызываем e-power - мы реально вызываем series (n=10 (сумма последовательнсти); a-term = e-tailor)
+2. series суммирует первых 10 элементов последовательности; каждый член считается функцией e-tailor
+3. Самое главное - e-taylor - это first-class-fuction - она помнит x, с которым ее инициализировали и принимает i - член ряда.</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.1158370+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.1158370+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:03:11.1355550+03:00</create-date>
+  <cursor-position>335</cursor-position>
+  <width>705</width>
+  <height>688</height>
+  <x>970</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

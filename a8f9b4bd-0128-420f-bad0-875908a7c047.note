@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Расположение виджета в пределах другого</title>
+  <text xml:space="preserve"><note-content version="0.1">Расположение виджета в пределах другого
+
+require 'Qt4'
+
+app = Qt::Application.new(ARGV)
+
+window = Qt::Widget.new()
+window.resize(200, 120)
+
+quit = Qt::PushButton.new('Quit', window)
+quit.font = Qt::Font.new('Times', 18, Qt::Font::Bold)
+quit.setGeometry(10, 40, 180, 40)
+Qt::Object.connect(quit, SIGNAL('clicked()'), app, SLOT('quit()'))
+
+window.show()
+app.exec()
+</note-content></text>
+  <last-change-date>2009-05-31T17:55:31.9288640+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-31T17:55:31.9288640+04:00</last-metadata-change-date>
+  <create-date>2009-05-31T17:55:20.8318529+04:00</create-date>
+  <cursor-position>363</cursor-position>
+  <width>461</width>
+  <height>455</height>
+  <x>119</x>
+  <y>37</y>
+  <open-on-startup>False</open-on-startup>
+</note>

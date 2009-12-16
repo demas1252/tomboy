@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>KDE</title>
+  <text xml:space="preserve"><note-content version="0.1">KDE
+
+Install the <link:internal>gtk</link:internal>-theme-switch package, its in universe. Then use the <link:internal>gtk</link:internal>-theme-switch2 program to change your default <link:internal>gtk</link:internal>2 skin. It will be permanent and there’s no need to run <link:internal>gnome</link:internal>-settings-daemon.
+
+ps: it won’t affect your icon settings, so you have to <link:internal>add</link:internal> manually the following line to your<link:url> ~/.gtkrc-2.0</link:url>
+
+<link:internal>gtk</link:internal>-icon-theme-name = “Tango”
+
+Re: kde + firefox + Ctrl-F4
+System Settings -&gt; Keyboard &amp; Mouse -&gt; Global Keyboard Shortcuts -&gt; Kde Component - KWin
+
+<link:internal>Интеграция Firefox в KDE</link:internal>
+<link:internal>Сглаживание в QT</link:internal>
+<link:internal>Konqueror</link:internal>
+<link:internal>KMail</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:27.2466610+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.2466610+04:00</last-metadata-change-date>
+  <create-date>2008-09-13T14:17:02.9926920+04:00</create-date>
+  <cursor-position>520</cursor-position>
+  <width>662</width>
+  <height>468</height>
+  <x>631</x>
+  <y>273</y>
+  <open-on-startup>False</open-on-startup>
+</note>

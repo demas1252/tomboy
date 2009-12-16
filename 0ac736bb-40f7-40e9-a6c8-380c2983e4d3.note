@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удалил datafile - что делать</title>
+  <text xml:space="preserve"><note-content version="0.1">Удалил datafile - что делать
+
+
+&lt;&lt;pre
+<link:internal>SQL</link:internal>&gt; create tablespace dropme datafile '/tmp/dropme.dbf' size <link:internal>1</link:internal>m;
+
+Tablespace created.
+
+<link:internal>SQL</link:internal>&gt; !rm -f<link:url> /tmp/dropme.dbf</link:url>
+
+<link:internal>SQL</link:internal>&gt; shutdown abort
+<link:internal>ORACLE</link:internal> instance shut down.
+<link:internal>SQL</link:internal>&gt; startup
+<link:internal>ORACLE</link:internal> instance started.
+
+Total System Global Area 1677721600 bytes
+Fixed Size                  1262164 bytes
+Variable Size            1325403564 bytes
+Database Buffers          335544320 bytes
+Redo Buffers               15511552 bytes
+Database mounted.
+ORA-01157: cannot identify/lock data file 6 - see DBWR trace file
+ORA-01110: data file 6: '/tmp/dropme.dbf'
+<link:internal>SQL</link:internal>&gt; select name from v$datafile;
+
+NAME
+--------------------------------------------------------------------------------<link:url>
+/<link:internal>oracle</link:internal></link:url><link:url>/dropme/oradata/system01.dbf
+/<link:internal>oracle</link:internal></link:url><link:url>1/dropme/undotbs01.dbf
+/<link:internal>oracle</link:internal></link:url><link:url>1/dropme/<link:internal>sysaux</link:internal></link:url><link:url>01.dbf
+/<link:internal>oracle</link:internal></link:url><link:url>1/dropme/users01.dbf
+/<link:internal>oracle</link:internal></link:url><link:url>/dropme/oradata/indx01.dbf
+/tmp/dropme.dbf</link:url>
+
+6 rows selected.
+
+<link:internal>SQL</link:internal>&gt; alter database datafile '/tmp/dropme.dbf' offline drop;
+
+Database altered.
+
+<link:internal>SQL</link:internal>&gt; alter database open;
+
+Database altered.
+
+<link:internal>SQL</link:internal>&gt; select tablespace_name,status from dba_<link:internal>tablespaces</link:internal>;
+
+TABLESPACE_NAME                STATUS
+------------------------------ ---------
+SYSTEM                         ONLINE
+UNDOTBS<link:internal>1</link:internal>                       ONLINE
+<link:internal>SYSAUX</link:internal>                         ONLINE
+TEMP                           ONLINE
+USERS                          ONLINE
+INDX                           ONLINE
+DROPME                         ONLINE
+
+7 rows selected.
+
+<link:internal>SQL</link:internal>&gt; create table dropme ( x number ) tablespace dropme;
+create table dropme ( x number ) tablespace dropme
+*
+ERROR at line <link:internal>1</link:internal>:
+ORA-01658: unable to create INITIAL extent for segment in tablespace DROPME
+
+<link:internal>SQL</link:internal>&gt; select status||':'||name from v$datafile;
+
+STATUS||':'||NAME
+--------------------------------------------------------------------------------
+SYSTEM:/<link:internal>oracle</link:internal>/dropme/oradata/system01.dbf
+ONLINE:/<link:internal>oracle1</link:internal>/dropme/undotbs01.dbf
+ONLINE:/<link:internal>oracle1</link:internal>/dropme/<link:internal>sysaux</link:internal>01.dbf
+ONLINE:/<link:internal>oracle1</link:internal>/dropme/users01.dbf
+ONLINE:/<link:internal>oracle</link:internal>/dropme/oradata/indx01.dbf
+RECOVER:/tmp/dropme.dbf
+
+6 rows selected.
+
+<link:internal>SQL</link:internal>&gt; drop tablespace dropme;
+
+Tablespace dropped.
+
+<link:internal>SQL</link:internal>&gt; select * from v$version;
+
+BANNER
+----------------------------------------------------------------
+<link:internal>Oracle</link:internal> Database 10g Enterprise Edition Release 10.2.0.3.0 - Prod
+PL/<link:internal>SQL</link:internal> Release 10.2.0.3.0 - Production
+CORE    10.2.0.3.0      Production
+TNS for <link:internal>Linux</link:internal>: Version 10.2.0.3.0 - Production
+NLSRTL Version 10.2.0.3.0 - Production
+&gt;&gt;
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.0961090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.0961090+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:26:32.5856070+03:00</create-date>
+  <cursor-position>178</cursor-position>
+  <width>512</width>
+  <height>360</height>
+  <x>4</x>
+  <y>601</y>
+  <open-on-startup>False</open-on-startup>
+</note>

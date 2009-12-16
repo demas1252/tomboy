@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Natural numbers</title>
+  <text xml:space="preserve"><note-content version="0.1">Natural numbers
+
+
+*Итератор*
+&lt;&lt;pre
+(define (hellos n)
+  (cond 
+    [(zero? n) empty]
+    [else (cons 'hello (hellos (sub<link:internal>1</link:internal> n)))]))
+
+&gt; (hellos 5)
+(cons 'hello (cons 'hello (cons 'hello (cons 'hello (cons 'hello empty)))))
+
+&gt;&gt;
+
+*Факториал*
+&lt;&lt;pre
+(define (factorial n)
+  (cond 
+    [(zero? n) <link:internal>1</link:internal>]
+    [else (* n (factorial (sub<link:internal>1</link:internal> n)))]))
+    
+&gt;&gt;
+
+В принципе это просто другой вид записи рекурсии здесь ([<link:internal>Факториал на sheme</link:internal>]).
+
+*<link:internal>add</link:internal> to pi (без +)*
+
+&lt;&lt;pre
+(define (<link:internal>add</link:internal>-to-pi n)
+  (cond 
+    [(zero? n) 3.14]
+    [else (<link:internal>add1</link:internal> (<link:internal>add</link:internal>-to-pi (sub<link:internal>1</link:internal> n)))]))
+
+&gt;&gt;
+
+Чуть другой вид итератора ([<link:internal>Факториал на sheme</link:internal>]).
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.0637770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.0637770+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:04:24.9795910+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

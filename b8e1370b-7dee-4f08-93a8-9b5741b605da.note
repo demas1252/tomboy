@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Address book example</title>
+  <text xml:space="preserve"><note-content version="0.1">Address book example
+
+&lt;&lt;pre
+(define address-book empty)
+
+(define (<link:internal>add</link:internal>-to-address-book name phone)
+  (set! address-book (cons (list name phone) address-book)))
+
+(define (lookup name ab)
+  (cond
+    [(empty? ab) false]
+    [else (cond
+            [(symbol=? (first (first ab)) name)
+             (second (first ab))]
+            [else (lookup name (rest ab))])]))
+
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; (lookup 'Adam address-book)
+false
+&gt; (<link:internal>add</link:internal>-to-address-book 'Adam <link:internal>1</link:internal>)
+(void)
+&gt; (begin
+    (<link:internal>add</link:internal>-to-address-book 'Eve 2)
+    (<link:internal>add</link:internal>-to-address-book 'Chris 3))
+(void)
+&gt; (lookup 'Adam address-book)
+<link:internal>1</link:internal>
+&gt; (lookup 'Chris address-book)
+3
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.1543600+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.1543600+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:00:37.9170850+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

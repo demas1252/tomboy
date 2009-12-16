@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Блокировка при insert</title>
+  <text xml:space="preserve"><note-content version="0.1">Блокировка при insert
+
+На коленке:
+
+<link:internal>SQL</link:internal>&gt; create table t(n number primary key);
+
+Table created.
+
+<link:internal>SQL</link:internal>&gt; insert into t values(<link:internal>1</link:internal>);
+
+<link:internal>1</link:internal> row created.
+
+<link:internal>SQL</link:internal>&gt; 
+
+
+в другом сеансе:
+
+<link:internal>SQL</link:internal>&gt; insert into t values(<link:internal>1</link:internal>);</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.9785780+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.9785780+04:00</last-metadata-change-date>
+  <create-date>2008-04-05T19:53:37.9419040+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>533</height>
+  <x>9</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Протягивание параметров из закупки в журнал фактур</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Протягивание параметров из закупки</link:internal> в журнал фактур
+
+   1. Создаем в закупке поле, которые будет заполнять пользователь
+     2. В таблицы CustInvoiceJour/VendInvoiceJour добавляем поле этого же типа
+     3. На этих таблицах методы - initFromSalesTable()/initFromPurchTable() - добавляем в них сроку для протягивания поля из <link:internal>закупки</link:internal>/заказы в эти таблицы
+         this.PoolId = salesTable.SalesPoolId;
+     4. Класс FactureJourCreate_Ru
+         - ClassDeclaration - добавляем переменную
+              PoolId                  facturePoolId;
+         - initParameters() - добавляем параметр метода и строку инициализации переменной
+              PoolId                  _poolId)
+              ...
+               facturePoolId = _poolId;
+     5. Где-то (например, в initTotals() - хотя, я не уверен, что это лучшее место) протягиваем данное значение в журнал фактур
+         factureJour.PoolId = facturePoolId;
+     6. SalesFormLetter_Facture_Ru/PurchFormLetter_Facture_Ru
+         - createFacture_Ru() - добавляем параметр в вызов метода initParameters()
+             jourCreate.initParameters(this.proforma() ? NoYes::No : NoYes::Yes,
+             ....
+              tmpInvoiceJour.PoolId);
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:52.7933640+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.7933640+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:37:33.0206770+03:00</create-date>
+  <cursor-position>79</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Что делать - чтобы различными журналами можно было инвентаризовывать с разных складов одновременно</title>
+  <text xml:space="preserve"><note-content version="0.1">Что делать - чтобы различными журналами можно было инвентаризовывать с разных складов одновременно
+
+   Карточка номенклатуры -&gt; Настройки -&gt; Расположения (Warehouse Items)
+     
+     Например, создаем три строки:
+     "      "  Countin group1
+     "<link:internal>Склад</link:internal>1"  Countin group2
+     "<link:internal>Склад</link:internal>2"  Countin group3
+     
+     При содании строки инвентаризации по это строке и по этому складу в General - &gt; Counting Started будет проставлена галочка     
+     
+     Еще есть итея, что галочка "Блокир. номенкл. при инвентаризации в параметрах модуля Управление запасами." работает не корректно. То есть, ожидалось бы, чтобы при ее простановке все эти местоположения указывать не надо было бы.</note-content></text>
+  <last-change-date>2009-11-05T16:12:00.7404430+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:12:00.7404430+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:40:42.6169820+03:00</create-date>
+  <cursor-position>127</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

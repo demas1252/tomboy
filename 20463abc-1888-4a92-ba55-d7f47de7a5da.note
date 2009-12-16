@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск в глубину</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск в глубину
+
+depth-first search
+
+Один из методов обхода графа. Для каждой непройденной вершины необходимо найти все непройденные смежные вершины и повторить поиск для них.
+
+Пусть задан граф G=(V,E),  V - множество вершин; E - множество ребер.
+Предположим, что все <link:internal>ребра</link:internal> белые.
+
+1. Берем любую вершину V1.
+2. Выполняем для нее процедуру DFS(V1)
+3. Перекрашиваем ее в черный цвет.
+4. Повторяем 1-3 до тех пор, пока множество белых вершин не будет пустым.
+
+Процедура DFS:
+
+1. Перекрашиваем вершину в серый цвет.
+2. Для всякой вершины w, смежно с u, выполняем следующие два шага:
+    - если w - не окрашена, выполняем DFS(w)
+    - окрашиваем w в черный
+
+<link:internal>Пример поиска в глубину на Python</link:internal>
+</note-content></text>
+  <last-change-date>2009-08-09T21:35:05.9018810+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T21:35:05.9018810+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:44:55.2447610+03:00</create-date>
+  <cursor-position>687</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

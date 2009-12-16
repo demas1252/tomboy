@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>TSQL</title>
+  <text xml:space="preserve"><note-content version="0.1">TSQL
+
+<link:internal>Все что связано с IDENTITY</link:internal>
+<link:internal>Вычитание результатов одно запроса из результатов другого</link:internal>
+<link:internal>Выполнить команду для каждой базы данных</link:internal>
+<link:internal>Option recompile</link:internal>
+<link:internal>index 0</link:internal>
+<link:internal>Вставить стоку default values</link:internal>
+<link:internal>Вложенные транзакции</link:internal>
+<link:internal>Оконные функции в MS SQL</link:internal>
+<link:internal>Apply</link:internal>
+<link:internal>Pivoy and UnPivot</link:internal>
+<link:internal>Взять Date из DateTime</link:internal>
+<link:internal>Несколько sum в одном запросе</link:internal>
+<link:internal>Последовательно пронумеровать строки</link:internal>
+<link:internal>Пронумеровать строки по группам</link:internal>
+<link:internal>update данными другой таблицы</link:internal>
+<link:internal>Вставить рисунок в таблицу</link:internal>
+<link:internal>Case в select</link:internal>
+<link:internal>Обработка исключений в TSQL</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:23.7210810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.7210810+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:56:04.6244539+03:00</create-date>
+  <cursor-position>186</cursor-position>
+  <width>483</width>
+  <height>360</height>
+  <x>903</x>
+  <y>432</y>
+  <open-on-startup>False</open-on-startup>
+</note>

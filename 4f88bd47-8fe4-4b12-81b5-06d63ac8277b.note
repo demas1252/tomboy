@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Избавиться от повторений внутри команды</title>
+  <text xml:space="preserve"><note-content version="0.1">Избавиться от повторений внутри команды
+
+cp<link:url> /usr/src/linux/arch/i385/boot/bzImage /usr/src/linux/arch/i385/boot/bzImage.old</link:url> -&gt;
+cp<link:url> /usr/src/linux/arch/i385/boot/bzImage{,.old</link:url>}
+
+sudo !! - повторить предыдущую команду с правами root
+
+Ctrl-U - вырезает (в “буфер обмена”) всё от курсора до начала строки, Ctrl-W - вырезает (в “буфер обмена”) одно слово влево, Ctrl-Y - вставляет из “буфера обмена”, Ctrl-A - перейти в начало строки,</note-content></text>
+  <last-change-date>2008-04-12T19:42:42.4565429+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-12T19:42:42.4565429+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T19:40:08.9196830+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>695</width>
+  <height>360</height>
+  <x>8</x>
+  <y>95</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Процессы в Linux</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Процессы</link:internal> в Linux
+
+<link:internal>Порождение нового потока с помощью system</link:internal>
+<link:internal>Порождение нового потока с помощью exec</link:internal>
+<link:internal>Порождение нового потока с помощью fork</link:internal>
+<link:internal>Ожидание завершения дочернего процесса</link:internal></note-content></text>
+  <last-change-date>2009-04-01T16:18:08.5682920+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:18:08.5682920+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:44:24.3680419+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>605</y>
+  <open-on-startup>False</open-on-startup>
+</note>

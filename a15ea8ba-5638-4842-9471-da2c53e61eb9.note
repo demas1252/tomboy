@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Долгая синхронизация под Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Долгая синхронизация под Oracle
+
+    _Коллеги, первый раз ставлю <link:internal>Axapta</link:internal> на <link:internal>Oracle</link:internal>, та же проблема - слишком долгая синхронизация.
+     Кто-нибудь выяснил причину этой беды?_
+     
+     Вчера нарвался на то же самое при переходе на 10-ку.
+     Причина - запрос, который выдает ядро аксапты для определения списков полей индексов таблицы, например
+
+        _SELECT a.index_name, b.column_name, <link:internal>c</link:internal>.column_expression, a.index_type, a.uniqueness
+        FROM user_indexes a, user_ind_columns b, user_ind_expressions <link:internal>c</link:internal>
+        WHERE b.table_name=UPPER('INVENTLOCATION') AND a.index_name=b.index_name
+        AND b.index_name=<link:internal>c</link:internal>.index_name(+) AND b.column_position=<link:internal>c</link:internal>.column_position(+) ;_
+        
+        10-ка уходит в себя на 2-3 секунды на каждом таком запросе
+        
+        Помогло бы индексирование системных таблиц (OBJ$ и прочих) по которым построены эти вьюхи по полю NAME, но
+        
+        оракл на такие провокации не поддается "ORA-00701 object necessary for warmstarting database cannot be altered"
+        
+        В итоге создал материализованные вьюхи USER_INDEXES и USER_IND_COLUMNS и проиндексировал их прямо в схеме юзера под которым работает аксапта. Синхронизация после этого 4-5 минут. Никаких побочных эффектов пока не найдено, но гарантий дать не могу
+        
+        Скрипт для создания вьюшек
+        
+        _CREATE MATERIALIZED VIEW "USER_INDEXES"
+  AS select "INDEX_NAME","INDEX_TYPE","TABLE_OWNER","TABLE_NAME","TABLE_TYPE",
+    "UNIQUENESS","COMPRESSION","PREFIX_LENGTH","TABLESPACE_NAME",
+    "INI_TRANS","MAX_TRANS","INITIAL_EXTENT","NEXT_EXTENT",
+    "MIN_EXTENTS","MAX_EXTENTS","PCT_INCREASE","PCT_THRESHOLD",
+    "INCLUDE_COLUMN","FREELISTS","FREELIST_GROUPS","PCT_FREE",
+    "LOGGING","BLEVEL","LEAF_BLOCKS","DISTINCT_KEYS",
+    "AVG_LEAF_BLOCKS_PER_KEY","AVG_DATA_BLOCKS_PER_KEY",
+    "CLUSTERING_FACTOR","STATUS","NUM_ROWS","SAMPLE_SIZE",
+    "LAST_ANALYZED","DEGREE","INSTANCES","PARTITIONED",
+    "TEMPORARY","GENERATED","SECONDARY","BUFFER_POOL",
+    "USER_STATS","DURATION","PCT_DIRECT_ACCESS","ITYP_OWNER",
+    "ITYP_NAME","PARAMETERS","GLOBAL_STATS","DOMIDX_STATUS",
+    "DOMIDX_OPSTATUS","FUNCIDX_STATUS","JOIN_INDEX",
+    "IOT_REDUNDANT_PKEY_ELIM","DROPPED" FROM "SYS"."USER_INDEXES";
+
+  CREATE MATERIALIZED VIEW "USER_IND_COLUMNS"
+  AS select "INDEX_NAME",
+    "TABLE_NAME","COLUMN_NAME","COLUMN_POSITION","COLUMN_LENGTH",
+    "CHAR_LENGTH","DESCEND" FROM "SYS"."USER_IND_COLUMNS";
+
+CREATE UNIQUE INDEX "T_USER_IDX_1" 
+    ON "USER_INDEXES"  ("INDEX_NAME") ;
+
+CREATE INDEX "T_USER_IND_COLUMNS_IDX_1" 
+    ON "USER_IND_COLUMNS"  ("INDEX_NAME", "COLUMN_POSITION");
+
+CREATE INDEX "T_USER_IND_COLUMNS_IDX_2" 
+    ON "USER_IND_COLUMNS"  ("TABLE_NAME") ;_</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.2162680+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.2162680+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:19:12.2773639+03:00</create-date>
+  <cursor-position>2696</cursor-position>
+  <width>732</width>
+  <height>488</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

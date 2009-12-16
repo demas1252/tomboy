@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>повышение производительности запросов и операоров DDL вследствии партиционирования</title>
+  <text xml:space="preserve"><note-content version="0.1">повышение производительности запросов и операоров DDL вследствии партиционирования
+
+<link:internal>1</link:internal>. Хорошо распараллеливаются insert и delete.  Элеменарно за счет того, что в непартицианированных таблицах их нельзя было распараллелить. Select - ы и так не плохо параллелились.
+2. Хорошо работает в хранилищах данных, но не в OLTP.  В хранилищах мало пользователей и много данных.  Выгодно, чтобы пользователи использовали все ресурсы. А oltp слишком конкуренная вещь,
+
+Ну и вообще,  в oltp там где предполагается <link:internal>партиционирование</link:internal> лучше сделать индекс.
+То есть, следует очень осторожно относиться к партицианированию, как к средсву повышения производительности.</note-content></text>
+  <last-change-date>2009-04-25T18:32:31.0544940+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:31.0544940+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:58:37.2782530+03:00</create-date>
+  <cursor-position>111</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

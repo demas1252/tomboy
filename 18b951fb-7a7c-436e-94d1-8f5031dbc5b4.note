@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сокращени длины по Лоренцу-Фицджеральду</title>
+  <text xml:space="preserve"><note-content version="0.1">Сокращени длины по Лоренцу-Фицджеральду
+
+Если метровая линейка находится в движущемся автомобиле, то будет ли она казаться наблюдателю, стоящему около дороги, той же длины, что и человеку, сидящему в автомобиле.
+
+	<italic>L = L0 * sqrt(1 -v^2 / c^2)</italic>
+
+То есть, тому что стоит, он будет казаться более коротким.</note-content></text>
+  <last-change-date>2009-07-29T15:27:23.5794370+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-29T15:27:23.5794370+04:00</last-metadata-change-date>
+  <create-date>2009-07-29T15:24:55.1317120+04:00</create-date>
+  <cursor-position>241</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1188</x>
+  <y>388</y>
+  <open-on-startup>False</open-on-startup>
+</note>

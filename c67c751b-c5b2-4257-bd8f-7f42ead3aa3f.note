@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация метода Гауса на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация метода Гауса на Python
+
+def gausselim(A, B, pivoting = 0, ztol = 1.0e-8):
+    """
+     solves for X in AX = B.
+     A is a square matrix and B is a column vector.
+     pivoting = 0.  no pivoting
+              = 1.  <link:internal>partial</link:internal> row pivoting.
+              = 2   full pivoting (not implemented yet)
+     codes: 0 - success,
+            1 - near zero pivot encountered.Do not use the
+                returned values!
+     Returns (code,A, X, B)
+    """
+    size = len(A)
+    X    = [0.0] * size
+    R = range(size)
+    colperm = range(size)
+
+    # Triangularization.
+    for pivot in range(size):
+        m = A[pivot][pivot]
+	<link:internal>if</link:internal> pivoting == 1:
+           absm = <link:internal>abs</link:internal>(m)
+           for row in range(pivot + 1, size):
+              testm  = A[row][pivot]
+              atestm = <link:internal>abs</link:internal>(testm)
+	      <link:internal>if</link:internal> atestm &gt; absm:
+	         m = (testm)
+                 absm = <link:internal>abs</link:internal>(m)
+
+	         # exchange pivot row with row row.
+	         A[row], A[pivot] = A[pivot], A[row]
+	         B[row], B[pivot] = B[pivot], B[row]
+
+	         R[pivot],R[row]=R[row], R[pivot]
+
+        <link:internal>if</link:internal> absm &lt; ztol:
+           return (1, A,X,B)
+
+	for row in range(pivot +1, size):
+            kmul = float(A[row][pivot])/m
+            # <link:internal>Apply</link:internal> rectangular rule.(Reduction)
+            for col  in range(size -1, pivot, -1):
+                A[row][col] = A[row][col] - kmul * A[pivot][col]
+            B[row] = B[row] - kmul * B[pivot]
+            A[row][pivot] = 0.0
+
+   # Perform Back substitution.
+    for row in range(size-1, -1, -1):
+        sum = B[row]
+        for k in range(row+1, size):
+            sum -= (X[k] * A[row][k])
+        print row, sum,A[row][row]
+        X[row] = sum/A[row][row]
+
+    print "Computed value of X = ",  X
+    return (0, A,X,B)	    
+
+<link:internal>if</link:internal> __name__ == "__main__":
+    A = [[2,   1, -1],
+         [-3, -1,  2],
+         [-2,  1,  2]]
+
+    B = [8, -11, -3]
+
+    print "matrix: %s" % (A)
+    print "vector: %s" % (B)
+    print "Calling gausselim"
+    code, A, X,  B = gausselim(A, B, pivoting = 1)
+
+    print "X=",  X
+    print "Compare with actual solution:", [2,3,-1]
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.8708650+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.8708650+04:00</last-metadata-change-date>
+  <create-date>2009-07-02T14:00:35.0499210+04:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1037</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

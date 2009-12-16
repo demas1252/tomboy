@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перегрузить зависший linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Перегрузить зависший linux
+
+
+Бывает такое, что система зависает. Или иксы не выходят из свопа, или некий процесс отъел всю память и обработчик клавиатуры не может получить управление, или придётся признать, что у броузера медленно подтекает крышак, ну в общем, ничего не сделать, кроме ребута.
+
+А вот как его сделать, чтобы не повредить файловую систему. Прибегнем к так называемой магической ядерной кнопке, а именно сочетанию Alt-SysRq (он же PrintScreen) с разными буквами. Понадобятся нам такие, в этом порядке, с учётом, что у нас клавиатура qwerty:
+
+Alt-Sysrq-R переключить клавиатуру в режим XLATE (перехватить управление у иксов)
+Alt-Sysrq-E послать всем процессам, кроме инита, решительный привет, то есть SIGTERM
+Alt-Sysrq-I послать всем процессам, кроме инита, окнчательный привет, то есть SIGKILL
+Alt-Sysrq-S sync. Для последователй старой школы: нажать дважды :)
+Alt-Sysrq-U перемонтировать все <link:internal>файловые системы</link:internal> в read-only
+Alt-Sysrq-B начать загрузку
+
+Говорят, что эту последовательность (Alt-SysRq-REISUB) можно запомнить как слово BUSIER наоборот. От себя можно добавить, что если хочется освежить в голове эту краткую мнемонику, то можно на консоли нажать Alt-SysRq-H, и будет выдана краткая <link:internal>справка</link:internal>. Для тех, кто не уверен, где у него консоль: надо нажать Ctrl-Alt-F1.
+
+Прямое обращение к ядру на перезагрузку - ctrl+alt+SysRq+B</note-content></text>
+  <last-change-date>2009-07-05T15:29:11.1910140+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-05T15:29:11.1910140+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:38:48.5491150+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>874</x>
+  <y>438</y>
+  <open-on-startup>False</open-on-startup>
+</note>

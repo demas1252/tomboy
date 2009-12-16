@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка счета на оплату в любом статусе</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка счета на оплату в любом статусе
+
+    Включает возможность обрабатывать счет на оплату по заказу, находящемуся в любом статусе
+      
+      Configuration Key = gm_general
+      SalesParameters.GM_Invoice4PaymInAnyStatus
+      
+      1. Класс SalesTableType.canInvoice4PaymBeUpdated_Ru(), .mayInvoice4PaymBeUpdated_Ru()
+      
+      Стандартный механизм позволяет обработку (кстати чего?) только в том случае, если статус (как я понимаю Заказа) - Открыто.  Установленная галка позволяет это делать в любом случае.
+      &gt;&gt; а им часто нужно было разнести счет на оплату, когда уже накладная и фактура разнесена
+      
+      2. Класс SalesQuantity_Invoice4Paym_Gm
+      
+      [source: anisimov]
+      &gt;&gt; смысл в том что доступность кнопки разноски зависит от того какое количество доступно к разноске
+      &gt;&gt; на стандарте для этого использовался класс SalesQuantity_Confirm          
+      &gt;&gt; я перекрыл логику этого класса
+
+
+</note-content></text>
+  <last-change-date>2008-03-28T22:07:10.4411350+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:07:10.4411350+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:07:08.8473119+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

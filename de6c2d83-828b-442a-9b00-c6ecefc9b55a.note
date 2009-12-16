@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>graphViz</title>
+  <text xml:space="preserve"><note-content version="0.1">graphViz
+
+Если из своей программы подготовить файл, специального формата, то данная утилита подготовит картинку-граф, визуализирующую его.
+
+Пример файла:
+
+digraph <link:internal>test</link:internal>{
+size = "25,25";
+11[label="-Forms-SysCodeProfilerStartStop-Methods-toggle(<link:internal>1</link:internal>)"];
+14[label="-Forms-SysCodeProfilerStartStop-Methods-toggle(4)"];
+15[label="-Forms-SysCodeProfilerStartStop-Methods-toggle(5)"];
+23[label="-Classes-Info-onEventGoingIdle(3)"];
+25[label="-Classes-Info-onEventGoingIdle(5)"];
+21[label="-Classes-Info-operationProgressClear(<link:internal>1</link:internal>)"];
+25[label="-Classes-Info-operationProgressClear(5)"];
+26[label="-Classes-Info-onEventGoingIdle(6)"];
+21[label="-Classes-Info-formNotify(<link:internal>1</link:internal>)"];
+23[label="-Classes-Info-formNotify(3)"];
+
+11 -&gt; <link:internal>1</link:internal>;
+14 -&gt; 2;
+15 -&gt; 3;
+23 -&gt; 4;
+25 -&gt; 5;
+21 -&gt; 6;
+25 -&gt; 7;
+26 -&gt; 8;
+21 -&gt; 9;
+23 -&gt; 10;
+
+}</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.7314410+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.7314410+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:13:56.5375290+03:00</create-date>
+  <cursor-position>37</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

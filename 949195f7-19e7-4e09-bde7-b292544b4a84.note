@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MustBeQuotationControlled</title>
+  <text xml:space="preserve"><note-content version="0.1">MustBeQuotationControlled
+
+
+а не сталкивался - StatusIssue::QuotationIssue и movement.mustBeQuotationControlled где-нибудь реально используется ? 
+
+ 15:33:29 fed 
+неа 
+15:33:36 я даже не понял зачем это если честно 
+
+15:33:57 adem 
+то есть, я не вижу не одного наследника movement, который бы возвращал true 
+
+ 15:34:00 fed 
+наверное только для того чтобы можно было в inventSum в поле прописать сколько штук уже попало в компреды 
+15:34:09 smmInventMov_qoutation 
+
+</note-content></text>
+  <last-change-date>2008-03-28T22:14:11.2198730+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:14:11.2198730+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:14:09.7504820+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

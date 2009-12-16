@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Алгоритм Дейкстры</title>
+  <text xml:space="preserve"><note-content version="0.1">Алгоритм Дейкстры
+
+он же <italic>Shortest Path First</italic>
+
+Находит кратчайшее расстояние от одной из вершин графа до всех остальных. Работает только для графов без отрицательных ребер.
+
+Хорошее описание с картинками здесь:
+<link:url>http://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%94%D0%B5%D0%B9%D0%BA%D1%81%D1%82%D1%80%D1%8B</link:url>
+
+Работает так:
+
+<list><list-item dir="ltr">берем целевую вершину, расстояние до которой меряем  и ставим ей метку 0; остальным - бесконечность
+</list-item><list-item dir="ltr">берем всех ее соседей; для каждого из соседей определяем метку как min(текущая метка вершины; метка откуда мы идем + длина <link:internal>ребра</link:internal>)
+</list-item><list-item dir="ltr">после этого помеаем вершину как обработанную и больше к ней не возвращаемся
+</list-item><list-item dir="ltr">выбраем вершину с минимальной меткой из необработанных и повторяем с шага 2</list-item></list>
+
+Производительность зависит от реализации.  Можно принять O(n^2 + m).
+Основной алгоритм n раз, в каждом из них n операций на нахождение минимуму + кол-во смен меток, которое не превосходит кол-ва ребер - m.
+
+<link:internal>Реализация алгоритма Дейкстры на Pyhton</link:internal></note-content></text>
+  <last-change-date>2009-08-07T13:37:29.9797390+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T13:37:29.9797390+04:00</last-metadata-change-date>
+  <create-date>2009-07-01T12:05:35.4590880+04:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>605</width>
+  <height>523</height>
+  <x>504</x>
+  <y>41</y>
+  <open-on-startup>False</open-on-startup>
+</note>

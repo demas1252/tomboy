@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование своих Excepton в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование своих Excepton в Ruby
+
+class RetryException &lt; RuntimeError
+	attr : ok_to_retry
+
+	def initialize(ok_to_retry)
+		@ok_to_retry = ok_to_retry
+	end
+end
+
+def read_data(socket)
+	data = socket.read(512)
+	<link:internal>if</link:internal> data.nil?
+		raise RetryException.new(true)
+	end
+	# .. normal processing
+end
+
+begin 
+	stuff = read_data(socket)
+rescue RetryException =&gt; detail
+	retry <link:internal>if</link:internal> detail.ok_to_retry
+	raise
+end
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:28.7960270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:28.7960270+04:00</last-metadata-change-date>
+  <create-date>2009-04-26T09:59:11.4977750+04:00</create-date>
+  <cursor-position>355</cursor-position>
+  <width>591</width>
+  <height>536</height>
+  <x>164</x>
+  <y>389</y>
+  <open-on-startup>False</open-on-startup>
+</note>

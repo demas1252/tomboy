@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обращение к переименной в thread-е</title>
+  <text xml:space="preserve"><note-content version="0.1">Обращение к переименной в thread-е
+
+count = 0 
+threads = []
+10.times do |i|
+  threads[i] = Thread.new do
+    sleep(rand(0.1))
+    Thread.current["mycount"] = count
+    count += 1
+  end
+end
+
+threads.each {|t| t.join; print t["mycount"], ", "}
+puts "count = #{count}"
+</note-content></text>
+  <last-change-date>2009-05-31T08:37:21.2622500+04:00</last-change-date>
+  <last-metadata-change-date>2009-05-31T08:37:21.2622500+04:00</last-metadata-change-date>
+  <create-date>2009-05-31T08:36:57.4227480+04:00</create-date>
+  <cursor-position>36</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

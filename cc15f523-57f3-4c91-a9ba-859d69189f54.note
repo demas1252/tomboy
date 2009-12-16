@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Размещения</title>
+  <text xml:space="preserve"><note-content version="0.1">Размещения
+
+Размещением из n элементов по m называются такие выборки, которые имея по n элементов, выбранных из m отличаются друг от друга либо составом, либо порядком элементов.
+
+A(n из m) = n * (n-1) * (n-2) ... (n-m+1)
+
+A(3 из 18) = 18 * 17 * 16</note-content></text>
+  <last-change-date>2009-06-02T11:49:48.3874450+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-02T11:49:48.3874450+04:00</last-metadata-change-date>
+  <create-date>2009-06-02T11:47:49.9234660+04:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>610</y>
+  <open-on-startup>False</open-on-startup>
+</note>

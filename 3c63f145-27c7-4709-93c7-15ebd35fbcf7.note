@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>man</title>
+  <text xml:space="preserve"><note-content version="0.1">man
+
+*categories*
+
+<link:internal>1</link:internal> - exe &amp; <link:internal>shell</link:internal> commands
+2 - system calls (<link:internal>kernel</link:internal>)
+3 - library calls (libraries)
+4 - special files (usually found in /dev)
+5 - file formats
+6 - games
+7 - macro packages
+8 - system administration commands
+9 - <link:internal>kernel</link:internal> routines (non-standard)
+n - new
+l - local
+p - public
+o - old
+
+*<link:internal>other</link:internal>*
+
+apropos &lt;&gt; (ex. security)
+
+
+<link:internal>Создание man-файлов</link:internal></note-content></text>
+  <last-change-date>2009-11-23T13:19:49.9114040+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.9114040+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:39:31.7952590+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>662</y>
+  <open-on-startup>False</open-on-startup>
+</note>

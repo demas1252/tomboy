@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Debian Package Manager</title>
+  <text xml:space="preserve"><note-content version="0.1">Debian Package Manager
+
+<link:internal>dpkg</link:internal>
+<link:internal>apt</link:internal>
+<link:internal>aptitude</link:internal>
+<link:internal>Как узнать где стоит софтина</link:internal>
+<link:internal>Примонтировать образы дисков с репозиториями</link:internal>
+<link:internal>Локальный репозиторий обновлений</link:internal>
+<link:internal>Установка MySql</link:internal>
+<link:internal>Как собрать свой пакет</link:internal>
+<link:internal>Зеркалирование репозитория Ubuntu</link:internal></note-content></text>
+  <last-change-date>2009-04-08T21:11:03.6172149+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-08T21:11:03.6172149+04:00</last-metadata-change-date>
+  <create-date>2008-08-31T14:11:12.0521960+04:00</create-date>
+  <cursor-position>188</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1176</x>
+  <y>58</y>
+  <open-on-startup>False</open-on-startup>
+</note>

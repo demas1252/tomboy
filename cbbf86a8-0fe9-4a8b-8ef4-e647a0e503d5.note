@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BeautifulSoap</title>
+  <text xml:space="preserve"><note-content version="0.1">BeautifulSoap
+
+<link:internal>1</link:internal>) You can <link:internal>find</link:internal> your table using one of these methods:
+
+a)
+target_table = soup.<link:internal>find</link:internal>('table', id='car_parts')
+
+b)
+<link:internal>tables</link:internal> = soup.findall('table')
+target_table = <link:internal>tables</link:internal>[2]
+
+<link:internal>The tables</link:internal> are put in a list in the order that they appear on the
+page.
+
+
+2) You can get all the td's in the table using this statement:
+
+all_tds = target_table.findall('td')
+
+
+3) You can get the contents of the tags using these statements:
+
+print all_tds[34].string
+print all_tds[49].string
+
+
+Here is an example:
+
+from BeautifulSoup import BeautifulSoup
+
+doc = """
+
+
+
+
+
+
+
+
+
+
+
+            hello
+            world	goodbye
+
+
+"""
+
+soup = BeautifulSoup(doc)
+
+<link:internal>tables</link:internal> = soup.findAll('table')
+target_table = <link:internal>tables</link:internal>[<link:internal>1</link:internal>]
+
+all_tds = target_table.findAll('td')
+print all_tds[0].string
+print all_tds[2].string
+
+--output:--
+hello
+goddbye </note-content></text>
+  <last-change-date>2009-10-12T12:00:17.1375870+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.1375870+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:14:27.4837560+03:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>471</width>
+  <height>360</height>
+  <x>2</x>
+  <y>663</y>
+  <open-on-startup>False</open-on-startup>
+</note>

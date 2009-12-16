@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Объектные привелегии</title>
+  <text xml:space="preserve"><note-content version="0.1">Объектные привелегии
+
+
+Возможность выполнять определенные действия (select, insert, delete, execute) на определенны объектами (таблицами, процедурами...)
+
+GRAND EXECUTE ON dbms_output TO demas;
+GRAND EXECUTE ON dbms_output TO demas WITH GRANT OPTION;
+
+WITH GRANT OPTION - позволяет demas-у далше назначать эти права.
+
+REVOKE SELECT ON dm.table FROM demas;
+
+<link:internal>Привелегии</link:internal>, разданные demas-ом другим пользователям, *исчезают* у них даже после того как этой <link:internal>привелегии</link:internal> лишится demas.</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.2566470+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.2566470+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:41:36.9506450+03:00</create-date>
+  <cursor-position>22</cursor-position>
+  <width>450</width>
+  <height>496</height>
+  <x>80</x>
+  <y>183</y>
+  <open-on-startup>False</open-on-startup>
+</note>

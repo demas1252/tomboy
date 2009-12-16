@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Backup-Restore</title>
+  <text xml:space="preserve"><note-content version="0.1">Backup-Restore
+
+/*----------------------------------------------------------------------------*/
+/*			Изменение Имени (Name) пользователя БД		      */
+/*----------------------------------------------------------------------------*/
+exec sp_configure 'allow updates', <link:internal>1</link:internal>
+reconfigure with override
+
+update Имя_БД.dbo.sysusers set name = 'Новое_Имя' where name = 'Старое_Имя'
+
+exec sp_configure 'allow updates', 0
+reconfigure with override
+
+/*----------------------------------------------------------------------------*/
+/* 			Подстановка нужного Login Name			      */
+/*----------------------------------------------------------------------------*/
+USE Нужная_БД
+
+exec sp_configure 'allow updates', <link:internal>1</link:internal>
+reconfigure with override
+
+exec sp_change_users_login 'update_one', 'gmcs', 'gmcs'
+
+exec sp_configure 'allow updates', 0
+reconfigure with override
+
+
+/*-----------------------------------------------------------------------------*/
+/*			Изменение владельца объектов БД			       */
+/*-----------------------------------------------------------------------------*/
+----------------------------
+	USE Нужная_БД
+----------------------------
+
+declare @newown as varchar (100)
+declare @oldown as varchar (100)
+declare @obj varchar (50)
+declare @strn varchar(8000)
+declare @oldid int
+set @obj = null
+
+-------------------------------
+-- Указать старого владельца --
+-------------------------------
+set @oldown = 'dbo'
+-------------------------------
+-- Указать нового владельца  --
+-------------------------------
+set @newown = 'dacha'
+
+
+select @oldid = uid from sysusers where name = @oldown
+
+while <link:internal>1</link:internal>=<link:internal>1</link:internal>
+begin
+	select top <link:internal>1</link:internal> @obj = name 
+	from sysobjects 
+	where xtype in ('u', 'v')
+	and (name &gt; @obj or @obj is null)
+	and uid = @oldid 
+	order by name
+	
+	<link:internal>if</link:internal> (@@rowcount = 0)
+		break
+	
+	select @strn = 'EXEC sp_changeobjectowner ''' +@oldown + '.' + @obj + ''', ''' + @newown + ''''
+	exec (@strn)
+
+end</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.8119030+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.8119030+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:19:58.5438440+03:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

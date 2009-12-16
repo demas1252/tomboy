@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>(-101013) - [Microsoft][ODBC SQL Server Driver]Function sequence error</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>(-101013) - [Microsoft][ODBC SQL</link:internal> Server Driver]Function sequence error
+
+При открытии формы Администрирование\<link:internal>запросы</link:internal>\База данных\<link:internal>Блокировки</link:internal> пользователей <link:internal>базы данных</link:internal> выводится сообщение об ошибке (-101013) - [Microsoft][ODBC SQL Server Driver]Function sequence error.
+При этом <link:internal>sql</link:internal>-запрос, формируемый в SysSQLBlockingMSSQL.<link:internal>totalSQL</link:internal>(), если его выполнить непосредственно в <link:internal>MS SQL</link:internal> Query Analyzer выполняется успешно.
+
+~~~~~
+
+GRANT VIEW SERVER STATE TO bmssa</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.2291000+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.2291000+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T12:03:12.6120430+04:00</create-date>
+  <cursor-position>99</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>50</y>
+  <open-on-startup>False</open-on-startup>
+</note>

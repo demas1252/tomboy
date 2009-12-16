@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Mercurial faq</title>
+  <text xml:space="preserve"><note-content version="0.1">Mercurial faq
+
+<italic><link:broken>Undo results of "hg </link:broken></italic><italic><link:internal>add</link:internal></italic><italic><link:broken>"</link:broken></italic>
+
+	hg status -an0 | xargs -r0 hg revert
+
+<italic><link:broken>Внешний diff</link:broken></italic>
+
+	В .hgrc добавляем следующие строки:
+	<italic>[extensions]
+	extdiff=
+
+	[extdiff]
+	cmd.mdiff=meld
+</italic>
+	Теперь можно писать так:
+	<italic>hg mdiff source.txt</italic>
+
+<italic>.hgignore</italic>
+	
+	Создаем файл .hgignore (в каталоге проекта), в который впишем все файлы, которые не нужно включать в рассчеты)
+
+	syntax: glob
+	*.<link:internal>pyc</link:internal>
+	*~
+</note-content></text>
+  <last-change-date>2009-11-23T21:09:00.7203910+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T21:09:00.7203910+03:00</last-metadata-change-date>
+  <create-date>2008-05-29T04:36:40.7986620+04:00</create-date>
+  <cursor-position>13</cursor-position>
+  <width>648</width>
+  <height>737</height>
+  <x>1024</x>
+  <y>333</y>
+  <open-on-startup>False</open-on-startup>
+</note>

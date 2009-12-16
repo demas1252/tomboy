@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запрет редактирования всех полей datasource</title>
+  <text xml:space="preserve"><note-content version="0.1">Запрет редактирования всех полей datasource
+
+static void allowEditFieldsOnFormDs_W(FormDataSource _dataSource, boolean _allowEdit)
+{
+    DictTable   dictTable;
+    DictField   dictField;
+    int         cx, idx;
+    ;
+
+    dictTable = new DictTable(_dataSource.table());
+
+    for(cx = <link:internal>1</link:internal>; cx &lt;= dictTable.fieldCnt(); cx ++)
+    {
+        dictField = dictTable.fieldObject(dictTable.fieldCnt2Id(cx));
+
+        <link:internal>if</link:internal>(! dictField.isSystem())
+        {
+            for(idx = <link:internal>1</link:internal>; idx &lt;= dictField.arraySize(); idx++)
+            {
+                _dataSource.object(fieldId2Ext(dictField.id(), idx)).allowEdit(_allowEdit);
+            }
+        }
+    }
+}</note-content></text>
+  <last-change-date>2008-06-15T23:42:45.8387220+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.8387220+04:00</last-metadata-change-date>
+  <create-date>2008-06-08T21:52:04.6251630+04:00</create-date>
+  <cursor-position>78</cursor-position>
+  <width>893</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

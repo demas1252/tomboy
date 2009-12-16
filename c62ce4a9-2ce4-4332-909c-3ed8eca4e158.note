@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование генераторов для взаимодействия с кодом</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование генераторов для взаимодействия с кодом
+
+def psychologist():
+    print 'Tell the problem'
+    while True:
+        answer = (yield)
+        <link:internal>if</link:internal> answer is not None:
+            <link:internal>if</link:internal> answer.endswith('?'):
+                print "Don't ask too many questions"
+            elif 'good' in answer:
+                print "go on..."
+            elif 'bad' in answer:
+                print "don't be a negative"
+
+free = psychologist()
+free.next()
+free.send('i feel bad')
+free.send('why?')
+free.next()
+
+-------------------------------------------------------
+
+Tell the problem
+don't be a negative
+Don't ask too many questions
+</note-content></text>
+  <last-change-date>2009-03-24T09:31:19.3225350+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:31:19.3225350+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:31:02.8337360+03:00</create-date>
+  <cursor-position>87</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>2</x>
+  <y>69</y>
+  <open-on-startup>False</open-on-startup>
+</note>

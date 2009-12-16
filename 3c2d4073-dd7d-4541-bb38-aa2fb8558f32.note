@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Emacs
+
+<link:internal>Запуск emacs в консоли</link:internal>
+<link:internal>Русские буквы в Emacs</link:internal>
+<link:internal>Горячие клавиши emacs</link:internal>
+<link:internal>Клавиатурные макросы emacs</link:internal>
+<link:internal>Поиск в Emacs</link:internal>
+<link:internal>Связка Emacs c языками программирования и CVS</link:internal>
+<link:internal>Темы в Emacs</link:internal>
+<link:internal>Gnus</link:internal>
+
+<link:internal>Перечень модулей для Emacs</link:internal>
+
+<link:internal>Org Mode</link:internal>
+
+<link:internal>Открывать все файлы в одном и том же emacs</link:internal>
+
+M-x ecb-activate
+&lt;link:url&gt;<link:url>http://kulchitsky.org/rus/linux/emacs_convenient.html&lt;/link:url</link:url>&gt;
+
+Cc . g s - перейти к файлам
+</note-content></text>
+  <last-change-date>2009-09-14T16:11:49.1168580+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-14T16:11:49.1168580+04:00</last-metadata-change-date>
+  <create-date>2008-07-25T23:28:58.5658130+04:00</create-date>
+  <cursor-position>132</cursor-position>
+  <width>549</width>
+  <height>366</height>
+  <x>906</x>
+  <y>239</y>
+  <open-on-startup>False</open-on-startup>
+</note>

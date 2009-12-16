@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Arch</title>
+  <text xml:space="preserve"><note-content version="0.1">Arch
+
+<link:internal>Установка Arch</link:internal>
+<link:internal>Роутинг в Arch</link:internal>
+<link:internal>Google Earth in Arch</link:internal>
+<link:internal>Моя звуковуха на ноуте</link:internal>
+<link:internal>ABS</link:internal>
+<link:internal>PKGBUILD для иконок</link:internal>
+<link:internal>Репозитории Arch</link:internal>
+<link:internal>Шрифты как в ubuntu</link:internal></note-content></text>
+  <last-change-date>2009-11-08T14:24:20.7513410+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-08T14:24:20.7513410+03:00</last-metadata-change-date>
+  <create-date>2008-11-20T22:31:09.5684550+03:00</create-date>
+  <cursor-position>81</cursor-position>
+  <width>476</width>
+  <height>360</height>
+  <x>125</x>
+  <y>220</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вопросы</title>
+  <text xml:space="preserve"><note-content version="0.1">Вопросы
+
+<link:internal>1. Python</link:internal> -- global keyword
+2. Answer to <link:internal>scheme</link:internal>:<link:internal>apply</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:36.0545240+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.0545240+04:00</last-metadata-change-date>
+  <create-date>2008-10-19T19:46:35.9686640+04:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1092</x>
+  <y>493</y>
+  <open-on-startup>False</open-on-startup>
+</note>

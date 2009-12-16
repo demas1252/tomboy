@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример посложнее на CherryPy</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример посложнее на CherryPy
+
+Запускать нужно с опцией -W ignore, так как <link:internal>python</link:internal> 2.6 как то не корректно отрабатывает.
+
+#!/usr/bin/<link:internal>python</link:internal>
+
+import os.path
+import time
+
+import <link:internal>cherrypy</link:internal>
+
+_ curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
+_notes = []
+
+_header = """
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Random notes&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;"""
+
+_footer = """
+ &lt;/body&gt;
+&lt;/html&gt;"""
+
+_note_form = """
+  &lt;form method="post" action="post" class="form"&gt;
+    &lt;input type="text" value="Your note here ..." name="text" size="60"&gt;&lt;/input&gt;
+    &lt;input type="submit" value="<link:internal>Add</link:internal>"&gt;&lt;/input&gt;
+  &lt;/form&gt;"""
+
+_author_form = """
+  &lt;form method="post" action="set"&gt;
+    &lt;input type="text" name="name"&gt;&lt;/input&gt;
+    &lt;input type="submit" value="Switch"&gt;&lt;/input&gt;
+  &lt;/form&gt;"""
+
+_note_view = """
+  &lt;br/&gt;
+   %s
+   %s - %s &lt;a href="/note/%d"&gt;(%d)&lt;/a&gt;"""
+
+class Note(object):
+    def __init__(self, author, note):
+        self.id = None
+        self.author = author
+        self.note = note
+        self.timestamp = time.gmtime(time.time())
+    def __str__(self):
+        return self.note
+
+class NoteApp:
+    _cp_config = { 'tools.sessions.on' : True }
+
+    def _render_note(self, note):
+        return _note_view % (note, note.author, time.strftime("%a, %d %b %Y %H:%M:%S", note.timestamp),
+                             note.id, note.id)
+
+    @<link:internal>cherrypy</link:internal>.expose
+    def index(self):
+        author = <link:internal>cherrypy</link:internal>.session.get('author', None)
+        page = [_header]
+
+        <link:internal>if</link:internal> author:
+            page.append("""
+            Hello %s, please leave us a note.
+            &lt;a href="author"&gt;Switch identity&lt;/a&gt;."""
+                        % (author,))
+            page.append(_note_form)
+        else:
+            page.append("""&lt;a href="author"&gt;Set your identity&lt;/a&gt;""")
+
+        notes = _notes[:]
+        notes.reverse()
+        for note in notes:
+            page.append(self._render_note(note))
+            
+        page.append(_footer)
+        return page
+
+    @<link:internal>cherrypy</link:internal>.expose
+    def note(self, id):
+        try:
+            note = _notes[int(id)]
+        except:
+            return [_header, self._render_note(note), _footer]
+
+    @<link:internal>cherrypy</link:internal>.expose
+    def post(self, text):
+        author = <link:internal>cherrypy</link:internal>.session.get('author', None)
+        <link:internal>if</link:internal> not author:
+            raise <link:internal>cherrypy</link:internal>.HTTPREdirect('/author')
+        note = Note(author, text)
+        _notes.append(note)
+        note.id = _notes.index(note)
+        raise <link:internal>cherrypy</link:internal>.HTTPRedirect('/')
+
+class Author(object):
+    @<link:internal>cherrypy</link:internal>.expose
+    def index(self):
+        return [_header, _author_form, _footer]
+
+    @<link:internal>cherrypy</link:internal>.expose
+    def set(self, name):
+        <link:internal>cherrypy</link:internal>.session['author'] = name
+        return [_header, """
+        Hi %s. You can leave &lt;a href="/" title="Home"&gt;notes&lt;/a&gt;."""
+                % (name,), _footer]
+
+<link:internal>if</link:internal> __name__ == '__main__':
+    global_conf = {
+        'global' : { 'engine.autoreload.on' : False,
+                     'server.socket_host' : 'localhost',
+                     'server.socket_port' : 8080,
+                     }}
+
+    <link:internal>cherrypy</link:internal>.config.update(global_conf)
+
+    note_app = NoteApp()
+    note_app.author = Author()
+    <link:internal>cherrypy</link:internal>.tree.mount(note_app, '/')
+    <link:internal>cherrypy</link:internal>.server.quickstart()
+    <link:internal>cherrypy</link:internal>.engine.start()
+  
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.2742200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.2742200+04:00</last-metadata-change-date>
+  <create-date>2009-04-05T14:59:59.2640510+04:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

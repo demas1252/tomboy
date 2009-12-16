@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>dbm</title>
+  <text xml:space="preserve"><note-content version="0.1">dbm
+
+too many arguments to function DBM* dbm_open
+
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;gdbm/ndbm.h&gt;
+#include &lt;string.h&gt;
+
+#define <link:internal>TEST</link:internal>_<link:internal>DB</link:internal>_FILE “/tmp/dbm<link:internal>1</link:internal>_<link:internal>test</link:internal>”
+#define ITEMS_<link:internal>USED</link:internal> 3
+
+struct <link:internal>test</link:internal>_data {
+    char misc_chars[15];
+    int  any_integer;
+    char more_chars[21];
+};
+
+int main()
+{
+    struct <link:internal>test</link:internal>_data items_to_store[ITEMS_<link:internal>USED</link:internal>];
+    struct <link:internal>test</link:internal>_data item_retrieved;
+    char key_to_use[20];
+    int i, result;
+    datum key_datum;
+    datum data_datum;
+    DBM *dbm_ptr;   
+
+    dbm_ptr = dbm_open(<link:internal>TEST</link:internal>_<link:internal>DB</link:internal>_FILE, O_RDWR | O_CREAT, 0666);
+    <link:internal>if</link:internal> (!dbm_ptr) {
+        fprintf(stderr, “Failed to open database\n”);
+        exit(EXIT_FAILURE);
+    }    
+}</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.3038300+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.3038300+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:45:18.8045050+03:00</create-date>
+  <cursor-position>32</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

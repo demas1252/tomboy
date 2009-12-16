@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>NULL значения в Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">NULL значения в Oracle
+
+NULL значения в индексах <link:internal>Oracle</link:internal>
+<link:internal>NULL значения в при использовании count</link:internal></note-content></text>
+  <last-change-date>2009-04-07T22:36:32.9517230+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-07T22:36:32.9517230+04:00</last-metadata-change-date>
+  <create-date>2009-04-07T22:35:47.4809900+04:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>889</x>
+  <y>421</y>
+  <open-on-startup>False</open-on-startup>
+</note>

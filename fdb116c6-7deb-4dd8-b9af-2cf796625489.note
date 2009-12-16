@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sql задача 2 - проверка персонального состава организаций</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Sql</link:internal> задача 2 - проверка персонального состава организаций
+
+
+Есть 2 таблицы.
+Структура (упрощенно) первой (Organizacii):
+     name (наименование организации)
+     kol (количество сотрудников в этой организации)
+
+Структура второй (Rabotniki)
+     FIO (ФИО сотрудника)
+     name (наименование организации, в которой этот сотрудник работает)
+
+Задача: необходимо выбрать те наименования организаций, для которых цифра из первой таблицы не соответствует реальному кол-ву человек из второй, причем отобразить цифры
+
+---
+
+SELECT o.name, o.kol, COUNT(*) AS RealKol
+FROM Organizacii o
+   INNER JOIN Rabotniki r
+      o.name = r.name
+GROUP BY o.name, o.kol
+HAVING COUNT(*) != o.kol
+
+---
+
+select t1.name, kol, count(*) from t1 inner join t2
+on t1.name=t2.name group by t1.name, kol</note-content></text>
+  <last-change-date>2009-10-12T12:00:40.2070700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:40.2070700+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:00:48.0103230+03:00</create-date>
+  <cursor-position>86</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>486</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

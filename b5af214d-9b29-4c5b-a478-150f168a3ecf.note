@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Scheme Vector</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Scheme</link:internal> Vector
+
+Создаем вектор:
+
+&gt; (define v (vector <link:internal>1</link:internal> 2 3))
+&gt; v
+(vector <link:internal>1</link:internal> 2 3)
+
+Или так:
+
+&gt; (define (f x) (* x x))
+&gt; (define v2 (build-vector 5 f))
+&gt; v2
+(vector 0 <link:internal>1</link:internal> 4 9 16)
+
+Обращение по индексу:
+
+&gt; (vector-ref v2 3)
+9
+
+Размер вектора:
+
+&gt; (vector-length v2)
+5
+
+Проверка:
+
+&gt; (vector? v2)
+true
+
+<link:internal>Сумма элементов вектора</link:internal>
+<link:internal>Поиск элемента в векторе</link:internal>
+<link:internal>Умножение вектора на число</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:37.4127270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.4127270+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:55:01.0655920+03:00</create-date>
+  <cursor-position>342</cursor-position>
+  <width>450</width>
+  <height>869</height>
+  <x>144</x>
+  <y>151</y>
+  <open-on-startup>False</open-on-startup>
+</note>

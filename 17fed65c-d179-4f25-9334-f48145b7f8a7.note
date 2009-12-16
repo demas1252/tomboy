@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Инициализация массива строк в функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Инициализация массива строк в функции
+
+#include &lt;stdio.h&gt;
+
+void foo(char*** array) 
+{
+  *array = (char **) calloc(2, sizeof(char*));
+  <link:internal>if</link:internal>(!(*array)) 
+    {
+      printf("returning\n");
+      return;
+    }
+
+  (*array)[0] = "fu";
+  (*array)[1] = "bar";
+
+  printf("%s\n", (*array)[0]);
+  printf("%s\n", (*array)[1]);
+}
+
+int main()
+{
+  char **words_array;
+
+  foo(&amp;words_array);
+  printf("%s\n", words_array[0]);
+  printf("%s\n", words_array[1]);
+
+  return 0;
+} 
+</note-content></text>
+  <last-change-date>2009-07-14T09:56:45.3503890+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-14T09:56:45.3503890+04:00</last-metadata-change-date>
+  <create-date>2009-07-14T09:56:25.4550190+04:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

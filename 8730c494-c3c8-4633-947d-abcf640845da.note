@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>GM_UniversalFind_Class</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>GM_UniversalFind</link:internal>_Class
+
+    Это некий универсальный класс в слое gmcs в который передается тип, который нас интересует, а он возращает набор таблиц(?), в которые входит этот тип.
+     В new() - findTypeId - этот тип, который нас интересует; _isParents - искать все типы наследуемые от переданного (false) или сначала подняться до самого первого предка и только после перебрать всех наследников(true).  Естественно, что во втором случае данных будет гораздо больше.
+</note-content></text>
+  <last-change-date>2008-04-06T19:24:20.6301000+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T19:24:20.6301000+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:23:48.1893400+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

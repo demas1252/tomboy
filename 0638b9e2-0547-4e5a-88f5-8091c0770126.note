@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PGA</title>
+  <text xml:space="preserve"><note-content version="0.1">PGA
+
+    *manual vs auto*
+     
+     [source: asktom]
+     
+     <link:internal>1</link:internal>) Реально админ мало контролирует размер PGA. Есть всякие SORT_AREA_SIZE, но если 100 пользователей потребуют этого - выделится 10 * SORT_AREA_SIZE памяти.
+     2) По идее параметр должен меняться динамически. Чем больше памяти, тем меньше соит каждому из них давать.
+     
+     Поэтому и используется workarea_size_policy = AUTO и pga_aggregate_target size.
+     
+     select 
+         name, 
+  	     to_char(decode(unit,'bytes',value/1024/1024, value),'999,999,999.9') value,
+	      decode(unit, 'bytes', 'mbytes', unit) unit 
+     from v$pgastat
+     
+     _aggregate PGA auto target_ - количество PGA памяти, которая осталась после sorts, hash join и т.д. и которую можно потюнить
+     _total pga inuse_ - используемое PGA (кем -  см. select sum(pga_<link:internal>used</link:internal>_mem) / 1024 / 1024 from V$PROCESS)
+     _сache hit percentage_ - отражает эффективность настройки (рекомендуется более 90%)
+     
+     хе... после Кайт говорит, что Auto в 10g относится только к Dedicated (not Shared)
+    
+     [source: dsvolk]
+     
+     Этот механизм был введен в 9i. Понятно почему - память, которую захватил серверный процесс в процессе свой работы обратно не возвращается в ОС до завершения сессии. Таким образом, если у нас много сессий, даже если в данный момент не выполняют сортировок но они были раньше, памяти в ОС нет. Поэтому же и выставление большого значения для параметров sort_area_size (скажем в 10mb) на уровне экземпляра  было опасно  - мог начаться swapping. Дальше больше. Совсем не просто подсчитать сколько памяти занимают серверные <link:internal>процессы</link:internal> в данный момент. Т.е. реально оценить можно ли увеличивать _area_size параметры или нет. Теперь стоит Вам выставить два параметра, pga_aggregate_target (может меняться от 10mb до 400gb) и workarea_size_policy (auto) как больше беспокоиться ни о чем не надо.  <link:internal>Oracle</link:internal> сделает все за Вас. Ну почти все. 
+     
+     Первый вывод который можно сделать: память захватывается у ОС с упреждением. Долгое чтение документации привело только к фразе в Note:147806.<link:internal>1</link:internal> 
+     Pitfall: The <link:internal>automatic</link:internal> tuning can often waste PGA memory because more memory is allocated than needed.
+     Что на мой взгляд и видно на картинке. 
+
+     Второй вывод, память возвращается в ОС, что очень важно для нас.
+     Видимо, пока не достигнута граница maximum PGA allocated идет захват памяти на 'всякий случай'. Надо заметить, что сама граница  maximum PGA allocated не жесткая. Декларируется, что если потребуется - будет захвачено и больше. Верю.  
+
+     Как же оценить насколько оптимально настроена PGA ? 
+
+       Документация и Note:223730.<link:internal>1</link:internal> дают нам следующие формулы:
+        - Для  OLTP систем   PGA_AGGREGATE_TARGET = (&lt;Total Physical Memory &gt; * 80%) * 20%
+        - For DSS systems    PGA_AGGREGATE_TARGET = (&lt;Total Physical Memory &gt; * 80%) * 50%
+     
+     Заключение
+
+     Как мне кажется, что автоматическое управление памятью, как и все автоматическое, неплохо справляется с большей частью рутинной работы. И конечно в <link:internal>момент сортировки</link:internal> на <link:internal>1</link:internal>gb это работает не эффективно. Поэтому, мне кажется, что для сессий, которые явно выполняют очень большие <link:internal>сортировки</link:internal> следует выставлять WORKAREA_SIZE_POLICY  в manual на уровне сессии и дальше задавать *_area_size вручную. Надеюсь, что у Вас таких запросов не так много.
+    
+     [source: ora-killer]
+     
+     А как в этом случае правильно его задать?
+     
+     <link:internal>1</link:internal>) Выставляешь значение приблизительно
+     2) Даешь приложению поработать
+     3) Смотришь
+     <link:internal>SQL</link:internal>&gt; select name, value from v$<link:internal>sysstat</link:internal> where name like '%workarea%';
+        NAME
+        ---------------------------------------------------------------- 
+        workarea memory allocated
+        workarea executions - optimal
+        workarea executions - onepass
+        workarea executions - <link:internal>multipass</link:internal>
+     4) Нужно чтобы большинство операций приходилось на workarea executions - optimal, допустимо небольшое количество workarea executions - onepass, и желательно чтобы workarea executions - <link:internal>multipass</link:internal> было нулевым. Добивайся этих результатов путем постепенного повышения PGA_AGGREGATE_TARGET.
+     
+     Не забудьте, что pga_aggregate_target работает только в конфигурации dedicated server. Для shared server все равно необходимо выставлять sort_area_(retained)_size или пользоваться значениями по умолчанию.
+    
+     Хм... судя по всему, в 10-ке все заработало и для shared server.</note-content></text>
+  <last-change-date>2009-10-12T12:00:32.3970630+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.3970630+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:07:42.4613800+03:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>1117</width>
+  <height>713</height>
+  <x>6</x>
+  <y>89</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>sicp 1.17 (умножение с помощью сложения)</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>sicp 1</link:internal>.17 (умножение с помощью сложения)
+
+(define (mult a b)
+  (<link:internal>if</link:internal> (= b 0)
+      0
+      (+ a (* a (- b <link:internal>1</link:internal>)))))
+
+3 * 2
+3 + (3 * <link:internal>1</link:internal>)
+3 + (3 + (3 *0))
+3 + 3 + 0
+6
+
+<bold>Оптимизированный вариант</bold>
+
+(define (m_double x)
+  (+ x x))
+
+(define (m_halve x)
+  (/ x 2))
+
+(define (mult a b)
+  (<link:internal>if</link:internal> (= b 0)
+      0
+      (<link:internal>if</link:internal> (even? b)
+          (mult (m_double a) (m_halve b))
+          (+ a (* a (- b <link:internal>1</link:internal>))))))     </note-content></text>
+  <last-change-date>2008-06-15T23:42:45.9354470+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.9354470+04:00</last-metadata-change-date>
+  <create-date>2008-05-29T15:27:44.8718560+04:00</create-date>
+  <cursor-position>184</cursor-position>
+  <width>506</width>
+  <height>709</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

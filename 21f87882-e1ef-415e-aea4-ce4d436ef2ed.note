@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Erlang
+
+<link:internal>Функция, принимающая функцию на Erlang</link:internal>
+<link:internal>Функция, возвращающая функцию на Erlang</link:internal>
+<link:internal>Имитация for на Erlang</link:internal>
+<link:internal>Erlang List Comprehention</link:internal>
+<link:internal>Guards in Erlang</link:internal>
+<link:internal>Records in Erlang</link:internal>
+<link:internal>Функция возвращающая два списка (Erlang)</link:internal>
+<link:internal>Exceptions in Erlang</link:internal>
+<link:internal>Модули в Erlang</link:internal>
+<link:internal>Concurrency in Erlang</link:internal>
+<link:internal>Distributed Erlang</link:internal>
+<link:internal>Работа из Erlang c двоичными данными</link:internal>
+<link:internal>Взаимодействие Erlang с внешними программами</link:internal>
+<link:internal>Работа с файлами из Erlangs</link:internal>.
+<link:internal>Работа с сокетами из Erlang</link:internal>
+<link:internal>Работа с ETS</link:internal>
+<link:internal>Mnesia</link:internal>
+<link:internal>Приемы работы с OTP</link:internal>
+<link:internal>Nitrogen</link:internal>
+<link:internal>wxErlang</link:internal>
+
+<italic>См также:</italic>
+<link:internal>Как найти исходный код модуля Erlang</link:internal>
+<link:internal>Отладка в Erlang</link:internal>
+<link:internal>Установка модулей под Erlang</link:internal>
+<link:internal>Как указать путь к beam файлам</link:internal>
+</note-content></text>
+  <last-change-date>2009-08-07T14:28:23.8829940+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T14:28:23.8829940+04:00</last-metadata-change-date>
+  <create-date>2009-01-05T14:04:58.0452340+03:00</create-date>
+  <cursor-position>201</cursor-position>
+  <width>450</width>
+  <height>545</height>
+  <x>350</x>
+  <y>57</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные конструкции bash</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные конструкции bash
+
+<bold><italic>Условия </italic></bold>
+
+#!/bin/sh
+read timeofday
+
+<link:internal>if</link:internal> [ “$timeofday” = “yes” ]
+    then
+        echo “Good morning”
+elif [ “$timeofday” = “no” ]; then
+    echo “Good afternoon”
+else
+    echo “Sorry, $timeofday not recognized. Enter yes or no”
+    exit <link:internal>1</link:internal>
+fi
+exit 0
+
+<bold><italic>Циклы</italic></bold>
+
+#!/bin/sh
+foo=<link:internal>1</link:internal>
+while ["$foo" -le 20]
+do
+    echo "hey"
+    foo=$(($foo + <link:internal>1</link:internal>))
+done
+exit 0
+
+#!/bin/sh
+for file in $(ls f*.sh); do
+    lpr $file
+done
+exit 0</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.2308330+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.2308330+04:00</last-metadata-change-date>
+  <create-date>2008-05-29T07:29:35.4701130+04:00</create-date>
+  <cursor-position>385</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>681</x>
+  <y>509</y>
+  <open-on-startup>False</open-on-startup>
+</note>

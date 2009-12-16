@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Pairs and Lists</title>
+  <text xml:space="preserve"><note-content version="0.1">Pairs and Lists
+
+1. cons порождает пару   <italic>(cons 1 2) -&gt; (1.2)</italic>
+
+2. car == first, cdr == rest  <italic>(car (cons 1 2)) -&gt; 2</italic>
+
+3. если в результатирующем выражении появляется . за которой следует открывающаяся скобка - то они убираются (фиг знает почему)
+
+	<italic>&gt; (cons (list 2 3) 1) -&gt;  ((2 3) . 1)
+	&gt; (cons 1 (list 2 3))  -&gt;   (1 2 3)</italic>
+
+4. Насколько я понял, list и pair это правктически синонимы:
+
+	<italic> &gt; (pair? (cons 1 2))  -&gt;   #t
+	 &gt; (pair? (list 1 2 3))  -&gt;   #t
+</italic>
+5. вместо того, чтобы каждый раз писать слово list мы можем использовать слово <bold><italic>quote</italic></bold>
+
+	<italic> &gt; (list (list 1) (list 2) (list 3)) -&gt;  ((1) (2) (3))
+	 &gt; (quote ((1) (2) (3)))           -&gt;   ((1) (2) (3))</italic>
+
+6. или даже '
+
+	<italic> &gt; '(1 2 3) -&gt;  (1 2 3)</italic>
+
+		<link:url>http://docs.plt-scheme.org/guide/Pairs__Lists__and_Scheme_Syntax.html</link:url></note-content></text>
+  <last-change-date>2008-10-02T11:31:12.7362030+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-02T11:31:12.7362030+04:00</last-metadata-change-date>
+  <create-date>2008-10-02T11:08:36.1310740+04:00</create-date>
+  <cursor-position>690</cursor-position>
+  <width>697</width>
+  <height>360</height>
+  <x>736</x>
+  <y>274</y>
+  <open-on-startup>False</open-on-startup>
+</note>

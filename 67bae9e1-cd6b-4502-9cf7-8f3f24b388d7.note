@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>FactureJour_RU::factureAmounts</title>
+  <text xml:space="preserve"><note-content version="0.1">FactureJour_RU::factureAmounts
+
+Создает <link:internal>mapFactureAmounts</link:internal> на основании фактуры, например из <link:internal>processPrepayment</link:internal>.
+
+sum(LineAmountMST, VAT..., Tax...)
+from <bold>FactureTrans_RU</bold>
+group by TaxCOde, ExchRate
+where FactrureId ==
+          Module ==
+
+То есть, на выходе мы получим:
+
+[TaxCode, dim , ''] -&gt; [Класс{Tax+Line, Line, Tax}]
+[TaxCode2, dim , ''] -&gt; [Класс{Tax+Line, Line, Tax}]
+....
+
+по одной фактуре.</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.8013540+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.8013540+04:00</last-metadata-change-date>
+  <create-date>2009-01-25T11:53:40.3682230+03:00</create-date>
+  <cursor-position>319</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1146</x>
+  <y>568</y>
+  <open-on-startup>False</open-on-startup>
+</note>

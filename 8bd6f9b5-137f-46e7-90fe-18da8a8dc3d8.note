@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление старых backup файлов</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление старых backup файлов
+
+На 2000-м backup-ы через месяц удалялись. На 2005 не могу настроить.
+Стоит: Backup set will expire: After 30 days
+
+Используйте Maintenance Cleanup Task в своем плане</note-content></text>
+  <last-change-date>2008-04-06T17:05:41.8188250+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T17:05:41.8188250+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T17:04:34.4385440+04:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

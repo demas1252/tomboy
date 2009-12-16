@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SettleExec и EmplAdvanceReport_Settle_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">SettleExec и EmplAdvanceReport_Settle_Ru
+
+Тут вобщем то все считает класс EmplAdvanceReport_Settle_Ru.
+
+<italic>balanceMst = this.<link:internal>checkByBalance</link:internal></italic><italic>(headerTransDate,emplAccount);</italic>  - это мы по проводкам (emplTrans) получаем открытое сальдо по подотчетнику на дату, предшествующую дате отчета ( + мы там пытаемся накинуть что-то по курсовой)
+
+Потом мы перебираем все ав отчеты на дату нашего отчета (по данному подотчетнику), но созданные ранее нашего (по номерной серии) + сам наш.
+
+Для каждого из этих отчетов вызываем <link:internal>calcAdvanceBalance</link:internal>(). -&gt; получаем итоговый balanceMST - который по сути <bold>остаток/перерасход</bold>.
+
+settleAdvance.key(#1) - это <bold>аванс(ы)</bold>, которые мы суммируем в tmpAmount (settleExec на отчете) и получаем сумму <bold>итого получено</bold>.
+
+Теперь увеличиваем balanceMST (остаток) на итого получено.
+
+Вызываем <link:internal>receiveExec</link:internal>() и <link:internal>spentExec</link:internal>().
+
+
+</note-content></text>
+  <last-change-date>2009-06-07T14:09:48.3807400+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-07T14:09:48.3807400+04:00</last-metadata-change-date>
+  <create-date>2009-06-04T11:21:42.2921210+04:00</create-date>
+  <cursor-position>828</cursor-position>
+  <width>828</width>
+  <height>587</height>
+  <x>699</x>
+  <y>346</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Наследование</title>
+  <text xml:space="preserve"><note-content version="0.1">Наследование
+
+class A(object):
+def __init_(self):
+
+      print "a.init"
+
+      def start(self):
+            print "a.start"
+
+class B(A):
+
+      def _init_(self):
+            print "b.preinit"
+            A._init_(self)
+            print "b.postinit"
+      def start(self):
+            print "b.prestart"
+            super(B, self).start()
+            print "b.poststart"
+
+cl = B()
+cl.start()_
+
+      b.preinit
+      a.init
+      b.postinit
+
+      b.prestart
+      a.start
+      b.poststart</note-content></text>
+  <last-change-date>2008-03-28T14:05:29.4991040+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T14:05:29.4991040+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:05:28.1226190+03:00</create-date>
+  <cursor-position>393</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1219</x>
+  <y>597</y>
+  <open-on-startup>False</open-on-startup>
+</note>

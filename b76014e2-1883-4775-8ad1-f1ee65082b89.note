@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа со списками</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа со списками
+
+(define l (cons 'Earth (cons 'Venus (cons 'Mercury empty)))) 
+
+<bold>Поиск в списке</bold>
+
+Делается через рекурсию:
+
+(define (contains-doll? a-list-of-symbols)
+  (cond
+    [(empty? a-list-of-symbols) false]
+    [else (cond [(symbol=? (first a-list-of-symbols) 'doll) true]
+                [else (contains-doll? (rest a-list-of-symbols))])]))
+
+&gt; (define l1 (cons 'Earth (cons 'Venus (cons 'Mercury empty))))
+&gt; (define l2 (cons 'Earth (cons 'doll (cons 'Mercury empty))))
+
+&gt; (contains-doll? l1)
+false
+&gt; (contains-doll? l2)
+true
+
+<link:internal>Более сложный пример поиска в списке на Schema</link:internal>
+
+<bold>Cуммирование элементов списка</bold>
+
+<italic>(define (sum a-list-of-nums)
+  (cond
+    [(empty? a-list-of-nums) 0]
+    [else (+ (first a-list-of-nums) (sum (rest a-list-of-nums)))])
+
+&gt; (define l (cons 1 (cons 2 (cons 3 empty)))) 
+&gt; (sum l)
+6
+</italic>
+<bold>Извлечение элемента списка</bold>
+
+<italic>(define 
+  (elt list i) 
+  (<link:internal>if</link:internal></italic><italic> 
+   (= 0 i) 
+   (car list) 
+   (elt 
+    (cdr list) 
+    (- i 1))))</italic>
+
+<italic>&gt; (elt '(1 2 3 4) 2)
+3
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:30.5608090+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:30.5608090+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:03:56.2664300+03:00</create-date>
+  <cursor-position>575</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>214</x>
+  <y>313</y>
+  <open-on-startup>False</open-on-startup>
+</note>

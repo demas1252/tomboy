@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Массивы указателей</title>
+  <text xml:space="preserve"><note-content version="0.1">Массивы указателей
+
+Идея в том, что никто не мешает нам хранить указатели в массиве, так же как и остальные переменные.  Таким образом можно, например, передавать массивы строк. Надо только в объявлении функции, куда передается массив явно указывать, что это массив:
+
+#include &lt;stdio.h&gt;
+
+char *lineptr[10];
+
+int readlines(char *lineptr[]);
+void writelines(char *lineptr[]);
+
+int main(int argc, char *argv[])
+{
+  readlines(lineptr);
+  writelines(lineptr);
+  return 0;
+}
+
+
+int readlines(char *lineptr[]) {
+  char *p1 = "text1";
+  char *p2 = "text2";
+  char *p3 = "text3";
+
+  lineptr[0] = p1;
+  lineptr[1] = p2;
+  lineptr[2] = p3;
+}
+
+void writelines(char *lineptr[])
+{
+  int i;
+
+  for(i = 0; i &lt; 3; i++)
+    printf("%s\n", lineptr[i]);
+}
+</note-content></text>
+  <last-change-date>2009-03-24T08:51:57.1487970+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:51:57.1487970+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:51:49.6765920+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

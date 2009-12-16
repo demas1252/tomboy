@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Потоковые итераторы</title>
+  <text xml:space="preserve"><note-content version="0.1">Потоковые итераторы
+
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;<link:internal>iterator</link:internal>&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+typedef istream_<link:internal>iterator</link:internal>&lt;int&gt; istream_iter;
+
+int main() {
+  vector&lt;int&gt; a;
+  
+  ifstream file("data1.txt");
+  <link:internal>if</link:internal>(file.fail()) {
+    cout &lt;&lt; "Cannot open file data1.txt.\n";
+    return 1;
+  }
+
+  copy(istream_iter(file), istream_iter(), inserter(a, a.begin()));
+  copy(a.begin(), a.end(), ostream_<link:internal>iterator</link:internal>&lt;int&gt;(cout, " "));
+  cout &lt;&lt; endl;
+
+  return 0;
+}
+  
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.4388400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.4388400+04:00</last-metadata-change-date>
+  <create-date>2009-08-06T13:48:06.0281160+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>347</x>
+  <y>455</y>
+  <open-on-startup>False</open-on-startup>
+</note>

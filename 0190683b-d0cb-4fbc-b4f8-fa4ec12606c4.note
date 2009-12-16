@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Usefull scripts</title>
+  <text xml:space="preserve"><note-content version="0.1">Usefull scripts
+
+exec sp_attach_<link:internal>db</link:internal> @dbname = N'ax3_sp5',
+				  @filename1 = N'L:\Database\<link:internal>MSSQL</link:internal>2005\Data\ax3_sp5.mdf',
+				  @filename2 = N'M:\<link:internal>MSSQL</link:internal>_Logs\ax3_sp5_log.ldf';
+
+exec sp_attach_<link:internal>db</link:internal> @dbname = N'ax3_sp4_fp1',
+				  @filename1 = N'L:\Database\<link:internal>MSSQL</link:internal>2005\Data\ax3_sp4_fp1.mdf',
+				  @filename2 = N'M:\<link:internal>MSSQL</link:internal>_Logs\ax3_sp4_fp1_log.ldf';
+
+exec sp_attach_<link:internal>db</link:internal> @dbname = N'ax3_sp4_reptool',
+				  @filename1 = N'L:\Database\<link:internal>MSSQL</link:internal>2005\Data\ax3_sp4_reptool.mdf',
+				  @filename2 = N'M:\<link:internal>MSSQL</link:internal>_Logs\ax3_sp4_reptool_log.ldf';
+
+exec sp_attach_<link:internal>db</link:internal> @dbname = N'ax3_sp3_ipp',
+				  @filename1 = N'L:\Database\<link:internal>MSSQL</link:internal>2005\Data\ax3_sp3_ipp.mdf',
+				  @filename2 = N'M:\<link:internal>MSSQL</link:internal>_Logs\ax3_sp3_ipp_log.ldf';</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.5816390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.5816390+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:52:02.6426770+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

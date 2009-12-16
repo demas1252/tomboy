@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с файлами в С++</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Работа с файлами</link:internal> в С++
+
+<bold>Очистить файл</bold>
+
+<link:internal>1</link:internal>)
+#include &lt;stdio.h&gt;
+       int remove(const char *pathname);
+
+2) Функция open с флагом O_TRUNC. 
+
+3) Открыть для записи, закрыть.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.9466020+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.9466020+04:00</last-metadata-change-date>
+  <create-date>2008-06-14T22:21:53.9923740+04:00</create-date>
+  <cursor-position>141</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>237</x>
+  <y>246</y>
+  <open-on-startup>False</open-on-startup>
+</note>

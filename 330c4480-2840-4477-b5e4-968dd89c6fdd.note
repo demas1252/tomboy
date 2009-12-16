@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как узнать использовался ли индекс и каким запросом</title>
+  <text xml:space="preserve"><note-content version="0.1">Как узнать использовался ли индекс и каким запросом
+
+
+Только для 2005:
+
+_SELECT  object_name(ius.[object_id]) table_name, si.name, si.dpages/128 as [size, mb], ius.user_seeks, ius.user_scans, ius.user_lookups,
+ius.last_user_seek, ius.last_user_scan
+FROM sys.dm_<link:internal>db</link:internal>_index_usage_stats ius
+join sysindexes si on si.id = ius.[object_id] and si.indid = ius.index_id
+WHERE database_id = <link:internal>DB</link:internal>_ID() --and ius.user_seeks = 0 and ius.user_scans = 0
+and si.indid &lt;&gt; <link:internal>1</link:internal>
+order by 3 desc_</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.5982260+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.5982260+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:35:28.3956500+04:00</create-date>
+  <cursor-position>80</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>669</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

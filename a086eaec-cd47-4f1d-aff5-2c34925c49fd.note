@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Приближенные методы решения игр</title>
+  <text xml:space="preserve"><note-content version="0.1">Приближенные методы решения игр
+
+Когда <italic>a</italic> и <italic>b</italic> близки нет необходимости искать точное решение - достаточно выбрать чистые минимаксные значения.
+
+<list><list-item dir="ltr">Выбираем свою произвольную стратегию
+</list-item><list-item dir="ltr">Противник отвечает на нее наименее выгодной для нас
+</list-item><list-item dir="ltr">Мы выбираем выгодную для нас
+</list-item><list-item dir="ltr">и так далее</list-item></list>
+
+Средний выигрыш будет приближаться к цене игры, а частоты использования стратегий приближаться к оптимальным частотам.
+</note-content></text>
+  <last-change-date>2009-09-01T11:29:45.0890240+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-01T11:29:45.0890240+04:00</last-metadata-change-date>
+  <create-date>2009-09-01T11:25:24.9502120+04:00</create-date>
+  <cursor-position>317</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1067</x>
+  <y>201</y>
+  <open-on-startup>False</open-on-startup>
+</note>

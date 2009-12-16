@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Linux Multimedia</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Linux</link:internal> Multimedia
+
+<bold><link:broken>MPlayer</link:broken></bold>
+
+В настройках:
+
+Audio - sdl
+Dvd device -<link:url> /dev/dvd1</link:url>
+увеличить громкость: -af volume=20
+
+<link:internal>Кодирование видео</link:internal>
+<link:internal>Конвертирование ape в mp3</link:internal>
+
+   <link:internal>1</link:internal>. cd<link:url> /Video/Cinema</link:url> - каталог, где будем работать
+   2. cat<link:url> /media/cdrom/VIDEO_TS/VTS_01&lt;&gt;.VOB</link:url> | mencoder -nosound -ovc xvid -xvidencopts vhq=<link:internal>1</link:internal>:<link:internal>pass</link:internal>=<link:internal>1</link:internal>:qpel:trellis -sws 2 -ni -vf crop=720:360:0:60,scale=640:320,pp=lb -o<link:url> /dev/null</link:url> -
+
+      Первый проход кодирования:
+      VTS_01&lt;&gt;.VOB - маска файлов, которые надо обработать
+      crop=720:360:0:60 - обрезка - итоговое изображение x:y:срезать с одной стороны по x:срезать с одной стороны по y
+      scale=640:320 - масштабировае, как решение пропорции (720:360)
+   3. cat<link:url> /media/cdrom/VIDEO_TS/VTS_01&lt;&gt;.VOB</link:url> | mencoder -oac copy -aid 128 -ovc xvid -xvidencopts vhq=<link:internal>1</link:internal>:<link:internal>pass</link:internal>=2:qpel:trellis:bitrate=800 -sws 2 -ni -vf crop=720:360:0:60,scale=640:320,pp=lb -o Name.<link:internal>ac</link:internal>3.avi -
+   4. mencoder -ovc copy -oac mp3lame -lameopts preset=medium -o Name.mp3.avi Name.<link:internal>ac</link:internal>3.avi
+
+<bold><link:broken>Music</link:broken></bold><bold> Player Daemon</bold>
+
+sudo gedit<link:url> /etc/mpd.conf</link:url>
+
+audio_output {
+type “pulse”
+name “My MPD <link:internal>PulseAudio</link:internal> Output”
+}
+
+sudo<link:url> /etc/init.d/mpd</link:url> restart
+
+Если нужна поддержка last.fm, следует проделать и следующее:
+    $ sudo <link:internal>aptitude</link:internal> install mpdscribble
+    $ sudo <link:internal>dpkg</link:internal>-reconfigure mpdscribble
+
+$ sudo <link:internal>aptitude</link:internal> install mpc ncmpc
+mpd --create-<link:internal>db</link:internal>
+
+<bold>Запись действий на экране</bold>
+
+<link:internal>gtk</link:internal>-recordmydesktop</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.1946070+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.1946070+04:00</last-metadata-change-date>
+  <create-date>2008-06-12T17:15:12.5875230+04:00</create-date>
+  <cursor-position>131</cursor-position>
+  <width>1194</width>
+  <height>765</height>
+  <x>476</x>
+  <y>196</y>
+  <open-on-startup>False</open-on-startup>
+</note>

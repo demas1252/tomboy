@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Спецразноска НДС</title>
+  <text xml:space="preserve"><note-content version="0.1">Спецразноска НДС
+
+В российском учете при продаже товаров вся сумма задолженности(включая НДС и прочие налоги) должна быть отражена на счете реализации. После этого со счета реализации выделяется НДС в бюджет.
+
+В стандарной схеме налог выделяется с суммы задолженности, то есть, не отражается на счете реализации.
+
+Поэтому:
+
+<list><list-item dir="ltr">Парамеры ГК - Налоги - Фиксированная корреспонденция - ставим флаг
+</list-item><list-item dir="ltr">В Группах бухгалтерской разноски указываем Корр счет уплаты налога</list-item></list>
+</note-content></text>
+  <last-change-date>2009-06-20T21:06:04.9871800+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-20T21:06:04.9871800+04:00</last-metadata-change-date>
+  <create-date>2009-06-20T21:02:25.7301990+04:00</create-date>
+  <cursor-position>392</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>135</x>
+  <y>109</y>
+  <open-on-startup>False</open-on-startup>
+</note>

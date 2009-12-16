@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перехватить вывод консольной программы на Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Перехватить вывод консольной программы на Ruby
+
+Вот на примере <link:internal>git</link:internal>:
+
+<link:internal>git</link:internal>_cmd = '<link:internal>git</link:internal> show --pretty=format:"%H|%ci" --quiet'
+commit_id = nil
+commit_date = nil
+
+begin
+  commit_id, commit_date = IO.popen(<link:internal>git</link:internal>_cmd) { |f|
+    log_entry = f.gets
+    log_entry.split("|") unless log_entry.nil?
+  }
+rescue Errno::ENOENT  # <link:internal>git</link:internal> not installed
+  commit_id = 'Unknown'
+  commit_date = ''
+end
+
+puts "#{commit_id} #{commit_date}"
+  
+</note-content></text>
+  <last-change-date>2009-10-07T10:55:54.6765360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-07T10:55:54.6765360+04:00</last-metadata-change-date>
+  <create-date>2009-10-07T10:55:31.3466700+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1201</x>
+  <y>474</y>
+  <open-on-startup>False</open-on-startup>
+</note>

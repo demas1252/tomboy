@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Курсовые разницы</title>
+  <text xml:space="preserve"><note-content version="0.1">Курсовые разницы
+
+Учет в двух базовых валютах позволяет устранить инфляционную составляющую при получении данных для управленческого учета, является необходимыми данными для расчета курсовых.
+
+<bold><italic>Реализованная курсовая разница</italic></bold>
+
+<link:internal>Как воспроизвести реализованные курсовые по поставщику</link:internal>
+<link:internal>Как работает реализованная курсовая разница по поставщикам</link:internal>
+<link:internal>Отмена реализованных курсовых</link:internal> 
+<link:internal>Переоценка курсовых разниц</link:internal>
+
+<bold><italic>Нереализованная курсовая разница</italic></bold>
+
+<link:internal>Как работает курсовая разница</link:internal>
+<link:internal>Влияние типа счета на расчет курсовой разницы</link:internal>    
+Отмена нереализованных курсовых
+<link:internal>Основные ошибки при расчете нереализованной курсовой</link:internal>
+
+<link:internal>Удаление курсовой разницы по поставщикам</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-04-19T16:55:04.8829350+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-19T16:55:04.8829350+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:24:16.5267440+03:00</create-date>
+  <cursor-position>396</cursor-position>
+  <width>655</width>
+  <height>545</height>
+  <x>331</x>
+  <y>285</y>
+  <open-on-startup>False</open-on-startup>
+</note>

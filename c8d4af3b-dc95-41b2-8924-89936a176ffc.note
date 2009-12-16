@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ошибка 1053: Служба не ответила на запрос своевременно</title>
+  <text xml:space="preserve"><note-content version="0.1">Ошибка 1053: Служба не ответила на запрос своевременно
+
+АОС 4.0 не запускается. Просмотрев логи системы выясняю что АОС создает индексные файлы и останавливается на "axapd.aoi". Причем последнее сообщение выдает следующее "Object Server 01: Building index file axapd.aoi" и на этом система стопориться.
+
+Спустя минут 10 выдается сообщение "Ошибка 1053: Служба не ответила на запрос своевременно", но служба висит со статусом запускается. Спустя еще 20-30 минут служба перестает работать и снова становиться активной кнопка "пуск".
+
+В системном журнале появляется сообщение "Служба "Dynamics Server$01-<link:internal>Test</link:internal>" завершена из-за внутренней ошибки 100 (0x64)."
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ага. Это известаня штука.
+Вы пытаетесь запустить русскую версию с зарплатой (los-слой).
+Сервис у вас запускается от NT AUTHORITY\NETWORK SERVICE (это вы указали в дистрибутиве)
+
+Что происходит:
+<link:internal>1</link:internal>. дистрибутив копирует системные файлы (в т.ч. aod и устанавливает на них права и для NT AUTHORITY\NETWORK SERVICE)
+2. вы добавляете los слой копированием (как написано в readme). Но вы НЕ устанавливаете права чтения на этот файл для NT AUTHORITY\NETWORK SERVICE
+3. При первом запуске AOS пытается пересоздать индексы для ВСЕХ aod-файлов. Но на los-слой у него нет прав. Он закрывается с ошибкой.
+
+Как лечить:
+Дайте права для пользователя от которого идет запуск AOS (у многих NT AUTHORITY\NETWORK SERVICE) для ВСЕХ файлов в каталоге Standard
+</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.0329890+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.0329890+03:00</last-metadata-change-date>
+  <create-date>2008-04-19T11:51:46.2025000+04:00</create-date>
+  <cursor-position>686</cursor-position>
+  <width>752</width>
+  <height>693</height>
+  <x>906</x>
+  <y>75</y>
+  <open-on-startup>False</open-on-startup>
+</note>

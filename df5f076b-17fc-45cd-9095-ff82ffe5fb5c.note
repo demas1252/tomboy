@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основная теорема арифметики</title>
+  <text xml:space="preserve"><note-content version="0.1">Основная теорема арифметики
+
+<list><list-item dir="ltr"><italic>Всякое целое число может быть представлено в виде произвеления простых чисел</italic>
+</list-item><list-item dir="ltr">Е<italic>сли целое число разложено двумя способами в произведение простых сомножителей, то эти сомножители одинаковы</italic></list-item></list>
+
+<bold>Доказательство первой части:</bold>
+
+Методом мат индукции:
+
+<list><list-item dir="ltr">для n = 1:  1 =1 
+</list-item><list-item dir="ltr">предположим, что для всех положительных чисед m, меньших n, разложимость в произведение простых чисел уже установлена. Докажем, что и для n разложимость будет иметь место.</list-item></list>
+
+	Если n простое, то  n = n.
+	Если n сложное, то n = n1 * n2, где (n1 &lt; n) и (n2 &lt; n).
+	Но для n1 и n2 разложимость уже установлена -&gt; n разложимо.
+
+</note-content></text>
+  <last-change-date>2009-11-04T22:39:30.6723250+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-04T22:39:30.6723250+03:00</last-metadata-change-date>
+  <create-date>2009-11-04T19:46:44.0643100+03:00</create-date>
+  <cursor-position>552</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

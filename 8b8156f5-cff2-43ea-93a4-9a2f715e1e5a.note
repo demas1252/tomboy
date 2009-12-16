@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Себестоимость в складских отчетах</title>
+  <text xml:space="preserve"><note-content version="0.1">Себестоимость в складских отчетах
+
+Стоит ли учитывать Adjustment в складских отчетах:
+
+В общем для отчетов которые формируются на дату прибавлять ajustment из <link:internal>InventTrans</link:internal> не есть хорошо, - сегодня один отчет снял, завтвра закрыл <link:internal>склад</link:internal> и тот же отчет покажет на ту же дату другие данные, поэтому лучше прибавлять сумму дооценок из <link:internal>InventSettlement</link:internal> &lt;= ДатаОтчета - таким образом вы получите себестоимость с дооценками но они не будут меняться со временем..
+
+Вообще в оборотке по складу есть вот такой код (обратить внимание на <link:internal>if</link:internal>):
+_<link:internal>if</link:internal>(endDate &gt; dtWarehousClosing)
+        {
+
+            select sum(costAmountAdjustment) from <link:internal>inventSettlement</link:internal>
+                where <link:internal>inventSettlement</link:internal>.<link:internal>transRecId</link:internal>             == searchInventTrans.<link:internal>recId</link:internal>        &amp;&amp;
+                      <link:internal>inventSettlement</link:internal>.cancelled              == NoYes::No                      &amp;&amp;
+                      <link:internal>inventSettlement</link:internal>.transDate              &lt;= endDate                        &amp;&amp;
+                      <link:internal>inventSettlement</link:internal>.transDate              &gt;= dtBegForCostAmountAdjustment   &amp;&amp;
+                      <link:internal>inventSettlement</link:internal>.InventTransCurrency_RU == InventTransCurrency_RU::PrimaryCur;
+
+            costAmountAdjustment = <link:internal>inventSettlement</link:internal>.CostAmountAdjustment;
+        }
+        else
+            costAmountAdjustment = 0;_
+
+Говорят, что в Ax4sp2 такого условия уже нет....
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.8287400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.8287400+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:55:49.6760050+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Изменение и просмотр настроек автоматической сборки snaposhots</title>
+  <text xml:space="preserve"><note-content version="0.1">Изменение и просмотр настроек автоматической сборки snaposhots
+
+<link:internal>SQL</link:internal>&gt; BEGIN
+  2  dbms_workload_repository.modify_snapshot_settings (
+  3   retention =&gt; 21600,
+  4   interval =&gt; 30);
+  5  END;
+<link:internal>SQL</link:internal>&gt; /
+PL/<link:internal>SQL</link:internal> procedure successfully completed.
+
+<link:internal>SQL</link:internal>&gt; SELECT * from dba_hist_wr_control;
+      DBID SNAP_INTERVAL             RETENTION
+---------- ------------------------- ------------------2449818325 +00000
+00:30:00.0         +00015 00:00:00.0
+<link:internal>SQL</link:internal>&gt;</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.3067920+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.3067920+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:55:02.3586610+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>681</height>
+  <x>1218</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

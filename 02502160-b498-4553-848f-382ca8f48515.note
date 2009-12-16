@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Первая заметка</title>
+  <text xml:space="preserve"><note-content version="0.1">Первая заметка
+
+<link:internal>Axapta</link:internal>
+<link:internal>Языки программирования</link:internal>
+<link:internal>Web</link:internal>
+<link:internal>Базы данных</link:internal>
+<link:internal>Linux</link:internal>
+<link:internal>Emacs</link:internal>
+<link:internal>Git</link:internal>, <link:internal>Mercurial</link:internal>, <link:internal>Bazaar</link:internal>, <link:internal>Subversion</link:internal>
+
+<link:internal>Спорт</link:internal>
+<link:internal>Проектирование</link:internal>   
+<link:internal>Алгоритмы</link:internal>
+<link:internal>Базовые науки</link:internal>
+
+<link:internal>Прочее</link:internal>
+<link:internal>Цели</link:internal>
+
+
+
+
+
+ </note-content></text>
+  <last-change-date>2009-11-23T13:19:49.3563780+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.3563780+03:00</last-metadata-change-date>
+  <create-date>2008-02-19T15:55:13.0802880+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>441</width>
+  <height>490</height>
+  <x>1159</x>
+  <y>363</y>
+  <open-on-startup>False</open-on-startup>
+</note>

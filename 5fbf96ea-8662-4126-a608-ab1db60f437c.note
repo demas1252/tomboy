@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сделать поля Dialog обязательными для заполнения</title>
+  <text xml:space="preserve"><note-content version="0.1">Сделать поля Dialog обязательными для заполнения
+
+
+_Сообщение от Russland_
+
+У контролов в Dialog вообще отсутствует как понятие свойство Mandatory
+Если уж очень хочется сделать диалоговые поля обязательными к заполнению, необходимо допиливать класс Dialog
+
+-----
+
+_eugene egorov_
+
+Это не совсем так. Решается легко следующими фрагментами кода: 
+
+public Object dialog()
+{
+...................
+FormStringControl fsc;
+;
+.................
+dlgXXX= dialog.addFieldValue(typeid(XXX),XXX);
+fsc = ddlgXXX.control();
+fsc.mandatory(true);
+.............................
+
+и вполне сносно работает И никого не надо пилить зазря.
+</note-content></text>
+  <last-change-date>2008-03-30T17:41:36.7947189+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:41:36.7947189+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:41:32.0527380+04:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

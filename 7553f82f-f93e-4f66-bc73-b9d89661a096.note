@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Net Business Connector</title>
+  <text xml:space="preserve"><note-content version="0.1">Net Business Connector
+
+Creating and Posting Inventory ProfitLoss journals in DAX using .NET Business Connector
+
+using System;
+using Microsoft.Dynamics.BusinessConnectorNet;
+
+namespace ProfitLossPostingAppl
+{
+    class AxProfitLossPostingEngine
+    {
+        static void Main(string[] <link:internal>args</link:internal>)
+        {
+            <link:internal>Axapta</link:internal> ax = new <link:internal>Axapta</link:internal>();
+            // company name, language, object server, configuration
+            // this uses <link:internal>Windows</link:internal> Authentication
+            ax.Logon("cmul", null, "localhost", null);
+            
+            try
+            {
+                // Start a transaction
+                ax.TTSBegin();
+
+                // AxaptaRecord is a class that allows to work with <link:internal>Tables</link:internal> in AX
+                AxaptaRecord header = ax.CreateAxaptaRecord("InventJournalTable");
+                AxaptaRecord journalName = ax.CreateAxaptaRecord("InventJournalName");
+                AxaptaRecord line = ax.CreateAxaptaRecord("InventJournalTrans");
+                AxaptaRecord inventTable = ax.CreateAxaptaRecord("InventTable");
+                AxaptaRecord warehouse = ax.CreateAxaptaRecord("InventDim");
+
+                // You can call static table methods using the following syntax
+                journalName = ax.CallStaticRecordMethod("InventJournalName", "<link:internal>find</link:internal>", "IPL") as AxaptaRecord;
+
+                // There is a set of predefined methods on the AxaptaRecord class, like the clear(), initValue, DML operations, etc.
+                header.Clear();
+                header.InitValue();
+                // You can call table object methods as well, not only static
+                header.Call("initFromInventJournalName", journalName);
+                header.Insert();
+
+                line.Clear();
+                line.InitValue();
+                line.Call("initFromInventJournalTable", header);
+                // You cannot use table fields directly as in X++. Instead you have set/get methods
+                line.set_Field("itemId", "B-R14");
+
+                // Instead of using static table methods (like <link:internal>find</link:internal>) you can execute a direct <link:internal>SQL</link:internal> statement and receive the result in the AxaptaRecord object
+                inventTable.ExecuteStmt("select * from %<link:internal>1</link:internal> where %<link:internal>1</link:internal>.ItemId == 'B-R14'");
+                // <link:internal>If</link:internal> you receive more that one record you can iterate through them using Next (as in AX)
+                line.Call("initFromInventTable", inventTable);
+
+                line.set_Field("Qty", 160.0);
+
+                warehouse.Clear();
+                warehouse.set_Field("InventLocationId", "MW");
+
+                warehouse = ax.CallStaticRecordMethod("InventDim", "findOrCreate", warehouse) as AxaptaRecord;
+                
+                line.set_Field("InventDimId", warehouse.get_Field("inventDimId"));
+                line.Insert();
+
+                // Notice AxaptaRecord is <link:internal>passed</link:internal> by reference here
+                ax.CallStaticRecordMethod("InventJournalTable", "initTotal", header);
+                header.Update();
+
+                ax.TTSCommit();
+                
+                // You can call static class methods the same way you call table static methods, but using a different method on <link:internal>Axapta</link:internal> class
+                // So in case you wrote the posting in X++, you would be able to call it, passing the JournalId as the argument
+                // int numOfLinesPosted = (int)ax.CallStaticClassMethod("DEV_ProfitLossEngine", "postProfitLossJournal", header.get_Field("JournalId"));
+                
+                // Or, you can use the AxaptaObject class to accomplish the same from <link:internal>C</link:internal># 
+                // You can initialize a new class using the <link:internal>Axapta</link:internal> class method
+                // AxaptaObject journalCheckPost = ax.CreateAxaptaObject("InventJournalCheckPost");
+                
+                // Or using a static method, <link:internal>if</link:internal> that suites your needs better
+                // Notice here that an object of type AxaptaRecord is <link:internal>passed</link:internal> into a method that expects InventJournalTable as the argument
+                AxaptaObject journalCheckPost = ax.CallStaticClassMethod("InventJournalCheckPost", "newPostJournal", header) as AxaptaObject;
+                // You can object methods the same way you would on a table
+                journalCheckPost.Call("parmShowInfoResult", false);
+                journalCheckPost.Call("parmThrowCheckFailed", true);
+                journalCheckPost.Call("parmTransferErrors", false);
+    
+                journalCheckPost.Call("run");
+                int numOfLinesPosted = (int)journalCheckPost.Call("numOfPostedLines");
+
+                Console.WriteLine(String.Format("{0} line(s) have been successfully posted", numOfLinesPosted));
+                Console.WriteLine("JournalId is " + header.get_Field("JournalId"));
+                Console.WriteLine("Press any key to continue ...");
+
+                ax.Logoff();
+            }
+            catch (Exception ex)
+            {
+                ax.TTSAbort();
+                ax.Logoff();
+
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.1322150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.1322150+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:58:57.4112950+03:00</create-date>
+  <cursor-position>11</cursor-position>
+  <width>901</width>
+  <height>900</height>
+  <x>706</x>
+  <y>122</y>
+  <open-on-startup>False</open-on-startup>
+</note>

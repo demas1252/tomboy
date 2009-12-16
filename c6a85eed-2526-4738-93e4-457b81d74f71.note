@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Lambdas in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Lambdas in Haskell
+
+<italic>numLongChains :: Int
+numLongChains = length (filter isLong (<link:internal>map</link:internal></italic><italic> chain [1..100]))
+              where isLong xs = length xs &gt; 15
+
+numLongChains2 :: Int
+numLongChains2 = length (filter (\xs -&gt; length xs &gt; 15) (<link:internal>map</link:internal></italic><italic> chain [1..100]))</italic>
+
+</note-content></text>
+  <last-change-date>2009-11-05T13:36:20.2356560+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T13:36:20.2356560+03:00</last-metadata-change-date>
+  <create-date>2009-11-05T13:34:01.7217880+03:00</create-date>
+  <cursor-position>248</cursor-position>
+  <width>577</width>
+  <height>388</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

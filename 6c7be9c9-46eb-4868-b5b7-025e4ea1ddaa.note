@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Linux Kernel Chagelog</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Linux Kernel</link:internal> Chagelog
+
+<link:internal>linux</link:internal> (<bold>2.6.24-17.31</bold>) hardy-<link:internal>proposed</link:internal>; urgency=low
+
+  [Alessio Igor Bogani]
+
+  * rt: Fix mutex in the toshiba_acpi driver
+  * rt: Updated configuration files
+
+  [Ben Collins]
+
+  * build: Fix revert detection in <link:internal>git</link:internal>-<link:internal>ubuntu</link:internal>-log
+  * SAUCE: Re-<link:internal>add</link:internal> eeprom_bad_csum_allow module-param
+    - LP: #60388
+
+  [Stefan Bader]
+
+  * Pulled updates to openvz custom build. Fixes openvz 'refuses to
+boot' problem.
+    - LP: #210672
+  * sched: retain vruntime, fix delayed key events when CONFIG_FAIR_GROUP_SCHED.
+    - LP: #218516
+  * <link:internal>UBUNTU</link:internal>: SAUCE: <link:internal>Add</link:internal> blacklist support to fix Belkin bluetooth dongle.
+    - LP: #140511
+
+  [Tim Gardner]
+
+  * Enable CONFIG_ISCSI_TCP for -virtual
+    - LP: #218215
+  * build: <link:internal>Add</link:internal> fancontrol <link:internal>modules</link:internal> to <link:internal>powerpc</link:internal>64-smp debian installer
+  * Fix Xen Dom0/DomU bridging
+    - LP: #218126
+  * <link:internal>TSC</link:internal> Clocksource can cause hangs and time jumps
+    - LP: #221351
+  * <link:internal>Kernel</link:internal> should use CONFIG_FAIR_CGROUP_SCHED. Fixes high load issues
+    with <link:internal>pulseaudio</link:internal>.
+    - LP: #188226
+
+  [Upstream <link:internal>Kernel</link:internal> Changes]
+
+  * KVM: MMU: prepopulate guest pages after write-protecting
+    - LP: #221032</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.3220270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.3220270+04:00</last-metadata-change-date>
+  <create-date>2008-05-08T22:50:17.8086560+04:00</create-date>
+  <cursor-position>128</cursor-position>
+  <width>704</width>
+  <height>774</height>
+  <x>453</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

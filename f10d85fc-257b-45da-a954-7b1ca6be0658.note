@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>RubyTk - GridLayout</title>
+  <text xml:space="preserve"><note-content version="0.1">RubyTk - GridLayout
+
+require 'tk'
+
+root = TkRoot.new
+
+3.times { |r|
+  4.times { |c|
+    TkLabel.new(root) {
+      text "row #{r}, column #{c}"
+    }.grid('row' =&gt; r, 'column' =&gt; c, 'padx' =&gt; 10, 'pady' =&gt; 10)
+  }
+}
+
+Tk.mainloop
+</note-content></text>
+  <last-change-date>2009-06-12T14:52:24.3157290+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-12T14:52:24.3157290+04:00</last-metadata-change-date>
+  <create-date>2009-06-12T14:51:38.4772260+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>613</y>
+  <open-on-startup>False</open-on-startup>
+</note>

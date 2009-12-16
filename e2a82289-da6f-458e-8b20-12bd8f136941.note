@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Имеет ли смысл хранить индексы в отдельном tablespace</title>
+  <text xml:space="preserve"><note-content version="0.1">Имеет ли смысл хранить индексы в отдельном tablespace
+
+AskTom:
+
+Идея появилась в 80-х когда пользователей было немного и размер базы был не так велик. Тогда имело смысл разносить их по разным дискам.
+
+Сейчас есть logical volumes, raid и т.д. - и выигрыш на этом сомнителен.
+
+Однако я считаю, что все tablespace должны быть locally managed с UNIFORM extends sizes. Из этих соображений - индексы должны быть в отдельном tablespace, так как таблица с 50 столбцами может содержаться в tablespace с 5Mb extends size.  А индексам будет достаточно 512Kb extends size.
+
+~~~~
+
+Индекс и дата не могут читаться параллельно.  Индекс указывает где данные, поэтому сначала читается индекс, а потом данные.</note-content></text>
+  <last-change-date>2008-04-19T14:10:49.1261430+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-19T14:10:49.1261430+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T14:04:17.3296300+04:00</create-date>
+  <cursor-position>199</cursor-position>
+  <width>524</width>
+  <height>537</height>
+  <x>1087</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

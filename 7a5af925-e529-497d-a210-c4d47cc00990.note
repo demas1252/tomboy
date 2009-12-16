@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Exceptions in Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Exceptions in Erlang
+
+1.  <italic>Pid - spawn(fun()-&gt; ... end).</italic> - Нам пофигу, сдохнет ли процесс.
+2. <italic>Pid - spawn_link(fun()-&gt; ... end).</italic> - Я тоже умру, если сдохнет этот  процесс.
+3. process_flag() - обрабатываем индивидуально.
+
+<italic>-module(err_h2).
+-export([start/2]).
+
+start(Bool, M)-&gt;
+    A = spawn(fun()-&gt;
+		      a() end),
+    B = spawn(fun()-&gt;
+		      b(A, Bool) end),
+    <link:broken>C</link:broken></italic><italic> = spawn(fun()-&gt;
+		      <link:broken>c</link:broken></italic><italic>(B, M) end),
+    sleep(1000),
+    status(b, B),
+    status(<link:broken>c</link:broken></italic><italic>, <link:broken>C</link:broken></italic><italic>).
+
+a()-&gt;
+    process_flag(trap_exit, true),
+    wait(a).
+
+b(A, Bool)-&gt;
+    process_flag(trap_exit, Bool),
+    link(A),
+    wait(b).
+
+<link:broken>c</link:broken></italic><italic>(B, M)-&gt;
+    link(B),
+    case M of
+	{die, Reason} -&gt;
+	    exit(Reason);
+	{divide, N} -&gt;
+	    1/N,
+	    wait(<link:broken>c</link:broken></italic><italic>);
+	normal -&gt;
+	    true
+end.
+
+wait(Prog)-&gt;
+    receive
+	Any -&gt;
+	    io:format("Process ~p received ~p~n", [Prog, Any]),
+	    wait(Prog)
+end.
+
+sleep(T)-&gt;
+    receive
+	after T-&gt;
+		true
+end.
+
+status(Name, Pid)-&gt;
+    case <link:internal>erlang</link:internal></italic><italic>:is_process_alive(Pid) of
+	true -&gt;
+	    io:format("process ~p (~p) is alive~n", [Name, Pid]);
+	false -&gt;
+	    io:format("process ~p (~p) is dead~n", [Name, Pid])
+end.
+</italic>
+==============================================
+
+<italic>2&gt; err_h2:start(false, {die, abc}).</italic>
+Process a received {'EXIT',&lt;0.38.0&gt;,abc}
+process b (&lt;0.38.0&gt;) is dead
+process <link:broken>c</link:broken> (&lt;0.39.0&gt;) is dead
+ok
+
+С - сдох.  Он сказал об  этои B.  А так как B ничего не перехватывал - он тоже сдох.  Один A - молодец
+
+<italic>3&gt; err_h2:start(false, {die, normal}).</italic>
+process b (&lt;0.42.0&gt;) is alive
+process <link:broken>c</link:broken> (&lt;0.43.0&gt;) is dead
+ok
+
+normal - это особая ситуация
+
+<italic>4&gt; err_h2:start(false, {divide, 0}).</italic>
+Process a received {'EXIT',&lt;0.46.0&gt;,{badarith,[{err_h2,<link:broken>c</link:broken>,2}]}}
+
+=ERROR REPORT==== 27-Jan-2009::22:51:57 ===
+Error in process &lt;0.47.0&gt; with exit value: {badarith,[{err_h2,<link:broken>c</link:broken>,2}]}
+
+process b (&lt;0.46.0&gt;) is dead
+process <link:broken>c</link:broken> (&lt;0.47.0&gt;) is dead
+ok
+
+Аналогично первому.
+
+
+Если будем вызывать с true - то B всегда будет выживать. С - всегда сдохнет.
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.0994370+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.0994370+04:00</last-metadata-change-date>
+  <create-date>2009-01-08T14:36:26.3898200+03:00</create-date>
+  <cursor-position>1893</cursor-position>
+  <width>627</width>
+  <height>814</height>
+  <x>112</x>
+  <y>108</y>
+  <open-on-startup>False</open-on-startup>
+</note>

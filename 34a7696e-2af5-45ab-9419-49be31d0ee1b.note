@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VendSelectPrepayment_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">VendSelectPrepayment_Ru
+
+Методы qrPostedTrans() и qrUnpostedTrans() создат 2 Query, для отбора данных.  Вторая запускается только в случае, если в настройках модуля стоит соответствующая галка.
+
+Первый запрос:
+
+<italic>SELECT * FROM VendTrans WHERE 
+((PrepaymentFactureId_W = '')) AND 
+((Prepayment = Да)) AND 
+((Correct = Нет) AND 
+((NOT (TransType = <link:internal>Расчет курсовой разницы</link:internal></italic><italic>))) AND ((TransDate&gt;=01012003 AND TransDate&lt;=31122153)) 
+</italic>
+<italic>NOTEXISTS JOIN * FROM VendTrans 
+WHERE VendTrans.OffsetRecid = VendTrans.<link:internal>RecId</link:internal></italic><italic> AND VendTrans.LastSettleVoucher = VendTrans.Voucher AND 
+((Correct = Да))
+</italic>
+Второй запрос:
+
+<italic>SELECT * FROM LedgerJournalTrans  WHERE 
+((AccountType = Поставщик)) AND 
+((Prepayment = ДА)) AND 
+((TransDate&gt;=01012003 AND TransDate&lt;=31122153)) 
+AND ((PaymentStatus = Отпавлено) OR (PaymentStatus = Одобрено)) 
+
+JOIN * FROM LedgerJournalTable WHERE LedgerJournalTrans.JournalNum = LedgerJournalTable.JournalNum 
+AND ((JournalType = Выплата поставщику)) AND ((Posted = Нет))
+
+NOTEXISTS JOIN * FROM FactureTrans_RU WHERE
+ LedgerJournalTrans.<link:internal>RecId</link:internal></italic><italic> = FactureTrans_RU.MarkupRefRecId AND
+((FactureLineType = Предоплата)) 
+AND ((Module = Поставщик))</italic>
+
+Собранные <link:internal>запросы</link:internal> могу извлекаться из SysLastValue и на них дополнительно накладываются <link:internal>фильтры</link:internal> по введенным пользователем парамерам modifyPostedQuery().
+
+В run() вытягиваются эти (1 или 2) query и по каждой из них делается выборка с вызовом createTmpTrans(),  которая и вставляет данные во временную табличку <link:internal>VendTmpPrepaymentTrans_Ru</link:internal>.</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.0750450+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.0750450+03:00</last-metadata-change-date>
+  <create-date>2009-01-18T12:58:32.8687160+03:00</create-date>
+  <cursor-position>194</cursor-position>
+  <width>745</width>
+  <height>703</height>
+  <x>72</x>
+  <y>789</y>
+  <open-on-startup>False</open-on-startup>
+</note>

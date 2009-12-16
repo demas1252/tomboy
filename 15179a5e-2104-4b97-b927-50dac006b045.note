@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BookDataCalc_Purch_Process_Ru.initOnPayment()</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>BookDataCalc</link:internal>_Purch_Process_Ru.initOnPayment()
+
+<list><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.qrSettlementDependent()</link:internal>
+</list-item><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.qrSettlementInDependent()</link:internal>
+</list-item><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.qrBlockedFactures()</link:internal>
+</list-item><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.qrOldPrepaymSettled()</link:internal></list-item></list></note-content></text>
+  <last-change-date>2009-10-12T12:00:22.6199960+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.6199960+04:00</last-metadata-change-date>
+  <create-date>2009-01-23T22:45:13.5048770+03:00</create-date>
+  <cursor-position>160</cursor-position>
+  <width>561</width>
+  <height>331</height>
+  <x>810</x>
+  <y>612</y>
+  <open-on-startup>False</open-on-startup>
+</note>

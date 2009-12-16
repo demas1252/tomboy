@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sqlcmd - isql - osql</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Sqlcmd - isql</link:internal> - osql
+
+    * sqlcmd: The newest, fanciest <link:internal>command</link:internal>-line interface to <link:internal>SQL</link:internal> Server.
+    * <link:internal>isql</link:internal> : The older, <link:internal>DB</link:internal>-Library (native <link:internal>SQL</link:internal> Server protocol) way of <link:internal>command</link:internal>-line communication with <link:internal>SQL</link:internal> Server.
+    * osql : The older, ODBC-<link:internal>based</link:internal> way of <link:internal>command</link:internal>-line communication with <link:internal>SQL</link:internal> Server.
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.8351480+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.8351480+04:00</last-metadata-change-date>
+  <create-date>2008-12-04T23:16:50.5587780+03:00</create-date>
+  <cursor-position>22</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

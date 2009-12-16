@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PyCallGraph</title>
+  <text xml:space="preserve"><note-content version="0.1">PyCallGraph
+
+
+Является библиотекой вокруг <link:internal>graphViz</link:internal>.
+
+<link:internal>1</link:internal>) Есть скрипт. Можно скорпить ему свою <link:internal>python</link:internal>-программу и получить граф вызовов методов.
+
+      pycallgraph-dot.py --image-format=png mypythonapp.py graph.png
+
+2) Можно делать это из кода:
+
+import pycallgraph
+
+      def <link:internal>c</link:internal>():
+      a()
+      b()
+
+      def b():
+      print 2
+
+      def a():
+      print <link:internal>1</link:internal>
+
+      pycallgraph.start_trace()
+      a()
+      b()
+      <link:internal>c</link:internal>()
+      pycallgraph.make_dot_graph('<link:internal>test</link:internal>.png')
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.0834950+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.0834950+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:13:47.2551320+03:00</create-date>
+  <cursor-position>40</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

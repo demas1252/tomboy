@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Stupid sort (глупая сортировка)</title>
+  <text xml:space="preserve"><note-content version="0.1">Stupid sort (глупая сортировка)
+
+O(n^3)
+
+Так же как и в Bubble sort (сортировка пузырьком) , идет поиск от начала массива, текущий элемент сравнивается со следующим, если следующий меньший, то производится возврат в начало цикла.
+
+<link:internal>Реализация stupid sort на python</link:internal>
+<link:internal>Реализация stupid sort на cpp</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-03-23T21:50:12.4101100+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:50:12.4101100+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:48:49.5747260+03:00</create-date>
+  <cursor-position>264</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

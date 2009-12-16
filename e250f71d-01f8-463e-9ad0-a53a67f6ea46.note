@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Кирилица в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Кирилица в Python
+
+#!<link:url> /usr/bin/python</link:url>
+# -*- coding: utf-8 -*-</note-content></text>
+  <last-change-date>2008-04-15T12:21:43.6322660+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-15T12:21:43.6322660+04:00</last-metadata-change-date>
+  <create-date>2008-04-15T12:17:59.4614790+04:00</create-date>
+  <cursor-position>19</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1136</x>
+  <y>636</y>
+  <open-on-startup>False</open-on-startup>
+</note>

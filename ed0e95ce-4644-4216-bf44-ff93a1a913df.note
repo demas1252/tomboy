@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сравнение двух списков</title>
+  <text xml:space="preserve"><note-content version="0.1">Сравнение двух списков
+
+&lt;&lt;pre
+(define (list=? a-<link:internal>list another</link:internal>-list)
+    (cond
+        [(and (empty? a-list) (empty? <link:internal>another</link:internal>-list)) true]
+        [(and (cons? a-list) (empty? <link:internal>another</link:internal>-list)) false]
+        [(and (empty? a-list) (cons? <link:internal>another</link:internal>-list)) false]
+        [(and (cons? a-list) (cons? <link:internal>another</link:internal>-list))
+            (and (= (first a-list) (first <link:internal>another</link:internal>-list))
+                (list=? (rest a-list) (rest <link:internal>another</link:internal>-list)))]))
+                
+&gt;&gt;
+
+или, чуть упростив:
+
+&lt;&lt;pre
+(define (list=? a-<link:internal>list another</link:internal>-list)
+    (cond
+        [(empty? a-list) (empty? <link:internal>another</link:internal>-list)]
+        [(cons? a-list)
+            (and (cons? <link:internal>another</link:internal>-list)
+                (and (= (first a-list) (first <link:internal>another</link:internal>-list))
+                    (list=? (rest a-list) (rest <link:internal>another</link:internal>-list))))]))
+                
+&gt;&gt;                </note-content></text>
+  <last-change-date>2008-05-12T21:14:43.8185710+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-12T21:14:43.8185710+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:58:47.3667639+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

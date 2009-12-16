@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Srtaight insertion</title>
+  <text xml:space="preserve"><note-content version="0.1">Srtaight insertion
+
+     N*N
+     
+     list = [1, 20, 3, 5, 9, 2, 8]
+
+     for j, a in <link:internal>enumerate</link:internal>(list):
+         i = j
+         while ((i &gt; 0) and (list[i-1] &gt; a)):
+             list[i] = list[i-1]
+             i = i -1
+         list[i] = a
+
+     print list</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.5049900+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.5049900+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:14:08.4996810+03:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>630</y>
+  <open-on-startup>False</open-on-startup>
+</note>

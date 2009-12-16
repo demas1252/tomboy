@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>gnome-menu</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>gnome</link:internal>-menu
+
+Удалите файл applications.menu из<link:url> ~/.config/menus/</link:url>
+
+xdg-desktop-menu - <link:internal>command</link:internal> line tool for (un)installing desktop menu items
+
+<italic>&lt;!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" 
+    "<link:url>http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd</link:url></italic><italic>"&gt;
+&lt;Menu&gt;
+    &lt;Name&gt;Applications&lt;/Name&gt;
+&lt;Menu&gt;
+    &lt;Name&gt;My Program Group&lt;/Name&gt;
+    &lt;Include&gt;
+        &lt;Filename&gt;shortcut.desktop&lt;/Filename&gt;
+    &lt;/Include&gt;
+&lt;/Menu&gt;
+&lt;/Menu&gt;
+</italic>
+<link:url>http://manpages.ubuntu.com/manpages/hardy/en/man1/xdg-desktop-menu.html</link:url>
+<link:url>http://stackoverflow.com/questions/174069/adding-a-new-application-group-in-linux</link:url>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.5714180+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.5714180+04:00</last-metadata-change-date>
+  <create-date>2008-10-07T09:42:06.3109529+04:00</create-date>
+  <cursor-position>12</cursor-position>
+  <width>952</width>
+  <height>483</height>
+  <x>315</x>
+  <y>191</y>
+  <open-on-startup>False</open-on-startup>
+</note>

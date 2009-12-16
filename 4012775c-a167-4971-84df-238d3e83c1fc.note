@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Настройки Vim</title>
+  <text xml:space="preserve"><note-content version="0.1">Настройки <link:internal>Vim</link:internal>
+
+<link:internal>Vim</link:internal> RC
+
+      :edit $MYVIMRC
+
+      colorscheme evening
+      language <link:internal>english</link:internal>
+      set guioptions-=T
+      set guifont=Courier_New:h11:cRUSSIAN
+      set lines=50
+      set columns=120
+      set showbreak=+
+      set ignorecase
+      set incsearch
+      set backup
+
+<link:internal>Проверка орфографии</link:internal>
+
+      :setlocal spell spelllang=en_us
+
+Оформление текста
+
+      Ident
+
+      :set ai - заставляет по нажатию enter переходить на позицию, с которой начиналась предыдущая строка
+      &gt;&gt; - ident in <link:internal>command</link:internal> mode
+      &lt;&lt;<link:broken>c</link:broken>
+
+Отключение звонка
+
+:set vb t_vb=
+
+Подсветка синтаксиса
+
+      - копируем <link:internal>Vim</link:internal> файл в папку vimvim70syntax
+      - в файл vimvim70filetype.<link:internal>Vim</link:internal> добавляем строки типа этой:
+            " Autohotkey
+            au BufNewFile,BufRead .ahk setf autohotkey
+
+
+            Mapping*
+
+            :<link:internal>map</link:internal> &lt;F5&gt; i{&lt;Esc&gt;ea}&lt;Esc&gt;
+            <link:internal>imap</link:internal> &lt;Tab&gt; &lt;<link:broken>C</link:broken>-N&gt; - автодополнение табом
+
+            Красиво перемещаться между сплитами:
+
+            nmap &lt;<link:broken>C</link:broken>-W&gt;k&lt;<link:broken>C</link:broken>-W&gt; " окно вверх
+            <link:internal>imap</link:internal> &lt;F7&gt; &lt;Esc&gt;&lt;<link:broken>C</link:broken>-W&gt;k&lt;<link:broken>C</link:broken>-W&gt;_a " окно вверх
+            nmap &lt;F8&gt; &lt;<link:broken>C</link:broken>-W&gt;j&lt;<link:broken>C</link:broken>-W&gt; " окно вниз
+            <link:internal>imap</link:internal> &lt;<link:broken>C</link:broken>-W&gt;j&lt;<link:broken>C</link:broken>-W&gt;_a " окно вни
+
+
+</note-content></text>
+  <last-change-date>2009-11-23T13:19:50.1103380+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:50.1103380+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:05:22.1379640+03:00</create-date>
+  <cursor-position>522</cursor-position>
+  <width>450</width>
+  <height>618</height>
+  <x>1219</x>
+  <y>28</y>
+  <open-on-startup>False</open-on-startup>
+</note>

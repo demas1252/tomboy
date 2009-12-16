@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BookDataCalc_Purch_Process_Ru.qrSettlementDependent()</title>
+  <text xml:space="preserve"><note-content version="0.1">BookDataCalc_Purch_Process_Ru.qrSettlementDependent()
+
+Здесь обрабатываются FactureJour_Ru у которых FactureType_Ru = Invoice, а FactureModule_Ru = Vend.
+
+FactureJour_Ru
+    FactureTrans_Ru 
+	VendInvoiceJour 
+		VendTrans		&lt; -- <link:internal>фильтры</link:internal> ставятся сюда
+		VendSettlement</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.8968160+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.8968160+04:00</last-metadata-change-date>
+  <create-date>2009-01-23T22:46:48.7551780+03:00</create-date>
+  <cursor-position>265</cursor-position>
+  <width>705</width>
+  <height>302</height>
+  <x>941</x>
+  <y>219</y>
+  <open-on-startup>False</open-on-startup>
+</note>

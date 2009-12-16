@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Круговорот азота в природе</title>
+  <text xml:space="preserve"><note-content version="0.1">Круговорот азота в природе
+
+<list><list-item dir="ltr">ионы NH4+ и NO3- в земле -&gt; растения синтезируют из них белки -&gt; травоядные -&gt; остатки разлагаются и <link:internal>азот</link:internal> возвращается в землю
+</list-item><list-item dir="ltr"><link:internal>азот</link:internal> в воздухе взаимодействует с килородам при разрядах молнии -&gt; оксид азота превращается в азотную кислоту и выпадает в виде дождя -&gt; почва &gt; взаимодействие с минералами -&gt; нитраты</list-item></list></note-content></text>
+  <last-change-date>2009-08-07T22:10:48.1852820+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T22:10:48.1852820+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T22:08:19.2743910+04:00</create-date>
+  <cursor-position>156</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>376</x>
+  <y>527</y>
+  <open-on-startup>False</open-on-startup>
+</note>

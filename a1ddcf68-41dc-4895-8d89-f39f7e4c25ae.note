@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Преобразование оплаты в предоплату</title>
+  <text xml:space="preserve"><note-content version="0.1">Преобразование оплаты в предоплату
+
+    По-моему здесь есть какой-то баг.
+    
+    <link:internal>1</link:internal>. Создаем накладную и оплату.
+    2. Сопоставляем их.
+    3. Рассопоставляем их датой позже, чем дата сопоставления.
+    4. Преобразуем оплату в предоплату.
+    
+    На четвертом шагу сторно-оплаты не сопоставляется в оплату и оплата продолжает висеть в форме.
+    
+    Все происходит в CustVendSettle.settleNow()
+    
+    Если говорить, про данную проблему, то в этих строках заполняется <link:internal>map</link:internal>:
+    
+    _//Valu Reverse datePrinciple --&gt;
+    paymentReversedAmounts              = <link:internal>Map</link:internal>::create(custVendTransCredit.MapReversedAmountsCur_RU());
+    //Valu Reverse datePrinciple --&gt;_
+    
+    А вот здесь принимается решение, что мы не сопоставляем:
+    
+    _invoiceReversedAmount = this.reversedAmount_RU(invoiceReversedAmounts,transactionDate);
+    <link:internal>if</link:internal> (<link:internal>abs</link:internal>(invoiceReversedAmount) &gt; <link:internal>abs</link:internal>(custVendTransDebet.remainAmountCur()))
+    {
+         specTransDebet.balance01 = 0;
+         continue;
+    }
+    invoiceReversedAmount =   custVendTransDebet.remainAmountCur() - invoiceReversedAmount;
+    <link:internal>if</link:internal> (<link:internal>abs</link:internal>(specTransDebet.balance01) &gt; <link:internal>abs</link:internal>(invoiceReversedAmount))
+    {
+        invoiceReversedAmount     =  specTransDebet.balance01 - invoiceReversedAmount;
+        specTransDebet.balance01  -=  invoiceReversedAmount;
+        <link:internal>if</link:internal> (! specTransDebet.balance01)
+        {
+             continue;
+        }_
+        
+    Мы смотрели этот код с Мариной и Максом, но так и не въехали, чтоже он делает.</note-content></text>
+  <last-change-date>2009-10-17T22:10:54.3213030+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:54.3213030+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:22:31.0168880+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>498</height>
+  <x>4</x>
+  <y>461</y>
+  <open-on-startup>False</open-on-startup>
+</note>

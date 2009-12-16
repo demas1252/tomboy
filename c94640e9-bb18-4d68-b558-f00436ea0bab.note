@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Узнать идентификатор своей сессии</title>
+  <text xml:space="preserve"><note-content version="0.1">Узнать идентификатор своей сессии
+
+_select sid from v$mystat where rownum = 1_
+Или <link:internal>узнать id текущей сессии</link:internal>
+</note-content></text>
+  <last-change-date>2008-03-27T22:13:41.7455939+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T22:13:41.7455939+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:13:33.4378820+03:00</create-date>
+  <cursor-position>108</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация Observer на Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Реализация Observer</link:internal> на Ruby
+
+<link:url>http://www.<link:internal>ruby</link:internal></link:url><link:url>-doc.org/stdlib/libdoc/<link:internal>observer</link:internal></link:url><link:url>/rdoc/index.html</link:url>
+
+То есть, основы в <link:internal>Ruby</link:internal> уже реализованы.
+Здесь Ticket реализует Observable, который выполняет часть работы.
+Класс Price просто случайно генерит цены в цикле Ticket.run(), а WarnerLow, WarnerHigh - наблюдатели, которые получают оповещение о изменении цены и соответсвующим образом на это реагируют.
+
+require "<link:internal>observer</link:internal>"
+
+  class Ticker          ### Periodically fetch a stock price.
+    include Observable
+
+    def initialize(symbol)
+      @symbol = symbol
+    end
+
+    def run
+      lastPrice = nil
+      loop do
+        price = Price.fetch(@symbol)
+        print "Current price: #{price}\n"
+        <link:internal>if</link:internal> price != lastPrice
+          changed                 # notify observers
+          lastPrice = price
+          notify_observers(Time.now, price)
+        end
+        sleep 1
+      end
+    end
+  end
+
+  class Price           ### A mock class to fetch a stock price (60 - 140).
+    def Price.fetch(symbol)
+      60 + rand(80)
+    end
+  end
+
+  class Warner          ### An abstract <link:internal>observer</link:internal> of Ticker objects.
+    def initialize(ticker, limit)
+      @limit = limit
+      ticker.<link:internal>add</link:internal>_<link:internal>observer</link:internal>(self)
+    end
+  end
+
+  class WarnLow &lt; Warner
+    def update(time, price)       # callback for <link:internal>observer</link:internal>
+      <link:internal>if</link:internal> price &lt; @limit
+        print "--- #{time.to_s}: Price below #@limit: #{price}\n"
+      end
+    end
+  end
+
+  class WarnHigh &lt; Warner
+    def update(time, price)       # callback for <link:internal>observer</link:internal>
+      <link:internal>if</link:internal> price &gt; @limit
+        print "+++ #{time.to_s}: Price above #@limit: #{price}\n"
+      end
+    end
+  end
+
+  ticker = Ticker.new("MSFT")
+  WarnLow.new(ticker, 80)
+  WarnHigh.new(ticker, 120)
+  ticker.run
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.4528580+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.4528580+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:00:45.1007330+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получение диапазона дат</title>
+  <text xml:space="preserve"><note-content version="0.1">Получение диапазона дат
+
+
+Помогите, пожалуйста, написать выборку. Есть таблица с полями - дата и несколько признаков.
+Нужно узнать период действия каждого признака. Например, таблица содержит данные:
+
+DATE_LONG			    BIT1	BIT2	BIT3
+2006-01-01 01:00:00.000	0	1	0
+2006-01-01 02:00:00.000	1	1	0
+2006-01-01 03:00:00.000	1	0	0
+2006-01-01 04:00:00.000	0	1	1
+2006-01-01 05:00:00.000	0	1	0
+2006-01-01 06:00:00.000	0	1	0
+2006-01-01 07:00:00.000	1	1	0
+2006-01-01 08:00:00.000	0	0	0
+2006-01-01 09:00:00.000	0	0	1
+2006-01-01 10:00:00.000	1	0	0
+2006-01-01 11:00:00.000	1	0	1
+2006-01-01 12:00:00.000	1	1	1
+2006-01-01 13:00:00.000	0	0	0
+
+
+нужно получить три выборки:
+для BIT1
+
+DATE_BEGIN           DATE_END
+'20060101 02:00'     '20060101 04:00'
+'20060101 07:00'     '20060101 08:00'
+'20060101 10:00'     '20060101 13:00'
+
+
+для BIT2
+
+DATE_BEGIN           DATE_END
+'20060101 01:00'     '20060101 03:00'
+'20060101 04:00'     '20060101 08:00'
+'20060101 12:00'     '20060101 13:00'
+
+
+для BIT3
+
+DATE_BEGIN           DATE_END
+'20060101 04:00'     '20060101 05:00'
+'20060101 09:00'     '20060101 10:00'
+'20060101 11:00'     '20060101 13:00'
+
+
+
+_create table #A(
+DATE_LONG datetime,
+BIT1 bit,
+BIT2 bit,
+BIT3 bit
+)
+
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 01:00',0,1,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 02:00',1,1,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 03:00',1,0,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 04:00',0,1,1)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 05:00',0,1,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 06:00',0,1,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 07:00',1,1,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 08:00',0,0,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 09:00',0,0,1)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 10:00',1,0,0)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 11:00',1,0,1)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 12:00',1,1,1)
+insert into #A(DATE_LONG,BIT1,BIT2,BIT3)
+values ('20060101 13:00',0,0,0)
+
+--select /*?*/ from #A
+
+drop table #A_
+
+=====================================================================
+
+_select distinct 
+(select max(amin.DATE_LONG)
+from #A amin
+where BIT1 = 0
+and amin.DATE_LONG &lt; a.DATE_LONG
+) as min,
+(select min(amax.DATE_LONG)
+from #A amax
+where BIT1 = 0
+and amax.DATE_LONG &gt; a.DATE_LONG
+) as max
+from #A a
+where BIT1 = 1_
+
+=====================================================================
+
+_PRINT 'BIT1'
+PRINT ''
+SELECT A1.DATE_LONG[DATE_BEGIN], A2.DATE_LONG[DATE_END]
+FROM #A A1, #A A2
+WHERE A1.BIT1=1 AND A2.BIT1=0 AND A1.DATE_LONG&lt;=A2.DATE_LONG
+AND ISNULL((SELECT TOP 1 BIT1 FROM #A WHERE DATE_LONG&lt;A1.DATE_LONG ORDER BY DATE_LONG DESC),0)=0
+AND ISNULL((SELECT TOP 1 BIT1 FROM #A WHERE DATE_LONG&lt;A2.DATE_LONG ORDER BY DATE_LONG DESC),1)=1
+AND NOT EXISTS(SELECT * FROM #A WHERE BIT1=0 AND DATE_LONG&gt;A1.DATE_LONG AND DATE_LONG&lt;A2.DATE_LONG)
+
+PRINT 'BIT2'
+PRINT ''
+SELECT A1.DATE_LONG[DATE_BEGIN], A2.DATE_LONG[DATE_END]
+FROM #A A1, #A A2
+WHERE A1.BIT2=1 AND A2.BIT2=0 AND A1.DATE_LONG&lt;=A2.DATE_LONG
+AND ISNULL((SELECT TOP 1 BIT2 FROM #A WHERE DATE_LONG&lt;A1.DATE_LONG ORDER BY DATE_LONG DESC),0)=0
+AND ISNULL((SELECT TOP 1 BIT2 FROM #A WHERE DATE_LONG&lt;A2.DATE_LONG ORDER BY DATE_LONG DESC),1)=1
+AND NOT EXISTS(SELECT * FROM #A WHERE BIT2=0 AND DATE_LONG&gt;A1.DATE_LONG AND DATE_LONG&lt;A2.DATE_LONG)
+PRINT 'BIT3'
+PRINT ''
+SELECT A1.DATE_LONG[DATE_BEGIN], A2.DATE_LONG[DATE_END]
+FROM #A A1, #A A2
+WHERE A1.BIT3=1 AND A2.BIT3=0 AND A1.DATE_LONG&lt;=A2.DATE_LONG
+AND ISNULL((SELECT TOP 1 BIT3 FROM #A WHERE DATE_LONG&lt;A1.DATE_LONG ORDER BY DATE_LONG DESC),0)=0
+AND ISNULL((SELECT TOP 1 BIT3 FROM #A WHERE DATE_LONG&lt;A2.DATE_LONG ORDER BY DATE_LONG DESC),1)=1
+AND NOT EXISTS(SELECT * FROM #A WHERE BIT3=0 AND DATE_LONG&gt;A1.DATE_LONG AND DATE_LONG&lt;A2.DATE_LONG)_
+
+=====================================================================
+
+_SELECT A1.DATE_LONG [DATE_BEGIN], A2.DATE_LONG [DATE_END]
+FROM 
+(select * FROM #A WHERE BIT1=1) A1
+INNER JOIN
+(select * FROM #A WHERE BIT1=0) A2
+ON 
+A1.DATE_LONG&lt;A2.DATE_LONG
+AND
+not exists(select * FROM #A X WHERE BIT1=0 AND A1.DATE_LONG&lt;X.DATE_LONG AND X.DATE_LONG&lt;A2.DATE_LONG)_</note-content></text>
+  <last-change-date>2008-03-27T21:54:01.5869790+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:54:01.5869790+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:53:53.1054340+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

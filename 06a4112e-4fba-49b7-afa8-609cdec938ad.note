@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Подгруппа азота</title>
+  <text xml:space="preserve"><note-content version="0.1">Подгруппа азота
+
+<link:internal>Азот</link:internal>
+<link:internal>Нитриды, аммиак</link:internal>
+<link:internal>Соли аммония</link:internal>
+<link:internal>Оксиды азота</link:internal>
+<link:internal>Азотная кислота</link:internal>
+<link:internal>Круговорот азота в природе</link:internal>
+<link:internal>Производство аммиака</link:internal>
+<link:internal>Производство азотной кислоты</link:internal>
+<link:internal>Азотные удобрения</link:internal>
+
+<link:internal>Фосфор</link:internal>
+<link:internal>Фосфаты</link:internal>
+<link:internal>Фосфорные удобрения</link:internal>
+</note-content></text>
+  <last-change-date>2009-08-29T19:10:36.1207770+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T19:10:36.1207770+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T21:21:24.8220190+04:00</create-date>
+  <cursor-position>210</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1160</x>
+  <y>330</y>
+  <open-on-startup>False</open-on-startup>
+</note>

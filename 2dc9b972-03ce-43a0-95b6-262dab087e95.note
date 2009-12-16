@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сумма элементов вектора</title>
+  <text xml:space="preserve"><note-content version="0.1">Сумма элементов вектора
+
+*Вариант <link:internal>1</link:internal>*
+
+&lt;&lt;pre
+(define (vector-sum v)
+  (vector-sum-aux v (vector-length v)))
+
+(define (vector-sum-aux v i)
+  (cond
+    [(zero? i) 0]
+    [else (+ (vector-ref v (sub<link:internal>1</link:internal> i)) (vector-sum-aux v (sub<link:internal>1</link:internal> i)))]
+    )
+  )
+  
+&gt; (vector-sum (vector <link:internal>1</link:internal> 2 3 4))
+10
+  
+  &gt;&gt;
+  
+(vector-sum-aux v i) - суммирует i первых элемента вектора (с i-го по 0)
+
+*Вариант 2*
+
+&lt;&lt;pre
+(define (lr-vector-sum v)
+  (vector-sum-aux v 0))
+
+(define (vector-sum-aux v i)
+  (cond
+    [(= i (vector-length v)) 0]
+    [else (+ (vector-ref v i) (vector-sum-aux v (<link:internal>add1</link:internal> i)))]
+    )
+  )
+
+&gt; (lr-vector-sum (vector <link:internal>1</link:internal> 2 3 4 5))
+15
+
+&gt;&gt;
+
+(vector-sum-aux v i) - суммирует i первых элемента вектора (с 0-го по i-ый)</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.1455440+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.1455440+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:55:22.0508050+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>590</x>
+  <y>477</y>
+  <open-on-startup>False</open-on-startup>
+</note>

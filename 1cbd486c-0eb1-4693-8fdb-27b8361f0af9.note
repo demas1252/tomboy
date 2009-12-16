@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>а со строками в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">а со строками в Python
+
+
+<link:internal>Является ли объект строкой</link:internal>
+<link:internal>Обрезание пробелов у строк</link:internal>
+<link:internal>Сложение строк</link:internal>
+<link:internal>Преобразование сроки в список</link:internal>
+<link:internal>Посимвольная обработка строки</link:internal>
+<link:internal>Содержит ли строка набор символов</link:internal></note-content></text>
+  <last-change-date>2008-03-28T21:23:42.1079900+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T21:23:42.1079900+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:09:32.9543480+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

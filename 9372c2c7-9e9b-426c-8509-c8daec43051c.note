@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запуск сервиса из под wine</title>
+  <text xml:space="preserve"><note-content version="0.1">Запуск сервиса из под wine
+
+нашел вот такое решение 
+
+	<italic><link:internal>wine</link:internal></italic><italic> net start servicename</italic>
+
+вот здесь <link:url>http://linuxforum.ru/index.php?showtopic=99505</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:21.3559320+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.3559320+04:00</last-metadata-change-date>
+  <create-date>2009-09-17T20:54:11.7511310+04:00</create-date>
+  <cursor-position>81</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>852</x>
+  <y>466</y>
+  <open-on-startup>False</open-on-startup>
+</note>

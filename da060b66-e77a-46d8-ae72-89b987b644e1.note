@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка нескольких систем одновременно</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка нескольких систем одновременно
+
+1. Ставим первый <link:internal>linux</link:internal> - можно не один раздел, можно на несколько - не суть важно. Но с одним меньше путаницы.
+  Допустим /boot - sda1</note-content></text>
+  <last-change-date>2009-11-05T16:12:00.1946520+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:12:00.1946520+03:00</last-metadata-change-date>
+  <create-date>2009-04-05T14:01:40.3001210+04:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>887</x>
+  <y>417</y>
+  <open-on-startup>False</open-on-startup>
+</note>

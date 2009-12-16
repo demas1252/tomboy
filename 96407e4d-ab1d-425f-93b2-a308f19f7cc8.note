@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Связка Emacs c языками программирования и CVS</title>
+  <text xml:space="preserve"><note-content version="0.1">Связка Emacs c языками программирования и CVS
+
+<link:internal>Emacs и Python</link:internal>
+<link:internal>Emacs и Latex</link:internal>
+<link:internal>Emacs и Erlang</link:internal>
+<link:internal>Emacs и Mercurial</link:internal>
+<link:internal>Emacs и Git</link:internal>
+</note-content></text>
+  <last-change-date>2009-11-23T13:19:49.2760900+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.2760900+03:00</last-metadata-change-date>
+  <create-date>2009-07-17T10:24:51.5369650+04:00</create-date>
+  <cursor-position>121</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>81</x>
+  <y>575</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Операции и прогноз по счетам денежных средств</title>
+  <text xml:space="preserve"><note-content version="0.1">Операции и прогноз по счетам денежных средств
+
+Отчет написанный Максом. Присутствует на приложении РТК.
+
+Форма: GM_FundsForecastReport
+Класс: GM_FundsForecast_Class
+
+Записи в отчет попадают из метода GM_FundsForecast_Class.<link:internal>Add</link:internal>2FundsTmpTable():
+
+    InsertFromJournals - вставляются данный из строк журналов ГК заджойненных с BankAccountTable или RCashLedgerAccount.
+    InsertFromBankPayd - это подтягиваются данные из каких-то gmcs - х таблиц (GM_BankPaydJournal, GM_BankPaydLines)
+    InsertFromANDBankPayd - RegistrateBankPaydJournal, RegistrateBankPaydLines
+    InsertFromRequests - RequestTable, RequestLedgerLine
+    
+    В этих методах мы все насували в <link:internal>map</link:internal>, а в последнем вызове - CreateFinalFundsTmpTable() - агрегатировали.</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.8931370+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.8931370+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:25:37.4836990+03:00</create-date>
+  <cursor-position>74</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

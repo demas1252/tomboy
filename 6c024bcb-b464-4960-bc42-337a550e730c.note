@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Идентификатор базы данных</title>
+  <text xml:space="preserve"><note-content version="0.1">Идентификатор базы данных
+
+
+_select <link:internal>db</link:internal>_id()_</note-content></text>
+  <last-change-date>2009-09-24T14:37:02.6029240+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.6029240+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:33:41.8918430+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>331</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

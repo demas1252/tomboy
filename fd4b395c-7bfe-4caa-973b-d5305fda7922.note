@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Multidimensional array</title>
+  <text xml:space="preserve"><note-content version="0.1">Multidimensional array
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+  // declare two dimensional array
+  vector&lt; vector&lt;int&gt; &gt; vI2Matrix(3, vector&lt;int&gt;(2, 0));
+
+  vI2Matrix[0][0] = 0;
+  vI2Matrix[0][1] = 1;
+  vI2Matrix[1][0] = 10;
+  vI2Matrix[1][1] = 11;
+  vI2Matrix[2][0] = 20;
+  vI2Matrix[2][1] = 21;
+ 
+  cout &lt;&lt; "Loop by index:" &lt;&lt; endl;
+
+  int ii, jj;
+  for(ii = 0; ii &lt; 3; ii++) {
+    for(jj = 0; jj &lt; 2; jj++) {
+      cout &lt;&lt; vI2Matrix[ii][jj] &lt;&lt; endl;
+    }
+  }
+}
+      
+</note-content></text>
+  <last-change-date>2009-07-29T09:31:29.4462670+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-29T09:31:29.4462670+04:00</last-metadata-change-date>
+  <create-date>2009-07-29T09:31:21.4710340+04:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1219</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

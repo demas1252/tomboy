@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Oracle Data Pump</title>
+  <text xml:space="preserve"><note-content version="0.1">Oracle Data Pump
+
+
+1. Формат не совместим с exp/imp
+2. В отличие от первых выполняется на сервере. Клиент только инициирует задачу.
+3. Может литься параллельно на несколько дисков
+4. В файлах явно задается версия <link:internal>базы данных</link:internal>, что позволяет импортировать только поддерживаемые объекты
+5. Более гибкая фильтрация и преобразования
+
+<link:internal>Преобразования Data Pump</link:internal>
+<link:internal>Запуск Data Pump из SQL Plus</link:internal>
+<link:internal>Запуск Data Pump с помощью Wizard</link:internal>
+<link:internal>Мониторинг Data Pump</link:internal></note-content></text>
+  <last-change-date>2009-07-19T12:22:34.2707450+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-19T12:22:34.2707450+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:11:24.6856450+03:00</create-date>
+  <cursor-position>233</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>242</x>
+  <y>362</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>islice</title>
+  <text xml:space="preserve"><note-content version="0.1">islice
+
+import <link:internal>itertools</link:internal>
+
+def start_at_five():
+    value = raw_input().strip()
+    while value != '':
+        for el in <link:internal>itertools</link:internal>.islice(value.split(), 4, None):
+            yield el
+        value = raw_input().strip()
+
+iter = start_at_five()
+
+&gt;&gt; iter.next()
+one two three four five six 
+'five'
+
+&gt;&gt; iter.next()
+'six'
+
+&gt;&gt; iter.next()
+'one .....
+
+То есть принимает на вход список, но в отличии от обычных генераторов позволяет потреблять из него элементы из заданного диапазона (окна).
+
+
+
+</note-content></text>
+  <last-change-date>2009-03-24T09:32:45.9670010+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:32:45.9670010+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:32:16.7163290+03:00</create-date>
+  <cursor-position>485</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>70</x>
+  <y>45</y>
+  <open-on-startup>False</open-on-startup>
+</note>

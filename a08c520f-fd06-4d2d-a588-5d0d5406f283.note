@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Python реализация Builder</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Python</link:internal> реализация Builder
+
+class Director(object):
+    def construct(self, <link:internal>builder</link:internal>):
+        <link:internal>builder</link:internal>.buildPartA()
+        <link:internal>builder</link:internal>.buildPartB()
+
+class Product(object):
+    def __init__(self):
+        self.parts = []
+    
+    def <link:internal>add</link:internal>(self, part):
+        self.parts.append(part)
+
+    def show(self):
+        print "product parts"
+        for part in self.parts:
+            print part
+
+class <link:internal>Builder</link:internal>(object):
+    def buildPartA(self):
+        raise NotImplementedError
+    def buildPartB(self):
+        raise NotImplementedError
+    def getResult(self):
+        raise NotImplementedError
+
+class ConcreteBuilder<link:internal>1</link:internal>(<link:internal>Builder</link:internal>):
+    def __init__(self):
+        self.product = Product()
+
+    def buildPartA(self):
+        self.product.<link:internal>add</link:internal>("PartA")
+        
+    def buildPartB(self):
+        self.product.<link:internal>add</link:internal>("PartB")
+    
+    def getResult(self):
+        return self.product
+ 
+class ConcreteBuilder2 (<link:internal>Builder</link:internal>):
+    def __init__(self):
+        self.product = Product()
+
+    def buildPartA(self):
+        self.product.<link:internal>add</link:internal>("PartX")
+        
+    def buildPartB(self):
+        self.product.<link:internal>add</link:internal>("PartY")
+    
+    def getResult(self):
+        return self.product
+
+director = Director()
+b<link:internal>1</link:internal> = ConcreteBuilder<link:internal>1</link:internal>()
+b2 = ConcreteBuilder2()
+
+director.construct(b<link:internal>1</link:internal>);
+p<link:internal>1</link:internal> = b<link:internal>1</link:internal>.getResult();
+p<link:internal>1</link:internal>.show();
+ 
+director.construct(b2);
+p2 = b2.getResult();
+p2.show();</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.1312350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.1312350+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:06:53.3387550+03:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Redo Log Files</title>
+  <text xml:space="preserve"><note-content version="0.1">Redo Log Files
+
+Используются только для восстановления.  Восстанавливаются подтвержденные данные, которые на были записаны в файлы данных.
+Switch log - когда одна из групп полностью записана.  В этот же момент происходит checkpoint и информация записывается в contol file.
+
+LGWR:
+    - transaction commit;
+    - redo log buffer becomes 1/3 full
+    - &gt;1 MB in data buffer cache
+    - DBW -&gt; data files.
+    
+Информация о каждом checkpoint отражается в alert_SID.log, если LOG_CHECKPOINTS_TO_ALERT = TRUE (по умолчанию FALSE).
+Switch log можно сделать принудительно: SYSTEM SWITCH LOGFILE.
+Checkpoint можно сделать принудительно: ALTER SYSTEM CHECKPOINT;
+    
+<link:internal>Получение информации о RedoLogFiles</link:internal>
+<link:internal>Добавление RedoLog группы</link:internal>
+<link:internal>Добавление файлов в группы RedoLog</link:internal>
+<link:internal>Удаление Redo Log Group</link:internal>
+<link:internal>Удаление файла из RedoLogGroup</link:internal>
+
+Переименование и перемещение Redo Log файлов далается через их [<link:internal>Добавление файлов в группы RedoLog</link:internal>] и [<link:internal>Удаление файла из RedoLogGroup</link:internal>].
+
+<link:internal>Пропал redo log</link:internal>
+
+*ArchiveLog*
+
+Redo Log файлы могут архивироваться (вручную и автоматически(log_archive_start = TRUE)). 
+
+Нужно для:
+    - восстановление всех подтвержденных транзакций при recovery
+    - возможность backup пока база данных открыта
+    
+<link:internal>Получение информации об archivelog</link:internal>
+<link:internal>Переход в ArchiveLog</link:internal>
+<link:internal>Archivelogs на сетевой диск</link:internal>
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.4720070+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.4720070+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:00:14.8507470+03:00</create-date>
+  <cursor-position>1258</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

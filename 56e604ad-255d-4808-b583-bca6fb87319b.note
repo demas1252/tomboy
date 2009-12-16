@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Статические переменные</title>
+  <text xml:space="preserve"><note-content version="0.1">Статические переменные
+
+<italic>class A:
+    x = []
+
+    def <link:internal>add</link:internal></italic><italic>(self):
+        self.x.append(1)
+</italic>
+<italic>class B:
+    def __init__(self):
+        self.x = []
+
+    def <link:internal>add</link:internal></italic><italic>(self):
+        self.x.append(1)
+</italic>
+
+<italic>x = A()
+y = A()
+x.<link:internal>add</link:internal></italic><italic>()
+y.<link:internal>add</link:internal></italic><italic>()
+print "A's x:",x.x
+</italic>
+<italic>x = B()
+y = B()
+x.<link:internal>add</link:internal></italic><italic>()
+y.<link:internal>add</link:internal></italic><italic>()
+print "B's x:",x.x
+</italic>
+<italic>A's x: [1, 1]
+B's x: [1]</italic></note-content></text>
+  <last-change-date>2009-01-24T19:45:12.5820400+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-24T19:45:12.5820400+03:00</last-metadata-change-date>
+  <create-date>2009-01-24T19:44:28.4070810+03:00</create-date>
+  <cursor-position>318</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>13</x>
+  <y>340</y>
+  <open-on-startup>False</open-on-startup>
+</note>

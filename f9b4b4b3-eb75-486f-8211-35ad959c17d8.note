@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удалить всех пользователей базы</title>
+  <text xml:space="preserve"><note-content version="0.1">Удалить всех пользователей базы
+
+<italic>select DISTINCT 'EXEC sp_dropuser ''' + o.name + ''''
+from dbo.sysusers o left join 
+(select sid, loginname, 1 as matched from master.dbo.syslogins) l 
+on 
+l.sid = o.sid 
+where 
+((o.issqlrole != 1 and o.isapprole != 1 and o.status != 0 and matched is not null) 
+or 
+(o.sid = 0x00) and o.hasdbaccess = 1) and o.<link:internal>isaliased</link:internal></italic><italic> != 1
+and
+o.name not in ('dbo', 'guest', 'sys')
+</italic>
+/*
+-------------------------------------------------
+EXEC sp_dropuser 'IUSR_HOME'
+EXEC sp_dropuser 'IWAM_HOME'
+EXEC sp_dropuser 'Pupkin'
+EXEC sp_dropuser 'Sidoroff'
+
+(4 row(s) affected)
+*/</note-content></text>
+  <last-change-date>2009-09-24T14:37:02.1757910+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:02.1757910+04:00</last-metadata-change-date>
+  <create-date>2008-09-14T21:23:08.3780030+04:00</create-date>
+  <cursor-position>413</cursor-position>
+  <width>774</width>
+  <height>534</height>
+  <x>581</x>
+  <y>192</y>
+  <open-on-startup>False</open-on-startup>
+</note>

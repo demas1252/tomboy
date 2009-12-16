@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление дублирующихся записей</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление дублирующихся записей
+
+_create table <link:internal>test</link:internal> (
+id int,
+field<link:internal>1</link:internal> varchar(10),
+filed2 int)
+
+insert into <link:internal>test</link:internal> values (<link:internal>1</link:internal>, 'google', <link:internal>1</link:internal>)
+insert into <link:internal>test</link:internal> values (2, 'google', 2)
+insert into <link:internal>test</link:internal> values (3, 'google', <link:internal>1</link:internal>)
+insert into <link:internal>test</link:internal> values (4, 'google', 2)
+insert into <link:internal>test</link:internal> values (5, 'google', 2)
+insert into <link:internal>test</link:internal> values (6, 'google', <link:internal>1</link:internal>)
+insert into <link:internal>test</link:internal> values (7, 'yahoo', <link:internal>1</link:internal>)
+insert into <link:internal>test</link:internal> values (8, 'delete', <link:internal>1</link:internal>)
+insert into <link:internal>test</link:internal> values (9, 'delete', 2)
+
+select * from <link:internal>test</link:internal>
+
+delete t
+from <link:internal>test</link:internal> t
+where exists (select top <link:internal>1</link:internal> <link:internal>1</link:internal> from <link:internal>test</link:internal> t2
+			  where t2.field<link:internal>1</link:internal> = t.field<link:internal>1</link:internal> and
+					t2.filed2 = t.filed2 and
+					t2.id &lt; t.id)
+                    
+select * from <link:internal>test</link:internal>
+
+drop table <link:internal>test</link:internal>_
+
+или
+
+Есть таблица
+NSYST VAL
+<link:internal>1</link:internal> <link:internal>1</link:internal>
+2 <link:internal>1</link:internal>
+3 2
+4 3
+5 4
+6 2
+Из этой таблицы нужно удалить дубли.
+
+Необходимо чтобы ответ был вот в таком виде:
+NSYST VAL
+<link:internal>1</link:internal> <link:internal>1</link:internal>
+3 2
+4 3
+5 4
+
+delete from MyTable where NSYST not in
+(select min(NSYST) from MyTable group by VAL)</note-content></text>
+  <last-change-date>2009-04-25T18:32:30.8306490+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:30.8306490+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:00:37.8636520+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>486</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

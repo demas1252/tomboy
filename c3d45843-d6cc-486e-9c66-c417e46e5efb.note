@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Zypper</title>
+  <text xml:space="preserve"><note-content version="0.1">Zypper
+
+Вся информация из <link:internal>man</link:internal> zypper
+<link:url>
+/var/cache/zypp/</link:url>...<link:url>
+/etc/zypp/zypp.conf</link:url> - конфиг
+
+Services - это уровень абстракции над репозиориями, позволяющий их группировать (<link:url>http://en.opensuse.org/Standards/Repository_Index_Service</link:url>)
+
+Типы пакетов:
+
+<list><list-item dir="ltr">package - пакет
+</list-item><list-item dir="ltr">patch - патч, как правило скрипт
+</list-item><list-item dir="ltr">pattern - набор пакетов для функциональности
+</list-item><list-item dir="ltr">product - набор пакетов для продукта
+</list-item><list-item dir="ltr">srcpackage - исходники</list-item></list>
+
+<list><list-item dir="ltr">info &lt;<link:internal>if</link:internal>&gt; name - информация о пакете
+</list-item><list-item dir="ltr">install &lt;in&gt; name - установка
+<list><list-item dir="ltr">можно так zypper=0.8 или 'zypper&gt;0.8'
+</list-item><list-item dir="ltr">или<link:url> ~/rpms/foo.rpm</link:url>
+</list-item><list-item dir="ltr"><link:url>http://some.site/bar.rpm</link:url>
+</list-item><list-item dir="ltr">по идее они должны храниться здесь<link:url> /var/cache/zypper/RPMS</link:url> но я их не вижу
+</list-item><list-item dir="ltr"><link:internal>vim</link:internal> <link:internal>emacs</link:internal> -<link:internal>vim</link:internal> - первое поставить, второе удалить
+</list-item><list-item dir="ltr">-f - reinstall
+</list-item><list-item dir="ltr">-l - автоматом согласиться со всеми лицензиями
+</list-item></list></list-item><list-item dir="ltr">source-install (si) &lt;name&gt;
+<list><list-item dir="ltr">проверить - если ли исходники zypper search -t srcpackage -r &lt;alias|#|<link:internal>URI</link:internal>&gt;
+</list-item><list-item dir="ltr">по идее должен ставить и зависимости, для сборки
+</list-item></list></list-item><list-item dir="ltr">verify (ve) - проверка нет ли поломанных зависимостей
+</list-item><list-item dir="ltr">install-new-recommends (inr) - проинсталлить рекомендуемое
+</list-item><list-item dir="ltr">remove (rm)
+</list-item><list-item dir="ltr">list-updates (lu) - перечень обновлений
+</list-item><list-item dir="ltr">update (up) &lt;name&gt;- апдейт на новую версию, если возможно
+</list-item><list-item dir="ltr">list-patches (lp)
+</list-item><list-item dir="ltr">patch - установить все патчи
+</list-item><list-item dir="ltr">dist-upgrade (dup)
+</list-item><list-item dir="ltr">search (se)
+<list><list-item dir="ltr">-i только установденные
+</list-item><list-item dir="ltr">-u неустанвленные
+</list-item></list></list-item><list-item dir="ltr">packages (pa) &lt;repository&gt;
+<list><list-item dir="ltr">перечень пакетов с репозитория - можно эмулировтаь se
+</list-item></list></list-item><list-item dir="ltr">patterns, products - аналогично packages
+</list-item><list-item dir="ltr">what-provides (wp) &lt;capability&gt;
+</list-item><list-item dir="ltr">addrepo &lt;<link:internal>URI</link:internal>&gt;
+<list><list-item dir="ltr">или &lt;file.repo&gt;
+</list-item></list></list-item><list-item dir="ltr">removerepo (rr)
+</list-item><list-item dir="ltr">repos (lr) - перечень реп
+</list-item><list-item dir="ltr">modifyrepo (mr)
+</list-item><list-item dir="ltr">refresh (ref)
+</list-item><list-item dir="ltr">addservice (as)
+</list-item><list-item dir="ltr">removeservice (rs)
+</list-item><list-item dir="ltr">services (ls)
+</list-item><list-item dir="ltr">refresh-services (refs)
+</list-item><list-item dir="ltr">locks (ll) - перечень удерживаемых пакетов
+</list-item><list-item dir="ltr">addlock (al) &lt;имя&gt;
+</list-item><list-item dir="ltr">removelock (rl) &lt;name&gt;
+</list-item><list-item dir="ltr">cleanlocks (cl)</list-item></list>
+
+-C &lt;dir&gt; - директория куда кешировать пакеты
+-R &lt;dir&gt; - ставить так, как будто dir это /q
+
+<link:url>http://ru.opensuse.org/Zypper/Usage</link:url>
+
+<link:internal>Включить кеширование для репозиториев Suse</link:internal>
+</note-content></text>
+  <last-change-date>2009-11-23T13:19:49.5678830+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T13:19:49.5678830+03:00</last-metadata-change-date>
+  <create-date>2009-09-16T16:54:07.0217130+04:00</create-date>
+  <cursor-position>6</cursor-position>
+  <width>506</width>
+  <height>637</height>
+  <x>436</x>
+  <y>235</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Интеграция Firefox в KDE</title>
+  <text xml:space="preserve"><note-content version="0.1">Интеграция Firefox в KDE
+
+1. . install your distro's <link:internal>gtk</link:internal>-qt-engine
+note: depending on how far your distro is with <link:internal>kde</link:internal>4 integration this package may either be called <link:internal>gtk</link:internal>-qt-engine or <link:internal>gtk</link:internal>-qt-engine-<link:internal>kde</link:internal>4
+
+2. change your Firefox theme
+<link:internal>If</link:internal> you use the default <link:internal>KDE</link:internal> oxygen theme install the oxygen theme for Firefox from here: <link:url>https://addons.mozilla.org/en-US/firefox/addon/7962</link:url>
+
+3. change the appearance of the file selector:
+type "about:config" into Firefox's URL bar and type "platform" into the display filter below. Make sure that the value for
+
+    Quote:ui.allow_platform_file_picker
+
+is set to false
+
+4. Additionally, to fix buttons and checkboxes, install package <link:internal>gtk</link:internal>2-engines-qtcurve. Now open KMenu-&gt;System Settings-&gt;Appearance-&gt;<link:internal>GTK</link:internal> Styles and Fonts and set "Use <link:internal>another</link:internal> style" (under category <link:internal>GTK</link:internal> Styles) to QtCurve. Save it and restart Firefox (copied this straight from post #5 Wink 2 - many thanks!)</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.6556720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.6556720+04:00</last-metadata-change-date>
+  <create-date>2008-12-26T15:28:55.3469190+03:00</create-date>
+  <cursor-position>541</cursor-position>
+  <width>620</width>
+  <height>464</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

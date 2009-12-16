@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>dpkg's</title>
+  <text xml:space="preserve"><note-content version="0.1">dpkg's
+
+<italic>Установка пакета:</italic>
+
+<link:internal>dpkg</link:internal> --install ./file.deb
+<list><list-item dir="ltr">система не проверяет, есть ли уже такой пакет</list-item></list>
+
+Установка пакета, как я понял, состоит из 2-х шагов, которые можно выполнить по отдельности:
+
+<italic>Распаковка пакета:</italic>
+
+--unpack file.deb 
+
+<list><list-item dir="ltr">выполняется preinst
+</list-item><list-item dir="ltr">conffiles распаковываются куда-то в /etc как .<link:internal>dpkg</link:internal>-new
+</list-item><list-item dir="ltr">распаковываются файлы данных в /
+</list-item><list-item dir="ltr"><link:url>/var/lib/dpkg/info</link:url> - распаковываются conffiles
+</list-item><list-item dir="ltr">пакет помечается как распакованный</list-item></list>
+
+<italic>Конфигурирование пакета:</italic>
+
+--configure packet (ex. <link:internal>tomboy</link:internal>)
+
+</note-content></text>
+  <last-change-date>2008-04-19T21:07:46.6869090+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-19T21:07:46.6869090+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T14:41:22.3438830+04:00</create-date>
+  <cursor-position>496</cursor-position>
+  <width>450</width>
+  <height>668</height>
+  <x>1140</x>
+  <y>145</y>
+  <open-on-startup>False</open-on-startup>
+</note>

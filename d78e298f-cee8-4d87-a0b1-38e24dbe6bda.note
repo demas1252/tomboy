@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сумма чисел Фибоначчи</title>
+  <text xml:space="preserve"><note-content version="0.1">Сумма чисел Фибоначчи
+
+<bold>u1 + .. un = u(n+2) - 1</bold>
+
+<italic>Доказательство:</italic>
+
+<italic>	u1=u3-u2
+	u2=u4-u3
+	....
+	u(n-1)=u(n+1)-un
+	un=u(n+2)-u(n+1)</italic>
+
+<italic>Cложим равенства:</italic>
+
+<italic>	u1+...un=u(n+2)-u2</italic> -&gt;
+<italic>	u1+...un=u(n+2)-</italic>1</note-content></text>
+  <last-change-date>2009-09-10T13:52:48.0435650+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-10T13:52:48.0435650+04:00</last-metadata-change-date>
+  <create-date>2009-09-10T13:50:50.6676870+04:00</create-date>
+  <cursor-position>166</cursor-position>
+  <width>463</width>
+  <height>335</height>
+  <x>1011</x>
+  <y>530</y>
+  <open-on-startup>False</open-on-startup>
+</note>

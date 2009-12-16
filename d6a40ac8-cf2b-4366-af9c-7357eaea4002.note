@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sequence Library</title>
+  <text xml:space="preserve"><note-content version="0.1">Sequence Library
+
+<italic>user=&gt; (range 10 20 2)
+(10 12 14 16 18)</italic>
+
+<italic>user=&gt; (repeat 5 1)
+(1 1 1 1 1)
+</italic>
+<italic>(iterate inc 1)</italic> - применяет функцию к начальному элементу; возвращает бесконечный набор чисел.
+
+Берем первых 10 чисел из этой бесконечной последовательности:
+
+<italic>user=&gt; (take 10 (iterate inc 1))
+(1 2 3 4 5 6 7 8 9 10)
+</italic>
+<italic>user=&gt; (take 10 (cycle (range 2)))
+(0 1 0 1 0 1 0 1 0 1)
+</italic>
+<italic>user=&gt; (interleave [1 2 3] ["a" "b" "c"])
+(1 "a" 2 "b" 3 "c")
+</italic>
+<italic>user=&gt; (use '[<link:internal>clojure</link:internal></italic><italic>.contrib.str-utils :only (str-join)])
+	nil
+user=&gt; (str-join \, ["one" "two" "three"])
+	"one,two,three"
+</italic>
+</note-content></text>
+  <last-change-date>2009-08-07T12:16:51.5664900+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T12:16:51.5664900+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T12:07:49.6495830+04:00</create-date>
+  <cursor-position>553</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1106</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

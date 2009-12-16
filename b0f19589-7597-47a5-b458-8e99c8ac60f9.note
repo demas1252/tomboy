@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>other/create_mount_points.sh</title>
+  <text xml:space="preserve"><note-content version="0.1">other/create_mount_points.sh
+
+mkdir<link:url> /usr/local/vms</link:url>
+mkdir<link:url> /usr/local/docs</link:url>
+mkdir<link:url> /usr/local/<link:broken>music</link:broken></link:url>
+
+chmod -R 777<link:url> /usr/local/vms</link:url>
+chmod -R 777<link:url> /usr/local/docs</link:url>
+chmod -R 777<link:url> /usr/local/<link:broken>music</link:broken></link:url>
+
+chown -R demas:demas<link:url> /usr/local/vms</link:url>
+chown -R demas:demas<link:url> /usr/local/docs</link:url>
+chown -R demas:demas<link:url> /usr/local/<link:broken>music</link:broken></link:url>
+</note-content></text>
+  <last-change-date>2009-02-03T14:30:47.3774850+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-03T14:30:47.3774850+03:00</last-metadata-change-date>
+  <create-date>2009-01-06T14:08:24.1477890+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>610</y>
+  <open-on-startup>False</open-on-startup>
+</note>

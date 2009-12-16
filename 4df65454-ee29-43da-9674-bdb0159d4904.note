@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация stupid sort на cpp</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация stupid sort на cpp
+
+#include "stdio.h"
+ 
+stupid_sort(int *A, int n) {
+  int i = 0, tmp;
+  while (i &lt; n - 1) {
+    <link:internal>if</link:internal> (A[i + 1] &lt; A[i]) {
+      tmp = A[i];
+      A[i] = A[i + 1];
+      A[i + 1] = tmp;
+      i = 0;
+    }
+    else
+      i++;
+  }
+}
+
+int main(int argc, char *argv[])
+{
+  int A[8] = { 12, 5, 89, 23, 43, 90, 2, 13 };
+  int n = 8;
+
+  stupid_sort(A, n);
+
+  int i;
+  for(i = 0; i &lt; n; i++)
+    printf("%d ", A[i]);
+  printf("\n");
+
+  return 0;
+}
+</note-content></text>
+  <last-change-date>2009-03-23T21:50:14.0092670+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:50:14.0092670+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:50:07.7583810+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

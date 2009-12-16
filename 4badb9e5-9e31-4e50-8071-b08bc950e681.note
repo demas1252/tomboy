@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Mandrake Package Manager</title>
+  <text xml:space="preserve"><note-content version="0.1">Mandrake Package Manager
+
+Три типа репозиториев:
+   <italic>main</italic> - поддерживаемое обновлениями безопасности
+  <italic> contrib </italic>- не поддерживаемое
+   <italic>non-free - </italic>не свободное
+   
+Каждая ветка делится на 4 типа:
+   <italic>release - </italic>состояние на момент релиза
+   <italic>updates - </italic>обновления по безопасности
+  <italic> testing </italic>- оно понятно
+   <italic>backports - </italic>новые версии программ не покрываемые обновлениями безопасности
+
+<italic>rpmdrake</italic> - гламурная морда для установки пакетов
+<italic>urpmi</italic> - консольная утилита 
+
+<link:internal>Сборка rpm для Mandriva</link:internal></note-content></text>
+  <last-change-date>2009-04-02T15:14:53.0725579+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-02T15:14:53.0725579+04:00</last-metadata-change-date>
+  <create-date>2009-04-02T15:07:49.9021400+04:00</create-date>
+  <cursor-position>456</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>935</x>
+  <y>430</y>
+  <open-on-startup>False</open-on-startup>
+</note>

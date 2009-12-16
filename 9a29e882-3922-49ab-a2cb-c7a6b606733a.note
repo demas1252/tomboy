@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование Sql в Sequel</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Использование Sql</link:internal> в Sequel
+
+<italic> <link:internal>DB</link:internal></italic><italic> &lt;&lt; "create table t (a text, b text)"
+ <link:internal>DB</link:internal></italic><italic> &lt;&lt; "insert into t values ('a', 'b')"</italic>
+
+А вообще, документация рулит:
+
+<link:url>http://<link:internal>sequel</link:internal></link:url><link:url>.rubyforge.org/rdoc/files/README_rdoc.html</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5853280+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5853280+04:00</last-metadata-change-date>
+  <create-date>2009-07-04T22:19:55.1381979+04:00</create-date>
+  <cursor-position>139</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>668</x>
+  <y>508</y>
+  <open-on-startup>False</open-on-startup>
+</note>

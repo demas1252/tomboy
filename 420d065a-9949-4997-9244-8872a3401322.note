@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример XML RPC на Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример XML RPC на Python
+
+<bold>Сервер:</bold>
+
+from SimpleXMLRPCServer import SimpleXMLRPCServer
+from SimpleXMLRPCServer import SimpleXMLRPCRequestHandler
+
+# Restrict to a particular path.
+class RequestHandler(SimpleXMLRPCRequestHandler):
+    rpc_paths = ('/RPC2',)
+
+# Create server
+server = SimpleXMLRPCServer(("localhost", 8000),
+                            requestHandler=RequestHandler)
+server.register_introspection_functions()
+
+# Register pow() function; this will use the value of
+# pow.__name__ as the name, which is just 'pow'.
+server.register_function(pow)
+
+# Register a function under a different name
+def adder_function(x,y):
+    return x + y
+server.register_function(adder_function, 'add')
+
+# Register an instance; all the methods of the instance are
+# published as XML-RPC methods (in this case, just 'div').
+class MyFuncs:
+    def div(self, x, y):
+        return x // y
+
+server.register_instance(MyFuncs())
+
+# Run the server's main loop
+server.serve_forever()
+
+<bold>Клиент:</bold>
+import xmlrpclib
+
+s = xmlrpclib.ServerProxy('<link:url>http://localhost:8000</link:url>')
+print s.pow(2,3)  # Returns 2**3 = 8
+print s.add(2,3)  # Returns 5
+print s.div(5,2)  # Returns 5//2 = 2
+
+# Print list of available methods
+print s.system.listMethods()
+
+</note-content></text>
+  <last-change-date>2009-04-09T17:27:01.5702940+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-09T17:27:01.5702940+04:00</last-metadata-change-date>
+  <create-date>2009-04-09T17:25:24.0430450+04:00</create-date>
+  <cursor-position>1219</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>317</x>
+  <y>336</y>
+  <open-on-startup>False</open-on-startup>
+</note>

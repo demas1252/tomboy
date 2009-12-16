@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пользователи и их права в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Пользователи и их права в MS SQL
+
+<link:internal>Login failed for user Reason Not associated with a trusted SQL Server Connection</link:internal>
+<link:internal>Удалить всех пользователей базы</link:internal>
+<link:internal>Сменить пароль пользователю</link:internal></note-content></text>
+  <last-change-date>2009-04-05T22:23:16.9520900+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-05T22:23:16.9520900+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:16:12.8279020+03:00</create-date>
+  <cursor-position>147</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>999</x>
+  <y>460</y>
+  <open-on-startup>False</open-on-startup>
+</note>

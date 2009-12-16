@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Размер БД</title>
+  <text xml:space="preserve"><note-content version="0.1">Размер БД
+
+
+Так как возникает очень много вопросов на тему - "Размер СУБД резко вырос. Что делать?" здесь я буду собирать информацию о этих случаях.
+
+*Стандартное решение проблемы*
+
+DBCC SHRINKDATABASE(MyBase)
+GO
+USE MyBase
+GO
+BACKUP LOG MyBase WITH TRUNCATE_ONLY
+GO
+DBCC SHRINKFILE (MyBase_log)
+GO
+
+[<link:internal>Разрастание СУБД в следствие отсутствия кластерных индексов</link:internal>]</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.6783530+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.6783530+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:39:43.2319680+04:00</create-date>
+  <cursor-position>38</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>282</x>
+  <y>637</y>
+  <open-on-startup>False</open-on-startup>
+</note>

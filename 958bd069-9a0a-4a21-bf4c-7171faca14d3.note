@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Lambda</title>
+  <text xml:space="preserve"><note-content version="0.1">Lambda
+
+Ранее была функция фильтрации списков.  Ее можно записать так с использованием локальных функций:
+
+ir {
+name, age }
+
+;; <link:internal>find</link:internal> : list-of-IRs symbol -&gt; boolean 
+(define (<link:internal>find</link:internal> aloir t) 
+    (local ((define (eq-ir? ir p)
+                    (symbol=? (ir-name ir) p))) 
+    (filter<link:internal>1</link:internal> eq-ir? aloir t))) 
+    
+А еще лучше так:
+
+;; <link:internal>find</link:internal> : list-of-IRs symbol -&gt; boolean 
+(define (<link:internal>find</link:internal> aloir t) 
+  (filter<link:internal>1</link:internal> (local ((define (eq-ir? ir p) (symbol=? (ir-name ir) p)))  eq-ir?)  aloir t)) 
+  
+То есть, функцию проверки мы засунули прям в вызов функции.
+
+А теперь делаем еще один маленький шаг:
+
+(filter<link:internal>1</link:internal> (lambda (ir p) (&lt; (ir-price ir) p))          
+    (list (make-ir 'doll 10)) 
+        8) 
+
+
+То есть, следующие два выражения эквивалентны:
+
+(lambda (x-<link:internal>1</link:internal> ...  x-n) exp) 
+
+(local ((define (a-new-name x-<link:internal>1</link:internal> ... x-n) exp)) 
+    a-new-name) 
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.4765460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.4765460+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:56:10.8616110+03:00</create-date>
+  <cursor-position>604</cursor-position>
+  <width>955</width>
+  <height>764</height>
+  <x>144</x>
+  <y>660</y>
+  <open-on-startup>False</open-on-startup>
+</note>

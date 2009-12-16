@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CSharp реализация AbstractFactory</title>
+  <text xml:space="preserve"><note-content version="0.1">CSharp реализация AbstractFactory
+
+
+&lt;&lt;pre 
+
+/ * Note how the abstract (base) class GuiFactory is the one that instantiates its own subclasses (WinFactory, OSXFactory).  As those subclasses inherit from base and override base CreateButton method,  it’s GuiFactory's job to disambiguate who’s overriding its CreateButton method,  at the time of being instantiated by Client.  Adding more factory subclasses (e.g. LinuxFactory) confines change  to GUIFactory class only   
+*/
+
+// factories
+
+abstract class GuiFactory
+{
+    public static GuiFactory GetFactory()
+    {
+        int sys = ReadFromConfigFile("OS_TYPE");
+        <link:internal>if</link:internal> (sys == 0)
+            return new WinFactory();
+        else
+            return new OSXFactory();
+   }
+
+   public abstract Button CreateButton();
+}
+
+class WinFactory : GuiFactory
+{
+    public override Button CreateButton()    {
+        return new WinButton();
+    }
+}
+
+class OSXFactory : GuiFactory
+{
+    public override Button CreateButton()   {
+        return new OSXButton();
+    }
+}
+
+// widgets
+
+abstract class Button
+{
+    public string Caption;
+    public abstract void Paint();
+}
+
+class WinButton : Button
+{
+    public override void Paint()     {
+       Console.WriteLine("I'm a WinButton: " + Caption);
+    }
+}
+
+class OSXButton : Button
+{
+    public override void Paint()     {
+       Console.WriteLine("I'm an OSXButton: " + Caption);
+    }
+}
+
+// application
+
+class Application
+{
+    static void Main()
+    {
+        GuiFactory factory = GuiFactory.GetFactory();
+        Button button = factory.CreateButton();
+        button.Caption = "Play";
+        button.Paint();
+    }
+    
+// Output is either:
+//   "I'm a WinButton: Play"
+// or:
+//   "I'm an OSXButton: Play"
+}
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.0303910+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.0303910+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:02:04.9418490+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>136</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Печать регистров</title>
+  <text xml:space="preserve"><note-content version="0.1">Печать регистров
+
+
+   1. Запуск печати RTax25Report_RegisterTrans.main()
+
+      registerTrans = RTax25Report_RegisterTrans::construct(_<link:internal>args</link:internal>.record()); - порождаем нужнога нам построителя отчетов. Как правило это базовый класс, хотя встречаются спецефичные для отчетов.
+
+      registerTrans.initQuery(); - создаем Query из строк, которые будут печататься
+      что-то типа:
+
+      SELECT * FROM RTax25RegisterTrans
+      USING INDEX JournalRegisterLineTypeIdx
+      WHERE ((JournalNum = 126)) AND ((PeriodType = Месяц))
+      AND ((PeriodNum = 6)) AND ((FiscalYear = 2007)) AND ((RegisterId = НБ))
+   2. run() -&gt; OGK4_RTax25Report_Base.output2<link:internal>Excel</link:internal>()
+
+      Там цикл (while select) по query (шаг 2) и -&gt; fillLine()
+   3. fillLine():
+
+      row - номер строки в <link:internal>Excel</link:internal>
+
+      первый цикл вроде как заполняет структуру:
+      line = new Array(Types::Class);
+
+</note-content></text>
+  <last-change-date>2008-03-30T07:36:45.8452910+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:36:45.8452910+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:32:27.6415970+03:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>68</y>
+  <open-on-startup>False</open-on-startup>
+</note>

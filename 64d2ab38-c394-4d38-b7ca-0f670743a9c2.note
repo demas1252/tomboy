@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы в Python
+
+<link:internal>Boolean in Python</link:internal>
+<link:internal>Приведение типов в Python</link:internal>
+<link:internal>tuple vs list</link:internal>
+<link:internal>Список в словарь</link:internal>
+<link:internal>Неизменяемость списков</link:internal>
+<link:internal>Реализация enum в Python</link:internal>
+<link:internal>Словарь с ключем в виде списка</link:internal>
+<link:internal>Быстрый поиск по словарю</link:internal>
+<link:internal>Работа со списками в Python</link:internal></note-content></text>
+  <last-change-date>2009-11-23T17:07:33.6160990+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T17:07:33.6160990+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:09:59.2363740+03:00</create-date>
+  <cursor-position>194</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>869</x>
+  <y>414</y>
+  <open-on-startup>False</open-on-startup>
+</note>

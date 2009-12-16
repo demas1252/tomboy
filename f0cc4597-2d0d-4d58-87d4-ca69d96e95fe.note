@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получение плана запроса</title>
+  <text xml:space="preserve"><note-content version="0.1">Получение плана запроса
+
+      [source: <link:internal>sql</link:internal>.ru]
+      <link:url>http://www.sql.ru/forum/actualthread.aspx?tid=149951&amp;pg=-1&amp;hl=dbms_xplan</link:url>
+
+      Это базовый способ, к которому сводятся, по сути, большинство остальных. Может показаться излишне громоздким и неудобным, но незаменим, например, при «пакетном» анализе <link:internal>sql</link:internal>-операторов.
+
+      Базовым методом формирования плана является <link:internal>SQL</link:internal>-оператор EXPLAIN PLAN. Полученный план сохраняется в таблице определенной структуры. Эта таблица называется, как правило, PLAN_TABLE, и может быть создана скриптом 
+
+%<link:internal>oracle</link:internal>_homerdbmsadminutlxplan.<link:internal>sql</link:internal> (utlxplan_<link:internal>sql</link:internal>)
+
+      delete from plan_table
+
+      explain plan
+      for select * from <link:internal>test</link:internal>
+
+      select * from plan_table
+
+      select lpad(' ', 2*(level-<link:internal>1</link:internal>))||operation||' '||options||' '||object_name plan
+      from plan_table
+      start with id = 0
+      connect by prior id = parent_id</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.4867360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.4867360+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:52:44.2459960+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

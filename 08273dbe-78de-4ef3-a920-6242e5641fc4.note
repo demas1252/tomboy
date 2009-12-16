@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Bubble sort (сортировка пузырьком)</title>
+  <text xml:space="preserve"><note-content version="0.1">Bubble sort (сортировка пузырьком)
+
+O(n*n) - только для небольших массивов.
+
+Cостоит в повторяющихся проходах по массиву. За каждый проход элементы последовательно сравниваются попарно и, если порядок в паре неверный, выполняется обмен элементов. Проходы по массиву повторяются до тех пор, пока на очередном проходе не окажется, что обмены больше не нужны.
+
+<italic>def bubblesort(list):
+	for i in range(len(list)-1, 1, -1):
+		for j in range(1, i):
+			<link:internal>if</link:internal></italic><italic>(list[j] &gt; list[j+1]):
+				(list[j], list[j+1]) = (list[j+1], list[j])
+	return list
+	
+print bubblesort([1, 20, 3, 5, 9, 2, 8])
+</italic></note-content></text>
+  <last-change-date>2008-10-25T22:16:02.6425990+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-25T22:16:02.6425990+04:00</last-metadata-change-date>
+  <create-date>2008-09-14T19:17:33.8570520+04:00</create-date>
+  <cursor-position>573</cursor-position>
+  <width>832</width>
+  <height>1021</height>
+  <x>496</x>
+  <y>202</y>
+  <open-on-startup>False</open-on-startup>
+</note>

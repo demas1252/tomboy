@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выделения</title>
+  <text xml:space="preserve"><note-content version="0.1">Выделения
+
+ctrl+v - начать выделять <link:internal>блок</link:internal>
+
+y - закончить выделение и в буфер выделенное
+y% - скопировать <link:internal>блок</link:internal> вместе с парными скобками. Курсор должен стоять на одной из скобок. Здесь y команда копирования, % команда перемещения к соответствующей скобке.
+
+d - закончить выделение и удалить выделенное
+p - вставить буфер
+gv - восстановить последнее выделение
+
+:reg - содержимое регистров
+
+"" - unnamed register - всегда содержит последний захваченный текст
+0-9 - цифровые - тут довольно запустанно и не вижу как может использоваться на практике
+a-z - именованные ("ay "ap)
+"% "# ". ": - read-only - имя файла и т.д.
+"* и "+ - это <link:internal>linux</link:internal> clipboard</note-content></text>
+  <last-change-date>2009-10-12T12:00:31.4026400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:31.4026400+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:03:42.6132820+03:00</create-date>
+  <cursor-position>38</cursor-position>
+  <width>640</width>
+  <height>497</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

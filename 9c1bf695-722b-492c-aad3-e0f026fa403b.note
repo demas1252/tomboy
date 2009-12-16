@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Резервное копирование</title>
+  <text xml:space="preserve"><note-content version="0.1">Резервное копирование
+
+<link:internal>rsync</link:internal>
+
+Важным отличием <link:internal>rsync</link:internal> от многих других программ/протоколов является то что <link:internal>зеркалирование</link:internal> осуществляется одним потоком в каждом направлении (а не по одному или несколько потоков на каждый файл). <link:internal>rsync</link:internal> может копировать или отображать содержимое каталога и копировать файлы, опционально используя сжатие и рекурсию.
+
+rsyncd — демон, реализующий протокол <link:internal>rsync</link:internal>. По умолчанию использует TCP порт 873.
+
+Утилита <link:internal>rsync</link:internal> использует алгоритм, разработанный австралийским программистом Andrew Tridgell, для эффективной передачи структур (например файлов) по коммуникационным соединениям в том случае, когда принимающий компьютер уже имеет отличающуюся версию этой структуры. Принимающий компьютер разделяет свою копию файла на неперекрывающиеся куски фиксированного размера S, и вычисляет контрольную сумму для каждого куска: MD4 хэш и более слабый 'rolling checksum', и отправляет их серверу, с которым синхронизируется. Сервер, с которым синхронизируются, вычисляет контрольные суммы для каждого кусочка размера S в своей версии файла, в том числе перекрывающиеся куски. Это может быть эффективно подсчитано ввиду особого свойства rolling checksum: если rolling checksum байт от n до n+S-<link:internal>1</link:internal> равняется R, то rolling checksum байт от n+<link:internal>1</link:internal> до n+S может быть посчитана исходя из R, байта n и байта n+S без необходимости учитывать байты, лежащие внутри этого интервала. Таким образом, если уже подсчитана rolling checksum байт <link:internal>1</link:internal>-25, то для подсчета rolling checksum байт 2-26 используется предыдущая контрольная сумма и байты <link:internal>1</link:internal> и 26.</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.1616160+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.1616160+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:59:24.7109799+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

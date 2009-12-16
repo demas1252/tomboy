@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Активизация CLR возможностей в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Активизация CLR возможностей в MS SQL
+
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'clr enabled', 1;
+GO
+RECONFIGURE;
+GO</note-content></text>
+  <last-change-date>2009-08-04T13:35:48.5778120+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-04T13:35:48.5778120+04:00</last-metadata-change-date>
+  <create-date>2009-08-04T13:35:22.2057000+04:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>512</x>
+  <y>204</y>
+  <open-on-startup>False</open-on-startup>
+</note>

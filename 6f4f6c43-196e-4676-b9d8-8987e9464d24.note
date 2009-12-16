@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Sequel Inside</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Sequel</link:internal> Inside
+
+<link:internal>Sequel - создание таблицы</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-12T22:18:40.1569350+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-12T22:18:40.1569350+04:00</last-metadata-change-date>
+  <create-date>2009-09-08T15:49:23.9034440+04:00</create-date>
+  <cursor-position>317</cursor-position>
+  <width>568</width>
+  <height>487</height>
+  <x>112</x>
+  <y>377</y>
+  <open-on-startup>False</open-on-startup>
+</note>

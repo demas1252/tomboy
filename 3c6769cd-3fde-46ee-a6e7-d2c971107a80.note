@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вставка документа с помощью ecouch</title>
+  <text xml:space="preserve"><note-content version="0.1">Вставка документа с помощью ecouch
+
+-module(ec).
+-compile(export_all).
+
+start()-&gt;
+    inets:start(),
+    application:start(ecouch).
+
+add_doc()-&gt;
+    ecouch:doc_create("<link:internal>test</link:internal>", {obj, [{"foo", 1}]}).
+
+<bold>Вставка с Id:</bold>
+
+add_doc(Id)-&gt;
+    ecouch:doc_create("<link:internal>test</link:internal>", Id, {obj, [{"foo", 5}]}).
+</note-content></text>
+  <last-change-date>2009-07-23T10:09:02.3094029+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-23T10:09:02.3094029+04:00</last-metadata-change-date>
+  <create-date>2009-07-21T11:04:01.3265569+04:00</create-date>
+  <cursor-position>213</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>660</x>
+  <y>347</y>
+  <open-on-startup>False</open-on-startup>
+</note>

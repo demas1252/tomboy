@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Печатная форма 'Авансовый отчет'</title>
+  <text xml:space="preserve"><note-content version="0.1">Печатная форма 'Авансовый отчет'
+
+Отчет:  <italic>EmplAdvance_Ru</italic>
+Класс:   <italic>EmplAdvanceReport_Settle_Ru</italic>
+
+При построении отчета работает метод <italic>fetch()</italic>
+
+<link:internal>Соответствие полей в отчете коду, который их заполняет (EmplAdvance_Ru)</link:internal>
+<link:internal>SettleExec и EmplAdvanceReport_Settle_Ru</link:internal></note-content></text>
+  <last-change-date>2009-06-04T11:21:47.0846300+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-04T11:21:47.0846300+04:00</last-metadata-change-date>
+  <create-date>2009-06-04T11:16:09.4154840+04:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>658</width>
+  <height>414</height>
+  <x>675</x>
+  <y>426</y>
+  <open-on-startup>False</open-on-startup>
+</note>

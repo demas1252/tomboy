@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ожидание завершения дочернего процесса</title>
+  <text xml:space="preserve"><note-content version="0.1">Ожидание завершения дочернего процесса
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+   pid_t    pid;
+   char     *message;
+   int         n;
+   int         exit_code;
+
+   printf("fork program starting\n");
+   pid = fork();
+
+   switch(pid) {
+      case -<link:internal>1</link:internal>:
+          perror("fork failed");
+    exit(<link:internal>1</link:internal>);
+      case 0:
+         message = "this is the child";
+         n = 5;
+         exit_code = 37;
+         break;
+     default:
+         message = "this is the parent";
+    n = 3;
+         exit_code = 0;
+         break;
+   }
+
+   for(; n &gt; 0; n--) {
+      puts(message);
+      sleep(<link:internal>1</link:internal>);
+   }
+
+  <link:internal>if</link:internal> (pid != 0) {
+     int     stat_val;
+     pid_t     child_pid;
+     
+     child_pid = wait(&amp;stat_val);
+     printf("child has finished: pid = %d\n", child_pid);
+     <link:internal>if</link:internal>(wifexited(stat_val))
+    printf("child exited with code %d\n", wexitstatus(stat_val));
+     else
+       printf("child terminated abnormally\n");
+  }
+
+  exit(exit_code);
+}
+
+Здесь дочерний процесс выполняется дольше, чем родительский, поэтому с помощью wait() родительский процесс ждет пока завершится один из дочерних.
+Кстати, если бы дочерний процесс выполнялся бы быстрее, чем родительский, то до завершения родительского он бы висел как zombie-process.
+
+waitpid(child_pid, (int *) 0, WNOHANG); - чтобы дождаться определенного процесса </note-content></text>
+  <last-change-date>2009-10-17T22:10:50.2255170+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.2255170+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:45:08.9913280+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

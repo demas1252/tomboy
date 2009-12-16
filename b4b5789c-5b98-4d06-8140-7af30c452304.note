@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Условия в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Условия в Ruby
+
+song_type = <link:internal>if</link:internal> song.type == A
+              Song::Trad
+            else
+              Song:<link:internal>Other</link:internal>
+
+rating = case votes
+            when 1..10  then Rating:One
+            when 10.100 then Rating:Two
+            else             Rating:Three
+            end
+
+<link:internal>if</link:internal>    condition  then
+elsif condition2 then
+else 
+end
+</note-content></text>
+  <last-change-date>2009-04-15T17:08:57.1167270+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-15T17:08:57.1167270+04:00</last-metadata-change-date>
+  <create-date>2009-04-15T17:08:38.6166270+04:00</create-date>
+  <cursor-position>210</cursor-position>
+  <width>386</width>
+  <height>419</height>
+  <x>42</x>
+  <y>75</y>
+  <open-on-startup>False</open-on-startup>
+</note>

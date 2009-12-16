@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>FactureCalcSettlement_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">FactureCalcSettlement_Ru
+
+
+    Здесь я рассматриваю данный класс применительно к обработке входящего НДС и речь, в основном, будет идти о методе <link:internal>calc</link:internal>().
+    Сам класс в данном случае является как бы оберткой над иерархией [<link:internal>CustVendCalcSettledAmount_Ru</link:internal>] (на самом деле это не обертка, а он находится с ней в ассоциации) и далее я постараюь описать его интерфейс с точки зрения работы именно с этой иерархией классов.
+    
+    Выходом данного класса являются 2 вещи:
+
+    * [<link:internal>mapMapFactureAmounts</link:internal>] - суммы по фактурам    
+    * [<link:internal>mapMapSettledAmount</link:internal>] - сопоставленные суммы
+    
+    Для подсчета сумм по фактурам классу, в общем то, не требуется никакая помощь - он их сам собирает по строкам фактур (см. [<link:internal>mapMapFactureAmounts</link:internal>]). Для получения сопоставленных сумм, как раз и нужна помощь иерархии [CustVendCalcSettledAmounts_Ru].  Именно из этих классов FactureCalcSettlement_Ru получает практически готовые данные и только слегка их причесывает (см. [<link:internal>mapMapSettledAmount</link:internal>])
+    
+    
+   </note-content></text>
+  <last-change-date>2009-10-12T12:00:34.8852770+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.8852770+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:02:29.3740640+03:00</create-date>
+  <cursor-position>251</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>193</x>
+  <y>117</y>
+  <open-on-startup>False</open-on-startup>
+</note>

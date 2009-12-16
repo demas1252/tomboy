@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Методологии</title>
+  <text xml:space="preserve"><note-content version="0.1">Методологии
+
+<link:internal>eXtreme Programming</link:internal>
+<link:internal>Agile</link:internal>
+<link:internal>ДеМарко</link:internal>
+<link:internal>Формула тройственного ограничения</link:internal>
+<link:internal>Интриги</link:internal>
+<link:internal>Руководство</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:41.0328320+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:41.0328320+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:11:50.7397810+03:00</create-date>
+  <cursor-position>89</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>106</x>
+  <y>442</y>
+  <open-on-startup>False</open-on-startup>
+</note>

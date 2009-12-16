@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>С помощью какого файла был запущен инстанс - spfile or pfile</title>
+  <text xml:space="preserve"><note-content version="0.1">С помощью какого файла был запущен инстанс - spfile or pfile
+
+<link:url>sys@ORA920.US.<link:internal>ORACLE</link:internal></link:url><link:url>.COM</link:url>&gt; select isspecified, count() from v$spparameter group by isspecified;
+
+ISSPEC   COUNT()
+------ ----------
+FALSE         221
+TRUE           39
+
+that would indicate that we are using an SPFILE -- why?  because isspecified is TRUE for <link:broken>some</link:broken> settings in there.  They were specified in the spfile...
+
+<link:internal>If</link:internal> we startup with a pfile:
+
+<link:url>sys@ORA920.US.<link:internal>ORACLE</link:internal></link:url><link:url>.COM</link:url>&gt; shutdown
+<link:url>sys@ORA920.US.<link:internal>ORACLE</link:internal></link:url><link:url>.COM</link:url>&gt; startup pfile = initora920.ora
+
+<link:url>sys@ORA920.US.<link:internal>ORACLE</link:internal></link:url><link:url>.COM</link:url>&gt; select isspecified, count() from v$spparameter group by isspecified;
+
+ISSPEC   COUNT(*)
+------ ----------
+FALSE         258</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.3091360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.3091360+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:09:11.3868580+03:00</create-date>
+  <cursor-position>89</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

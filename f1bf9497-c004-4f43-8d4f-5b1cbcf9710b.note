@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Собрать статистику по базе</title>
+  <text xml:space="preserve"><note-content version="0.1">Собрать статистику по базе
+
+begin
+dbms_stats.gather_schema_stats(ownname=&gt; 'MRDOORS' , cascade=&gt; TRUE);
+end;
+
+<bold>Analyze vs DBMS_STATS</bold>
+<italic><size:small>AskTom</size:small></italic>
+
+Общая рекомендация - используйте DBMS_STAT.   Он собирает все необходимое для CBO и ничего больше.  Он может собирать статистику in parallel, умеет собирать статистику по внешним таблицам, умеет ее экспортировать и импортировать.
+
+При этом мы все-таки не можем строить индексы по <link:internal>External tables</link:internal>, так как мы "не можем индексировать то, что мы не контролируем", а данные во внешней таблице могут измениться (индекс при этом останется прежний).</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.3674960+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.3674960+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:51:15.1388300+03:00</create-date>
+  <cursor-position>582</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>267</x>
+  <y>429</y>
+  <open-on-startup>False</open-on-startup>
+</note>

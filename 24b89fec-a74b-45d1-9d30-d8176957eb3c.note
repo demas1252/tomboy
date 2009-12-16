@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск неиспользуемых индексов</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск неиспользуемых индексов
+
+
+&gt;&gt; ALTER INDEX summit.orders_id_idx  MONITORING USAGE
+...
+&gt;&gt; ALTER INDEX summit.orders_id_idx NOMONITORING USAGE
+
+А потом V$OBJECT_USAGE</note-content></text>
+  <last-change-date>2008-03-29T06:47:25.6021100+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:47:25.6021100+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:47:23.2271720+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>111</x>
+  <y>657</y>
+  <open-on-startup>False</open-on-startup>
+</note>

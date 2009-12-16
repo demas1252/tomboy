@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Подотчетники - типичные настройки</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Подотчетники</link:internal> - типичные настройки
+
+      ТПей
+
+      Профиль разноски - Итоговый счет (71.10.00)
+      Автоматическое сопоставлние - отключено.
+      Группа подотчетных лиц одна - корр. счет не указан.
+      Нормы расходов вообще не указаны.
+      Подотчетные лица и <link:internal>авансовые отчеты</link:internal> есть.
+
+      Белая дача
+
+      <link:internal>Автоматическое сопоставление</link:internal> - включено
+      Настроены счета реализованной прибыли и убытка - 91.12.01 / 91.22.01
+      Профилей несколько - субсчета 71 и 73.
+      Нормы расходов не заданы.
+
+</note-content></text>
+  <last-change-date>2009-06-04T11:15:06.9311860+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-04T11:15:06.9311860+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T16:43:35.8573660+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ожидаемые события</title>
+  <text xml:space="preserve"><note-content version="0.1">Ожидаемые события
+
+Том Кайт использует их так:
+
+<italic>-- таблица для снимков вьюхи</italic>
+create global temporary table sess_event on commit preserve rows
+as select * from v$session_event where <link:internal>1</link:internal>=0;
+
+<italic>-- запомнили текущее состояние</italic>
+truncate table sess_event;
+
+insert into sess_event
+select * from v$session_event
+where sid = (select sid from v$mystat where rownum = <link:internal>1</link:internal>);
+
+<italic>-- что-то поделали</italic>
+....
+
+<italic>-- получили приращение счетчиков задержек</italic>
+select a.event,
+	   (a.total_waits - nvl(b.total_waits, 0)) total_waits,
+	   (a.time_waited - nvl(b.time_waited, 0)) time_waited
+from 
+	 (select * from v$session_event
+	  where sid = (select sid from v$mystat where rownum = <link:internal>1</link:internal>)) a,
+	  sess_event b
+	where a.event = b.event(+)
+		and (a.total_waits - nvl(b.total_waits, 0)) &gt; 0
+	 
+	 
+
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:45.7879330+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:45.7879330+04:00</last-metadata-change-date>
+  <create-date>2008-06-15T19:46:52.3821380+04:00</create-date>
+  <cursor-position>381</cursor-position>
+  <width>657</width>
+  <height>683</height>
+  <x>269</x>
+  <y>235</y>
+  <open-on-startup>False</open-on-startup>
+</note>

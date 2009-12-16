@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Атомно-молекулярная теория</title>
+  <text xml:space="preserve"><note-content version="0.1">Атомно-молекулярная теория
+
+<list><list-item dir="ltr">Все вещества состоят из молекул. <italic>Молекула</italic> - наименьшая частица вещества, обладающая его хим свойствами.
+</list-item><list-item dir="ltr">Молекулы состоят из атомов. <italic>Атом</italic> - наименьшая частица элемента в хим соединениях. Разным элеменам соответсвуют разные атомы.
+</list-item><list-item dir="ltr">Молекулы и атомы находятся в непрерывном движении.
+</list-item><list-item dir="ltr">При химических реакциях молекулы одних веществ предвращаются в молекулы других веществ. Атомы при хим реакциях не изменяются.</list-item></list></note-content></text>
+  <last-change-date>2009-06-13T13:04:59.3592470+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-13T13:04:59.3592470+04:00</last-metadata-change-date>
+  <create-date>2009-06-13T13:01:48.8253100+04:00</create-date>
+  <cursor-position>266</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>178</x>
+  <y>431</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перебрать все шрифты</title>
+  <text xml:space="preserve"><note-content version="0.1">Перебрать все шрифты
+
+Sub ShowInstalledFonts()
+    Dim FontList As CommandBarControl
+    Dim TempBar As CommandBar
+    Dim i As Integer
+    
+    Set FontList = Application.CommandBars("Formatting"). _
+       FindControl(ID:=1728)
+    
+'   Если элемент управления Font удален, то создается временная панель управления CommandBar
+    <link:internal>If</link:internal> FontList Is Nothing Then
+        Set TempBar = Application.CommandBars.<link:internal>Add</link:internal>
+        Set FontList = TempBar.Controls.<link:internal>Add</link:internal>(ID:=1728)
+    End <link:internal>If</link:internal>
+    
+'   Занесение списка шрифтов в столбец A
+    Range("A:A").ClearContents
+    For i = 0 To FontList.ListCount - <link:internal>1</link:internal>
+        Cells(i + <link:internal>1</link:internal>, <link:internal>1</link:internal>) = FontList.List(i + <link:internal>1</link:internal>)
+    Next i
+    
+'   Удаление временной панели управления CommandBar, если она создавалась
+    On Error Resume Next
+    TempBar.Delete
+End Sub</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.4979260+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.4979260+03:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:01:05.9567730+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

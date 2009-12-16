@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>География Непала</title>
+  <text xml:space="preserve"><note-content version="0.1">География Непала
+
+**Граничит:**  север - Тибет, юг - Индия.
+
+На севере - Большой Гималайский хребет. <link:internal>Эверест</link:internal>
+
+Летом - муссоны и наводнения.
+По непальски Гималаи - Хималай - "обитель снегов".
+8 из 14 вершин мира, превышающих 8000.
+
+Природные зоны (по высоте):
+ - &lt; 1900 - южный тропический
+ - 1200 - 1900 - субтропический горный пояс(широколиственные леса)
+ - 1900 - 2800 - горный умеренный пояс (лиственные леса)
+ - 3000 - 4000 - умеренно холодный пояс (хвойные леса)
+ - 4000 - 5200 - альпийские луга
+ - &gt; 5200 - ледяная зона
+
+Городское начеление - 14%
+
+**Города**
+
+<link:internal>Катманду</link:internal>
+Бхактапур (<link:internal>Кумари</link:internal>)
+Покхара (аэропорт)
+
+<link:internal>Национальный парк Читван</link:internal>
+<link:internal>Королевство Мустанг</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T22:12:04.4540640+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T22:12:04.4540640+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:09:39.2040240+03:00</create-date>
+  <cursor-position>639</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>98</y>
+  <open-on-startup>False</open-on-startup>
+</note>

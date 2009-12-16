@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Закупки</title>
+  <text xml:space="preserve"><note-content version="0.1">Закупки
+
+<link:internal>Заявки на закупку</link:internal>
+<link:internal>Создание закупки</link:internal>
+<link:internal>Обработка закупки</link:internal>
+<link:internal>Печать документов по закупке</link:internal>
+<link:internal>Прогноз движения денежных средств в закупке</link:internal>
+<link:internal>Возврат закупок</link:internal>
+     
+<link:internal>Пришло не то что заказывали</link:internal>
+<link:internal>Отходы в строках закупки</link:internal>
+     
+<link:internal>Програмная обработка накладной с одной строкой из одного заказа</link:internal>
+<link:internal>Програмная разноска накладной со строками из нескольких закупок</link:internal>
+<link:internal>Протягивание параметров из закупки в журнал фактур</link:internal></note-content></text>
+  <last-change-date>2008-03-27T21:37:33.4668580+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:37:33.4668580+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:34:01.1282780+03:00</create-date>
+  <cursor-position>344</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>524</y>
+  <open-on-startup>False</open-on-startup>
+</note>

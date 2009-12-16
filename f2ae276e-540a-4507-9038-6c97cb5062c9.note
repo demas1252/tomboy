@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Диагностические сообщения Axapta</title>
+  <text xml:space="preserve"><note-content version="0.1">Диагностические сообщения Axapta
+
+<link:internal>RPC Error 1726</link:internal>
+<link:internal>Код события 178</link:internal>
+<link:internal>Reporting queued error faulting application Ax32Serv version x faulting module Ax32Serv version y fault address 0x003471f</link:internal>
+<link:internal>Ошибка 1053: Служба не ответила на запрос своевременно</link:internal>
+<link:internal>(-101013) - [Microsoft][ODBC SQL Server Driver]Function sequence error</link:internal></note-content></text>
+  <last-change-date>2009-11-05T16:11:59.6141400+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.6141400+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T21:58:07.2916010+03:00</create-date>
+  <cursor-position>242</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>8</x>
+  <y>99</y>
+  <open-on-startup>False</open-on-startup>
+</note>

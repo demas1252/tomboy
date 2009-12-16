@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структуры и функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Структуры и функции
+
+Три подхода:
+
+  - передавать компоненты раздельно
+  - <link:internal>передавать целую структуру</link:internal>
+  - <link:internal>передавать указатель на структуру</link:internal>
+
+<link:internal>Возврат структуры из функции</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T09:00:41.9517870+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:00:41.9517870+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:59:20.9905230+03:00</create-date>
+  <cursor-position>33</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>105</x>
+  <y>58</y>
+  <open-on-startup>False</open-on-startup>
+</note>

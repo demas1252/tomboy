@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Case in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Case in Haskell
+
+<italic>head2 :: [a] -&gt; a
+head2 [] = error "No head for empty list!"
+head2 (x:_) = x
+
+head3 :: [a] -&gt; a
+head3 xs = case xs of []        -&gt; error "No head for empty lists!"
+                      (x:_)     -&gt; x
+</italic>
+</note-content></text>
+  <last-change-date>2009-10-30T10:05:40.2962470+03:00</last-change-date>
+  <last-metadata-change-date>2009-10-30T10:05:40.2962470+03:00</last-metadata-change-date>
+  <create-date>2009-10-30T10:00:25.2548090+03:00</create-date>
+  <cursor-position>218</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

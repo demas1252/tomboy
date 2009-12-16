@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Python реализация AbstractFactory</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Python</link:internal> реализация AbstractFactory
+
+В общем то, везде говорится, что разницы между 'абстрактными' и 'конкретными' объектами в <link:internal>Python</link:internal> нет. Каждый класс в <link:internal>Python</link:internal> ведет себя как фабрика.
+Например, код:
+
+import random
+
+def listOfRandom(n):
+        return [random.random() for i in range(n)]
+        
+
+может возравить то, что мы пожелаем, так как мы в этом же модуле можем реализовать свой random.random().
+
+Хотя, вот пример с форума:
+
+import os
+
+class WinButton:
+    def paint(self):
+        print "I'm a WinButton: "
+
+class OSXButton:
+    def paint(self):
+        print "I'm an OSXButton: "
+
+class WinFactory:
+    def createButton(self):
+        return WinButton()
+
+class OSXFactory:
+    def createButton():
+        return OSXButton()
+
+class GUIFactory:
+    @staticmethod
+    def getFactory():
+        <link:internal>if</link:internal> os.name == "nt":
+            return WinFactory()
+        else:
+            return OSXFactory()
+
+factory = GUIFactory.getFactory()
+button = factory.createButton()
+button.paint()
+
+# Output is either:
+#   "I'm a WinButton:"
+# or:
+#   "I'm an OSXButton:"
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.4126920+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.4126920+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:06:39.2790880+03:00</create-date>
+  <cursor-position>730</cursor-position>
+  <width>420</width>
+  <height>597</height>
+  <x>1122</x>
+  <y>115</y>
+  <open-on-startup>False</open-on-startup>
+</note>

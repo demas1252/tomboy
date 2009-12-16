@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Порождение нового потока с помощью fork</title>
+  <text xml:space="preserve"><note-content version="0.1">Порождение нового потока с помощью fork
+
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+   pid_t     pid;
+   char     *message;
+   int         n;
+   char        *pre = "define";
+
+   printf("fork program starting\n");
+   pid = fork();
+
+   switch(pid) {
+      case -1:
+          perror("fork failed");
+        exit(1);
+      case 0:
+        message = "This is the child";
+        n = 5;
+        break;
+      default:
+        message = "This is the parent";
+        n = 3;
+        break;
+    }
+
+    for(; n &gt; 0; n--) {
+       puts(pre);
+       puts(message);
+       sleep(1);
+    }
+
+    exit(0);
+}
+
+demas@demas-desktop:~/sources$ ./fork1
+fork program starting
+define
+This is the child
+define
+This is the parent
+define
+
+   1. После fork одновременно работают 2 процесса
+   2. Переменные инициализованные до fork() сохраняют свои значения (define)</note-content></text>
+  <last-change-date>2008-03-27T15:44:59.7216170+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T15:44:59.7216170+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:44:58.5945880+03:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

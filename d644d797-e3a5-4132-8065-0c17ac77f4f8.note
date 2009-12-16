@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поле дата без чисел</title>
+  <text xml:space="preserve"><note-content version="0.1">Поле дата без чисел
+
+
+Я бы все-таки сделал Exteded Data Types на базе Date или TransDate со свойствами
+
+DateYear = for digits
+DateDay = Day not show
+
+Во-первых, автоматически появится иконка для выбора даты из календаря и во-вторых отпадет необходимость контролировать корректность введенного значения. Ну, например, чтобы не ввели 15 месяц.</note-content></text>
+  <last-change-date>2008-03-30T17:42:04.4071989+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:42:04.4071989+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:42:01.3566699+04:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

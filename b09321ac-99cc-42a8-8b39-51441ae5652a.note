@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Clustered Index Scan</title>
+  <text xml:space="preserve"><note-content version="0.1">Clustered Index Scan
+
+
+Полезно еще взлянуть сюда [<link:internal>Clustered Index Seek</link:internal>].
+
+Clustered Index Scan is a logical and physical operator.
+
+Operator scans the clustered index specified in the Argument column. When an optional WHERE:() predicate is present, only those rows that satisfy the predicate are returned. <link:internal>If</link:internal> the Argument column contains the ORDERED clause, the query processor has requested that the output of the rows be returned in the order in which the clustered index has sorted it. <link:internal>If</link:internal> the ORDERED clause is not present, the storage engine scans the index in the optimal way, without necessarily producing sorted the output.
+
+create table actions(
+actionid int,
+itemid varchar(10),
+actionname varchar(10))
+
+ + PK по actionId и простой индекс по itemId
+ 
+ StmtText
+---------------------------------------------
+select * from actions where itemid = 'divan'
+
+(<link:internal>1</link:internal> row(s) affected)
+
+StmtText
+-------------------------------------------------------------------------------------------------------------------------------
+  |--Clustered Index Scan(OBJECT:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[PK_actions]), WHERE:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[itemid]='divan'))
+
+(<link:internal>1</link:internal> row(s) affected)
+
+<link:internal>SQL</link:internal> Server решил использовать кластерный индекс, а в нем нет itemId - то есть всю информацию (о том вкючать ли эту строку !!!) из индекса мы не получим.
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.5899500+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.5899500+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:44:24.6801950+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>734</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

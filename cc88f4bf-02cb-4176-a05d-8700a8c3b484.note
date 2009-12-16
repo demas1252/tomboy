@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Добавление файлов в tablespace</title>
+  <text xml:space="preserve"><note-content version="0.1">Добавление файлов в tablespace
+
+
+&lt;&lt;pre
+alter tablespace ax_data
+<link:internal>add</link:internal> datafile '<link:internal>C</link:internal>:\ORA_SERVER\ORADATA\<link:internal>AXAPTA</link:internal>\AX_DATA2.ORA' size 10M
+    
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-04-01T16:14:37.5543130+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:14:37.5543130+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:25:41.3667580+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>463</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

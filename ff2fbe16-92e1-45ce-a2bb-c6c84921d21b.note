@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разработка под linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Разработка под linux
+
+
+<link:internal>Bash Shell</link:internal>
+<link:internal>Linux System Calls</link:internal>
+
+<bold>Библиотеки</bold>
+<link:internal>gtk</link:internal>
+<link:internal>Curses</link:internal>
+<link:internal>dbm</link:internal>
+<link:internal>sqlite</link:internal>
+<link:internal>cairo</link:internal>
+<link:internal>dbus</link:internal>
+<link:internal>curl</link:internal>
+
+<bold>Qt</bold>
+
+<link:internal>Работа с QT на C++</link:internal>
+<link:internal>QtRuby</link:internal>
+<link:internal>TreeView c возможностью drag'n'drop</link:internal>
+
+<bold><link:internal>Прочее</link:internal></bold>
+<link:internal>Linux Dev Tools</link:internal>
+<link:internal>C Sources</link:internal>
+<link:internal>Создание пунктов в меню</link:internal>
+<link:internal>Как создавать патчи</link:internal>
+
+<bold>Projects</bold>
+<link:internal>Tomboy</link:internal>
+</note-content></text>
+  <last-change-date>2009-09-24T14:37:00.6895420+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:00.6895420+04:00</last-metadata-change-date>
+  <create-date>2009-03-27T12:28:09.9583810+03:00</create-date>
+  <cursor-position>108</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1103</x>
+  <y>204</y>
+  <open-on-startup>False</open-on-startup>
+</note>

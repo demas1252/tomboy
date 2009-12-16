@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>processPrepayment</title>
+  <text xml:space="preserve"><note-content version="0.1">processPrepayment
+
+Здесь имеются в виду VendPrepayment.
+
+1. Тянем VendTrans - предоплату, на основании которой была сформирована фактура.
+2. Создаем <link:internal>mapFactureAmounts</link:internal> (<link:internal>FactureJour_RU::factureAmounts</link:internal>(factureJour)).
+
+<italic>[TaxCode, dim , ''] -&gt; [Класс{Tax+Line, Line, Tax}]
+[TaxCode2, dim , ''] -&gt; [Класс{Tax+Line, Line, Tax}]
+....
+</italic>
+3. <link:internal>totalAmounts</link:internal> = this.<link:internal>createLogTrans</link:internal>()
+
+Здесь подсчитываются суммы totalSettled, totalUsed и usedAmountNow. 
+Здесь же создаюся строки, которые булут видны на форме <italic>Обработки входящего НДС</italic>
+
+4.  Распаковываем конейнер, который вернул предыдущий пункт на отдельные суммы:
+
+     SettledAmounts = FacturedAmounts &lt;- <link:internal>totalAmounts</link:internal>[1]
+     UsedAmounts &lt;- <link:internal>totalAmounts</link:internal>[2]
+
+5. <link:internal>TmpPurchVATProcessLogTrans_Ru::createLine()</link:internal>
+
+А вот это уже заголовок обработки.
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.7176640+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.7176640+04:00</last-metadata-change-date>
+  <create-date>2009-01-24T08:42:17.2210840+03:00</create-date>
+  <cursor-position>737</cursor-position>
+  <width>619</width>
+  <height>698</height>
+  <x>828</x>
+  <y>208</y>
+  <open-on-startup>False</open-on-startup>
+</note>

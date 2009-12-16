@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Артрология (учение о соединениях костей)</title>
+  <text xml:space="preserve"><note-content version="0.1">Артрология (учение о соединениях костей)
+
+Три вида соединений:
+
+<list><list-item dir="ltr">непрерывные - между костями прослойка соединительной ткани или хряща
+<list><list-item dir="ltr">фиброзные 
+<list><list-item dir="ltr">синдесмоз (позвоночник)
+</list-item><list-item dir="ltr">швы (череп)
+</list-item><list-item dir="ltr">вколачивание (соединение зуба с костной тканью)
+</list-item></list></list-item><list-item dir="ltr">синхондрозы (хрящевые) - соедиения костей с помощью хрящевой ткани
+</list-item><list-item dir="ltr">костные
+</list-item></list></list-item><list-item dir="ltr">прерывные или суставы - между костями полость и синовиальная мембрана
+<list><list-item dir="ltr">состоят из: суставные костные поверхности, покрытые хрящем; суставная капсула, суставная полость с небольшим количеством синовиальной жидкостьи.
+</list-item></list></list-item><list-item dir="ltr">симфизы или полусуставы - набольшая щель в хрящевой или соединительно тканной прослойке</list-item></list>
+
+Суставы:
+
+<list><list-item dir="ltr">с одной осью движения
+<list><list-item dir="ltr">одноосные - атлант с зубом осевого позвонка
+</list-item></list></list-item><list-item dir="ltr">с двумя осями движения
+</list-item><list-item dir="ltr">с многими осями движения</list-item></list></note-content></text>
+  <last-change-date>2009-09-10T14:20:18.3353010+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-10T14:20:18.3353010+04:00</last-metadata-change-date>
+  <create-date>2009-09-10T14:03:31.2808300+04:00</create-date>
+  <cursor-position>660</cursor-position>
+  <width>559</width>
+  <height>372</height>
+  <x>1074</x>
+  <y>447</y>
+  <open-on-startup>False</open-on-startup>
+</note>

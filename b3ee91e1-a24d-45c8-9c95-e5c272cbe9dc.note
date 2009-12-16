@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сообщения Аксапты или что она пытается тебе сказать</title>
+  <text xml:space="preserve"><note-content version="0.1">Сообщения Аксапты или что она пытается тебе сказать
+
+<list><list-item dir="ltr">Закупка была создана в номере <link:internal>закупки</link:internal> 'ПЗ0018519'. - При создании <link:internal>закупки</link:internal>. Проблема в том, что система при создании <link:internal>закупки</link:internal> проверяет наличие второй такой же с тем же идентификатором.  И находит ее.  Проверь номерную серию.
+</list-item><list-item dir="ltr">По выбранному курсору нельзя инициализировать recordViewCache. - Такое бывает, когда код предназначенный для выполнения на сервере почему-то выполнили на клиенте.  Например, при [<link:internal>Пример резервирования строки заказа</link:internal>].
+</list-item><list-item dir="ltr">Период сопоставления налога НДС 20% не существует. - главная книга \ настройки \ налог \ периоды сопоставления налогов; выделите нужную вам запись; нажимайте на кнопку Новый период столько раз сколько нужно
+</list-item><list-item dir="ltr">Не корректно обработана фактура - factureid, InvoiceRecd - ...  - см метод <link:internal>createLogTrans</link:internal>() класса BookTransCalc_VAT_RU.</list-item></list></note-content></text>
+  <last-change-date>2009-01-25T12:29:30.1766120+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-25T12:29:30.1766120+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:17:41.9122710+03:00</create-date>
+  <cursor-position>706</cursor-position>
+  <width>1064</width>
+  <height>486</height>
+  <x>359</x>
+  <y>452</y>
+  <open-on-startup>False</open-on-startup>
+</note>

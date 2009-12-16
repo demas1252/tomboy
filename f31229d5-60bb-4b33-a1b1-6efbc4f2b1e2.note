@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Дескрипторы в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Дескрипторы в Python
+
+class UpperString(object):
+    def __init__(self):
+        self._value = ''
+    def __get__(self, instance, klass):
+        return self._value
+    def __set__(self, instance, value):
+        self._value = value.upper()
+
+class MyClass(object):
+    attribute1 = UpperString()
+    def __init__(self):
+        self.attribute2 = UpperString()
+
+ex = MyClass()
+print ex.attribute1
+print ex.attribute2
+
+ex.attribute1 = 'value'
+print ex.attribute1
+
+ex.attribute2 = 'value'
+print ex.attribute2
+
+============================================
+
+''
+&lt;__main__.UpperString object at 0xb7d105cc&gt;
+VALUE
+value
+
+=============================================
+
+<link:internal>Красивый пример использования дескрипторов</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T09:27:24.1615850+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:27:24.1615850+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:27:04.1029930+03:00</create-date>
+  <cursor-position>660</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>204</x>
+  <y>107</y>
+  <open-on-startup>False</open-on-startup>
+</note>

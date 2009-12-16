@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Порезать строку на части</title>
+  <text xml:space="preserve"><note-content version="0.1">Порезать строку на части
+
+
+_DECLARE @str varchar(8000),
+	@l int
+SELECT	@str = '1,2,3,3244,23,233,2345,sdfas,ewrrqwe', 
+	@l = LEN(@str)
+
+SELECT SUBSTRING(@str, s.number+1, ISNULL(MIN(sq.number), @l+1) - s.number-1)
+FROM master..spt_values s (nolock)
+FULL JOIN	(
+	SELECT number
+	FROM master..spt_values (nolock)
+	WHERE name IS NULL and number BETWEEN 1 AND @l
+	AND SUBSTRING(@str, number, 1)=','
+	) sq
+ON sq.number&gt;s.number
+WHERE	s.name IS NULL
+AND	s.number BETWEEN 0 AND @l
+AND	(SUBSTRING(@str, s.number, 1)=',' or s.number=0)
+GROUP BY s.number_
+
+---
+
+[author: <link:internal>me</link:internal>]
+
+Работает примерно так:
+
+    Просто список номеров:
+    
+        _SELECT number FROM master..spt_values_
+    
+    Номера, соответствующие запятым в строке:
+    
+        _SELECT number
+        FROM master..spt_values (nolock)
+        WHERE name IS NULL and number BETWEEN 1 AND @l
+        AND SUBSTRING(@str, number, 1)=','_
+    
+    Внешний select порождает второй столбец number - начала строк.  По идее строк больше, чем надо - но мы же сделаем group by.
+    
+    
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:40.7105570+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:40.7105570+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:54:38.6041330+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

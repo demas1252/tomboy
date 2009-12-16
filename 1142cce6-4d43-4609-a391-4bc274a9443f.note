@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ctrl-Alt-Del в Ubuntu</title>
+  <text xml:space="preserve"><note-content version="0.1">Ctrl-Alt-Del в Ubuntu
+
+В <link:internal>ubuntu</link:internal> 9.04 по дефолту отключена возможность перезагружать иксы по ctrl+alt+backspase. Один из способов перезагрузки - ctrl+alt+f1 и набрать
+
+sudo <link:url>/etc/init.d/gdm</link:url> stop
+
+Причем в <link:internal>KDE</link:internal> gdm заменяется на kdm. Загрузить можно так же
+
+sudo <link:url>/etc/init.d/gdm</link:url> start 
+
+Запускать в данном случае через startx не советую. По крайней мере у меня иксы грузятся с ошибками.</note-content></text>
+  <last-change-date>2009-03-28T23:20:36.8511470+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-28T23:20:36.8511470+03:00</last-metadata-change-date>
+  <create-date>2009-03-28T23:20:27.7337360+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

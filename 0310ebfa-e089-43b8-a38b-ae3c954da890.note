@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Tablespaces</title>
+  <text xml:space="preserve"><note-content version="0.1">Tablespaces
+
+
+&lt;&lt;pre
+Logical: Database - (many) Tablespace - (many) Segments - (many) Extent - (many) <link:internal>Oracle</link:internal> Block
+                                              |||                                                           |||                               |||   
+Physical:                  (many) Data file                          (many) ----------                    (many) OS Block
+
+&gt;&gt;
+
+<link:internal>Какие бывают tablespace</link:internal>
+<link:internal>Read only tablespace</link:internal>
+<link:internal>Создание tablespace</link:internal>
+<link:internal>Удаление tablespace</link:internal>
+<link:internal>Изменение размеров tablespace</link:internal>
+<link:internal>Перемещение datafiles</link:internal>
+<link:internal>Удалил datafile - что делать</link:internal>
+<link:internal>db_create_file_dest</link:internal>
+<link:internal>Получение информации о tablespaces</link:internal>
+
+См. также 
+<link:internal>Transportable Tablespaces</link:internal>
+<link:internal>SYSAUX</link:internal>
+<link:internal>Bigfile Tablespaces</link:internal>
+<link:internal>Temporary Tablespace Group</link:internal></note-content></text>
+  <last-change-date>2009-10-17T22:10:57.7399390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.7399390+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:21:27.7915060+03:00</create-date>
+  <cursor-position>413</cursor-position>
+  <width>537</width>
+  <height>481</height>
+  <x>944</x>
+  <y>405</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>failed to import extension hgext qct No module named qct</title>
+  <text xml:space="preserve"><note-content version="0.1">failed to import extension hgext qct No module named qct
+
+Package: qct
+Severity: important
+
+Removing this package causes all hg commands to spew:
+
+* failed to import extension hgext.qct: No module named qct
+
+This appears to be due to the qct config file<link:url> /etc/<link:internal>mercurial</link:internal></link:url><link:url>/hgrc.d/qct.rc</link:url>
+this is an unmodified file.
+
+purging qct fixes the problem</note-content></text>
+  <last-change-date>2008-03-27T15:36:16.3902410+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T15:36:16.3902410+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:36:15.2226520+03:00</create-date>
+  <cursor-position>85</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>854</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

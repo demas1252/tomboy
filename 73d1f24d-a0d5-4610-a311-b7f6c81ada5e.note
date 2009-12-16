@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переоценка ОС вследсвии пересчета склада</title>
+  <text xml:space="preserve"><note-content version="0.1">Переоценка ОС вследсвии пересчета склада
+
+ОС собирается из комплектующих.   При вводу в эксплуатацию комплектующие списываются по мгновенной.  После делаем <link:internal>пересчет склада</link:internal> - корректируется себестоимость списания комплектующих и делается проводка в ГК.  Но себестоимость введенного ОС не изменяется.
+
+
+Варианты решения:
+
+1. <link:internal>Повторный ввод в эксплуатацию</link:internal>
+2. Использовать серийные номера и партии для комплектующих</note-content></text>
+  <last-change-date>2008-03-29T06:30:19.1598220+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:30:19.1598220+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:29:03.5358720+03:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>other/create_default_user.sh</title>
+  <text xml:space="preserve"><note-content version="0.1">other/create_default_user.sh
+
+<link:internal>useradd</link:internal> -m -s<link:url> /bin/bash</link:url> demas
+passwd demas #сочиняем себе замечательный пароль
+gpasswd -a demas audio #для работы звука
+gpasswd -a demas storage #для работы с флэшками, хардами, …
+gpasswd -a demas wheel #что бы вы могли пользоваться командой sudo
+gpasswd -a demas network
+gpasswd -a demas log #что бы можно было читать все логи
+gpasswd -a demas disk
+gpasswd -a demas optical</note-content></text>
+  <last-change-date>2009-09-06T06:40:39.8436750+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-06T06:40:39.8436750+04:00</last-metadata-change-date>
+  <create-date>2009-01-06T14:07:38.7781650+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>129</x>
+  <y>55</y>
+  <open-on-startup>False</open-on-startup>
+</note>

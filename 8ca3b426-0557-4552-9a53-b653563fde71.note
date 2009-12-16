@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разрешение конфликтов в Git</title>
+  <text xml:space="preserve"><note-content version="0.1">Разрешение конфликтов в Git
+
+Когда мы делали pull мы получили конфликт автоматического merge. При этом <link:internal>git</link:internal> явно указал файлы, которые породили конфликт.
+
+Просто открываем эти файлы на редактирование <link:internal>vim</link:internal> и правим их как надо.  Там в конфликтных секциях будет пометка и оба варианта.
+
+А потом:
+
+<link:internal>git add</link:internal> file
+<link:internal>git commit</link:internal> -m "resolve conflict"
+<link:internal>git</link:internal> push
+
+Так же могут быть полезны следующие команды:
+
+<italic># common base:
+<link:internal>git</link:internal></italic><italic> show :1:file
+
+# 'ours'
+<link:internal>git</link:internal></italic><italic> show :2:file
+
+# 'theirs'
+<link:internal>git</link:internal></italic><italic> show :3:file</italic>
+
+<bold>Еще: </bold>
+<list><list-item dir="ltr"><link:internal>git diff</link:internal> -merge   - посмотреть проблему</list-item></list>
+</note-content></text>
+  <last-change-date>2009-11-20T21:12:54.6574740+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-20T21:12:54.6574740+03:00</last-metadata-change-date>
+  <create-date>2009-08-10T14:58:07.1682240+04:00</create-date>
+  <cursor-position>483</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1009</x>
+  <y>171</y>
+  <open-on-startup>False</open-on-startup>
+</note>

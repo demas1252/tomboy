@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Bash Shell</title>
+  <text xml:space="preserve"><note-content version="0.1">Bash Shell
+
+#!/bin/bash
+
+<link:internal>Сделать скрипт исполняемым файлом</link:internal>
+<link:internal>Основные конструкции bash</link:internal>
+<link:internal>mkdir bash</link:internal>
+<link:internal>Полезности Bash</link:internal>
+<link:internal>Избавиться от повторений внутри команды</link:internal>
+<link:internal>Наиболее часто использованные команды</link:internal>
+<link:internal>Сделать что-то с каждым файлом в директории</link:internal>
+<link:internal>Перебрать диапазон чисел</link:internal>
+<link:internal>Bash aliases</link:internal>
+<link:internal>2&gt;&amp;1</link:internal>
+<link:internal>Проверить что скрипт уже работает</link:internal>
+<link:internal>Поиск вхождения строки в файлы</link:internal>
+<link:internal>Создание папки содержащей дату</link:internal>
+<link:internal>Shell quotation</link:internal>
+<link:internal>Проверить сущесвование директории</link:internal>
+
+<bold>Команды</bold>
+<italic><link:broken>wc</link:broken></italic> -  Подсчитывает количество байт, слов, строк в файле. 
+	Интересны решения когда вывод других команд передается <link:broken>wc</link:broken>:
+		whio | <link:broken>wc</link:broken> l - количество сессий
+
+<italic><link:broken>fc</link:broken></italic> - Выводит в редакторе последнюю введенную команду, позволяет отредактировать ее и выполняет.
+	<italic>fc -l</italic>  - выводит список предыдущих команд и по номеру предлагает отредактировать определенную</note-content></text>
+  <last-change-date>2009-10-07T11:04:23.7566670+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-07T11:04:23.7566670+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:07:15.7823960+03:00</create-date>
+  <cursor-position>389</cursor-position>
+  <width>486</width>
+  <height>584</height>
+  <x>1007</x>
+  <y>278</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>TempDB</title>
+  <text xml:space="preserve"><note-content version="0.1">TempDB
+
+
+Если мы хотим добиться от tempdb "достойной производительности", то:
+
+<link:internal>1</link:internal>. Делаем число файлов бд равное числу процессоров (ядер).
+2. Кладем каждый файл на отдельный диск. Вполне достаточно будет положить файлы данных на массивчик 1+0 (из 4 дисков).
+3. Файл лога выносим на отдельный диск (массив).
+4. TempDb держим на дисках, отличных от используемых пользовательскими файлами данных.
+5. Устанавливаем модель восстановления TempDb = Simple. 
+6. Для файлов TempDb включаем автоувеличение.  Лучше выбрать величину увеличения побольше (10%), так как постоянные увеличения TempDb влияют на производительность. Так же рекомендуется задать начальный размер файлов побольше.
+
+<link:internal>Информацию о TempDb можно запросить удаленно с помощью запроса</link:internal>:
+
+<link:url>http://msdn.microsoft.com/ru-ru/library/ms175527.aspx</link:url>
+<link:url>http://blogs.msdn.com/aeremenk/archive/2007/03/17/1898066.aspx</link:url>
+
+Разнести нагрузку создаваемую отдельно механизмом поддержки версионности и остальной активностью, для которой нужна tempdb возможности нет. Возможно только увеличить общую производительность при работе с tempdb.
+
+<link:internal>замечания Дениса по поводу TempDb</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.6514890+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.6514890+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:31:33.2954530+04:00</create-date>
+  <cursor-position>742</cursor-position>
+  <width>767</width>
+  <height>521</height>
+  <x>320</x>
+  <y>269</y>
+  <open-on-startup>False</open-on-startup>
+</note>

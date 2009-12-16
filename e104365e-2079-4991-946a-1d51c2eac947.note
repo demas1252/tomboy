@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Предупреждения Best Practices и как с ними бороться</title>
+  <text xml:space="preserve"><note-content version="0.1">Предупреждения Best Practices и как с ними бороться
+
+BP: TwC: Validate access to return value from display/edit method.
+
+//BP Deviation Documented
+перед названием метода влепи.
+
+Так как дисплей/едит метод может возвращать данные с другой таблицы, к которой у вас может и не быть доступа, это предупреждение выводится, чтобы вы проверили, возможно ли такое нарушение секурити - поставили например проверку на конфигурейшен и секурити ключи. И это чисто на совести программиста, потому что можно ситуацию исправить упомянутой уже строчкой . И, кстати, бест практис не оценивает содержимое метода, а просто всегда бросает ошибку, если видит ключевые слова дисплей/едит. </note-content></text>
+  <last-change-date>2008-03-28T14:59:11.5894000+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T14:59:11.5894000+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:59:09.9489180+03:00</create-date>
+  <cursor-position>80</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отличие замыканий от lambda-функций</title>
+  <text xml:space="preserve"><note-content version="0.1">Отличие замыканий от lambda-функций
+
+<link:internal>Lambda</link:internal> - это просто анонимная функция. Замыкание - это любая функция, которая захватывает окружение, в котором она определена.
+
+<italic>def <link:internal>func</link:internal></italic><italic>(): return h
+def anotherfunc(h):
+   return <link:internal>func</link:internal></italic><italic>()
+</italic>
+Это не будет работать, так как <link:internal>func</link:internal>() не захватывает окружение h.
+А вот это правильно:
+
+<italic>def <link:internal>func</link:internal></italic><italic>(): return h
+def anotherfunc(h):
+   return <link:internal>func</link:internal></italic><italic>()
+
+
+</italic></note-content></text>
+  <last-change-date>2009-01-24T11:34:41.1990810+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-24T11:34:41.1990810+03:00</last-metadata-change-date>
+  <create-date>2008-11-09T22:16:13.6624130+03:00</create-date>
+  <cursor-position>163</cursor-position>
+  <width>448</width>
+  <height>635</height>
+  <x>1121</x>
+  <y>199</y>
+  <open-on-startup>False</open-on-startup>
+</note>

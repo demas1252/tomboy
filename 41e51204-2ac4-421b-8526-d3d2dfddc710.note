@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Элементарные методы решения игр</title>
+  <text xml:space="preserve"><note-content version="0.1">Элементарные методы решения игр
+
+<bold>Упрощение матрицы</bold>
+
+       B1   B2  B3  B4
+A1   1     2    4    3
+A2   0     2    3    2
+A3   1     2    4    3
+A4   4     3    1    0
+
+<list><list-item dir="ltr">A1 и A3 совпадают; одно из них можно вычеркнуть
+</list-item><list-item dir="ltr">A2 заведомо проигрышная стратегия по сравнению с A1
+</list-item><list-item dir="ltr">для противника B3 заведомо невыгодня (<italic>здесь я сам не понял</italic>)</list-item></list>
+
+<bold>Рассмотрим матрицу 2x2</bold>
+
+a11 a12
+a21 a22
+
+<list><list-item dir="ltr">если есть седловая точка - все понятно - пересечение и есть используемые стратегии; кстати, в этом случе всегды будут неоптимальные стратегии которые уйду на этапе упрощения матрицы
+</list-item><list-item dir="ltr">пусть седловой точки нет, тогда надо найти оптимальную стратегию игрока A: S (A1-&gt;p1, A2-&gt;p2)
+</list-item><list-item dir="ltr">В игре 2x2 обе стратегии противника являются "полезными" - иначе игра имела бы седловую точку.  Значит если мы придерживаемся своей стратегии, что противник может воспользоваться любой из своих стратегий B1 и B2, не изменяя вреднего выигрыша v (<link:internal>Смешанные стратегии</link:internal>).</list-item></list>
+	
+	<italic>	a11p1+a21p2=v
+		a22p1+a22p2=v</italic>
+<italic>		p1+p2=1</italic>
+
+<italic>	-&gt; p1 = (a22 - a21) / (a11 + a22 - a12 - a21)</italic>
+	
+<bold>Пример 1</bold>
+
+1   -1
+-1   1
+
+<italic>a=-1, b=1</italic> -&gt; нет седловой точки
+p1 = (1 + 1) / (1 + 1 + 1 +1) = 1/2; p2 = 1/2.
+Аналогично q1=q=1/2.
+
+v = 1 * 1/2 - 1 * 1/2 = 0
+
+-&gt; оптимальная стратегия каждого игрока - случайным образом чередовать свои чистые стратегии, пользуясь одинаково часто каждой из них. Средний выигрыш будет равен 0.
+
+<bold>Пример 2</bold>
+
+Есть 2 карты: туз и двойка.  А вынимает карту наугад.  B эту карту не видит.   Если это туз A требует рубль.  Если двойка - он либо отдает рубль, либо пробует обмануть. B - либо тупо отдает рубль, либо проверяет - если поймал на проверке - получает 2 рубля; если не поймал на проверке - отдает два рубля.
+
+При всем многообразии вариантов стратегии у игроков по 2:
+
+<list><list-item dir="ltr">A1 обманывать
+</list-item><list-item dir="ltr">A2 не обманывать
+</list-item><list-item dir="ltr">B1 верить
+</list-item><list-item dir="ltr">B2 не верить</list-item></list>
+
+Рассмотрим все варианты:
+
+<list><list-item dir="ltr">A1B1
+<list><list-item dir="ltr">туз - <link:internal>вероятность</link:internal> 1/2 ; выигрыш 1
+</list-item><list-item dir="ltr">2-ка - <link:internal>вероятность</link:internal> 1/2 ; выигрыш 1
+</list-item><list-item dir="ltr">среднее a11 = 1/2 * 1 + 1/2 * 1= 1
+</list-item></list></list-item><list-item dir="ltr">A1B2 -&gt; 1/2 * 2 + 1/2 * (-2) = 0
+</list-item><list-item dir="ltr">A2B1 -&gt; 1/2 * 1 + 1/2 * (-1) = 0
+</list-item><list-item dir="ltr">A2B2 -&gt; 1/2 *2 + 1/2 * (-1) = 1/2</list-item></list>
+
+Теперь у нас есть матрица, дальше все просто
+
+	a = 0;  b=1/2.
+	p1=1/3, p2 = 2/3, v1/3.
+        Значит 33% времени надо обманывать, при этом, чтобы B не делал 1/3 мы выиграем, а B проиграет.
+
+       q1=1/3, q2=2/3 - &gt; каждый третий раз надо верить, но как минимум 1/3 мы проиграем
+
+</note-content></text>
+  <last-change-date>2009-08-26T12:04:51.0165260+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-26T12:04:51.0165260+04:00</last-metadata-change-date>
+  <create-date>2009-08-26T10:26:33.6071189+04:00</create-date>
+  <cursor-position>2171</cursor-position>
+  <width>473</width>
+  <height>620</height>
+  <x>1092</x>
+  <y>342</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отформатировать SDexi Card</title>
+  <text xml:space="preserve"><note-content version="0.1">Отформатировать SDexi Card
+
+mkdosfs -F 16<link:url> /dev/name</link:url>
+
+      where -F 16 means "use 16-bit file allocation table.
+      <link:internal>If</link:internal> you planning to use this card in a camera or <link:internal>other</link:internal> device that might make assumptions about what the format will be, you can choose 12, 16 or 32 bit file allocation table(s) with mkdosfs.
+
+mkfs -t vfat /dev/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+отмонтировать
+mfks -t vfat -I<link:url> /dev/sde</link:url>
+mout<link:url> /dev/sde /media/mini_sd</link:url>
+<link:url>
+/dev/sdb</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:21.0332050+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.0332050+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:59:14.0223638+03:00</create-date>
+  <cursor-position>18</cursor-position>
+  <width>1059</width>
+  <height>609</height>
+  <x>340</x>
+  <y>88</y>
+  <open-on-startup>False</open-on-startup>
+</note>

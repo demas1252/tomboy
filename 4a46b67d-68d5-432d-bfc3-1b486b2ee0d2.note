@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пояснение - зачем вводится Let</title>
+  <text xml:space="preserve"><note-content version="0.1">Пояснение - зачем вводится Let
+
+Допустим есть функция <italic>f(x,y) = x(1 + xy)^2 + y(1-y) + (1 + xy)(1 - y)</italic>
+И мы хотим ввести переменные:  <italic>a = 1 + xy;  b = 1 - y; </italic>
+Тогда: <italic>f(x, y) = xa^2 + yb + ab</italic>
+
+(define (f x y)
+	(define (f-helper a b)
+		(+ 	(* x (square a))
+			(* y b)
+			(* a b)
+		)
+	)
+	(f-helper 
+		(+ 1 (* x y)) 
+		(- 1 y)
+	)
+)
+
+или
+		
+(define (f x y)
+	((labmda a b)
+		(+ 	(* x (square a))
+			(* y b)
+			(* a b)
+		)
+	)
+	(+ 1 (* x y)) 
+	(- 1 y)
+	)
+)
+
+или
+
+(define (f x y)
+	(<link:internal>let</link:internal> (
+		(a (+ 1 (* x y)))
+		(b (- 1 y))
+		)
+	(+ 	(* x (square a))
+		(* y b)
+		(* a b)
+	))
+)
+
+</note-content></text>
+  <last-change-date>2009-04-25T18:42:24.9970310+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:42:24.9970310+04:00</last-metadata-change-date>
+  <create-date>2009-04-25T18:42:09.9444140+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>732</width>
+  <height>515</height>
+  <x>764</x>
+  <y>321</y>
+  <open-on-startup>False</open-on-startup>
+</note>

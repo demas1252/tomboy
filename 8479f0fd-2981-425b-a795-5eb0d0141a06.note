@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример обобщения поиска строки в списке</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример обобщения поиска строки в списке
+
+&lt;&lt;pre
+;; contains-doll? : los -&gt; boolean
+;; to determine whether alos contains
+;; the symbol 'doll
+(define (contains-doll? alos)
+    (cond
+        [(empty? alos) false]
+        [else
+            (cond
+                [(symbol=? (first alos) 'doll) true]
+                [else (contains-doll? (rest alos))])
+        ]))
+
+&gt;&gt;
+
+&lt;&lt;pre
+;; contains-car? : los -&gt; boolean
+;; to determine whether alos contains
+;; the symbol 'car
+(define (contains-car? alos)
+    (cond
+        [(empty? alos) false]
+        [else
+            (cond
+                [(symbol=? (first alos) 'car) true]
+                [else (contains-car? (rest alos))])
+        ]))
+
+&gt;&gt;        
+Преобразуем в:
+
+&lt;&lt;pre
+;; contains? : symbol los -&gt; boolean
+;; to determine whether alos contains the symbol s
+(define (contains? s alos)
+    (cond
+        [(empty? alos) false]
+        [else (cond
+            [(symbol=? (first alos) s) true]
+            [else (contains? s (rest alos))])
+    ]))
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:57:12.1382840+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:57:12.1382840+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:57:04.2089380+03:00</create-date>
+  <cursor-position>22</cursor-position>
+  <width>496</width>
+  <height>360</height>
+  <x>147</x>
+  <y>80</y>
+  <open-on-startup>False</open-on-startup>
+</note>

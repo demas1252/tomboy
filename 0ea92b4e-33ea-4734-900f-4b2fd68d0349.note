@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>git add</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>git</link:internal> <link:internal>add</link:internal>
+
+<link:internal>git</link:internal> add -i   - итерактивное добавление файлов
+               что интересно - с помощью patch можно добавить не весь файл, а только его часть. 
+               pathc спрашивает про добавление про каждый chunk изменений
+
+<link:internal>git</link:internal> add .    - добавить все файлы
+
+</note-content></text>
+  <last-change-date>2009-03-24T08:39:36.1106290+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:39:36.1106290+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:39:19.1272060+03:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

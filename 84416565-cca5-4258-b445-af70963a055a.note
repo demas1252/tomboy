@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Декоратры в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Декоратры в Python
+
+Вот это:
+
+<italic>@f1
+def <link:internal>func</link:internal></italic><italic>(x): <link:internal>pass</link:internal></italic><italic>
+</italic>
+эквиваленитно этому:
+
+<italic>def <link:internal>func</link:internal></italic><italic>(x): <link:internal>pass</link:internal></italic><italic>
+<link:internal>func</link:internal></italic><italic> = f1(<link:internal>func</link:internal></italic><italic>)</italic>
+
+То есть вызывается функция, заданная декоратором, а в нее передается сама вызываемая функция.  В функции-декораторе мы можем выполнить какие-то дополнительные действия, а так же вызвать переданную функцию.
+
+Пример - вычисление времени выполнения функции:
+
+<italic>import time
+
+def timer(f):
+    def tmp(*<link:internal>args</link:internal></italic><italic>, **kwargs):
+        t = time.time()
+        res = f(*<link:internal>args</link:internal></italic><italic>, **kwargs)
+        print "Duration: %f" % (time.time() - t)
+        return res
+    
+    return tmp
+
+@timer
+def <link:internal>func</link:internal></italic><italic>(x, y):
+    return x + y
+</italic>
+<italic><link:internal>func</link:internal></italic><italic>(1, 2)</italic>
+
+Еще один пример - конструирование потоков:
+
+<italic>import threading
+
+class Thread(threading.Thread):
+    def __init__(self, f):
+        threading.Thread.__init__(self)
+        self.run = f
+
+@Thread
+def ttt():
+    print "This is a thread function"
+
+ttt.start()</italic>
+
+Декоратор с параметром:
+
+<italic>import threading
+
+class Thread(threading.Thread):
+    def __init__(self, f):
+        threading.Thread.__init__(self)
+        self.run = f
+
+@Thread
+def ttt():
+    print "This is a thread function"
+
+ttt.start()</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:32.8508970+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.8508970+04:00</last-metadata-change-date>
+  <create-date>2009-01-05T22:07:06.0290420+03:00</create-date>
+  <cursor-position>900</cursor-position>
+  <width>450</width>
+  <height>647</height>
+  <x>904</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

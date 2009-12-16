@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Named Let</title>
+  <text xml:space="preserve"><note-content version="0.1">Named Let
+
+(<link:internal>let</link:internal> _proc-id ([_arg-id _init-expr] ...)
+  _body ...+)
+
+(define (duplicate pos lst)
+    (<link:internal>let</link:internal> dup ([i 0]
+              [lst lst])
+     (cond
+      [(= i pos) (cons (car lst) lst)]
+      [else (cons (car lst) (dup (+ i 1) (cdr lst)))])))
+  &gt; (duplicate 1 (list "apple" "cheese burger!" "banana"))
+
+  ("apple" "cheese burger!" "cheese burger!" "banana")
+
+
+dup ([i 0]  [lst lst]) - это я объвляю переменную с двумя параметрами и начальными значениями (i=0, lst = lst), которую затем могу рекурсивно вызывать.
+
+По идее, я могу решить эту задачу и без Named Let :
+
+(define (duplicate2 pos lst accum)
+     (cond
+     [(= accum pos) (cons (car lst) lst)]
+      [else (cons (car lst) (duplicate2 pos (cdr lst) (+ accum 1)))]))
+
+(duplicate2 1 lst 0)
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.7094840+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.7094840+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T14:36:30.1626830+04:00</create-date>
+  <cursor-position>568</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1055</x>
+  <y>339</y>
+  <open-on-startup>False</open-on-startup>
+</note>

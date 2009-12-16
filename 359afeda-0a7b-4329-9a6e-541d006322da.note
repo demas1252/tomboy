@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сборка RPM для Suse</title>
+  <text xml:space="preserve"><note-content version="0.1">Сборка RPM для Suse
+
+1. Сделать это из под локального пользователя у меня не получилось, поэтому делал из под root.  TODO:  <link:internal>Сборка RPM из под обычного пользователя</link:internal>.
+
+2. Находим в <link:internal>Suse</link:internal> Software близкий пакет.  Из него переходим в <link:internal>Suse</link:internal> Build Service. Оттуда берем spec и может быть патчи.
+
+3. Качаем сорцы и копируем их в<link:url> /usr/src/packages/SOURCE</link:url>
+
+4. rpmbuild -ba &lt;spec&gt;
+
+5. В случае успеха в<link:url> /usr/src/packages/RPMS</link:url> забираем пакет</note-content></text>
+  <last-change-date>2009-09-21T14:48:26.1074900+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-21T14:48:26.1074900+04:00</last-metadata-change-date>
+  <create-date>2009-09-21T14:43:55.2946340+04:00</create-date>
+  <cursor-position>391</cursor-position>
+  <width>530</width>
+  <height>458</height>
+  <x>914</x>
+  <y>488</y>
+  <open-on-startup>False</open-on-startup>
+</note>

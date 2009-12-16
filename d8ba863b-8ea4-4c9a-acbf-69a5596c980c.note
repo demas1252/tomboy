@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>projected column feature</title>
+  <text xml:space="preserve"><note-content version="0.1">projected column feature
+
+
+Внешние таблицы основываются на текстовых файлах, которые могут содержать ошибки. По этому, по умолчанию, <link:internal>Oracle</link:internal> просматривает все столбцы(а не только те, которые участвуют в запросе).
+
+То есть, если есть столбец целого типа, в одной из строк которого записана строка.  То при считывании даже другого столбца <link:internal>Oracle</link:internal> пропустит эту строку (как неправильную).
+
+Если мы хотим избежать такого поведения, то следует написать примерно так:
+
+&lt;&lt;pre
+alter table my_table project column referenced;
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-28T22:22:43.8386660+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:22:43.8386660+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:22:42.3399950+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

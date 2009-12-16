@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Покрасить контрол цветом</title>
+  <text xml:space="preserve"><note-content version="0.1">Покрасить контрол цветом
+
+С:
+
+<italic>#include &lt;<link:internal>gtk</link:internal></italic><italic>/<link:internal>gtk</link:internal></italic><italic>.h&gt;
+
+static void on_destroy(GtkWidget* widget, gpointer data)
+{
+        <link:internal>gtk</link:internal></italic><italic>_main_quit ();
+}
+
+int main (int argc, char* argv[])
+{
+        GtkWidget* window;
+        GtkWidget* button;
+
+        <link:internal>gtk</link:internal></italic><italic>_init(&amp;argc, &amp;argv);
+        window = <link:internal>gtk</link:internal></italic><italic>_window_new(<link:internal>GTK</link:internal></italic><italic>_WINDOW_TOPLEVEL);
+        g_signal_connect(G_OBJECT (window), "destroy",
+                G_CALLBACK (on_destroy), NULL);
+        button = <link:internal>gtk</link:internal></italic><italic>_button_new_with_label("Hello world!");
+        GdkColor red = {0, 0xffff, 0x0000, 0x0000};
+        GdkColor green = {0, 0x0000, 0xffff, 0x0000};
+        GdkColor blue = {0, 0x0000, 0x0000, 0xffff};
+        <link:internal>gtk</link:internal></italic><italic>_widget_modify_bg(button, <link:internal>GTK</link:internal></italic><italic>_STATE_NORMAL, &amp;red);
+        <link:internal>gtk</link:internal></italic><italic>_widget_modify_bg(button, <link:internal>GTK</link:internal></italic><italic>_STATE_PRELIGHT, &amp;green);
+        <link:internal>gtk</link:internal></italic><italic>_widget_modify_bg(button, <link:internal>GTK</link:internal></italic><italic>_STATE_ACTIVE, &amp;blue);
+        <link:internal>gtk</link:internal></italic><italic>_container_<link:internal>add</link:internal></italic><italic>(<link:internal>GTK</link:internal></italic><italic>_CONTAINER(window), button);
+        <link:internal>gtk</link:internal></italic><italic>_widget_show_all(window);
+        <link:internal>gtk</link:internal></italic><italic>_main();
+        return 0;
+}</italic>
+
+<link:internal>Python</link:internal>:
+
+<italic>import pygtk
+pygtk.require('2.0')
+import <link:internal>gtk</link:internal></italic><italic>
+
+class <link:internal>Test</link:internal></italic><italic>:
+	def destroy(self, widget, data = None):
+		<link:internal>gtk</link:internal></italic><italic>.main_quit()
+	def __init__(self):
+		self.window = <link:internal>gtk</link:internal></italic><italic>.Window(<link:internal>gtk</link:internal></italic><italic>.WINDOW_TOPLEVEL)
+		self.window.connect("destroy", self.destroy)
+		self.window.set_border_width(10)
+		self.window.set_size_request(400, 200)
+		self.button = <link:internal>gtk</link:internal></italic><italic>.Button('Start')
+		self.window.<link:internal>add</link:internal></italic><italic>(self.button)
+
+		colorY = <link:internal>gtk</link:internal></italic><italic>.gdk.rgb_get_colormap().alloc_color('yellow')
+		colorG = <link:internal>gtk</link:internal></italic><italic>.gdk.rgb_get_colormap().alloc_color('green')
+		colorB = <link:internal>gtk</link:internal></italic><italic>.gdk.rgb_get_colormap().alloc_color('blue')
+		self.button.modify_bg(<link:internal>gtk</link:internal></italic><italic>.STATE_NORMAL, colorY)
+		self.button.modify_bg(<link:internal>gtk</link:internal></italic><italic>.STATE_PRELIGHT, colorG)
+		self.button.modify_bg(<link:internal>gtk</link:internal></italic><italic>.STATE_ACTIVE, colorB)
+
+		self.window.show_all()
+	def main(self):
+		<link:internal>gtk</link:internal></italic><italic>.main()
+
+<link:internal>test</link:internal></italic><italic> = <link:internal>Test</link:internal></italic><italic>()
+<link:internal>test</link:internal></italic><italic>.main()</italic>
+
+<link:url>http://ometer.com/<link:internal>gtk</link:internal></link:url><link:url>-colors.html</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:36.4425130+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.4425130+04:00</last-metadata-change-date>
+  <create-date>2008-10-05T15:11:07.4178819+04:00</create-date>
+  <cursor-position>1763</cursor-position>
+  <width>807</width>
+  <height>808</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

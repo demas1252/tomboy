@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Системные привелегии</title>
+  <text xml:space="preserve"><note-content version="0.1">Системные привелегии
+
+
+Возможность выполнять определенные классы операций (create session, create table ...). 
+
+GRANT CREATE SESSION TO demas;
+GRANT CREATE SESSION TO demas WITH ADMIN OPTION;
+
+WITH ADMIN OPTION - позволяет demas-у далше назначать эти права.
+
+REVOKE CREATE TABLE FROM demas;
+
+<link:internal>Привелегии</link:internal>, разданные demas-ом другим пользователям, *остаются* у них даже после того как этой <link:internal>привелегии</link:internal> лишится demas.</note-content></text>
+  <last-change-date>2008-03-29T06:41:26.1780070+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:41:26.1780070+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:41:19.0216330+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>658</width>
+  <height>548</height>
+  <x>110</x>
+  <y>470</y>
+  <open-on-startup>False</open-on-startup>
+</note>

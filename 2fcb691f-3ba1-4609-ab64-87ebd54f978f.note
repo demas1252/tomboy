@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выгрузка данных во внешнюю таблицу</title>
+  <text xml:space="preserve"><note-content version="0.1">Выгрузка данных во внешнюю таблицу
+
+
+1. Создаем внешнюю таблицу
+&lt;&lt;pre
+create table empl_comission
+organization external (type <link:internal>oracle</link:internal>_datapump
+default directory work_dir
+location ('empl_comm1.dmp', 'empl_comm2.dmp'))
+parallel 2
+as
+select &lt;любой select&gt;
+
+&gt;&gt;
+2. Проверяем:
+&lt;&lt;pre
+select f1, sum(f2) from empl_comission group by f1;
+
+&gt;&gt;
+3. Теперь можно переместить эту таблицу на другой сервер и загрузить, используя либо [<link:internal>Oracle Data Pump</link:internal>], либо создав внешнюю таблицу:
+&lt;&lt;pre
+create table new_empl_comission (
+employee_id number(6),
+e_name varchar2(6),
+....)
+organization external (type <link:internal>oracle</link:internal>_datapump
+default directory work_dir
+access parameters (
+logfile 'new_empl_comission.log')
+location ('empl_comm1.dmp', 'empl_comm2.dmp'));
+
+select ename, sum(amount) from new_empl_comission group by ename;
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.6108680+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.6108680+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:23:05.9102310+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

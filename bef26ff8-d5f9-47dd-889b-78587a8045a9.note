@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>AxOther</title>
+  <text xml:space="preserve"><note-content version="0.1">AxOther
+
+<link:internal>Сообщения Аксапты или что она пытается тебе сказать</link:internal>
+<link:internal>Axapta Continuous Integration</link:internal></note-content></text>
+  <last-change-date>2009-04-01T16:14:37.8735710+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:14:37.8735710+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:35:24.5183500+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>302</x>
+  <y>605</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разумные советы для БД большого размера</title>
+  <text xml:space="preserve"><note-content version="0.1">Разумные советы для БД большого размера
+
+    * Use appropriate hardware for your <link:internal>databases</link:internal>. I'd opt for 64-bit OS as well.
+    * Have dedicated machines for the DBs. Use fast disks configured for optimal performance. The more disks you can span over, the better the performance.
+    * Optimize the <link:internal>DB</link:internal> for the type of queries that will be performed. What happens more SELECTs or INSERTs?
+    * Does the load happens for the entire day, or for just few hours? Can you postpone <link:broken>some</link:broken> of the things to be run for the night?
+    * Have incremental backups.
+    * <link:internal>If</link:internal> you'll consider <link:internal>Oracle</link:internal> instead of <link:internal>SQL</link:internal> Server, you could use features such as Grid and Table Partitioning, which might <link:internal>boost</link:internal> performance considerably.
+    * Consider having <link:broken>some</link:broken> load-balancing solution between the <link:internal>DB</link:internal> servers.
+    * Pre-design the schemes and <link:internal>tables</link:internal>, so queries will be performed as fast as possible. Consider the appropriate indexes as well.
+
+
+Twelve Tips For Optimizing <link:internal>Sql</link:internal> Server 2005 Query Performance
+
+   1. Turn on the execution plan, and statistics
+   2. Use Clustered Indexes
+   3. Use Indexed Views
+   4. Use Covering Indexes
+   5. Keep your clustered index small.
+   6. Avoid cursors
+   7. Archive old data
+   8. Partition your data correctly
+   9. Remove user-defined inline scalar functions
+  10. Use <link:internal>APPLY</link:internal>
+  11. Use computed columns
+  12. Use the correct transaction isolation leve</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.4964900+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.4964900+04:00</last-metadata-change-date>
+  <create-date>2009-01-04T22:41:50.4775280+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1218</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>calc old factures</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>calc</link:internal> old factures
+
+       *Получаем перечень "старых" фактур:*
+        
+     <link:internal>1</link:internal>. Вызываем метод findOldFactureJournals(), передавая туда текущую рабочую фактуру и invoice (см. FactureCalcSettlement.<link:internal>calc</link:internal>()).
+     2. В этом методе прежде всего вызывается метод <link:internal>map</link:internal>-а _custVendInvoiceJour.factureJourSortedList_RU(), который возвращает перечень всех facture, line/header markups, invoiceRoundOff, discounts <link:internal>c</link:internal> таким же идентификатором фактуры упакованных в recordSortedList. 
+     3. Затем метод findOldFactureJournals() пробегает по полученному списку и выкидывает от туда фактуры у которых:
+        а) (Дата фактуры больше текущей) или
+        б) (Эта и есть сама фактура) или
+        в) (Дата фактуры совпадает с нашей) и ((Внешний идентификатор больше текущего) или (Внешний идентификатор такой же, но более позднии даты создания и модификации))
+        
+     4. Этот прореженный recordSortedList возвращается в <link:internal>calc</link:internal>().
+     
+     
+        *Формируем <link:internal>map</link:internal> - mapOldFactureRemain*
+        
+     <link:internal>1</link:internal>. Для каждой из фактур в списке считаем mapOldFactureAmounts методом calcFactureAmounts. (&lt;2&gt; -&gt; -118/-100/-18).
+     2. Из этого списка формируем новый <link:internal>map</link:internal>: &lt;2&gt; -&gt; sum(-118/-100/-18) (суммируем по &lt;2&gt;)
+        </note-content></text>
+  <last-change-date>2009-10-12T12:00:22.9101270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.9101270+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:01:35.1876327+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

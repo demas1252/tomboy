@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перемещение ОС не введенных в эксплуатацию</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Перемещение ОС</link:internal> не введенных в эксплуатацию
+
+1. Создаем номенклатуру с типом «Основное средство». 
+2. Создаем закупку данной номенклатуры. В закупке указываем инвентарные номера ОС. Указываем складскую аналитику <link:internal>склад</link:internal> = «<link:internal>Склад</link:internal>1» Обрабатываем накладную по закупке. 
+3. Через складской журнал перенос осуществляем перенос данной номенклатуры со «<link:internal>Склад</link:internal>1» на «<link:internal>Склад</link:internal>2». 
+4. Через журнал ОС вводим наше ОС в эксплуатацию. <link:internal>Axapta</link:internal> пытается сделать расходную проводку с аналитикой «<link:internal>Склад</link:internal>1», которую подставляет из <link:internal>закупки</link:internal>. Но в наличии данная номенклатура есть только на «<link:internal>Склад</link:internal>2», поэтому операция заканчивается неудачей.
+
+---
+
+Это фича. Закупка ОС <link:internal>на склад</link:internal> является чисто формальной операцией, сразу после <link:internal>закупки</link:internal> вы должны поставить ОС на баланс (аксаптовская операция "<link:internal>ввод в эксплуатацию</link:internal>") и перемещать уже в модуле "ОС".
+<link:internal>Основные средства</link:internal> в запасе (на складе) тоже амортизируются.  Читайте внимательно ПБУ 6, методические указания по учету ОС и инструкцию по плану счетов.
+
+---
+
+Вобщем такая ситуация у меня называется проект "двести с гаком"  Могу подсказать только, так как давал клятву  Класс InventMov_Asset_RU метод new - там надо обмануть систему и подпихнуть ей строку <link:internal>InventTrans</link:internal> по которой количество пришло в случае если ОС после покупки переместили на другой <link:internal>склад</link:internal>. У меня это зиждется на том что у каждого ос есть серийный номер, соотв перебираем аналитики с серийником из <link:internal>закупки</link:internal> и находим ту, на которой на данный момент в InventSum висит количество, далее находим приходную проводку в <link:internal>InventTrans</link:internal> с такой аналитикой и вуаля.. 
+</note-content></text>
+  <last-change-date>2009-04-01T16:14:37.8196360+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:14:37.8196360+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:28:07.2362550+03:00</create-date>
+  <cursor-position>71</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

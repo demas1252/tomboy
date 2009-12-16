@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Различие между массивом указателей и многомерным массивом</title>
+  <text xml:space="preserve"><note-content version="0.1">Различие между массивом указателей и многомерным массивом
+
+int a[10][20]; - выделена память под 20*10 целых чисел и эта память инициализирована 0-ми.
+int *b[10]; - 10 неинициализированных указаетелей.  Но каждый указатель можно инициализировать указателем на одномерный массив целых.
+
+char *name[] = {"one", two", "three"} - указатель на массив указателей на три строки
+
++ -&gt; "one\0" 
++ -&gt; "two\0"
++ -&gt; "three\0"
+</note-content></text>
+  <last-change-date>2009-03-24T08:53:34.2776350+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:53:34.2776350+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:53:27.5957050+03:00</create-date>
+  <cursor-position>92</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

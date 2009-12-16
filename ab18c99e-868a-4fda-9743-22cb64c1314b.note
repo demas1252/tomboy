@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>apt</title>
+  <text xml:space="preserve"><note-content version="0.1">apt
+
+<link:internal>apt-cache</link:internal>
+<link:internal>apt-cdrom</link:internal>
+<link:internal>apt-file</link:internal>
+<link:internal>apt-get</link:internal>
+
+<bold>Источники</bold><link:url>
+/etc/apt/sources.list</link:url> (после его изменения не забывать - <link:internal>apt-get</link:internal> update)
+
+официальное зеркало Debian — <link:url>http://www.debian.org/mirror/</link:url>
+неофициальные архивы APT — <link:url>http://www.apt-get.org</link:url>
+поиск отдельных пакетов: <link:url>http://www.debian.org/distrib/packages/</link:url>
+
+<bold>Поиск установленных программ</bold>
+
+$ <link:internal>dpkg</link:internal> -l | <link:internal>tee</link:internal> dpkglist -- список всех установленных пакетов
+$ <link:internal>dpkg</link:internal> -l | grep <link:internal>gnome</link:internal>
+
+$ <link:internal>dpkg</link:internal> -L <link:internal>gnome</link:internal>-applets -- список файлов входящих в пакет
+$ <link:internal>dpkg</link:internal> -S boing.wav -- к какому пакету относится файл
+<link:internal>dpkg</link:internal> -s kpoker  -- полная информация о пакете
+
+<bold>Кеш пакетов</bold>
+
+$ <link:internal>dpkg</link:internal> --yet-to-unpack  -- список загруженных, но не установленных пакетов
+$ <link:internal>apt-get</link:internal> check  -- проверка зависимостей
+
+<link:internal>Пример разрешения зависимостей</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.7978460+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.7978460+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:34:59.6701060+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>831</width>
+  <height>814</height>
+  <x>560</x>
+  <y>89</y>
+  <open-on-startup>False</open-on-startup>
+</note>

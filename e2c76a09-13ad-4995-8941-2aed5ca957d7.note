@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Нереализованная курсовая по подотчетникам</title>
+  <text xml:space="preserve"><note-content version="0.1">Нереализованная курсовая по подотчетникам
+
+<link:internal>Расчеты с поставщиками</link:internal> -&gt; Периодические операции -&gt; Расчет нереализованной курсовой разницы по подотчетникам
+
+Функционал целиком написан GMCS.
+
+Класс <italic>gm_ProcessUnrealzedEmpl</italic>. 
+
+Там строится <italic>Query</italic>, а потом для каждой проводки выполняется метод <italic>exchAdjustTrans()</italic>:
+
+<italic>	Query: EmplTrans_Ru
+			TransDate = от начала времен до указанной даты
+			AmountCur != 0
+			Closed = datenull() (незакрытые)
+			TransType != ExchAdjust
+			Unrealized = No
+			Currency != UE &amp;&amp; != standartCurrency()
+		join LedgerTable
+			ModuleExchAdjusted = Yes
+</italic>
+ а потом для каждой фетченой проводки выполняется метод <italic>exchAdjustTrans()</italic>:
+
+      <italic>calcExchAdj() </italic>- собственно <link:internal>расчет курсовой разницы</link:internal>
+      		<italic>calcTransBalance()</italic> - получаем суммы в валюте операции и основной валюте за вычетом сопоставленного
+      		<italic>initLedgerVoucher()</italic> - подготовка для разноски в ГК (кстати, по этому классу можно делать разноску в ГК) потом создается проводка в <italic>EmplTrans_Ru</italic> и разносится по ГК
+      		потом все повторяется 'под соусом сторнирования курсовой разницы (хрен знает зачем)'
+      		и делается запись в таблице сопоставлений (<italic>EmplSettlement</italic>)</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.4074600+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.4074600+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T16:37:30.3370190+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

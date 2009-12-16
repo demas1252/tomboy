@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разноска входящего НДС</title>
+  <text xml:space="preserve"><note-content version="0.1">Разноска входящего НДС
+
+Форма PurchBookProcessVat_Ru.processData()
+
+В <link:internal>BookDataCalc</link:internal> засовываются две временные таблицы (шапка и строки) и дергается метод post(false);
+
+-&gt; <link:internal>BookDataCalc</link:internal>_VAT_Ru().post()
+
+В этом методе мы запрашиваем у имеющегося у нас <link:internal>DataCalc</link:internal> соответсвующий ему DataPost -&gt; BookPostVat_Process_Ru.
+
+Суем в него указатель на сессию и строки обработки.
+Дергаем его run(); -&gt; BookPostVAT_RU.run() (<link:internal>bookpostvatrurun</link:internal>).</note-content></text>
+  <last-change-date>2009-11-05T16:12:00.4798180+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:12:00.4798180+03:00</last-metadata-change-date>
+  <create-date>2009-01-25T16:28:51.4300260+03:00</create-date>
+  <cursor-position>239</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1195</x>
+  <y>570</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CustVendCalcSettledAmount_Ru</title>
+  <text xml:space="preserve"><note-content version="0.1">CustVendCalcSettledAmount_Ru
+
+
+    Данная иерархия классов используется из класса <link:internal>FactureCalcSettlement_Ru</link:internal>:
+    
+    _custVendCalcSettledAmounts  = CustVendCalcSettledAmounts_RU::construct(custVendInvoiceJour, NoYes::No, throwOnError);
+    custVendCalcSettledAmounts.calcSettledAmounts();
+    mapMapInvoiceSettledAmounts = custVendCalcSettledAmounts.mapMapSettledAmountsMST();_
+
+    1. В construct в зависимости от tableId создаем нужного наследника
+    2. Там же, интересен метод init(), который инициализирует все [<link:internal>map-ы CustVendCalcSettledAmount_Ru</link:internal>]
+    3. В этом же init() вызывается метод calcTransAmounts(), переопределенный в наследниках. Этот метод отвечает за [<link:internal>форирование mapTransAmount</link:internal>], который нам понадобится далее.
+    4. Далее в методе calcSettledAmounts() для каждого сопоставления вызывается метод calcVATTransitSettlement(), который делает следующее:
+    
+    
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:49.6503080+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:49.6503080+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:02:44.3430680+03:00</create-date>
+  <cursor-position>696</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>274</x>
+  <y>252</y>
+  <open-on-startup>False</open-on-startup>
+</note>

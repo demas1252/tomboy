@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Tomboy</title>
+  <text xml:space="preserve"><note-content version="0.1">Tomboy
+
+<bold>Получить исходники из vcs:</bold>
+svn co <link:url>http://svn.gnome.org/svn/[module]/trunk</link:url> [module]
+
+<bold>Компилировать</bold>
+sudo <link:internal>apt-get</link:internal> build-dep  
+./autogen.sh --prefix=/home/user/stage/tomboy --disable-scrollkeeper
+make
+make install<link:url>
+/home/user/stage/tomboy/bin/tomboy</link:url>
+
+Checking for reuired M4 macros...
+  glib-gettext.m4 not found
+***Error***: <link:broken>some</link:broken> autoconf macros required to build tomboy
+ were not found in your aclocal path, or <link:broken>some</link:broken> forbidden macros were found. Perhaps you need to adjust your ACLOCAL_FLAGS?
+
+You need to install <link:internal>gnome</link:internal>-common from the <link:internal>GNOME</link:internal> CVS
+sudo <link:internal>apt-get</link:internal> install <link:internal>gnome</link:internal>-common	</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.7254430+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.7254430+04:00</last-metadata-change-date>
+  <create-date>2008-04-04T23:27:31.5220839+04:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>514</width>
+  <height>686</height>
+  <x>1164</x>
+  <y>109</y>
+  <open-on-startup>False</open-on-startup>
+</note>

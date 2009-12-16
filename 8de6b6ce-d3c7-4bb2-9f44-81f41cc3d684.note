@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование UUID</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование UUID
+
+&gt;&gt; ls -lF<link:url> /dev/disk/by-uuid/</link:url>
+
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 2d781b26-0285-421a-b9d0-d4a0d3b55680 -&gt; ../../sda<link:internal>1</link:internal>
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 31f8eb0d-612b-4805-835e-0e6d8b8<link:internal>c</link:internal>5591 -&gt; ../../sda7
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 3<link:broken>FC</link:broken>2-3<link:internal>DDB</link:internal> -&gt; ../../sda6
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 5090093f-e023-4a93-b2b6-8a9568<link:internal>dd</link:internal>23dc -&gt; ../../sda2
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 912<link:internal>c</link:internal>7844-5430-4eea-b55<link:internal>c</link:internal>-e23f8959a8ee -&gt; ../../sda5
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 B0DC1977DC193954 -&gt; ../../sdb<link:internal>1</link:internal>
+lrwxrwxrwx <link:internal>1</link:internal> root root 10 Oct 16 10:27 bae98338-<link:internal>ec</link:internal>29-4beb-aacf-107e44599b2e -&gt; ../../sdb2
+
+В fstab:<link:url>
+/dev/disk/by-uuid/2d781b26-0285-421a-b9d0-d4a0d3b55680</link:url> вместо<link:url> /dev/sda1</link:url> (для примера выше)
+    или
+UUID=2d781b26-0285-421a-b9d0-d4a0d3b55680
+
+В <link:internal>grub</link:internal>:
+<link:internal>kernel</link:internal><link:url> /boot/vmlinuz26</link:url> root=/dev/sda4 vga=0x318 ro
+<link:internal>kernel</link:internal><link:url> /boot/vmlinuz26</link:url> root=/dev/disk/by-uuid/2d781b26-0285-421a-b9d0-d4a0d3b55680 vga=0x318 ro</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.4961420+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.4961420+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:36:32.6732070+03:00</create-date>
+  <cursor-position>660</cursor-position>
+  <width>601</width>
+  <height>587</height>
+  <x>21</x>
+  <y>83</y>
+  <open-on-startup>False</open-on-startup>
+</note>

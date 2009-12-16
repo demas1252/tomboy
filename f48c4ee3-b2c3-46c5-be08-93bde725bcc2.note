@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка закупки</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка закупки
+
+ * <link:internal>Создание закупки</link:internal>
+        <link:internal>InventTrans</link:internal> - создается срока
+            TransType = Заказ на закупку (уже здесь)
+            StatusReceipt = Заказано
+     * Заказ на закупку 
+        Бух проводка не создается. Складская проводка не меняется.
+     * Счет на оплату
+        Для разноски требуется насроенная номерная серия - Внутренний счет на оплату.
+        Бух проводка не создается. Складская проводка не меняется.
+        Как я понимаю, это какой-то внуренний документ.
+     * Список прихода
+        Бух проводка не создается. Складская проводка не меняется.
+     * Отборочная накладная (M4)
+        Для разноски требуется насроенная номерная серия - Операция ГК по приходному ордену (??) (В Управлении запасами).
+        Изменяется статус складской проводки.
+        StatusReceipt = Получено.
+        
+        \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\<link:internal>InventTrans</link:internal>\Methods\update
+        \Classes\InventUpdate\writeInventTrans                    
+        \Classes\InventUpdate\writeInventTransAutoDim
+        \Classes\InventUpd_Physical\updatePhysicalReceipt
+        \Classes\InventUpd_Physical\updateNow
+        \Classes\PurchFormLetter_PackingSlip\updateInventory
+        \Classes\PurchFormLetter_PackingSlip\updateNow
+        \Classes\PurchFormLetter\insertJournal
+        \Classes\PurchFormLetter\createJournal
+
+
+     * Накладная создаются бух проводки
+        Изменяется статус складской проводки.
+        StatusReceipt = Куплено. (Закупка = Оприходовано)
+           
+         \<link:internal>Data Dictionary</link:internal>\<link:internal>Tables</link:internal>\<link:internal>LedgerTrans</link:internal>\Methods\insert
+         \Classes\<link:internal>LedgerVoucher</link:internal>\post                       
+         \Classes\LedgerVoucherPost\end                    
+         \Classes\PurchFormLetter_Invoice\endVoucher_PL    
+         \Classes\PurchFormLetter_Invoice\updateNow        
+         \Classes\PurchFormLetter\insertJournal            
+     
+     
+     форма PurchEditLines + класс PurchFormLetter
+     
+     PurchParmTable - сессия обработки <link:internal>закупки</link:internal> - там ссылка на <link:internal>закупки</link:internal>, вид обрабатываемого документа, номер документа(отб. накладной).  Тут же поле ParmId - ссылка на таблицу PurchParmUpdate. 
+     PurchParmLine - строки сессии - там сслыка на закупку + lineNum. Тоже есть ссылка ParmId.
+     
+     Вот стек создания PurchParmUpdate:
+     
+     (S) \Classes\PurchFormLetter\createParmUpdate - line 21
+     ...
+     (S) \Classes\RunBaseBatch\prompt - line 3
+     (S) \Classes\PurchFormLetter\main - line 53
+     
+     Вот стек создания PurchParmLine:
+        
+     (S) \Classes\PurchFormLetter\createParmLine - line 36
+     (S) \Classes\PurchFormLetter\chooseLines - line 48
+     (S) \Classes\PurchFormLetter\initLinesQuery - line 19
+     (S) \Classes\RunBaseBatch\prompt - line 3
+     (S) \Classes\PurchFormLetter\main - line 53
+     
+     Вот стек создания PurchParmTable:
+     (S) \Classes\PurchFormLetter\chooseLines - line 14
+     
+     </note-content></text>
+  <last-change-date>2009-10-17T22:10:52.7782150+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.7782150+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:35:53.2219750+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

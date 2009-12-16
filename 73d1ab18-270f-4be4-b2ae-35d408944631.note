@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация enum в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация enum в Python
+
+<italic>class Animal:
+    DOG=1
+    CAT=2
+
+x = Animal.DOG</italic></note-content></text>
+  <last-change-date>2008-09-19T22:07:05.0106820+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-19T22:07:05.0106820+04:00</last-metadata-change-date>
+  <create-date>2008-09-19T22:06:51.9118570+04:00</create-date>
+  <cursor-position>26</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>889</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

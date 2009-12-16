@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запуск Data Pump из SQL Plus</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Запуск Data Pump из SQL</link:internal> Plus
+
+
+В sqlPlus создаем директорию:
+    create directory DATA_PUMP_DIR2 as '<link:internal>c</link:internal>:\<link:internal>oracle</link:internal>\product\10.1.0\oradata\pumps2'
+    
+В командной строке выполняем:
+    expdp directory = DATA_PUMP_DIR2 
+    
+</note-content></text>
+  <last-change-date>2008-03-28T23:00:02.8148960+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T23:00:02.8148960+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:11:51.2554910+03:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>512</y>
+  <open-on-startup>False</open-on-startup>
+</note>

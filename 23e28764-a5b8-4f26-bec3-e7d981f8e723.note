@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Временные таблицы консолидации gmcs</title>
+  <text xml:space="preserve"><note-content version="0.1">Временные таблицы консолидации gmcs
+
+В них копятся данные - scr0003026
+
+Назначение таблиц следующее:
+GM_TMPCONSOLIDATIONDETAIL - выборка из БД данных для проведения консолидации (трансляции проводок ГК)
+GM_TMPCONSOLIDATIONIMPORT – данные, подлежащие импорту консолидации (трансляции проводок ГК), и находящиеся на проверке перед импортом
+GM_TMPCONSOLIDATIONREGULATION - таблица мэппинга при проведении консолидации (трансляции проводок ГК) при перекодировке данных из консолидируемой компании в консолидирующую
+GM_CONSOLIDATIONRECIDLOG - ИД консолидированных данных
+GM_NOTFOREXPORTRECIDLOG - ИД неконсолидированных данных
+
+Для ускорения процедуры мэппинга попробуйте почистить таблицы:
+GM_TMPCONSOLIDATIONDETAIL
+GM_TMPCONSOLIDATIONIMPORT
+GM_TMPCONSOLIDATIONREGULATION
+
+Таблицы  GM_CONSOLIDATIONRECIDLOG, GM_NOTFOREXPORTRECIDLOG небольшие по размеру, их чистить не нужно.</note-content></text>
+  <last-change-date>2008-03-26T22:29:54.2693110+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:29:54.2693110+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:29:48.8580350+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

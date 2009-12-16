@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример записи в файл из Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример записи в файл из Erlang
+
+-module(scavenge).
+-export([urls2htmlFile/2, bin2urls/1, nano_get_url/1]).
+-import(lists, [reverse/1, reverse/2, <link:internal>map</link:internal>/2]).
+
+urls2htmlFile(Urls, File)-&gt;
+    file:write_file(File, urls2html(Urls)).
+
+bin2urls(Bin)-&gt;
+    gather_urls(binary_to_list(Bin), []).
+
+urls2html(Urls)-&gt;
+    [h1("Urls"), make_list(Urls)].
+
+h1(Title)-&gt;
+    ["&lt;h1&gt;", Title, "&lt;/h1&gt;\n"].
+
+make_list(L)-&gt;
+    ["&lt;ul&gt;\n",
+     <link:internal>map</link:internal>(fun(I)-&gt;
+		 ["&lt;li&gt;", I, "&lt;/li&gt;\n"] end, L),
+     "&lt;/ul&gt;\n"].
+
+gather_urls("&lt;a href" ++ T, L)-&gt;
+    {Url, T1} = collect_url_body(T, reverse("&lt;a href")),
+    gather_urls(T1, [Url | L]);
+gather_urls([_|T],L) -&gt;
+    gather_urls(T, L);
+gather_urls([], L) -&gt;
+    L.
+
+collect_url_body("&lt;/a&gt;" ++ T, L)-&gt;
+    {reverse(L, "&lt;/a&gt;"), T};
+collect_url_body([H|T], L) -&gt;
+    collect_url_body(T, [H|L]);
+collect_url_body([], _) -&gt;
+    {[],[]}.
+	   
+nano_get_url(Host)-&gt;
+    {ok, Socket} = gen_tcp:connect(Host, 80, [binary, {packet, 0}]),
+    ok = gen_tcp:send(Socket, "GET / HTTP/1.0\r\n\r\n"),
+    receive_data(Socket, []).
+
+receive_data(Socket, SoFar)-&gt;
+    receive
+	{tcp, Socket, Bin}-&gt;
+	    receive_data(Socket, [Bin | SoFar]);
+	{tcp_<link:internal>closed</link:internal>, Socket}-&gt;
+	    list_to_binary(reverse(SoFar))
+    end.
+    
+--------------------------------------------------------
+
+8&gt; B = scavenge:nano_get_url("<link:url>www.<link:internal>erlang</link:internal></link:url><link:url>.com</link:url>"),
+8&gt; L = scavenge:bin2urls(B),
+8&gt; scavenge:urls2htmlFile(L, "g.html").
+
+--------------------------------------------------------
+
+Что важно, мы формируем список, а не текстовую строку. Строка сама сформируется в момент сериализации списка.
+</note-content></text>
+  <last-change-date>2009-03-24T08:44:15.4141040+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:44:15.4141040+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:44:07.6776380+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1</x>
+  <y>46</y>
+  <open-on-startup>False</open-on-startup>
+</note>

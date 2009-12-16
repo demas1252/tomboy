@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Более сложные примеры определения вероятности</title>
+  <text xml:space="preserve"><note-content version="0.1">Более сложные примеры определения вероятности
+
+<link:internal>Маша и Саша хотят сидеть вместе</link:internal></note-content></text>
+  <last-change-date>2009-06-10T10:00:57.1408280+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:00:57.1408280+04:00</last-metadata-change-date>
+  <create-date>2009-06-10T10:00:33.3579220+04:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>219</x>
+  <y>296</y>
+  <open-on-startup>False</open-on-startup>
+</note>

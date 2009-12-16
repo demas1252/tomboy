@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Функции Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Функции Haskell
+
+Должны начинаться с маленькой буквы.
+
+<italic>doubleMe x = x + x
+
+doubleUs x y = x * 2 + y * 2
+
+doubleSmallNumber x = <link:internal>if</link:internal></italic><italic> x &gt; 100
+		  		    then x
+				    else x * 2</italic>
+
+<link:internal>Pattern Matching in Haskell</link:internal>
+<link:internal>Guards in Haskell</link:internal>
+<link:internal>Recursion in Haskell</link:internal>
+<link:internal>Curried functions in Haskell</link:internal>
+<link:internal>High Ordered Functions</link:internal>
+<link:internal>Maps and Filters Haskell</link:internal>
+<link:internal>Lambdas in Haskell</link:internal>
+<link:internal>Folds functions in Haskell</link:internal>
+<link:internal>Function Composition in Haskell</link:internal></note-content></text>
+  <last-change-date>2009-11-06T11:56:33.6609509+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-06T11:56:33.6609509+03:00</last-metadata-change-date>
+  <create-date>2009-10-11T10:02:59.0139860+04:00</create-date>
+  <cursor-position>324</cursor-position>
+  <width>450</width>
+  <height>446</height>
+  <x>1110</x>
+  <y>293</y>
+  <open-on-startup>False</open-on-startup>
+</note>

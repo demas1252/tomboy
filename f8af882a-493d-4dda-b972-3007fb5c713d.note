@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>qrVendPrepaymentFacturesSales</title>
+  <text xml:space="preserve"><note-content version="0.1">qrVendPrepaymentFacturesSales
+
+Если это <link:internal>не предоплаты</link:internal> по поставщику - пошли вон.
+
+FactureJour_RU  (Prepayment, Vend)	
+	VendTrans
+		VendSettlement
+			SalesBookVATProcessLogTrans_RU (exists join)
+				SalesBookVATProcessLogTrans
+</note-content></text>
+  <last-change-date>2009-01-28T13:15:24.9735930+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-28T13:15:24.9735930+03:00</last-metadata-change-date>
+  <create-date>2009-01-28T13:14:20.1862090+03:00</create-date>
+  <cursor-position>203</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>988</x>
+  <y>615</y>
+  <open-on-startup>False</open-on-startup>
+</note>

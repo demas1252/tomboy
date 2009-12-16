@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Функции порождающие списки</title>
+  <text xml:space="preserve"><note-content version="0.1">Функции порождающие списки
+
+(define (wage h)
+  (* h 12))
+
+(define (hours-&gt;wages alon)
+  (cond
+    [(empty? alon) empty]
+    [else (cons (wage(first alon)) (hours-&gt;wages(rest alon)))]))
+
+&gt; (define l (cons 2 (cons 5 (cons 1 empty)))) 
+&gt; (hours-&gt;wages l)
+(cons 24 (cons 60 (cons 12 empty)))
+</note-content></text>
+  <last-change-date>2009-04-22T13:21:31.9540490+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-22T13:21:31.9540490+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:52:50.1064030+03:00</create-date>
+  <cursor-position>290</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>161</x>
+  <y>468</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сбор системной статистики</title>
+  <text xml:space="preserve"><note-content version="0.1">Сбор системной статистики
+
+Сбор:
+
+execute dbms_stats.gather_system_stats('start'); 
+execute dbms_stats.gather_system_stats('stop'); 
+
+Просмотр:
+
+select * from sys.aux_stats$;
+
+SYSSTATS_INFO  STATUS     COMPLETED  
+SYSSTATS_INFO  DSTART     01-19-2008 14:59  
+SYSSTATS_INFO  DSTOP       01-19-2008 15:00  
+SYSSTATS_INFO  FLAGS  1     
+SYSSTATS_MAIN  CPUSPEEDNW  904.86697     
+SYSSTATS_MAIN  IOSEEKTIM  10     
+SYSSTATS_MAIN  IOTFRSPEED  4096     
+SYSSTATS_MAIN  SREADTIM  5.714     
+SYSSTATS_MAIN  MREADTIM        
+SYSSTATS_MAIN  CPUSPEED  1064     
+SYSSTATS_MAIN  MBRC        
+SYSSTATS_MAIN  MAXTHR        
+SYSSTATS_MAIN  SLAVETHR        
+
+Изменение вручную:
+
+dbms_stats.set_system_stats('CPUSPEED', 500);
+
+alter system flush shared pool;
+
+Пояснения:
+CPU - миллионов стандартных операций в секунду
+SREADTIM - среднее время в миллисекундах single-block
+MREADTIM - среднее время в миллисекундах multi-block
+MBRC - multiblock read size (in blocks)</note-content></text>
+  <last-change-date>2008-03-27T14:51:47.1696600+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T14:51:47.1696600+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:51:45.6206120+03:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>273</x>
+  <y>439</y>
+  <open-on-startup>False</open-on-startup>
+</note>

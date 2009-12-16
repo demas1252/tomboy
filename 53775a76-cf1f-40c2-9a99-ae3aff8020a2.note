@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VmWare</title>
+  <text xml:space="preserve"><note-content version="0.1">VmWare
+
+<link:internal>Viewing a Shared Folder</link:internal>
+<link:internal>Настройка сети VmWare</link:internal>
+<link:internal>Поднять терминальник на виртуалке</link:internal>
+<link:internal>VmMount</link:internal>
+
+xinetd
+g++
+
+sudo ln -sf<link:url> /usr/lib/gcc/i486-linux-gnu/4.2.3/libgcc_s.so /usr/lib/vmware/lib/libgcc_s.so.1/libgcc_s.so.1</link:url>
+sudo ln -sf<link:url> /usr/lib/libpng12.so.0 /usr/lib/vmware/lib/libpng12.so.0/libpng12.so.0</link:url>
+
+<link:internal>Vmware in Suse</link:internal>
+
+
+Your serial number(s):
+901H4-YDR85-2CK9J-4U52N
+9A1KH-YYE8G-2101J-4J3VJ
+
+<link:internal>Установка VmWare Workstation на Arch Linux</link:internal></note-content></text>
+  <last-change-date>2009-10-03T23:31:30.5957000+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-03T23:31:30.5957000+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T22:06:29.2604060+03:00</create-date>
+  <cursor-position>388</cursor-position>
+  <width>696</width>
+  <height>453</height>
+  <x>160</x>
+  <y>481</y>
+  <open-on-startup>False</open-on-startup>
+</note>

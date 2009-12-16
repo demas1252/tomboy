@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Неорганическая химия</title>
+  <text xml:space="preserve"><note-content version="0.1">Неорганическая химия
+
+<link:internal>Подгруппа азота</link:internal>
+<link:internal>Подгруппа углерода</link:internal></note-content></text>
+  <last-change-date>2009-08-29T19:16:31.1733620+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-29T19:16:31.1733620+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T21:15:30.8747040+04:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>225</width>
+  <height>195</height>
+  <x>74</x>
+  <y>772</y>
+  <open-on-startup>False</open-on-startup>
+</note>

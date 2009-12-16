@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Азотная кислота</title>
+  <text xml:space="preserve"><note-content version="0.1">Азотная кислота
+
+<italic>HNO3</italic>
+
+<list><list-item dir="ltr">бесцветна
+</list-item><list-item dir="ltr">при комнатной температуре на свету постепенно разлагается: 4HNO3=4NO2 + O2 + 2H2O
+</list-item><list-item dir="ltr">разбавленные растворы более устойчивы, так как HNO3 находится в виде ионов
+</list-item><list-item dir="ltr">одна из самых сильных кислот
+</list-item><list-item dir="ltr">сильный окислитель
+<list><list-item dir="ltr">практически все металлы Cu + HNO3 = Cu(NO3)2 + 2NO2 + 2H2O
+</list-item><list-item dir="ltr">аллюминий, железо и хром покрываются защитной пленкой (перевозят в стальных цистернах)
+</list-item><list-item dir="ltr">многие неметаллы: S+6HNO3=H2SO4+6NO2+2H2O
+</list-item><list-item dir="ltr">органические соединения</list-item></list></list-item></list>
+</note-content></text>
+  <last-change-date>2009-08-07T22:07:50.2887489+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T22:07:50.2887489+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T22:03:22.1186250+04:00</create-date>
+  <cursor-position>22</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>139</x>
+  <y>433</y>
+  <open-on-startup>False</open-on-startup>
+</note>

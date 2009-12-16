@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Узнать размер индекса</title>
+  <text xml:space="preserve"><note-content version="0.1">Узнать размер индекса
+
+Есть смысл посмотреть:
+
+<link:internal>Информация об индексах</link:internal>
+<link:internal>Стоит ли всегда использовать сжатие индекса</link:internal></note-content></text>
+  <last-change-date>2008-09-12T12:43:59.4900630+04:00</last-change-date>
+  <last-metadata-change-date>2008-09-12T12:43:59.4900630+04:00</last-metadata-change-date>
+  <create-date>2008-09-12T12:43:28.3579960+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>42</y>
+  <open-on-startup>False</open-on-startup>
+</note>

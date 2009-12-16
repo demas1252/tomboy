@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Аннулирование счета на оплату</title>
+  <text xml:space="preserve"><note-content version="0.1">Аннулирование счета на оплату
+
+   Обновлять признак "Аннулировано" при обработке счета на оплату
+     
+      Configuration Key = gm_custInvoice4PaymCancel (Признак аннулировано для счета на оплату) (Parent Key = gm_general - общие решения)
+      
+      SalesParameters.GM_Invoice4PaymCancel
+      
+      SalesFormLetter_Invoice4Paym_RU.write_GM_CanceledFlag() - тут в случае активности конф ключа во всех CustInvoice4PaymJour_RU  (счетах на оплату) по данному заказу проставляется галка GM_Canceled.
+      
+      [author: anisimov]
+      &gt;&gt;  ну типа удаления счета, там галка какая-то есть в счета на оплату, то ли активно, то ли архив...
+короче когда второй счет разносишь предыдущий какбы считается удаленным
+      &gt;&gt; а при массовой печати потом будет браться только последний из разнесенных счетов по заказу
+      &gt;&gt; для массовой печати счетов это в общем
+
+</note-content></text>
+  <last-change-date>2008-03-28T22:06:59.0596920+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:06:59.0596920+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:06:57.4622670+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

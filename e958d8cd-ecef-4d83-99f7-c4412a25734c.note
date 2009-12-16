@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как сохранить пакеты, собранные yaourt</title>
+  <text xml:space="preserve"><note-content version="0.1">Как сохранить пакеты, собранные yaourt
+
+demas@demashost:~$ cat .yaourtrc 
+ExportToLocalRepository<link:url> /usr/local/docs/distrib/yaourt</link:url>
+</note-content></text>
+  <last-change-date>2008-11-29T23:05:38.3151939+03:00</last-change-date>
+  <last-metadata-change-date>2008-11-29T23:05:38.3151939+03:00</last-metadata-change-date>
+  <create-date>2008-11-29T23:05:16.5453330+03:00</create-date>
+  <cursor-position>73</cursor-position>
+  <width>564</width>
+  <height>447</height>
+  <x>66</x>
+  <y>341</y>
+  <open-on-startup>False</open-on-startup>
+</note>

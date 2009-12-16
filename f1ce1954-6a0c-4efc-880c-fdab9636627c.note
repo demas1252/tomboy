@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Бухгалтерская разноска по налогу</title>
+  <text xml:space="preserve"><note-content version="0.1">Бухгалтерская разноска по налогу
+
+<italic>Исходящий налог</italic> - уплата в бюджет при продаже
+<italic>Корр счет уплаты</italic> - корр счет к исходящему (если в настройках модуля стоит галка Фиксированная корреспонденция)
+<italic>Входящий налог</italic> - возмещаемый при покупке
+<italic>Оплата входящего налога</italic> - оплаченный входящий НДС (в параметрах галка - Оплата входящего НДС)
+<italic>Отложенный налог</italic> - для учета налогов в отложенном режиме
+<italic>Налог на использование</italic> -  корр счет для позмещаемого налога
+....
+Счет уплаты - задолженность перед налоговым органом, бебетуется при формировании платежа.</note-content></text>
+  <last-change-date>2009-06-20T20:42:48.7943740+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-20T20:42:48.7943740+04:00</last-metadata-change-date>
+  <create-date>2009-06-20T20:38:00.6855260+04:00</create-date>
+  <cursor-position>408</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>186</x>
+  <y>217</y>
+  <open-on-startup>False</open-on-startup>
+</note>

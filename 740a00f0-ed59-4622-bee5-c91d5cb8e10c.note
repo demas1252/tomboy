@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>GmailFS</title>
+  <text xml:space="preserve"><note-content version="0.1">GmailFS
+
+<link:internal>1</link:internal>. Нужны пакеты типа: fuse, gmailfs, fuse-<link:internal>python</link:internal>, <link:internal>python</link:internal>-libgmail
+2. Ищем файл gmailfs.py
+3. mount -t gmailfs<link:url> /usr/bin/gmailfs.py /path/of/mount/point</link:url> -o username=gmailuser, password=gmailpass, fsname=MYFS
+
+Если ругается так:
+    Ignored option :rw
+    HTTP Error 400: Bad Request
+То:
+    <link:internal>1</link:internal>. sudo <link:internal>apt-get</link:internal> install <link:internal>python</link:internal>-setuptools
+    2. sudo easy_install --upgrade libgmail
+    3. sudo nano<link:url> /etc/gmailfs/gmailfs.conf</link:url> (put in your info)
+    4. sudo<link:url> /usr/bin/mount.gmailfs</link:url> KraZyNameGMailFS<link:url> /media/gmailfs</link:url>
+
+Если туда не пускает - то заходить надо с помощью sudo.
+
+Как зайти под обычным пользователем я не нашел. :(
+Предлагают лечить так:
+    chmod 777<link:url> /mnt/g</link:url>
+    chown USERNAME:USERNAME<link:url> /mnt/g</link:url>
+но мне не помогло.
+    
+~~~~~~~~~~~~~
+
+sudo mount -t gmailfs<link:url> /usr/share/pycentral/gmailfs/site-packages/gmailfs.py /home/ademidov/mount_points/gmail</link:url> -o username=adem.store,password=staridstarid,fsname=MYFS
+
+    </note-content></text>
+  <last-change-date>2009-10-12T12:00:32.4337670+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.4337670+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:36:41.6174670+03:00</create-date>
+  <cursor-position>8</cursor-position>
+  <width>512</width>
+  <height>664</height>
+  <x>720</x>
+  <y>299</y>
+  <open-on-startup>False</open-on-startup>
+</note>

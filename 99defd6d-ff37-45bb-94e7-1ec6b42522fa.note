@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка Clojure в Ubuntu</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка Clojure в Ubuntu
+
+<link:url>http://riddell.us/tutorial/clojure/clojure.html</link:url>
+<link:url>http://riddell.us/tutorial/slime_swank/slime_swank.html</link:url>
+
+<bold>Install <link:internal>java</link:internal></bold><bold> &amp; ant</bold>
+
+sudo <link:internal>apt-get</link:internal> install openjdk-6-jdk ant <link:internal>subversion</link:internal> <link:internal>git</link:internal>-core
+
+<bold>Install <link:internal>clojure</link:internal></bold>
+
+<italic>~$ mkdir <link:url>~/opt</link:url></italic><italic>
+~$ cd <link:url>~/opt</link:url></italic><italic>
+~$ svn co <link:url>http://clojure.googlecode.com/svn/trunk</link:url></italic><italic> <link:internal>clojure</link:internal></italic><italic>
+~$ cd <link:internal>clojure</link:internal></italic><italic>
+~$ ant
+~$ mkdir <link:url>~/.clojure</link:url></italic><italic>
+~$ cp <link:internal>clojure</link:internal></italic><italic>.jar <link:url>~/.clojure</link:url></italic><italic>
+</italic>
+<bold><link:internal>Test</link:internal></bold><bold> <link:internal>clojure</link:internal></bold>
+
+<italic>~$ cd <link:url>~/.<link:internal>clojure</link:internal></link:url></italic><italic /><italic>
+~$ <link:internal>java</link:internal></italic><italic> -cp <link:internal>clojure</link:internal></italic><italic>.jar <link:internal>clojure</link:internal></italic><italic>.lang.Repl
+user=&gt; (+ 1 41)
+42
+</italic>
+<bold>Install <link:internal>Clojure</link:internal></bold><bold> contrib</bold>
+
+<italic>$ cd <link:url>~/opt</link:url></italic><italic>
+~$ <link:internal>git clone</link:internal></italic><italic> <link:internal>git</link:internal></italic><italic>:<link:url>//github.com/richhickey/clojure-contrib.git</link:url></italic><italic>
+~$ cd <link:internal>clojure</link:internal></italic><italic>-contrib
+~$ ant -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
+~$ cp *.jar <link:url>~/.clojure</link:url></italic><italic>
+</italic>
+<bold>Bash start-up script</bold>
+
+<italic>~$ nano <link:url>~/.bashrc</link:url></italic><italic>
+
+### Add the following lines to the bottom of .bashrc
+export <link:internal>CLOJURE</link:internal></italic><italic>_EXT=<link:url>~/.clojure</link:url></italic><italic>
+PATH=$PATH:<link:url>~/opt/clojure-contrib/launchers/bash</link:url></italic><italic>
+alias clj=clj-env-dir
+</italic>
+<bold><link:internal>Test</link:internal></bold><bold> script</bold>
+
+<italic>~$ clj
+
+### That should have started a REPL.
+### Now, verify the jars on the class path.
+user=&gt; (System/getProperty "<link:internal>java</link:internal></italic><italic>.class.path")
+### Both <link:internal>clojure</link:internal></italic><italic>.jar and <link:internal>clojure</link:internal></italic><italic>-contrib.jar should be present.
+</italic>
+<bold>Updating <link:internal>Clojure</link:internal></bold><bold> and <link:internal>clojure</link:internal></bold><bold>-contrib</bold>
+
+<italic>### Update <link:internal>clojure</link:internal></italic><italic>
+
+~$ cd <link:url>~/opt/<link:internal>clojure</link:internal></link:url></italic><italic /><italic>
+~$ svn update
+~$ ant
+~$ cp <link:internal>clojure</link:internal></italic><italic>.jar <link:url>~/.clojure</link:url></italic><italic>
+### Update <link:internal>clojure</link:internal></italic><italic>-config
+~$ cd <link:url>~/opt/clojure-config</link:url></italic><italic>
+~$ <link:internal>git</link:internal></italic><italic> pull
+~$ ant -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
+~$ cp *.jar <link:url>~/.clojure</link:url></italic><italic>
+</italic>
+<bold>Install <link:internal>clojure</link:internal></bold><bold>-mode</bold>
+
+<italic>~$ cd <link:url>~/opt</link:url></italic><italic>
+~$ <link:internal>git clone</link:internal></italic><italic> <link:internal>git</link:internal></italic><italic>:<link:url>//github.com/jochu/clojure-mode.git</link:url></italic><italic>
+</italic>
+<bold>Install Slime</bold>
+
+<italic>~$ cd <link:url>~/opt</link:url></italic><italic>
+~$ <link:internal>git clone</link:internal></italic><italic> <link:internal>git</link:internal></italic><italic>:<link:url>//git.boinkor.net/slime.git</link:url></italic><italic>
+</italic>
+<bold>Install swank-<link:internal>clojure</link:internal></bold>
+ 
+<italic>~$ cd <link:url>~/opt</link:url></italic><italic>
+~$ <link:internal>git clone</link:internal></italic><italic> <link:internal>git</link:internal></italic><italic>:<link:url>//<link:internal>github</link:internal></link:url></italic><italic><link:url>.com/jochu/swank-<link:internal>clojure</link:internal></link:url></italic><italic><link:url>.<link:internal>git</link:internal></link:url></italic><italic /><italic>
+</italic>
+<bold>Configure <link:internal>Emacs</link:internal></bold>
+
+;<italic>; <link:internal>clojure</link:internal></italic><italic>-mode
+(add-to-list 'load-path "<link:url>~/opt/<link:internal>clojure</link:internal></link:url></italic><italic><link:url>-mode</link:url></italic><italic>")
+(require '<link:internal>clojure</link:internal></italic><italic>-mode)
+
+;; swank-<link:internal>clojure</link:internal></italic><italic>
+(add-to-list 'load-path "<link:url>~/opt/swank-<link:internal>clojure</link:internal></link:url></italic><italic /><italic>")
+(require 'swank-<link:internal>clojure</link:internal></italic><italic>-autoload)
+(swank-<link:internal>clojure</link:internal></italic><italic>-config
+ (setq swank-<link:internal>clojure</link:internal></italic><italic>-jar-path "<link:url>~/.<link:internal>clojure</link:internal></link:url></italic><italic><link:url>/<link:internal>clojure</link:internal></link:url></italic><italic><link:url>.jar</link:url></italic><italic>")
+ (setq swank-<link:internal>clojure</link:internal></italic><italic>-extra-classpaths
+       (list "<link:url>~/.<link:internal>clojure</link:internal></link:url></italic><italic><link:url>/<link:internal>clojure</link:internal></link:url></italic><italic><link:url>-contrib.jar</link:url></italic><italic>")))
+
+;; slime
+(eval-after-load "slime"
+  '(progn (slime-setup '(slime-repl))))
+
+(add-to-list 'load-path "<link:url>~/opt/slime</link:url></italic><italic>")
+(require 'slime)
+(slime-setup)
+</italic></note-content></text>
+  <last-change-date>2009-10-17T19:47:21.2533520+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T19:47:21.2533520+04:00</last-metadata-change-date>
+  <create-date>2009-08-31T16:23:53.8286369+04:00</create-date>
+  <cursor-position>458</cursor-position>
+  <width>491</width>
+  <height>611</height>
+  <x>1136</x>
+  <y>299</y>
+  <open-on-startup>False</open-on-startup>
+</note>

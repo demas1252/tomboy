@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>hdparm</title>
+  <text xml:space="preserve"><note-content version="0.1">hdparm
+
+demas@demas-desktop:~$ sudo hdparm -t<link:url> /dev/sda</link:url>
+<link:url>
+/dev/sda</link:url>:
+ Timing buffered disk reads:  194 MB in  3.01 seconds =  64.47 MB/<link:internal>sec</link:internal><link:url>
+/dev/sdb</link:url>:
+ Timing buffered disk reads:  200 MB in  3.01 seconds =  66.54 MB/<link:internal>sec</link:internal><link:url>
+/dev/hdb</link:url>:
+ Timing buffered disk reads:  186 MB in  3.01 seconds =  61.77 MB/<link:internal>sec</link:internal>
+
+</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.4519530+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.4519530+04:00</last-metadata-change-date>
+  <create-date>2008-04-12T20:21:32.9556630+04:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>885</width>
+  <height>426</height>
+  <x>679</x>
+  <y>97</y>
+  <open-on-startup>False</open-on-startup>
+</note>

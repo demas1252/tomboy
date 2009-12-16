@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Динамически создавать выпадающий список</title>
+  <text xml:space="preserve"><note-content version="0.1">Динамически создавать выпадающий список
+
+
+_Sub Validation_from_Recordset()
+
+Dim cnn As New ADODB.Connection
+Dim rst As New ADODB.Recordset
+
+Dim myArray As Variant, i As Long, myStr As String
+
+
+
+    cnn.Open "Provider=Microsoft.Jet.OLEDB.4.0;" &amp; _
+      "Data Source=" &amp; ThisWorkbook.Path &amp; "\" &amp; "Исход.xls;" &amp; _
+      "Extended Properties=""<link:internal>Excel</link:internal> 8.0;HDR=No;IMEX=<link:internal>1</link:internal>"""
+    
+    rst.Open "SELECT F4 FROM [Лист<link:internal>1</link:internal>$]", cnn
+
+
+myArray = rst.GetRows
+
+For i = 0 To UBound(myArray, 2)
+ <link:internal>If</link:internal> myArray(0, i) &lt;&gt; "" Then myStr = myStr &amp; myArray(0, i) &amp; ","
+Next i
+myStr = Left(myStr, Len(myStr) - <link:internal>1</link:internal>)
+
+
+With ThisWorkbook.Sheets("Лист<link:internal>1</link:internal>").Range("H<link:internal>1</link:internal>").Validation
+    .Delete
+    .<link:internal>Add</link:internal> Type:=xlValidateList, _
+         AlertStyle:=xlValidAlertStop, _
+         Operator:=xlBetween, _
+         Formula<link:internal>1</link:internal>:=myStr
+End With
+
+myArray = ""
+myStr = ""
+rst.Close
+cnn.Close
+
+End Sub_</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5035760+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5035760+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:03:18.3977570+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

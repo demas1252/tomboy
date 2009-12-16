@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ограничение на ресурсы под определенные запросы/операции</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Ограничение на ресурсы под определенные запросы</link:internal>/операции
+
+Господа знатоки, есть такая задача, которую хотелось бы решить средствами Resource Manager:
+Пользователь выполняет запуск некоторых процедур, которые необходимо выполнять с пониженным приоритетом, т.к. их время выполнения не критично, а ресурсы они кушают сильно. Но полностью ограничивать приоритет пользователя средствами Resource Manager нельзя, т.к. у него есть другие задачи (менее трудоемкие с критичным временем выполнения). Т.е. хотелось бы отлавливать (идентифицировать) сессии в которых пользователь выполняет некоторые (известные) процедуры и понижать им приоритет, при этом остальные сессии этого пользователя должны работать с обычным приоритетом.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Database Administrator’s Guide
+
+Using the Database Resource Manager
+
+SWITCH_GROUP   
+Specifies consumer group to which this session is switched <link:internal>if</link:internal> <link:internal>other</link:internal> switch criteria is met.
+
+SWITCH_TIME 
+Specifies time (in seconds) that a session can execute before it is switched to <link:internal>another</link:internal> consumer group. 
+
+SWITCH_ESTIMATE
+<link:internal>If</link:internal> TRUE, tells <link:internal>Oracle</link:internal> to use its execution time estimate to automatically switch the consumer group of an operation prior to beginning its execution. Default is FALSE.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+посмотри на set_consumer_group_mapping</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.4733030+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.4733030+04:00</last-metadata-change-date>
+  <create-date>2008-04-07T14:20:45.4901070+04:00</create-date>
+  <cursor-position>779</cursor-position>
+  <width>920</width>
+  <height>745</height>
+  <x>469</x>
+  <y>50</y>
+  <open-on-startup>False</open-on-startup>
+</note>

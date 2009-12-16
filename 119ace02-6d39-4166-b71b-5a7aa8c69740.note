@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Closure</title>
+  <text xml:space="preserve"><note-content version="0.1">Closure
+
+Процедура, которая ссылается на свободные переменные в своем лексическом контексте.  Так же как и экземляр объекта - способ представления функциональности и данных, связанных вместе.
+
+Замыкание — это особый вид функции. Она определена в теле другой функции и создаётся каждый раз во время её выполнения. В записи это выглядит как функция, находящаяся целиком в теле другой функции. При этом вложенная внутренняя функция содержит ссылки на локальные переменные внешней функции. Каждый раз при выполнении внешней функции происходит создание нового экземпляра внутренней функции, с новыми ссылками на переменные внешней функции.
+
+<italic>(define (make-adder n)       ; возвращает замкнутое лямбда-выражение
+  (<link:internal>lambda</link:internal></italic><italic> (x)                ; в котором x - связанная переменная,
+    (+ x n)))                ; а n - свободная (захваченная из внешнего контекста)
+ 
+(define <link:internal>add</link:internal></italic><italic>1 (make-adder 1)) ; делаем процедуру для прибавления 1
+(<link:internal>add</link:internal></italic><italic>1 10)                    ; печатает 11
+ 
+(define sub1 (make-adder -1)); делаем процедуру для вычитания 1
+(sub1 10)                    ; печатает 9
+
+</italic><link:internal>Отличие замыканий от lambda-функций</link:internal>
+<link:internal>closures in python</link:internal><italic>
+</italic></note-content></text>
+  <last-change-date>2009-06-12T22:00:14.2544570+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-12T22:00:14.2544570+04:00</last-metadata-change-date>
+  <create-date>2008-10-20T22:38:43.2468290+04:00</create-date>
+  <cursor-position>1086</cursor-position>
+  <width>633</width>
+  <height>577</height>
+  <x>268</x>
+  <y>258</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Присвоение в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Присвоение в Ruby
+
+Можно делать вот такие вещи:
+
+a = (b = 1 + 2) + 3
+
+a -&gt; 6
+b -&gt; 3
+
+x, y = y, x
+
+<link:internal>Переопределение присвоения</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T21:33:40.7664870+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:33:40.7664870+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:33:17.3476450+03:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>91</y>
+  <open-on-startup>False</open-on-startup>
+</note>

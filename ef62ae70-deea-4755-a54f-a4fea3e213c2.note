@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Закачка данных в Excel через макрос</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Закачка данных в Excel</link:internal> через макрос
+
+  В <link:internal>excel</link:internal> создаем макрос:
+
+Sub fillFromTemp(F_in As String)
+
+Open F_in For Input As #1
+
+While Not EOF(1)
+Line Input #1, xSheet
+Line Input #1, xCell
+Line Input #1, xValue
+ThisWorkbook.Worksheets(CLng(xSheet)).Range(xCell) = xValue
+DoEvents
+Wend
+
+Close #1
+Kill F_in
+
+End Sub
+
+Из Аксапты все это дело дергается так:
+_excelDocument.getApp().run("fillFromTemp.fillFromTemp", _tempfile);</note-content></text>
+  <last-change-date>2009-10-12T12:00:40.6343870+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:40.6343870+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:59:46.1745568+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

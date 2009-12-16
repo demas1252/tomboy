@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Указать имя базы данных Sequel</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Указать имя базы данных</link:internal> Sequel
+
+<link:internal>DB</link:internal> = <link:internal>Sequel</link:internal>.connect('<link:internal>sqlite</link:internal>://some.<link:internal>db</link:internal>')</note-content></text>
+  <last-change-date>2009-10-12T12:00:19.5799270+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.5799270+04:00</last-metadata-change-date>
+  <create-date>2009-07-04T22:18:52.2515200+04:00</create-date>
+  <cursor-position>71</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>607</y>
+  <open-on-startup>False</open-on-startup>
+</note>

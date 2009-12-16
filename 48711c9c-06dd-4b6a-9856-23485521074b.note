@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>настройка slim</title>
+  <text xml:space="preserve"><note-content version="0.1">настройка slim
+
+1.
+
+# <link:internal>pacman</link:internal> -S slim slim-themes archlinux-themes-slim
+
+2. 
+<link:url>
+/etc/inittab</link:url>:
+
+x:5:respawn:/usr/bin/slim &gt;&amp;<link:url> /dev/null</link:url>
+
+3.<link:url> ~/.xinitrc</link:url>:
+
+demas@demashost:~$ cat .xinitrc 
+#!/bin/sh                       
+
+#
+#<link:url> ~/.xinitrc</link:url>
+#           
+# Executed by startx (run your window manager from here)
+#                                                       
+
+# exec <link:internal>gnome</link:internal>-session
+# exec startkde     
+# exec startxfce4   
+# exec icewm        
+# exec openbox      
+# exec blackbox     
+# exec fluxbox      
+# exec ratpoison    
+# exec dwm          
+# ... or any <link:internal>other</link:internal> WM of your choosing ..
+
+# The following variable defines the session which is started <link:internal>if</link:internal> the user doesn't explicitly select a session
+
+DEFAULT_SESSION=<link:internal>kde</link:internal>
+
+case $1 in
+<link:internal>kde</link:internal>)
+        exec startkde
+        ;;
+<link:internal>gnome</link:internal>)
+        exec <link:internal>gnome</link:internal>-session
+        ;;
+xfce4)
+        exec startxfce4
+        ;;
+icewm)
+        icewmbg &amp;
+        icewmtray &amp;
+        exec icewm
+        ;;
+wmaker)
+        exec wmaker
+        ;;
+blackbox)
+        exec blackbox
+        ;;
+*)
+        exec $DEFAULT_SESSION
+        ;;
+esac
+
+4. 
+
+# nano<link:url> /etc/slim.conf</link:url>
+
+current_theme       archlinux-soft-grey
+default_user          demas
+sessions                <link:internal>kde</link:internal>,<link:internal>gnome</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.2762430+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.2762430+04:00</last-metadata-change-date>
+  <create-date>2009-01-06T13:53:48.9103340+03:00</create-date>
+  <cursor-position>1181</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>916</x>
+  <y>195</y>
+  <open-on-startup>False</open-on-startup>
+</note>

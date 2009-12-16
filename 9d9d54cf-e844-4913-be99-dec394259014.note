@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>zip</title>
+  <text xml:space="preserve"><note-content version="0.1">zip
+
+Очень похоже на <link:internal>map</link:internal>():
+
+&gt;&gt;&gt; <link:internal>map</link:internal>(None, (1,2,3,4), [5,5,5])
+[(1, 5), (2, 5), (3, 5), (4, None)]
+
+&gt;&gt;&gt; zip((1,2,3,4), [5,5,5])
+[(1, 5), (2, 5), (3, 5)]</note-content></text>
+  <last-change-date>2008-03-28T21:22:52.7799250+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T21:22:52.7799250+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:08:33.4050280+03:00</create-date>
+  <cursor-position>107</cursor-position>
+  <width>508</width>
+  <height>360</height>
+  <x>1005</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

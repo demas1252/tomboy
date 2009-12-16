@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Нумерация строк в результатирующем запросе</title>
+  <text xml:space="preserve"><note-content version="0.1">Нумерация строк в результатирующем запросе
+
+ В 2005-м появилась аналитическая функция (row_number):
+     
+     _USE AdventureWorks
+     GO
+     SELECT <link:internal>c</link:internal>.FirstName, <link:internal>c</link:internal>.LastName, ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS 'Row Number', s.SalesYTD, a.PostalCode
+     FROM Sales.SalesPerson s JOIN Person.Contact <link:internal>c</link:internal> on s.SalesPersonID = <link:internal>c</link:internal>.ContactID
+     JOIN Person.Address a ON a.AddressID = <link:internal>c</link:internal>.ContactID
+     WHERE TerritoryID IS NOT NULL AND SalesYTD &lt;&gt; 0_
+</note-content></text>
+  <last-change-date>2008-05-11T09:08:30.9739290+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-11T09:08:30.9739290+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:54:28.6761340+03:00</create-date>
+  <cursor-position>71</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

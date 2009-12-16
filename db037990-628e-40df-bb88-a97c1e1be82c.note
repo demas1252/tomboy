@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переменные класса</title>
+  <text xml:space="preserve"><note-content version="0.1">Переменные класса
+
+<italic>class <link:internal>db</link:internal></italic><italic>_engine(object):
+
+      t = tuple() # это тоже переменная класса, но она не инициализируется (так нельзя)
+
+      def _init_(self, <link:internal>db</link:internal></italic><italic>_string, deploy_<link:internal>db</link:internal></italic><italic>):
+            self.<link:internal>db</link:internal></italic><italic>_string = <link:internal>db</link:internal></italic><italic>_string
+            <link:internal>if</link:internal></italic><italic> (deploy_<link:internal>db</link:internal></italic><italic> == 'deploy'):
+                  self.initialize()
+      def initialize(self):
+            self.engine = create_engine(self.<link:internal>db</link:internal></italic><italic>_string); # class atribute</italic>
+
+Еще, вместо:
+
+<italic>&gt;&gt;&gt; class C(object):
+...     def __init__(self):
+...         self.a = 1
+...         self.b = 2
+</italic>
+можно делать так:
+
+<italic>&gt;&gt;&gt; class D(object):
+...     @property
+...     def a(self):
+...         <link:internal>if</link:internal></italic><italic> not hasattr(self, 'a'):
+...             self.a  =1
+...         return self.a
+</italic>
+Просто таким образом можно очистить <italic>__init__()</italic> для вещей, которые несут смысловую нагрузку.</note-content></text>
+  <last-change-date>2009-10-17T22:10:58.2010450+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.2010450+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:05:38.0444000+03:00</create-date>
+  <cursor-position>527</cursor-position>
+  <width>692</width>
+  <height>556</height>
+  <x>6</x>
+  <y>48</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Опимизация производительности книжек</title>
+  <text xml:space="preserve"><note-content version="0.1">Опимизация производительности книжек
+
+<bold>Оптимизация обработки входящего</bold>
+
+При обработке входящего НДС галку 'Полная проверка' ставить не надо!  Данная галка запускает очень ресурсоемкую операцию проверка фактур, попадающих в переходный период (фактически идет перебор всех фактур). 
+
+По идее, можно отключить функциональный ключ "Переходный период" и эта галка исчезнет с формы.  Правда надо не забыть после этого почистить кеш пользователей.  Для Valio мы с Колей внесли исправления в код, позволяющие не запускать эту проверку при отключенном функ. ключе и неочищенном кеше.
+
+BookDataCalc_Purch_Process_Ru.validate()
+</note-content></text>
+  <last-change-date>2009-07-28T14:19:33.3818860+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-28T14:19:33.3818860+04:00</last-metadata-change-date>
+  <create-date>2009-07-28T09:48:33.3241880+04:00</create-date>
+  <cursor-position>625</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>678</x>
+  <y>414</y>
+  <open-on-startup>False</open-on-startup>
+</note>

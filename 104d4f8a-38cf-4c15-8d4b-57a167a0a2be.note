@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>ls -l</title>
+  <text xml:space="preserve"><note-content version="0.1">ls -l
+
+-rw-r--r--  <link:internal>1</link:internal> demas demas      22528 2008-03-19 21:44 <link:internal>test</link:internal>_<link:internal>db</link:internal>.<link:internal>db</link:internal>
+
+<list><list-item dir="ltr">- type (- regular file, d - directory, s - symbolic link, p - named pipe)
+</list-item><list-item dir="ltr">rw... - permissions
+</list-item><list-item dir="ltr"><link:internal>1</link:internal> - link count
+</list-item><list-item dir="ltr">user
+</list-item><list-item dir="ltr">group
+</list-item><list-item dir="ltr">size
+</list-item><list-item dir="ltr">last modification
+</list-item><list-item dir="ltr">name</list-item></list></note-content></text>
+  <last-change-date>2009-10-12T12:00:17.3143690+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.3143690+04:00</last-metadata-change-date>
+  <create-date>2008-04-28T21:06:08.9760640+04:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>343</x>
+  <y>490</y>
+  <open-on-startup>False</open-on-startup>
+</note>

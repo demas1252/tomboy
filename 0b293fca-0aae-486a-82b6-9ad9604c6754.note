@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка исключений в TSQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка исключений в TSQL
+
+<list><list-item dir="ltr">@@ERROR
+</list-item><list-item dir="ltr">TRY-CATCH block</list-item></list>
+
+@ERROR глобальная переменная куда пишется сообщение о предыдущей ошибке.
+
+create table t(
+	roll int,
+	name varchar(20),
+	address varchar(20))
+	
+begin try
+	insert into t values('a', 'b', 'c')
+end try
+begin catch
+	select 'There was error: ' + ERROR_MESSAGE()
+end catch</note-content></text>
+  <last-change-date>2009-08-02T06:51:42.4741100+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-02T06:51:42.4741100+04:00</last-metadata-change-date>
+  <create-date>2009-08-02T06:44:43.4935450+04:00</create-date>
+  <cursor-position>129</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>902</x>
+  <y>355</y>
+  <open-on-startup>False</open-on-startup>
+</note>

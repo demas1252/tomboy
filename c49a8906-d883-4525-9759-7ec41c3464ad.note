@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Gnus</title>
+  <text xml:space="preserve"><note-content version="0.1">Gnus
+
+<bold>mail</bold>
+
+Для почты <link:internal>pacman</link:internal> -S gnutls 
+
+<bold>Адресная книга</bold>
+
+yaourt -S bbdb
+
+<bold>rss
+
+
+
+<link:internal>cron</link:internal></bold><bold>
+
+</bold><italic>* * * * * fetchmail -akv -m "/usr/bin/procmail -d %T"
+*/15 * * * *<link:url> /home/demas/.<link:internal>cron</link:internal></link:url></italic><italic><link:url>/rss_15m.sh</link:url></italic><italic>
+10 * * * *<link:url> /home/demas/.<link:internal>cron</link:internal></link:url></italic><italic><link:url>/rss_1h.sh</link:url></italic><italic>
+20 */2 * * *<link:url> /home/demas/.<link:internal>cron</link:internal></link:url></italic><italic><link:url>/rss_2h.sh</link:url></italic><italic>
+</italic><bold>
+</bold></note-content></text>
+  <last-change-date>2009-10-12T12:00:17.9815700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.9815700+04:00</last-metadata-change-date>
+  <create-date>2009-01-17T14:57:40.4811620+03:00</create-date>
+  <cursor-position>71</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1122</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

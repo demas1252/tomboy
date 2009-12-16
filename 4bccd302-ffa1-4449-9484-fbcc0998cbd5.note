@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Синхронизация двух потоков в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Синхронизация двух потоков в Python
+
+import time
+import thread
+
+def myfunction(string,sleeptime,lock,*<link:internal>args</link:internal>):
+   while <link:internal>1</link:internal>:
+      lock.acquire()
+      print string, " Now Sleeping after Lock acquired for ", sleeptime
+      time.sleep(sleeptime)
+      print string," Now releasing lock and then sleeping again"
+      lock.release()
+      time.sleep(sleeptime)
+
+<link:internal>if</link:internal> __name__=="__main__":
+   lock=thread.allocate_lock()
+   thread.start_new_thread(myfunction,("Thread No:<link:internal>1</link:internal>",2,lock))
+   thread.start_new_thread(myfunction,("Thread No:2",2,lock))
+
+   while <link:internal>1</link:internal>:
+      <link:internal>pass</link:internal>
+      </note-content></text>
+  <last-change-date>2009-10-12T12:00:32.4641810+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:32.4641810+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:12:26.3494600+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

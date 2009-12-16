@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Binary Search in Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Binary Search</link:internal> in Scheme
+
+&lt;&lt;pre
+(define TOLERANCE 0.<link:internal>1</link:internal>)
+
+(define (<link:internal>find</link:internal>-root f left right)
+    (cond
+        [(&lt;= (- right left) TOLERANCE) left]
+        [else
+            (local ((define mid (/ (+ left right) 2 )))
+            (cond
+                 [(&lt;= (f mid) 0 (f right))
+                    (<link:internal>find</link:internal>-root f mid right)]
+                 [else
+                    (<link:internal>find</link:internal>-root f left mid)]
+        ))]))
+
+(define (f x) (- (* x x) (* 7 x)))
+
+&gt;&gt;
+
+Пример:
+&lt;&lt;pre 
+&gt; (<link:internal>find</link:internal>-root f -100 100)
+6.93359375
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.7242530+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.7242530+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:04:17.3296750+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>597</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

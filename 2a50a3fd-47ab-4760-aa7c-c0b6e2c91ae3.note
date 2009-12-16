@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>toString для list</title>
+  <text xml:space="preserve"><note-content version="0.1">toString для list
+
+__repr__
+
+class myClass:
+def __init_(self, a, b):
+
+      self.a = a
+      self.b = b
+
+      def _str_(self):
+            return "&lt;%s:%s&gt;" % (self.a, self.b)
+      def _repr_(self):
+            return self._str_()
+
+a = myClass(1,2)
+b = myClass(3,4)
+print a
+print b
+
+<link:internal>c</link:internal>=[]
+<link:internal>c</link:internal>.append(a)
+<link:internal>c</link:internal>.append(b)
+print <link:internal>c</link:internal>_</note-content></text>
+  <last-change-date>2008-03-28T13:12:53.3583519+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T13:12:53.3583519+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:12:52.0795530+03:00</create-date>
+  <cursor-position>46</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

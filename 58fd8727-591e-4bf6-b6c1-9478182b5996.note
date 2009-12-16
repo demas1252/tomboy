@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Быстрый поиск по словарю</title>
+  <text xml:space="preserve"><note-content version="0.1">Быстрый поиск по словарю
+
+Когда мы делаем так:
+
+<italic><link:internal>if</link:internal></italic><italic>  data.has_key(key):
+   value = data[key]</italic>
+
+мы сканируем словарь дважды.
+
+Этого можно избежать либо с помощью исключений:
+
+<italic>try:
+    value = data[key]
+except KeyError:
+    print "No such key"
+else:
+    print "The value for that key is", value</italic>
+
+либо с помощь. .get():
+
+   <italic>value = data.get(key, None) </italic></note-content></text>
+  <last-change-date>2009-06-29T09:08:53.5076970+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T09:08:53.5076970+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T09:07:02.0690450+04:00</create-date>
+  <cursor-position>347</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>724</x>
+  <y>503</y>
+  <open-on-startup>False</open-on-startup>
+</note>

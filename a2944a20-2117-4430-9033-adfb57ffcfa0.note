@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Для чего нужно undo</title>
+  <text xml:space="preserve"><note-content version="0.1">Для чего нужно undo
+
+
+1. *Transaction rollback* - когда транзакция модифицирует запись, старые значения модифицированных столбцов сохраняются в undo.  Если транзакция будет откачена, то данные буу востановлены из undo.
+2. *Transaction recovery* - если сервер упадет, то в момент восстановления он сможет откаить неподтвержденные транзакции.  Это возможно благодаря тому, что undo защищено redo log-ми.
+3. *Read consistency* - пока транзакция не завершена другие пользователи недолжны видеть неподтвержденные данные.  Не изменненные значения они могут взять из undo. Когда начинается транзакция <link:internal>Oracle</link:internal> запоминает текущий system change number (SCN) и гарантирует, что любые изменения не подтвержденные до этого SCN не будут видны данной транзакции.</note-content></text>
+  <last-change-date>2009-10-17T22:11:00.2674920+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:11:00.2674920+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:19:21.6485760+03:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировать список по своей функции в Python</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировать список по своей функции в Python
+
+&gt;&gt;&gt; a = [(u'we', 'PRP'), (u'saw', 'VBD'), (u'you', 'PRP'), (u'bruh', 'VBP'), (u'.', '.')]
+&gt;&gt;&gt; import operator
+&gt;&gt;&gt; a.sort(key = operator.itemgetter(1))
+&gt;&gt;&gt; a
+[(u'.', '.'), (u'we', 'PRP'), (u'you', 'PRP'), (u'saw', 'VBD'), (u'bruh', 'VBP')]</note-content></text>
+  <last-change-date>2009-11-23T17:08:21.6212980+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-23T17:08:21.6212980+03:00</last-metadata-change-date>
+  <create-date>2009-11-23T17:08:04.8470650+03:00</create-date>
+  <cursor-position>79</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с пакетами</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с пакетами
+
+<link:internal>Debian Package Manager</link:internal>
+<link:internal>YaST</link:internal>
+<link:internal>Pacman</link:internal>
+<link:internal>Mandrake Package Manager</link:internal>
+<link:internal>Yum</link:internal>
+
+ldd &lt;<link:broken>some</link:broken>_binary&gt; - покажет с какими библиотеками слинкован бинарник -&gt; они и пропишутся в Depends пакета.
+
+Дла <link:internal>python</link:internal> библиотек это не работает и их нужно прописывать ручками.
+
+<link:internal>Lintian</link:internal>
+<link:internal>Dch</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:30.8065880+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:30.8065880+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:34:06.9905200+03:00</create-date>
+  <cursor-position>211</cursor-position>
+  <width>450</width>
+  <height>367</height>
+  <x>868</x>
+  <y>172</y>
+  <tags>
+    <tag>system:notebook:Linux</tag>
+  </tags>
+  <open-on-startup>False</open-on-startup>
+</note>

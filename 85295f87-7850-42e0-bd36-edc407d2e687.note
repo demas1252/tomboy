@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>FOREIGN KEY для древовидного справочника на родителя</title>
+  <text xml:space="preserve"><note-content version="0.1">FOREIGN KEY для древовидного справочника на родителя
+
+
+Создаю таблицу
+
+_CREATE TABLE a(	id int NOT NULL,	parent int NOT NULL,	PRIMARY KEY (id))_
+
+Пытаюсь создать внешний ключ 
+
+_ALTER TABLE a <link:internal>add</link:internal> constraint FK_a FOREIGN KEY (parent) REFERENCES a (id) on delete cascade;_
+
+Получаю следующее сообщение
+_Msg 1785, Level 16, State 0, Line <link:internal>1</link:internal>
+Introducing FOREIGN KEY constraint 'FK_a' on table 'a' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify <link:internal>other</link:internal> FOREIGN KEY constraints._
+
+Получается что автоматическое удаление дочерних никак? 
+Только ON DELETE NO ACTION?
+И добалять тригер на удаление в котором удалять дочерние?
+
+---
+
+Декларативно - никак.
+Написать хп, которая бы получала (циклом) список удаляемый + дочерний и удаляла их. </note-content></text>
+  <last-change-date>2009-04-25T18:32:31.8222990+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:31.8222990+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:52:58.8550720+03:00</create-date>
+  <cursor-position>81</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

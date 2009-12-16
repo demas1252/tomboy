@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Increment and decrement</title>
+  <text xml:space="preserve"><note-content version="0.1">Increment and decrement
+
+n = 5;
+x = n++;
+-&gt; n=6; x=5;
+
+n = 5;
+x = ++n;
+-&gt; n=6; x=6;
+
+Интересный пример на эту тему - удалить из строки определенный символ:
+&lt;&lt;pre
+void squeeze(char s[], int <link:internal>c</link:internal>)
+{
+  int i, j;
+  
+  for(i=j=0; s[i] != '\0'; i++)
+        <link:internal>if</link:internal> (s[i] != <link:internal>c</link:internal>)
+             s[j++] = s[i];
+    s[j] = '\0';
+}    
+
+&gt;&gt;
+
+То есть,  это эквиваленно:
+&lt;&lt;pre
+<link:internal>if</link:internal> (s[i] != <link:internal>c</link:internal>) {
+    s[j] = s[i];
+    j++;
+}    
+&gt;&gt;
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.9901110+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.9901110+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:16:22.7705070+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

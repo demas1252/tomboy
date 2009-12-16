@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проверить что скрипт уже работает</title>
+  <text xml:space="preserve"><note-content version="0.1">Проверить что скрипт уже работает
+
+<italic>#!/bin/sh
+<link:internal>if</link:internal></italic><italic> [ -x<link:url> /var/run/myfile.pid</link:url></italic><italic> ];then
+echo "AAAAAAAAAA!"
+exit -1
+fi
+echo $$&gt;/var/run/myfile.pid
+</italic>
+
+<italic>#!/bin/bash
+PROG="script.sh"
+PR="$(ps -ef |grep -<link:broken>c</link:broken></italic><italic> $PROG)"
+<link:internal>if</link:internal></italic><italic> [ $PR -ne "1" ]; then
+echo "`date` - still running previous instance" 
+exit
+fi</italic></note-content></text>
+  <last-change-date>2009-02-07T15:39:20.1404900+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:20.1404900+03:00</last-metadata-change-date>
+  <create-date>2009-01-29T22:05:08.7829359+03:00</create-date>
+  <cursor-position>280</cursor-position>
+  <width>1170</width>
+  <height>587</height>
+  <x>500</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CherryPy</title>
+  <text xml:space="preserve"><note-content version="0.1">CherryPy
+
+<link:internal>Простейший пример на CherryPY</link:internal>
+<link:internal>Пример посложнее на CherryPy</link:internal>
+<link:internal>Передача параметра в метод (cherrypy)</link:internal></note-content></text>
+  <last-change-date>2009-04-05T15:41:28.2296970+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-05T15:41:28.2296970+04:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:23:12.9380030+03:00</create-date>
+  <cursor-position>106</cursor-position>
+  <width>506</width>
+  <height>360</height>
+  <x>720</x>
+  <y>465</y>
+  <open-on-startup>False</open-on-startup>
+</note>

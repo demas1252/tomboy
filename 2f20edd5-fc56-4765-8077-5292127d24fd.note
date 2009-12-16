@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Програмная обработка накладной с одной строкой из одного заказа</title>
+  <text xml:space="preserve"><note-content version="0.1">Програмная обработка накладной с одной строкой из одного заказа
+
+
+<link:url>http://www.axforum.info/forums/showthread.php?p=146920#post146920</link:url>
+
+void createInvoice(
+                        transDate       _invoiceDate,
+                        Num             _numberInvoice  = "",
+                        SalesUpdate     _SalesUpdate = SalesUpdate::All
+                      )
+{
+    SalesFormLetter_Facture_RU      salesFormLetter;
+    int                                             parmEnum    = DocumentStatus::Invoice;
+    SalesParmTable                         xSalesParmTable;
+    SalesParmLine                           xSalesParmLine;
+    num                                          _NumInvoice;
+    salesTable                                updSalesTable;
+;
+
+    ttsbegin;
+
+    salesFormLetter = SalesFormLetter::construct(parmEnum);
+
+    SalesFormLetter.multiForm(true);
+
+    SalesFormLetter.specQty(_SalesUpdate);
+
+    <link:internal>if</link:internal> (_numberInvoice)
+    {
+        SalesFormLetter.setNumAndVoucher(_numberInvoice);
+    }
+
+    SalesFormLetter.printFormLetter(false);     //printInvoice
+
+    <link:internal>if</link:internal> (parmEnum    == DocumentStatus::Facture_RU)
+        SalesFormLetter.parmPrintFacture_RU(false);  //printFacture
+
+    SalesFormLetter.update( salesTable,
+                            _invoiceDate,//systemdateGet(),
+                            SalesUpdate::DeliverNow,
+                            AccountOrder::Auto,
+                            NoYes::No,
+                            NoYes::No,
+                            _numberInvoice
+                            );
+
+
+    ttscommit;
+
+}</note-content></text>
+  <last-change-date>2009-10-17T22:10:52.2120660+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:52.2120660+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:37:07.4195320+03:00</create-date>
+  <cursor-position>92</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>222</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

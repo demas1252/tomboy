@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Observer</title>
+  <text xml:space="preserve"><note-content version="0.1">Observer
+
+Известен также как "издатель-подписчик" (publisher-subscriber).
+
+<bold>Назначение</bold>
+
+Определяет зависимость типа "один-ко-многим" между объектами таким образом, что при изменении состояния одного объекта все зависящие от него оповещаются об этом событии.
+
+<bold>Участники</bold>
+
+Subject - интерфейс для регистрации наблюдателей. Содержит три метода - attach(), detach() и notify().
+ConcreteSubject - класс, хранящий то, что представляет интерес для наблюдателей.
+Oserver - интерфейс для наблюдателей. Содержит метод update() - то, что вызовется при наступлении события у каждого наблюдателя.
+ConcreteObserver
+
+<link:internal>Реализация Observer на Python</link:internal>
+<link:internal>Реализация Observer на Ruby</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T22:00:50.0401550+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T22:00:50.0401550+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:00:12.2611780+03:00</create-date>
+  <cursor-position>630</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

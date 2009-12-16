@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>VirtualBox в Fedora</title>
+  <text xml:space="preserve"><note-content version="0.1">VirtualBox в Fedora
+
+1. С сайта VirtualBox забираем самую последнюю rpm.
+2. <link:internal>yum</link:internal> install make automake autoconf <link:internal>gcc</link:internal> <link:internal>kernel</link:internal>-devel dkms
+3. rpm -ivh VirtualBox-2.2.4_47978_<link:internal>fedora</link:internal>11-1.i586.rpm
+4. <link:url>/etc/init.d/vboxdrv</link:url> setup
+5. usermod -G vboxusers -a username</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.3302990+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.3302990+04:00</last-metadata-change-date>
+  <create-date>2009-09-26T22:09:44.3369040+04:00</create-date>
+  <cursor-position>252</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>21</x>
+  <y>349</y>
+  <open-on-startup>False</open-on-startup>
+</note>

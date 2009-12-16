@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Arch - видеокарта для ноута</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Arch</link:internal> - видеокарта для ноута
+
+Судя по описанию моего ноута <link:url>http://www.thinkwiki.org/wiki/Category:Z60m</link:url> на нем вот такая <link:url>http://www.thinkwiki.org/wiki/Intel_Graphics_Media_Accelerator_900</link:url> видеокарта и нужно использовать вот такой (i810) видеодрайвер.
+
+<link:internal>pacman</link:internal> -S xf86-<link:internal>video</link:internal>-i810
+
+# xf86-<link:internal>video</link:internal>-i810 Intel i810/i830/i9xx <link:internal>video</link:internal> drivers (deprecated - use -intel)
+# xf86-<link:internal>video</link:internal>-intel Newer Version of Intel i810/i830/i9xx <link:internal>video</link:internal> drivers </note-content></text>
+  <last-change-date>2009-10-12T12:00:35.2428170+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.2428170+04:00</last-metadata-change-date>
+  <create-date>2008-11-24T12:20:29.2318010+03:00</create-date>
+  <cursor-position>427</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

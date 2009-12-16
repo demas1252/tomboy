@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Включить кеширование для репозиториев Suse</title>
+  <text xml:space="preserve"><note-content version="0.1">Включить кеширование для репозиториев Suse
+
+<link:internal>zypper</link:internal> mr -k -a
+<link:url>/var/cache/zypp/packages/&lt;alias</link:url>&gt;/</note-content></text>
+  <last-change-date>2009-09-16T21:24:44.3578880+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-16T21:24:44.3578880+04:00</last-metadata-change-date>
+  <create-date>2009-09-16T21:24:07.1122560+04:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>9</x>
+  <y>97</y>
+  <open-on-startup>False</open-on-startup>
+</note>

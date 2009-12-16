@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Почему не получается осуществить сопоставление по подотчетникам</title>
+  <text xml:space="preserve"><note-content version="0.1">Почему не получается осуществить сопоставление по подотчетникам
+
+Не  проходит сопоставление между накладной  и кредит-нотой  по  подотчетному  лицу  из-за того что  накладная  включена  в авансовый отчет.
+
+В  пододобной ситуации  исключают  накладную из авансового  отчета,  затем  проводят  сопоставление накладной и кредит-ноты  и  таким образом получается,  что в АО  включать  нечего т.к  накладная  сторнирована (  дата накладной и кредит-ноты  совпадают).</note-content></text>
+  <last-change-date>2009-11-19T16:34:21.6150390+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-19T16:34:21.6150390+03:00</last-metadata-change-date>
+  <create-date>2009-11-19T16:33:51.4425690+03:00</create-date>
+  <cursor-position>409</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

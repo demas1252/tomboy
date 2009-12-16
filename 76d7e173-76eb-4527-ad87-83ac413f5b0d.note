@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BookDataCalc_Purch_Process_Ru.qrBlockedFactures()</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>BookDataCalc_Purch_Process_Ru.qrBlockedFactures</link:internal>()
+
+Здесь обрабатываются FactureJour_Ru у которых 
+	FactureModule_Ru = Vend, Empl, TaxCorrectionPurch, TaxCorrectionPurch_Cust, 
+
+Здесь мы ничего не джойним, а просто накладываем <link:internal>фильтры</link:internal> на саму FactureJour_Ru.
+
+FactureJour_RU
+	PurchBookVATProcessLogTrans_RU (exist)  
+		<link:internal>PurchBookVATProcessLogTransOper_RU</link:internal> (exist) (# .Blocked=Yes, CanceledRefRecd=0, TransDate=..toDate)</note-content></text>
+  <last-change-date>2009-08-09T21:35:13.4362950+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T21:35:13.4362950+04:00</last-metadata-change-date>
+  <create-date>2009-01-23T22:59:54.3935630+03:00</create-date>
+  <cursor-position>376</cursor-position>
+  <width>688</width>
+  <height>318</height>
+  <x>955</x>
+  <y>636</y>
+  <open-on-startup>False</open-on-startup>
+</note>

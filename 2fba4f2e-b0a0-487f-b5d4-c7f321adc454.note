@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Своя агрегатная функция Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Своя агрегатная функция Oracle
+
+<bold>Краткое описание</bold>
+
+Интерфейс <italic>ODCIAggregate</italic> имеет 4 метода:
+<list><list-item dir="ltr"><italic>Initialize</italic>. Данный метод выполняет определенные действия перед началом вычислений.
+</list-item><list-item dir="ltr"><italic>Iterate</italic>. Собственно метод, выполняющий операцию над очередным значением из массива.
+</list-item><list-item dir="ltr"><italic>Merge</italic>. Метод, необходимый в случае распараллеливания выполнения расчета, когда весь массив бьется на части, а потом расчитанные по отдельности они объединяются. Так вот этот метод выполняет объединение пары результатов.
+</list-item><list-item dir="ltr"><italic>Terminate</italic>. Метод, заканчивающий расчеты и выдающий результат.</list-item></list>
+
+<bold>Демонстрация</bold>
+
+<link:internal>1</link:internal>. Создаем тип:
+
+create type MultiImpl as object
+(
+  multires NUMBER,  -- Результат
+  static function ODCIAggregateInitialize(sctx IN OUT MultiImpl)    return number,
+  member function ODCIAggregateIterate(self IN OUT MultiImpl, value IN number) return number,
+  member function ODCIAggregateTerminate(self IN MultiImpl,  returnValue OUT number, flags IN number) return number,
+  member function ODCIAggregateMerge(self IN OUT MultiImpl, ctx2 IN MultiImpl) return number
+);
+
+2. Тело типа:
+
+create or replace type body MultiImpl is
+
+static function ODCIAggregateInitialize(sctx IN OUT MultiImpl)
+return number is
+begin
+  sctx := MultiImpl(<link:internal>1</link:internal>);
+  return ODCIConst.Success;
+end;
+
+member function ODCIAggregateIterate(self IN OUT MultiImpl, value IN number)
+return number is
+begin
+  <link:internal>if</link:internal> value is not NULL then 
+    self.multires := self.multires*value; 
+  end <link:internal>if</link:internal>;
+  return ODCIConst.Success;
+end;
+
+member function ODCIAggregateTerminate(self IN MultiImpl, returnValue OUT
+number, flags IN number) return number is
+begin
+  returnValue := self.multires;
+  return ODCIConst.Success;
+end;
+
+-- Распараллеливание - просто перемножаем результаты
+member function ODCIAggregateMerge(self IN OUT MultiImpl, ctx2 IN MultiImpl) return number IS
+begin
+  self.multires := self.multires*ctx2.multires;
+  return ODCIConst.Success;
+end;
+end;
+
+3. Создаем функцию:
+
+CREATE FUNCTION Multi (input NUMBER) RETURN NUMBER
+PARALLEL_ENABLE AGGREGATE USING MultiImpl;
+
+4. Проверяем:
+
+create table multi_<link:internal>test</link:internal>(
+val integer
+)
+
+insert into multi_<link:internal>test</link:internal> values(2)
+insert into multi_<link:internal>test</link:internal> values(3)
+insert into multi_<link:internal>test</link:internal> values(4)
+
+select * from multi_<link:internal>test</link:internal>
+
+select Multi(val) from multi_<link:internal>test</link:internal>
+
+----
+24
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.2236260+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.2236260+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T13:45:51.1080980+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>923</width>
+  <height>702</height>
+  <x>4</x>
+  <y>75</y>
+  <open-on-startup>False</open-on-startup>
+</note>

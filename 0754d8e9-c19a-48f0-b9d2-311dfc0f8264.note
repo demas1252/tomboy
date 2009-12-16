@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>apt-cache</title>
+  <text xml:space="preserve"><note-content version="0.1">apt-cache
+
+<link:internal>apt</link:internal>-cache search &lt;ключ слова&gt; - ищет по ключевым словам
+<link:internal>apt</link:internal>-cache show &lt;пакет&gt; - описание пакета
+<link:internal>apt</link:internal>-cache depends &lt;пакет&gt; - показывает зависимости
+
+<bold>Построение графа зависимостей</bold>
+
+<link:internal>apt</link:internal>-cache dotty &lt;пакет&gt; &gt; file.dot
+dot -Tps -o file.eps file.dot
+</note-content></text>
+  <last-change-date>2009-08-31T14:33:45.8326540+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-31T14:33:45.8326540+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T23:50:40.4524740+04:00</create-date>
+  <cursor-position>10</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1212</x>
+  <y>95</y>
+  <open-on-startup>False</open-on-startup>
+</note>

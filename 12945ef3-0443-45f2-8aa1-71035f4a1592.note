@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Информация о привелегиях</title>
+  <text xml:space="preserve"><note-content version="0.1">Информация о привелегиях
+
+
+DBA_SYS_PRIVS
+SESSION_PRIVS
+DBA_TAB_PRIVS
+DBA_COL_PRIVS
+</note-content></text>
+  <last-change-date>2008-03-29T06:41:55.0038290+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:41:55.0038290+03:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:41:52.9277620+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

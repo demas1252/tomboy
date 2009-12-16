@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">SQL
+
+<link:internal>SQL задача 1</link:internal>
+<link:internal>Удаление дублирующихся записей</link:internal>
+<link:internal>Sql задача 2 - проверка персонального состава организаций</link:internal>
+<link:internal>Агрегирование произведением</link:internal>
+<link:internal>Sql задача 3</link:internal>
+<link:internal>Кореллированные запросы</link:internal>
+<link:internal>Вычисление расстояния между точками</link:internal></note-content></text>
+  <last-change-date>2009-09-20T14:10:00.3354280+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-20T14:10:00.3354280+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:00:02.1641680+03:00</create-date>
+  <cursor-position>207</cursor-position>
+  <width>467</width>
+  <height>710</height>
+  <x>1062</x>
+  <y>300</y>
+  <open-on-startup>False</open-on-startup>
+</note>

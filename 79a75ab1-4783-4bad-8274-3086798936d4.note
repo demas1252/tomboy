@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Факториал на sheme</title>
+  <text xml:space="preserve"><note-content version="0.1">Факториал на sheme
+
+
+Рекурсия:
+&lt;&lt;pre
+     (define (factorial n)
+        (<link:internal>if</link:internal> (= n 0)
+            <link:internal>1</link:internal>
+            (* n (factorial (- n <link:internal>1</link:internal>)))))
+            
+&gt;&gt;
+
+Здесь([<link:internal>Natural numbers</link:internal>]) есть чуть другой вариант.
+    
+Итератор:
+&lt;&lt;pre
+     (define (fact-iter result counter)(
+        (<link:internal>if</link:internal> (= counter 0)
+            result
+            (fact-iter (* counter result)
+                       (- counter <link:internal>1</link:internal>))))
+     (define (factorial n) (fact-iter <link:internal>1</link:internal> n))
+&gt;&gt;
+
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.3921970+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.3921970+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:03:38.7132980+03:00</create-date>
+  <cursor-position>266</cursor-position>
+  <width>616</width>
+  <height>534</height>
+  <x>725</x>
+  <y>302</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Updating variables indirectly</title>
+  <text xml:space="preserve"><note-content version="0.1">Updating variables indirectly
+
+==============================================================================
+TOPIC: Updating variables indirectly
+<link:url>http://groups.google.com/group/comp.lang.<link:internal>python</link:internal></link:url><link:url>/browse_thread/thread/48bfc94919be56ae</link:url>
+==============================================================================
+
+== <link:internal>1</link:internal> of <link:internal>1</link:internal> ==
+Date: Tues, <link:internal>Dec</link:internal> 12 2006 10:08 am
+From: Dennis Lee Bieber
+
+
+On Tue, 12 <link:internal>Dec</link:internal> 2006 09:19:00 -0500, Tommy Grav &lt;<link:url>tgrav@<link:internal>mac</link:internal></link:url><link:url>.com</link:url>&gt; declaimed
+the following in gmane.comp.<link:internal>python</link:internal>.general:
+
+&gt; I have a little problem that look something like this:
+&gt;
+
+      Assignment in <link:internal>Python</link:internal> is not like assignment in practically all <link:internal>other</link:internal>
+
+languages. Most languages, the variable does not change, but the memory
+contents the variable represents (points to) is changed. In <link:internal>Python</link:internal>, the
+memory contents does not change (unless garbage collected), but rather
+the variable changes to point to a new object.
+
+&gt; ...
+&gt; &gt;&gt;&gt; <link:internal>test</link:internal>.a = <link:internal>1</link:internal>
+&gt; &gt;&gt;&gt; <link:internal>test</link:internal>.b = 2
+&gt; &gt;&gt;&gt; for x in [<link:internal>test</link:internal>.a,<link:internal>test</link:internal>.b]:
+&gt; ... x = x + <link:internal>1</link:internal>
+
+      <link:internal>test</link:internal>.a, <link:internal>test</link:internal>.b are references to memory containing "<link:internal>1</link:internal>" and "2"
+
+      x becomes a reference to each of those memory contents in turn...
+
+BUT "x = x + <link:internal>1</link:internal>" is: <link:internal>find</link:internal> the value at the current location referenced by
+"x", <link:internal>add</link:internal> <link:internal>1</link:internal> to that value -- creating a NEW memory object (actually,
+since small ints are cached, "<link:internal>1</link:internal> + <link:internal>1</link:internal>" will use the "2" memory), change
+"x" to point to the new object, losing any reference to the previous
+value.
+
+&gt;&gt;&gt; class <link:internal>Test</link:internal>(object):
+... <link:internal>pass</link:internal>
+...
+&gt;&gt;&gt; <link:internal>test</link:internal> = <link:internal>Test</link:internal>()
+&gt;&gt;&gt; <link:internal>test</link:internal>.a = <link:internal>1</link:internal>
+&gt;&gt;&gt; <link:internal>test</link:internal>.b = 2
+&gt;&gt;&gt; print id(<link:internal>test</link:internal>), id(<link:internal>test</link:internal>.a), id(<link:internal>test</link:internal>.b)
+18264208 3302168 3302156
+&gt;&gt;&gt; for x in [<link:internal>test</link:internal>.a, <link:internal>test</link:internal>.b]:
+... print id(x)
+... x = x + <link:internal>1</link:internal>
+... print id(x)
+...
+3302168 &lt;--- "<link:internal>1</link:internal>" object
+3302156 &lt;--- "2" object as result
+3302156 &lt;--- "2" object
+3302144 &lt;--- "3" object as result
+&gt;&gt;&gt; print id(<link:internal>test</link:internal>), id(<link:internal>test</link:internal>.a), id(<link:internal>test</link:internal>.b)
+18264208 3302168 3302156
+&gt;&gt;&gt;
+
+&gt; However, what I am after is a way to increment the variables in the
+&gt; list,
+&gt; e.q. I want <link:internal>test</link:internal>.a to be 2 and <link:internal>test</link:internal>.b to be 3.
+&gt;
+&gt; Is there a way of doing this?
+&gt;
+&gt;&gt;&gt; <link:internal>test</link:internal>.a = <link:internal>1</link:internal>
+&gt;&gt;&gt; <link:internal>test</link:internal>.b = 2
+&gt;&gt;&gt; print id(<link:internal>test</link:internal>), id(<link:internal>test</link:internal>.a), id(<link:internal>test</link:internal>.b)
+18264208 3302168 3302156
+&gt;&gt;&gt; for x in ["a", "b"]:
+... print x, id(getattr(<link:internal>test</link:internal>, x))
+... setattr(<link:internal>test</link:internal>, x, getattr(<link:internal>test</link:internal>, x) + <link:internal>1</link:internal>)
+... print x, id(getattr(<link:internal>test</link:internal>, x))
+...
+a 3302168 &lt;--- so far, looks the same, no?
+a 3302156
+b 3302156
+b 3302144
+&gt;&gt;&gt; print id(<link:internal>test</link:internal>), id(<link:internal>test</link:internal>.a), id(<link:internal>test</link:internal>.b)
+18264208 3302156 3302144 &lt;--- Different!
+&gt;&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.0004590+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.0004590+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:12:19.3783440+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

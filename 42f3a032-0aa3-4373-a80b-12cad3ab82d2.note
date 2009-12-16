@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Timer example</title>
+  <text xml:space="preserve"><note-content version="0.1">Timer example
+
+<italic>-module(clock).
+-export([start/2, stop/0]).
+
+start(Time, Fun)-&gt;
+    register(clock, spawn(fun() -&gt;
+				  tick(Time, Fun) end)).
+
+stop()-&gt;
+    clock ! stop.
+
+tick(Time, Fun)-&gt;
+    receive
+	stop-&gt;
+	    void
+    after Time -&gt;
+	    Fun(),
+	    tick(Time, Fun)
+end.
+</italic>
+<italic>2&gt; clock:start(5000, fun()-&gt; io:format("tick ~p ~n", [<link:internal>erlang</link:internal></italic><italic>:now()]) end).
+
+</italic>true
+tick {1232,606566,297108} 
+tick {1232,606571,299897} 
+tick {1232,606576,302261} 
+tick {1232,606581,306079} 
+tick {1232,606586,311219} 
+
+<italic>3&gt; clock:stop().</italic>
+
+stop
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.9855350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.9855350+04:00</last-metadata-change-date>
+  <create-date>2009-01-22T09:43:37.3557500+03:00</create-date>
+  <cursor-position>510</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1219</x>
+  <y>541</y>
+  <open-on-startup>False</open-on-startup>
+</note>

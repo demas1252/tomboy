@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Как собрать свой пакет</title>
+  <text xml:space="preserve"><note-content version="0.1">Как собрать свой пакет
+
+Все далал на примере статьи (<link:url>http://forum.ubuntu.ru/index.php?topic=11609.msg82803#msg82803</link:url>) на примере <link:internal>tomboy</link:internal>.
+
+<link:internal>1</link:internal>. Скачал свежие исходники и скомпилировал их, дабы убедиться, что на этой стадии не будет проблем (см. <link:internal>tomboy</link:internal>). Особое внимание следует уделить опции <italic>--prefix</italic> - именно здесь при <italic>make install</italic> будут созданы бинарники программы.
+2. Создал каталог<link:url> ~/sources/tomboy/0.11.0/tomboy-0.11.0</link:url> и сюда бросил все исходники.  На всякий случай отсюда повторил пункт <link:internal>1</link:internal> и убедился, что все ОК. 
+3. Поднялся на уровень выше /0.11.0/ и создал архив:
+	tar cvf <link:internal>tomboy</link:internal>-0.11.0.tar *
+        gzip <link:internal>tomboy</link:internal>-0.11.0.tar
+        mv <link:internal>tomboy</link:internal>-0.11.0.tar.gz <link:internal>tomboy</link:internal>-0.11.0.orig.oltar.gz
+4. Тут рекомендуеся делать черновую сборку (./configure --prefix=/usr &amp;&amp; make). Я не делал (так как делал в пункте 2 - хотя может и стоило).
+5. cd <link:internal>tomboy</link:internal>-0.11.0
+6. dh_make
+7. gvim debian/control - description
+8. gvim debian/rules - раскомменировать dh_install
+9. <link:internal>dpkg</link:internal>-buildpackage -rfakeroot
+10. cd .. - здесь лежит собранный пакет
+
+<italic>Дополнения из LinuxFomat</italic>:
+
+<link:internal>1</link:internal>. Чтобы проверить все ли зависимости были учтены можно попробовать сделать следующее:
+
+strace -f -o<link:url> /tmp/log</link:url> ./configure
+for x in `<link:internal>dpkg</link:internal> -S $(grep open<link:url> /tmp/log</link:url>|\
+perl -pe ‘s!.* open\(\”([^\”]*).*!$<link:internal>1</link:internal>!’ |\
+grep “^/”| sort | uniq|\
+grep -v “^\(/tmp\|/dev\|/<link:internal>proc</link:internal>\)” ) 2&gt;/dev/null|\
+cut -f<link:internal>1</link:internal> -d”:”| sort | uniq`; \
+do \
+echo -n “$x (&gt;=” `<link:internal>dpkg</link:internal> -s $x|grep ^Version|cut -f2 -d”:”` “), “; \
+done
+
+Сохраните этот код в текстовом файле и запустите его в каталоге, содержащем файл настройки вашего приложения.
+
+Пробовал - ничего путного не получилось.</note-content></text>
+  <last-change-date>2009-04-01T16:18:08.7508690+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:18:08.7508690+04:00</last-metadata-change-date>
+  <create-date>2008-04-19T21:20:15.4595470+04:00</create-date>
+  <cursor-position>512</cursor-position>
+  <width>504</width>
+  <height>848</height>
+  <x>1075</x>
+  <y>97</y>
+  <tags>
+    <tag>system:notebook:Linux</tag>
+  </tags>
+  <open-on-startup>False</open-on-startup>
+</note>

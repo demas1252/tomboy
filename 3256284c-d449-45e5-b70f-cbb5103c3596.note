@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перебор файлов и директорий</title>
+  <text xml:space="preserve"><note-content version="0.1">Перебор файлов и директорий
+
+import os, glob
+
+dor = the path you want
+for dir, subdir, files in os.walk(dor):
+    for file in files:
+              <link:internal>if</link:internal> glob.fnmatch.fnmatch(file,"*.txt"):
+                   do what you want</note-content></text>
+  <last-change-date>2008-04-06T15:07:09.5461080+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:07:09.5461080+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:11:04.1152120+03:00</create-date>
+  <cursor-position>56</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

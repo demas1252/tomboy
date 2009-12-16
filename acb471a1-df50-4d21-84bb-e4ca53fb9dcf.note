@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CPlusPlus</title>
+  <text xml:space="preserve"><note-content version="0.1">CPlusPlus
+
+<link:internal>Указатели и ссылки</link:internal>
+<link:internal>Типы в Cpp</link:internal>
+<link:internal>Операции в Cpp</link:internal>
+<link:internal>Функции в C</link:internal>
+<link:internal>ООП в CPP</link:internal>
+<link:internal>Многопоточность в C++</link:internal>
+
+<link:internal>Стандартная библиотека Cpp</link:internal>
+<link:internal>STL</link:internal>
+<link:internal>Boost</link:internal>
+<link:internal>Работа с QT на C++</link:internal>
+<link:internal>Паттерны проектирования в CPP</link:internal>
+<link:internal>Инструменты</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-08-25T09:18:24.1620520+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-25T09:18:24.1620520+04:00</last-metadata-change-date>
+  <create-date>2009-02-07T15:38:53.2187550+03:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>171</x>
+  <y>208</y>
+  <open-on-startup>False</open-on-startup>
+</note>

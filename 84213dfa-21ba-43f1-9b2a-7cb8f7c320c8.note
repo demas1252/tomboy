@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка ошибок</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка ошибок
+
+
+Sub <link:internal>Test</link:internal>()
+	On Error GoTo Errors<link:internal>1</link:internal>
+	Dim x As Integer
+	Dim a As Integer
+	Dim <link:internal>c</link:internal> As Double
+	x = 20
+	a = 0
+	<link:internal>c</link:internal> = x / a
+	MsgBox (" Этого не должно быть")
+	GoTo Ends:
+Errors<link:internal>1</link:internal>:
+	MsgBox ("Ну ты блин Тикурила Даещь")
+Ends:
+End Sub
+
+
+---
+
+Sub <link:internal>Test</link:internal>()
+	On Error GoTo Error<link:internal>1</link:internal>
+	Sheets.Item(1000).Delete
+	GoTo Ends
+Error<link:internal>1</link:internal>:
+	MsgBox "Error detected" 
+	MsgBox (Str(Err.Number))
+	MsgBox (Err.Source)
+	MsgBox (Err.Description)
+Ends:
+End Sub
+
+
+</note-content></text>
+  <last-change-date>2009-04-25T18:32:31.0842500+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:31.0842500+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:40:25.4518210+04:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

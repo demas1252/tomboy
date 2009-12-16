@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>index 0</title>
+  <text xml:space="preserve"><note-content version="0.1">index 0
+
+Что значит select * from Table (index=0) ?
+INDEX=0 это какой индекс ?
+
+---
+
+[author: pkarklin]
+1- кластерный индекс. 0 - сканирование кучи (Table Scan или <link:internal>Clustered Index Scan</link:internal>)</note-content></text>
+  <last-change-date>2008-03-30T07:44:26.1830460+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T07:44:26.1830460+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T21:56:47.2189160+03:00</create-date>
+  <cursor-position>36</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>132</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

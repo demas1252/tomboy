@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Konqueror</title>
+  <text xml:space="preserve"><note-content version="0.1">Konqueror
+
+To make Konqueror even faster, go to Settings =&gt; Configure Konqueror =&gt; Performance and turn on preloading after <link:internal>KDE</link:internal> startup and set <link:internal>the memory usage</link:internal> setting to "Always". These days I don't use these options because Konqueror is light enough and my PC is fast enough for <link:internal>me</link:internal> to never notice its startup time. <link:internal>Another</link:internal> thing I recommend is to configure browser cache. I always enable "Use cache whenever possible" mode myself. With this option enabled, you have sometimes to reload the page to invalidate the cache, but that is not necessary too often.</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.6723380+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.6723380+04:00</last-metadata-change-date>
+  <create-date>2009-01-24T08:16:49.0728780+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

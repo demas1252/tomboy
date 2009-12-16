@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>dpkg-deb</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>dpkg</link:internal>-deb
+
+<list><list-item dir="ltr"><link:internal>dpkg</link:internal>-deb --info file.deb - показывает описание пакета (фактически показывает содержимое файла control (<link:internal>Формат deb файлов</link:internal>)
+</list-item><list-item dir="ltr">--field file.deb &lt;filed&gt; (field = Version, Recommends ..) - показывает часть этой информации.
+</list-item><list-item dir="ltr">--contents file.deb - перечень файлов (содержимое  data.tar.gz)
+</list-item><list-item dir="ltr">--control file.deb - создает директорию DEBIAN (в которой лежат файлы из control.tar.gz)
+</list-item><list-item dir="ltr">--extract file.deb . - распаковывает бинарные файлы, которые лягут в /</list-item></list>
+
+	Возможна и обратная операция сборки пакета:
+
+		demas@<link:internal>ubuntu</link:internal>:~/deb$ mkdir bld
+		demas@<link:internal>ubuntu</link:internal>:~/deb$ <link:internal>dpkg</link:internal>-deb --control <link:internal>tomboy</link:internal>_0.8.0-<link:internal>1</link:internal>_i386.deb 
+		demas@<link:internal>ubuntu</link:internal>:~/deb$ <link:internal>dpkg</link:internal>-deb --extract <link:internal>tomboy</link:internal>_0.8.0-<link:internal>1</link:internal>_i386.deb .
+		demas@<link:internal>ubuntu</link:internal>:~/deb$ mv --target-directory=bld DEBIAN usr
+		demas@<link:internal>ubuntu</link:internal>:~/deb$ <link:internal>dpkg</link:internal>-deb --build bld
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:35.9480320+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:35.9480320+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T14:16:51.8670750+04:00</create-date>
+  <cursor-position>586</cursor-position>
+  <width>593</width>
+  <height>457</height>
+  <x>1029</x>
+  <y>453</y>
+  <open-on-startup>False</open-on-startup>
+</note>

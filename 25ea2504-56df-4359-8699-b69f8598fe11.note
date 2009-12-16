@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Modules</title>
+  <text xml:space="preserve"><note-content version="0.1">Modules
+
+<link:internal>mod</link:internal>1.ss:
+
+<italic>#lang <link:internal>scheme</link:internal></italic><italic>
+
+(provide multy)
+
+(define (multy n)
+  (* n n))</italic>
+
+<link:internal>mod</link:internal>2.ss:
+
+<italic>#lang <link:internal>scheme</link:internal></italic><italic>
+
+(require "<link:internal>mod</link:internal></italic><italic>1.ss")
+</italic>
+<italic>&gt; (multy 4)</italic>
+16
+
+Еще лучше и корректнее модуль объявлять так:
+
+<italic>(module <link:internal>mod</link:internal></italic><italic>1 <link:internal>scheme</link:internal></italic><italic>
+  (provide multy)
+
+  (define (multy n)
+    (* n n))
+  )</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:36.1725029+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.1725029+04:00</last-metadata-change-date>
+  <create-date>2008-10-08T13:08:33.7490409+04:00</create-date>
+  <cursor-position>7</cursor-position>
+  <width>832</width>
+  <height>991</height>
+  <x>142</x>
+  <y>374</y>
+  <open-on-startup>False</open-on-startup>
+</note>

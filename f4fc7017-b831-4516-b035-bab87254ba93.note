@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Массивы в C</title>
+  <text xml:space="preserve"><note-content version="0.1">Массивы в C
+
+Иденктификатор массива не похож на остальный идентификаторы.  Например, он не lvalue - ему нельзя ничего присвоить.  Скорее это указатель на начало данных массива.
+
+Например:
+
+char s[100] = "abcd"; // works
+
+char s[100]; 
+s = "hello"; // DOESN'T WORK ('lvalue required' error)
+
+s - это УКАЗАТЕЛЬ на начало массива.
+
+Надо:
+
+char s[100];
+strncpy(s, "hello", 100);
+
+<link:internal>Некоторые тонкости при работе с массивами в С</link:internal>
+<link:internal>Инициализация массивов в CPP</link:internal>
+<link:internal>Передача массива в процедуру</link:internal>
+<link:internal>Различие между указателем и массивом</link:internal> 
+</note-content></text>
+  <last-change-date>2009-12-10T16:19:28.8619810+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-10T16:19:28.8619810+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:56:26.7644550+03:00</create-date>
+  <cursor-position>517</cursor-position>
+  <width>481</width>
+  <height>454</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

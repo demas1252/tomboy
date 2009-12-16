@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Прочее</title>
+  <text xml:space="preserve"><note-content version="0.1">Прочее
+
+<link:internal>Other tools</link:internal> 
+<link:internal>Concepts of PL</link:internal>  
+<link:internal>Other languages</link:internal>  
+<link:internal>Windows</link:internal>
+<link:internal>Методологии</link:internal>
+<link:internal>Usability</link:internal>
+<link:internal>Сети</link:internal>
+<link:internal>Цитаты</link:internal>
+<link:internal>Image-цитаты</link:internal>
+<link:internal>Other</link:internal>
+<link:internal>English</link:internal>
+<link:internal>Заметки</link:internal>
+<link:internal>Путешествия</link:internal>
+<link:internal>Дзен</link:internal>
+<link:internal>Контанкты</link:internal><bold>
+</bold><link:internal>Downloads</link:internal>
+<link:internal>Pass</link:internal>
+<link:internal>Графики выхода дистрибутивов</link:internal>
+
+<link:url>http://lmgtfy.com/?q=ндс+книга</link:url>
+
+<link:internal>Me</link:internal>
+10 50 10 148</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.7906540+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.7906540+04:00</last-metadata-change-date>
+  <create-date>2009-04-01T16:39:02.4851660+04:00</create-date>
+  <cursor-position>157</cursor-position>
+  <width>480</width>
+  <height>589</height>
+  <x>1061</x>
+  <y>181</y>
+  <open-on-startup>False</open-on-startup>
+</note>

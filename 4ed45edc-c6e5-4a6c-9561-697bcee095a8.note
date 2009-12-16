@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация Memento на C#</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация Memento на C#
+
+using System;
+using System.Drawing;
+using System.Runtime.Serialization;
+using System.<link:internal>Windows</link:internal>.Forms;
+  public class Ellipse : UserControl
+  {
+    Pen pen = Pens.Red;
+    Rectangle rect;
+
+    public Ellipse()
+    {
+    }
+
+    public Ellipse(Rectangle rect) 
+    {
+      this.rect = rect;
+      this.SetBounds(rect.Left, rect.Y, rect.Width, rect.Height);
+    }
+
+    override protected void OnPaint(PaintEventArgs e) 
+    {
+      Graphics g = e.Graphics; 
+      g.DrawEllipse(pen, 0, 0, rect.Width - 1, rect.Height - 1);
+    }
+
+    public <link:internal>Memento</link:internal> CreateMemento() 
+    {
+      <link:internal>Memento</link:internal> <link:internal>memento</link:internal> = new <link:internal>Memento</link:internal>();
+      <link:internal>memento</link:internal>.Rect = rect;
+      return <link:internal>memento</link:internal>;
+    }
+
+    public void SetMemento(<link:internal>Memento</link:internal> <link:internal>memento</link:internal>) 
+    {
+      this.rect = <link:internal>memento</link:internal>.Rect;
+      this.SetBounds(rect.Left, rect.Y, rect.Width, rect.Height);
+    }
+    
+  }
+
+
+using System;
+using System.Drawing;
+using System.Runtime.Serialization;
+ [Serializable]
+  public class <link:internal>Memento</link:internal>
+  {
+    private Rectangle rect;
+
+    public Rectangle Rect
+    {
+      get
+      {
+        return rect;
+      }
+      set
+      {
+        rect = value;
+      }
+    }
+  }
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.6167360+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.6167360+04:00</last-metadata-change-date>
+  <create-date>2009-07-01T15:44:04.6928530+04:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>468</x>
+  <y>405</y>
+  <open-on-startup>False</open-on-startup>
+</note>

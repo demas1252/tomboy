@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание пользовательской функции с помощью функции CLR</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание пользовательской функции с помощью функции CLR
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using Microsoft.SqlServer.Server;
+
+public <link:internal>partial</link:internal> class UserDefinedFunctions
+{
+    [Microsoft.SqlServer.Server.SqlFunction]
+    public static SqlInt32 QuantityWord(SqlString text, SqlString word)
+    {
+        bool flag = false;
+        int i = -1;
+        int count = 0;
+
+        <link:internal>if</link:internal> (!text.IsNull &amp;&amp; !word.IsNull)
+        {
+            string t = text.Value;
+            string w = word.Value;
+            while (flag == false)
+            {
+                i = t.IndexOf(w, i + 1);
+                <link:internal>if</link:internal> (i &gt;= 0)
+                    count++;
+                else
+                    flag = true;
+            }
+            return new SqlInt32(count);
+        }
+        else
+        {
+            return new SqlInt32();
+        }
+    }
+};
+
+
+
+SELECT Name, dbo.QuantityWord(Name,'ma') AS Count FROM Users</note-content></text>
+  <last-change-date>2009-10-12T12:00:20.0452250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:20.0452250+04:00</last-metadata-change-date>
+  <create-date>2009-08-04T13:54:29.4098320+04:00</create-date>
+  <cursor-position>946</cursor-position>
+  <width>838</width>
+  <height>569</height>
+  <x>419</x>
+  <y>321</y>
+  <open-on-startup>False</open-on-startup>
+</note>

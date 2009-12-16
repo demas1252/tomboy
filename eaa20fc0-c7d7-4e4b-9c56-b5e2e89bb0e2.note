@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сохранение переиенных между вызовами</title>
+  <text xml:space="preserve"><note-content version="0.1">Сохранение переиенных между вызовами
+
+
+Можно ли и каким образом сохранять содержимое переменных между вызовами процедур?
+Имеется в виду следующее: пользователь нажал на кнопку - выполнилась процедура, присвоила x=5; пользователь поработал в <link:internal>excel</link:internal>, нажимает другую кнопку и эта процедура использует х равный 5.
+Можно, конечно, записывать в ячейку на листе, но хотелось бы сохранять в памяти.
+
+---
+
+Сделай её общей (Public), после закрытия файла сбоасывается
+Option ExplicitPublic SVOD As Worksheet, Peresch As String
+</note-content></text>
+  <last-change-date>2008-04-06T15:03:09.6808230+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T15:03:09.6808230+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:03:06.7330080+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

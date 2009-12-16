@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>* SqlAlchemy</title>
+  <text xml:space="preserve"><note-content version="0.1">* SqlAlchemy
+
+mport sqlalchemy
+from sqlalchemy import create_engine
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy.orm import mapper
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relation
+
+class User(object):
+
+      def _init_(self, name, fullname, password):
+            self.name = name
+            self.fullname = fullname
+            self.password = password
+      def _repr_(self):
+            return "&lt;User(%r, %r, %r)&gt;" % (self.name, self.fullname, self.password)
+
+class Address(object):
+
+      def _init_(self, email_address):
+            self.email_address = email_address
+      def _repr_(self):
+            return "&lt;Address('%s')&gt;" % self.email_address
+
+
+print sqlalchemy._version_
+
+#engine = create_engine('<link:internal>sqlite</link:internal>:///tutorial.<link:internal>db</link:internal>', echo = True)
+engine = create_engine('<link:internal>sqlite</link:internal>:///tutorial.<link:internal>db</link:internal>')
+Session = sessionmaker(bind = engine, autoflush=True, transactional = True)
+metadata = MetaData()
+
+users_table = Table('users', metadata,
+
+      Column('id', Integer, primary_key=True),
+      Column('name', String(40)),
+      Column('fullname', String(100)),
+      Column('password', String(15)))
+
+addresses_table = Table('adresses', metadata,
+
+      Column('id', Integer, primary_key = True),
+      Column('email_address', String(100), nullable=False),
+      Column('user_id', Integer, ForeignKey('users.id')))
+
+metadata.create_all(engine)
+mapper(User, users_table, properties={
+
+      'addresses':relation(Address, backref='user', cascade='all, delete, delete-orphan')
+      })
+
+mapper(Address, addresses_table)
+
+
+session = Session()
+ed_user = User('ed', 'Ed Jones', 'edpassword')
+<link:url>ed_user.addresses.append(Address(email_address='ed@google.com</link:url>'))
+<link:url>ed_user.addresses.append(Address(email_address='ed@yahoo.com</link:url>'))
+session.save(ed_user)
+session.commit()
+
+print "nquery <link:internal>1</link:internal> n"
+new_user = session.query(User).filter_by(name='ed').first()
+print new_user
+print new_user.addresses
+
+print "nquery 2 n"
+print <link:url>session.query(User).filter(User.id==Address.user_id).filter(Address.email_address=='ed@google.com').all</link:url>()
+
+print "ndelete n"
+session.delete(ed_user)
+session.commit()
+print session.query(Address).count()</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.6850170+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.6850170+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:14:39.1941010+03:00</create-date>
+  <cursor-position>2203</cursor-position>
+  <width>1387</width>
+  <height>626</height>
+  <x>192</x>
+  <y>298</y>
+  <open-on-startup>False</open-on-startup>
+</note>

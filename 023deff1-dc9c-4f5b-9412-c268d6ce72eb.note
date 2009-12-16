@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запертить использовать индексы в запросе</title>
+  <text xml:space="preserve"><note-content version="0.1">Запертить использовать индексы в запросе
+
+можно ли запретить использование одного, определенного индекса при выполнении запроса
+---
+Можно заставит сервер сканировать таблицу\кластерный индек с помощью (INDEX = 0)</note-content></text>
+  <last-change-date>2008-03-30T17:32:09.7968900+04:00</last-change-date>
+  <last-metadata-change-date>2008-03-30T17:32:09.7968900+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:32:06.6073090+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>578</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>mapFactureAmounts</title>
+  <text xml:space="preserve"><note-content version="0.1">mapFactureAmounts
+
+Мап, ключем котрого является контейнер
+
+[factureTRans.TaxCode, dim, emplAdvLine.OperationCode]
+
+а значением класс <link:internal>BookStructSmallVATAmounts_Ru</link:internal> {Tax+Line, Line, Tax}.
+
+см. <link:internal>FactureJour_RU::factureAmounts</link:internal></note-content></text>
+  <last-change-date>2009-01-25T12:26:51.3836940+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-25T12:26:51.3836940+03:00</last-metadata-change-date>
+  <create-date>2009-01-25T11:53:22.5427680+03:00</create-date>
+  <cursor-position>183</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>812</x>
+  <y>507</y>
+  <open-on-startup>False</open-on-startup>
+</note>

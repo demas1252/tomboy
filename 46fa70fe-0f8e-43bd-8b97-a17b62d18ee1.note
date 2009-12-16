@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Корректировка налогов и книга покупок</title>
+  <text xml:space="preserve"><note-content version="0.1">Корректировка налогов и книга покупок
+
+<link:url>http://www.axforum.info/forums/showthread.php?t=25253&amp;highlight=%D0%BD%D0%B0%D0%BB%D0%BE%D0%B3%D0%B8</link:url>
+
+Подскажите, пожалуйста, почему скорректированные налоги в накладной от поставщика при обработке входящего НДС не учитываются, то есть попадают исходные нескорректированные данные по налогам?
+
+Да, проводки по ГК правильные - на скорректированную сумму. Но если же я смотрю таблицу через репозитарий, то имею:
+в таблице <link:internal>LedgerTrans</link:internal> в полях AmountCur и AmountMST скорректированная сумма;
+
+в таблице TaxTrans в полях TaxAmount, TaxAmountCur, SourceRegulateAmountCur - скорректированная сумма; SourceTaxAmountCur - исходная (нескорректированная) сумма
+
+в таблице VendInvoiceTrans в полях VATAmount_RU и TaxAmount - скорректированная сумма; TaxAmountMST_W и VATAmountMST_RU - исходная (нескорректированная сумма); 
+
+<link:internal>Axapta</link:internal> 4.0 Sp1.
+Ок. Пример.
+
+1. Создаем накладную от поставщика (через заказ на Покупку) на сумму 1000 рублей, НДС - 180 рублей. Перед разноской делаем корректировку налогов - 179 рублей.
+В бухгалтерских проводках видим сумму 179 рублей.
+
+2. На основании накладной создаем фактуру. В ней тоже видим НДС 179 рублей .
+
+3. Начинаем делать периодическую обработку Входящего НДС. После выполнения запроса "Выбор данных за период" видим у нашей накладной НДС 180 рублей (первоначальный, нескорректированный). 
+
+Припоминаю, у нас вроде было такое на Ах4 SP2. Просто ошибка. Исправляли код.</note-content></text>
+  <last-change-date>2009-06-20T21:50:25.5097600+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-20T21:50:25.5097600+04:00</last-metadata-change-date>
+  <create-date>2009-06-20T21:49:31.7820030+04:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>50</y>
+  <open-on-startup>False</open-on-startup>
+</note>

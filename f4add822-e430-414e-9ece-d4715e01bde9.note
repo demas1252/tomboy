@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Echo_c</title>
+  <text xml:space="preserve"><note-content version="0.1">Echo_c
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int main(int argc, char *argv[]) {
+   int nflag;
+
+   <link:internal>if</link:internal>(*++argv &amp;&amp; 
+      !strcmp(*argv, "-n")) {
+      ++argv;
+      nflag = <link:internal>1</link:internal>;
+   }
+   else
+      nflag = 0;
+
+   while (*argv) {
+      printf("%s", *argv);
+      <link:internal>if</link:internal>(*++argv)
+     putchar(' ');
+   }
+
+   <link:internal>if</link:internal>(!nflag)
+      putchar('\n');
+
+   exit(0);   
+}</note-content></text>
+  <last-change-date>2008-06-15T23:42:47.7304700+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:47.7304700+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:42:56.7169940+03:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>142</x>
+  <y>655</y>
+  <open-on-startup>False</open-on-startup>
+</note>

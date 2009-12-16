@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Методы в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Методы в Ruby
+
+def method_name(arg1, arg2)
+end
+
+def method_name_2
+end
+
+<link:internal>Методы с параметрами по умолчанию в Ruby</link:internal>
+<link:internal>Методы с переменным числом параметров в Ruby</link:internal>
+<link:internal>Ассоциирование блока кода с методом</link:internal>
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.7377760+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.7377760+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:37:22.6377660+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>450</width>
+  <height>329</height>
+  <x>0</x>
+  <y>56</y>
+  <open-on-startup>False</open-on-startup>
+</note>

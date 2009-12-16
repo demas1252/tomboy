@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Расчеты с поставщиками и клиентами</title>
+  <text xml:space="preserve"><note-content version="0.1">Расчеты с поставщиками и клиентами
+
+<link:internal>Книга покупок</link:internal>
+<link:internal>Расчет с клиентами</link:internal>
+<link:internal>Расчеты с поставщиками</link:internal>
+<link:internal>Задвоенные клиенты</link:internal>
+<link:internal>Курсовые разницы</link:internal>
+<link:internal>Преобразование оплаты в предоплату</link:internal>
+<link:internal>Подотчетники</link:internal>
+
+<link:internal>Выверка поставщиков с ГК</link:internal>
+<link:internal>Удалось удалить контрагента по которому были операции</link:internal></note-content></text>
+  <last-change-date>2009-09-18T13:42:57.0462889+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-18T13:42:57.0462889+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:21:58.4388970+03:00</create-date>
+  <cursor-position>171</cursor-position>
+  <width>486</width>
+  <height>353</height>
+  <x>660</x>
+  <y>294</y>
+  <open-on-startup>False</open-on-startup>
+</note>

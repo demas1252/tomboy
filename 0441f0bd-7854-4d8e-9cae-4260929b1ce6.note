@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Суммирование списка с помощью акумулятора</title>
+  <text xml:space="preserve"><note-content version="0.1">Суммирование списка с помощью акумулятора
+
+Есть функция:
+&lt;&lt;pre
+(define (sum alon)
+    (cond 
+        [(empty? alon) 0]
+        [else (+ (first alon) (sum (rest alon)))]))
+
+&gt;&gt;
+
+Преобразуем ее к аккумуляторному виду воспользовавщись стандатрной подстановкой:
+&lt;&lt;pre
+(define (sum alon0)
+    (local (;; accumulator ...
+         (define (sum-a alon accumulator)
+            (cond
+                   [(empty? alon) ...]
+                   [else
+                     ... (sum-a (rest alon) ... ( first alon) ... accumulator)
+                     ... ])))
+          (sum-a alon0 ...)))
+
+&gt;&gt;
+
+Конечный вариант:
+&lt;&lt;pre
+;; sum : (listof number) -&gt; number
+;; to compute the sum of the numbers on alon0
+(define (sum alon0)
+  (local (
+      ;; accumulator is the sum of the numbers that preceded
+      ;; those in alon on alon0
+      (define (sum-a alon accumulator)
+        (cond
+          [(empty? alon) accumulator]
+          [else (sum-a (rest alon) (+ (first alon) accumulator))])))
+    (sum-a alon0 0)))
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T22:02:47.8192930+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:02:47.8192930+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:02:46.6365250+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>466</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

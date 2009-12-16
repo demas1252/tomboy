@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>mc</title>
+  <text xml:space="preserve"><note-content version="0.1">mc
+
+Ctrl- - hotlist (для частоиспользуемых директорий)
+Ctrl-O - погасить панели и посмотреть что под ними
+Ctrl-S - поиск файла (!!!)
+
+Сtrl-X+A - текущие VFS (ftp и пр.)
+Ctrl-X+<link:internal>C</link:internal> - посмотреть/поменять permissions
+Ctrl-X+O - посмотреть/поменять owner
+Ctrl-X+L - создать link
+Ctrl-X+S - создать symlink
+Ctrl-X+Ctrl-S - редактировать symlink
+Ctrl-X+D - сравнить каталоги
+Ctrl-X+J - фоновые задачи
+Ctrl-X+Q - быстрый просмотр содержимого файла
+
+ESC+A - послать в ком.строку текущий каталог
+ESC+<link:internal>C</link:internal> - быстро сменить каталог
+ESC+H - <link:internal>history</link:internal>
+ESC+P - вернуть предыдущую (предыдущие) командную строку (строки)
+ESC+N - вернуть последующую (последующие) командную строку (строки)
+ESC+S - поиск файла (в текущей директории)
+ESC+? - раширенный поиск фала (или вхождения/regular expression)
+ESC+цифра - тоже что и F{цифра} (ESC+5 = F5)
+
+F4 (в редакторе) - поиск с заменой
+F6 (в редакторе) - поиск с помощью регулярного выражения
+Shift-Del (в редакторе) - удалить <link:internal>блок</link:internal> (и положить его в clipboard)
+Shift-Ins (в редакторе) - вставить <link:internal>блок</link:internal> из clipboard (работает даже в другой консоли!!!) Можно редактировать два и более файлов на разных консолях и гонять блоки между ними.
+
+Alt-TAB (ESC+TAB) - Крутейшая кнопка для поиска загружаемых файлов (например вы забыли как полностью пишется netcfg. Достаточно набрать в командной строке net и нажать Alt-TAB - вам сразу покажут что можно запустить, которое начинается со слова net) нажимать два раза!
+Alt-TAB (ESC+TAB) - работает так же как в Bash TAB (т.е. подгоняет по первым буквам имена файлов или директорий. Наберите cd /u потом Alt-TAB - сразу будет cd /usr/ и т.д.)
+
+Если нужно что-то срезать мышью с экрана давите Shift, а только потом отмечайте. Тоже самое касается вставки из мышиного clipboard'a.
+
+Что еще крутого там есть?
+Ну то, что он может работать с ftp серверами понятно - это из меню.
+Редактор!!! - Это полный рулез!!!
+Самое хорошее - это то, что там можно блоки отмечать с помощью Shift-стрелки </note-content></text>
+  <last-change-date>2008-04-18T13:54:29.5578160+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-18T13:54:29.5578160+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:36:40.6784480+03:00</create-date>
+  <cursor-position>31</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>920</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Померять время работы функции в Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Померять время работы функции в Clojure
+
+user=&gt; (dotimes [_ 5] (time (sum-to 100)))
+
+"Elapsed time: 0.125994 msecs"
+"Elapsed time: 0.086882 msecs"
+"Elapsed time: 0.090654 msecs"
+"Elapsed time: 0.090514 msecs"
+"Elapsed time: 0.090585 msecs"
+
+Меряем 5 раз время выполнения функции sum-to (<link:internal>Суммирование первых n чисел</link:internal>) с параметром 100</note-content></text>
+  <last-change-date>2009-10-12T12:00:24.5400720+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.5400720+04:00</last-metadata-change-date>
+  <create-date>2009-07-30T16:53:56.3176860+04:00</create-date>
+  <cursor-position>285</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1055</x>
+  <y>479</y>
+  <open-on-startup>False</open-on-startup>
+</note>

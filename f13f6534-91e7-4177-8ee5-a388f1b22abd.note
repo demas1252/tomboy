@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MS SQL and AWE</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> and AWE
+
+
+<link:url>http://support.microsoft.com/kb/274750/ru</link:url>
+
+<link:internal>SQL</link:internal> Server может использовать выделенную память AWE только для кэша данных, но не для исполняемых файлов, драйверов, динамических библиотек и т.п. 
+Чтобы использовать память Address Windowing Extensions (AWE), СУБД <link:internal>SQL</link:internal> Server 2000 необходимо запустить с помощью учетной записи <link:internal>Windows</link:internal>, которой назначены административные полномочия для закрепления страниц в памяти.
+</note-content></text>
+  <last-change-date>2009-03-27T12:30:25.4307790+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-27T12:30:25.4307790+03:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:37:12.6659910+04:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>277</x>
+  <y>637</y>
+  <open-on-startup>False</open-on-startup>
+</note>

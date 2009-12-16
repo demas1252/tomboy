@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ruby Tk</title>
+  <text xml:space="preserve"><note-content version="0.1">Ruby Tk
+
+<link:internal>Пример простой программы на RubyTk</link:internal>
+<link:internal>RubyTk - GridLayout</link:internal></note-content></text>
+  <last-change-date>2009-06-12T14:52:14.2603240+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-12T14:52:14.2603240+04:00</last-metadata-change-date>
+  <create-date>2009-06-12T11:52:35.9257720+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>521</x>
+  <y>281</y>
+  <open-on-startup>False</open-on-startup>
+</note>

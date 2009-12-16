@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>sicp 1.8</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>sicp 1</link:internal>.8
+
+<italic>Поиск кубического корня</italic>
+
+Решение:
+
+(define (qbrt-iter guess x)
+  (<link:internal>if</link:internal> (good-enough? guess x)
+      guess
+      (qbrt-iter (improve guess x)
+                 x)))
+
+(define (good-enough? guess x)
+  (&lt; (<link:internal>abs</link:internal> (- (qube guess) x)) 0.001))
+
+(define (qube x) (* x x x))
+
+(define (improve guess x)
+  (/ (+ (/ x (square guess))
+        (* 2 guess))
+     3))
+
+(define (square x) (* x x))
+
+(define (qbrt x)
+  (qbrt-iter <link:internal>1</link:internal>.0 x))
+
+А теперь введем блочную структуру и спрячем функции, которые не интересуют пользователя функции qbrt:
+
+(define (qbrt x)
+  (define (qube x) (* x x x))
+  (define (square x) (* x x))
+  (define (qbrt-iter guess)
+    (define (good-enough?)
+      (&lt; (<link:internal>abs</link:internal> (- (qube guess) x)) 0.001))
+    (define (improve)
+      (/ (+ (/ x (square guess))
+            (* 2 guess))
+         3))
+    (<link:internal>if</link:internal> (good-enough?)
+        guess
+        (qbrt-iter (improve))))
+  (qbrt-iter <link:internal>1</link:internal>.0))</note-content></text>
+  <last-change-date>2009-07-08T16:38:53.9698950+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-08T16:38:53.9698950+04:00</last-metadata-change-date>
+  <create-date>2008-04-05T00:53:33.1504880+04:00</create-date>
+  <cursor-position>425</cursor-position>
+  <width>610</width>
+  <height>604</height>
+  <x>104</x>
+  <y>382</y>
+  <open-on-startup>False</open-on-startup>
+</note>

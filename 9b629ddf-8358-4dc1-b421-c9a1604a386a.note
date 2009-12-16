@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Имя столбца по его номеру</title>
+  <text xml:space="preserve"><note-content version="0.1">Имя столбца по его номеру
+
+
+_'узнаем название столбца (например, М )
+iColName$ = Split(ActiveCell.Address, "$")(<link:internal>1</link:internal>)
+iColName$ = Left(ActiveCell.AddressLocal(True, False, xlA<link:internal>1</link:internal>), InStr(<link:internal>1</link:internal>, ActiveCell.AddressLocal(True, False, xlA<link:internal>1</link:internal>), "$") - <link:internal>1</link:internal>)_
+
+
+'Source: <link:url>http://bbs.vbstreets.ru/viewtopic.php?t=25342&amp;sid=<link:internal>c</link:internal></link:url><link:url>54df930f85778ece0a0aa450ea9cc39</link:url>
+_Sub Узнаем_имя_столбца_по_его_номеру()
+    iColName$ = GetColLetter(5)
+    MsgBox iColName$
+End Sub
+Function GetColLetter(ColNum As Integer) As String
+    Dim temp As Byte
+    <link:internal>If</link:internal> ColNum &lt; 27 Then
+        GetColLetter = Chr(64 + ColNum)
+    Else
+        temp = Int(ColNum / 26)
+        GetColLetter = Chr(64 + temp) &amp; Chr(64 + ColNum - temp * 26)
+    End <link:internal>If</link:internal>
+End Function_</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.8878540+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.8878540+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:04:03.6473460+04:00</create-date>
+  <cursor-position>54</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

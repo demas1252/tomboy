@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Axapta Continuous Integration</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Axapta</link:internal> Continuous Integration
+
+   1. Сканируем АОТ.
+     2. Для каждого элемента определяем: новый, измененный, старый.
+     3. Формируем списики.
+     4. Выгружаем списки во внешний файл.
+     5. Компилируем все.
+     6. Получаем список и количество ошибок, предупредений и отступлений от BP. (!)</note-content></text>
+  <last-change-date>2009-04-01T16:14:37.9498760+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-01T16:14:37.9498760+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:17:58.1529890+03:00</create-date>
+  <cursor-position>58</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

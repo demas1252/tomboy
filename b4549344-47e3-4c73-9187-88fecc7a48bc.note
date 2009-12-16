@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ввод и вывод в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Ввод и вывод в Ruby
+
+<link:internal>Построчное чтение файла</link:internal>
+<link:internal>Запись в центр файла в Ruby</link:internal>
+<link:internal>Работа со строками как с файлами в Ruby</link:internal>
+<link:internal>Работа с сетью в Ruby</link:internal>
+
+<link:internal>Перехватить вывод консольной программы на Ruby</link:internal></note-content></text>
+  <last-change-date>2009-11-24T15:52:50.3911029+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-24T15:52:50.3911029+03:00</last-metadata-change-date>
+  <create-date>2009-05-22T12:30:38.3425580+04:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>979</x>
+  <y>83</y>
+  <open-on-startup>False</open-on-startup>
+</note>

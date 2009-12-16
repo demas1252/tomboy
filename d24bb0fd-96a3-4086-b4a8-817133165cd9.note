@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Трассировка</title>
+  <text xml:space="preserve"><note-content version="0.1">Трассировка
+
+      <link:internal>Трассировка своей сессии</link:internal>
+      <link:internal>Трассировка любой сессии</link:internal>
+      <link:internal>Запуск трассировки с помощью триггера на вход</link:internal></note-content></text>
+  <last-change-date>2008-03-27T21:23:44.3644780+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T21:23:44.3644780+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:53:59.8607220+03:00</create-date>
+  <cursor-position>40</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1186</x>
+  <y>358</y>
+  <open-on-startup>False</open-on-startup>
+</note>

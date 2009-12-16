@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Concurrency in Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Concurrency in Clojure
+
+<list><list-item dir="ltr">refs - координированные синхронные изменения
+</list-item><list-item dir="ltr">atoms - некоординированные синхронные
+</list-item><list-item dir="ltr">agents - асинхронные
+</list-item><list-item dir="ltr">vars - thread-local</list-item></list>
+
+<link:internal>Refs In Clojure</link:internal></note-content></text>
+  <last-change-date>2009-08-20T11:25:53.6332410+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-20T11:25:53.6332410+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T11:00:17.5024100+04:00</create-date>
+  <cursor-position>157</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>252</x>
+  <y>280</y>
+  <open-on-startup>False</open-on-startup>
+</note>

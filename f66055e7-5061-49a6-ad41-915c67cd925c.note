@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Момент снятия блокировки в запросе с подзапросами</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Момент снятия блокировки</link:internal> в запросе с подзапросами
+
+
+    Господа! У меня следующий запрос (представлен схематично):
+
+_insert into table<link:internal>1</link:internal>
+(
+FIELD11
+)
+select
+FIELD21
+from
+table2 with(readcommitted)_
+
+Данный запрос логически отрабатывает в два этапа: зачитка данных из table2 и добавление данных в table<link:internal>1</link:internal>.
+Вопрос в следующем: разделяемая блокировка с table2 будет снята после завершения работы всего запроса или после завершения процесса зачитки данных?.
+
+Буду очень признателен за помощь.
+
+=============================================================================
+
+Будет снята после зачитки. В случае with(readcommitted,holdlock) после завершения запроса.</note-content></text>
+  <last-change-date>2008-06-15T23:42:48.2011380+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:48.2011380+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T23:08:56.6693289+03:00</create-date>
+  <cursor-position>78</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>-2</x>
+  <y>510</y>
+  <open-on-startup>False</open-on-startup>
+</note>

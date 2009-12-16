@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Установка wxErlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Установка wxErlang
+
+То, что шло в стандартной поставке у меня не заработало.  Поэтому я скачал с сайта версию 0.97.  То, что в svn у меня не захотело даже конфигуриться.
+ 
+Собрал так:
+
+./configure --with-opengl --enable-unicode --disable-shared --enable-graphics_ctx --enable-gnomeprint   %% On unix only
+
+make
+
+Копируем в папку с <link:internal>Erlang</link:internal>-ми либами.
+
+Стартовать <link:internal>erlang</link:internal> надо с опцией -smp.
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:55.0071540+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:55.0071540+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T14:30:41.6299540+04:00</create-date>
+  <cursor-position>312</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1040</x>
+  <y>93</y>
+  <open-on-startup>False</open-on-startup>
+</note>

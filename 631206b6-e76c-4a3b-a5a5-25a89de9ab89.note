@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ставим news-server leafnode</title>
+  <text xml:space="preserve"><note-content version="0.1">Ставим news-server leafnode
+
+1. 
+
+<link:internal>pacman</link:internal> -S leafnode
+
+$ sudo touch<link:url> /etc/leafnode/local.groups</link:url>
+$ sudo cp<link:url> /etc/leafnode/config.example /etc/leafnode/config</link:url>
+$ sudo <link:internal>vim</link:internal><link:url> /etc/leafnode/config</link:url>
+
+server = your.news.server
+username = your.username
+password = your.password
+
+initialfetch = 500
+
+2. Проверяем, что стоит xinetd
+
+3. 
+
+<link:internal>groupadd</link:internal> -g 36 news
+<link:internal>useradd</link:internal> -<link:broken>c</link:broken> "Leafnode News Server" -d<link:url> /var/spool/news</link:url> -s<link:url> /bin/false</link:url> -g news -u 36 news
+chown news:news<link:url> /var/spool/news</link:url>
+chown -R news:news<link:url> /var/spool/news</link:url>
+
+4.  Создаем файлик leafnode в папке<link:url> /etc/xinet.d/</link:url>
+
+service nntp
+{
+        socket_type             = stream
+        wait                    = no
+        user                    = news
+        server                  =<link:url> /usr/sbin/leafnode</link:url>
+        only_from               = 127.0.0.1
+}
+
+5.  
+<link:url>
+/etc/hosts.allow</link:url> - leafnode: 127.0.0.1
+to <link:url>/etc/hosts.deny</link:url>:  leafnode: ALL
+
+Полное доменное имя в<link:url> /etc/rc.conf</link:url>
+
+$<link:url> /etc/rc.d/xinetd</link:url> start
+
+$ telnet localhost 119
+$ sudo fetchnews -vvv
+
+6.  visudo:
+
+%truecrypt ALL=(root)	 NOPASSWD:/usr/sbin/fetchnews
+
+cat .bash_alias
+
+alias fn='sudo fetchnews -vvv'
+
+7. <link:internal>cron</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:24.9215490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.9215490+04:00</last-metadata-change-date>
+  <create-date>2009-01-06T13:59:27.7867630+03:00</create-date>
+  <cursor-position>811</cursor-position>
+  <width>633</width>
+  <height>644</height>
+  <x>97</x>
+  <y>258</y>
+  <open-on-startup>False</open-on-startup>
+</note>

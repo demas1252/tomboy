@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Соответствие полей в отчете коду, который их заполняет (EmplAdvance_Ru)</title>
+  <text xml:space="preserve"><note-content version="0.1">Соответствие полей в отчете коду, который их заполняет (EmplAdvance_Ru)
+
+Полученный аванс - SettleExec() - 116
+Итого получено - SettleExec() - 140
+Израсходовано - spendExec() - 40
+Остаток - overExec() - 16
+Перерасход - overExec() - 16</note-content></text>
+  <last-change-date>2009-06-04T11:20:42.8696600+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-04T11:20:42.8696600+04:00</last-metadata-change-date>
+  <create-date>2009-06-04T11:18:47.2136530+04:00</create-date>
+  <cursor-position>75</cursor-position>
+  <width>707</width>
+  <height>446</height>
+  <x>580</x>
+  <y>228</y>
+  <open-on-startup>False</open-on-startup>
+</note>

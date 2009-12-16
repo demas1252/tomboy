@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Преобразование matual recursion  в self recursion</title>
+  <text xml:space="preserve"><note-content version="0.1">Преобразование matual recursion  в self recursion
+
+;; резервируют стек пропорционально n, что приводит
+;; к проблемам при работе с большими числами
+
+;; причем мы не можем решить эту проблему с помощью
+;; recur, так как мы вызываем рекурентно не самого себя
+
+(declare my-odd? my-even?)
+
+(defn my-odd? [n]
+  (<link:internal>if</link:internal> (= n 0)
+    false
+    (my-even? (dec n))))
+
+(defn my-even? [n]
+     (<link:internal>if</link:internal> (= n 0)
+       true
+       (my-odd? (dec n))))
+
+;; но мы можем просто переформулировать задачу,
+;; чтобы получить self-recursion
+
+(defn pariry [n]
+  (loop [n n par 0]
+    (<link:internal>if</link:internal> (= n 0)
+      par
+      (recur (dec n) (- 1 par)))))
+
+(defn my-even2? [n] (= 0 (pariry n)))
+(defn my-odd2? [n] (= 0 (pariry n)))
+
+;; trampoline version - без срыва стека
+;; (trampoline my-even? 10000)
+
+(declare my-odd? my-even?)
+
+(defn my-odd? [n]
+  (<link:internal>if</link:internal> (= n 0)
+    false
+    #(my-even? (dec n))))
+
+(defn my-even? [n]
+  (<link:internal>if</link:internal> (= n 0)
+    true
+    #(my-odd? (dec n))))</note-content></text>
+  <last-change-date>2009-08-19T13:12:59.4307770+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-19T13:12:59.4307770+04:00</last-metadata-change-date>
+  <create-date>2009-08-19T13:00:13.5418220+04:00</create-date>
+  <cursor-position>687</cursor-position>
+  <width>696</width>
+  <height>460</height>
+  <x>680</x>
+  <y>178</y>
+  <open-on-startup>False</open-on-startup>
+</note>

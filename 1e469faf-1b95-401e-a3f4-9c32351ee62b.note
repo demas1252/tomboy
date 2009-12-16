@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Concurrency in Erlang 2</title>
+  <text xml:space="preserve"><note-content version="0.1">Concurrency in Erlang 2
+
+Более грамотная реализация <link:internal>Concurrency in Erlang 1</link:internal>.
+
+<italic>-module(area_server2).
+-export([start/0, area/2]).
+
+start()-&gt;
+    spawn(fun loop/0).
+
+area(Pid, What)-&gt;
+    <link:internal>rpc</link:internal></italic><italic>(Pid,What).
+
+<link:internal>rpc</link:internal></italic><italic>(Pid,Request)-&gt;
+    Pid ! {self(), Request},
+    receive
+	{Pid,Responce}-&gt;
+	    Responce
+    end.
+
+loop()-&gt;
+    receive
+	{From, {rectangle,Width,Ht}}-&gt;
+	    From ! {self(), Width * Ht},
+	    loop();
+	{From, {circle, R}} -&gt;
+	    From ! {self(), 3.14159 * R * R},
+	    loop();
+	{From, <link:internal>Other</link:internal></italic><italic>} -&gt;
+	    From ! {self(), {error, <link:internal>Other</link:internal></italic><italic>}},
+	    loop()
+end.</italic>
+
+Pid=area_server2:start().
+&lt;0.38.0&gt;
+3&gt; area_server2:area(Pid, {rectangle, 10, 8}).
+80</note-content></text>
+  <last-change-date>2009-01-21T22:50:15.2982610+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-21T22:50:15.2982610+03:00</last-metadata-change-date>
+  <create-date>2009-01-21T22:48:06.9094830+03:00</create-date>
+  <cursor-position>552</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>623</x>
+  <y>526</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Дополнительные Python-библиотеки</title>
+  <text xml:space="preserve"><note-content version="0.1">Дополнительные Python-библиотеки
+
+    * <link:internal>PyCallGraph</link:internal>
+    * <link:internal>CSV</link:internal>
+    * <link:url>http://www.openqa.org/pywinauto/</link:url>
+    * <link:internal>BeautifulSoap</link:internal>
+    <link:internal>* SqlAlchemy</link:internal></note-content></text>
+  <last-change-date>2009-04-11T16:02:13.2100400+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-11T16:02:13.2100400+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:13:35.4233230+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>7</x>
+  <y>71</y>
+  <open-on-startup>False</open-on-startup>
+</note>

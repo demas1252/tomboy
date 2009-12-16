@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Конвертирование flv</title>
+  <text xml:space="preserve"><note-content version="0.1">Конвертирование flv
+
+sudo <link:internal>apt-get</link:internal> install ffmpeg
+
+ffmpeg -i jokes.flv -ab 56 -ar 22050 -b 500 -s 320×240 jokes.mpg
+
+      jokes.flv is the file you want to convert, so the name must be the same as the source file.You can name jokes.mpg whatever you want as long as it has the .mpg extension.
+      -b bitrate: set the <link:internal>video</link:internal> bitrate in kbit/s (default = 200 kb/s)
+      -ab bitrate: set the audio bitrate in kbit/s (default = 64)
+      -ar sample rate: set the audio samplerate in Hz (default = 44100 Hz)
+      -s size: set frame size. The format is WxH (default 160×128 )</note-content></text>
+  <last-change-date>2009-10-17T22:10:50.5604530+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:50.5604530+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:59:02.2134890+03:00</create-date>
+  <cursor-position>19</cursor-position>
+  <width>614</width>
+  <height>360</height>
+  <x>657</x>
+  <y>200</y>
+  <open-on-startup>False</open-on-startup>
+</note>

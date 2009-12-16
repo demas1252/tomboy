@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формула Бернулли</title>
+  <text xml:space="preserve"><note-content version="0.1">Формула Бернулли
+
+Допустим при проведении испытания <link:internal>вероятность</link:internal> события A = p.
+Надо определить какова <link:internal>вероятность</link:internal>, что при проведении n испытаний событие A произойдет m раз.
+
+<bold>Ответ:</bold>
+
+P=C(m из n) * p^m * (1-p)^(n-m).
+
+События должны быть независимы.
+
+<bold>Пример:</bold>
+
+Бросаем монету 10 раз. Какова <link:internal>вероятность</link:internal> двукратного появления герба?
+P = С(2/10) * 0,5^2 * 0,5^8 = 0,04
+</note-content></text>
+  <last-change-date>2009-06-29T13:22:02.8757210+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-29T13:22:02.8757210+04:00</last-metadata-change-date>
+  <create-date>2009-06-29T13:09:13.6695130+04:00</create-date>
+  <cursor-position>258</cursor-position>
+  <width>788</width>
+  <height>363</height>
+  <x>204</x>
+  <y>407</y>
+  <open-on-startup>False</open-on-startup>
+</note>

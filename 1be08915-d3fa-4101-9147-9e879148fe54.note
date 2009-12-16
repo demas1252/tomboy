@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>PurchBookVATProcessLogTransOper_RU</title>
+  <text xml:space="preserve"><note-content version="0.1">PurchBookVATProcessLogTransOper_RU
+
+С помощью метода <italic>usedAmount()</italic> этой таблицы получаются две величины - <italic>usedAmount</italic> и blockedAmount. Для получения первой последний параметр метода доджен быть false, для получения второй - true.
+
+<italic>sum(AmountLiableToVAT, TaxAmount)
+from PurchBookVatProcessLogTransOpen_RU
+exists join PurchBookVatProcessLogTrans_RU</italic>
+
+</note-content></text>
+  <last-change-date>2009-01-25T12:49:38.7441840+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-25T12:49:38.7441840+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:01:03.0094240+03:00</create-date>
+  <cursor-position>347</cursor-position>
+  <width>450</width>
+  <height>279</height>
+  <x>1039</x>
+  <y>576</y>
+  <open-on-startup>False</open-on-startup>
+</note>

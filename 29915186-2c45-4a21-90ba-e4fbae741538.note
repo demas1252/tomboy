@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Файловые системы</title>
+  <text xml:space="preserve"><note-content version="0.1">Файловые системы
+
+<link:internal>Filesystems internals</link:internal>
+<link:internal>Linux directory structure</link:internal>
+<link:internal>Ubuntu убивает винты</link:internal>
+<link:internal>Использование UUID</link:internal>
+<link:internal>SysStat</link:internal>
+<link:internal>Сменить владельца папки</link:internal>
+<link:internal>Отключить проверку дисков</link:internal>
+<link:internal>hdparm</link:internal>
+<link:internal>Установка нового винчестера</link:internal>
+<link:internal>Разметка винта на ноуте</link:internal>
+<link:internal>Переместить home на отдельную партицию</link:internal>
+<link:internal>GmailFS</link:internal>
+<link:internal>Примонтировать Box.Net</link:internal>
+<link:internal>Примонтировать cd image</link:internal>
+<link:internal>Установить метку диска</link:internal>
+<link:internal>Отключить проверку диска при загрузке</link:internal>
+<link:internal>Grub</link:internal>
+<link:internal>Примонтировать ISO</link:internal>
+<link:internal>Db</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.9814250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.9814250+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:35:39.8781320+03:00</create-date>
+  <cursor-position>393</cursor-position>
+  <width>451</width>
+  <height>430</height>
+  <x>1155</x>
+  <y>527</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Eponymous Laws Of Software Development</title>
+  <text xml:space="preserve"><note-content version="0.1">Eponymous Laws Of Software Development
+
+
+     * Be conservative in what you send, liberal in what you accept
+     * Work expands so as to fill the time available for its completion
+     * Ninety percent of everything is crud
+     * In a hierarchy, every employee tends to rise to his level of incompetence.
+     * A task always takes longer than you expect, even when you take into account Hofstadter’s Law.
+     * Any piece of software reflects the organizational structure that produced it
+     * In cryptography, a system should be secure even <link:internal>if</link:internal> everything about the system, except for a small piece of information — the key — is public knowledge.
+     * Given enough eyeballs, all <link:broken>bugs</link:broken> are shallow.
+     * The time to make a decision is a function of the possible choices he or she has.
+     * People under time pressure don’t think faster.
+     * Inside every large problem is a small problem struggling to get out.
+     * There does not now, nor will there ever, exist a programming language in which it is the least bit hard to write bad programs.
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.4769110+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.4769110+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:51:04.9581190+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>463</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

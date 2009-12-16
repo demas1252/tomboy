@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Tuples in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Tuples in Haskell
+
+В отличии от списков - мы всегда знаем сколько содержится элементов. Также как и в списках - знаем их тип, но, в отличии от списков, типы элементов могут различаться.
+
+<bold>fst - первый элемент</bold>
+
+<italic>&gt; fst("wow", False)
+"Wow"</italic>
+
+<bold>snd - второй элемент</bold>
+
+<italic>&gt; snd("wow", False)
+"False"</italic>
+
+<bold><link:internal>zip</link:internal></bold>
+
+&gt; <link:internal>zip</link:internal>[1,2,3][3,2,1]
+[(1,3),(2,2),(3,1)]
+
+</note-content></text>
+  <last-change-date>2009-10-17T18:07:26.9441250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T18:07:26.9441250+04:00</last-metadata-change-date>
+  <create-date>2009-10-17T17:44:59.4696690+04:00</create-date>
+  <cursor-position>287</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>921</x>
+  <y>179</y>
+  <open-on-startup>False</open-on-startup>
+</note>

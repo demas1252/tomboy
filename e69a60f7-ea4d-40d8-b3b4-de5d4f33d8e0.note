@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Расчет курсовой по подотчетникам</title>
+  <text xml:space="preserve"><note-content version="0.1">Расчет курсовой по подотчетникам
+
+   Фунционал целиком написан GMCS. 
+     Класс gm_ProcessUnrealzedEmpl.  Там строися Query по EmplTrans_Ru, а потом для каждой фетченой проводки выполняется метод exchAdjustTrans():
+         calcExchAdj() - собственно <link:internal>расчет курсовой разницы</link:internal>
+             calcTransBalance() - получаем суммы в валюе операции и основной валюте за вычитом сопоставленного
+         initLedgerVoucher() - подготовка для разноски в ГК (кстати, по этому классу можно делать разноску в ГК)
+         потом создается проводка в EmplTrans_Ru
+         и разносится по ГК
+         потом все повторяется 'под соусом сторнирования курсовой разницы (хрен знает зачем)'
+         и делается запись в таблице сопоставлений (EmplSettlement)</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.3746420+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.3746420+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:11:06.6368529+03:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

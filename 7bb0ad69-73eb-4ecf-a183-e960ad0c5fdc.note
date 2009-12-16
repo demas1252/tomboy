@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Баланс белого</title>
+  <text xml:space="preserve"><note-content version="0.1">Баланс белого
+
+Возьмем лампу накаливания и начнем увеличивать напряжение.  Цвет нити последовательно сменится с красного до оранжевого, желтого, зеленого, белого, голубого, синего и фиолетовых цветов.
+
+В камерах есть преднастроенные режимы баланса белого, автоматический режим, ручная усановка и установка по образцу.</note-content></text>
+  <last-change-date>2009-08-15T21:31:53.1653720+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-15T21:31:53.1653720+04:00</last-metadata-change-date>
+  <create-date>2009-08-15T21:26:07.1342200+04:00</create-date>
+  <cursor-position>317</cursor-position>
+  <width>677</width>
+  <height>360</height>
+  <x>72</x>
+  <y>18</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример работы с Sqlite и С</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Простейший пример работы с Sqlite</link:internal> и С
+
+
+<link:internal>1</link:internal>. Подготавливаем БД
+
+<link:internal>sqlite</link:internal> <link:internal>test</link:internal>_<link:internal>db</link:internal>.<link:internal>db</link:internal>
+&gt; create table <link:internal>test</link:internal>(id integer);
+&gt; insert into <link:internal>test</link:internal> values(<link:internal>1</link:internal>);
+&gt; insert into <link:internal>test</link:internal> values(2);
+&gt; insert into <link:internal>test</link:internal> values(3);
+
+2. Код
+
+#include &lt;stdio.h&gt;
+#include &lt;<link:internal>sqlite</link:internal>3.h&gt;
+#include &lt;stdlib.h&gt;
+
+static int callback(void *<link:internal>NotUsed</link:internal>, int argc, char **argv, char **azColName) {
+  int i;
+  for(i=0; i&lt;argc; i++) {
+     printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+  }
+  printf("\n");
+  return 0;
+}
+
+int main(int argc, char **argv){
+  <link:internal>sqlite</link:internal>3 *<link:internal>db</link:internal>;
+  char *zErrMsg = 0;
+  int rc;
+
+  rc = <link:internal>sqlite</link:internal>3_open("/home/demas/<link:internal>test</link:internal>_<link:internal>db</link:internal>.<link:internal>db</link:internal>", &amp;<link:internal>db</link:internal>);  
+  <link:internal>if</link:internal>(rc) {
+     fprintf(stderr, "Can't open database: %s\n", <link:internal>sqlite</link:internal>3_errmsg(<link:internal>db</link:internal>));
+     <link:internal>sqlite</link:internal>3_close(<link:internal>db</link:internal>);
+     exit(<link:internal>1</link:internal>);
+  }
+
+  rc = <link:internal>sqlite</link:internal>3_exec(<link:internal>db</link:internal>, "select * from <link:internal>test</link:internal>", callback, 0, &amp;zErrMsg);
+  <link:internal>if</link:internal>(rc!= <link:internal>SQLITE</link:internal>_OK) {
+     fprintf(stderr, "<link:internal>SQL</link:internal> error: %s\n", zErrMsg);
+     <link:internal>sqlite</link:internal>3_free(zErrMsg);
+  }
+
+  <link:internal>sqlite</link:internal>3_close(<link:internal>db</link:internal>);
+  exit(0);
+}
+
+3. Компиляция
+
+cc sqlite_<link:internal>test</link:internal>.<link:internal>c</link:internal> -o <link:internal>sqlite</link:internal>_<link:internal>test</link:internal> -<link:internal>lsqlite</link:internal>3
+
+4. Выполнение
+
+./<link:internal>sqlite</link:internal>_<link:internal>test</link:internal> 
+id = <link:internal>1</link:internal>
+id = 2
+id = 3
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.1076020+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.1076020+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:09:05.7858159+03:00</create-date>
+  <cursor-position>211</cursor-position>
+  <width>874</width>
+  <height>967</height>
+  <x>528</x>
+  <y>73</y>
+  <open-on-startup>False</open-on-startup>
+</note>

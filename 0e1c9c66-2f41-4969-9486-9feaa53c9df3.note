@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка событий в GTK</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка событий в GTK
+
+#include &lt;<link:internal>gtk</link:internal>/<link:internal>gtk</link:internal>.h&gt;
+#include &lt;stdio.h&gt;
+
+static int count = 0;
+
+void button_clicked ( GtkWidget *button, gpointer data) {
+  printf("%s pressed %d time(s) \n", (char *) data, ++count);
+}
+
+int main (int argc, char *argv[]) {
+  GtkWidget     *window;
+  GtkWidget     *button;
+
+  <link:internal>gtk</link:internal>_init(&amp;argc, &amp;argv);
+  window = <link:internal>gtk</link:internal>_window_new(<link:internal>GTK</link:internal>_WINDOW_TOPLEVEL);
+  button = <link:internal>gtk</link:internal>_button_new_with_label("Hello World!");
+  <link:internal>gtk</link:internal>_container_<link:internal>add</link:internal>(<link:internal>GTK</link:internal>_CONTAINER(window), button);
+  g_signal_connect(<link:internal>GTK</link:internal>_OBJECT (button), "clicked", <link:internal>GTK</link:internal>_SIGNAL_<link:internal>FUNC</link:internal> (button_clicked), "Button <link:internal>1</link:internal>");
+  <link:internal>gtk</link:internal>_widget_show(button);
+  <link:internal>gtk</link:internal>_widget_show(window);
+  <link:internal>gtk</link:internal>_main ();
+  return 0;
+}</note-content></text>
+  <last-change-date>2009-10-12T12:00:37.6802510+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:37.6802510+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:42:29.4175430+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>1073</width>
+  <height>671</height>
+  <x>250</x>
+  <y>52</y>
+  <open-on-startup>False</open-on-startup>
+</note>

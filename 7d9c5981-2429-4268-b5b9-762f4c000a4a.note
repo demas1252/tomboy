@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация паттерна Command на Python</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Реализация паттерна Command</link:internal> на Python
+
+class FileEditor(object):
+    def set_<link:internal>command</link:internal>(self, <link:internal>command</link:internal>_object):
+        self.<link:internal>command</link:internal>_object = <link:internal>command</link:internal>_object
+
+    def process_<link:internal>command</link:internal>(self, string_process = None):
+        self.<link:internal>command</link:internal>_object(string_process)
+
+    def undo_process(self):
+        self.<link:internal>command</link:internal>_object.undo()
+
+class <link:internal>FileMan</link:internal>(object):
+    def __init__(self, fname):
+        self.fname = fname
+        self.file = None
+
+    def append_line(self, some_str):
+        <link:internal>if</link:internal> not self.file:
+            self.file = open(self.fname, "a")
+        self.file.write(str(some_str))
+        self.close_it()
+
+    def write(self, some_str):
+        <link:internal>if</link:internal> not self.file:
+            self.file = open(self.fname, "w")
+        self.file.write(some_str)
+        self.close_it()
+
+    def read_all(self):
+        <link:internal>if</link:internal> not self.file:
+            self.file = open(self.fname, "r")
+        s = str(self.file.read())
+        self.close_it()
+        return s
+
+    def print_all(self):
+        print self.read_all()
+
+    def close_it(self):
+        <link:internal>if</link:internal> self.file:
+            self.file.close()
+        self.file = None
+
+class <link:internal>Command</link:internal>(object):
+    def __init__(self, request_object = None):
+        self.request_object = request_object
+ 
+class <link:internal>FileReadCommand</link:internal>(<link:internal>Command</link:internal>):
+    def __call__(self, some_str = None):
+        self.request_object.print_all()
+ 
+    def undo(self):
+        <link:internal>pass</link:internal>
+ 
+class FileWriteCommand(<link:internal>Command</link:internal>):   
+    previous_strings = []
+ 
+    def __call__(self,str_write=None):
+        self.request_object.append_line(str_write)
+        self.previous_strings.append(str(str_write))
+ 
+    def undo(self):
+        <link:internal>if</link:internal> not self.previous_strings:
+            print "Nothing to undo "
+        else:
+            all_str = self.request_object.read_all()
+            to_undo = self.previous_strings.pop()
+ 
+            index = all_str.<link:internal>find</link:internal>(to_undo)
+            <link:internal>if</link:internal> index != -1:
+                self.request_object.write(all_str[:index])
+ 
+class CommanManager(<link:internal>Command</link:internal>):   
+    commanders = []
+    def <link:internal>add</link:internal>_commanders(self, *<link:internal>args</link:internal>):
+        self.commanders.extend(<link:internal>args</link:internal>)
+ 
+    def __call__(self,some_str=None):
+        for <link:internal>command</link:internal> in self.commanders:
+            <link:internal>command</link:internal>(some_str)
+ 
+    def undo(self):
+        self.commanders[0].undo()
+        self.commanders[1]()
+
+def <link:internal>test</link:internal>_<link:internal>me</link:internal>_yo():
+    tmp_file = open("some.txt","w")
+    tmp_file.write("hehehe\n")
+    tmp_file.close()
+
+    fe = FileEditor()
+    <link:internal>fileman</link:internal> = <link:internal>FileMan</link:internal>("some.txt")
+    fread = <link:internal>FileReadCommand</link:internal>(<link:internal>fileman</link:internal>)
+    fwrite = FileWriteCommand(<link:internal>fileman</link:internal>)
+    fe.set_<link:internal>command</link:internal>(fread)
+    fe.process_<link:internal>command</link:internal>()
+
+    fe.set_<link:internal>command</link:internal>(fwrite)
+    fe.process_<link:internal>command</link:internal>("<link:internal>add</link:internal> some text here")
+    fe.set_<link:internal>command</link:internal>(fread)
+    fe.process_<link:internal>command</link:internal>()
+
+    cm = CommanManager()
+    cm.<link:internal>add</link:internal>_commanders(fwrite,fread)
+    fe.set_<link:internal>command</link:internal>(cm)
+
+    fe.process_<link:internal>command</link:internal>("\n <link:internal>Add</link:internal> <link:internal>another</link:internal> sting here ")
+    print "First undo :"
+    fe.undo_process()
+    print "Second undo :"
+    fe.undo_process()
+    print "Thirrd undo :"
+    fe.undo_process()
+
+<link:internal>test</link:internal>_<link:internal>me</link:internal>_yo()       
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.0543700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.0543700+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:07:31.4207760+03:00</create-date>
+  <cursor-position>72</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

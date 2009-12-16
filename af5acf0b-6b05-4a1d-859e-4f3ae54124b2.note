@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Assigment in Finction</title>
+  <text xml:space="preserve"><note-content version="0.1">Assigment in Finction
+
+Swap:
+
+&lt;&lt;pre
+(define x 1)
+(define y 2)
+
+(define (swap x0 y0)
+  (begin
+    (set! x y0)
+    (set! y x0)
+    )
+  )
+  
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; x
+1
+&gt; y
+2
+&gt; (swap x y)
+(void)
+&gt; x
+2
+&gt; y
+1
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T22:00:11.0058329+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T22:00:11.0058329+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:00:10.1074540+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

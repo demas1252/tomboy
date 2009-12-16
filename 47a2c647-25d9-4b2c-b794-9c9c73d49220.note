@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Содержит ли строка набор символов</title>
+  <text xml:space="preserve"><note-content version="0.1">Содержит ли строка набор символов
+
+def containsAny(str, set):
+    """ Check whether sequence str contains ANY of the items in set. """
+    return 1 in [<link:internal>c</link:internal> in str for <link:internal>c</link:internal> in set]
+
+def containsAll(str, set):
+    """ Check whether sequence str contains ALL of the items in set. """
+    return 0 not in [<link:internal>c</link:internal> in str for <link:internal>c</link:internal> in set]
+    
+
+[<link:internal>c</link:internal> in str for <link:internal>c</link:internal> in set] -&gt; [True, False,....] - нахождение каждого элемента множества в строке
+1 in -&gt; есть ли там True
+0 not in -&gt; там нет False </note-content></text>
+  <last-change-date>2008-03-28T13:09:41.2122940+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T13:09:41.2122940+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T13:09:39.1872210+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

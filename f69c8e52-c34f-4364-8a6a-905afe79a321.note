@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поменять Collation у существующей базы</title>
+  <text xml:space="preserve"><note-content version="0.1">Поменять Collation у существующей базы
+
+ALTER DATABASE DBNAME
+COLLATE Cyrillic_General_CI_AS
+
+Посмотреть коллации можно так
+
+SELECT *
+FROM ::fn_helpcollations()
+
+Но, изменения collate у все бд не изменит collate у символьных полей существующих таблиц. Это придеться тоже менять. Кроме того, если collate Вашей бд будет отличаться от серверного, то могут быть проблемы при работе с <link:internal>tempdb</link:internal>.
+
+<link:url>http://www.<link:internal>sql</link:internal></link:url><link:url>.ru/forum/actualthread.aspx?tid=147286</link:url></note-content></text>
+  <last-change-date>2009-10-12T12:00:21.3050790+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.3050790+04:00</last-metadata-change-date>
+  <create-date>2009-09-20T14:40:54.5845730+04:00</create-date>
+  <cursor-position>390</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>922</x>
+  <y>404</y>
+  <open-on-startup>False</open-on-startup>
+</note>

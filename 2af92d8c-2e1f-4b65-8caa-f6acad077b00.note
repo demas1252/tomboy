@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Cколько времени работает моя функция</title>
+  <text xml:space="preserve"><note-content version="0.1">Cколько времени работает моя функция
+
+&lt;&lt;pre
+(define fib
+  (<link:internal>lambda</link:internal> (n)
+    (<link:internal>if</link:internal> (&lt; n 2)
+        n
+        (+ (fib (- n <link:internal>1</link:internal>))
+           (fib (- n 2))))))
+           
+&gt;&gt;
+
+&gt; (time (fib 25))
+cpu time: 744 real time: 751 gc time: 0
+75025</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.9863500+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.9863500+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:12:26.6613910+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>571</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

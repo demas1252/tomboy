@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разрастание СУБД в следствие отсутствия кластерных индексов</title>
+  <text xml:space="preserve"><note-content version="0.1">Разрастание СУБД в следствие отсутствия кластерных индексов
+
+
+Проблема следующая. Работала себе база и работала. ~650 Мб была всю жизнь. Потом резко выросла до ~18Гб за 2 недели без причин... Т.е. ничего не меняли в настройках ни скл сервера, ни винды, а объемы вносимых данных теже что и были.
+
+sp_spaceused @updateusage = 'TRUE'
+
+<link:internal>db</link:internal>_name = copy_<link:internal>test</link:internal>
+<link:internal>db</link:internal>_size = 16444.94 MB
+<link:internal>db</link:internal>_unallocated_space = 60.09 MB
+reserved = 16776040 KB
+data = 2431200 KB
+index_size = 139264 KB
+<link:internal>unused</link:internal> = 14205576 KB
+
+DBCC SHRINKDATABASE(MyBase, 5)
+sp_spaceused @updateusage = 'TRUE'
+
+<link:internal>db</link:internal>_name = copy_<link:internal>test</link:internal>
+<link:internal>db</link:internal>_size = 16444.94 MB
+<link:internal>db</link:internal>_unallocated_space = 60.09 MB
+reserved = 16776040 KB
+data = 2431200 KB
+index_size = 139264 KB
+<link:internal>unused</link:internal> = 14205576 KB
+короч эффекта 0
+
+DBCC SHRINKFILE(&lt;Логическое имя файла данных&gt;, 3000)
+
+не помогло. все тоже самое.
+
+Посмотрим хит-парад таблиц. Что вернет?
+
+use ваша_база
+select top 20 object_name(id) tbl, indid ,
+reserved/128. as reserv, 
+dpages/128. as data,
+(reserved - dpages)/128. as delta from sysindexes
+where indid in (0,<link:internal>1</link:internal>)
+order by 4 desc
+
+*** 0 7044.601562 1006.320312 6038.281250
+*** 0 3852.914062 509.398437 3343.515625
+*** 0 3238.164062 440.921875 2797.242187
+*** 0 1239.976562 176.117187 1063.859375
+...
+
+В первых 6 таблицах-кучах сосредоточено практически все неиспользованное пространство.
+Что вернет:  dbcc showcontig('имя_таблицы')  для первых 3-х таблиц?
+
+первая
+DBCC SHOWCONTIG scanning '***' table...
+Table: '***' (1053246807); index ID: 0, database ID: 11
+TABLE level scan performed.
+- Pages Scanned................................: 128809
+- Extents Scanned..............................: 112718
+- Extent Switches..............................: 112717
+- Avg. Pages per Extent........................: <link:internal>1</link:internal>.<link:internal>1</link:internal>
+- Scan Density [Best Count:Actual Count].......: 14.29% [16102:112718]
+- Extent Scan Fragmentation ...................: 53.14%
+- Avg. Bytes Free per Page.....................: 6572.0
+- Avg. Page Density (full).....................: *18.80%*
+DBCC execution completed. <link:internal>If</link:internal> DBCC printed error messages, contact your system administrator.
+
+Улавливаете??
+Очередной привет любителям таблиц без кластерных индексов. ;)
+Чтобы освободить место возможны 2 варианта в данном случае:
+<link:internal>1</link:internal>) создать кластерный индекс по таким таблицам, выполнить шринк, удалить кластерный индекс
+2) создать кластерный индекс по таким таблицам, выполнить шринк, оставить кластерный индекс.
+Создание кластерного индекса избавит от внутреней фрагментации страниц. Во втором варианте стоит внимательно подойти к кандидату на ключи к кластерному
+
+Соббсно помогает!!! Спасибо огромное!!!
+И еще вопрос, если можно? Из-за чего токая проблема могла появиться? С чего вдруг базу так "расколбасило"? Причем очень резко(срок 2 недели)...
+
+Собственно, причина в кучах. такие таблицы не подвержены ни экстентовой дефрагментации, ни внутреней. Вероятно, что-то массово вставляли, удаляли, обновляли. То неиспользуемое пространство - это лишь дыры в страницах.
+И проблема даже не в том, что база стала разрослась - дисковое пространство не дорогое. А в том, что чтобы выполнить скан такой таблицы необходимо прочитать в 5-15 раз больше страниц, нежели необходимо.
+
+p.s. Кстати, вот этот index ID: 0 как раз и говорит о том, что нет класерного индекса.
+
+~~~~~~~~~~~~~~~~~
+
+<link:internal>Дефрагментация куч в ms sql 2008</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:56.6598120+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:56.6598120+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:30:26.0024710+04:00</create-date>
+  <cursor-position>2139</cursor-position>
+  <width>1018</width>
+  <height>688</height>
+  <x>63</x>
+  <y>197</y>
+  <open-on-startup>False</open-on-startup>
+</note>

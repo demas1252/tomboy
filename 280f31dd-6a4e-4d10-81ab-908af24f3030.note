@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1">Scheme
+
+<bold>Основы</bold>
+
+<bold><link:internal>How To Design A Program</link:internal></bold>
+<bold><link:internal>SICP</link:internal></bold>
+
+<bold>Синтаксис</bold>
+<link:internal>Local Binding with define, let и let*</link:internal>
+<link:internal>List, Iteration and Recursion</link:internal>
+<link:internal>Pairs and Lists</link:internal>
+<link:internal>Hash Tables</link:internal>
+<link:internal>Apply in Scheme</link:internal>
+<link:internal>Currying in Scheme</link:internal>
+<link:internal>Функция возвращающая несколько значений</link:internal>
+<link:internal>Modules</link:internal>
+<link:internal>Scheme Macros</link:internal>
+<link:internal>Let</link:internal>
+
+<bold>Идеология</bold>
+<link:internal>Рекурсивный процесс vs рекурсивная процедура</link:internal>
+<link:internal>Процедуры высшего порядка</link:internal>
+<link:internal>Currying</link:internal>
+<link:internal>Closure</link:internal> (замыкания)
+<link:internal>Quasiquotation</link:internal>
+
+<bold>Scheme Cookbook</bold>
+<link:internal>Strings in Schema</link:internal>
+<link:internal>Эмуляция циклов в Scheme</link:internal>
+<link:internal>Вывод отладочной информации в Scheme</link:internal>
+<link:internal>Cколько времени работает моя функция</link:internal>
+<link:internal>GUI на Scheme</link:internal>
+<link:internal>Ввод и вывод в Scheme</link:internal>
+
+<bold>Примеры</bold>
+<link:internal>Факториал на sheme</link:internal>
+<link:internal>Фибоначчи на scheme</link:internal>
+<link:internal>a в степени n на sheme</link:internal>
+<link:internal>Sequences And Series</link:internal>
+
+<bold>Тонкости</bold>
+<link:internal>Install scheme on Linux</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:23.8270300+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:23.8270300+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T17:35:26.8305450+03:00</create-date>
+  <cursor-position>15</cursor-position>
+  <width>491</width>
+  <height>608</height>
+  <x>151</x>
+  <y>291</y>
+  <open-on-startup>False</open-on-startup>
+</note>

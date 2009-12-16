@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск пути в простом графе Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск пути в простом графе Scheme
+
+Допустим у нас есть простой граф, где каждая вершина связана только с одной вершиной:
+
+&lt;&lt;pre
+(define lst (list (list 'A 'B) 
+                       (list 'B '<link:internal>C</link:internal>) 
+                       (list '<link:internal>C</link:internal> 'E) 
+                       (list 'D 'E) 
+                       (list 'E 'B) 
+                       (list 'F 'F)))  
+    
+&gt;&gt;
+
+Надо написать алгоритм поиска пути.  Если мы будем действовать как всегда то мы можем породить что-то типа этого:
+
+&lt;&lt;pre
+;; route-exists? : node node simple-graph -&gt; boolean 
+;; to determine whether there is a route from orig to dest in sg 
+(define (route-exists? orig dest sg) 
+  (cond 
+    [(symbol=? orig dest) true] 
+    [else (route-exists? (neighbor orig sg) dest sg)])) 
+;; neighbor : node simple-graph -&gt; node 
+;; to determine the node that is connected to a-node in sg 
+(define (neighbor a-node sg) 
+  (cond 
+    [(empty? sg) (error "neighbor: impossible")] 
+    [else (cond 
+      [(symbol=? (first (first sg)) a-node) 
+       (second (first sg))] 
+      [else (neighbor a-node (rest sg))])])) 
+      
+&gt;&gt;
+
+Проблема с этим алгоритмом в том, что он не содержит возврата false, а если мы выполним его пошагово, то увидим, что он зациклится:
+
+&lt;&lt;pre
+(route-exists? '<link:internal>C</link:internal> 'D '((A B) (B <link:internal>C</link:internal>) (<link:internal>C</link:internal> E) (D E) (E B) (F F))) 
+= (route-exists? 'E 'D '((A B) (B <link:internal>C</link:internal>) (<link:internal>C</link:internal> E) (D E) (E B) (F F))) 
+= (route-exists? 'B 'D '((A B) (B <link:internal>C</link:internal>) (<link:internal>C</link:internal> E) (D E) (E B) (F F))) 
+= (route-exists? '<link:internal>C</link:internal> 'D '((A B) (B <link:internal>C</link:internal>) (<link:internal>C</link:internal> E) (D E) (E B) (F F)))
+
+&gt;&gt;
+
+Поэтому ее надо переписать в другом виде - с переменной накопления:
+
+&lt;&lt;pre
+;; route-exists2? : node node simple-graph -&gt; boolean 
+;; to determine whether there is a route from orig to dest in sg 
+(define (route-exists2? orig dest sg) 
+  (local ((define (re-accu? orig dest sg accu-seen) 
+            (cond 
+              [(symbol=? orig dest) true] 
+              [(contains orig accu-seen) false] 
+              [else (re-accu? (neighbor orig sg) dest sg (cons orig accu-seen))])))  
+    (re-accu? orig dest sg empty))) 
+    
+(define (contains element a-list-of-symbols)
+  (cond
+    [(empty? a-list-of-symbols) false]
+    [else (cond [(symbol=? (first a-list-of-symbols) element) true]
+                [else (contains element (rest a-list-of-symbols))])]))
+                
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-28T22:53:50.4184579+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T22:53:50.4184579+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:02:25.0512450+03:00</create-date>
+  <cursor-position>62</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

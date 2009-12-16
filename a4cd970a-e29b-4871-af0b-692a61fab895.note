@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Repetition in Ruby Regexp</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Repetition in Ruby</link:internal> Regexp
+
+r* - 0 и больше
+r+ - 1 и больше
+r? - 1 или 0
+r{m,n}
+r{m,}
+r{m}
+
+show_regexp('The moon is made', /\w+.) - &gt; &lt;&lt;The&gt;&gt; moon is....
+</note-content></text>
+  <last-change-date>2009-03-23T21:28:27.7279670+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:28:27.7279670+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:28:22.5554440+03:00</create-date>
+  <cursor-position>60</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>6</x>
+  <y>454</y>
+  <open-on-startup>False</open-on-startup>
+</note>

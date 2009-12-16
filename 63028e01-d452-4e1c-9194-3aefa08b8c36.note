@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Русские буквы в Emacs</title>
+  <text xml:space="preserve"><note-content version="0.1">Русские буквы в Emacs
+
+в файле<link:url> ~/.XResources</link:url>
+<link:internal>Emacs</link:internal>*font: -*-*-medium-r-normal-*-14-*-*-*-*-*-iso10646-1
+
+В файле<link:url> ~/.<link:internal>emacs</link:internal></link:url>
+(set-default-font "-*-*-medium-r-normal-*-14-*-*-*-*-*-iso10646-1")
+
+(set-language-environment 'UTF-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'mule-utf-8)
+(setq default-input-method 'russian-computer)
+
+(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))</note-content></text>
+  <last-change-date>2009-10-12T12:00:36.6248250+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:36.6248250+04:00</last-metadata-change-date>
+  <create-date>2008-07-25T23:30:10.4386160+04:00</create-date>
+  <cursor-position>45</cursor-position>
+  <width>812</width>
+  <height>419</height>
+  <x>792</x>
+  <y>477</y>
+  <open-on-startup>False</open-on-startup>
+</note>

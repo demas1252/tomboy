@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Folds functions in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Folds functions in Haskell
+
+<list><list-item dir="ltr">функция \  (от двух аргументов)
+</list-item><list-item dir="ltr">нач значение 0
+</list-item><list-item dir="ltr">список xs</list-item></list>
+
+<italic>sum' :: (Num a) =&gt; [a] -&gt; a  
+sum' xs = foldl (\acc x -&gt; acc + x) 0 xs </italic>
+
+<italic>sum'' :: (Num a) =&gt; [a] -&gt; a
+sum'' = foldl (+) 0
+
+elem' :: (Eq a) =&gt; a -&gt; [a] -&gt; Bool
+elem' y ys = foldl (\acc x -&gt; <link:internal>if</link:internal></italic><italic> x == y then True else acc) False ys
+
+<link:internal>map</link:internal></italic><italic>' :: (a-&gt;b) -&gt;[a] -&gt; [b]
+<link:internal>map</link:internal></italic><italic>' f xs = foldr (\x acc -&gt; f x : acc) [] xs</italic></note-content></text>
+  <last-change-date>2009-11-05T14:00:23.0218190+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T14:00:23.0218190+03:00</last-metadata-change-date>
+  <create-date>2009-11-05T13:51:41.6383350+03:00</create-date>
+  <cursor-position>122</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>966</x>
+  <y>448</y>
+  <open-on-startup>False</open-on-startup>
+</note>

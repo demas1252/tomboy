@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Узнать Oracle_home</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Узнать Oracle</link:internal>_home
+
+
+   1. HKEY_LOCAL_MACHINESOFTWAREORACLE - там есть раздел(ы)HOME0,HOME1,HOME2(если их несколько если один то HOME0).Отвечает за путь параметр <link:internal>ORACLE</link:internal>_HOME.
+   2. Можно попробовать так:
+      select file_spec from dba_libraries where library_name = 'DBMS_SUMADV_LIB';
+      Вернет путь к какой-то dll - но по пути dll можно предположить <link:internal>oracle</link:internal>_home.
+   3. В 10-ке
+      set autopri on
+      var <link:internal>oracle</link:internal>_home varchar2(255)
+      exec dbms_system.get_env('<link:internal>ORACLE</link:internal>_HOME',:<link:internal>ORACLE</link:internal>_HOME)
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.7274230+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.7274230+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:46:38.2176280+03:00</create-date>
+  <cursor-position>47</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перестановки</title>
+  <text xml:space="preserve"><note-content version="0.1">Перестановки
+
+Перестановкой конечного множества называют некоторое расположение его элементов в ряд.
+
+*Инверсии*
+
+a1,a2,an - <link:internal>перестановка</link:internal> множества {1,2..n}
+(ai, aj) - инверсия перестановки, если i&lt;j и ai&gt;aj.
+
+То есть, инверсия - это каждый случай когда предшествующий элемент больше последующего.  
+Следовательно единственная <link:internal>перестановка</link:internal> не содержащая инверий - упорядоченная <link:internal>перестановка</link:internal>.
+
+<link:internal>Поиск всех инверсий в перестановке</link:internal>
+
+*Таблица инверсий*
+
+bj - число элементов справа от j, больших, чем j: 591826473 -&gt; 236402210 (всего 20 инверсий).  То есть, 5 и 9 левее 1 -&gt;2 и так далее.
+
+По определению: bn=0; 0&lt;=b(n-1)&lt;=1; 0&lt;=b(n-2)&lt;=n-2 ... 0&lt;=b1&lt;=n-1
+
+<link:internal>Получение таблицы инверсий</link:internal>
+
+_Таблица инверсий однозначно определяет перестановку._
+
+Идем справа по таблице инверсий:
+
+9
+98 (т.к. 1)
+987
+9867
+...
+<link:internal>Получение перестановки по таблице инверсий</link:internal>
+
+*Обратная <link:internal>перестановка</link:internal>*
+
+Это когда мы нумеруем сущесвующую перестановку, а потом сортируем ее.  При этои, порядковые номера, получившиеся после <link:internal>сортировки</link:internal> основной перестановки и есть обратная <link:internal>перестановка</link:internal>:
+591826473 -&gt; 359716842
+
+Обратная <link:internal>перестановка</link:internal> содержит столько же инверсий, сколько и исходная.</note-content></text>
+  <last-change-date>2009-06-02T11:50:38.6531660+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-02T11:50:38.6531660+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:12:25.5657560+03:00</create-date>
+  <cursor-position>839</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>300</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

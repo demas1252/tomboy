@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Маша и Саша хотят сидеть вместе</title>
+  <text xml:space="preserve"><note-content version="0.1">Маша и Саша хотят сидеть вместе
+
+10 человек встречают новый год.  Рассаживаются случайным образом за круглым столом. Какова <link:internal>вероятность</link:internal>, что Маша и Саша окажутся рядом?
+
+10 человек могут усесться за стол 10! разными способами.  Ну - это понятно. У первого 10 вариантов, у второго 9 и так далее - см <link:internal>Комбинаторика</link:internal>.
+
+Теперь опрелелим кол-во благоприятных вариантов.  Маша может сесть на 10 мест и для каждого из этих мест Саша может сесть с двух сторон от нее - то есть, кажется, что всего 20.
+
+Но это не совсем правильно, так как для каждого из этих 20 вариантов гости тоже могут по разному занять оставшиеся 8 мест. Нам не важно как они там сядут - все эти варианты нам благоприятны. И таких вариантов 8!.
+
+А значит искомая <link:internal>вероятность</link:internal> 20*18!/20! = 2/9.</note-content></text>
+  <last-change-date>2009-06-10T10:01:01.1209750+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:01:01.1209750+04:00</last-metadata-change-date>
+  <create-date>2009-06-10T10:00:52.0709910+04:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1004</x>
+  <y>424</y>
+  <open-on-startup>False</open-on-startup>
+</note>

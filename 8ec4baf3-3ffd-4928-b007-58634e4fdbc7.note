@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Роутинг в Arch</title>
+  <text xml:space="preserve"><note-content version="0.1">Роутинг в Arch
+
+все сделано за нас, будь внимательнее.
+ в<link:url> /etc/rc.conf</link:url> (главный конфигурационный файл) есть такие строки:
+
+<italic> gateway="default gw 192.168.32.1"
+ ROUTES=(gateway)
+</italic> 
+ это те маршруты, которые будут созданы при загрузке. все, что попадет в массив ROUTES, будет дословно передано команде "route <link:internal>add</link:internal>".
+ применять следует приблизительно так:
+ 
+<italic> dgateway="default gw 192.168.32.1"
+ homenet="10.0.0.0 gw 192.168.32.18"
+ mynet="10.20.30.0/24 gw 192.168.18.9 metric 12"
+ ROUTES=(dgateway homenet mynet)</italic>
+
+Мой случай: -net 10.40.0.0 netmask 255.255.0.0 gw 10.50.3.8
+
+<italic>dmz=" -net 10.40.0.0/16 gw 10.50.3.8"</italic>
+</note-content></text>
+  <last-change-date>2008-12-29T21:49:19.0084568+03:00</last-change-date>
+  <last-metadata-change-date>2008-12-29T21:49:19.0084568+03:00</last-metadata-change-date>
+  <create-date>2008-12-25T12:53:15.8664990+03:00</create-date>
+  <cursor-position>567</cursor-position>
+  <width>515</width>
+  <height>417</height>
+  <x>1051</x>
+  <y>66</y>
+  <open-on-startup>False</open-on-startup>
+</note>

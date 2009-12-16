@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Финансы</title>
+  <text xml:space="preserve"><note-content version="0.1">Финансы
+
+<link:internal>Разноска в ГК и корреспонденция</link:internal>
+<link:internal>Бюджетирование</link:internal>
+<link:internal>Стандартные налоговые регистры</link:internal>
+<link:internal>Выбор решения для консолидации на Ах</link:internal> 
+<link:internal>Основные средства</link:internal>
+<link:internal>Закрытие и распределение</link:internal>
+<link:internal>Периоды в ГК</link:internal>
+<link:internal>Разбиение журналов</link:internal>
+<link:internal>Консолидация GMCS</link:internal>
+<link:internal>Журналы ГК</link:internal>
+<link:internal>Финансовое сальдо</link:internal>
+<link:internal>Финансовые аналитики</link:internal>
+<link:internal>Закрытие финансового года</link:internal>
+<link:internal>Учет налогов</link:internal>
+<link:internal>Сторно vs реверс</link:internal>
+<link:internal>Cost Accounting</link:internal>
+
+<link:internal>Предоплаты полученные. НДС к вычету</link:internal>.
+
+<link:internal>Cost Aaaccounting 2</link:internal></note-content></text>
+  <last-change-date>2009-11-16T10:17:40.1738160+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-16T10:17:40.1738160+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:29:29.3606630+03:00</create-date>
+  <cursor-position>363</cursor-position>
+  <width>451</width>
+  <height>400</height>
+  <x>129</x>
+  <y>357</y>
+  <open-on-startup>False</open-on-startup>
+</note>

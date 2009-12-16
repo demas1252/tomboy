@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Типы данных в JavaScript</title>
+  <text xml:space="preserve"><note-content version="0.1">Типы данных в JavaScript
+
+Три основных типа: number, string, boolean.
+Два специальных значения: null, unknown.
+Составные типы данных: объекты(например, String, Math, Date) и массивы.
+
+Объявление:
+    var a = 10;
+
+Типы можно менять в ходе скрипта, хотя ради читабельности не рекомендуется.
+
+Преобразование типов - явное и неявное:  Number(), parseFloat() - во float, parseInt() - в int.
+
+<italic>См. также:</italic>
+<link:internal>String JavaScript Object</link:internal>
+<link:internal>Date JavaScript Object</link:internal>
+<link:internal>Math JavaScript Object</link:internal>
+<link:internal>Array Javascript Object</link:internal>
+</note-content></text>
+  <last-change-date>2009-07-31T12:28:07.4892140+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-31T12:28:07.4892140+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:04:41.3304219+03:00</create-date>
+  <cursor-position>385</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Себестоимость и закрытие склада</title>
+  <text xml:space="preserve"><note-content version="0.1">Себестоимость и закрытие склада
+
+
+<link:internal>Зачем нужно закрывать склад</link:internal>
+     
+<bold>См. также:</bold>
+<link:internal>мгновенная средняя себестоимость</link:internal>
+<link:internal>как работает lifo</link:internal>
+<link:internal>средняя и средняя на дату</link:internal>
+<link:internal>отличие lifo от lifo на дату</link:internal>
+<link:internal>система не проверяет порядок приходов и расходов</link:internal>        
+<link:internal>прогон коррекций себестоимости по графу движения товара</link:internal>
+циклы в графе сопостовления
+<link:internal>ограничение итераций прогона себестоимости</link:internal>
+        
+<link:internal>разноска в ГК</link:internal>
+     
+<bold>Дополнительные фенечки</bold>
+параллельное закрытие склада
+как мониторить закрытие склада
+<link:internal>пересчет склада</link:internal>
+<link:internal>партионная себестоимость</link:internal>
+<link:internal>проблема один_лот-одна_себестоимость</link:internal>
+<link:internal>себестоимость и возвраты</link:internal>
+<link:internal>ошибки округления и корректировки</link:internal>
+<link:internal>стандартная себестоимость</link:internal>
+<link:internal>закрытие склада по услугам</link:internal>
+<link:internal>отрицательный складской остаток</link:internal>
+     
+<bold>Таблицы</bold>
+<link:internal>InventSettlement</link:internal>
+<link:internal>InventTrans</link:internal>
+
+<bold>Problems</bold>
+<link:internal>в переносе откорректировалась только расходная проводка</link:internal>
+
+<bold><link:broken>Bugs</link:broken></bold>     
+<link:internal>bug - пересчет себестоимости в заказах созданных по контракту</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:24.6527290+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:24.6527290+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:26:31.3470670+03:00</create-date>
+  <cursor-position>756</cursor-position>
+  <width>450</width>
+  <height>864</height>
+  <x>374</x>
+  <y>124</y>
+  <open-on-startup>False</open-on-startup>
+</note>

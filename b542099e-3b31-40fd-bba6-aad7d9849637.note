@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переоценка курсовых разниц</title>
+  <text xml:space="preserve"><note-content version="0.1">Переоценка курсовых разниц
+
+Периодическая операция в поставщиках.
+
+form VendExchRateAdjustment
+class VendExchAdjustment -&gt; CustVendExchAdjustment
+        VendExchAdjustmentTrans -&gt; CustVendExchAdjustmentTrans
+
+query VendRateAjustment  (VendTable -&gt; VendTrans -&gt; VendTransOpen)
+
+Собственно это основной цикл - по открытым проводкам по поставщику, который мы можем ограничить, например, наложив фильтр по контрагенту.  Кроме того, дополнительно всегда накладываются фильты по типу проводки (ExchAdjustment) и по дате (&lt;введенной).
+
+Здесь логика разделяется в зависимости от настройки в параметрах ГК.
+
+CVEAT.processOpenTrans_W()
+          .exchAdjustTrans()
+      
+Currency,mstAmount() - похоже этот метод считает новую сумму по проводке
+  на вход:  сумма и валюта из проводки, и дата, которая берется из метода (пока это курс с формы)
+
+    здесь мы смотрим курс на эту дату
+    и пересчитываем переданную сумму с учетом нового курса
+
+           То есть накладная 100$ - 10000 руб
+           Оплата 100$                   - 11000 руб
+           Курсовая при сопоставлении - 1000 руб
+           Пересчет: новая сумма             12000 руб
+
+           regAmountMST = 2000  (на нее будет сделан <link:internal>LedgerTrans</link:internal>)
+
+           .adjust()
+
+  update VendTransOpen,  VendTrans и update или insert VendSettlement
+  vendTrans - insert
+
+<link:internal>Как проверить переоценку курсовой по одной проверке</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:30.6291780+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:30.6291780+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T16:54:59.2503740+04:00</create-date>
+  <cursor-position>1167</cursor-position>
+  <width>680</width>
+  <height>576</height>
+  <x>940</x>
+  <y>320</y>
+  <open-on-startup>False</open-on-startup>
+</note>

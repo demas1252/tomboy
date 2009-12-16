@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Все о размерах в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Все о размерах в MS SQL
+
+<link:internal>Размер БД</link:internal>
+<link:internal>Размер таблицы</link:internal>
+<link:internal>Информация о таблице</link:internal>
+<link:internal>Информация о дисках на сервере</link:internal>
+
+<link:internal>SHRINKDATABASE</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T09:13:14.4398500+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T09:13:14.4398500+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T09:12:21.2172260+03:00</create-date>
+  <cursor-position>24</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>572</x>
+  <y>185</y>
+  <open-on-startup>False</open-on-startup>
+</note>

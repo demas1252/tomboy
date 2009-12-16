@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Формат deb файлов</title>
+  <text xml:space="preserve"><note-content version="0.1">Формат deb файлов
+
+Каждый deb файл - суть архив, состоящий из 3-х файлов:
+
+<list><list-item dir="ltr">debian-binary - номер версии <link:internal>dpkg</link:internal> (2.0)
+</list-item><list-item dir="ltr">control.tar.gz - информация необходимая <link:internal>dpkg</link:internal>
+</list-item><list-item dir="ltr">data.tar.gz - сами файлы (как правило распаковываемые в \)</list-item></list>
+
+Посмотреть содержимое deb: ar t file.deb
+Распаковать: 	ar x file.deb
+			tar tzf control.tar.gz
+			tar tzf data.tar.gz
+
+<bold><italic>control.tar.gz</italic></bold>
+
+tar xzf control.tar.gz
+
+<list><list-item dir="ltr"><italic>control</italic> - имя, версия, зависимости, описание - то, что показывает synaptic.
+</list-item><list-item dir="ltr">pre*, post* - скрипты, запускаемые в перед/после установки/удаления пакета.  В случае <link:internal>tomboy</link:internal> они были заполнены только автоматически сгенеренной информацией.
+</list-item><list-item dir="ltr">md5sums - контрольные суммы всех файлов </list-item></list>
+
+
+
+</note-content></text>
+  <last-change-date>2008-04-06T14:19:22.3358560+04:00</last-change-date>
+  <last-metadata-change-date>2008-04-06T14:19:22.3358560+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T14:00:17.7711810+04:00</create-date>
+  <cursor-position>359</cursor-position>
+  <width>486</width>
+  <height>613</height>
+  <x>276</x>
+  <y>186</y>
+  <open-on-startup>False</open-on-startup>
+</note>

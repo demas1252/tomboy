@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Фотоэлектрический эффект</title>
+  <text xml:space="preserve"><note-content version="0.1">Фотоэлектрический эффект
+
+С поверхности металлов испускаются электроны, когда на металл падает свет достаточно высокой частоты. Это явление называется <italic>фотоэллектическим эффектом</italic>.
+
+Здесь есть две странности:
+
+<list><list-item dir="ltr">энергетическое распределение испущенных электронов не зависит от интенсивности света; сильный пучое света дает больше электронов, но их энергия не увеличивается
+</list-item><list-item dir="ltr">отсутсвует задержка между падением света и излучением электронов</list-item></list>
+
+Эти факты нельзя объяснить с помощью электро-магнитной теории света.
+
+Кроме того, энергия фотоэлектронов зависит только от частоты используемого света.
+
+Планк предположил, что свет <italic>излучается </italic>только квантовыми порциями (<link:internal>фотон</link:internal>); Энштейн - что свет <italic>существует </italic>только в виде квантовых порций.
+
+<bold><italic>Внутренний фотоэффект </italic></bold>- перераспределение электронов по энергетическим уровням в полупроводниках и диэлектриках под дейтсвием света.</note-content></text>
+  <last-change-date>2009-08-20T10:00:12.9422430+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-20T10:00:12.9422430+04:00</last-metadata-change-date>
+  <create-date>2009-08-19T09:19:03.8416140+04:00</create-date>
+  <cursor-position>659</cursor-position>
+  <width>558</width>
+  <height>430</height>
+  <x>950</x>
+  <y>176</y>
+  <open-on-startup>False</open-on-startup>
+</note>

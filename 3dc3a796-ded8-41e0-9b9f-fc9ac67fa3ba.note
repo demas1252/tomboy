@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>clojure anonymous functions</title>
+  <text xml:space="preserve"><note-content version="0.1">clojure anonymous functions
+
+<list><list-item dir="ltr">проще и понятнее выглядит анонимная функция, чем отдельная функция с именем</list-item></list>
+
+	(use '[<link:internal>clojure</link:internal>.contrib.str-utils :only (re-split)])
+	(filter (fn [w] (&gt; (count w) 2)) (re-split #"\W+" "A fine day it is"))
+
+	или даже
+
+	(filter ( #(&gt; (count %) 2)) (re-split #"\W+" "A fine day it is"))
+
+<list><list-item dir="ltr">ограничение видимости функций</list-item></list>
+
+	(defn indexable-words [text]
+	  (<link:internal>let</link:internal> [indexable-word? (fn [w] (&gt; (count w) 2))]
+	    (filter indexable-word? (re-split #"\W+" text))))
+
+<list><list-item dir="ltr">создание функций динамически</list-item></list>
+
+	(defn make-greeter [greeting-prefix]
+	  (fn [username] (str greeting-prefix ", " username)))
+
+	(def hello-greeting (make-greeter "Hello"))
+	(def aloha-greeting (make-greeter "Aloha"))
+
+	(hello-greeting "demas")
+	(hello-greeting "aloha")</note-content></text>
+  <last-change-date>2009-10-18T19:46:54.3800009+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-18T19:46:54.3800009+04:00</last-metadata-change-date>
+  <create-date>2009-07-27T09:13:07.2340780+04:00</create-date>
+  <cursor-position>246</cursor-position>
+  <width>464</width>
+  <height>492</height>
+  <x>900</x>
+  <y>138</y>
+  <open-on-startup>False</open-on-startup>
+</note>

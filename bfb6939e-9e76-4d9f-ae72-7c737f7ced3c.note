@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Производство аммиака</title>
+  <text xml:space="preserve"><note-content version="0.1">Производство аммиака
+
+<italic>3H2 + N2 &lt;-&gt; 2N3 - t</italic>
+
+<list><list-item dir="ltr">для увеличения выхода амиака надо повышать давление и снижать температуру
+</list-item><list-item dir="ltr">но повышение давление увеличивает себестоимость производства, а снижение температуры может остановить реакцию -&gt; необходим катализатор - железо с примясясми оксидов аллюминия и калия
+</list-item><list-item dir="ltr">сжатие азотоводородной смеси -&gt; нагревание смеси -&gt; синтез амиака  -&gt; охлаждение газовой смеси -&gt; отделение амиака от газовой смеси</list-item></list>
+</note-content></text>
+  <last-change-date>2009-08-07T23:34:11.9638260+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T23:34:11.9638260+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T22:11:17.6167560+04:00</create-date>
+  <cursor-position>256</cursor-position>
+  <width>615</width>
+  <height>409</height>
+  <x>387</x>
+  <y>390</y>
+  <open-on-startup>False</open-on-startup>
+</note>

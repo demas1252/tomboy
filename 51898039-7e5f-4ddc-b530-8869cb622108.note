@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сетевые средства Linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Сетевые средства Linux
+
+<link:internal>Настройка сетевых интерфейсов</link:internal>
+<link:internal>Таблица маршрутизации</link:internal>
+<link:internal>Маска подсети</link:internal>
+<link:internal>DHCP</link:internal>
+<link:internal>Статический IP</link:internal>
+<link:internal>WINS</link:internal>
+<link:internal>Samba</link:internal>
+
+<link:internal>Примонтировать smb ресурс</link:internal>
+<link:internal>Remote Desktop</link:internal>
+<link:internal>Ограничить скорость сетевого соединения</link:internal>
+<link:internal>VPN</link:internal>
+<link:internal>Cisco VPN</link:internal>
+<link:internal>VNC</link:internal>
+<link:internal>SSH</link:internal></note-content></text>
+  <last-change-date>2009-10-17T22:10:58.6561800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:58.6561800+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:37:03.6765609+03:00</create-date>
+  <cursor-position>120</cursor-position>
+  <width>650</width>
+  <height>469</height>
+  <x>98</x>
+  <y>94</y>
+  <open-on-startup>False</open-on-startup>
+</note>

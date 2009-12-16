@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация обработки входящего НДС</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация обработки входящего НДС
+
+Форма PurcBookProcessVAT_RU. Метод selectData() на форме.
+
+Порождается один из наследников BookDataCalc_Purch_Ru - BookDataCalc_Purch_Process_Ru и BookDataCalc_Purch_Cancel_Ru, а затем дергается его run(). Так как здесь я рассматриваю обработку, то остановимся на BookDataCalc_Purch_Process_Ru.
+
+Метод run() это последовательный вызов init(), initBookTable(), fetchNextRecord() и calcLineData().   InitBookTable просто инициализирует табличную переменную, а fetchNextRecord() тянет очередную фактуру из списка, сформированного в init(). Так что грубо можно считать, что обработка состоит из 2-х этапов - сбора нужных фактур в список init() и их последовательного расчета calcLineData().
+
+<bold>1. init()</bold>
+
+   Здесь мы создаем RecordSortedList(FactureJour_RU) и заполняем его фактурами:
+
+<list><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.initOnPayment()</link:internal>
+</list-item><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.initOnDelivery()</link:internal>
+</list-item><list-item dir="ltr"><link:internal>BookDataCalc_Purch_Process_Ru.initTransitionPeriod()</link:internal></list-item></list>
+   
+   Насколько я понимаю, мы просто вытягиваем различные случаи фактур, которые должны попасть в книжку. В частности, когда понадобилось вытянуть <link:internal>предоплаты</link:internal> по поставщикам я просто написал еще один запрос, вытягивающий фактуры, у которых Module = Vend и Prepayment = Yes.  Так как раньше такие фактуры вообще не попадали в обработку я не боялся задваивания.
+
+<bold>2. calcLineData()</bold>
+
+  А здесь, мы с помощью fetchNextRecord() тянем записи из RecordSortedList, считаем по ним суммы и, если все посчиталось нормально, вставляем результаты в таблицу.
+
+  Диспечером является меод calc() в классе BookDataCalc_Ru, который получает каждую фактуру и, в зависимости от ее типа, дергает соответствующий метод process*().  А эти методы в свою очередь перекрыты в наследниках, указываю как будет обрабатываться фактура данного типа(это решил предок) и в данной книге и операции(это зависит от вида наследника).  То есть - это как бы матрица - пересечение и есть вид обработки
+
+<list><list-item dir="ltr">В (BookDataCalc_RU) создаем наследника BookTransCalc_RU (тип наследника, кстати, тянется из наследника initBookTransCalcClass()) -&gt; BookTransCalc_Purch_Ru::newTransCalc()  (для предоплат по поставщику - BookTransCalc_Purch_Ru).
+</list-item><list-item dir="ltr">Вызывается метод calc() этого класса, который вызывает process*() методы.  См. выше. Именно в этих методах и осуществляется расчет сумм и вставка строчек в книжку.</list-item></list>
+		 <link:internal>processPrepayment</link:internal>
+
+После этого пользователь выполняет <link:internal>Разноска входящего НДС</link:internal>
+
+
+<link:internal>Почему моя фактура не попадает в книжку</link:internal>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.0209650+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.0209650+04:00</last-metadata-change-date>
+  <create-date>2009-06-23T12:06:02.9924640+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>841</width>
+  <height>552</height>
+  <x>186</x>
+  <y>97</y>
+  <open-on-startup>False</open-on-startup>
+</note>

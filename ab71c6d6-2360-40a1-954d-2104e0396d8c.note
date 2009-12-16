@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Структуры памяти</title>
+  <text xml:space="preserve"><note-content version="0.1">Структуры памяти
+
+     <link:internal>PGA</link:internal>
+     Shared Pool
+        <link:internal>Library Cache</link:internal>
+        
+        
+     <link:internal>Параметры отвечающие за размеры различных областей памяти</link:internal>
+     <link:internal>Automatic Shared Memory Management ASMM</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:41.1221570+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:41.1221570+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:07:19.5165549+03:00</create-date>
+  <cursor-position>191</cursor-position>
+  <width>782</width>
+  <height>553</height>
+  <x>95</x>
+  <y>464</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Shallow vs Deep Copies</title>
+  <text xml:space="preserve"><note-content version="0.1">Shallow vs Deep Copies
+
+Shallow - копируются все поля объекта, но не более. Если поля объекта value-типы - все good, но если это указаели, то в копии оригинальных объектов мы получим копию указателя указывающего все на тот же участок памяти.
+
+Deep - кроме копированмя полей, копируется и динамически распределеная память на которую указывают поля-указатели. В С++ для реалицации deep-copy необходимо написать конструктор копированмя и перегрузить оператор присваивания.</note-content></text>
+  <last-change-date>2008-03-28T14:06:02.4676810+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-28T14:06:02.4676810+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T14:06:01.0294440+03:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

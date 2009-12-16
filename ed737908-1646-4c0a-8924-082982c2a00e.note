@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейшая программа с curses</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейшая программа с curses
+
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;<link:internal>curses</link:internal>.h&gt;
+
+int main() {
+    initscr();
+
+    move(5, 15);
+    printw(“%s”, “Hello World”);
+    refresh();
+    sleep(2);
+
+    endwin();
+    exit(EXIT_SUCCESS);
+}</note-content></text>
+  <last-change-date>2008-03-27T15:45:50.0617890+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-27T15:45:50.0617890+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:45:49.0374070+03:00</create-date>
+  <cursor-position>87</cursor-position>
+  <width>475</width>
+  <height>509</height>
+  <x>712</x>
+  <y>184</y>
+  <open-on-startup>False</open-on-startup>
+</note>

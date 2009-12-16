@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Выполнить Job-ы последовательно</title>
+  <text xml:space="preserve"><note-content version="0.1">Выполнить Job-ы последовательно
+
+Задача запускать следующий job только после того как выполнится предыдущий, до тех пор пока не будут исчерпаны все значения из таблицы входных параметров.                                                                 
+                                                                                                                                                          
+dbms_job.submit(...,                                                                                                                                    
+   for <link:broken>c</link:broken> in (select * from t_param) loop                                                                                                                  
+     job_<link:internal>proc</link:internal>(<link:broken>c</link:broken>.param_value);                                                                                                                             
+     ...                                                                                                                                                  
+   end loop;                                                                                                                                              
+ ');                                                                                                                                                      
+</note-content></text>
+  <last-change-date>2009-02-07T15:39:20.4575580+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:20.4575580+03:00</last-metadata-change-date>
+  <create-date>2009-01-24T12:14:57.3803400+03:00</create-date>
+  <cursor-position>407</cursor-position>
+  <width>558</width>
+  <height>776</height>
+  <x>274</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Currying в Clojure</title>
+  <text xml:space="preserve"><note-content version="0.1">Currying в Clojure
+
+Вспоминаем, что такое <link:internal>Currying</link:internal>.
+
+<italic>(def add-3 (<link:internal>partial</link:internal></italic><italic> + 3))
+
+(defn my_f [a b c]
+  (+ a b c))
+
+(def my_f_2 (<link:internal>partial</link:internal></italic><italic> my_f 2))
+(def my_f_2_3 (<link:internal>partial</link:internal></italic><italic> my_f 2 3))</italic></note-content></text>
+  <last-change-date>2009-08-18T16:23:02.2268490+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-18T16:23:02.2268490+04:00</last-metadata-change-date>
+  <create-date>2009-08-18T16:14:50.7584960+04:00</create-date>
+  <cursor-position>176</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>929</x>
+  <y>216</y>
+  <open-on-startup>False</open-on-startup>
+</note>

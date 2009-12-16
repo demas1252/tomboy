@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Scheme Macros</title>
+  <text xml:space="preserve"><note-content version="0.1">Scheme Macros
+
+<link:internal>Pattern Based Scheme Macros</link:internal>
+
+<bold>Примеры</bold>
+
+<link:internal>Макрос while</link:internal>
+<link:internal>Макрос for</link:internal>
+<link:internal>Макрос for (cpp вариант)</link:internal></note-content></text>
+  <last-change-date>2009-10-25T08:22:41.4787720+03:00</last-change-date>
+  <last-metadata-change-date>2009-10-25T08:22:41.4787720+03:00</last-metadata-change-date>
+  <create-date>2009-04-22T12:00:51.8731230+04:00</create-date>
+  <cursor-position>61</cursor-position>
+  <width>450</width>
+  <height>359</height>
+  <x>614</x>
+  <y>99</y>
+  <open-on-startup>False</open-on-startup>
+</note>

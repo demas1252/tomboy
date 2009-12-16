@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Смешанные стратегии</title>
+  <text xml:space="preserve"><note-content version="0.1">Смешанные стратегии
+
+<list><list-item dir="ltr">если нижняя и верхняя цена игры одинаковы - седловая точка - то это оптимальная и устойчивая стратегия для обеих сторон
+</list-item><list-item dir="ltr">если нет -&gt; минимакс - выбирая одну оптимальную стратегию мы гарантируем себе выигрыш не меньше <italic>a</italic>.
+</list-item><list-item dir="ltr">а если мы будем чередовать несколько стратегий можем ли мы получить выигрыш больший <italic>a</italic>?  </list-item></list>
+
+<bold>Основная теорема теории игр:</bold>  Каждая игра имеет, по крайне мере, одно решение (возможно,  в области смешанных статегий).
+
+Выигрыш (цена игры):  <italic>a &lt;= v &lt;= b</italic>
+
+Если наша смешанная стратегия состоит из стратегий A1,A2,A3 с частотами p1,p2,p3 (p1+p2+p3=1), будем означать эту стратегию:
+
+	<italic><link:broken>Sa</link:broken></italic><italic>=(A1-p1, A2-p2, A3-p3).</italic>
+
+Для противника:
+
+	<italic>Sb=(B1-q1, B2-q2, B3-q3).</italic>
+
+<italic>Полезные стратегии</italic> - те чистые стратегиии, которые вошли в смешанную.
+
+<bold>Еще одно полезное свойство:</bold> если один из игроков придерживается своей оптимальной смешанной стратегии, то выигрыш останется неизменным и равным цене игры, независимо от того, что делает другой игрок, если только он не выходит за пределы своих полезных стратегий.
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:11:26.0703710+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:11:26.0703710+04:00</last-metadata-change-date>
+  <create-date>2009-08-25T10:41:45.7181510+04:00</create-date>
+  <cursor-position>790</cursor-position>
+  <width>502</width>
+  <height>639</height>
+  <x>1066</x>
+  <y>164</y>
+  <open-on-startup>False</open-on-startup>
+</note>

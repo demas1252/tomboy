@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>partial</title>
+  <text xml:space="preserve"><note-content version="0.1">partial
+
+<italic>from functools import partial
+
+def myfunc(a, b):
+	return a + b
+
+def <link:internal>sec</link:internal></italic><italic>_<link:internal>func</link:internal></italic><italic>(a, b, <link:internal>c</link:internal></italic><italic>):
+	return a + b + <link:internal>c</link:internal></italic><italic>
+
+myfunc1 = partial(myfunc, 1)
+print myfunc1(2)
+
+<link:internal>sec</link:internal></italic><italic>_f1 = partial(<link:internal>sec</link:internal></italic><italic>_<link:internal>func</link:internal></italic><italic>, 1)
+print <link:internal>sec</link:internal></italic><italic>_f1(2, 3)
+
+<link:internal>sec</link:internal></italic><italic>_f2 = partial(<link:internal>sec</link:internal></italic><italic>_<link:internal>func</link:internal></italic><italic>, 1, 2)
+print <link:internal>sec</link:internal></italic><italic>_f2(3)</italic></note-content></text>
+  <last-change-date>2008-10-16T12:07:32.9176890+04:00</last-change-date>
+  <last-metadata-change-date>2008-10-16T12:07:32.9176890+04:00</last-metadata-change-date>
+  <create-date>2008-10-16T12:02:46.7127220+04:00</create-date>
+  <cursor-position>42</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

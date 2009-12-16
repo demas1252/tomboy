@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример обобщения фильтрации списка</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример обобщения фильтрации списка
+
+&lt;&lt;pre
+;; below : lon number -&gt; lon
+;; to construct a list of those numbers
+;; on alon that are below t
+(define (below alon t)
+    (cond
+        [(empty? alon) empty]
+        [else
+            (cond
+                [(&lt; (first alon) t) (cons (first alon) (below (rest alon) t))]
+                [else  (below (rest alon) t)])
+    ]))
+    
+&gt;&gt;
+
+&lt;&lt;pre
+;; above : lon number -&gt; lon
+;; to construct a list of those numbers
+;; on alon that are above t
+(define (above alon t)
+    (cond
+        [(empty? alon) empty]
+        [else
+            (cond
+                [(&gt; (first alon) t) (cons (first alon) (above (rest alon) t))]
+                [else (above (rest alon) t)])
+    ]))
+    
+&gt;&gt;
+
+Преобразуем в:
+&lt;&lt;pre
+
+(define (filter1 rel-op alon t)
+    (cond
+        [(empty? alon) empty]
+        [else (cond
+            [(rel-op (first alon) t) (cons (first alon) (filter1 rel-op (rest alon) t))]
+            [else (filter1 rel-op (rest alon) t)])
+    ]))
+
+&gt;&gt;
+
+&lt;&lt;pre
+&gt; (filter1 &lt; (list 1 2 3 4 5) 3)
+(list 1 2)
+&gt; (filter1 &gt; (list 1 2 3 4 5) 3)
+(list 4 5)
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T21:57:24.1389890+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T21:57:24.1389890+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T21:57:23.0659010+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>461</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

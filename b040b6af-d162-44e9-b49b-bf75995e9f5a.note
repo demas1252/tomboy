@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Command</title>
+  <text xml:space="preserve"><note-content version="0.1">Command
+
+Обеспечивает обработку команды в виде объекта, что позволяет сохранять её, передавать в качестве параметра методам, а также возвращать её в виде результата, как и любой другой объект.
+
+У нас есть:
+
+  Invoker - тот, кто просит у Command выполнить действие (file_editor - в <link:internal>python</link:internal> - примере)
+  Receiver - класс который знает все и умеет все (file_manager - в <link:internal>python</link:internal> - примере)
+  Commanad - абстрактный базовый класс для всех действий
+  ConcreteCommand - конкретное действие
+
+Тогда интерфейс работы пользователя с фреймфорком сводится к:
+
+    inv = Invoker()
+    rec = Reciever("some.txt")
+    com1 = command1(rec)
+    com2 = command2(rec)
+
+    inv.set_command(com1)
+    inv.process_command()
+
+    inv.set_command(com2)
+    inv.process_command("<link:internal>add</link:internal> some text here")
+
+<link:internal>Реализация паттерна Command на Python</link:internal>
+<link:internal>Реализация паттерна Command на Ruby</link:internal>
+
+В данных примерах пример на <link:internal>Ruby</link:internal> более прост, так как в нем нет класса Receiver, а вместо него все знания о том, что и как делать находятся непосредственно в ConcreteCommand. Но этот пример, можно рассматривать как некий промежуточный шаг. Следующим шагом следовало бы вынести всю работу с файлами в отдельный класс, а ConcreteComman-ы заставить работать с ним, как это сделано в примере на <link:internal>Python</link:internal>.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.5403590+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.5403590+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:07:16.0849040+03:00</create-date>
+  <cursor-position>811</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

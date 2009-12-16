@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перенос job-ов на другой сервер</title>
+  <text xml:space="preserve"><note-content version="0.1">Перенос job-ов на другой сервер
+
+1. Заскриптовать и накатить скрипты на целевом
+2. backup/resotre MSDB (надо проверять)
+3. В 7 и 2000 есть специальный таск в ДТС-ах для этой <link:internal>цели</link:internal>. В 2005м - соответственно в SSIS пакетах.</note-content></text>
+  <last-change-date>2009-09-24T14:37:01.0507060+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-24T14:37:01.0507060+04:00</last-metadata-change-date>
+  <create-date>2008-11-29T12:22:32.6919440+03:00</create-date>
+  <cursor-position>123</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1213</x>
+  <y>103</y>
+  <open-on-startup>False</open-on-startup>
+</note>

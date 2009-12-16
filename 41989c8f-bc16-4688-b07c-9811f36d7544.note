@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Эмуляция циклов в Scheme</title>
+  <text xml:space="preserve"><note-content version="0.1">Эмуляция циклов в Scheme
+
+
+В общем то, все это дело можно съемулировать с помощью обыкновенных вызовов функций.  Однако, если они используются очень чатсо может быть полезен syntactical sugar.
+
+Везде Language = MrEd Graphical
+
+*do-until*
+&lt;&lt;pre
+(define i 0)                      ; i := 0
+(do ()                            ; do 
+  [(= i 5)]                       ;   until i=5
+  (display i)                     ;       display i
+  (set! i (+ i <link:internal>1</link:internal>)))               ;       i := i +<link:internal>1</link:internal>
+  
+&gt;&gt;
+
+Или:
+
+&lt;&lt;pre
+(do ([i 0 (+ i <link:internal>1</link:internal>)])           (<link:internal>let</link:internal> loop ([i 0])
+  [(= i 5)]                     (unless (= i 5)
+  (display i))                     (display i)
+                                   (loop (+ i <link:internal>1</link:internal>))))
+&gt;&gt;
+
+
+*for*
+
+&lt;&lt;pre
+for i=a to b step d         (do ([i a (+ i d)])          (<link:internal>let</link:internal> for ([i a])
+  begin                       [(&gt; i b)]                    (unless (&gt; i b)
+    exp<link:internal>1</link:internal>                      exp<link:internal>1</link:internal>                            exp<link:internal>1</link:internal>
+    exp2                      exp2                            exp2
+    ...                       ...)                            ...
+  end                                                         (for (+ i d))))
+  
+&gt;&gt;
+
+*repeat until*
+&lt;&lt;pre
+repeat                
+  begin        (<link:internal>let</link:internal> loop ()         (<link:internal>let</link:internal> loop ()
+    exp<link:internal>1</link:internal>         exp<link:internal>1</link:internal>                 exp<link:internal>1</link:internal>
+    exp2         exp2                 exp2
+    ...          ...                  ...
+  end            (<link:internal>if</link:internal> (not <link:internal>test</link:internal>)       (unless <link:internal>test</link:internal> (loop)))
+until <link:internal>test</link:internal>           (loop)))
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:29.4452280+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:29.4452280+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:12:06.2199520+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>603</x>
+  <y>359</y>
+  <open-on-startup>False</open-on-startup>
+</note>

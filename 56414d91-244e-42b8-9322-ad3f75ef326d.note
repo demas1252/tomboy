@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Порядок присвоения значений в update</title>
+  <text xml:space="preserve"><note-content version="0.1">Порядок присвоения значений в update
+
+В каком порядке выполняются присваивания в Set оператора update?
+Например,
+
+Update <link:broken>Some</link:broken>_Table
+Set Column1 = Column2,
+Column2 = Column3,
+Column3 = Null
+
+можно ли при этом быть уверенным, что вначале столбец 1 получит значения из столбца 2 и только потом значение столбца 2 будет заменено значением из столбца 3, и, наконец, столбец 3 будет установлен в Null?
+
+---
+
+Порядок присваивания тут не причем. Оракл поддерживает целостность на уровне <link:internal>sql</link:internal>-запроса. Т.е. запрос будет видеть данные, которые были на момент его старта.
+Справа от равно *всегда* старые значения столбцов.</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.4173860+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.4173860+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:03:26.9741930+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

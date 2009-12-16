@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с транзакциями в Mnesia</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с транзакциями в Mnesia
+
+farmer(Nwant) -&gt;
+    %% Nwant = Number of oranges the farmer wants to buy
+    F = fun() -&gt;
+		%% <link:internal>find</link:internal> the number of apples
+		[Apple] = <link:internal>mnesia</link:internal>:read({shop,apple}),
+		Napples = Apple#shop.quantity,
+		Apple1  = Apple#shop{quantity = Napples + 2*Nwant},
+		%% update the database
+		<link:internal>mnesia</link:internal>:write(Apple1),
+		%% <link:internal>find</link:internal> the number of oranges
+		[Orange] = <link:internal>mnesia</link:internal>:read({shop,orange}),
+		NOranges = Orange#shop.quantity,
+		<link:internal>if</link:internal> 
+		    NOranges &gt;= Nwant -&gt;
+			N1 =  NOranges - Nwant,
+			Orange1 = Orange#shop{quantity=N1},
+			%% update the database
+			<link:internal>mnesia</link:internal>:write(Orange1);
+		    true -&gt;
+			%% Oops -- not enough oranges
+			<link:internal>mnesia</link:internal>:abort(oranges)
+		end
+	end,
+    <link:internal>mnesia</link:internal>:transaction(F).
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:51.4998750+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:51.4998750+04:00</last-metadata-change-date>
+  <create-date>2009-04-11T16:52:53.4155530+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>25</y>
+  <open-on-startup>False</open-on-startup>
+</note>

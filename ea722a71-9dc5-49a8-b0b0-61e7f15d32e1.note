@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Exception table</title>
+  <text xml:space="preserve"><note-content version="0.1">Exception table
+
+
+todo: research
+
+<link:internal>1</link:internal>. Создаем таблицу <link:internal>SQL</link:internal>&gt; @?/rdbms/admin/utlexcpt<link:internal>1</link:internal>
+
+2. Создание ограничения:
+
+&lt;&lt;pre
+<link:internal>SQL</link:internal>&gt; ALTER TABLE hr.employee
+ENABLE VALIDATE CONSTRAINT employee_dept_id_fk
+EXCEPTIONS INTO system.exceptions;
+ALTER TABLE hr.employee
+*
+ORA-02298: cannot enable (hr.EMP_DEPT_FK) - parent keys not found
+
+&gt;&gt;
+
+3. Смотрим в чем проблема:
+&lt;&lt;pre
+<link:internal>SQL</link:internal>&gt; SELECT <link:internal>rowid</link:internal>, id, last_name, dept_id  FROM hr.employee
+WHERE <link:internal>ROWID</link:internal> in (SELECT row_id FROM exceptions) FOR UPDATE;
+
+<link:internal>ROWID</link:internal> ID    LAST_NAME  DEPT_ID 
+------------------ ---- --------- -------
+AAAAeyAADAAAAA<link:internal>1</link:internal>AAA  1003  Pirie      50
+<link:internal>1</link:internal> row selected.
+
+&gt;&gt;
+
+4. Исправляем ошибочные данные:
+
+&lt;&lt;pre
+<link:internal>SQL</link:internal>&gt; UPDATE hr.employee SET id=10 WHERE <link:internal>rowid</link:internal>=’AAAAeyAADAAAAA<link:internal>1</link:internal>AAA’;
+<link:internal>1</link:internal> row <link:internal>processed</link:internal>.
+<link:internal>SQL</link:internal>&gt; COMMIT;
+Statement <link:internal>processed</link:internal>.
+
+&gt;&gt;
+
+5. Создаем констраинт:
+&lt;&lt;pre
+<link:internal>SQL</link:internal>&gt; TRUNCATE TABLE exceptions;
+Statement <link:internal>processed</link:internal>.
+<link:internal>SQL</link:internal>&gt; ALTER TABLE hr.employee ENABLE VALIDATE CONSTRAINT employee_dept_id_fk EXCEPTIONS INTO system.exceptions;
+Statement <link:internal>processed</link:internal>.
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.6871600+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.6871600+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:44:05.2704670+03:00</create-date>
+  <cursor-position>44</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>109</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

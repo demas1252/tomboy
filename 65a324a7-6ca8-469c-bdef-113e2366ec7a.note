@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Непальский язык</title>
+  <text xml:space="preserve"><note-content version="0.1">Непальский язык
+
+намастэ - здравствуйте, до свидания, удачи (в вашем лице я приветсвую бога)
+намаскар - более вежливая форма
+хадзур - простите (аналог excuse <link:internal>me</link:internal>) или дополнение к ответу да/нет
+хо хаджур - да
+хойна хаджур - нет
+кати хо? - сколько стоит
+-джи - вежливое обращение</note-content></text>
+  <last-change-date>2009-10-12T12:00:30.5988200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:30.5988200+04:00</last-metadata-change-date>
+  <create-date>2009-04-19T22:25:42.6584390+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1018</x>
+  <y>225</y>
+  <open-on-startup>False</open-on-startup>
+</note>

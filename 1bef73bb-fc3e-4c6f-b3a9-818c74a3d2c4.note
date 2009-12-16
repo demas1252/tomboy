@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Переместить таблицу в другую табличную группу</title>
+  <text xml:space="preserve"><note-content version="0.1">Переместить таблицу в другую табличную группу
+
+<italic>USE master
+CREATE DATABASE <link:internal>TEST</link:internal></italic><italic>
+
+ALTER DATABASE <link:internal>TEST</link:internal></italic><italic> <link:internal>ADD</link:internal></italic><italic> FILEGROUP <link:internal>TEST</link:internal></italic><italic>_DATA_1
+ALTER DATABASE <link:internal>TEST</link:internal></italic><italic> <link:internal>ADD</link:internal></italic><italic> FILEGROUP <link:internal>TEST</link:internal></italic><italic>_DATA_2
+
+ALTER DATABASE <link:internal>TEST</link:internal></italic><italic>
+<link:internal>ADD</link:internal></italic><italic> FILE
+( NAME = <link:internal>TEST</link:internal></italic><italic>1,
+FILENAME = ‘C:\Program Files\Microsoft <link:internal>SQL</link:internal></italic><italic> Server\MSSQL.1\MSSQL\DATA\<link:internal>TEST</link:internal></italic><italic>_1.ndf’,
+SIZE = 1MB,
+MAXSIZE = 10MB,
+FILEGROWTH = 1MB)
+TO FILEGROUP <link:internal>TEST</link:internal></italic><italic>_DATA_1
+
+ALTER DATABASE <link:internal>TEST</link:internal></italic><italic>
+<link:internal>ADD</link:internal></italic><italic> FILE
+( NAME = <link:internal>TEST</link:internal></italic><italic>2,
+FILENAME = ‘C:\Program Files\Microsoft <link:internal>SQL</link:internal></italic><italic> Server\MSSQL.1\MSSQL\DATA\<link:internal>TEST</link:internal></italic><italic>_2.ndf’,
+SIZE = 1MB,
+MAXSIZE = 10MB,
+FILEGROWTH = 1MB)
+TO FILEGROUP <link:internal>Test</link:internal></italic><italic>_DATA_2
+
+USE <link:internal>TEST</link:internal></italic><italic>
+
+CREATE TABLE TAB1 (
+TAB1_ID INT IDENTITY(1,1),
+TAB1_NAME VARCHAR(100),
+CONSTRAINT PK_TAB1 PRIMARY KEY(TAB1_ID)
+) ON <link:internal>TEST</link:internal></italic><italic>_DATA_1 –- Filegroup we created.
+GO
+
+INSERT INTO TAB1(TAB1_NAME)
+SELECT Table_Name
+FROM INFORMATION_SCHEMA.<link:internal>TABLES</link:internal></italic><italic>
+WHERE TABLE_TYPE = ‘BASE TABLE’
+GO
+</italic>
+<italic>sp_help TAB1</italic>
+
+Data_located_on_filegroup
+—————————
+<link:internal>TEST</link:internal>_DATA_1
+
+index_name index_description
+———- ——————————————————-
+PK_TAB1 clustered, unique, primary key located on <link:internal>TEST</link:internal>_DATA_1
+
+constraint_type constraint_name
+————————– —————-
+PRIMARY KEY (clustered) PK_TAB1
+
+
+<italic>ALTER TABLE TAB1 DROP CONSTRAINT PK_TAB1 WITH (MOVE TO <link:internal>TEST</link:internal></italic><italic>_DATA_2)
+ALTER TABLE TAB1 <link:internal>ADD</link:internal></italic><italic> CONSTRAINT PK_TAB1 PRIMARY KEY(TAB1_ID)
+</italic>
+<italic>sp_help TAB1</italic>
+
+Data_located_on_filegroup
+—————————
+<link:internal>TEST</link:internal>_DATA_2</note-content></text>
+  <last-change-date>2009-10-12T12:00:22.8002700+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:22.8002700+04:00</last-metadata-change-date>
+  <create-date>2009-04-06T22:42:55.9931690+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>892</width>
+  <height>835</height>
+  <x>0</x>
+  <y>51</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с сокетами из Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с сокетами из Erlang
+
+<link:internal>Получение данных с сервера</link:internal>
+<link:internal>TCP-сервер на Erlang</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-24T08:45:49.2246790+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-24T08:45:49.2246790+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:45:03.1095290+03:00</create-date>
+  <cursor-position>76</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>160</x>
+  <y>98</y>
+  <open-on-startup>False</open-on-startup>
+</note>

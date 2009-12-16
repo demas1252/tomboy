@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Vim</title>
+  <text xml:space="preserve"><note-content version="0.1">Vim
+
+<link:internal>Горячие клавиши vim</link:internal>
+<link:internal>Настройки Vim</link:internal>
+<link:internal>Плагины vim</link:internal>
+<link:internal>CTags</link:internal>
+</note-content></text>
+  <last-change-date>2009-01-02T01:46:35.6461490+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-02T01:46:35.6461490+03:00</last-metadata-change-date>
+  <create-date>2008-03-27T15:01:46.1262520+03:00</create-date>
+  <cursor-position>3</cursor-position>
+  <width>531</width>
+  <height>360</height>
+  <x>825</x>
+  <y>519</y>
+  <open-on-startup>False</open-on-startup>
+</note>

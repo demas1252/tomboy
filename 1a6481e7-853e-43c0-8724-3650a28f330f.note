@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Оглавление книги excel</title>
+  <text xml:space="preserve"><note-content version="0.1">Оглавление книги excel
+
+
+Sub SheetList()
+   Dim sheet As Worksheet
+   Dim cell As Range
+   With ActiveWorkbook
+      For Each sheet In ActiveWorkbook.Worksheets
+         Set cell = Worksheets(<link:internal>1</link:internal>).Cells(sheet.Index, <link:internal>1</link:internal>)
+         .Worksheets(<link:internal>1</link:internal>).Hyperlinks.<link:internal>Add</link:internal> anchor:=cell, Address:="", _
+                    SubAddress:="'" &amp; sheet.Name &amp; "'" &amp; "!A<link:internal>1</link:internal>"
+         cell.Formula = sheet.Name
+      Next
+   End With
+End Sub</note-content></text>
+  <last-change-date>2008-06-15T23:42:46.4632500+04:00</last-change-date>
+  <last-metadata-change-date>2008-06-15T23:42:46.4632500+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T15:11:58.3624769+04:00</create-date>
+  <cursor-position>51</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

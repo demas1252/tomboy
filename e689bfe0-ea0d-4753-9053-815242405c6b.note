@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Проверить сущесвование директории</title>
+  <text xml:space="preserve"><note-content version="0.1">Проверить сущесвование директории
+
+[179][demas.<link:internal>arch</link:internal>: .<link:internal>tomboy</link:internal>]$ <link:internal>test</link:internal> -d <link:url>/usr/locals/</link:url> || echo "1" &amp;&amp; echo "2"
+1
+2
+[180][demas.<link:internal>arch</link:internal>: .<link:internal>tomboy</link:internal>]$ <link:internal>test</link:internal> -d <link:url>/usr/local/</link:url> || echo "1" &amp;&amp; echo "2"
+2
+</note-content></text>
+  <last-change-date>2009-10-07T11:04:38.5236800+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-07T11:04:38.5236800+04:00</last-metadata-change-date>
+  <create-date>2009-10-07T11:04:16.7088780+04:00</create-date>
+  <cursor-position>68</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>275</x>
+  <y>121</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>calcAdvanceBalance</title>
+  <text xml:space="preserve"><note-content version="0.1">calcAdvanceBalance
+
+Сюда свалиаются авансовые отчеы сделанные в тот же день, что и наш, но ранее его.
+
+Перебираем строки отчета:
+
+<list><list-item dir="ltr">если это не наш отчет то уменьшаем balanceMST на сумму сроки отчета (логично - мы получили эту проводку в <italic><link:internal>checkByBalance</link:internal></italic> но уже отразили ее в предыдущих отчетах)
+</list-item><list-item dir="ltr">перебираем сопоставления и выходим на парную проводку (далее <italic>взятку</italic>)
+</list-item><list-item dir="ltr">если мы еще не работали с этой взяткой (а взятки с которыми мы работали мы храним в transSet)
+<list><list-item dir="ltr">если взятка взята позже отчета -&gt; <italic>даже не рассматривал</italic>
+</list-item><list-item dir="ltr">иначе
+<list><list-item dir="ltr">проверяем checkPrePayment, но он вроде всегда возвращает <italic>true</italic>
+</list-item><list-item dir="ltr">если это наш аванс отчет
+<list><list-item dir="ltr"><bold>updateKeySettle</bold>
+</list-item></list></list-item><list-item dir="ltr">а если не наш
+<list><list-item dir="ltr">balanceMST += сумму
+</list-item></list></list-item><list-item dir="ltr">если взятка раньше, чем наш отчет
+<list><list-item dir="ltr">balanceMST -= сумму
+</list-item></list></list-item><list-item dir="ltr">перебираем проводки, с которыми была сопоставлена наша взятка и те, которые еще <italic>не попали в авансовый отчет</italic>
+<list><list-item dir="ltr">если они позже нашего отчета
+<list><list-item dir="ltr">если это наш отчет
+<list><list-item dir="ltr"><bold>updateKeyOver</bold>
+</list-item></list></list-item><list-item dir="ltr">а если не наш
+<list><list-item dir="ltr">balanceMST += сумма</list-item></list></list-item></list></list-item></list></list-item></list></list-item></list></list-item></list>
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.6304780+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.6304780+04:00</last-metadata-change-date>
+  <create-date>2009-06-07T13:18:17.9060680+04:00</create-date>
+  <cursor-position>951</cursor-position>
+  <width>987</width>
+  <height>603</height>
+  <x>558</x>
+  <y>331</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Тип разноски Налог</title>
+  <text xml:space="preserve"><note-content version="0.1">Тип разноски Налог
+
+В плане счетов на закладке Настройка есть группа полей Разноска
+
+<list><list-item dir="ltr">В настройках профиля разноски по налоговой группе нельзя укащать счет, у которого тим разноски отличен от Налоги.
+</list-item><list-item dir="ltr">В общем журнале разноска на этот счет возможна, есл указывать налоговый код.
+</list-item><list-item dir="ltr">В остальных случаях разноска на этот счет приведет к проблемам с выверкой налоговых операций с ГК. Если очень хочется - создайте новый налоговый код с нулевым процентом.</list-item></list>
+
+<link:internal>Счет ГК &lt;&gt; не принадлежит группе счетов, которая используется для налогового кода'</link:internal></note-content></text>
+  <last-change-date>2009-06-20T20:23:15.6945530+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-20T20:23:15.6945530+04:00</last-metadata-change-date>
+  <create-date>2009-06-20T18:05:59.3092090+04:00</create-date>
+  <cursor-position>19</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>12</x>
+  <y>115</y>
+  <open-on-startup>False</open-on-startup>
+</note>

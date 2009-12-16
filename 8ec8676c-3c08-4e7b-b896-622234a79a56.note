@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование блоков в Ruby для итераторов</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование блоков в Ruby для итераторов
+
+
+**Первый пример**
+
+def three_times
+  yield
+  yield
+  yield
+end
+
+three_times { puts "hello" }
+
+============================
+
+hello
+hello
+hello
+
+**Второй пример**
+
+def fib_up_to(max)
+  i1, i2 = 1, 1
+  while i1 &lt; max
+    yield i1
+    i1, i2 = i2, i1 + i2
+  end
+end
+
+fib_up_to(1000) { |f| print f, " " }
+
+
+**Третий пример**
+
+[1, 3, 5, 7, 9].each { |i| puts i }
+["H", "A", "L"].collect { |x| x.succ }  =&gt; ["I", "B", "M"]
+
+**Четвертый пример**
+
+f = File.open("<link:internal>test</link:internal>")
+f.each do |line|
+  puts line
+end
+f.close
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:27.1517490+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:27.1517490+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:39:23.4302630+03:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1035</x>
+  <y>60</y>
+  <open-on-startup>False</open-on-startup>
+</note>

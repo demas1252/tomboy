@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>А что если я буду использовать обычный tablespace как temporary</title>
+  <text xml:space="preserve"><note-content version="0.1">А что если я буду использовать обычный tablespace как temporary
+
+Я забыл указать temporary при создании tablespace, но это не помешало пользователям работать.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Этот вариант возможен, но он слишком затратен с точки зрения производительности.
+
+By using a true TEMPORARY tablespace -- we will allocate an extent ONCE and then keep it.  These extents will be managed not via the <link:internal>data dictionary</link:internal> but in memory.  This means the expensive recursive <link:internal>sql</link:internal> we do to allocate an extent and then free it is removed.</note-content></text>
+  <last-change-date>2009-10-12T12:00:39.2182670+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:39.2182670+04:00</last-metadata-change-date>
+  <create-date>2008-04-05T16:28:10.7188230+04:00</create-date>
+  <cursor-position>241</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>194</x>
+  <y>645</y>
+  <open-on-startup>False</open-on-startup>
+</note>

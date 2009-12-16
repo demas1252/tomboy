@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Заикание звука в Fedora</title>
+  <text xml:space="preserve"><note-content version="0.1">Заикание звука в Fedora
+
+...одной из особенностей <link:internal>Fedora</link:internal> 10 является Glitch Free Audio, в котором разработчики добавляют новый планировщик в <link:internal>PulseAudio</link:internal>, как раз для повышения производительности.
+Поскольку задержки возникали, очевидно, из-за недоработок (или других грехов) нового планировщика <link:internal>PulseAudio</link:internal>, то наверно следует попробовать отключить это самое timer-<link:internal>based</link:internal> audio scheduling.
+
+В файле<link:url> /etc/pulse/default.pa</link:url> строку
+
+<italic>load-module module-hal-detect</italic>
+
+заменить на
+
+<italic>load-module module-hal-detect  tsched=0</italic>
+
+После этого <link:internal>Pulseaudio</link:internal> заикаться, вроде совсем перестал и систему грузит на порядок меньше.
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:21.7122120+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.7122120+04:00</last-metadata-change-date>
+  <create-date>2009-04-04T09:29:58.2181910+04:00</create-date>
+  <cursor-position>602</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>48</y>
+  <open-on-startup>False</open-on-startup>
+</note>

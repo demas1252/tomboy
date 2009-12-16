@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Кости кисти</title>
+  <text xml:space="preserve"><note-content version="0.1">Кости кисти
+
+<list><list-item dir="ltr">кости запястья
+<list><list-item dir="ltr">8 коротких костей, расположенных в 2 ряда
+</list-item></list></list-item><list-item dir="ltr">пястные кости
+<list><list-item dir="ltr">их пять штук - эта та дополнительная "фаланга", что в кисти
+</list-item></list></list-item><list-item dir="ltr">кости пальцев</list-item></list></note-content></text>
+  <last-change-date>2009-08-20T11:48:38.7381959+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-20T11:48:38.7381959+04:00</last-metadata-change-date>
+  <create-date>2009-08-20T11:40:24.8750810+04:00</create-date>
+  <cursor-position>138</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1149</x>
+  <y>605</y>
+  <open-on-startup>False</open-on-startup>
+</note>

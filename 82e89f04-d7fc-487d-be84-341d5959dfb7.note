@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Size of undo and und retention</title>
+  <text xml:space="preserve"><note-content version="0.1">Size of undo and und retention
+
+
+todo: question
+
+alter system set undo_retetntion = 900;
+
+Как долго (в сек) будут храниться данные в undo.  Если undo tablespace уже не хватает, то undo_retention уже никак не поможет.
+
+Статистика собранная по интервалам в 10 минут:
+&gt;&gt; select end_time, start_time, undoblks from v$undostat; 
+
+undo space = [ undo_retention * (number_of_data_blocks_generated_per_second * <link:internal>db</link:internal>_block_size)] + (<link:internal>db</link:internal>_block_size * 24)
+
+undo_retention &amp;&amp; <link:internal>db</link:internal>_block_size - можно взять из файла инициализации
+number_of_data_blocks_generated_per_second = SELECT (SUM(undoblks) / SUM( ((end_time - begin_time) * 86400) FROM v$undostat;
+
+[<link:internal>Automatic tuning undo retention</link:internal>]</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.8745400+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.8745400+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:20:04.8190410+03:00</create-date>
+  <cursor-position>639</cursor-position>
+  <width>636</width>
+  <height>473</height>
+  <x>1017</x>
+  <y>234</y>
+  <open-on-startup>False</open-on-startup>
+</note>

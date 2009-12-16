@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Передача параметров по значению и ссылке</title>
+  <text xml:space="preserve"><note-content version="0.1">Передача параметров по значению и ссылке
+
+В <link:broken>C</link:broken> все передается по значению, поэтому если нам надо написать функцию, принимающую два целых числа и меняющую их значения местами - значит эти значения надо передвать по ссылке:
+
+<bold>Неправильно</bold>
+
+<italic>void swap(int x, int y) {
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+swap(a, b);
+</italic>
+<bold>Правильно</bold>
+
+<italic>void swap(int *x, int *y) {
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+swap(&amp;a, &amp;b);</italic></note-content></text>
+  <last-change-date>2009-02-07T15:39:19.6096340+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:19.6096340+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:13:32.7851960+03:00</create-date>
+  <cursor-position>404</cursor-position>
+  <width>817</width>
+  <height>489</height>
+  <x>1041</x>
+  <y>331</y>
+  <open-on-startup>False</open-on-startup>
+</note>

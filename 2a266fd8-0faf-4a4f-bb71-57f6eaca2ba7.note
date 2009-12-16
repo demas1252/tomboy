@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Шрифты как в ubuntu</title>
+  <text xml:space="preserve"><note-content version="0.1">Шрифты как в ubuntu
+
+sudo yaourt -S --asdeps freetype2-<link:internal>ubuntu</link:internal> fontconfig-<link:internal>ubuntu</link:internal> libxft-<link:internal>ubuntu</link:internal> <link:internal>cairo</link:internal>-<link:internal>ubuntu</link:internal>
+</note-content></text>
+  <last-change-date>2009-08-19T16:39:58.9431830+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-19T16:39:58.9431830+04:00</last-metadata-change-date>
+  <create-date>2009-08-19T16:37:12.8308910+04:00</create-date>
+  <cursor-position>21</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>34</y>
+  <open-on-startup>False</open-on-startup>
+</note>

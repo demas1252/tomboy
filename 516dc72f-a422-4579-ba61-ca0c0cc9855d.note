@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сети</title>
+  <text xml:space="preserve"><note-content version="0.1">Сети
+
+<link:internal>Именованные каналы vs TCP/IP</link:internal></note-content></text>
+  <last-change-date>2008-05-12T18:37:26.9170320+04:00</last-change-date>
+  <last-metadata-change-date>2008-05-12T18:37:26.9170320+04:00</last-metadata-change-date>
+  <create-date>2008-05-12T18:37:00.6347710+04:00</create-date>
+  <cursor-position>6</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>645</x>
+  <y>605</y>
+  <open-on-startup>False</open-on-startup>
+</note>

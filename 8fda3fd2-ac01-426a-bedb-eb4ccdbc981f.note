@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Linux admin tasks</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Linux</link:internal> admin tasks
+
+<link:internal>Логи в Linux</link:internal>
+<link:internal>man</link:internal>
+<link:internal>Шрифты в Linux</link:internal>
+<link:internal>Моя установка Linux</link:internal>
+<link:internal>Запустить Nautilus под root</link:internal>
+<link:internal>Environment variables in Linux</link:internal>
+<link:internal>Создание пользователей</link:internal>
+<link:internal>Cron</link:internal>
+<link:internal>Rsync</link:internal>
+<link:internal>Отключить спикер</link:internal></note-content></text>
+  <last-change-date>2009-10-12T12:00:21.8450610+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:21.8450610+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:37:42.1171230+03:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>471</width>
+  <height>360</height>
+  <x>165</x>
+  <y>94</y>
+  <open-on-startup>False</open-on-startup>
+</note>

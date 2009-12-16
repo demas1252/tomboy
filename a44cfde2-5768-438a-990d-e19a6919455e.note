@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация паттерна Command на Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация паттерна Command на Ruby
+
+class <link:internal>Command</link:internal>
+  attr_reader :description
+
+  def initialize(description)
+    @description = description
+  end
+
+  def execute
+  end
+end
+
+class CreateFile &lt; <link:internal>Command</link:internal>
+  def initialize(path, contents)
+    super("Create file: #{path}")
+    @path = path
+    @contents = contents
+  end
+  def execute
+    f = File.open(@path, "w")
+    f.write(@contents)
+    f.close
+  end
+end
+
+class DeleteFile &lt; <link:internal>Command</link:internal>
+  def initialize(path)
+    super("Delete file: #{path}")
+    @path = path
+  end
+
+  def execute
+    File.delete(@path)
+  end
+end
+
+class CopyFile &lt; <link:internal>Command</link:internal>
+  def initialize(source, target)
+    super("Copy file: #{source} to #{target}")
+    @source = source
+    @target = target
+  end
+
+  def execute
+    puts @source + " &gt;&gt;" + @target
+  end
+end
+
+class <link:internal>CompositeCommand</link:internal> &lt; <link:internal>Command</link:internal>
+  def initialize
+    @commands = []
+  end
+
+  def <link:internal>add</link:internal>_<link:internal>command</link:internal>(cmd)
+    @commands &lt;&lt; cmd
+  end
+
+  def execute
+    @commands.each {|cmd| cmd.execute}
+  end
+
+  def description
+    description = ''
+    @commands.each {|cmd| description += cmd.description + "\n"}
+    description
+  end
+end
+
+cmds = <link:internal>CompositeCommand</link:internal>.new
+
+cmds.<link:internal>add</link:internal>_<link:internal>command</link:internal>(CreateFile.new('file1.txt', "hello world\n"))
+cmds.<link:internal>add</link:internal>_<link:internal>command</link:internal>(CopyFile.new('file1.txt', 'file2.txt'))
+cmds.<link:internal>add</link:internal>_<link:internal>command</link:internal>(DeleteFile.new('file1.txt'))
+cmds.execute
+puts(cmds.description)
+</note-content></text>
+  <last-change-date>2009-04-25T18:32:30.0903160+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:30.0903160+04:00</last-metadata-change-date>
+  <create-date>2009-03-23T22:07:42.5918390+03:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

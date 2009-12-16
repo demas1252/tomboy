@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Рекурсивный процесс vs рекурсивная процедура</title>
+  <text xml:space="preserve"><note-content version="0.1">Рекурсивный процесс vs рекурсивная процедура
+
+Авторы <link:internal>sicp</link:internal> предлагают разделять эти два понятия.
+Рассмотрим реализацию факториала двумя способами:
+
+<italic>Способ <link:internal>1</link:internal></italic><italic>:</italic>
+
+(define (factorial n)
+  (<link:internal>if</link:internal> (= n <link:internal>1</link:internal>)
+       <link:internal>1</link:internal>
+       (* n (factorial (- n <link:internal>1</link:internal>)))))
+
+<italic>Способ 2:</italic>
+
+(define (factorial n)
+   (define (iter product counter)
+      (<link:internal>if</link:internal> (&gt; counter n)
+          product
+          (iter (* counter product)     
+                  (+ counter <link:internal>1</link:internal>))))
+    (iter <link:internal>1</link:internal> n))
+  
+Обе - рекурсивные процедуры, так как даже во втором примере вызывается рекурсивно iter.
+Однако рекурсивным процессом является только первый. Это станет очевидно, если воспользоваться методом подстановки:
+
+<italic>Способ <link:internal>1</link:internal></italic><italic>:</italic>
+
+(factorial 4)
+(* 4 (factorial 3)
+(* 4 (* 3 factorial 2))
+(*4 (*3 (*2 factorial <link:internal>1</link:internal>)))
+(*4 (*3 (*2 <link:internal>1</link:internal>)))
+(*4 (*3 2))
+(*4 6)
+24
+
+<italic>Способ 2:</italic>
+
+(factorial 4)
+(fact-iter <link:internal>1</link:internal> <link:internal>1</link:internal> 4)
+(fact-iter <link:internal>1</link:internal> 2 4)
+(fact-iter 2 3 4)
+(fact-iter 6 4 4)
+(fact-iter 24 5 4)
+24
+
+В языках типа Pascal, <link:internal>C</link:internal> реализация любой рекурсивной процедуры требует объем памяти линейно возрастающий с вызовом процедур.  Поэтому в них и приходится прибегать к таким вещам, как циклы (что, по сути, является синтаксическим сахаром).  <link:internal>Scheme</link:internal> избавлена от этого недостатка и выполняет итеративный процесс используя фиксированное кол-во памяти.  Это свойство называется <bold><italic>хвостовой рекурсией</italic></bold>.</note-content></text>
+  <last-change-date>2009-10-12T12:00:26.1599240+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:26.1599240+04:00</last-metadata-change-date>
+  <create-date>2008-04-06T20:22:34.4821610+04:00</create-date>
+  <cursor-position>437</cursor-position>
+  <width>834</width>
+  <height>870</height>
+  <x>64</x>
+  <y>149</y>
+  <open-on-startup>False</open-on-startup>
+</note>

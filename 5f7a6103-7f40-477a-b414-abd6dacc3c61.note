@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Clustered Index Seek</title>
+  <text xml:space="preserve"><note-content version="0.1">Clustered Index Seek
+
+
+Is a logical and physical operator.  Uses the seeking ability of indexes to retrieve rows from a clustered index.
+The storage engine uses the index to process only those rows that satisfy this SEEK:() predicate.
+
+*Пример <link:internal>1</link:internal>*
+
+create table items(
+itemid varchar(10),
+itemname varchar(50))
+
+ + PK по ItemId
+ 
+ StmtText
+-------------------------------------------
+select * from items where itemid = 'divan'
+
+(<link:internal>1</link:internal> row(s) affected)
+
+StmtText
+-------------------------------------------------------------------------------------------------------------------------------------
+  |--Clustered Index Seek(OBJECT:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[items].[PK_items]), SEEK:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[items].[itemid]=[@<link:internal>1</link:internal>]) ORDERED FORWARD)
+
+(<link:internal>1</link:internal> row(s) affected)
+
+<link:internal>If</link:internal> the Argument column contains the ORDERED clause, the query processor has determined that the rows must be returned in the order in which the clustered index has sorted them. <link:internal>If</link:internal> the ORDERED clause is not present, the storage engine searches the index in the optimal way, without necessarily sorting the output. Allowing the output to retain its ordering can be less efficient than producing nonsorted output.
+
+When the keyword LOOKUP appears, then a <link:internal>bookmark lookup</link:internal> is being performed.
+
+*Пример 2*
+
+create table actions(
+actionid int,
+itemid varchar(10),
+actionname varchar(10))
+
+ + PK по actionId и простой индекс по itemId
+ 
+ StmtText
+---------------------------------------------
+select * from actions where itemid = 'divan'
+
+(<link:internal>1</link:internal> row(s) affected)
+
+StmtText
+-------------------------------------------------------------------------------------------------------------------------------
+  |--<link:internal>Clustered Index Scan</link:internal>(OBJECT:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[PK_actions]), WHERE:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[itemid]='divan'))
+
+(<link:internal>1</link:internal> row(s) affected)
+
+<link:internal>SQL</link:internal> Server решил использовать кластерный индекс, а в нем нет itemId - то есть всю информацию (о том вкючать ли эту строку !!!) из индекса мы не получим.
+
+Сравни:
+
+StmtText
+--------------------------------------------------
+select itemid from actions where itemid = 'divan'
+
+(<link:internal>1</link:internal> row(s) affected)
+
+StmtText
+---------------------------------------------------------------------------------------------------------------------------------
+  |--Index Seek(OBJECT:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[IX_actions]), SEEK:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[itemid]=[@<link:internal>1</link:internal>]) ORDERED FORWARD)
+
+(<link:internal>1</link:internal> row(s) affected)
+
+
+StmtText
+-----------------------------------------
+select * from actions where actionid = <link:internal>1</link:internal>
+
+(<link:internal>1</link:internal> row(s) affected)
+
+StmtText
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  |--Clustered Index Seek(OBJECT:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[PK_actions]), SEEK:([<link:internal>test</link:internal>_<link:internal>db</link:internal>].[dbo].[actions].[actionid]=CONVERT_IMPLICIT(int,[@<link:internal>1</link:internal>],0)) ORDERED FORWARD)
+
+(<link:internal>1</link:internal> row(s) affected)
+
+
+</note-content></text>
+  <last-change-date>2009-10-17T22:10:57.5529930+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-17T22:10:57.5529930+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T07:44:11.8397100+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>730</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

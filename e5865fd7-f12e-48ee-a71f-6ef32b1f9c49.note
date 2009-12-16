@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Radix sort (поразрядная сортировка)</title>
+  <text xml:space="preserve"><note-content version="0.1">Radix sort (поразрядная сортировка)
+
+Алгоритм <link:internal>сортировки</link:internal> за линейное время.
+
+Суть алгоритма в том, что мы заводим n корзин, причем n выбирается по разрядности сортируемых чисел.
+То есть, если мы сортируем десятизначные числа, то корзин будет 10. Если сортируем строки, то корзин будет по максимальной длине строки.
+
+Далее мы берем рассовываем символы по самому младшему разряду (левому символу).
+То есть, если последовательность: 4, 67, 35, 90, 34, 1, 92, 11, 3, 56.
+То после первого распихивания мы получим:
+
+0 90
+1 1, 11
+2 92
+3 3
+4 4, 34
+5 35
+6 56
+7 67
+8
+9
+
+Потом собираем в список - сверху вниз: 90, 1, 11, 92, 3, 4, 34, 35, 56, 67.
+
+Теперь то же самое по второму разряду:
+
+0 1, 3, 4
+1 11
+2
+3 34, 35
+4
+5 56
+6 57
+7
+8
+9 90, 92
+
+Собираем: 1, 3, 4, 11, 34, 35, 56, 57, 90, 92.
+
+Таким образом количество проходов фиксировано, равно количеству разрядов и не зависит от количества чисел.
+
+<link:internal>Реализация поразрядной блокировки на Python</link:internal>
+</note-content></text>
+  <last-change-date>2009-03-23T21:48:17.3194260+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:48:17.3194260+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:47:51.9590200+03:00</create-date>
+  <cursor-position>885</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Получение информации о RedoLogFiles</title>
+  <text xml:space="preserve"><note-content version="0.1">Получение информации о RedoLogFiles
+
+
+select * from v$log;
+
+GROUP#  THREAD#  SEQUENCE#  BYTES  MEMBERS  ARCHIVED  STATUS  FIRST_CHANGE#  FIRST_TIME  
+<link:internal>1</link:internal>  <link:internal>1</link:internal>  29  10485760  <link:internal>1</link:internal>  NO  INACTIVE  464739  20-JAN-08  
+2  <link:internal>1</link:internal>  30  10485760  <link:internal>1</link:internal>  NO  INACTIVE  472601  20-JAN-08  
+3  <link:internal>1</link:internal>  31  10485760  <link:internal>1</link:internal>  NO  CURRENT  475039  26-JAN-08  
+
+<link:internal>UNUSED</link:internal> - в этот redo log пока ничего не писалось. Скорее всего он недавно создан.
+CURRENT - текущий, куда идет запись
+ACTIVE - активная группа, но не текущая. Нужна для восстановления в случае сбоя.
+CLEARING - лог был пересоздан ALTER DATABASE CLEAR LOGFILE
+CLEARING_CURRENT - 
+INACTIVE - больше не нужна для восстановления в случае сбоя.  Может быть архивирована (если необходимо).
+
+
+select * from v$logfile;
+
+GROUP#  STATUS  TYPE  MEMBER  IS_RECOVE  
+3     ONLINE  <link:broken>C</link:broken>:\<link:internal>ORACLE</link:internal>\PRODUCT\10.<link:internal>1</link:internal>.0\ORADATA\ORCL\REDO03.LOG  NO  
+2     ONLINE  <link:broken>C</link:broken>:\<link:internal>ORACLE</link:internal>\PRODUCT\10.<link:internal>1</link:internal>.0\ORADATA\ORCL\REDO02.LOG  NO  
+<link:internal>1</link:internal>     ONLINE  <link:broken>C</link:broken>:\<link:internal>ORACLE</link:internal>\PRODUCT\10.<link:internal>1</link:internal>.0\ORADATA\ORCL\REDO01.LOG  NO  
+
+</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.8623550+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.8623550+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:00:31.3321680+03:00</create-date>
+  <cursor-position>64</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>571</x>
+  <y>661</y>
+  <open-on-startup>False</open-on-startup>
+</note>

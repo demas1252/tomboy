@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>qrBlockedFactures</title>
+  <text xml:space="preserve"><note-content version="0.1">qrBlockedFactures
+
+FactureJour_RU
+	.....</note-content></text>
+  <last-change-date>2009-01-28T13:18:07.0933360+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-28T13:18:07.0933360+03:00</last-metadata-change-date>
+  <create-date>2009-01-28T13:16:58.5934800+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1220</x>
+  <y>615</y>
+  <open-on-startup>False</open-on-startup>
+</note>

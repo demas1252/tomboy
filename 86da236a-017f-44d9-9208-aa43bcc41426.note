@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Emacs и Erlang</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Emacs</link:internal> и Erlang
+
+<link:url>http://xtalk.msk.su/~ott/ru/writings/emacs-devenv/EmacsErlang.html</link:url>
+
+(<link:internal>add</link:internal>-to-list 'load-path "/usr/lib/<link:internal>erlang</link:internal>/lib/tools-2.6.2/<link:internal>emacs</link:internal>/")
+(require '<link:internal>erlang</link:internal>-start)
+
+(<link:internal>add</link:internal>-to-list 'auto-mode-alist '("\\.erl?$" . <link:internal>erlang</link:internal>-mode))
+(<link:internal>add</link:internal>-to-list 'auto-mode-alist '("\\.hrl?$" . <link:internal>erlang</link:internal>-mode))
+
+(setq <link:internal>erlang</link:internal>-root-dir "/usr/lib/<link:internal>erlang</link:internal>")
+(<link:internal>add</link:internal>-to-list 'exec-path "/usr/lib/<link:internal>erlang</link:internal>/bin")
+(setq <link:internal>erlang</link:internal>-<link:internal>man</link:internal>-root-dir "/usr/lib/<link:internal>erlang</link:internal>/<link:internal>man</link:internal>")
+
+
+<link:broken>C</link:broken> ck - compile
+</note-content></text>
+  <last-change-date>2009-02-07T15:39:20.7594720+03:00</last-change-date>
+  <last-metadata-change-date>2009-02-07T15:39:20.7594720+03:00</last-metadata-change-date>
+  <create-date>2009-01-02T15:40:06.7730219+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>92</x>
+  <y>538</y>
+  <open-on-startup>False</open-on-startup>
+</note>

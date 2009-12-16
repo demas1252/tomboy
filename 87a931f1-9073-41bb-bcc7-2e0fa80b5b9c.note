@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MS SQL - Ограничение на занятие ресурсов</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> - Ограничение на занятие ресурсов
+
+
+есть ли такие? можно ли какого-нибудь пользователя, который пишет селекты на рабочей базе, ограничить хотя бы по времени работы его запросов? но только не средствами самого пользователя (типа таймаут транзакции в настройках его приложения), а средствами сервера?
+
+а в 2005 можно?
+
+---
+
+IB
+
+A&gt;есть ли такие? 
+Есть, см Query Governor
+
+A&gt;можно ли какого-нибудь пользователя, который пишет селекты на рабочей базе, ограничить хотя бы по времени работы его запросов? 
+A&gt;но только не средствами самого пользователя (типа таймаут транзакции в настройках его приложения), а средствами сервера?
+Да. Только небольшой нюанс, решение о невыполнении запроса принимается на основе данных оптимизатора, а не по факту выполнения, таким образом тяжелый, по мнению оптимизатора, запрос даже не запустится:
+
+<link:internal>If</link:internal> your users perform many ad hoc queries on your <link:internal>SQL</link:internal> Server data, and you <link:internal>find</link:internal> that many of these "poorly-written" queries take up an excessive amount of <link:internal>SQL</link:internal> Server resources, consider using the "query governor cost limit" configuration option to limit how long a query can run.
+
+This option allows you to specify the maximum amount of "seconds" a query will run, and whenever the query optimizer determines that a particular query will exceed the maximum limit, the query will be aborted before it even begins.
+
+Although the value you set for this setting is stated as "seconds", it does not mean seconds like we think of seconds. Instead, it relates to the actual estimated cost of the query as calculated by the query optimizer. You may have to experiment with this value until you <link:internal>find</link:internal> one that meets your needs. 
+
+There are two ways to set this option. First, you can change it at the server level (all queries running on the server are affected by it) using sp_configure "query governor cost limit", or you can set it at the connection level (only this connection is affected) by using the SET QUERY_GOVERNOR_COST_LIMIT <link:internal>command</link:internal>.
+
+
+A&gt;а в 2005 можно?
+Все вышесказанное справедливо для 7.0 и 2000, для 2005 не смотрел, но вряд ли там что-то поменялось.</note-content></text>
+  <last-change-date>2009-10-12T12:00:33.5828160+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:33.5828160+04:00</last-metadata-change-date>
+  <create-date>2008-03-30T17:31:18.0918680+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>578</y>
+  <open-on-startup>False</open-on-startup>
+</note>

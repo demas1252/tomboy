@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация stupid sort на python</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация stupid sort на python
+
+def stupid_sort(a):
+    i = 0
+    while(i &lt; len(a) - 1):
+        <link:internal>if</link:internal>(a[i + 1] &lt; a[i]):
+            a[i], a[i + 1] = a[i + 1], a[i]
+            i = 0
+        else:
+            i = i + 1
+    return a
+
+print stupid_sort([12, 5, 89, 23, 43, 90, 2, 13])
+
+            
+</note-content></text>
+  <last-change-date>2009-03-23T21:50:03.8688450+03:00</last-change-date>
+  <last-metadata-change-date>2009-03-23T21:50:03.8688450+03:00</last-metadata-change-date>
+  <create-date>2009-03-23T21:49:57.8698260+03:00</create-date>
+  <cursor-position>67</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>47</y>
+  <open-on-startup>False</open-on-startup>
+</note>

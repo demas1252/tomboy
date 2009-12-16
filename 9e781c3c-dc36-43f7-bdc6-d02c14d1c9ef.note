@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Заблокировать пакет от обновления в Fedora</title>
+  <text xml:space="preserve"><note-content version="0.1">Заблокировать пакет от обновления в Fedora
+
+<link:internal>vim</link:internal><link:url> /etc/yum.conf</link:url>
+
+[main]
+excludeup=freetype*</note-content></text>
+  <last-change-date>2009-09-26T20:50:06.9554300+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-26T20:50:06.9554300+04:00</last-metadata-change-date>
+  <create-date>2009-04-18T23:01:57.6260710+04:00</create-date>
+  <cursor-position>77</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>105</x>
+  <y>445</y>
+  <open-on-startup>False</open-on-startup>
+</note>

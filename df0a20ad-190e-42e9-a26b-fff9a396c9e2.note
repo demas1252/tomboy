@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Индексы в MS SQL</title>
+  <text xml:space="preserve"><note-content version="0.1">Индексы в MS SQL
+
+<link:internal>Создание индексов ms sql</link:internal>
+<link:internal>fill factor</link:internal>
+<link:internal>Максимальное количество полей в индексе</link:internal>
+<link:internal>Пересоздание индексов</link:internal>
+<link:internal>Дефрагментация куч в ms sql 2008</link:internal></note-content></text>
+  <last-change-date>2009-04-12T18:40:37.8547210+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-12T18:40:37.8547210+04:00</last-metadata-change-date>
+  <create-date>2009-04-12T13:44:13.5637380+04:00</create-date>
+  <cursor-position>117</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>505</x>
+  <y>445</y>
+  <open-on-startup>False</open-on-startup>
+</note>

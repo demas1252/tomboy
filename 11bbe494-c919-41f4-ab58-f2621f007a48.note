@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Соли аммония</title>
+  <text xml:space="preserve"><note-content version="0.1">Соли аммония
+
+NH4 + HCl -&gt; NH4+ + Cl-
+
+<list><list-item dir="ltr">растворимы в воде NH4CL &lt;-&gt; NH4+ + Cl-
+</list-item><list-item dir="ltr">В лаборатории аммиак получают из солей аммония, действуя на них щелочью: NH4Cl+NaOH=NH3+NaCl+H2O</list-item></list>
+</note-content></text>
+  <last-change-date>2009-08-07T21:55:37.1669310+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-07T21:55:37.1669310+04:00</last-metadata-change-date>
+  <create-date>2009-08-07T21:41:09.3833530+04:00</create-date>
+  <cursor-position>37</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>320</x>
+  <y>334</y>
+  <open-on-startup>False</open-on-startup>
+</note>

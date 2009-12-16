@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Соответствие объектов СУБД и Аксапта</title>
+  <text xml:space="preserve"><note-content version="0.1">Соответствие объектов СУБД и Аксапта
+
+
+Принцип именования объектов БД (таблицы, поля, views) следующий. Если аксаптовское имя имеет длину менее 30 символов, то &lt;имя объекта в БД&gt; = &lt;имя объекта в Аксапте&gt;. Если более, то &lt;имя объекта в БД&gt; = strLeft(&lt;имя объекта в Аксапте&gt;, 25) + &lt;id объекта&gt;.
+
+В случае с индексом к имени еще добавляется префикс "I_&lt;id таблицы&gt;", т.е. &lt;имя индекса в БД&gt; = strLeft("I_&lt;id таблицы&gt;" + &lt;имя объекта в Аксапте&gt;, 25) + &lt;id объекта&gt;.
+
+Проще всего узнать физическое имя объекта использовать соответствующие методы класса DictTable:
+name() - для имени таблицы
+fieldname() - для имени поля
+indexname() - для имени индекса
+
+Все эти методы могут возвращать как аксаптовское имя, так и физическое имя объекта в БД. В последнем случае им надо в качестве параметра передать DbBackend::<link:internal>SQL</link:internal>.
+
+Например, для индекса это можно сделать так:
+
+new DictTable(tablenum(MyTable)).indexName(indexnum(MyTable, MyIndex), DbBackend::<link:internal>SQL</link:internal>);</note-content></text>
+  <last-change-date>2009-10-12T12:00:16.7545390+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:16.7545390+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:38:11.2437080+03:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

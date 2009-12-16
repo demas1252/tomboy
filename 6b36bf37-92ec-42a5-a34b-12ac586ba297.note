@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>По элементам AOT</title>
+  <text xml:space="preserve"><note-content version="0.1">По элементам AOT
+
+<bold>Типы данных</bold>
+<link:internal>Работа со строками</link:internal>
+<link:internal>Enums</link:internal>
+<link:internal>Контейнеры</link:internal>
+     
+<bold>Таблицы</bold>
+<link:internal>Tables</link:internal>
+<link:internal>Фильтры</link:internal>
+<link:internal>insert_recordset</link:internal>
+<link:internal>Удаление записей без учета DeleteActions</link:internal>
+<link:internal>Связки по recID</link:internal>
+
+<bold><link:internal>Макросы</link:internal></bold>
+<link:internal>Проблемы со скобкой в макросе</link:internal>
+
+<bold>Классы</bold>
+<link:internal>Классы c префиксом CC</link:internal>
+<link:internal>Args</link:internal>
+<link:internal>Сказать, что метод должен быть перекрыт</link:internal>
+<link:internal>propertyHelp()</link:internal>
+
+<bold>Формы</bold>
+<link:internal>Ввод по маске</link:internal>
+<link:internal>Browse any table</link:internal>
+<link:internal>Dialog in Axapta</link:internal>
+<link:internal>Создание горячих клавиш</link:internal>
+<link:internal>Поле дата без чисел</link:internal>
+<link:internal>Lookups in Axapta</link:internal>
+<link:internal>Отследить момент создания записи</link:internal>
+<link:internal>Убрать из меню Скрыть-Показать</link:internal>
+<link:internal>Диалог выбора месяца</link:internal>
+<link:internal>Позиционирование на записи</link:internal>
+<link:internal>Первоначальная сортировка записей</link:internal>
+<link:internal>Обращение к контролу по имени</link:internal>
+<link:internal>Раскраска срок grid</link:internal>
+<link:internal>Использование курсоров</link:internal>
+<link:internal>Запрет редактирования всех полей datasource</link:internal>
+
+<bold><link:internal>Запросы</link:internal></bold>
+<link:internal>Сохранение и восстановление query</link:internal>
+<link:internal>or Qquery</link:internal>
+<link:internal>Количество записей в queryRun</link:internal></note-content></text>
+  <last-change-date>2009-04-25T18:32:27.9038130+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-25T18:32:27.9038130+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:38:47.1886550+03:00</create-date>
+  <cursor-position>153</cursor-position>
+  <width>543</width>
+  <height>803</height>
+  <x>895</x>
+  <y>50</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LedgerVoucherObject</title>
+  <text xml:space="preserve"><note-content version="0.1">LedgerVoucherObject
+
+
+     Этот класс инкапсулирует в себе один ваучер. По большому счету – большая часть public методов данного класса позволяет указывать (или получать) умолчания для объектов ledgerVoucherTrans, добавляемых к данному ваучеру. Есть один полезный метод, связанный с доступом к системе корреспондирования счетов (о которой мы поговорим попозже) и еще несколько внутренних методов, которые делают много интересных вещей, но вызываются эти методы из других классов работы с ГК, а не из прикладного кода.
+
+     public NoYes parmCorrection(NoYes _correction = correction) – признак сторнирования
+     public container parmDocument( DocumentDate _documentDate = documentDate, DocumentNum _documentNum = documentNum) – дата и номер документа
+     public LedgerTransType parmLedgerTransType(LedgerTransType _ledgerTransType = ledgerTransType) – тип транзакции
+     public OperationsTax parmOperationsTax(OperationsTax _operationsTax = operationsTax) – зона учета
+     public <link:internal>PeriodCode</link:internal> parmPeriodCode(<link:internal>PeriodCode</link:internal> _<link:internal>periodCode</link:internal> = <link:internal>periodCode</link:internal>) – вид периода (открывающий/закрывающий/обычный)
+     public TransDate parmTransDate(TransDate _transDate = transDate) – дата постинга
+     public Voucher parmVoucher(Voucher _voucher = voucher) – номер ваучера
+     public TransTxt lastTransTxt(TransTxt _transTxt = lastTransTxt) – текст проводки
+     public boolean parmVoucherCheck(boolean _voucherCheck = voucherCheck) - режим проверки дублирования номера ваучера. Позволяет отключить для данного ваучера проверку дублирования номера (даже если в параметрах ГК она включена). Режим очень полезен, когда вам надо несколько связанных по смыслу операций делать в ответ на разные действия пользователя, но при этом также хочется чтобы эти разные операции шли с одним номером ваучера. В этом случае – вы просто при создании постингов по второй, третей и тп операциям в цепочке, подставляете старый номер ваучера и отключаете режим проверки.
+     public AmountCur lastAmountCur() – возвращает сумму в валюте операции из последнего добавленного к ваучеру постинга
+     public AmountCur lastAmountMST() – возвращает сумму в первичной валюте учета из последнего добавленного к ваучеру постинга
+     public AmountMSTSecondary lastAmountMSTSecondary_RU() – возвращает сумму во вторичной валюте учета из последнего добавленного к ваучеру постинга
+     public CurrencyCode lastCurrency() – возвращает код валюты операции из последнего добавленного к ваучеру постинга.
+     public void addTrans( <link:internal>LedgerVoucherTransObject</link:internal> _ledgerTransObject, boolean _allocate = true) важнейший метод. Добавляет к данному ваучеру объект типа <link:internal>ledgerVoucherTransObject</link:internal> (попросту говоря – posting). Второй параметр, в принципе, позволяет отключить операцию распределения, даже если таковое настроено в плане счетов для данного счета.
+     public static LedgerVoucherObject newVoucher( Voucher _voucher, TransDate _transDate = systemdateget(), SysModule _sysModule = SysModule::None, LedgerTransType _ledgerTransType = LedgerTransType::None, NoYes _correction = NoYes::No, OperationsTax _operationsTax = OperationsTax::Current, DocumentNum _documentNum = “”, DocumentDate _documentDate = dateNull(), <link:internal>Map</link:internal> _tmpVoucherMap = null, AcknowledgementDate _acknowledgementDate = dateNull(), boolean _checkVoucher = true)
+         Конструктор класса
+             _voucher – номер ваучера ( надо генерировать самостоятельно из номерной серии)
+             _transDate – дата операции
+             _SysModule – модуль
+             ledgerTransType – тип транзакции
+             _correction – признак сторнирования
+             _operationsTax – зона учета
+             _documentNum – номер исходного документа
+             _documentDate – дата исходного документа
+             _tmpVoucherMap – используется при разноске журналов ГК. В обычной практике – не используется
+             _acknowledgmentDate – в российских реалиях не учитывается. Похоже что в некоторых западных системах учета требуется при разноске операций по счетам расчетов, указывать не только дату учета документа у нас в учетной системе, но и дату получения документа контрагентом
+             _checkVoucher – позволяет отключить проверку дублирования номера ваучера.</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.6981420+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.6981420+04:00</last-metadata-change-date>
+  <create-date>2008-03-29T06:19:32.1297800+03:00</create-date>
+  <cursor-position>48</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>437</y>
+  <open-on-startup>False</open-on-startup>
+</note>

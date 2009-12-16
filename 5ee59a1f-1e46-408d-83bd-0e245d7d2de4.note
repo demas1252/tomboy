@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пронумеровать строки по группам</title>
+  <text xml:space="preserve"><note-content version="0.1">Пронумеровать строки по группам
+
+Исходные данные:
+
+<italic>declare @tmpTable table
+(
+  id INT,
+  Name VARCHAR(100)
+)
+insert into @tmpTable (id, Name)values (1, 'Вася')
+insert into @tmpTable (id, Name)values (2, 'Вася')
+insert into @tmpTable (id, Name)values (3, 'Вася')
+insert into @tmpTable (id, Name)values (4, 'Вася')
+insert into @tmpTable (id, Name)values (5, 'Петя')
+insert into @tmpTable (id, Name)values (6, 'Рома')
+insert into @tmpTable (id, Name)values (7, 'Рома')
+insert into @tmpTable (id, Name)values (8, 'Рома')
+insert into @tmpTable (id, Name)values (9, 'Сергей')
+</italic>
+Результат:
+
+<italic>1	Вася
+2	Вася
+3	Вася
+4	Вася
+1	Петя
+1	Рома
+2	Рома
+3	Рома
+1	Сергей</italic>
+
+На 2005:
+
+<italic>select ROW_NUMBER () OVER (PARTITION BY NAME ORDER BY NAME) ID, Name
+from @tmpTable
+</italic>
+Универсальный:
+
+<italic>select (select count(*) from @tmpTable as t1 where t1.Name = t2.Name and t1.id &lt;= t2.id) as rn,
+Name
+from @tmpTable as t2
+order by t2.Name</italic></note-content></text>
+  <last-change-date>2009-01-09T23:39:52.1002360+03:00</last-change-date>
+  <last-metadata-change-date>2009-01-09T23:39:52.1002360+03:00</last-metadata-change-date>
+  <create-date>2009-01-09T23:38:03.8065080+03:00</create-date>
+  <cursor-position>898</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>416</x>
+  <y>247</y>
+  <open-on-startup>False</open-on-startup>
+</note>

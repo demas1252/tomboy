@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Возврат массива из функции</title>
+  <text xml:space="preserve"><note-content version="0.1">Возврат массива из функции
+
+&lt;&lt;pre
+#include &lt;stdlib.h&gt;
+#include &lt;iostream&gt;
+
+int getArray(int*&amp; arr)
+{
+  arr = new int[4];
+  for (int i = 0; i &lt; 4; ++i)
+    arr[i] = i;
+  return 4;
+}
+
+int main()
+{
+  int* arr;
+  int size = getArray(arr);
+
+  for (int i = 0; i &lt; size; ++i)
+    std::cout &lt;&lt; arr[i] &lt;&lt; "\n";
+}
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2008-03-26T23:16:33.8866440+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-26T23:16:33.8866440+03:00</last-metadata-change-date>
+  <create-date>2008-03-26T23:16:33.1634100+03:00</create-date>
+  <cursor-position>55</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>248</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

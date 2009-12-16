@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Data Block Management</title>
+  <text xml:space="preserve"><note-content version="0.1">Data Block Management
+
+
+- <link:internal>Automatic</link:internal> Segment Space Management
+- Manual Configuration
+
+*<link:internal>Automatic</link:internal> Segment Space Management*
+
+ASSM круче, но не может использоваться для <link:internal>tablespaces</link:internal> содержащих LOB.   При этом используется <link:internal>bitmap</link:internal> segments описывающий статус каждого блока (например, свободное место).  Когда происходит вставка строки сервер просматривает <link:internal>bitmap</link:internal>, чтобы найти <link:internal>блок</link:internal>, куда ее можно всавить.
+
+Включается:
+&lt;&lt;pre
+create tablespace ... segment space management auto;
+
+&gt;&gt;
+
+*Manaul Configuration*
+
+_PCTFree_ - записи вставляются в <link:internal>блок</link:internal> до тех пор, пока ам не останется PCTFree% свободного места.  После этого сервер не будет вставлять строки в этот <link:internal>блок</link:internal>.  Но это место может быть использовано при updat-ах.
+
+Мы можем удалять строки из заполненного блока, но даже если освободившееся место будет больше PCTFree% - это совсем не значит, что сервер ломанется вставлять туда записи.  Он не будет этго делать пока заполненное место не уменьшится до _PCTUsed_.
+
+_InitTrans_ - начальное количество слотов, зарезервированных в заголовке блока для одновременной работы транзакций с этим блоком.   <link:internal>1</link:internal> транзакция - <link:internal>1</link:internal> слот.  Для таблиц - <link:internal>1</link:internal>; для индексов - 2.
+
+_MaxTrans_ - _InitTrans_ это только начальное значение, но оно может увеличиваться по необходимости.  Увеличиваться до величины _MaxTrans_.
+
+*Получение информации о блоках*
+
+dba_<link:internal>tablespaces</link:internal> - столбец segment_space_management (auto, manual)
+dba_data_files
+dba_segments
+dba_extents
+dba_free_space
+</note-content></text>
+  <last-change-date>2009-11-05T16:11:59.5758140+03:00</last-change-date>
+  <last-metadata-change-date>2009-11-05T16:11:59.5758140+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:20:58.3339389+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

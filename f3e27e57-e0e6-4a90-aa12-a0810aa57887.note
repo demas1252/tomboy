@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Удаление курсовой разницы по поставщикам</title>
+  <text xml:space="preserve"><note-content version="0.1">Удаление курсовой разницы по поставщикам
+
+Есть готовый проект - AAV.
+
+1. У нас есть сессия расчета курсовых - <italic>VendExchRateAdjustment</italic>.  Из нее берем пол <italic>Created TransactionId</italic>.
+
+2. Перебираем проводки по курсовой:  
+<italic>          VendTrans_KR.createdTransactionId  == CreatedTransactionId &amp;&amp;
+          VendTrans_KR.TransType == LedgerTransType::ExchAdjustment
+</italic>
+     а)  Тянем операции, по  которым возникли проводки по курсовым:
+<italic>                 VendTrans.Voucher = VendTrans_KR.LastSettleVoucher</italic>
+
+                1.  Для VendTrans берем VendTransOpen и уменьшаем у нее AmountMST на 
+                     величину VendTrans_KR.AmountMST.
+                2.  У самой VendTrans уменьшаем ExchAdjustment  и 
+                     VendExchAAdjustmentUnrealized на величину VendTrans_KR.AmountMST.
+                3.  Тянем VendSettlement к VendTrans.  Здесь хитро и надо тянуть исходник.
+                4.  Если Settlement найден:
+                            VendTrans.LastSettleVoucher = Settlement.Voucher
+			    VendTrans.LastSettleDate = Settlement.TransDate
+                      иначе:
+                            VendTrans.LastSettleVoucher = ''
+			    VendTrans.LastSettleDate = datenull().
+
+3. Еще раз точно так же перебираем проводки ко курсовой (см 2)
+
+       а)  на этот раз VendTrans тянем вот таким образом:
+<italic>                 VendTrans.LastExchAAdjVoucher = VendTrans_KR.Voucher</italic>
+
+       ..... ху-ху....тут сложно стало.  Надо более подробно разбираться.                              
+                                                                  </note-content></text>
+  <last-change-date>2009-04-09T16:41:04.2496850+04:00</last-change-date>
+  <last-metadata-change-date>2009-04-09T16:41:04.2496850+04:00</last-metadata-change-date>
+  <create-date>2009-04-09T16:11:55.4818190+04:00</create-date>
+  <cursor-position>1553</cursor-position>
+  <width>645</width>
+  <height>582</height>
+  <x>938</x>
+  <y>253</y>
+  <open-on-startup>False</open-on-startup>
+</note>

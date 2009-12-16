@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Бросок двух монет</title>
+  <text xml:space="preserve"><note-content version="0.1">Бросок двух монет
+
+Бросают 2 монеты. Какова <link:internal>вероятность</link:internal> появления хотя бы одного герба.
+
+А - <link:internal>вероятность</link:internal> герба при подбрасывании первой монеты
+B - <link:internal>вероятность</link:internal> герба при подбрасывании второй монеты
+
+Наше событие C=A+B, но P(C) != P(A) + P(B), так как события совместимы.
+
+Пусть событие !C - герба не выпало и оно очевидно равно 1/4 (гг, цц, гц, цг).
+
+!C + C - достоверное событи = 1 -&gt; P(C) = 3/4.</note-content></text>
+  <last-change-date>2009-06-10T10:05:38.9022410+04:00</last-change-date>
+  <last-metadata-change-date>2009-06-10T10:05:38.9022410+04:00</last-metadata-change-date>
+  <create-date>2009-06-10T10:02:33.4780530+04:00</create-date>
+  <cursor-position>196</cursor-position>
+  <width>529</width>
+  <height>430</height>
+  <x>657</x>
+  <y>323</y>
+  <open-on-startup>False</open-on-startup>
+</note>

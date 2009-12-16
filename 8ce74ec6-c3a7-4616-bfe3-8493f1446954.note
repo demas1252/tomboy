@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Список процессов Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Список процессов Oracle
+
+_SELECT addr, spid, program, <link:internal>pga</link:internal>_<link:internal>used</link:internal>_mem 
+FROM v$process;_</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.7489140+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.7489140+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:05:55.9753780+03:00</create-date>
+  <cursor-position>52</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>4</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

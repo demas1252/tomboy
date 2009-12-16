@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Замедление времени</title>
+  <text xml:space="preserve"><note-content version="0.1">Замедление времени
+
+Часы, движущиеся относительно наблюдателя, кжутся тикающими менее часто, чем в случае, когда они находятся относительно него в покое.
+
+	<italic>t = t0 / sqrt(1 - v^2/c^2).
+
+</italic>То есть, измерения с помощью покоящихся часов дают более длинный интревал времени между событиями, происходящими в движущейся системе отсчета, чем часы, движущиеся вместе с этой системой.
+
+<link:internal>Распад мезонов</link:internal></note-content></text>
+  <last-change-date>2009-07-30T11:19:53.8312900+04:00</last-change-date>
+  <last-metadata-change-date>2009-07-30T11:19:53.8312900+04:00</last-metadata-change-date>
+  <create-date>2009-07-29T15:29:49.1241040+04:00</create-date>
+  <cursor-position>374</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1191</x>
+  <y>491</y>
+  <open-on-startup>False</open-on-startup>
+</note>

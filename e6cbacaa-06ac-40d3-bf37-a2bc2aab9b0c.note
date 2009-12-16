@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Приглашение Sql Plus</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Приглашение Sql</link:internal> Plus
+
+&gt;&gt; set sqlprompt "что хотите"
+
+Или лучше создаем файл login.<link:internal>sql</link:internal> и помещаем его в <link:internal>db</link:internal>_1bin
+
+define gname = 'not connected'
+column global_name new_value gname
+set termout off
+select lower(user) || '@' || replace(global_name,'.WORLD',null) global_name from global_name;
+set termout on
+set sqlprompt '&amp;&amp;gname&gt; '
+
+Тогда при логине приглашение будет устанавливаться в user@sid&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:17.3755450+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:17.3755450+04:00</last-metadata-change-date>
+  <create-date>2008-03-27T14:45:42.7735530+03:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>3</x>
+  <y>660</y>
+  <open-on-startup>False</open-on-startup>
+</note>

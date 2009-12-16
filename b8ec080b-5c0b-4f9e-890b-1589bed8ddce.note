@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Почему у меня не заполнено CurrencyCode в InventTrans</title>
+  <text xml:space="preserve"><note-content version="0.1">Почему у меня не заполнено CurrencyCode в InventTrans
+
+
+[author: fed]
+[source: axforum]
+
+<link:internal>Склад</link:internal> будет закрываться нормально. Все суммы в <link:internal>InventTrans</link:internal> хнаяться в первичной и, если включен <link:internal>двухвалютный склад</link:internal>, вторичной валюте учета. Закрытие склада вообще не использует значения из <link:internal>inventTrans</link:internal>.currencyCode, поскольку рассчет всегда идеи в одной из двух валют учета. По большому счету, это - поле типа FYI, в которое дублируется код валюты из исходного документа. 
+При разноске складских журналов туда, судя по коду метода InventUpd_Financials::newCheckPostInventJournalTrans, всегда заносится код первичной валюты компании. 
+Можно, конечно, предположить что в момент разноски у вас не было заполнен код первичной валюты, но как-то мне кажется что в такой ситуации разноска не прошла бы вообще, поскольку при разноске в ГК все развалилось бы...
+
+Так что правильнее всего будет считать причиной этой ситуации какой-то одноразовый глюк.
+<link:internal>Склад</link:internal> можно будет закрывать безбоязненно.
+Если пустой код валюты по складским журналам очень уж мозолит глаза или мешает каким-то отчетам - можно просто написать какой-нибудь джобик, который запишет туда код первичной валюты компании.</note-content></text>
+  <last-change-date>2008-03-29T06:29:14.9000500+03:00</last-change-date>
+  <last-metadata-change-date>2008-03-29T06:29:14.9000500+03:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:13:44.4702800+03:00</create-date>
+  <cursor-position>82</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1207</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

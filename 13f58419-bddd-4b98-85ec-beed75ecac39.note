@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LaTeX</title>
+  <text xml:space="preserve"><note-content version="0.1">LaTeX
+
+<link:internal>Установка LaTeX</link:internal>
+<link:internal>Простейший пример текста для LaTeX</link:internal>
+<link:internal>Генерация pdf по tex</link:internal>
+<link:internal>Переносы в русском языке</link:internal>
+<link:internal>Картинки в формате jpeg</link:internal>
+<link:internal>Таблицы в latex</link:internal>
+<link:internal>Оформление кода в LaTeX</link:internal>
+<link:internal>Использовать xpdf для просмотра результата работы latex</link:internal></note-content></text>
+  <last-change-date>2009-08-09T21:35:14.1859170+04:00</last-change-date>
+  <last-metadata-change-date>2009-08-09T21:35:14.1859170+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:40:34.4109430+03:00</create-date>
+  <cursor-position>103</cursor-position>
+  <width>524</width>
+  <height>360</height>
+  <x>1135</x>
+  <y>557</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание хранимой процедуры в MS SQL с помощью CLR</title>
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Создание хранимой процедуры в MS SQL</link:internal> с помощью CLR
+
+<list><list-item dir="ltr">В VS создаем проект C# - <link:internal>MS SQL</link:internal> Server
+</list-item><list-item dir="ltr">Создаем например такую процедуру:</list-item></list>
+
+<italic>using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using Microsoft.SqlServer.Server;
+
+
+public <link:internal>partial</link:internal></italic><italic> class StoredProcedures
+{
+    [Microsoft.SqlServer.Server.SqlProcedure]
+    public static void some(SqlDateTime Value)
+    {
+        DataTable tbl = new DataTable();
+        SqlPipe Pipe = SqlContext.Pipe;
+        SqlDataRecord record = new SqlDataRecord(new SqlMetaData("My Output Column", SqlDbType.Text));
+        System.Text.StringBuilder st = new System.Text.StringBuilder();
+
+        using (SqlConnection connection = new SqlConnection("context connection=true"))
+        {
+            connection.Open();
+            <link:internal>SqlCommand</link:internal></italic><italic> <link:internal>command</link:internal></italic><italic> = new <link:internal>SqlCommand</link:internal></italic><italic>("SELECT ID,Name,DateBegin,DateEnd FROM Users WHERE isnull(DateEnd,'20500101') &gt;= @Date", connection);
+            <link:internal>command</link:internal></italic><italic>.Parameters.AddWithValue("@Date", Value);
+            tbl.Load(<link:internal>command</link:internal></italic><italic>.ExecuteReader(CommandBehavior.CloseConnection));
+        }        
+
+        for (int i = 0; i &lt; tbl.Rows.Count; i++)
+            st.Append(tbl.Rows[i]["Name"].ToString());            
+        
+        record.SetSqlString(0, st.ToString());
+        Pipe.Send(record);
+    }
+};
+
+</italic><list><list-item dir="ltr">Нажимаем Run - произойдет деплоинг
+</list-item><list-item dir="ltr">Проверяем хранимую процедуру</list-item></list>
+
+<italic>USE [testing]
+GO
+
+DECLARE	@return_value int
+
+EXEC	@return_value = [dbo].[some]
+		@Value = N'20060505'
+
+SELECT	'Return Value' = @return_value
+
+GO
+</italic></note-content></text>
+  <last-change-date>2009-10-12T12:00:19.8562680+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:19.8562680+04:00</last-metadata-change-date>
+  <create-date>2009-08-04T13:36:13.6784970+04:00</create-date>
+  <cursor-position>930</cursor-position>
+  <width>935</width>
+  <height>642</height>
+  <x>683</x>
+  <y>29</y>
+  <open-on-startup>False</open-on-startup>
+</note>

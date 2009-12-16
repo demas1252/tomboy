@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Убиение мертвых процессов в Oracle</title>
+  <text xml:space="preserve"><note-content version="0.1">Убиение мертвых процессов в Oracle
+
+_SELECT p.spid, p.program, s.program, s.terminal, s.status 
+FROM v$process p, v$session s 
+WHERE p.addr = s.paddr;_
+
+Освобождение напрасно занятых ресурсов СУБД достигается путем удаления в ОС процесса (нити), реализующего процесс <link:internal>Oracle</link:internal>, соответствующий "убитому" сеансу. Для такого удаления в составе ПО <link:internal>Oracle</link:internal> имеется специальная программа orakill, параметрами которой даются номер процесса (нити) ОС (берем из поля V$PROCESS.SPID) и имя экземпляра СУБД (<link:internal>ORACLE</link:internal>_SID):
+
+orakill <link:internal>ORACLE</link:internal>_SID номер_процесса_(нити)
+
+Как воспользоваться этой программой - дело техники. Например, можно построить запрос типа
+
+SELECT 'HOST orakill ' // i.instance_name // ' ' // p.spid
+FROM v$process p, v$session s, v$instance i
+WHERE p.addr = s.paddr AND 
+s.status = 'KILLED';
+
+и окаймить его командами <link:internal>SQL</link:internal>*Plus SPOOL и START (а также отключить выдачу заголовка) и получившийся таким образом сценарий <link:internal>SQL</link:internal>*Plus запускать внешними средствами (<link:internal>cron</link:internal>, или программой at, или с помощью консоли <link:internal>Oracle Enterprise Manager</link:internal>) с желаемой регулярностью. Этим сценарием результат запроса выше будет поступать в файл в виде, примерно таком:
+
+HOST orakill teacher 2056
+HOST orakill teacher 1628
+HOST orakill teacher 1604
+HOST orakill teacher 1556
+...
+
+а потом командой START интерпретироваться.</note-content></text>
+  <last-change-date>2009-10-12T12:00:38.0853200+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:38.0853200+04:00</last-metadata-change-date>
+  <create-date>2008-03-26T22:06:37.8578660+03:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>5</x>
+  <y>70</y>
+  <open-on-startup>False</open-on-startup>
+</note>

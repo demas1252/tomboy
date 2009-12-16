@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Trace Parser</title>
+  <text xml:space="preserve"><note-content version="0.1">Trace Parser
+
+<link:url>http://blogs.msdn.com/aeremenk/archive/2008/01/14/7107453.aspx</link:url>
+
+Начиная с версии 4.0 для Microsoft Dynamics AX существует внешняя утилита трассировки кода и запросов.
+<link:url>https://mbs.microsoft.com/partnersource/downloads/releases/ax4_traceparser.htm?printpage=false</link:url>
+Необходим net framework 3: <link:url>http://www.microsoft.com/downloads/details.aspx?familyid=10CC340B-F857-4A14-83F5-25634<link:broken>C</link:broken></link:url><link:url>3BF043&amp;displaylang=ru</link:url>
+
+Утилита предназначена для <link:internal>замены</link:internal> Профайлера кода и Трассировки запросов <link:internal>SQL</link:internal>, сохранившихся с предыдущих версиий в Microsoft Dynamics AX 4.0.
+В отличие от внутренних утилит, Trace parser нагружает анализируемую систему максимум на 4%. Trace parser позволяет анализировать файлы логов размерностью до 10Гб, а также сводить в одном месте данные по трассировке запросов <link:internal>RPC</link:internal>, запросов к данным на стороне <link:internal>SQL</link:internal> Server и исполнению кода X++.
+
+   <link:internal>1</link:internal>. Включаем трассировку на AOS (закладка tracing).
+   2. Включаем трассировку на клиенте.
+   3. Файлы логов сервера и клиента копируем в папку Trace Parcer (в моем случае - <link:broken>C</link:broken>:AX TraceLogsUnprocessed). Хотя это и необязательно, облегчает администрирование.
+   4. Импортируем логи</note-content></text>
+  <last-change-date>2009-10-12T12:00:34.0104610+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:34.0104610+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T15:02:58.9445850+03:00</create-date>
+  <cursor-position>41</cursor-position>
+  <width>0</width>
+  <height>0</height>
+  <x>-1</x>
+  <y>-1</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>CPP реализация Prototype</title>
+  <text xml:space="preserve"><note-content version="0.1">CPP реализация Prototype
+
+
+&lt;&lt;pre
+using System;
+ 
+namespace <link:internal>Prototype</link:internal>
+{  
+  class MainApp   {    
+    static void Main()
+    {
+      // Create two instances and clone each
+      ConcretePrototype1 p1 = new ConcretePrototype1("I");
+      ConcretePrototype1 <link:internal>c</link:internal>1 = (ConcretePrototype1)p1.Clone();
+      Console.WriteLine ("Cloned: {0}", <link:internal>c</link:internal>1.Id);
+ 
+      ConcretePrototype2 p2 = new ConcretePrototype2("II");
+      ConcretePrototype2 <link:internal>c</link:internal>2 = (ConcretePrototype2)p2.Clone();
+      Console.WriteLine ("Cloned: {0}", <link:internal>c</link:internal>2.Id);
+ 
+      // Wait for user
+      Console.Read();
+    }
+  }
+ 
+abstract class <link:internal>Prototype</link:internal>  {
+    private string id;
+ 
+    public <link:internal>Prototype</link:internal>(string id)  {
+      this.id = id;
+    }
+ 
+    public string Id     {
+      get{ return id; }
+    }
+ 
+    public abstract <link:internal>Prototype</link:internal> Clone();
+  }
+ 
+class ConcretePrototype1 : <link:internal>Prototype</link:internal>   {
+    public ConcretePrototype1(string id) : base(id)   {
+    }
+ 
+    public override <link:internal>Prototype</link:internal> Clone()    {
+      // Shallow copy
+      return (<link:internal>Prototype</link:internal>)this.MemberwiseClone();
+    }
+  }
+ 
+class ConcretePrototype2 : <link:internal>Prototype</link:internal>  {
+
+    public ConcretePrototype2(string id) : base(id)  {
+    }
+ 
+    public override <link:internal>Prototype</link:internal> Clone()     {
+      // Shallow copy
+      return (<link:internal>Prototype</link:internal>)this.MemberwiseClone();
+    }
+  }
+ }
+
+&gt;&gt;</note-content></text>
+  <last-change-date>2009-10-12T12:00:25.1453350+04:00</last-change-date>
+  <last-metadata-change-date>2009-10-12T12:00:25.1453350+04:00</last-metadata-change-date>
+  <create-date>2008-03-28T22:50:06.3067320+03:00</create-date>
+  <cursor-position>53</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>462</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

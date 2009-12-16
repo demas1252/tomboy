@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Администрирование linux</title>
+  <text xml:space="preserve"><note-content version="0.1">Администрирование linux
+
+<link:internal>Работа с пакетами</link:internal>
+<link:internal>Файловые системы</link:internal>
+<link:internal>Сетевые средства Linux</link:internal>
+<link:internal>Shell</link:internal>
+<link:internal>Память и процессы</link:internal>
+<link:internal>Оборудование в Linux</link:internal>
+<link:internal>Linux admin tasks</link:internal>
+<link:internal>Шрифты в Linux</link:internal>
+<link:internal>Kernel</link:internal>
+<link:internal>LAMB на Linux</link:internal>
+<link:internal>Звук в Linux</link:internal>
+
+htop, dstat, ncdu, iptraf, ccze</note-content></text>
+  <last-change-date>2009-09-28T21:28:00.4387540+04:00</last-change-date>
+  <last-metadata-change-date>2009-09-28T21:28:00.4387540+04:00</last-metadata-change-date>
+  <create-date>2009-03-27T12:27:30.3782470+03:00</create-date>
+  <cursor-position>83</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1122</x>
+  <y>132</y>
+  <open-on-startup>False</open-on-startup>
+</note>
