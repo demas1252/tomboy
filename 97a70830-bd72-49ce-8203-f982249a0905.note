@@ -37,7 +37,7 @@ user=&gt; (into '(1 2 3) '(:a :b :c))
   <last-change-date>2009-10-18T19:34:59.9808980+04:00</last-change-date>
   <last-metadata-change-date>2009-10-18T19:34:59.9808980+04:00</last-metadata-change-date>
   <create-date>2009-07-30T17:07:39.1638690+04:00</create-date>
-  <cursor-position>563</cursor-position>
+  <cursor-position>556</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>201</x>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Коллекции Java</title>
+  <text xml:space="preserve"><note-content version="0.1">Коллекции Java
+
+Прежде всего надо понимать, что в <link:internal>Java</link:internal> разделяют структуру данных (Set, List, <link:internal>Map</link:internal>) и их практическую реализацию(HashSet, TreeSet).  Первое - это интерфейсы, второе - это классы.
+
+Итак:
+
+<link:internal>Интерфейсы коллекций в Java</link:internal>
+<link:internal>Классы коллекций в Java</link:internal></note-content></text>
+  <last-change-date>2009-12-23T15:50:25.6571080+03:00</last-change-date>
+  <last-metadata-change-date>2009-12-23T15:50:25.6571080+03:00</last-metadata-change-date>
+  <create-date>2009-12-23T15:47:32.8452270+03:00</create-date>
+  <cursor-position>14</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
