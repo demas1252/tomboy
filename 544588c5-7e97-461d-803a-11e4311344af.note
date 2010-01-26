@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вопросительные предложения без вопросительного слова</title>
+  <text xml:space="preserve"><note-content version="0.1">Вопросительные предложения без вопросительного слова
+
+сказуемое + подлежащее
+
+<list><list-item dir="ltr">?Escribe Alberto?
+</list-item><list-item dir="ltr">Si, Alberto escribe. или Si, escribe.
+</list-item><list-item dir="ltr">No, no escribe.</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-01-26T16:57:30.1082910+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-26T16:57:30.1082910+03:00</last-metadata-change-date>
+  <create-date>2010-01-26T16:56:15.1146750+03:00</create-date>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

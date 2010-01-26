@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Звуки в испанском языке</title>
+  <text xml:space="preserve"><note-content version="0.1">Звуки в испанском языке
+
+[i] - и (ива)
+[e] - э (жест)
+[a] - a (папа)
+[o] - o
+[u] - у
+
+[p] - п (папа)
+[m] - м
+[f] - ф 
+[t] - т (но есть особенности артикуляции)
+[n] - н (но есть особенности артикуляции)
+      *n p* - читается как *m p* (un pino)
+[k] - k
+	<bold>c</bold> перед a, o, u, согласными и в конце слова
+        <bold>qu</bold> перед i, e
+	<bold>k </bold>в словах иностранного происхождения
+[b] - б (бант)
+   	в начале слова после паузы
+	в начале и середине слова после m и n 
+	boca, invito, un vote
+[l] - л (как то он мягче произносится)
+[s] - с
+[r] - р (краткий)
+[d] - д (дума)
+[rr] - раскатистый долгий r
+	r - в начале слова
+	внутри слова после букв n, l, s
+	rr между двумя гласными
+[~n] - нямкающий н
+[ll] - йь
+[ch] - ч
+</note-content></text>
+  <last-change-date>2010-01-26T17:01:22.3938760+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-26T17:01:22.3938760+03:00</last-metadata-change-date>
+  <create-date>2010-01-26T16:50:08.4429880+03:00</create-date>
+  <cursor-position>532</cursor-position>
+  <width>629</width>
+  <height>510</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

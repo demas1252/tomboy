@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Грамматика испанского</title>
+  <text xml:space="preserve"><note-content version="0.1">Грамматика испанского
+
+<link:internal>Существительное в испанском</link:internal>
+<link:internal>Прилагательное в испанском</link:internal>
+<link:internal>Артикли в испанском языке</link:internal>
+<link:internal>Предлоги в испанском языке</link:internal>
+
+<link:internal>Простое повествовательное предложение в испанском</link:internal>
+<link:internal>Вопросительные предложения без вопросительного слова</link:internal>
+<link:internal>Дополнения в испанском</link:internal>
+<link:internal>Вопрос к определению в испанском</link:internal>
+<link:internal>Вопрос к обстоятельству места в испанском</link:internal></note-content></text>
+  <last-change-date>2010-01-26T17:14:05.4920680+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-26T17:14:05.4920680+03:00</last-metadata-change-date>
+  <create-date>2010-01-26T16:42:56.9117560+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
