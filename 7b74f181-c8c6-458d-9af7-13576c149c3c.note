@@ -8,12 +8,17 @@ Jane is bored.
 
 Сравните:
 
-• Julia things politics is interesting.
-• Julia is interested in politics.</note-content></text>
-  <last-change-date>2010-01-28T14:06:50.2192600+03:00</last-change-date>
-  <last-metadata-change-date>2010-01-28T14:06:50.2192600+03:00</last-metadata-change-date>
+• Julia thinks politics is interesting.
+• Julia is interested in politics.
+
+Тут вроде все просто:
+
+<list><list-item dir="ltr">ed - состояние человека
+</list-item><list-item dir="ltr">ing - то чем он занимается</list-item></list></note-content></text>
+  <last-change-date>2010-01-28T14:28:15.4985060+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-28T14:28:15.4985060+03:00</last-metadata-change-date>
   <create-date>2010-01-28T14:06:30.7496120+03:00</create-date>
-  <cursor-position>72</cursor-position>
+  <cursor-position>125</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>0</x>
