@@ -24,7 +24,7 @@ _удаление:_ dpkg -r package name
   <last-change-date>2009-10-12T12:00:22.4828140+04:00</last-change-date>
   <last-metadata-change-date>2009-10-12T12:00:22.4828140+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:34:06.2005050+03:00</create-date>
-  <cursor-position>954</cursor-position>
+  <cursor-position>30</cursor-position>
   <width>583</width>
   <height>645</height>
   <x>159</x>
