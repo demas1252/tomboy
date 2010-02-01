@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>119. For, during and while</title>
+  <text xml:space="preserve"><note-content version="0.1">119. For, during and while
+
+We use<bold> for + a period</bold> of time to say ho long something goes on:
+
+<list><list-item dir="ltr">We watched television for two hours last night.
+</list-item><list-item dir="ltr">Diane is going away for a week in September.</list-item></list>
+
+We use <bold>during + noun </bold>to say when something happens (not how long):
+
+<list><list-item dir="ltr">I fell asleep during the film.
+</list-item><list-item dir="ltr">We met some really nice people during our <link:internal>holiday</link:internal>.</list-item></list>
+
+Compare:
+
+<list><list-item dir="ltr">I fell asleep <bold>during the film</bold>. I was asleep <bold>for half an hour</bold>.</list-item></list>
+
+Compare <bold>during</bold> + <italic>noun</italic> and <bold>while</bold> <italic>+ subject + verb</italic>:
+
+<list><list-item dir="ltr">I fell asleep <bold>during the film</bold>.
+</list-item><list-item dir="ltr">I fell asleep <bold>while I was watching TV</bold>.</list-item></list>
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-02-01T14:30:32.3702630+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-01T14:30:32.3702630+03:00</last-metadata-change-date>
+  <create-date>2010-02-01T13:32:33.8687510+03:00</create-date>
+  <cursor-position>546</cursor-position>
+  <width>556</width>
+  <height>537</height>
+  <x>267</x>
+  <y>52</y>
+  <open-on-startup>False</open-on-startup>
+</note>

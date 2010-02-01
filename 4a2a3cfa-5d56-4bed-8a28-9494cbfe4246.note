@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Переносы в русском языке</title>
-  <text xml:space="preserve"><note-content version="0.1">Переносы в русском языке
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Переносы</link:internal> в русском языке
 
 todo: research
 
@@ -14,8 +14,8 @@ todo: research
            =<link:internal>english</link:internal>
     &gt;&gt;
 2. texconfig init</note-content></text>
-  <last-change-date>2009-01-11T11:28:45.1730530+03:00</last-change-date>
-  <last-metadata-change-date>2009-01-11T11:28:45.1730530+03:00</last-metadata-change-date>
+  <last-change-date>2010-02-01T13:29:35.5171480+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-01T13:29:35.5171480+03:00</last-metadata-change-date>
   <create-date>2008-03-26T22:41:32.8108160+03:00</create-date>
   <cursor-position>286</cursor-position>
   <width>480</width>
