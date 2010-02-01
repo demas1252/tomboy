@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разговорник испанского</title>
+  <text xml:space="preserve"><note-content version="0.1">Разговорник испанского
+
+<link:url>http://www.studyspanish.ru/grammar/phrasebook/everyday.html#2</link:url>
+
+Спacибо - Gracias.
+Большое спасибо - Muchas gracias.
+Пожалуйста - De nada.
+Да - Si.
+Нет - No.
+Понимаю - Comprendo. 
+Хорошо. - Bien.
+Не бери в голову! - !No se preocupe!
+Сколько? - ?Cuanto?
+
+Доброе утро! - !Buenos dias!
+Добрый день! - !Buenas tardes!
+Добрый вечер! - !Buenas noches!
+Привет! - !Hola!
+Как дела? - ?Que tal esta Usted?
+До свидания - !Adios!
+До встречи - !Hasta luego!
+
+Простите - Perdomene.
+
+</note-content></text>
+  <last-change-date>2010-01-27T12:18:54.3430020+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-27T12:18:54.3430020+03:00</last-metadata-change-date>
+  <create-date>2010-01-27T12:11:10.0907400+03:00</create-date>
+  <cursor-position>255</cursor-position>
+  <width>472</width>
+  <height>535</height>
+  <x>1017</x>
+  <y>331</y>
+  <open-on-startup>False</open-on-startup>
+</note>
