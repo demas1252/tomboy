@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>99. Adjectives: a nice new house, you look tired</title>
+  <text xml:space="preserve"><note-content version="0.1">99. Adjectives: a nice new house, you look tired
+
+Сначала идут прилагательные выражающие мнение, а потом факты
+
+<list><list-item dir="ltr">a nice long <link:internal>holiday</link:internal>
+</list-item><list-item dir="ltr">a interesting young <link:internal>man</link:internal> </list-item></list>
+
+Если несколько фактов, то порядок:  how big -&gt; how old -&gt; what colour -&gt; where from -&gt; what is it made of
+
+We use adjectives after <bold>be/get/become/seen</bold>:
+
+<list><list-item dir="ltr">Be carefull !
+</list-item><list-item dir="ltr">I am tired.
+</list-item><list-item dir="ltr">Your friend seems very nice.</list-item></list>
+
+We use adjectives to say how somebody looks, feels ... :
+
+<list><list-item dir="ltr">You look tired.
+</list-item><list-item dir="ltr">This tea tastes a bit strange.</list-item></list>
+
+But to say how somebody does something you must use an adverb:
+
+<list><list-item dir="ltr">Drive carefully!</list-item></list>
+
+
+</note-content></text>
+  <last-change-date>2010-01-31T20:40:16.7678120+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-31T20:40:16.7678120+03:00</last-metadata-change-date>
+  <create-date>2010-01-31T20:33:36.8358360+03:00</create-date>
+  <cursor-position>327</cursor-position>
+  <width>707</width>
+  <height>497</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

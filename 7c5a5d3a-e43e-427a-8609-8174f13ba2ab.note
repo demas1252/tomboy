@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Настояжее время изъявительного наклонения</title>
+  <text xml:space="preserve"><note-content version="0.1">Настояжее время изъявительного наклонения
+
+               hablar           comer            escribir
+
+yo            habl<bold>o</bold>           com<bold>o</bold>             escrib<bold>o</bold>
+tu            habl<bold>as </bold>         com<bold>es</bold>            escrib<bold>es</bold>
+el             habl<bold>a </bold>          com<bold>e</bold>             escrib<bold>e</bold>
+nostros     habl<bold>amos</bold>      com<bold>emos</bold>      escrib<bold>imos</bold>
+vostros     habl<bold>ais      </bold>    com<bold>eis</bold>          escrib<bold>is</bold>
+ellos         habl<bold>an  </bold>        com<bold>en </bold>          escrib<bold>en</bold></note-content></text>
+  <last-change-date>2010-01-31T19:51:24.4050680+03:00</last-change-date>
+  <last-metadata-change-date>2010-01-31T19:51:24.4050680+03:00</last-metadata-change-date>
+  <create-date>2010-01-31T19:44:00.9498450+03:00</create-date>
+  <cursor-position>202</cursor-position>
+  <width>450</width>
+  <height>299</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
