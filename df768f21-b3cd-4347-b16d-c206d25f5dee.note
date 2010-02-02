@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>115. Unless / As long s / Provided-providing</title>
+  <text xml:space="preserve"><note-content version="0.1">115. Unless / As long s / Provided-providing
+
+Unless = except <link:internal>if</link:internal>.
+
+<list><list-item dir="ltr">The club is for members only. You can't go in <bold>unless you are a member</bold>.
+</list-item><list-item dir="ltr">Shall I tell Liz what happened? Not <bold>unless she asks you</bold>.</list-item></list>
+
+As long as / so long as / provided (that) / providing (that) = <link:internal>if</link:internal>, on condition that
+
+<list><list-item dir="ltr">You can borrow my car <bold>as long as (so long as)</bold> you promise not to drive too fast.
+</list-item><list-item dir="ltr">Travelling by car is convenient <bold>provided that (providing that)</bold> you have somewhare to park. (= but only <link:internal>if</link:internal> you have somewhere to park)</list-item></list>
+
+We don't use <italic>will </italic>after <italic>unless, as long as, so long as, provided, providing</italic>:
+
+<list><list-item dir="ltr">I'm not going out <bold>unless it stops</bold> raining.</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-02-02T10:08:33.9462760+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-02T10:08:33.9462760+03:00</last-metadata-change-date>
+  <create-date>2010-02-02T10:00:55.2337540+03:00</create-date>
+  <cursor-position>170</cursor-position>
+  <width>517</width>
+  <height>453</height>
+  <x>275</x>
+  <y>523</y>
+  <open-on-startup>False</open-on-startup>
+</note>
