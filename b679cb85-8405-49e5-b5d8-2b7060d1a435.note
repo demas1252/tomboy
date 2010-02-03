@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вопрос к определению - количественному числительному (в испанском)</title>
+  <text xml:space="preserve"><note-content version="0.1">Вопрос к определению - количественному числительному (в испанском)
+
+<list><list-item dir="ltr">?Cuantos libr<bold>os</bold> compra Benito?
+</list-item><list-item dir="ltr">COmpra seis libros.
+</list-item><list-item dir="ltr">?Cuantas revistas mira Andres?
+</list-item><list-item dir="ltr">Mir dos revistas.</list-item></list></note-content></text>
+  <last-change-date>2010-02-03T11:01:52.6346930+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-03T11:01:52.6346930+03:00</last-metadata-change-date>
+  <create-date>2010-02-03T11:00:29.8134230+03:00</create-date>
+  <cursor-position>86</cursor-position>
+  <width>662</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

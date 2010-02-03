@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Безличная конструкция с hay</title>
+  <text xml:space="preserve"><note-content version="0.1">Безличная конструкция с hay
+
+&lt;обстоятельство места&gt; + hay + существительное-дополнение
+
+<list><list-item dir="ltr">En el cuarto hay tres mesas.</list-item></list>
+
+В таких предложениях существительное обычно стоит с неопределенным артиклем, а во множ числе - без артикля.
+
+<list><list-item dir="ltr">En la mesa hay libros.</list-item></list>
+
+<bold>Вопрос</bold>
+
+<list><list-item dir="ltr">?Que hay en la habitation?   (что имеется в комнате)
+</list-item><list-item dir="ltr">Hay mesas y sillas.</list-item></list></note-content></text>
+  <last-change-date>2010-02-03T11:19:55.9565320+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-03T11:19:55.9565320+03:00</last-metadata-change-date>
+  <create-date>2010-02-03T11:10:03.3032440+03:00</create-date>
+  <cursor-position>320</cursor-position>
+  <width>450</width>
+  <height>335</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

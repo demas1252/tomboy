@@ -30,5 +30,5 @@ ustedes - вы
   <height>360</height>
   <x>342</x>
   <y>391</y>
-  <open-on-startup>True</open-on-startup>
+  <open-on-startup>False</open-on-startup>
 </note>
