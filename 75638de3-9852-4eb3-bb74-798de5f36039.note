@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основная теорема о квадратных трехчленах</title>
+  <text xml:space="preserve"><note-content version="0.1">Основная теорема о квадратных трехчленах
+
+<list><list-item dir="ltr">Очевидно, что функция y=4x*x+6 имеет минимум при первом члене равным нулю.
+</list-item><list-item dir="ltr">Менее очевидно, но решаемо: y = 3xx+24x+50</list-item></list>
+
+<italic>	y = 3(xx+8x)+50
+	y = 3(xx+8x+16) + 50 - 48
+	y = 3(x+4)~2+2
+</italic>
+	Далее аналогично.
+
+<list><list-item dir="ltr">Рассмотрим общий случай:  y = axx+bx+c</list-item></list>
+<italic>	y = a(xx+2b/2ax+bb/4aa)+c-bb/4a</italic>
+ 	Полагая: <italic>M = c-bb/4a</italic>.
+	<italic>y = a(x+b/2a)~2+M
+
+        </italic>тогда y(min/max) = M.
+
+Таким образом сформулируем <bold>теорему</bold>: <italic>квадратный трехчлен y = axx+bx+c имеет экстремальное значение, принимаемое им при x0=-b/2a.</italic>
+
+</note-content></text>
+  <last-change-date>2010-02-04T16:25:31.7345930+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-04T16:25:31.7345930+03:00</last-metadata-change-date>
+  <create-date>2010-02-04T16:14:19.5699110+03:00</create-date>
+  <cursor-position>208</cursor-position>
+  <width>615</width>
+  <height>550</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
