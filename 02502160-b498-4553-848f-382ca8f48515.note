@@ -15,6 +15,7 @@
 <link:internal>Проектирование</link:internal>   
 <link:internal>Алгоритмы</link:internal>
 <link:internal>Базовые науки</link:internal>
+<link:internal>Фотография</link:internal>
 
 <link:internal>Прочее</link:internal>
 <link:internal>Цели</link:internal>
@@ -24,13 +25,13 @@
 
 
  </note-content></text>
-  <last-change-date>2009-11-23T13:19:49.3563780+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-23T13:19:49.3563780+03:00</last-metadata-change-date>
+  <last-change-date>2010-02-02T13:08:21.8931170+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-02T13:08:21.8931170+03:00</last-metadata-change-date>
   <create-date>2008-02-19T15:55:13.0802880+03:00</create-date>
-  <cursor-position>65</cursor-position>
+  <cursor-position>146</cursor-position>
   <width>441</width>
   <height>490</height>
-  <x>942</x>
+  <x>835</x>
   <y>358</y>
   <open-on-startup>False</open-on-startup>
 </note>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Композиция</title>
+  <text xml:space="preserve"><note-content version="0.1">Композиция
+
+<list><list-item dir="ltr"><bold>Простота</bold>. Cюжетно важная деталь должна доминировать в кадре -&gt; фон должен быть простым и не отвлекать внимание зрителя.
+</list-item><list-item dir="ltr">Чтобы добавить кадру <bold>динамики </bold>смещайте его из центра кадра.
+</list-item><list-item dir="ltr"><bold>Правило золотого сечения</bold>
+</list-item><list-item dir="ltr">Следует учитывать<bold> путь следования объектов </bold>и оставлять им пространство для продолжения движения.
+</list-item><list-item dir="ltr"><bold>Направляющие</bold>
+<list><list-item dir="ltr">многократно повторяющиеся линии притягивают взгляд к важным деталям
+</list-item><list-item dir="ltr">зигзаг или S - линия
+</list-item><list-item dir="ltr">треугольники
+</list-item></list></list-item><list-item dir="ltr"><bold>Уравновешенность </bold>кадра
+</list-item><list-item dir="ltr"><bold>Элементы переднего плана</bold>
+<list><list-item dir="ltr">Взгляды людей должны быть обращены внутрь кадра
+</list-item></list></list-item><list-item dir="ltr">Отделение объекта съемки от элементов фона</list-item></list></note-content></text>
+  <last-change-date>2010-02-02T13:22:25.0347540+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-02T13:22:25.0347540+03:00</last-metadata-change-date>
+  <create-date>2010-02-02T13:08:45.1389800+03:00</create-date>
+  <cursor-position>450</cursor-position>
+  <width>477</width>
+  <height>433</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
