@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Presente de indicativo глагола estar</title>
+  <text xml:space="preserve"><note-content version="0.1">Presente de indicativo глагола estar
+
+находиться 
+
+estoy    estamos
+estas     estais
+esta      estan
+
+<list><list-item dir="ltr">Estamos en el instituto.
+</list-item><list-item dir="ltr">Los libros de Eugenio estan sobre la mesa.</list-item></list>
+
+Совместно с прилагательным выражает временное качество:
+
+<list><list-item dir="ltr">Estoy bien. (я чувствую себя хорошо)
+</list-item><list-item dir="ltr">Estoy ocupado (я занят)
+</list-item><list-item dir="ltr">Estoy contento (я доволен)</list-item></list>
+
+<list><list-item dir="ltr">?Como esta usted? - Как поживаете?</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-02-06T12:40:35.6910910+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-06T12:40:35.6910910+03:00</last-metadata-change-date>
+  <create-date>2010-02-06T12:34:47.7483940+03:00</create-date>
+  <cursor-position>37</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1040</x>
+  <y>202</y>
+  <open-on-startup>True</open-on-startup>
+</note>
