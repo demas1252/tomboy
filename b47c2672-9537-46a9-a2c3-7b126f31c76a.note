@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Некоторые применения основной теоремы о квадратных трехчленах</title>
+  <text xml:space="preserve"><note-content version="0.1">Некоторые применения основной теоремы о квадратных трехчленах
+
+<bold>Задача 1: </bold>Разложить положительное число на 2 слагаемых так, чтобы их произведение оказалось максимальным.
+
+Пусть одно слагаемое x, тогда второе (A-x), а их произведение y = x(A-x) = -x~2 + Ax -&gt; ищем значение x, при котором квадратный трехчлен получит максимальное значение -&gt; x0=A/2
+
+<bold>Задача 2</bold>: Есть проволока длинной L.  Составить из нее прямоугольник с наибольшей площадью.
+
+Пусть одна строноа x, тогда вторая <italic>(l/2 - x)</italic>, а площадь x(l/2-x) = -x~2+l/2*x.
+Эта функция принимает максимальное значение при x0=l/4.
+
+
+
+</note-content></text>
+  <last-change-date>2010-02-05T10:14:55.6756190+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-05T10:14:55.6756190+03:00</last-metadata-change-date>
+  <create-date>2010-02-05T10:04:30.5426300+03:00</create-date>
+  <cursor-position>484</cursor-position>
+  <width>784</width>
+  <height>360</height>
+  <x>100</x>
+  <y>519</y>
+  <open-on-startup>False</open-on-startup>
+</note>

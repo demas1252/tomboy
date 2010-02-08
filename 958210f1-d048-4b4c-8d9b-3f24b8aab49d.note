@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>git rm</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>git</link:internal> rm
+  <text xml:space="preserve"><note-content version="0.1">git rm
 
 <link:internal>git</link:internal> rm &lt;filename&gt;</note-content></text>
-  <last-change-date>2009-10-12T12:00:33.4651270+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:33.4651270+04:00</last-metadata-change-date>
+  <last-change-date>2010-02-08T17:40:02.3232590+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-08T17:40:02.3232590+03:00</last-metadata-change-date>
   <create-date>2009-03-24T08:38:56.8868720+03:00</create-date>
   <cursor-position>8</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>0</x>
   <y>26</y>
-  <open-on-startup>False</open-on-startup>
+  <open-on-startup>True</open-on-startup>
 </note>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вопрос к дополнению в испанском</title>
+  <text xml:space="preserve"><note-content version="0.1">Вопрос к дополнению в испанском
+
+Дополнение, относящиеся к лицу оформляется предлогом 'a':
+
+<list><list-item dir="ltr">Saludo a Alberto.  (Я приветсвую альберто)
+</list-item><list-item dir="ltr">Contesto a Alberto. (Я отвечаю Альберто)</list-item></list>
+
+?A quien? - кого/кому
+
+<list><list-item dir="ltr">?A quien saluda Pedro? (Кого приветсвует Педро)
+</list-item><list-item dir="ltr">?A quien contesta Pedro? (Кому отвечает Педро)</list-item></list></note-content></text>
+  <last-change-date>2010-02-05T17:31:01.3230690+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-05T17:31:01.3230690+03:00</last-metadata-change-date>
+  <create-date>2010-02-05T17:28:45.4298030+03:00</create-date>
+  <cursor-position>66</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1222</x>
+  <y>621</y>
+  <open-on-startup>False</open-on-startup>
+</note>
