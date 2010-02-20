@@ -29,5 +29,5 @@ esta      estan
   <height>360</height>
   <x>1040</x>
   <y>202</y>
-  <open-on-startup>True</open-on-startup>
+  <open-on-startup>False</open-on-startup>
 </note>
