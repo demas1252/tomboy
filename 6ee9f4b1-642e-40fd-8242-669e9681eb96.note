@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Буддийская философия Мадхьямика</title>
+  <text xml:space="preserve"><note-content version="0.1">Буддийская философия Мадхьямика
+
+<bold>Основные положения</bold>
+
+<list><list-item dir="ltr">философия - не умозрительная дисциплина, а часть практического проекта, направленного на трансформацию личности
+</list-item><list-item dir="ltr">философия - искусное стредство, уловка;  философия вербальна и следовательно она не может быть мудростью, но может способствовать ее обретению
+</list-item><list-item dir="ltr">философия имеет полемический характер (диспуты с брахманами) и ее надо рассматривать в контексте полемики с брахманизмом</list-item></list>
+
+<bold>Философские школы</bold>
+
+<list><list-item dir="ltr">Хинаяна
+<list><list-item dir="ltr"><link:internal>Вайбхашика</link:internal>
+</list-item><list-item dir="ltr"><link:internal>Саутантика</link:internal>
+</list-item></list></list-item><list-item dir="ltr">Махаяна
+<list><list-item dir="ltr"><link:internal>Мадхямаха</link:internal>
+</list-item><list-item dir="ltr">Йогочара</list-item></list></list-item></list>
+
++ теория Татхагатагарбхи
+</note-content></text>
+  <last-change-date>2010-02-26T12:06:58.9775690+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-26T12:06:58.9775690+03:00</last-metadata-change-date>
+  <create-date>2010-02-26T11:53:48.9244470+03:00</create-date>
+  <cursor-position>490</cursor-position>
+  <width>701</width>
+  <height>589</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
