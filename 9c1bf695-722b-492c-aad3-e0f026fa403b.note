@@ -14,9 +14,9 @@ rsyncd — демон, реализующий протокол <link:internal>rs
   <last-metadata-change-date>2008-06-15T23:42:48.1616160+04:00</last-metadata-change-date>
   <create-date>2008-03-27T14:59:24.7109799+03:00</create-date>
   <cursor-position>50</cursor-position>
-  <width>0</width>
-  <height>0</height>
-  <x>-1</x>
-  <y>-1</y>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
   <open-on-startup>False</open-on-startup>
 </note>

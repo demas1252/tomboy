@@ -3,13 +3,42 @@
   <title>Samba</title>
   <text xml:space="preserve"><note-content version="0.1">Samba
 
-<link:internal>pacman</link:internal> -S samba
+<link:internal>pacman</link:internal> -S samba smbclient
+
+<bold>Монтируем ресурс в nautilus</bold>
+
+Ctrl+L -&gt; smb://ax-fileserver/<link:internal>axapta</link:internal>/
+ax-fileserver надо прописать в <link:url>/etc/hosts</link:url>
+
+<bold>Делаем шару на своем компе</bold>
+
+<italic># cp <link:url>/etc/samba/smb.conf.default</link:url></italic><italic> <link:url>/etc/samba/smb.conf</link:url></italic>
+
+[global]
+ .....
+  workgroup = gmcs
+ .....
+   security = share
+
+# <link:url>/etc/rc.d/samba</link:url> start
+
+[public]
+   common = Public Stuff
+   path = <link:url>/home/demas/share</link:url>
+   public = yes
+   writable = no
+   printable = no
+   write list = @staff
+
+На win машине:
+
+<link:url>file://ip/</link:url>
 
 <link:internal>Примонтировать smb ресурс</link:internal></note-content></text>
-  <last-change-date>2009-10-17T22:10:58.7525630+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:58.7525630+04:00</last-metadata-change-date>
+  <last-change-date>2010-02-27T11:23:26.7692010+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-27T11:23:26.7692010+03:00</last-metadata-change-date>
   <create-date>2009-04-30T16:35:29.1638010+04:00</create-date>
-  <cursor-position>40</cursor-position>
+  <cursor-position>450</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>971</x>
