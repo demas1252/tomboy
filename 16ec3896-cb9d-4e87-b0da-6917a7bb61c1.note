@@ -3,6 +3,10 @@
   <title>Шрифты в Linux</title>
   <text xml:space="preserve"><note-content version="0.1">Шрифты в Linux
 
+<bold>Национальные шрифты</bold>
+
+японский: yaourt -S ttf-arphic-ukai
+
 Для дома - см scrapbook.
 Для работы - sudo <link:internal>apt-get</link:internal> install msttcorefonts.
 
@@ -88,10 +92,10 @@ $nvidia-settings -a InitialPixmapPlacement=0
 <bold>Mandriva</bold>
 
 репозиторий plf, пакет libfeetype6 - но ставить только из этого репозитория</note-content></text>
-  <last-change-date>2009-10-12T12:00:16.5388270+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:16.5388270+04:00</last-metadata-change-date>
+  <last-change-date>2010-02-27T22:41:02.8862500+03:00</last-change-date>
+  <last-metadata-change-date>2010-02-27T22:41:02.8862500+03:00</last-metadata-change-date>
   <create-date>2008-03-26T22:39:18.2586629+03:00</create-date>
-  <cursor-position>2052</cursor-position>
+  <cursor-position>37</cursor-position>
   <width>571</width>
   <height>632</height>
   <x>1041</x>
