@@ -3,14 +3,49 @@
   <title>Modules in Haskell</title>
   <text xml:space="preserve"><note-content version="0.1">Modules in Haskell
 
-Опишите здесь свою новую заметку.</note-content></text>
-  <last-change-date>2009-11-06T12:07:48.2675890+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-06T12:07:48.2675890+03:00</last-metadata-change-date>
+import &lt;module_name&gt;
+
+--------------------------------------------------
+
+<italic>import Data.List
+
+numUniques :: (Eq a) =&gt; [a] -&gt; Int
+numUniques = length . nub</italic>
+
+--------------------------------------------------
+
+<italic>import <bold>qualified </bold></italic><italic>Data.<link:internal>Map</link:internal></italic><italic>  </italic>
+<italic>import qualified Data.<link:internal>Map</link:internal></italic><italic> <bold>as M</bold></italic><italic>
+
+</italic><bold><link:internal>Map</link:internal></bold><italic> </italic>
+
+<italic>findKey :: (Eq k) =&gt; k -&gt; [(k, v)] -&gt; Maybe v
+findKey key [] = Nothing
+findKey key ((k,v):xs) = <link:internal>if</link:internal></italic><italic> key == k
+                            then Just v
+                            else findKey key xs</italic>
+
+<bold>Собственные модули</bold>
+
+module Geometry
+( sphereVolume
+, sphereArea
+) where
+
+sphereVolume :: Float -&gt; Float
+sphereVolume radius = (4.0 / 3.0) * pi * (radius ^ 3)
+
+sphereArea :: Float -&gt; Float
+sphereArea radius = 4 * pi * (radius ^ 2)
+
+</note-content></text>
+  <last-change-date>2010-03-21T10:27:25.8140940+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T10:27:25.8140940+03:00</last-metadata-change-date>
   <create-date>2009-11-06T12:07:48.2675890+03:00</create-date>
-  <cursor-position>53</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>1103</x>
-  <y>144</y>
+  <cursor-position>508</cursor-position>
+  <width>601</width>
+  <height>501</height>
+  <x>957</x>
+  <y>191</y>
   <open-on-startup>False</open-on-startup>
 </note>

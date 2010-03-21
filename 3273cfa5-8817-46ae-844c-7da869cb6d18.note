@@ -6,11 +6,15 @@
 <bold>Загрузить скрипт</bold>
 
 :cd dir
-:load file</note-content></text>
-  <last-change-date>2009-10-17T22:10:34.4077600+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:34.4077600+04:00</last-metadata-change-date>
+:load file
+
+<bold>Импортировать модуль</bold>
+
+<italic>ghci&gt; :m + Data.List</italic></note-content></text>
+  <last-change-date>2010-03-21T07:11:52.7275780+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T07:11:52.7275780+03:00</last-metadata-change-date>
   <create-date>2009-10-17T22:09:50.7447880+04:00</create-date>
-  <cursor-position>22</cursor-position>
+  <cursor-position>86</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>582</x>

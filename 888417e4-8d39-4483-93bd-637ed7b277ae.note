@@ -4,6 +4,7 @@
   <text xml:space="preserve"><note-content version="0.1">Финансы
 
 <link:internal>Разноска в ГК и корреспонденция</link:internal>
+<link:internal>Активно-пассивные счета</link:internal>
 <link:internal>Бюджетирование</link:internal>
 <link:internal>Стандартные налоговые регистры</link:internal>
 <link:internal>Выбор решения для консолидации на Ах</link:internal> 
@@ -23,10 +24,10 @@
 <link:internal>Предоплаты полученные. НДС к вычету</link:internal>.
 
 <link:internal>Cost Aaaccounting 2</link:internal></note-content></text>
-  <last-change-date>2009-11-16T10:17:40.1738160+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-16T10:17:40.1738160+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-16T15:19:02.4861860+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-16T15:19:02.4861860+03:00</last-metadata-change-date>
   <create-date>2008-03-26T22:29:29.3606630+03:00</create-date>
-  <cursor-position>363</cursor-position>
+  <cursor-position>64</cursor-position>
   <width>451</width>
   <height>400</height>
   <x>129</x>

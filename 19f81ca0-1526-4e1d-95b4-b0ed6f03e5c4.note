@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание своих типов в Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание своих типов в Haskell
+
+<italic>data Shape = Circle Float Float Float | Rectangle Float Float Float Float deriving (Show)
+
+   </italic><link:internal>ghci</link:internal>&gt; :t Circle  
+   Circle :: Float -&gt; Float -&gt; Float -&gt; Shape  
+   <link:internal>ghci</link:internal>&gt; :t Rectangle  
+   Rectangle :: Float -&gt; Float -&gt; Float -&gt; Float -&gt; Shape  <italic>
+
+surface :: Shape -&gt; Float
+surface (Circle _ _ r) = pi * r ^ 2
+surface (Rectangle x1 y1 x2 y2) = (<link:internal>abs</link:internal></italic><italic> $ x2 - x1) * (<link:internal>abs</link:internal></italic><italic> $ y2 - y1)</italic>
+
+   <link:internal>ghci</link:internal>&gt; surface $ Circle 10 20 10  
+   314.15927  
+   <link:internal>ghci</link:internal>&gt; surface $ Rectangle 0 0 100 100  
+   10000.0  
+
+или
+
+<italic>data Point = Point Float Float deriving (Show)
+data Shape = Circle Point Float | Rectangle Point Point deriving (Show)
+
+surface :: Shape -&gt; Float
+surface (Circle _ r) = pi * r ^ 2
+surface (Rectangle (Point x1 y1) (Point x2 y2)) = (<link:internal>abs</link:internal></italic><italic> $ x2 - x1) * (<link:internal>abs</link:internal></italic><italic> $ y2 - y1)
+</italic>
+   <link:internal>ghci</link:internal>&gt; surface (Rectangle (Point 0 0) (Point 100 100))  
+   10000.0  
+   <link:internal>ghci</link:internal>&gt; surface (Circle (Point 0 0) 24)  
+   1809.5574  
+
+<italic>data Person = Person { firstName :: String,
+                       lastName :: String,
+                       age :: Int } deriving (Show)
+</italic>
+
+</note-content></text>
+  <last-change-date>2010-03-21T14:09:14.1074720+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T14:09:14.1074720+03:00</last-metadata-change-date>
+  <create-date>2010-03-21T10:29:34.3407380+03:00</create-date>
+  <cursor-position>1057</cursor-position>
+  <width>638</width>
+  <height>564</height>
+  <x>846</x>
+  <y>349</y>
+  <open-on-startup>False</open-on-startup>
+</note>

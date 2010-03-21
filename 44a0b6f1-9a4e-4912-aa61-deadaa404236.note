@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Параметры складских аналитик</title>
+  <text xml:space="preserve"><note-content version="0.1">Параметры складских аналитик
+
+<bold>Первичная аналитика хранения</bold>
+
+Должна ли данная аналитика вводиться пользователем
+
+<bold>Контроль серийных номеров</bold>
+
+1 серийный номер &lt;-&gt; 1 шутка в проводке
+
+<bold>Пропуск для приходов / пропуск для расходов</bold>
+
+Используется при снятой галке '<italic>Первияная аналитика хранения</italic>'.  Насколько я понимаю, именно с этими галками она и имеет смысл.
+
+Проверяются, например, в InventMovement.checkDimPhysical()
+
+<bold>Физ наличие</bold>
+
+Контролировать ли наличие номенклатуры по данной аналитике или можно на нее забить и рассматривать все ее значения как одно целое.
+
+Тут нужно отметить два момента.  Во первых это имеет смысл с отключенным отриц складом в группе складских моделей, так как с включенном - и так все разрешено.
+Второе - контроль запасов на дату игнорирует эту настройку и при включенном контроле на дату снятая галка 'физическое наличие' не фига не спасает.  Ну, в общем, понятно - так как наличие на дату - наша доработка.
+
+<bold>Финансовый <link:internal>склад</link:internal></bold>
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-03-07T21:48:50.4395450+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-07T21:48:50.4395450+03:00</last-metadata-change-date>
+  <create-date>2010-03-07T20:50:29.0775560+03:00</create-date>
+  <cursor-position>913</cursor-position>
+  <width>602</width>
+  <height>484</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

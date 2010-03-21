@@ -19,16 +19,18 @@
 <bold>Складские аналитики</bold>
     
 <link:internal>Различие складских аналитик в проводке и строках журнала</link:internal>
+<link:internal>Параметры складских аналитик</link:internal>
+
         
 <link:internal>Архитекура складского модуля</link:internal>
 </note-content></text>
-  <last-change-date>2008-03-29T06:26:32.3322879+03:00</last-change-date>
-  <last-metadata-change-date>2008-03-29T06:26:32.3322879+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-07T20:50:38.5795230+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-07T20:50:38.5795230+03:00</last-metadata-change-date>
   <create-date>2008-03-26T22:52:12.2795070+03:00</create-date>
-  <cursor-position>315</cursor-position>
+  <cursor-position>32</cursor-position>
   <width>614</width>
   <height>556</height>
-  <x>626</x>
-  <y>232</y>
+  <x>978</x>
+  <y>84</y>
   <open-on-startup>False</open-on-startup>
 </note>

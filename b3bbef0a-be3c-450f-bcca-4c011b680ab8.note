@@ -20,16 +20,28 @@
 # <link:internal>ghci</link:internal>&gt; :t fst  
 # fst :: (a, b) -&gt; a  
 
+<bold>Typeclasses 101</bold>
+
+<italic>#<link:internal>ghci</link:internal></italic><italic>&gt; :t (==)</italic>
+<italic>(==) :: (Eq a) =&gt; a -&gt; a -&gt; Bool</italic>
+
+<italic>(Eq a)</italic> - class constraint
+<italic>a -&gt; a</italic> <italic>- </italic>take two values of same type
+<italic>-&gt; Bool</italic> <italic>-</italic> return Bool
+Типы 'a' должны быть членами класса <italic>Eq</italic>
+
 <bold>Explicit Type Annotation</bold>
 
 <italic># <link:internal>ghci</link:internal></italic><italic>&gt; read "5" :: Int  
-# 5  </italic></note-content></text>
-  <last-change-date>2009-10-17T22:09:59.4624390+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:09:59.4624390+04:00</last-metadata-change-date>
+# 5  </italic>
+
+<link:internal>Создание своих типов в Haskell</link:internal></note-content></text>
+  <last-change-date>2010-03-21T10:29:42.7211760+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T10:29:42.7211760+03:00</last-metadata-change-date>
   <create-date>2009-10-17T18:24:28.0768680+04:00</create-date>
-  <cursor-position>56</cursor-position>
-  <width>450</width>
-  <height>360</height>
+  <cursor-position>347</cursor-position>
+  <width>541</width>
+  <height>469</height>
   <x>941</x>
   <y>302</y>
   <open-on-startup>False</open-on-startup>
