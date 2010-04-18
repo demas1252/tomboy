@@ -6,13 +6,13 @@
 require 'net/http'
 
 h = Net::HTTP.new('<link:url>www.ya.ru</link:url>', 80)
-response = h.get('/index.html', nil)
+response = h.get('/index.<link:internal>html</link:internal>', nil)
 <link:internal>if</link:internal> response.message == "OK"
   puts response.body.scan(/&lt;img scr="(.*?)"/m).uniq
 end
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:53.5755810+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:53.5755810+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:01.7010840+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:01.7010840+03:00</last-metadata-change-date>
   <create-date>2009-06-26T11:13:16.3001830+04:00</create-date>
   <cursor-position>46</cursor-position>
   <width>450</width>

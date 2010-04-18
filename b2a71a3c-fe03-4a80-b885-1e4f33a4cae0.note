@@ -16,7 +16,7 @@ _ curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 _notes = []
 
 _header = """
-&lt;html&gt;
+&lt;<link:internal>html</link:internal>&gt;
  &lt;head&gt;
   &lt;title&gt;Random notes&lt;/title&gt;
  &lt;/head&gt;
@@ -24,7 +24,7 @@ _header = """
 
 _footer = """
  &lt;/body&gt;
-&lt;/html&gt;"""
+&lt;/<link:internal>html</link:internal>&gt;"""
 
 _note_form = """
   &lt;form method="post" action="post" class="form"&gt;
@@ -126,8 +126,8 @@ class Author(object):
     <link:internal>cherrypy</link:internal>.engine.start()
   
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:31.2742200+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:31.2742200+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:02.2237790+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.2237790+03:00</last-metadata-change-date>
   <create-date>2009-04-05T14:59:59.2640510+04:00</create-date>
   <cursor-position>63</cursor-position>
   <width>450</width>

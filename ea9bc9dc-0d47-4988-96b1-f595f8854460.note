@@ -61,8 +61,8 @@ SELECT avg_fragmentation_in_percent, fragment_count FROM sys.dm_<link:internal>d
 <link:url>http://sqlskills.com/BLOGS/PAUL/post/Auto-shrink-e28093-turn-it-OFF!.aspx</link:url>
 <link:url>http://www.karaszi.com/SQLServer/info_dont_shrink.asp</link:url>
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:57.0128700+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:57.0128700+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:01.3543170+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:01.3543170+03:00</last-metadata-change-date>
   <create-date>2009-03-24T09:13:40.9727180+03:00</create-date>
   <cursor-position>102</cursor-position>
   <width>450</width>

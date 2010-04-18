@@ -5,15 +5,40 @@
 
 Реально вызывается функция, указанная до {}, а в самой функции при каждом yield вызывается содержимое {}.
 
+class Calculator
+  def initialize(name, &amp;block)
+    @name, @block = name, block
+  end
+
+  def calc(amount)
+    return @block.call(amount)
+  end
+end
+
+calc_one = Calculator.new("one") { | value | value * 0.2 }
+calc_two = Calculator.new("two") { | value | value * 0.5 }
+
+puts calc_one.calc(100)
+puts calc_two.calc(100)
+puts calc_one.calc(200)
+puts calc_two.calc(200)
+  
+В общем, это как бы возможность передать указатель на функцию. 
+
+
 <link:internal>Использование блоков в Ruby для итераторов</link:internal>
 <link:internal>Использование блоков в Ruby для транзакционности</link:internal>
-</note-content></text>
-  <last-change-date>2009-03-23T22:05:01.5014840+03:00</last-change-date>
-  <last-metadata-change-date>2009-03-23T22:05:01.5014840+03:00</last-metadata-change-date>
+
+<link:internal>Использование code blocks c Enumerable</link:internal>
+<link:internal>Использование code blocks для pre и post processing-а</link:internal>
+<link:internal>Использование code blocks для реализаци callbacks</link:internal>
+<link:internal>Использование code blocks для того, чтобы сократить объем кода</link:internal></note-content></text>
+  <last-change-date>2010-04-14T10:34:06.2331990+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-14T10:34:06.2331990+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:38:59.6200260+03:00</create-date>
-  <cursor-position>227</cursor-position>
-  <width>450</width>
-  <height>360</height>
+  <cursor-position>579</cursor-position>
+  <width>662</width>
+  <height>687</height>
   <x>1062</x>
   <y>201</y>
   <open-on-startup>False</open-on-startup>

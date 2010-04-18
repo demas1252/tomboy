@@ -38,11 +38,13 @@ puts song.duration
   attr_writer  :name, :artist, :duration
 
 атрибуты для чтения и записи, а duration_in_minutes - виртуальный атрибут.
+
+attr_accessor :myvar
 </note-content></text>
-  <last-change-date>2009-03-23T21:35:08.3984900+03:00</last-change-date>
-  <last-metadata-change-date>2009-03-23T21:35:08.3984900+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:09:13.8146900+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:09:13.8146900+03:00</last-metadata-change-date>
   <create-date>2009-03-23T21:34:44.9083680+03:00</create-date>
-  <cursor-position>214</cursor-position>
+  <cursor-position>803</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1093</x>

@@ -3,25 +3,33 @@
   <title>Построчное чтение файла</title>
   <text xml:space="preserve"><note-content version="0.1">Построчное чтение файла
 
-File.open("/home/demas/temp/links.html") do |file|
+<italic>File.open("/home/demas/temp/links.<link:internal>html</link:internal></italic><italic>") do |file|
   while line = file.gets
     puts line
   end
 end
-
+</italic>
 или лучше так:
 
-File.open("/home/demas/temp/links.html") do |file|
+<italic>File.open("/home/demas/temp/links.<link:internal>html</link:internal></italic><italic>") do |file|
   file.each_line{|line| puts line }
 end
+</italic>
+или:
+
+<italic>File.readlines(filename).each do |line|
+  x &lt;&lt; line.split[0]
+  y &lt;&lt; line.split[1]
+end
+</italic>
 </note-content></text>
-  <last-change-date>2009-05-22T12:35:33.0298620+04:00</last-change-date>
-  <last-metadata-change-date>2009-05-22T12:35:33.0298620+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-22T15:51:13.0435690+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-22T15:51:13.0435690+03:00</last-metadata-change-date>
   <create-date>2009-05-22T12:34:06.5561340+04:00</create-date>
-  <cursor-position>120</cursor-position>
+  <cursor-position>125</cursor-position>
   <width>450</width>
   <height>416</height>
   <x>19</x>
-  <y>570</y>
+  <y>562</y>
   <open-on-startup>False</open-on-startup>
 </note>

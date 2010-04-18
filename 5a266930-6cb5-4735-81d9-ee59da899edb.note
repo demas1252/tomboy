@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Сортировка по NULL полям</title>
+  <text xml:space="preserve"><note-content version="0.1">Сортировка по NULL полям
+
+CREATE TABLE #Foo (Foo int)
+
+INSERT INTO #Foo SELECT 4
+INSERT INTO #Foo SELECT NULL
+INSERT INTO #Foo SELECT 2
+INSERT INTO #Foo SELECT 5
+INSERT INTO #Foo SELECT 1
+
+1
+2
+3
+4
+5
+NULL
+
+
+ORDER BY 
+(CASE WHEN Foo IS NULL THEN 1 ELSE 0 END), Foo
+</note-content></text>
+  <last-change-date>2010-03-25T15:16:19.1849290+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-25T15:16:19.1849290+03:00</last-metadata-change-date>
+  <create-date>2010-03-25T15:15:51.7711480+03:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Derived instances</title>
+  <text xml:space="preserve"><note-content version="0.1">Derived instances
+
+Int тип - instance Eq типокласса
+
+# data Person = Person { firstName :: String  
+#                      , lastName :: String  
+#                      , age :: Int  
+#                      } deriving <bold>(Eq) </bold>
+
+
+   1. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> mikeD = Person {firstName = "Michael", lastName = "Diamond", age = 43}  
+   2. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> adRock = Person {firstName = "Adam", lastName = "Horovitz", age = 41}  
+   3. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> mca = Person {firstName = "Adam", lastName = "Yauch", age = 44}  
+   4. <link:internal>ghci</link:internal>&gt; mca == adRock  
+   5. False  
+   6. <link:internal>ghci</link:internal>&gt; mikeD == adRock  
+   7. False  
+   8. <link:internal>ghci</link:internal>&gt; mikeD == mikeD  
+   9. True  
+  10. <link:internal>ghci</link:internal>&gt; mikeD == Person {firstName = "Michael", lastName = "Diamond", age = 43}  
+  11. True  
+
+   1. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> beastieBoys = [mca, adRock, mikeD]  
+   2. <link:internal>ghci</link:internal>&gt; mikeD `elem` beastieBoys  
+   3. True  
+
+<italic>data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday   
+            deriving (Eq, Ord, Show, Read, Bounded, Enum)  
+</italic></note-content></text>
+  <last-change-date>2010-03-30T15:34:56.8426230+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.8426230+04:00</last-metadata-change-date>
+  <create-date>2010-03-25T15:02:20.9532870+03:00</create-date>
+  <cursor-position>962</cursor-position>
+  <width>925</width>
+  <height>359</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

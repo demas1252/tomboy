@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Type synonyms</title>
+  <text xml:space="preserve"><note-content version="0.1">Type synonyms
+
+type String = [Char]
+
+Это не создание нового типа, это просто ссылка на существующий.
+Просто для более удобной записи некотрых вещей:
+
+<italic>type PhoneNumber = String
+type Name = String
+type PhoneBook = [(Name,PhoneNumber)]
+
+inPhoneBook :: Name -&gt; PhoneNumber -&gt; PhoneBook -&gt; Bool
+inPhoneBook name pnumber pbook = (name, pnumber) `elem` pbook</italic>
+
+Синонимы тоже могут быть параметризированными:
+
+<italic>type AssocList k v = [(k, v)]
+
+</italic>Практический пример:
+
+<italic>import qualified Data.<link:internal>Map</link:internal></italic><italic> as <link:internal>Map</link:internal></italic><italic>
+
+data LockerState = Taken | Free deriving (Show, Eq)
+type Code = String
+type LockerMap = <link:internal>Map</link:internal></italic><italic>.<link:internal>Map</link:internal></italic><italic> Int (LockerState, Code)
+
+lockers::LockerMap
+lockers = <link:internal>Map</link:internal></italic><italic>.fromList[(100, (Taken, "one")),
+                       (101, (Free, "two")),
+                       (103, (Free, "three")),
+                       (105, (Taken, "four")),
+                       (109, (Taken, "five")),
+                       (110, (Taken, "six"))]
+
+lockerLookup::Int-&gt;LockerMap-&gt;Either String Code
+lockerLookup lockerNumber <link:internal>map</link:internal></italic><italic> = 
+             case <link:internal>Map</link:internal></italic><italic>.lookup lockerNumber <link:internal>map</link:internal></italic><italic> of
+                  Nothing -&gt; Left $ "Locker number " ++ show lockerNumber ++ " doesnt' exist!"
+                  Just(state, code) -&gt; <link:internal>if</link:internal></italic><italic> state /= Taken
+                              then Right code
+                              else Left $ "Locker " ++ show lockerNumber ++ " is already taken!"
+</italic>
+
+*Main&gt; lockerLookup 101 lockers
+Right "two"
+*Main&gt; lockerLookup 100 lockers
+Left "Locker 100 is already taken!"
+*Main&gt; lockerLookup 102 lockers
+Left "Locker number 102 doesnt' exist!"
+
+Either String Code говорит о том,  что функция возвращает результат одного из двух типов.</note-content></text>
+  <last-change-date>2010-03-26T10:25:19.0070760+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-26T10:25:19.0070760+03:00</last-metadata-change-date>
+  <create-date>2010-03-26T09:54:27.8390040+03:00</create-date>
+  <cursor-position>1519</cursor-position>
+  <width>838</width>
+  <height>460</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

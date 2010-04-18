@@ -3,7 +3,7 @@
   <title>Повесить javascript код на link</title>
   <text xml:space="preserve"><note-content version="0.1">Повесить javascript код на link
 
-&lt;html&gt;
+&lt;<link:internal>html</link:internal>&gt;
 &lt;body&gt;
     &lt;script language="<link:internal>Javascript</link:internal>" type="text/<link:internal>javascript</link:internal>"&gt;
         function somescript() {
@@ -17,9 +17,9 @@
     &lt;a href="<link:internal>javascript</link:internal>:somescript()"&gt;click <link:internal>me</link:internal>&lt;/a&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</note-content></text>
-  <last-change-date>2009-11-23T17:12:22.6448589+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-23T17:12:22.6448589+03:00</last-metadata-change-date>
+&lt;/<link:internal>html</link:internal>&gt;</note-content></text>
+  <last-change-date>2010-03-21T18:14:01.1508610+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:01.1508610+03:00</last-metadata-change-date>
   <create-date>2009-11-23T17:12:07.6552820+03:00</create-date>
   <cursor-position>66</cursor-position>
   <width>450</width>

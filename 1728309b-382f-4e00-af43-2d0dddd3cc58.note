@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Let in Haskell</title>
-  <text xml:space="preserve"><note-content version="0.1">Let in Haskell
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Let</link:internal> in Haskell
 
 Как <italic>where</italic>, но видимость локальная:
 
@@ -17,8 +17,8 @@ cylinder r h =
 2. [(25,9,4)]  </italic>
 
 </note-content></text>
-  <last-change-date>2009-10-29T16:46:37.9445500+03:00</last-change-date>
-  <last-metadata-change-date>2009-10-29T16:46:37.9445500+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-30T15:34:57.3932690+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:57.3932690+04:00</last-metadata-change-date>
   <create-date>2009-10-29T16:38:09.4604090+03:00</create-date>
   <cursor-position>332</cursor-position>
   <width>450</width>

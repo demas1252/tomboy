@@ -24,8 +24,8 @@ build() {
 	
 	cd ${startdir}/src || return 1
 	cp -r <link:internal>gnome</link:internal>-brave <link:internal>gnome</link:internal>-colors-common <link:internal>gnome</link:internal>-dust <link:internal>gnome</link:internal>-human <link:internal>gnome</link:internal>-illustrious <link:internal>gnome</link:internal>-noble <link:internal>gnome</link:internal>-<link:internal>wine</link:internal> <link:internal>gnome</link:internal>-wise ${startdir}/pkg/usr/share/icons || return 1</note-content></text>
-  <last-change-date>2009-11-08T14:24:31.9595410+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-08T14:24:31.9595410+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-27T09:32:55.7500000+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-27T09:32:55.7500000+03:00</last-metadata-change-date>
   <create-date>2009-11-08T14:24:08.0965320+03:00</create-date>
   <cursor-position>54</cursor-position>
   <width>863</width>

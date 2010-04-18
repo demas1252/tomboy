@@ -18,13 +18,13 @@
 LoadModule php5_module <link:internal>modules</link:internal>/libphp5.so
 
 &lt;IfModule <link:internal>mod</link:internal>_php5.c&gt;
- DirectoryIndex index.php index.html
+ DirectoryIndex index.php index.<link:internal>html</link:internal>
  AddType application/x-httpd-php .php
  AddType application/x-httpd-php-source .phps
 &lt;/IfModule&gt;
 
-DirectoryIndex index.html index.html.var
-DirectoryIndex index.php index.phtml index.html
+DirectoryIndex index.<link:internal>html</link:internal> index.<link:internal>html</link:internal>.var
+DirectoryIndex index.php index.phtml index.<link:internal>html</link:internal>
 
 8. В <link:url>/etc/php/php.ini</link:url> проверяем:
 
@@ -33,7 +33,7 @@ open_basedir = <link:url>/srv/http</link:url>:...
 9. Перезапуск <link:url>/etc/rc.d/httpd</link:url> restart
 10. Тест 
 
-&lt;html&gt;
+&lt;<link:internal>html</link:internal>&gt;
 &lt;head&gt;
 &lt;title&gt;PHP <link:internal>Test</link:internal> Page&lt;/title&gt;
 &lt;/head&gt;
@@ -46,14 +46,14 @@ This is <link:internal>Arch</link:internal> <link:internal>Linux</link:internal>
 ?&gt;
 &lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;
+&lt;/<link:internal>html</link:internal>&gt;
 
 11. 
 
 
 </note-content></text>
-  <last-change-date>2009-05-24T10:03:05.4701320+04:00</last-change-date>
-  <last-metadata-change-date>2009-05-24T10:03:05.4701320+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:02.7388770+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.7388770+03:00</last-metadata-change-date>
   <create-date>2009-05-24T09:48:10.9790670+04:00</create-date>
   <cursor-position>865</cursor-position>
   <width>528</width>

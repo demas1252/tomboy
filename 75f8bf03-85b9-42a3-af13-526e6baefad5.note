@@ -22,7 +22,7 @@ Requires:       <link:internal>python</link:internal>
 %description
 Tools for converting GIFs to PNGs. The program <link:internal>gif</link:internal>2png converts <link:internal>GIF</link:internal> files
 to PNG files. The <link:internal>Python</link:internal> script <link:internal>web</link:internal>2png converts an entire <link:internal>web</link:internal> tree, also
-patching HTML pages to keep IMG SRC references correct.
+patching <link:internal>HTML</link:internal> pages to keep IMG SRC references correct.
 
 %prep 
 %setup -q  
@@ -170,8 +170,8 @@ rm -rf $RPM_BUILD_ROOT
 - <link:internal>add</link:internal> <link:internal>python</link:internal> requirement
 - gz to bz2 compression
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:56.9124350+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:56.9124350+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:01.4812500+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:01.4812500+03:00</last-metadata-change-date>
   <create-date>2009-04-03T16:44:24.1429050+04:00</create-date>
   <cursor-position>34</cursor-position>
   <width>635</width>

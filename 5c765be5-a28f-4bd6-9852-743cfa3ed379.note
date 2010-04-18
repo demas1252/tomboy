@@ -20,8 +20,8 @@ BNF (Форма Бэкуса — Наура)
 
 Однако, ряд языков имеют грамматические структуры, которые тяжело, или не возможно описать в рамках BNF.   Например, контроль типов, в BNF описывается очень громоздко, а необходимость объявления переменной перед ее использованием вообще указать нельзя.  Такие правила получили наименование [static semantics] и для их ипосания Кнут предложил механизм - [<link:internal>Attribute grammars</link:internal>].
 </note-content></text>
-  <last-change-date>2008-04-06T15:07:09.1962830+04:00</last-change-date>
-  <last-metadata-change-date>2008-04-06T15:07:09.1962830+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-27T09:32:56.0721090+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-27T09:32:56.0721090+03:00</last-metadata-change-date>
   <create-date>2008-03-28T23:06:07.0094900+03:00</create-date>
   <cursor-position>45</cursor-position>
   <width>450</width>

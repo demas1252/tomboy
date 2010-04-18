@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Yes-No typeclass</title>
+  <text xml:space="preserve"><note-content version="0.1">Yes-No typeclass
+
+<italic>class YesNo a where
+      yesno::a-&gt;Bool
+
+instance YesNo Int where
+      yesno 0 = False
+      yesno _ = True
+
+instance YesNo [a] where
+      yesno [] = False
+      yesno _ = True
+
+instance YesNo Bool where
+      yesno = id
+
+instance YesNo (Maybe a) where
+      yesno (Just _) = True
+      yesno Nothing = False
+
+instance YesNo TrafficLight where
+      yesno Red = False
+      yesno _ = True</italic>
+
+<italic>yesnoIf::(YesNo y)=&gt;y-&gt;a-&gt;a-&gt;a
+yesnoIf yesnoVal yesResult noResult = <link:internal>if</link:internal></italic><italic> yesno yesnoVal then yesResult else noResult</italic>
+
+
+   1. <link:internal>ghci</link:internal>&gt; yesnoIf [] "YEAH!" "NO!"  
+   2. "NO!"  
+   3. <link:internal>ghci</link:internal>&gt; yesnoIf [2,3,4] "YEAH!" "NO!"  
+   4. "YEAH!"  
+   5. <link:internal>ghci</link:internal>&gt; yesnoIf True "YEAH!" "NO!"  
+   6. "YEAH!"  
+   7. <link:internal>ghci</link:internal>&gt; yesnoIf (Just 500) "YEAH!" "NO!"  
+   8. "YEAH!"  
+   9. <link:internal>ghci</link:internal>&gt; yesnoIf Nothing "YEAH!" "NO!"  
+  10. "NO!"  </note-content></text>
+  <last-change-date>2010-03-30T15:34:56.5962590+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.5962590+04:00</last-metadata-change-date>
+  <create-date>2010-03-28T08:18:13.8480460+04:00</create-date>
+  <cursor-position>526</cursor-position>
+  <width>609</width>
+  <height>533</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

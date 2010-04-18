@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Пример delegation pattern на java</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>Пример delegation pattern</link:internal> на java
+  <text xml:space="preserve"><note-content version="0.1">Пример delegation pattern на java
 
 interface I 
  {
@@ -75,13 +75,13 @@ interface I
      }
  }
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:24.1117770+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:24.1117770+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-17T19:15:09.6728950+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-17T19:15:09.6728950+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:57:43.0696000+03:00</create-date>
-  <cursor-position>68</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>0</x>
-  <y>25</y>
+  <cursor-position>80</cursor-position>
+  <width>589</width>
+  <height>777</height>
+  <x>927</x>
+  <y>176</y>
   <open-on-startup>False</open-on-startup>
 </note>

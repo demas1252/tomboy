@@ -29,8 +29,8 @@ b [[file:]line]
 b 72 <link:internal>if</link:internal> params['user'] == 'admin'
 
 <link:url>http://bashdb.sourceforge.net/<link:internal>ruby</link:internal></link:url><link:url>-debug.html</link:url></note-content></text>
-  <last-change-date>2009-09-24T14:37:00.0644480+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-24T14:37:00.0644480+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:02.5183930+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.5183930+03:00</last-metadata-change-date>
   <create-date>2009-09-13T08:09:40.6093309+04:00</create-date>
   <cursor-position>248</cursor-position>
   <width>450</width>

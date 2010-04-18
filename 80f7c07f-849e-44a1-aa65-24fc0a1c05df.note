@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>The Functor typeclass</title>
+  <text xml:space="preserve"><note-content version="0.1">The Functor typeclass
+
+<italic>class Functor f where  
+    fmap :: (a -&gt; b) -&gt; f a -&gt; f b  </italic>
+
+<italic>instance Functor [] where  
+    fmap = <link:internal>map</link:internal></italic><italic>  </italic>
+
+Но фишка в том, что мы можем реализовывать функтор для своих типов:
+
+<italic>instance Functor Maybe where  
+     fmap f (Just x) = Just (f x)  
+     fmap f Nothing = Nothing  </italic>
+
+   1. <link:internal>ghci</link:internal>&gt; fmap (++ " HEY GUYS IM INSIDE THE JUST") (Just "Something serious.")  
+   2. Just "Something serious. HEY GUYS IM INSIDE THE JUST"  
+   3. <link:internal>ghci</link:internal>&gt; fmap (++ " HEY GUYS IM INSIDE THE JUST") Nothing  
+   4. Nothing  
+   5. <link:internal>ghci</link:internal>&gt; fmap (*2) (Just 200)  
+   6. Just 400  
+   7. <link:internal>ghci</link:internal>&gt; fmap (*2) Nothing  
+   8. Nothing  
+
+<italic>instance Functor Tree where  
+     fmap f EmptyTree = EmptyTree  
+     fmap f (Node x leftsub rightsub) = Node (f x) (fmap f leftsub) (fmap f rightsub)  </italic>
+
+   1. <link:internal>ghci</link:internal>&gt; fmap (*2) EmptyTree  
+   2. EmptyTree  
+   3. <link:internal>ghci</link:internal>&gt; fmap (*4) (foldr treeInsert EmptyTree [5,7,3,2,1,7])  
+   4. Node 28 (Node 4 EmptyTree (Node 8 EmptyTree (Node 12 EmptyTree (Node 20 EmptyTree EmptyTree)))) EmptyTree  </note-content></text>
+  <last-change-date>2010-03-30T15:34:56.4064430+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.4064430+04:00</last-metadata-change-date>
+  <create-date>2010-03-28T08:27:41.8310790+04:00</create-date>
+  <cursor-position>899</cursor-position>
+  <width>772</width>
+  <height>540</height>
+  <x>9</x>
+  <y>126</y>
+  <open-on-startup>False</open-on-startup>
+</note>

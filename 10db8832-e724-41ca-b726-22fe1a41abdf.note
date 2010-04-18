@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Инициализация статического массива</title>
+  <text xml:space="preserve"><note-content version="0.1">Инициализация статического массива
+
+<link:url>http://stackoverflow.com/questions/2570235/initialize-a-static-member-an-array-in-c</link:url>
+
+Class A{
+
+public:
+  static char a[128];
+  static void do_something();
+
+}
+
+char A::a[6] = {1,2,3,4,5,6};
+</note-content></text>
+  <last-change-date>2010-04-03T10:09:55.0200940+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-03T10:09:55.0200940+04:00</last-metadata-change-date>
+  <create-date>2010-04-03T10:08:55.4421650+04:00</create-date>
+  <cursor-position>194</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

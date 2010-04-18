@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Type parameters</title>
+  <text xml:space="preserve"><note-content version="0.1">Type parameters
+
+<italic>data Maybe a = Nothing | Just a
+
+data Car a b c = Car {company :: a,
+                      model :: b,
+                      year :: c} deriving (Show)
+
+tellCar :: (Show a) =&gt; Car String String a -&gt; String
+tellCar (Car {company=c, model=m, year=y}) = "This " ++ c ++ " " ++ m ++ " was made in " ++ show y</italic>
+
+# <link:internal>ghci</link:internal>&gt; tellCar (Car "Ford" "Mustang" 1967)  
+# "This Ford Mustang was made in 1967"  
+# <link:internal>ghci</link:internal>&gt; tellCar (Car "Ford" "Mustang" "nineteen sixty seven")  
+# "This Ford Mustang was made in \"nineteen sixty seven\""  
+# <link:internal>ghci</link:internal>&gt; :t Car "Ford" "Mustang" 1967  
+# Car "Ford" "Mustang" 1967 :: (Num t) =&gt; Car [Char] [Char]<bold> t </bold> 
+# <link:internal>ghci</link:internal>&gt; :t Car "Ford" "Mustang" "nineteen sixty seven"  
+# Car "Ford" "Mustang" "nineteen sixty seven" :: Car [Char] [Char] <bold>[Char] </bold>
+
+То есть, объявляя тип (в данном частном случае составной) мы не указываем явно тип.  Тип определяется в момент определения функции.
+</note-content></text>
+  <last-change-date>2010-03-30T15:34:56.9153470+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.9153470+04:00</last-metadata-change-date>
+  <create-date>2010-03-25T15:01:59.2306220+03:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

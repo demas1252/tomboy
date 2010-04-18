@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование code blocks для реализаци callbacks</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование code blocks для реализаци callbacks
+
+class Server
+  def initialize
+    @handles = {}
+  end
+  
+  def handle(pattern, &amp;block)
+    @handles[pattern] = block
+  end
+
+  def get(message)
+    match = nil
+
+    @handles.each do | pattern, block |
+      <link:internal>if</link:internal> match = message.match(pattern)
+        block.call(match)
+      end
+    end      
+  end
+end
+
+server = Server.new
+server.handle(/hello/i) { puts "Hello from server at #{Time.now}" }
+server.handle(/goodbye/i) { puts "Goodbye from server at #{Time.now}" }
+
+server.get("hello")
+server.get("goodbye")
+server.get("some")
+
+То есть, мы пропихиваем в сервер куски кода, которые будут выполняться в том или ином случае.</note-content></text>
+  <last-change-date>2010-04-07T11:04:11.0238250+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-07T11:04:11.0238250+04:00</last-metadata-change-date>
+  <create-date>2010-04-07T11:03:22.1615740+04:00</create-date>
+  <cursor-position>290</cursor-position>
+  <width>615</width>
+  <height>645</height>
+  <x>939</x>
+  <y>36</y>
+  <open-on-startup>False</open-on-startup>
+</note>

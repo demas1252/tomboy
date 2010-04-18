@@ -9,11 +9,12 @@
 <link:internal>Агрегирование произведением</link:internal>
 <link:internal>Sql задача 3</link:internal>
 <link:internal>Кореллированные запросы</link:internal>
-<link:internal>Вычисление расстояния между точками</link:internal></note-content></text>
-  <last-change-date>2009-09-20T14:10:00.3354280+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-20T14:10:00.3354280+04:00</last-metadata-change-date>
+<link:internal>Вычисление расстояния между точками</link:internal>
+<link:internal>Сортировка по NULL полям</link:internal></note-content></text>
+  <last-change-date>2010-03-25T15:15:59.9953980+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-25T15:15:59.9953980+03:00</last-metadata-change-date>
   <create-date>2008-03-28T23:00:02.1641680+03:00</create-date>
-  <cursor-position>207</cursor-position>
+  <cursor-position>232</cursor-position>
   <width>467</width>
   <height>710</height>
   <x>1062</x>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MongoDb</title>
+  <text xml:space="preserve"><note-content version="0.1">MongoDb
+
+<link:internal>Установка MongoDB</link:internal>
+<link:internal>Проверка установки MongoDb</link:internal>
+<link:internal>Ruby и  MongoDb</link:internal>
+<link:internal>Java и MongoDb</link:internal>
+</note-content></text>
+  <last-change-date>2010-04-15T13:32:48.1505550+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-15T13:32:48.1505550+04:00</last-metadata-change-date>
+  <create-date>2010-04-15T11:55:04.4633520+04:00</create-date>
+  <cursor-position>70</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>359</x>
+  <y>290</y>
+  <open-on-startup>False</open-on-startup>
+</note>

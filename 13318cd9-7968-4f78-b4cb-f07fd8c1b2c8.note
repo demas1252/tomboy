@@ -6,11 +6,13 @@
 <link:internal>GetElementById</link:internal>
 <link:internal>Более сложные примеры навигации по DOM с помощью JS</link:internal>
 <link:internal>Проверка данных с помощью js</link:internal>
+
+<link:internal>Замена элемента с помощью js</link:internal>
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:24.1214260+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:24.1214260+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:18:16.6785320+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:18:16.6785320+03:00</last-metadata-change-date>
   <create-date>2009-03-23T21:09:10.3061250+03:00</create-date>
-  <cursor-position>95</cursor-position>
+  <cursor-position>125</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>475</x>

@@ -4,15 +4,20 @@
   <text xml:space="preserve"><note-content version="0.1">RubyGems
 
 sudo <link:internal>pacman</link:internal> -S rubygems
-gem
-gem install -r rake
-rake --version
+Документация: <link:url>http://docs.rubygems.org/read/chapter/1</link:url>
 
-gem query -rn Blue</note-content></text>
-  <last-change-date>2009-06-02T12:59:06.0034200+04:00</last-change-date>
-  <last-metadata-change-date>2009-06-02T12:59:06.0034200+04:00</last-metadata-change-date>
+<link:internal>Основные операции с gems</link:internal>
+<link:internal>Установка gem в свою репозиторию</link:internal>
+<link:internal>Использование определенной версии gem</link:internal>
+<link:internal>Создание своего gem</link:internal>
+<link:internal>Распространение своих gem</link:internal>
+
+
+</note-content></text>
+  <last-change-date>2010-04-14T14:15:37.0621450+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-14T14:15:37.0621450+04:00</last-metadata-change-date>
   <create-date>2009-06-02T12:53:24.0635100+04:00</create-date>
-  <cursor-position>35</cursor-position>
+  <cursor-position>197</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>55</x>

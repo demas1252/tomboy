@@ -12,12 +12,14 @@ end
 <link:internal>Методы с параметрами по умолчанию в Ruby</link:internal>
 <link:internal>Методы с переменным числом параметров в Ruby</link:internal>
 <link:internal>Ассоциирование блока кода с методом</link:internal>
+<link:internal>Перегрузка в Ruby стандартных операторов</link:internal>
+
 
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:33.7377760+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:33.7377760+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-11T13:22:42.7182060+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-11T13:22:42.7182060+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:37:22.6377660+03:00</create-date>
-  <cursor-position>47</cursor-position>
+  <cursor-position>70</cursor-position>
   <width>450</width>
   <height>329</height>
   <x>0</x>

@@ -26,8 +26,8 @@ take 10 (cycle [1,2,3])
 <link:internal>List comprehension in Haskell</link:internal>
 
 </note-content></text>
-  <last-change-date>2009-10-17T22:09:59.8368960+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:09:59.8368960+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-30T15:34:57.5273610+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:57.5273610+04:00</last-metadata-change-date>
   <create-date>2009-10-11T10:08:00.4225650+04:00</create-date>
   <cursor-position>17</cursor-position>
   <width>548</width>

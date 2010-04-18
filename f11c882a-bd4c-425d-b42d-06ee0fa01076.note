@@ -28,7 +28,7 @@ BASE = ord('0')
 
 def mainForm():
   return """
-  &lt;html&gt;
+  &lt;<link:internal>html</link:internal>&gt;
   &lt;head&gt;
   &lt;title&gt; GenPasswd Strong Password Generator&lt;/title&gt;
   &lt;/head&gt;
@@ -45,7 +45,7 @@ def mainForm():
   &lt;/form&gt;
   &lt;/div&gt;
   &lt;/body&gt;
-  &lt;/html&gt;
+  &lt;/<link:internal>html</link:internal>&gt;
   """
 
 class PasswordGenerator(webapp.RequestHandler):
@@ -82,8 +82,8 @@ def main():
 ./dev_appserver.py<link:url> ~/sources/study/google_app/samples/genpasswd/</link:url>
 
 <link:url>http://localhost:8080/</link:url></note-content></text>
-  <last-change-date>2009-10-17T22:10:51.5715360+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:51.5715360+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:01.8268080+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:01.8268080+03:00</last-metadata-change-date>
   <create-date>2009-04-19T14:42:32.5528009+04:00</create-date>
   <cursor-position>1598</cursor-position>
   <width>450</width>

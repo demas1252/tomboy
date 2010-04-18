@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Функция с именованными параметрами в Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Функция с именованными параметрами в Ruby
+
+def pseudo_keywords(options)
+  puts "#{options[:one]} and #{options[:two]}"
+end
+
+def pseudo_keywords_optional(options)
+  options = { one: "hi", two: "hello" }.merge(options)
+  puts "#{options[:one]} and #{options[:two]}"
+end
+
+
+my_hash = { :one =&gt; "hi", :two =&gt; "hello" }
+pseudo_keywords(my_hash)
+pseudo_keywords(one: "hi", two: "hello")
+pseudo_keywords_optional(two: "ola")
+</note-content></text>
+  <last-change-date>2010-04-06T22:08:38.7310810+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-06T22:08:38.7310810+04:00</last-metadata-change-date>
+  <create-date>2010-04-06T22:08:18.7259130+04:00</create-date>
+  <cursor-position>380</cursor-position>
+  <width>599</width>
+  <height>540</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -3,7 +3,7 @@
   <title>AJAX</title>
   <text xml:space="preserve"><note-content version="0.1">AJAX
 
-&lt;html&gt;
+&lt;<link:internal>html</link:internal>&gt;
   &lt;head&gt;
     &lt;title&gt;Customer Data Screen&lt;/title&gt;
     
@@ -58,7 +58,7 @@
       &lt;/tr&gt;
     &lt;/table&gt;
   &lt;/body&gt;
-&lt;/html&gt;
+&lt;/<link:internal>html</link:internal>&gt;
 
 <bold>Пояснения:</bold>
 
@@ -66,8 +66,8 @@
 </list-item><list-item dir="ltr">getZipData обращаетс к любому <link:internal>web</link:internal> ресурсу, причем url веб ресурса может собираться из переданных параметров;  мы же просто обращаемся к локальному файлу
 </list-item><list-item dir="ltr">вычитываем из него два слова, разделенных запятой
 </list-item><list-item dir="ltr">и записываем эти слова в другие поля</list-item></list></note-content></text>
-  <last-change-date>2009-10-12T12:00:22.0315430+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:22.0315430+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:02.4529280+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.4529280+03:00</last-metadata-change-date>
   <create-date>2009-08-20T14:16:56.6276250+04:00</create-date>
   <cursor-position>1387</cursor-position>
   <width>809</width>

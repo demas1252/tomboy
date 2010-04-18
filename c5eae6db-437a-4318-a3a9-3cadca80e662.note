@@ -3,12 +3,18 @@
   <title>Функции Ruby</title>
   <text xml:space="preserve"><note-content version="0.1">Функции Ruby
 
+<link:internal>Обычная функция в Ruby</link:internal>
+<link:internal>Функция с опциональными аргументами в Ruby</link:internal>
+<link:internal>Функция с именованными параметрами в Ruby</link:internal>
+<link:internal>Функция с массивом-аргументом в Ruby</link:internal>
+
 <link:internal>Функция Ruby с неограниченным количеством параметров</link:internal>
-<link:internal>Code blocks and functions</link:internal></note-content></text>
-  <last-change-date>2009-09-11T11:34:09.1851160+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-11T11:34:09.1851160+04:00</last-metadata-change-date>
+
+</note-content></text>
+  <last-change-date>2010-04-07T10:56:39.1666380+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-07T10:56:39.1666380+04:00</last-metadata-change-date>
   <create-date>2009-07-11T23:28:11.8483680+04:00</create-date>
-  <cursor-position>41</cursor-position>
+  <cursor-position>214</cursor-position>
   <width>452</width>
   <height>431</height>
   <x>1113</x>

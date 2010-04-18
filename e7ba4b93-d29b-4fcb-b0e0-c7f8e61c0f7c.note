@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование code blocks для pre и post processing-а</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование code blocks для pre и post processing-а
+
+class Client
+  def initialize(name)
+    @name = name
+  end
+
+  def do_a
+    connection do | server |
+      server.say_hello
+    end
+  end
+
+  def do_b
+    connection do | server |
+      server.say_goodbye
+    end
+  end
+  
+  private
+
+  def connection
+    server = Server.new("hello", @name)
+    yield(server)
+  ensure
+    server.close
+  end
+  
+end
+    
+
+one = Client.new("demas")
+one.do_a
+one.do_b
+
+
+Полезно, когда у нас есть два метода (do_a и do_b),  у которых одинаковые начало и конец, а различаются только середины. Выделять в отдельные два метода совпадающие кусочки не очень удобно и применяется этот прием.</note-content></text>
+  <last-change-date>2010-04-07T11:02:41.2693130+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-07T11:02:41.2693130+04:00</last-metadata-change-date>
+  <create-date>2010-04-07T11:01:08.4724240+04:00</create-date>
+  <cursor-position>191</cursor-position>
+  <width>576</width>
+  <height>654</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

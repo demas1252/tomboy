@@ -3,10 +3,10 @@
   <title>GetElementById</title>
   <text xml:space="preserve"><note-content version="0.1">GetElementById
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "<link:url>http://www.w3.org/TR/html4/strict.dtd</link:url>"&gt;
-&lt;html lang="en"&gt;
+&lt;!DOCTYPE <link:internal>HTML</link:internal> PUBLIC "-//W3C//DTD <link:internal>HTML</link:internal> 4.01//EN" "<link:url>http://www.w3.org/TR/html4/strict.dtd</link:url>"&gt;
+&lt;<link:internal>html</link:internal> lang="en"&gt;
   &lt;head&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+    &lt;meta http-equiv="Content-Type" content="text/<link:internal>html</link:internal>; charset=utf-8"/&gt;
     &lt;title&gt;Search Example&lt;/title&gt;
     &lt;script type="text/<link:internal>javascript</link:internal>"&gt;
       function checkSearch()
@@ -34,10 +34,10 @@
       &lt;/p&gt;
     &lt;/form&gt;
   &lt;/body&gt;
-&lt;/html&gt;
+&lt;/<link:internal>html</link:internal>&gt;
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:24.0924660+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:24.0924660+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-21T18:14:02.3672380+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.3672380+03:00</last-metadata-change-date>
   <create-date>2009-03-23T21:09:20.5380080+03:00</create-date>
   <cursor-position>49</cursor-position>
   <width>450</width>

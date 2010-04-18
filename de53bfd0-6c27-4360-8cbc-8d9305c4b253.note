@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Перегрузка в Ruby стандартных операторов</title>
+  <text xml:space="preserve"><note-content version="0.1">Перегрузка в Ruby стандартных операторов
+
+class Inbox
+  attr_reader :unread_count
+
+  def initialize
+    @messages = []
+    @unread_count = 0
+  end
+
+  def &lt;&lt;(msg)
+    @unread_count += 1
+    @messages &lt;&lt; msg
+    return self
+  end
+end
+
+i = Inbox.new
+i &lt;&lt; "foo" &lt;&lt; "bar" &lt;&lt; "baz"
+puts i.unread_count
+
+<link:internal>Реализация своего Comparable в Ruby</link:internal></note-content></text>
+  <last-change-date>2010-04-11T13:23:20.4732920+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-11T13:23:20.4732920+04:00</last-metadata-change-date>
+  <create-date>2010-04-11T13:22:18.6570130+04:00</create-date>
+  <cursor-position>295</cursor-position>
+  <width>517</width>
+  <height>527</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

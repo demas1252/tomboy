@@ -5,11 +5,12 @@
 
 <link:internal>Статические переменные в C</link:internal>
 <link:internal>Статические переменные в C++</link:internal>
+<link:internal>Инициализация статического массива</link:internal>
 </note-content></text>
-  <last-change-date>2009-03-24T09:06:33.6465760+03:00</last-change-date>
-  <last-metadata-change-date>2009-03-24T09:06:33.6465760+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-03T10:09:04.9005710+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-03T10:09:04.9005710+04:00</last-metadata-change-date>
   <create-date>2009-03-24T09:06:03.8039310+03:00</create-date>
-  <cursor-position>34</cursor-position>
+  <cursor-position>90</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>0</x>

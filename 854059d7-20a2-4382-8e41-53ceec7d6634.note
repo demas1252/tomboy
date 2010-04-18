@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Recursive data structures</title>
+  <text xml:space="preserve"><note-content version="0.1">Recursive data structures
+
+<italic>infixr 5 :-:
+data List a = Empty | a:-:(List a) deriving (Show,Read,Eq,Ord)
+
+infixr 5 .++
+(.++)::List a -&gt;List a-&gt;List a
+Empty .++ ys = ys
+(x:-:xs) .++ ys = x:-:(xs.++ys)
+</italic>
+------
+<italic>infixr 5 :-:</italic>
+
+Насколько я понимаю, это мы просто ввели операцию с приоритетом и указанием левая/правая.
+
+<italic>infixr 5 .++</italic>
+
+Это тоже, но здесь мы еще и реализовали нашу операцию
+-------
+
+   1. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> a = 3 :-: 4 :-: 5 :-: Empty  
+   2. <link:internal>ghci</link:internal>&gt; <link:internal>let</link:internal> b = 6 :-: 7 :-: Empty  
+   3. <link:internal>ghci</link:internal>&gt; a .++ b  
+   4. (:-:) 3 ((:-:) 4 ((:-:) 5 ((:-:) 6 ((:-:) 7 Empty))))  
+
+------
+
+А теперь попробуем создать рекурсивную структуру данных:
+
+<italic>data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show,Read,Eq)
+
+<link:internal>singleton</link:internal></italic><italic>::a-&gt;Tree a
+<link:internal>singleton</link:internal></italic><italic> x = Node x EmptyTree EmptyTree
+
+treeInsert::(Ord a)=&gt;a-&gt;Tree a-&gt;Tree a
+treeInsert x EmptyTree = <link:internal>singleton</link:internal></italic><italic> x
+treeInsert x (Node a left right)
+           | x == a = Node x left right
+           | x &lt; a  = Node a (treeInsert x left) right
+           | x &gt; a  = Node a left (treeInsert x right)
+
+treeElem::(Ord a)=&gt;a-&gt;Tree a-&gt;Bool
+treeElem x EmptyTree = False
+treeElem x (Node a left right)
+         | x == a = True
+         | x &lt; a  = treeElem x left
+         | x &gt; a  = treeElem x right</italic>
+
+
+Поиграемся:
+
+*Main&gt; <link:internal>let</link:internal> nums = [8,6,4,1,7,3,5]
+*Main&gt; <link:internal>let</link:internal> numsTree = foldr treeInsert EmptyTree nums
+*Main&gt; numsTree
+Node 5 (Node 3 (Node 1 EmptyTree EmptyTree) (Node 4 EmptyTree EmptyTree)) (Node 7 (Node 6 EmptyTree EmptyTree) (Node 8 EmptyTree EmptyTree))
+
+</note-content></text>
+  <last-change-date>2010-03-30T15:34:56.7177800+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.7177800+04:00</last-metadata-change-date>
+  <create-date>2010-03-26T10:26:31.6702550+03:00</create-date>
+  <cursor-position>1231</cursor-position>
+  <width>630</width>
+  <height>521</height>
+  <x>589</x>
+  <y>579</y>
+  <open-on-startup>False</open-on-startup>
+</note>

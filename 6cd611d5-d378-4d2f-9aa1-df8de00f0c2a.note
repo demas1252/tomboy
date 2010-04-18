@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Other tools</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>Other</link:internal> tools
+  <text xml:space="preserve"><note-content version="0.1">Other tools
 
 <italic>Control Version Systems</italic>: <link:internal>Perforce</link:internal> / <link:internal>Subversion</link:internal> / <link:internal>Mercurial</link:internal>
 <italic>Shells</italic>: [PowerPro] / [Samurize] / <link:internal>PowerShell</link:internal>
@@ -17,10 +17,10 @@
 <link:internal>excel</link:internal>
 
 [Прочие <link:internal>инструменты</link:internal> и библиотеки]</note-content></text>
-  <last-change-date>2009-11-23T13:19:49.6914820+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-23T13:19:49.6914820+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-11T21:45:26.2618380+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-11T21:45:26.2618380+04:00</last-metadata-change-date>
   <create-date>2008-03-27T22:03:04.4007919+03:00</create-date>
-  <cursor-position>172</cursor-position>
+  <cursor-position>134</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>762</x>

@@ -16,12 +16,12 @@ sudo <link:internal>dpkg</link:internal> -i id3mtag_0.78_i386.deb
 mp3: cueape.sh file.ape file.cue -m  
 ogg: cueape.sh file.ape file.cue -o
 
-aur/mac lame mp3splt vorbis-tools
+<link:internal>aur</link:internal>/mac lame mp3splt vorbis-tools
 </note-content></text>
-  <last-change-date>2009-10-11T10:46:58.3507250+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-11T10:46:58.3507250+04:00</last-metadata-change-date>
+  <last-change-date>2010-03-27T09:32:55.9113430+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-27T09:32:55.9113430+03:00</last-metadata-change-date>
   <create-date>2009-03-29T16:08:04.0069990+04:00</create-date>
-  <cursor-position>25</cursor-position>
+  <cursor-position>326</cursor-position>
   <width>474</width>
   <height>360</height>
   <x>1184</x>

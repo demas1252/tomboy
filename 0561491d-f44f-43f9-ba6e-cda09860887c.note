@@ -9,13 +9,14 @@
 <link:internal>Перегрузка стандартных операций в Ruby</link:internal>
 <link:internal>Command Expression in Ruby</link:internal>
 <link:internal>Присвоение в Ruby</link:internal>
-<link:internal>Функции Ruby</link:internal></note-content></text>
-  <last-change-date>2009-11-14T21:44:03.3475880+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-14T21:44:03.3475880+03:00</last-metadata-change-date>
+<link:internal>Функции Ruby</link:internal>
+</note-content></text>
+  <last-change-date>2010-04-14T10:34:25.7612880+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-14T10:34:25.7612880+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:31:37.2068980+03:00</create-date>
-  <cursor-position>177</cursor-position>
-  <width>531</width>
-  <height>441</height>
+  <cursor-position>186</cursor-position>
+  <width>336</width>
+  <height>343</height>
   <x>481</x>
   <y>463</y>
   <open-on-startup>False</open-on-startup>

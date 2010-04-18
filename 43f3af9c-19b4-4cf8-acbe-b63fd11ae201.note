@@ -11,8 +11,8 @@
     * *Нетерминал* (нетерминальный символ) — объект, обозначающий какую-либо сущность языка (например: формула, арифм. выражение, команда) и не имеющий конкретного символьного значения.
 
 Описывается [<link:internal>Backus-Naur Form</link:internal>].</note-content></text>
-  <last-change-date>2008-03-28T23:06:08.0914640+03:00</last-change-date>
-  <last-metadata-change-date>2008-03-28T23:06:08.0914640+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-27T09:32:56.0911140+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-27T09:32:56.0911140+03:00</last-metadata-change-date>
   <create-date>2008-03-28T23:05:54.1495249+03:00</create-date>
   <cursor-position>947</cursor-position>
   <width>450</width>

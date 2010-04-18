@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основные операции с gems</title>
+  <text xml:space="preserve"><note-content version="0.1">Основные операции с gems
+
+Перечень gems: <italic>gem query --remote</italic>
+Подходящий по маске:  <italic>gem query --remote --name-matches doom</italic>
+Установить gems: <italic>gem install --remote progressbar</italic>
+Просмотр установленного: <italic>gem specification  <link:internal>progressbar</link:internal></italic>
+
+<italic>gem uninstall <link:internal>progressbar</link:internal></italic>
+Перечень установленных: <italic>gem query --local</italic>
+
+
+
+</note-content></text>
+  <last-change-date>2010-04-14T14:01:20.9244210+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-14T14:01:20.9244210+04:00</last-metadata-change-date>
+  <create-date>2010-04-14T12:45:59.0604760+04:00</create-date>
+  <cursor-position>254</cursor-position>
+  <width>573</width>
+  <height>313</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

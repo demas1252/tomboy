@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Замена элемента с помощью js</title>
+  <text xml:space="preserve"><note-content version="0.1">Замена элемента с помощью js
+
+<bold>Замена содержимого</bold>
+
+<italic>var element;
+element = document.<link:internal>getElementById</link:internal></italic><italic>("<link:internal>logo</link:internal></italic><italic>");
+<link:internal>if</link:internal></italic><italic> (element) {
+    element.innerHTML = "-new content-";
+}
+</italic>
+<bold>Замена самого элемента</bold>
+
+<italic>var element, newElement, parent;
+
+// Get the original element
+element = document.<link:internal>getElementById</link:internal></italic><italic>("<link:internal>logo</link:internal></italic><italic>");
+
+// Assuming it exists...
+<link:internal>if</link:internal></italic><italic> (element) {
+    // Get its parent
+    parent = element.parentNode;
+
+    // Create the new element
+    newElement = document.createElement('div');
+
+    // Set its ID and content
+    newElement.id = "<link:internal>logo</link:internal></italic><italic>";
+    newElement.innerHTML = "-new content here-";
+
+    // Insert the new one in front of the old one (this temporarily
+    // creates an invalid DOM tree [two elements with the same ID],
+    // but that's harmless because we're about to fix that).
+    parent.insertBefore(newElement, element);
+
+    // Remove the original
+    parent.removeChild(element);
+}
+</italic></note-content></text>
+  <last-change-date>2010-03-21T18:19:09.4257820+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:19:09.4257820+03:00</last-metadata-change-date>
+  <create-date>2010-03-21T18:18:07.2491670+03:00</create-date>
+  <cursor-position>884</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

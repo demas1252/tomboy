@@ -10,8 +10,8 @@
 
 <italic><link:internal>ghci</link:internal></italic><italic>&gt; <link:internal>map</link:internal></italic><italic> (negate . <link:internal>abs</link:internal></italic><italic>) [5,-3,-6,7,-3,2,-19,24]  
 [-5,-3,-6,-7,-3,-2,-19,-24]  </italic></note-content></text>
-  <last-change-date>2009-11-06T11:58:20.2425440+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-06T11:58:20.2425440+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-30T15:34:57.3170640+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:57.3170640+04:00</last-metadata-change-date>
   <create-date>2009-11-06T11:56:27.7576290+03:00</create-date>
   <cursor-position>216</cursor-position>
   <width>450</width>

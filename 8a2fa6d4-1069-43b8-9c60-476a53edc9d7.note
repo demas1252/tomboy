@@ -6,14 +6,15 @@
 <link:internal>MS SQL</link:internal> 
 <link:internal>Oracle</link:internal> 
 <link:internal>CouchDb</link:internal>
+<link:internal>MongoDb</link:internal>
 <link:internal>Databases</link:internal></note-content></text>
-  <last-change-date>2009-09-24T14:37:00.8341640+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-24T14:37:00.8341640+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-15T11:55:19.5148840+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-15T11:55:19.5148840+04:00</last-metadata-change-date>
   <create-date>2009-04-01T16:19:15.2224740+04:00</create-date>
-  <cursor-position>28</cursor-position>
+  <cursor-position>41</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>51</x>
-  <y>283</y>
+  <x>1133</x>
+  <y>242</y>
   <open-on-startup>False</open-on-startup>
 </note>

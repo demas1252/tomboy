@@ -37,15 +37,24 @@ surface (Rectangle (Point x1 y1) (Point x2 y2)) = (<link:internal>abs</link:inte
                        lastName :: String,
                        age :: Int } deriving (Show)
 </italic>
+<link:internal>Type parameters</link:internal>
+<link:internal>Derived instances</link:internal>
+<link:internal>Type synonyms</link:internal>
+<link:internal>Recursive data structures</link:internal>
+<link:internal>Typeclasses 102</link:internal>
+<link:internal>Yes-No typeclass</link:internal>
+<link:internal>The Functor typeclass</link:internal>
+ 
+
 
 </note-content></text>
-  <last-change-date>2010-03-21T14:09:14.1074720+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T14:09:14.1074720+03:00</last-metadata-change-date>
+  <last-change-date>2010-03-30T15:34:56.5027530+04:00</last-change-date>
+  <last-metadata-change-date>2010-03-30T15:34:56.5027530+04:00</last-metadata-change-date>
   <create-date>2010-03-21T10:29:34.3407380+03:00</create-date>
-  <cursor-position>1057</cursor-position>
-  <width>638</width>
-  <height>564</height>
-  <x>846</x>
-  <y>349</y>
+  <cursor-position>42</cursor-position>
+  <width>633</width>
+  <height>515</height>
+  <x>758</x>
+  <y>254</y>
   <open-on-startup>False</open-on-startup>
 </note>

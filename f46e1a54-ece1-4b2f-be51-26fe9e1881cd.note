@@ -5,9 +5,9 @@
 
 Распаковываете исходный тарбол, у нас это будет stardict-2.4.8, далее копируете stardict-2.4.8 в stardict-2.4.8.orig. После этого изменяете код в каталоге stardict-2.4.8, выходите из него и отдаете команду 
 
-<italic>diff -ur stardict-2.4.8.orig stardict-2.4.8 &gt; stardict-2.4.8-название_патча.patch</italic></note-content></text>
-  <last-change-date>2009-04-03T12:39:54.1304260+04:00</last-change-date>
-  <last-metadata-change-date>2009-04-03T12:39:54.1304260+04:00</last-metadata-change-date>
+<italic>diff -ur stardict-2.4.8.orig stardict-2.4.8 &gt; stardict-2.4.8-название_патча.patch</italic>	</note-content></text>
+  <last-change-date>2010-04-01T15:48:30.9464980+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-01T15:48:30.9464980+04:00</last-metadata-change-date>
   <create-date>2009-04-03T12:39:08.4336660+04:00</create-date>
   <cursor-position>311</cursor-position>
   <width>450</width>

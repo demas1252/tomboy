@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание своего gem</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание своего gem
+
+1. Создаем папку my_own_gem
+
+2. Там создаем файл lib/my_gem.rb:
+
+<italic>class TestClass
+  def say
+    puts "hello"
+  end
+end
+</italic>
+3. Создаем спек-файл my_gem.gemspec:
+
+<italic>Gem::Specification.new do |s|
+  s.name = %q{my_gem}
+  s.version = "0.4.1"
+  s.date = %q{2007-09-03}
+  s.authors = ["BJ Dierkes"]
+  s.email = %<link:url>q{wdierkes@5dollarwhitebox.org</link:url></italic><italic>}
+  s.summary = %q{ParseConfig provides simple parsing of standard *nix style config files.}
+  s.homepage = %q{<link:url>http://www.5dollarwhitebox.org/</link:url></italic><italic>}
+  s.description = %q{ParseConfig provides simple parsing of standard *nix style config files.}
+  s.files = ["lib/my_gem.rb"]
+end
+</italic>
+4. gem build my_gem.gemspec
+5. gem install my_gem ..  .gem
+6. Проверяем:
+
+<italic>require 'my_gem'
+
+some = TestClass.new
+some.say
+</italic>
+</note-content></text>
+  <last-change-date>2010-04-14T15:35:01.6049500+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-14T15:35:01.6049500+04:00</last-metadata-change-date>
+  <create-date>2010-04-14T14:14:22.4716080+04:00</create-date>
+  <cursor-position>139</cursor-position>
+  <width>627</width>
+  <height>444</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>instance_eval()</title>
+  <text xml:space="preserve"><note-content version="0.1">instance_eval()
+
+class Document
+  def self.generate(file, *<link:internal>args</link:internal>, &amp;block)
+    <link:internal>pdf</link:internal> = Document.new(*<link:internal>args</link:internal>)
+    <link:internal>pdf</link:internal>.instance_eval(&amp;block)
+    <link:internal>pdf</link:internal>.render_file(file)
+  end
+
+  def text(message)
+   @message = message
+  end
+
+  def render_file(file)
+    puts "#{@message} in the #{file}"
+  end
+end
+
+
+Document.generate("hello.<link:internal>pdf</link:internal>") do
+  text "Hello world"
+end
+</note-content></text>
+  <last-change-date>2010-04-15T15:26:15.4376290+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-15T15:26:15.4376290+04:00</last-metadata-change-date>
+  <create-date>2010-04-15T15:26:00.6770890+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>692</x>
+  <y>444</y>
+  <open-on-startup>False</open-on-startup>
+</note>

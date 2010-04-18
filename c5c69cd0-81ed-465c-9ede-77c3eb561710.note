@@ -11,11 +11,12 @@
 <link:internal>Создание класса по его имени</link:internal>
 <link:internal>Создать экземпляр своего же класса</link:internal>
 <link:internal>Предварительное объявление класса в Python</link:internal>
-<link:internal>Выполнить код единожды на класс в Python</link:internal></note-content></text>
-  <last-change-date>2009-10-07T16:56:25.6396710+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-07T16:56:25.6396710+04:00</last-metadata-change-date>
+<link:internal>Выполнить код единожды на класс в Python</link:internal>
+<link:internal>__init__ в Python</link:internal></note-content></text>
+  <last-change-date>2010-03-22T15:55:50.8759490+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-22T15:55:50.8759490+03:00</last-metadata-change-date>
   <create-date>2008-03-28T14:05:12.8237110+03:00</create-date>
-  <cursor-position>227</cursor-position>
+  <cursor-position>285</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1104</x>

@@ -8,12 +8,12 @@
 -import(lists, [reverse/1, reverse/2, <link:internal>map</link:internal>/2]).
 
 urls2htmlFile(Urls, File)-&gt;
-    file:write_file(File, urls2html(Urls)).
+    file:write_file(File, urls2<link:internal>html</link:internal>(Urls)).
 
 bin2urls(Bin)-&gt;
     gather_urls(binary_to_list(Bin), []).
 
-urls2html(Urls)-&gt;
+urls2<link:internal>html</link:internal>(Urls)-&gt;
     [h1("Urls"), make_list(Urls)].
 
 h1(Title)-&gt;
@@ -57,15 +57,15 @@ receive_data(Socket, SoFar)-&gt;
 
 8&gt; B = scavenge:nano_get_url("<link:url>www.<link:internal>erlang</link:internal></link:url><link:url>.com</link:url>"),
 8&gt; L = scavenge:bin2urls(B),
-8&gt; scavenge:urls2htmlFile(L, "g.html").
+8&gt; scavenge:urls2htmlFile(L, "g.<link:internal>html</link:internal>").
 
 --------------------------------------------------------
 
 Что важно, мы формируем список, а не текстовую строку. Строка сама сформируется в момент сериализации списка.
 </note-content></text>
-  <last-change-date>2009-03-24T08:44:15.4141040+03:00</last-change-date>
-  <last-metadata-change-date>2009-03-24T08:44:15.4141040+03:00</last-metadata-change-date>
-  <create-date>2009-03-24T08:44:07.6776380+03:00</create-date>
+  <last-change-date>2010-03-21T18:14:02.8573690+03:00</last-change-date>
+  <last-metadata-change-date>2010-03-21T18:14:02.8573690+03:00</last-metadata-change-date>
+  <create-date>2009-03-24T08:44:07.6776379+03:00</create-date>
   <cursor-position>65</cursor-position>
   <width>450</width>
   <height>360</height>
