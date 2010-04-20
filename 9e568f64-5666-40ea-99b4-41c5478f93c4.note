@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>При включенной вторичной валюте не балансируют проводки при реверсе</title>
+  <text xml:space="preserve"><note-content version="0.1">При включенной вторичной валюте не балансируют проводки при реверсе
+
+class CustVendExchAdjustment_W.postExchAdjLedgerTrans_Invoice_Vend():
+
+-            // tax.parmLedgerPostingType(posting);
++            tax.parmLedgerPostingType(CustVendExchAdjustment_W::getFinalPostingType(posting, custVendTransPostingLogType));
+</note-content></text>
+  <last-change-date>2010-04-20T11:37:34.6542730+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-20T11:37:34.6542730+04:00</last-metadata-change-date>
+  <create-date>2010-04-20T11:36:13.8861190+04:00</create-date>
+  <cursor-position>192</cursor-position>
+  <width>808</width>
+  <height>366</height>
+  <x>565</x>
+  <y>605</y>
+  <open-on-startup>False</open-on-startup>
+</note>
