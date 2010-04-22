@@ -7,11 +7,13 @@
 <link:internal>Oracle</link:internal> 
 <link:internal>CouchDb</link:internal>
 <link:internal>MongoDb</link:internal>
+<link:internal>Memcached</link:internal>
+
 <link:internal>Databases</link:internal></note-content></text>
-  <last-change-date>2010-04-15T11:55:19.5148840+04:00</last-change-date>
-  <last-metadata-change-date>2010-04-15T11:55:19.5148840+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-20T16:04:46.7592000+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-20T16:04:46.7592000+04:00</last-metadata-change-date>
   <create-date>2009-04-01T16:19:15.2224740+04:00</create-date>
-  <cursor-position>41</cursor-position>
+  <cursor-position>45</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1133</x>

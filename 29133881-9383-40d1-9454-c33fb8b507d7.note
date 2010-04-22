@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>JAR файлы</title>
+  <text xml:space="preserve"><note-content version="0.1">JAR файлы
+
+<link:url>http://java.sun.com/docs/books/tutorial/deployment/jar/build.html</link:url>
+<link:url>http://<link:internal>java</link:internal></link:url><link:url>.sun.com/docs/books/tutorial/deployment/jar/appman.<link:internal>html</link:internal></link:url>
+
+<link:internal>Создание jar файлов</link:internal>
+<link:internal>Запуска jar файла, как приложения</link:internal>
+<link:internal>Импорт классов из jar файлов</link:internal></note-content></text>
+  <last-change-date>2010-04-22T16:41:13.6782860+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-22T16:41:13.6782860+04:00</last-metadata-change-date>
+  <create-date>2010-04-22T16:30:50.1013230+04:00</create-date>
+  <cursor-position>199</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

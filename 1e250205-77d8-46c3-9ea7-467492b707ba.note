@@ -3,11 +3,13 @@
   <title>Java</title>
   <text xml:space="preserve"><note-content version="0.1">Java
 
+<link:internal>Работа с окружением в Java</link:internal>
+<link:internal>Пакеты Java</link:internal>
 <link:internal>Коллекции Java</link:internal></note-content></text>
-  <last-change-date>2009-12-23T15:47:38.8893400+03:00</last-change-date>
-  <last-metadata-change-date>2009-12-23T15:47:38.8893400+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-22T16:26:02.7222470+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-22T16:26:02.7222470+04:00</last-metadata-change-date>
   <create-date>2009-07-31T12:28:02.1846670+04:00</create-date>
-  <cursor-position>14</cursor-position>
+  <cursor-position>33</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>587</x>

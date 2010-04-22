@@ -9,10 +9,10 @@ ant
 cd <link:url>/usr/share/<link:internal>clojure</link:internal></link:url><link:url>/</link:url>
 ln -s <link:url>/media/pt_lin/oss/clojure-contrib/clojure-contrib.jar</link:url>
 
-p.s. Но это все равно не будет работать из <link:internal>Emacs</link:internal>. Похоже надо искать, как CLASSPATH прописывается.
+p.s. Но это все равно не будет работать из <link:internal>Emacs</link:internal>. Похоже надо искать, как <link:internal>CLASSPATH</link:internal> прописывается.
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:23.3950700+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:23.3950700+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-22T15:57:43.2276680+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-22T15:57:43.2276680+04:00</last-metadata-change-date>
   <create-date>2009-08-07T11:35:25.7343790+04:00</create-date>
   <cursor-position>285</cursor-position>
   <width>450</width>

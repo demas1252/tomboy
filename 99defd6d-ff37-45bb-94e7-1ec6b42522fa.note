@@ -104,8 +104,8 @@ user=&gt; (System/getProperty "<link:internal>java</link:internal></italic><ital
 (require 'slime)
 (slime-setup)
 </italic></note-content></text>
-  <last-change-date>2010-03-21T18:14:01.9465520+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T18:14:01.9465520+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-22T15:57:42.8426030+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-22T15:57:42.8426030+04:00</last-metadata-change-date>
   <create-date>2009-08-31T16:23:53.8286369+04:00</create-date>
   <cursor-position>1903</cursor-position>
   <width>491</width>
