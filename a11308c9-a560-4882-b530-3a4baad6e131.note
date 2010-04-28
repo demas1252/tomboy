@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейший пример JUnit</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейший пример JUnit
+
+<bold>Calc.<link:internal>java</link:internal></bold>
+
+public class Calc {
+    public double add(double number1, double number2) {
+	return number1 + number2;
+    }
+}
+
+<bold>TestCalc.<link:internal>java</link:internal></bold>
+
+import <link:internal>junit</link:internal>.framework.TestCase;
+
+public class TestCalc extends TestCase {
+    public void testAdd() {
+	Calc calc = new Calc();
+	double result = calc.add(10, 50);
+	assertEquals(60, result, 0);
+    }
+}
+
+<bold>compile.sh</bold>
+
+rm *.class
+javac Calc.<link:internal>java</link:internal>
+javac -cp <link:url>~/jc/junit.jar</link:url>:. TestCalc.<link:internal>java</link:internal>
+
+<bold>run_<link:internal>test</link:internal></bold><bold>.sh</bold>
+
+<link:internal>java</link:internal> -cp <link:url>~/jc/junit.jar</link:url>:. <link:internal>junit</link:internal>.textui.TestRunner TestCalc
+</note-content></text>
+  <last-change-date>2010-04-28T11:47:36.6021630+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T11:47:36.6021630+04:00</last-metadata-change-date>
+  <create-date>2010-04-28T11:46:07.7610260+04:00</create-date>
+  <cursor-position>290</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>264</x>
+  <y>141</y>
+  <open-on-startup>False</open-on-startup>
+</note>
