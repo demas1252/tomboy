@@ -14,8 +14,8 @@ WITH GRANT OPTION - позволяет demas-у далше назначать э
 REVOKE SELECT ON dm.table FROM demas;
 
 <link:internal>Привелегии</link:internal>, разданные demas-ом другим пользователям, *исчезают* у них даже после того как этой <link:internal>привелегии</link:internal> лишится demas.</note-content></text>
-  <last-change-date>2009-09-24T14:37:01.2566470+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-24T14:37:01.2566470+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.6513170+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.6513170+04:00</last-metadata-change-date>
   <create-date>2008-03-29T06:41:36.9506450+03:00</create-date>
   <cursor-position>22</cursor-position>
   <width>450</width>

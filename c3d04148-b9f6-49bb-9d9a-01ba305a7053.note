@@ -9,8 +9,8 @@ The advantage of such a framework is that it brings your programs closer togethe
 
 Galago is desktop-neutral, and will in time provide easy to use widgets for <link:internal>Gtk</link:internal>+ and Qt applications. Currently, <link:internal>Gtk</link:internal>+ widgets are available in our <link:internal>Subversion</link:internal> repository under the module name libgalago-<link:internal>gtk</link:internal>. Qt widgets will be available in time.
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:29.0933080+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:29.0933080+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.2537080+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.2537080+04:00</last-metadata-change-date>
   <create-date>2008-04-12T15:40:35.6265380+04:00</create-date>
   <cursor-position>328</cursor-position>
   <width>483</width>

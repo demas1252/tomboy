@@ -33,8 +33,8 @@ This is known problem with the script itself. Just hit yes - it works.
 check the versions of the headers and the <link:internal>kernel</link:internal>-sources packages. <link:internal>If</link:internal>
 they match, then you need to perform make cloneconfig &amp;&amp; make
 <link:internal>modules</link:internal>_prepare in<link:url> /usr/src/linux</link:url></note-content></text>
-  <last-change-date>2009-10-17T22:10:53.6517840+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:53.6517840+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:15.2919210+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:15.2919210+04:00</last-metadata-change-date>
   <create-date>2008-09-04T11:15:10.1988600+04:00</create-date>
   <cursor-position>49</cursor-position>
   <width>450</width>

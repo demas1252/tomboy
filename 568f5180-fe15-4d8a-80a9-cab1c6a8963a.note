@@ -3,15 +3,15 @@
   <title>Установка Clojure в Suse</title>
   <text xml:space="preserve"><note-content version="0.1">Установка Clojure в Suse
 
-Можно поставить через One-Click, но я решил собрать из исходников, как в <link:internal>Ubuntu</link:internal>.  Единственное, что ant не собирал <link:internal>clojure</link:internal> - пришлось в<link:url> /etc/alternatives</link:url> поменять link jre на<link:url> /usr/lib/jvm/java-1.5.0-sun</link:url>.
+Можно поставить через One-Click, но я решил собрать из исходников, как в <link:internal>Ubuntu</link:internal>.  Единственное, что <link:internal>ant</link:internal> не собирал <link:internal>clojure</link:internal> - пришлось в<link:url> /etc/alternatives</link:url> поменять link jre на<link:url> /usr/lib/jvm/java-1.5.0-sun</link:url>.
 
 Собственно, я посмотрел <link:internal>JAVA</link:internal>_HOME (echo $<link:internal>JAVA</link:internal>_HOME) - он указывал на этот link - его то я и подменил.
 
 + надо установить<link:url> /usr/bin/clisp</link:url> (пакет clisp)
 
 + меню <link:internal>Clojure</link:internal> нет, но Eval region можно делать и через slime</note-content></text>
-  <last-change-date>2009-10-12T12:00:21.4859600+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:21.4859600+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.5466700+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.5466700+04:00</last-metadata-change-date>
   <create-date>2009-09-16T15:54:40.9963550+04:00</create-date>
   <cursor-position>59</cursor-position>
   <width>575</width>

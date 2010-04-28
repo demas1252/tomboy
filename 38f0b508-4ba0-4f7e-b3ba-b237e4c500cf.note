@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ant c jUnit</title>
+  <text xml:space="preserve"><note-content version="0.1">Ant c jUnit
+
+<bold>1. Создаем в текущем каталоге папки <link:internal>test</link:internal></bold><bold>, src и build.xml
+
+2. В scr помещаем функционал:</bold>
+
+<italic>[<link:url>demas@arch.local.net][~/artefacts/dev/study/java/junit/src</link:url></italic><italic>]% cat Calc.<link:internal>java</link:internal></italic><italic> 
+
+public class Calc {
+    public double add(double number1, double number2) {
+        return number1 + number2;
+    }
+}</italic>
+
+<bold>3. В <link:internal>test</link:internal></bold><bold> помещаем тесты:</bold>
+
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/artefacts/dev/study/<link:internal>java</link:internal></link:url><link:url>/<link:internal>junit</link:internal></link:url><link:url>/<link:internal>test</link:internal></link:url>]% ls -la
+
+<italic>итого 16
+drwxr-xr-x 2 demas demas 176 Апр 28 16:13 ./
+drwxr-xr-x 4 demas demas 128 Апр 28 16:14 ../
+-rw-r--r-- 1 demas demas 264 Апр 28 11:51 TestAll.<link:internal>java</link:internal></italic><italic>
+-rw-r--r-- 1 demas demas 198 Апр 28 11:49 TestCalc2.<link:internal>java</link:internal></italic><italic>
+-rw-r--r-- 1 demas demas 200 Апр 28 16:13 TestCalc.<link:internal>java</link:internal></italic><italic>
+</italic>
+
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/artefacts/dev/study/<link:internal>java</link:internal></link:url><link:url>/<link:internal>junit</link:internal></link:url><link:url>/<link:internal>test</link:internal></link:url>]% cat TestCalc.<link:internal>java</link:internal>
+
+<italic>import <link:internal>junit</link:internal></italic><italic>.framework.TestCase;
+
+public class TestCalc extends TestCase {
+    public void testAdd() {
+        Calc calc = new Calc();
+        double result = calc.add(10, 50);
+        assertEquals(60, result, 0);
+    }
+}
+</italic>
+[<link:url>demas@arch.local.net][~/artefacts/dev/study/java/junit/test</link:url>]% cat TestCalc2.<link:internal>java</link:internal> 
+
+<italic>import <link:internal>junit</link:internal></italic><italic>.framework.TestCase;
+
+public class TestCalc2 extends TestCase {
+    public void testAdd() {
+        Calc calc = new Calc();
+        double result = calc.add(1, 5);
+        assertEquals(6, result, 0);
+    }
+}
+</italic>
+[<link:url>demas@arch.local.net][~/artefacts/dev/study/java/junit/test</link:url>]% cat TestAll.<link:internal>java</link:internal>  
+
+<italic>import <link:internal>junit</link:internal></italic><italic>.framework.<link:internal>Test</link:internal></italic><italic>;
+import <link:internal>junit</link:internal></italic><italic>.framework.TestSuite;
+
+public class TestAll {
+    public static <link:internal>Test</link:internal></italic><italic> suite() {
+        TestSuite suite = new TestSuite("All tests");
+        suite.addTestSuite(TestCalc.class);
+        suite.addTestSuite(TestCalc2.class);
+        return suite;
+    }
+}</italic>
+
+<bold>4. Содержимое build.xml</bold>
+
+<italic>&lt;?xml version="1.0"?&gt;
+&lt;project name="<link:internal>ant</link:internal></italic><italic>_and_<link:internal>junit</link:internal></italic><italic>" default="archive"&gt;
+
+  &lt;path id="master-<link:internal>classpath</link:internal></italic><italic>"&gt;
+    &lt;fileset dir="/home/demas/jc"&gt;
+      &lt;include name="*.jar"/&gt;
+    &lt;/fileset&gt;
+    
+    &lt;pathelement path="."/&gt;    
+  &lt;/path&gt;
+
+  &lt;path id="<link:internal>test</link:internal></italic><italic>-<link:internal>classpath</link:internal></italic><italic>"&gt;
+    &lt;path refid="master-<link:internal>classpath</link:internal></italic><italic>" /&gt;
+    &lt;pathelement location="/home/demas/jc/<link:internal>junit</link:internal></italic><italic>.jar" /&gt;
+    &lt;pathelement location="build/classes" /&gt;
+    &lt;pathelement location="build/<link:internal>test</link:internal></italic><italic>" /&gt;
+  &lt;/path&gt;
+
+  &lt;target name="init"&gt;
+    &lt;mkdir dir="build/classes" /&gt;
+    &lt;mkdir dir="dist" /&gt;
+    &lt;mkdir dir="build/<link:internal>test</link:internal></italic><italic>" /&gt;
+  &lt;/target&gt;
+
+  &lt;target name="compile" depends="init"&gt;
+    &lt;javac srcdir="src" destdir="build/classes" classpathref="master-<link:internal>classpath</link:internal></italic><italic>" /&gt;
+    &lt;echo&gt;compilation complete!&lt;/echo&gt;
+  &lt;/target&gt;
+
+  &lt;target name="<link:internal>test</link:internal></italic><italic>-compile" depends="compile"&gt;
+    &lt;javac destdir="build/<link:internal>test</link:internal></italic><italic>" srcdir="<link:internal>test</link:internal></italic><italic>"&gt;
+      &lt;<link:internal>classpath</link:internal></italic><italic> refid="<link:internal>test</link:internal></italic><italic>-<link:internal>classpath</link:internal></italic><italic>"/&gt;
+    &lt;/javac&gt;
+  &lt;/target&gt;
+
+  &lt;target name="<link:internal>test</link:internal></italic><italic>" depends="<link:internal>test</link:internal></italic><italic>-compile"&gt;
+    &lt;<link:internal>junit</link:internal></italic><italic> haltonfailure="true" printsummary="true"&gt;
+      &lt;<link:internal>classpath</link:internal></italic><italic> refid="<link:internal>test</link:internal></italic><italic>-<link:internal>classpath</link:internal></italic><italic>" /&gt;
+      &lt;<link:internal>test</link:internal></italic><italic> name="TestAll" /&gt;
+    &lt;/<link:internal>junit</link:internal></italic><italic>&gt;
+  &lt;/target&gt;
+
+  &lt;target name="archive" depends="compile"&gt;
+    &lt;jar destfile="dist/project.jar" basedir="build/classes" /&gt;
+  &lt;/target&gt;
+
+  &lt;target name="clean" depends="init"&gt;
+    &lt;delete dir="build" /&gt;
+    &lt;delete dir="dist" /&gt;
+  &lt;/target&gt;
+
+&lt;/project&gt;</italic></note-content></text>
+  <last-change-date>2010-04-28T16:17:43.6360080+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T16:17:43.6360080+04:00</last-metadata-change-date>
+  <create-date>2010-04-28T16:14:14.8922870+04:00</create-date>
+  <cursor-position>1679</cursor-position>
+  <width>1003</width>
+  <height>667</height>
+  <x>259</x>
+  <y>119</y>
+  <open-on-startup>False</open-on-startup>
+</note>

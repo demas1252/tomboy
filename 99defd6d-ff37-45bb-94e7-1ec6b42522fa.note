@@ -6,9 +6,9 @@
 <link:url>http://riddell.us/tutorial/clojure/clojure.html</link:url>
 <link:url>http://riddell.us/tutorial/slime_swank/slime_swank.html</link:url>
 
-<bold>Install <link:internal>java</link:internal></bold><bold> &amp; ant</bold>
+<bold>Install <link:internal>java</link:internal></bold><bold> &amp; <link:internal>ant</link:internal></bold>
 
-sudo <link:internal>apt-get</link:internal> install openjdk-6-jdk ant <link:internal>subversion</link:internal> <link:internal>git</link:internal>-core
+sudo <link:internal>apt-get</link:internal> install openjdk-6-jdk <link:internal>ant</link:internal> <link:internal>subversion</link:internal> <link:internal>git</link:internal>-core
 
 <bold>Install <link:internal>clojure</link:internal></bold>
 
@@ -16,7 +16,7 @@ sudo <link:internal>apt-get</link:internal> install openjdk-6-jdk ant <link:inte
 ~$ cd <link:url>~/opt</link:url></italic><italic>
 ~$ svn co <link:url>http://clojure.googlecode.com/svn/trunk</link:url></italic><italic> <link:internal>clojure</link:internal></italic><italic>
 ~$ cd <link:internal>clojure</link:internal></italic><italic>
-~$ ant
+~$ <link:internal>ant</link:internal></italic><italic>
 ~$ mkdir <link:url>~/.clojure</link:url></italic><italic>
 ~$ cp <link:internal>clojure</link:internal></italic><italic>.jar <link:url>~/.clojure</link:url></italic><italic>
 </italic>
@@ -32,7 +32,7 @@ user=&gt; (+ 1 41)
 <italic>$ cd <link:url>~/opt</link:url></italic><italic>
 ~$ <link:internal>git clone</link:internal></italic><italic> <link:internal>git</link:internal></italic><italic>:<link:url>//github.com/richhickey/clojure-contrib.git</link:url></italic><italic>
 ~$ cd <link:internal>clojure</link:internal></italic><italic>-contrib
-~$ ant -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
+~$ <link:internal>ant</link:internal></italic><italic> -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
 ~$ cp *.jar <link:url>~/.clojure</link:url></italic><italic>
 </italic>
 <bold>Bash start-up script</bold>
@@ -59,12 +59,12 @@ user=&gt; (System/getProperty "<link:internal>java</link:internal></italic><ital
 
 ~$ cd <link:url>~/opt/<link:internal>clojure</link:internal></link:url></italic><italic /><italic>
 ~$ svn update
-~$ ant
+~$ <link:internal>ant</link:internal></italic><italic>
 ~$ cp <link:internal>clojure</link:internal></italic><italic>.jar <link:url>~/.clojure</link:url></italic><italic>
 ### Update <link:internal>clojure</link:internal></italic><italic>-config
 ~$ cd <link:url>~/opt/clojure-config</link:url></italic><italic>
 ~$ <link:internal>git</link:internal></italic><italic> pull
-~$ ant -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
+~$ <link:internal>ant</link:internal></italic><italic> -Dclojure.jar=..<link:url>/clojure/clojure.jar</link:url></italic><italic>
 ~$ cp *.jar <link:url>~/.clojure</link:url></italic><italic>
 </italic>
 <bold>Install <link:internal>clojure</link:internal></bold><bold>-mode</bold>
@@ -104,8 +104,8 @@ user=&gt; (System/getProperty "<link:internal>java</link:internal></italic><ital
 (require 'slime)
 (slime-setup)
 </italic></note-content></text>
-  <last-change-date>2010-04-22T15:57:42.8426030+04:00</last-change-date>
-  <last-metadata-change-date>2010-04-22T15:57:42.8426030+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:12.8419550+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:12.8419550+04:00</last-metadata-change-date>
   <create-date>2009-08-31T16:23:53.8286369+04:00</create-date>
   <cursor-position>1903</cursor-position>
   <width>491</width>

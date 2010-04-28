@@ -53,8 +53,8 @@ CREATE INDEX "T_USER_IND_COLUMNS_IDX_1"
 
 CREATE INDEX "T_USER_IND_COLUMNS_IDX_2" 
     ON "USER_IND_COLUMNS"  ("TABLE_NAME") ;_</note-content></text>
-  <last-change-date>2009-10-17T22:10:51.2162680+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:51.2162680+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.6065410+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.6065410+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:19:12.2773639+03:00</create-date>
   <cursor-position>2696</cursor-position>
   <width>732</width>

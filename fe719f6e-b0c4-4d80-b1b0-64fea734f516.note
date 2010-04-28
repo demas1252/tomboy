@@ -59,8 +59,8 @@ void *thread_function(void *arg) {
    <link:internal>1</link:internal>. Поток начинает свою работу в момент pthread_start, а не pthread_join.
    2. "Thread joined, it returned thank you for cpu time" - пример возрата значения из функции потока
    3. "Message is now bye! " - пример модификации общей переменной</note-content></text>
-  <last-change-date>2009-10-17T22:10:51.2904330+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:51.2904330+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.5603700+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.5603700+04:00</last-metadata-change-date>
   <create-date>2008-03-27T15:43:38.7502680+03:00</create-date>
   <cursor-position>79</cursor-position>
   <width>0</width>

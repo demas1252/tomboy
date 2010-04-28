@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ant</title>
+  <text xml:space="preserve"><note-content version="0.1">Ant
+
+<link:internal>Ant simple build.xml</link:internal>
+<link:internal>Ant с нексолькими целями</link:internal>
+<link:internal>Ant c jUnit</link:internal></note-content></text>
+  <last-change-date>2010-04-28T16:14:27.6366980+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T16:14:27.6366980+04:00</last-metadata-change-date>
+  <create-date>2010-04-28T14:11:03.7613550+04:00</create-date>
+  <cursor-position>50</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>374</x>
+  <y>303</y>
+  <open-on-startup>False</open-on-startup>
+</note>

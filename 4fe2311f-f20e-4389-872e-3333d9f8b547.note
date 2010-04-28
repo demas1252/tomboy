@@ -14,8 +14,8 @@ WITH ADMIN OPTION - позволяет demas-у далше назначать э
 REVOKE CREATE TABLE FROM demas;
 
 <link:internal>Привелегии</link:internal>, разданные demas-ом другим пользователям, *остаются* у них даже после того как этой <link:internal>привелегии</link:internal> лишится demas.</note-content></text>
-  <last-change-date>2008-03-29T06:41:26.1780070+03:00</last-change-date>
-  <last-metadata-change-date>2008-03-29T06:41:26.1780070+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:18.2313650+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:18.2313650+04:00</last-metadata-change-date>
   <create-date>2008-03-29T06:41:19.0216330+03:00</create-date>
   <cursor-position>67</cursor-position>
   <width>658</width>

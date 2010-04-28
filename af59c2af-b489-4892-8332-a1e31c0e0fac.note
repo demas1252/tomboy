@@ -354,8 +354,8 @@ class Ui_MainWindow(object):
     MainWindow.show()
     sys.exit(app.exec_())
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:54.2473350+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:54.2473350+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:15.1176110+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:15.1176110+04:00</last-metadata-change-date>
   <create-date>2009-04-16T19:26:13.0271160+04:00</create-date>
   <cursor-position>37</cursor-position>
   <width>450</width>

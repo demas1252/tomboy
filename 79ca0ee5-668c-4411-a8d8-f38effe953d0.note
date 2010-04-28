@@ -14,8 +14,8 @@ export QT_IM_MODULE="xim"
 3.
 
  scim -f socket -c socket -d</note-content></text>
-  <last-change-date>2009-06-05T13:49:31.7132330+04:00</last-change-date>
-  <last-metadata-change-date>2009-06-05T13:49:31.7132330+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.8203920+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.8203920+04:00</last-metadata-change-date>
   <create-date>2009-06-05T13:28:39.1934860+04:00</create-date>
   <cursor-position>52</cursor-position>
   <width>450</width>

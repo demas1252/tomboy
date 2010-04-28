@@ -85,8 +85,8 @@ b 3302144
 &gt;&gt;&gt; print id(<link:internal>test</link:internal>), id(<link:internal>test</link:internal>.a), id(<link:internal>test</link:internal>.b)
 18264208 3302156 3302144 &lt;--- Different!
 &gt;&gt;&gt;</note-content></text>
-  <last-change-date>2009-10-17T22:10:51.0004590+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:51.0004590+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.7733110+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.7733110+04:00</last-metadata-change-date>
   <create-date>2008-03-28T14:12:19.3783440+03:00</create-date>
   <cursor-position>58</cursor-position>
   <width>0</width>

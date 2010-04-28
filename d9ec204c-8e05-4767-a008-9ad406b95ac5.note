@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Ant с нексолькими целями</title>
+  <text xml:space="preserve"><note-content version="0.1">Ant с нексолькими целями
+
+&lt;?xml version="1.0"?&gt;
+&lt;project name="<link:internal>ant</link:internal>_and_<link:internal>junit</link:internal>" default="archive"&gt;
+
+  &lt;path id="master-<link:internal>classpath</link:internal>"&gt;
+    &lt;fileset dir="/home/demas/jc"&gt;
+      &lt;include name="*.jar"/&gt;
+    &lt;/fileset&gt;
+    
+    &lt;pathelement path="."/&gt;
+    
+  &lt;/path&gt;
+
+  &lt;target name="init"&gt;
+    &lt;mkdir dir="build/classes" /&gt;
+    &lt;mkdir dir="dist" /&gt;
+  &lt;/target&gt;
+
+  &lt;target name="compile" depends="init"&gt;
+    &lt;javac srcdir="." destdir="build/classes" classpathref="master-<link:internal>classpath</link:internal>" /&gt;
+    &lt;echo&gt;compilation complete!&lt;/echo&gt;
+  &lt;/target&gt;
+
+  &lt;target name="archive" depends="compile"&gt;
+    &lt;jar destfile="dist/project.jar" basedir="build/classes" /&gt;
+  &lt;/target&gt;
+
+  &lt;target name="clean" depends="init"&gt;
+    &lt;delete dir="build" /&gt;
+    &lt;delete dir="dist" /&gt;
+  &lt;/target&gt;
+
+&lt;/project&gt;</note-content></text>
+  <last-change-date>2010-04-28T14:25:02.2300400+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:25:02.2300400+04:00</last-metadata-change-date>
+  <create-date>2010-04-28T14:24:42.8009830+04:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>923</x>
+  <y>197</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -42,8 +42,8 @@ Bits and Bytes
     Tell <link:internal>me</link:internal> how to <link:internal>test</link:internal> whether the high-order bit is set in a byte.
     Write a function to count all the bits in an int value; e.g. the function with the signature int countBits(int x)
     Describe a function that takes an int value, and returns true <link:internal>if</link:internal> the bit pattern of that int value is the same <link:internal>if</link:internal> you reverse it (i.e. it's a palindrome); i.e. boolean isPalindrome(int x) </note-content></text>
-  <last-change-date>2010-03-21T18:14:01.6531840+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T18:14:01.6531840+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:13.1054210+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:13.1054210+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:15:47.7854480+03:00</create-date>
   <cursor-position>516</cursor-position>
   <width>475</width>

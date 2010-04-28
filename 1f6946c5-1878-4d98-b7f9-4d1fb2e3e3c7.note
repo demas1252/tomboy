@@ -19,8 +19,8 @@ looks like libfoo.so is not in the compiler's library search path.
 # sudo <link:internal>apt-get</link:internal> install manpages-dev to help you make sense of compiler warnings and errors.
 # the -g flag instructs the compiler to include debugging information, so that you can debug your program with gdb itself or any gdb frontend.
 # -Wall Wextra -pedantic</note-content></text>
-  <last-change-date>2009-09-24T14:37:00.9954180+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-24T14:37:00.9954180+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.7546820+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.7546820+04:00</last-metadata-change-date>
   <create-date>2008-03-27T15:41:08.4055720+03:00</create-date>
   <cursor-position>42</cursor-position>
   <width>450</width>

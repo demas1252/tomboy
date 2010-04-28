@@ -62,8 +62,8 @@ void *thread_function(void *arg) {
 demas@demas-desktop:~/sources$ cc -D_REETRANT -I/usr/include/ntp<link:internal>1</link:internal> semaphore.<link:broken>c</link:broken> -o semaphore -L/usr/lib/ntp<link:internal>1</link:internal> -lpthread
 
 Здесь от момента создания потока до join работают одновременно два потока - основной, который запрашивает у пользователя строку и взводит семафор, и вспомогательный, который считает символы в строке и сбрасывает семафор.</note-content></text>
-  <last-change-date>2009-11-05T16:11:59.2383870+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-05T16:11:59.2383870+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:14.2599370+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:14.2599370+04:00</last-metadata-change-date>
   <create-date>2008-03-27T15:44:00.5438070+03:00</create-date>
   <cursor-position>45</cursor-position>
   <width>0</width>

@@ -8,8 +8,8 @@ The Telepathy project is building a unified framework for many different kinds o
 <list><list-item dir="ltr">Real-time: Telepathy supports instant messaging (both one-to-one and in groups), voice calls and <link:internal>video</link:internal> calls; it's less suited for store-and-forward applications like email
 </list-item><list-item dir="ltr">Unified: Many different programs can take advantage of these communications; Telepathy lets these programs work together
 </list-item><list-item dir="ltr">Framework: Telepathy allows the different aspects of communication handling to be divided between different parts of the system, meaning each part is simpler</list-item></list></note-content></text>
-  <last-change-date>2009-10-17T22:10:52.1231230+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:52.1231230+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:15.9819760+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:15.9819760+04:00</last-metadata-change-date>
   <create-date>2008-04-12T19:26:32.6986260+04:00</create-date>
   <cursor-position>642</cursor-position>
   <width>450</width>

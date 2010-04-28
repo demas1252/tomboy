@@ -21,8 +21,8 @@
 <link:internal>Add</link:internal> the following line to "/etc/fstab" <link:internal>if</link:internal> you want the vboxusers to have
   permission to emulate USB devices:
      none<link:url> /<link:internal>proc</link:internal></link:url><link:url>/bus/usb</link:url> usbfs auto,busgid=108,busmode=0775,devgid=108,devmode=0664 0 0</note-content></text>
-  <last-change-date>2009-10-12T12:00:32.8732530+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:32.8732530+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.0256200+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.0256200+04:00</last-metadata-change-date>
   <create-date>2008-12-31T11:58:37.2121640+03:00</create-date>
   <cursor-position>45</cursor-position>
   <width>708</width>

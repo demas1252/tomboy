@@ -60,8 +60,8 @@ index structure in a primary key sorted manner.
 Because rows in index-organized <link:internal>tables</link:internal> do not have permanent physical addresses, the physical
 guesses can become stale when rows are moved to new blocks.
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:35.8971000+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:35.8971000+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.9362750+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.9362750+04:00</last-metadata-change-date>
   <create-date>2008-03-29T06:48:40.5021280+03:00</create-date>
   <cursor-position>34</cursor-position>
   <width>450</width>

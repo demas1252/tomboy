@@ -42,8 +42,8 @@ public <link:internal>partial</link:internal> class UserDefinedFunctions
 
 
 SELECT Name, dbo.QuantityWord(Name,'ma') AS Count FROM Users</note-content></text>
-  <last-change-date>2009-10-12T12:00:20.0452250+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:20.0452250+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.5708800+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.5708800+04:00</last-metadata-change-date>
   <create-date>2009-08-04T13:54:29.4098320+04:00</create-date>
   <cursor-position>946</cursor-position>
   <width>838</width>

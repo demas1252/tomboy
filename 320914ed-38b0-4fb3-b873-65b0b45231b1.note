@@ -83,8 +83,8 @@ c_s.remove_<link:internal>observer</link:internal>(x_o)
 print "I notify my subscribers :"
 c_s.values_changed()
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:27.1281690+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:27.1281690+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:17.4524050+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:17.4524050+04:00</last-metadata-change-date>
   <create-date>2009-03-23T22:00:33.2074380+03:00</create-date>
   <cursor-position>64</cursor-position>
   <width>450</width>

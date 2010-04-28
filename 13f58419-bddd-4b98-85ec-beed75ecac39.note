@@ -10,11 +10,13 @@
 <link:internal>Картинки в формате jpeg</link:internal>
 <link:internal>Таблицы в latex</link:internal>
 <link:internal>Оформление кода в LaTeX</link:internal>
-<link:internal>Использовать xpdf для просмотра результата работы latex</link:internal></note-content></text>
-  <last-change-date>2009-08-09T21:35:14.1859170+04:00</last-change-date>
-  <last-metadata-change-date>2009-08-09T21:35:14.1859170+04:00</last-metadata-change-date>
+<link:internal>Использовать xpdf для просмотра результата работы latex</link:internal>
+<link:internal>Как установить свой пакет в LaTeX</link:internal>
+<link:internal>Subfiles</link:internal></note-content></text>
+  <last-change-date>2010-04-28T17:21:59.6691610+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T17:21:59.6691610+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:40:34.4109430+03:00</create-date>
-  <cursor-position>86</cursor-position>
+  <cursor-position>258</cursor-position>
   <width>524</width>
   <height>360</height>
   <x>1135</x>

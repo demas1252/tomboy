@@ -10,8 +10,8 @@ for dir, subdir, files in os.walk(dor):
     for file in files:
               <link:internal>if</link:internal> glob.fnmatch.fnmatch(file,"*.txt"):
                    do what you want</note-content></text>
-  <last-change-date>2008-04-06T15:07:09.5461080+04:00</last-change-date>
-  <last-metadata-change-date>2008-04-06T15:07:09.5461080+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:18.1304590+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:18.1304590+04:00</last-metadata-change-date>
   <create-date>2008-03-28T13:11:04.1152120+03:00</create-date>
   <cursor-position>56</cursor-position>
   <width>0</width>

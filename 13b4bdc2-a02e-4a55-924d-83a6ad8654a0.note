@@ -6,8 +6,8 @@
 Если уж поставили, то есть смысл исключать директории где лежат файлы данных и логи из области сканирования.
 
 В частности <link:internal>Oracle</link:internal> + Norton Antivirus - последний может блокировать файлы во время сканирования</note-content></text>
-  <last-change-date>2009-01-24T12:27:00.9349970+03:00</last-change-date>
-  <last-metadata-change-date>2009-01-24T12:27:00.9349970+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:18.0155290+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:18.0155290+04:00</last-metadata-change-date>
   <create-date>2009-01-24T12:25:44.5935920+03:00</create-date>
   <cursor-position>68</cursor-position>
   <width>450</width>

@@ -53,8 +53,8 @@ do(Q) -&gt;
     {atomic, Val} = <link:internal>mnesia</link:internal>:transaction(F),
     Val.
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:51.4071620+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:51.4071620+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.5461560+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.5461560+04:00</last-metadata-change-date>
   <create-date>2009-04-11T16:51:07.3034570+04:00</create-date>
   <cursor-position>58</cursor-position>
   <width>450</width>

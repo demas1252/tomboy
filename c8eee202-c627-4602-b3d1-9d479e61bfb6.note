@@ -12,8 +12,8 @@ ffmpeg -i jokes.flv -ab 56 -ar 22050 -b 500 -s 320×240 jokes.mpg
       -ab bitrate: set the audio bitrate in kbit/s (default = 64)
       -ar sample rate: set the audio samplerate in Hz (default = 44100 Hz)
       -s size: set frame size. The format is WxH (default 160×128 )</note-content></text>
-  <last-change-date>2009-10-17T22:10:50.5604530+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:50.5604530+04:00</last-metadata-change-date>
+  <last-change-date>2010-04-28T14:11:16.8514030+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-28T14:11:16.8514030+04:00</last-metadata-change-date>
   <create-date>2008-03-27T14:59:02.2134890+03:00</create-date>
   <cursor-position>19</cursor-position>
   <width>614</width>
