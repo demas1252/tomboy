@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>log4j</title>
+  <text xml:space="preserve"><note-content version="0.1">log4j
+
+<bold>App.<link:internal>java</link:internal></bold>
+
+<italic>import org.apache.log4j.Logger;
+
+public class App {
+    public static final Logger LOG=Logger.getLogger(App.class);
+    public static void main(String[] <link:internal>args</link:internal></italic><italic>) {
+	LOG.info("Hello world!");
+    }
+}
+</italic>
+<bold>log4j.xml</bold>
+
+<italic>&lt;?xml version="1.0" encoding="UTF-8" ?&gt; 
+&lt;!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"&gt; 
+     
+&lt;log4j:configuration xmlns:log4j="<link:url>http://jakarta.apache.org/log4j/</link:url></italic><italic>"&gt; 
+     
+  &lt;appender name="console" class="org.apache.log4j.ConsoleAppender"&gt; 
+    &lt;param name="Target" value="System.out"/&gt; 
+    &lt;layout class="org.apache.log4j.PatternLayout"&gt; 
+      &lt;param name="ConversionPattern" value="%p %c: %m%n"/&gt; 
+    &lt;/layout&gt; 
+  &lt;/appender&gt;     
+  
+  &lt;root&gt; 
+    &lt;priority value ="debug" /&gt; 
+    &lt;appender-ref ref="console" /&gt; 
+  &lt;/root&gt; 
+    
+&lt;/log4j:configuration&gt;</italic>
+
+<bold>Проверяем</bold>
+
+javac -cp <link:url>~/jc/log4j.jar</link:url> App.<link:internal>java</link:internal> 
+<link:internal>java</link:internal> -cp <link:url>~/jc/log4j.jar</link:url>:. App
+
+
+</note-content></text>
+  <last-change-date>2010-04-29T11:35:31.9299170+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-29T11:35:31.9299170+04:00</last-metadata-change-date>
+  <create-date>2010-04-29T11:27:24.6236080+04:00</create-date>
+  <cursor-position>832</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>479</x>
+  <y>374</y>
+  <open-on-startup>False</open-on-startup>
+</note>

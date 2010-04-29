@@ -7,6 +7,7 @@
 <link:internal>Цвет файлов и директорий в консоли</link:internal>
 <link:internal>Запуситить две программы одновременно</link:internal>
 <link:internal>Вывод сообщиений на английском</link:internal>
+<link:internal>Хорошие консольные команды</link:internal>
 <link:internal>.basrc</link:internal>
 <link:internal>tar-gzip</link:internal>
 <link:internal>sed</link:internal>
@@ -14,13 +15,13 @@
 <link:internal>find</link:internal>
 <link:internal>dd</link:internal>
 </note-content></text>
-  <last-change-date>2009-11-07T13:17:29.1271410+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-07T13:17:29.1271410+03:00</last-metadata-change-date>
+  <last-change-date>2010-04-29T14:05:30.0577430+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-29T14:05:30.0577430+04:00</last-metadata-change-date>
   <create-date>2008-03-27T15:37:19.3672430+03:00</create-date>
-  <cursor-position>111</cursor-position>
+  <cursor-position>72</cursor-position>
   <width>614</width>
   <height>360</height>
-  <x>804</x>
-  <y>418</y>
+  <x>679</x>
+  <y>468</y>
   <open-on-startup>False</open-on-startup>
 </note>
