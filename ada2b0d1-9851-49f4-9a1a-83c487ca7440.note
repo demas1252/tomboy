@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Форматированные вставки текста</title>
+  <text xml:space="preserve"><note-content version="0.1">Форматированные вставки текста
+
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\newenvironment{hint}
+{
+\hrule
+\vspace{8pt}
+\begin{wrapfigure}{l}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=0.2\textwidth]{one}
+
+\end{center}
+\end{wrapfigure}
+}
+{\vspace{8pt} \hrule}
+
+\begin{document}
+
+\begin{hint}
+  some text
+\end{hint}
+
+\end{document}</note-content></text>
+  <last-change-date>2010-04-29T16:33:59.1677250+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-29T16:33:59.1677250+04:00</last-metadata-change-date>
+  <create-date>2010-04-29T16:33:23.0804100+04:00</create-date>
+  <cursor-position>371</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>792</x>
+  <y>173</y>
+  <open-on-startup>False</open-on-startup>
+</note>

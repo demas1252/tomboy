@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Хорошие консольные команды</title>
+  <text xml:space="preserve"><note-content version="0.1">Хорошие консольные команды
+
+<bold>sudo !!</bold>
+
+<link:internal>history</link:internal> это история команд
+!-n ссылка на предыдущую команду
+!! это !-1
+sudo !! выполнить последнюю команду из под sudo
+
+<bold>cd -</bold>
+
+вернуться в предыдущий рабочий каталог
+
+<bold><link:internal>ssh</link:internal></bold><bold>-copy-id remote-machine</bold>
+
+your-machine$ scp <link:url>~/.<link:internal>ssh</link:internal></link:url><link:url>/identity.pub</link:url> remote-machine:
+your-machine$ <link:internal>ssh</link:internal> remote-machine
+remote-machine$ cat identity.pub &gt;&gt; <link:url>~/.ssh/authorized_keys</link:url>
+
+<bold><link:internal>command</link:internal></bold><bold> &lt;CTRL-x CTRL-e&gt;</bold>
+
+редактировать текущую команду в редакторе
+
+<bold>$ echo cmd | at midnight</bold>
+
+выполнить команду в полночь
+
+<bold>$ <link:internal>ssh</link:internal></bold><bold> user@host cat <link:url>/path/to/remotefile</link:url></bold><bold> | diff <link:url>/path/to/localfile</link:url></bold><bold> -</bold>
+
+сравниваем удаленный и локальные файлы
+
+</note-content></text>
+  <last-change-date>2010-04-29T14:28:17.2795960+04:00</last-change-date>
+  <last-metadata-change-date>2010-04-29T14:28:17.2795960+04:00</last-metadata-change-date>
+  <create-date>2010-04-29T14:05:22.7910580+04:00</create-date>
+  <cursor-position>568</cursor-position>
+  <width>520</width>
+  <height>447</height>
+  <x>644</x>
+  <y>280</y>
+  <open-on-startup>False</open-on-startup>
+</note>
