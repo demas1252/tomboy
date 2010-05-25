@@ -36,16 +36,17 @@
 
 <bold>Problems</bold>
 <link:internal>в переносе откорректировалась только расходная проводка</link:internal>
+<link:internal>Закрытие склада с галкой Обновление производства</link:internal>
 
 <bold><link:broken>Bugs</link:broken></bold>     
 <link:internal>bug - пересчет себестоимости в заказах созданных по контракту</link:internal></note-content></text>
-  <last-change-date>2009-10-12T12:00:24.6527290+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:24.6527290+04:00</last-metadata-change-date>
+  <last-change-date>2010-05-01T18:42:16.5168170+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-01T18:42:16.5168170+04:00</last-metadata-change-date>
   <create-date>2008-03-29T06:26:31.3470670+03:00</create-date>
-  <cursor-position>756</cursor-position>
-  <width>450</width>
-  <height>864</height>
-  <x>374</x>
-  <y>124</y>
+  <cursor-position>643</cursor-position>
+  <width>612</width>
+  <height>727</height>
+  <x>997</x>
+  <y>252</y>
   <open-on-startup>False</open-on-startup>
 </note>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Реализация Template Method на Ruby</title>
+  <text xml:space="preserve"><note-content version="0.1">Реализация Template Method на Ruby
+
+class Report
+  def initialize
+    @title = "report"
+    @text = ['one', 'two', 'three']
+  end
+
+  def output_report
+    do_a
+    do_b
+    do_c
+  end
+
+  def do_b
+    @text.each do | line |
+      puts line
+    end
+  end
+
+  def do_a
+    raise "Called abstract method do_a"
+  end
+
+  def do_c
+    raise "Called abstract method do_c"
+  end
+end
+
+class HTMLReport &lt; Report
+  def do_a
+    puts "&lt;<link:internal>html</link:internal>&gt;"
+  end
+
+  def do_c
+    puts "&lt;/<link:internal>html</link:internal>"
+  end
+end
+    
+class TextReport &lt; Report
+  def do_a
+  end
+
+  def do_c
+  end
+end
+
+
+    
+report = HTMLReport.new
+report.output_report
+
+report = TextReport.new
+report.output_report
+</note-content></text>
+  <last-change-date>2010-05-02T14:33:29.3308180+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-02T14:33:29.3308180+04:00</last-metadata-change-date>
+  <create-date>2010-05-02T14:33:06.0351790+04:00</create-date>
+  <cursor-position>36</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
