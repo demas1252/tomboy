@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>LinkType</title>
+  <text xml:space="preserve"><note-content version="0.1">LinkType
+
+Свойство датасорса salesLine: LinkType = Delayed - дает задержку обновления строк. Это сделано специально, чтобы не вызывался excecuteQuery, когда вы быстро перходите с заказа на заказ.
+Поставьте LinkType = Active, тогда executeQuery будет вызываться сразу
+
+<link:url>http://axforum.info/forums/showthread.php?p=225065&amp;posted=1#post225065</link:url></note-content></text>
+  <last-change-date>2010-05-24T13:08:00.7356680+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-24T13:08:00.7356680+04:00</last-metadata-change-date>
+  <create-date>2010-05-24T13:07:32.4345000+04:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>622</y>
+  <open-on-startup>False</open-on-startup>
+</note>

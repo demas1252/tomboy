@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Basic Input an Output in Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Basic Input an Output in Haskell
+
+ <italic>main = do
+     putStrLn "Hello, what's your name?"
+     name &lt;- getLine
+     putStrLn ("Hey" ++ name ++ ", you rock!")</italic>
+
+===================================
+
+<italic>main = do
+     line &lt;- getLine
+     <link:internal>if</link:internal></italic><italic> null line
+        then return ()
+        else do
+             putStrLn $ reverseWords line
+             main
+
+reverseWords::String-&gt;String
+reverseWords = unwords . <link:internal>map</link:internal></italic><italic> reverse . words</italic>
+</note-content></text>
+  <last-change-date>2010-05-25T11:08:43.5709320+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-25T11:08:43.5709320+04:00</last-metadata-change-date>
+  <create-date>2010-05-25T11:08:27.0023370+04:00</create-date>
+  <cursor-position>34</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

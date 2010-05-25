@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Задание fieldSeparator</title>
+  <text xml:space="preserve"><note-content version="0.1">Задание fieldSeparator
+
+&gt; cat qq.in
+  foo     78      xxx
+  bar             yyy
+  qux     99      zzz
+  xuq             xyz
+&gt; cat qq.in | <link:internal>awk</link:internal> 'BEGIN {FS="\t"} $2=="" {print}'
+  bar             yyy
+  xuq             xyz</note-content></text>
+  <last-change-date>2010-05-25T13:46:55.3594720+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-25T13:46:55.3594720+04:00</last-metadata-change-date>
+  <create-date>2010-05-25T13:46:36.6848730+04:00</create-date>
+  <cursor-position>57</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

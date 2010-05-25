@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Umask</title>
+  <text xml:space="preserve"><note-content version="0.1">Umask
+
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/temporary</link:url>]% umask
+022
+
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/temporary</link:url>]% touch f1
+[<link:url>demas@arch.local.net][~/temporary</link:url>]% ls -la
+-rw-r--r--   1 demas demas       0 Май  6 14:50 f1
+
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/temporary</link:url>]% umask 777
+[<link:url>demas@<link:internal>arch</link:internal></link:url><link:url>.local.net][~/temporary</link:url>]% touch f2 
+[<link:url>demas@arch.local.net][~/temporary</link:url>]% ls -la   
+-rw-r--r--   1 demas demas       0 Май  6 14:50 f1
+----------   1 demas demas       0 Май  6 14:50 f2
+
+</note-content></text>
+  <last-change-date>2010-05-06T14:53:45.8811010+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-06T14:53:45.8811010+04:00</last-metadata-change-date>
+  <create-date>2010-05-06T14:52:50.5815420+04:00</create-date>
+  <cursor-position>337</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>27</x>
+  <y>615</y>
+  <open-on-startup>False</open-on-startup>
+</note>

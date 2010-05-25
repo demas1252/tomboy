@@ -40,15 +40,16 @@
 <link:internal>Раскраска срок grid</link:internal>
 <link:internal>Использование курсоров</link:internal>
 <link:internal>Запрет редактирования всех полей datasource</link:internal>
+<link:internal>LinkType</link:internal>
 
 <bold><link:internal>Запросы</link:internal></bold>
 <link:internal>Сохранение и восстановление query</link:internal>
 <link:internal>or Qquery</link:internal>
 <link:internal>Количество записей в queryRun</link:internal></note-content></text>
-  <last-change-date>2009-04-25T18:32:27.9038130+04:00</last-change-date>
-  <last-metadata-change-date>2009-04-25T18:32:27.9038130+04:00</last-metadata-change-date>
+  <last-change-date>2010-05-24T13:07:43.7631270+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-24T13:07:43.7631270+04:00</last-metadata-change-date>
   <create-date>2008-03-29T06:38:47.1886550+03:00</create-date>
-  <cursor-position>153</cursor-position>
+  <cursor-position>678</cursor-position>
   <width>543</width>
   <height>803</height>
   <x>895</x>

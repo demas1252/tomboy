@@ -21,11 +21,12 @@
 <link:internal>Отключить проверку диска при загрузке</link:internal>
 <link:internal>Grub</link:internal>
 <link:internal>Примонтировать ISO</link:internal>
-<link:internal>Db</link:internal></note-content></text>
-  <last-change-date>2009-10-12T12:00:19.9814250+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:19.9814250+04:00</last-metadata-change-date>
+<link:internal>Db</link:internal>
+<link:internal>Umask</link:internal></note-content></text>
+  <last-change-date>2010-05-06T14:53:04.4046110+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-06T14:53:04.4046110+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:35:39.8781320+03:00</create-date>
-  <cursor-position>338</cursor-position>
+  <cursor-position>401</cursor-position>
   <width>451</width>
   <height>430</height>
   <x>1155</x>
