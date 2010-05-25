@@ -3,28 +3,13 @@
   <title>Input and output in Haskell</title>
   <text xml:space="preserve"><note-content version="0.1">Input and output in Haskell
 
-<italic>main = do
-     putStrLn "Hello, what's your name?"
-     name &lt;- getLine
-     putStrLn ("Hey" ++ name ++ ", you rock!")</italic>
 
-===================================
-
-<italic>main = do
-     line &lt;- getLine
-     <link:internal>if</link:internal></italic><italic> null line
-        then return ()
-        else do
-             putStrLn $ reverseWords line
-             main
-
-reverseWords::String-&gt;String
-reverseWords = unwords . <link:internal>map</link:internal></italic><italic> reverse . words</italic>
-</note-content></text>
-  <last-change-date>2010-03-30T17:09:18.9541990+04:00</last-change-date>
-  <last-metadata-change-date>2010-03-30T17:09:18.9541990+04:00</last-metadata-change-date>
+<link:internal>Basic Input an Output in Haskell</link:internal>
+<link:internal>Files and Streams in Haskell</link:internal></note-content></text>
+  <last-change-date>2010-05-25T11:09:05.8075980+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-25T11:09:05.8075980+04:00</last-metadata-change-date>
   <create-date>2010-03-30T14:44:00.4501910+04:00</create-date>
-  <cursor-position>0</cursor-position>
+  <cursor-position>91</cursor-position>
   <width>486</width>
   <height>467</height>
   <x>1051</x>

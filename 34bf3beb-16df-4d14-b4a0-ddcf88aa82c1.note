@@ -3,14 +3,20 @@
   <title>HTML</title>
   <text xml:space="preserve"><note-content version="0.1">HTML
 
+<bold>Теория</bold>
+
+<link:internal>Name attribute</link:internal>
+
+<bold>Приемы</bold>
+
 <link:internal>Несколько элементов с одним id</link:internal></note-content></text>
-  <last-change-date>2010-03-21T18:14:30.6001730+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T18:14:30.6001730+03:00</last-metadata-change-date>
+  <last-change-date>2010-05-24T10:25:02.0995920+04:00</last-change-date>
+  <last-metadata-change-date>2010-05-24T10:25:02.0995920+04:00</last-metadata-change-date>
   <create-date>2010-03-21T18:13:52.6160020+03:00</create-date>
-  <cursor-position>6</cursor-position>
+  <cursor-position>14</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>0</x>
-  <y>0</y>
+  <x>940</x>
+  <y>260</y>
   <open-on-startup>False</open-on-startup>
 </note>
