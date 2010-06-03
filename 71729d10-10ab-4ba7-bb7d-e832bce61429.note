@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Generics in Java</title>
+  <text xml:space="preserve"><note-content version="0.1">Generics in Java
+
+import <link:internal>java</link:internal>.util.*;
+
+public class generics_<link:internal>test</link:internal> {
+    public static void main(String[] <link:internal>args</link:internal>) {
+	// no generics
+	List strList2 = new ArrayList();
+	strList2.add("some text");
+	strList2.add(new Integer(0)); // OK
+	String str = (String)strList.get(0);
+	// Integer i = (Integer)strList.get(0); // run time error
+
+	// generics
+	List&lt;String&gt; strList = new ArrayList&lt;String&gt;();
+
+	strList.add("some text");
+	// strList.add(new Integer(10));  // compile error
+	String str = strList.get(0);
+	// Integer i = strList.get(0);    // compile error
+    }
+}
+</note-content></text>
+  <last-change-date>2010-06-03T16:06:20.6408620+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-03T16:06:20.6408620+04:00</last-metadata-change-date>
+  <create-date>2010-06-03T15:52:37.4238820+04:00</create-date>
+  <cursor-position>18</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1008</x>
+  <y>603</y>
+  <open-on-startup>False</open-on-startup>
+</note>
