@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поиск оптимального пути на Haskell</title>
+  <text xml:space="preserve"><note-content version="0.1">Поиск оптимального пути на Haskell
+
+data Node = Node Road (Maybe Road)
+data Road = Road Int Node
+
+data Section = Section { getA :: Int, getB :: Int, getC :: Int } deriving (Show)
+type RoadSystem = [Section]
+
+heathrowToLondon :: RoadSystem
+heathrowToLondon = [Section 50 10 30, Section 5 90 20, Section 40 2 25, Section 10 8 0]
+
+data Label = A | B | C deriving (Show)
+type Path = [(Label, Int)]
+
+roadStep :: (Path, Path) -&gt; Section -&gt; (Path, Path)
+roadStep (pathA, pathB) (Section a b c) = 
+         <link:internal>let</link:internal> priceA = sum $ <link:internal>map</link:internal> snd pathA
+             priceB = sum $ <link:internal>map</link:internal> snd pathB
+             forwardPriceToA = priceA + a
+             crossPriceToA = priceB + b + c
+             forwardPriceToB = priceB + b
+             crossPriceToB = priceA + a + c
+             newPathToA = <link:internal>if</link:internal> forwardPriceToA &lt;= crossPriceToA
+                          then (A,a):pathA
+                          else (C,c):(B,b):pathB
+             newPathToB = <link:internal>if</link:internal> forwardPriceToB &lt;= crossPriceToB
+                          then (B,b):pathB
+                          else (C,c):(A,a):pathA
+         in (newPathToA, newPathToB)
+                              
+optimalPath :: RoadSystem -&gt; Path
+optimalPath roadSystem = 
+            <link:internal>let</link:internal> (bestAPath, bestBPath) = foldl roadStep ([], []) roadSystem
+            in <link:internal>if</link:internal> sum(<link:internal>map</link:internal> snd bestAPath) &lt;= sum (<link:internal>map</link:internal> snd bestBPath)
+               then reverse bestAPath
+               else reverse bestBPath</note-content></text>
+  <last-change-date>2010-06-09T18:03:43.5059760+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-09T18:03:43.5059760+04:00</last-metadata-change-date>
+  <create-date>2010-06-09T18:03:11.8516930+04:00</create-date>
+  <cursor-position>69</cursor-position>
+  <width>542</width>
+  <height>584</height>
+  <x>0</x>
+  <y>22</y>
+  <open-on-startup>False</open-on-startup>
+</note>
