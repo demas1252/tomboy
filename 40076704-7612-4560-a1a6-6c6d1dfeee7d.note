@@ -40,8 +40,8 @@ server.get("hello")
 server.get("goodbye")
 server.get("some")
 </note-content></text>
-  <last-change-date>2010-04-07T11:05:38.0536340+04:00</last-change-date>
-  <last-metadata-change-date>2010-04-07T11:05:38.0536340+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-17T14:32:50.7609650+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-17T14:32:50.7609650+04:00</last-metadata-change-date>
   <create-date>2010-04-07T11:04:42.2003730+04:00</create-date>
   <cursor-position>803</cursor-position>
   <width>628</width>
