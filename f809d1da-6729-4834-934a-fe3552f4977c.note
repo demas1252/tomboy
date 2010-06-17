@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>pdf-writer</title>
+  <text xml:space="preserve"><note-content version="0.1">pdf-writer
+
+require '<link:internal>pdf</link:internal>/writer'
+
+<link:internal>pdf</link:internal>_document = <link:internal>PDF</link:internal>::Writer.new
+<link:internal>pdf</link:internal>_document.select_font "Times-Roman"
+<link:internal>pdf</link:internal>_document.text "Hello world!"
+<link:internal>pdf</link:internal>_document.save_as "out.<link:internal>pdf</link:internal>"
+
+
+Но у меня там проблемы с кодировками были в коде самой библиотеки. Не стал разбираться.</note-content></text>
+  <last-change-date>2010-06-16T16:01:38.2907740+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-16T16:01:38.2907740+04:00</last-metadata-change-date>
+  <create-date>2010-06-16T15:53:18.6328140+04:00</create-date>
+  <cursor-position>168</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

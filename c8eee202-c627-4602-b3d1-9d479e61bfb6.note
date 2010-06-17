@@ -18,7 +18,7 @@ ffmpeg -i jokes.flv -ab 56 -ar 22050 -b 500 -s 320×240 jokes.mpg
   <cursor-position>19</cursor-position>
   <width>614</width>
   <height>360</height>
-  <x>657</x>
-  <y>200</y>
+  <x>155</x>
+  <y>256</y>
   <open-on-startup>False</open-on-startup>
 </note>
