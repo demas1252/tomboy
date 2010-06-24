@@ -3,14 +3,14 @@
   <title>Screenshots</title>
   <text xml:space="preserve"><note-content version="0.1">Screenshots
 
-ImageMagick
-<link:internal>aptitude</link:internal> install imagemagick
+<link:internal>ImageMagick</link:internal>
+<link:internal>aptitude</link:internal> install <link:internal>imagemagick</link:internal>
 <link:internal>man</link:internal> import
 
 import - сисема запросит область и сохранить ее скриншот в указанный файл
 import -window root fullscreen.png</note-content></text>
-  <last-change-date>2008-04-20T00:17:50.0000820+04:00</last-change-date>
-  <last-metadata-change-date>2008-04-20T00:17:50.0000820+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-24T10:28:39.6979380+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-24T10:28:39.6979380+04:00</last-metadata-change-date>
   <create-date>2008-03-27T14:57:51.6167460+03:00</create-date>
   <cursor-position>40</cursor-position>
   <width>450</width>
