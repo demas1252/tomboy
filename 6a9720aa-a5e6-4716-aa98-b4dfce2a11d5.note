@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Не обновлять систему на Maemo</title>
+  <text xml:space="preserve"><note-content version="0.1">Не обновлять систему на Maemo
+
+# gconftool -a <link:url>/apps/hildon/update-notifier</link:url> 
+
+check_interval = 1440
+
+# gconftool -st int <link:url>/apps/hildon/update-notifier/check_interval</link:url> 2147483647
+
+# gconftool -a <link:url>/apps/hildon/update-notifier</link:url>
+   check_interval = 2147483647</note-content></text>
+  <last-change-date>2010-06-25T14:46:01.7179720+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-25T14:46:01.7179720+04:00</last-metadata-change-date>
+  <create-date>2010-06-25T14:45:23.7964960+04:00</create-date>
+  <cursor-position>222</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>

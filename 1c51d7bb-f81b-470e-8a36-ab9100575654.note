@@ -3,14 +3,15 @@
   <title>Maemo</title>
   <text xml:space="preserve"><note-content version="0.1">Maemo
 
-<link:internal>Установка Python на Maemo</link:internal></note-content></text>
-  <last-change-date>2008-04-03T22:43:53.9582760+04:00</last-change-date>
-  <last-metadata-change-date>2008-04-03T22:43:53.9582760+04:00</last-metadata-change-date>
+<link:internal>Установка Python на Maemo</link:internal>
+<link:internal>Не обновлять систему на Maemo</link:internal></note-content></text>
+  <last-change-date>2010-06-25T14:45:32.1478550+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-25T14:45:32.1478550+04:00</last-metadata-change-date>
   <create-date>2008-04-03T22:43:32.4068290+04:00</create-date>
-  <cursor-position>7</cursor-position>
+  <cursor-position>62</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>148</x>
-  <y>245</y>
+  <x>955</x>
+  <y>423</y>
   <open-on-startup>False</open-on-startup>
 </note>
