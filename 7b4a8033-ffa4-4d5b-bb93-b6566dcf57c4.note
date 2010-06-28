@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Фототехника</title>
+  <text xml:space="preserve"><note-content version="0.1">Фототехника
+
+<bold>Типы фотоаппаратов</bold>
+
+<list><list-item dir="ltr">пленочные (аналоговые) и цифровые
+</list-item><list-item dir="ltr">зеркалки и не-зеркалки</list-item></list>
+
+<bold>Объектив</bold> 
+
+<italic>По фокусному расстоянию</italic>
+
+<list><list-item dir="ltr">широкоугольные (20-35)
+</list-item><list-item dir="ltr">длиннофокусные (100-180)
+</list-item><list-item dir="ltr">нормальные (45-55)</list-item></list>
+
+<italic>Светосила</italic>
+
+1:2, 1:2.8, 1:4 - чем меньше второе число, тем лучше
+
+Отображает потери света в объективе.  Чем лучше - тем при меньшей освещенности можно снимать.
+
+<italic>Дифрагма</italic>
+
+f/2 - открытое отверстие объектива
+f/16 - закрытое
+
+открывая - больше света, но размытое 
+закрывая - меньше света, но резкими остаются все объекты в кадре
+
+пейзаж - 11-16
+портрет - 2,8-5,6
+
+<italic>Выдержка</italic>
+
+2 -&gt; 1/2
+2000 -&gt; 1/2000
+и так далее
+
+Не стоит делать выдержку больше, чем 1/фокусное расстояние
+1/18 - 1/55 в моем случае - это максимум.
+
+<italic>Экспозиция</italic>
+
+Кол-во света, попадающего на матрицу. Зависит от выдержки и диафрагмы.
+Увеличение выдержки ведет к смазанности, увеличение диафрагмы - к размытости, а их коомбинация ограничена кол-вом света, который нужен для удачной фотографии.
+
+<italic>Режимы камер</italic>
+
+A (aperture priority) - приоритет диафрагмы (автоматический) - выдержка меняется автоматом - самый распространенный.
+S (shutter priority) - приоритет выдержки - <link:internal>спорт</link:internal>, при работе со вспышкой
+P (program) - камера сама выдает пару значений
+M (manual) - все настраивает фотограф
+
+<italic>Глубина резкости</italic>
+
+Насколько все размыто на заднем и переднем плане.
+Зависит от диафрагмы.</note-content></text>
+  <last-change-date>2010-06-27T21:50:15.6628280+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-27T21:50:15.6628280+04:00</last-metadata-change-date>
+  <create-date>2010-06-27T21:16:48.6836230+04:00</create-date>
+  <cursor-position>1264</cursor-position>
+  <width>525</width>
+  <height>590</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

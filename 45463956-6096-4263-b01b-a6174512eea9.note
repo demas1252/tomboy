@@ -5,7 +5,7 @@
 
      [<link:internal>Direction Белой Даче</link:internal>]
      
-     *История*
+     *<link:internal>История</link:internal>*
      
      В <link:internal>InventTrans</link:internal> он присутствовал всю жизнь; в InventTransPosting его добавили; в <link:internal>InventSettlement</link:internal> его нет.
      
@@ -34,8 +34,8 @@
      Остальное - это как правило, методы, возвращающие справочную информацию.
      
      </note-content></text>
-  <last-change-date>2009-10-12T12:00:16.7437810+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:16.7437810+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-28T11:11:34.6063120+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-28T11:11:34.6063120+04:00</last-metadata-change-date>
   <create-date>2008-03-26T22:56:07.8048769+03:00</create-date>
   <cursor-position>46</cursor-position>
   <width>450</width>

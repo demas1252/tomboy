@@ -5,7 +5,7 @@
 
 <bold>sudo !!</bold>
 
-<link:internal>history</link:internal> это история команд
+<link:internal>history</link:internal> это <link:internal>история</link:internal> команд
 !-n ссылка на предыдущую команду
 !! это !-1
 sudo !! выполнить последнюю команду из под sudo
@@ -33,8 +33,8 @@ remote-machine$ cat identity.pub &gt;&gt; <link:url>~/.ssh/authorized_keys</link
 сравниваем удаленный и локальные файлы
 
 </note-content></text>
-  <last-change-date>2010-04-29T14:28:17.2795960+04:00</last-change-date>
-  <last-metadata-change-date>2010-04-29T14:28:17.2795960+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-28T11:11:34.1932600+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-28T11:11:34.1932600+04:00</last-metadata-change-date>
   <create-date>2010-04-29T14:05:22.7910580+04:00</create-date>
   <cursor-position>568</cursor-position>
   <width>520</width>
