@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>История России</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>История</link:internal> России
+  <text xml:space="preserve"><note-content version="0.1">История России
 
 <bold>Романовы</bold>
 
@@ -9,10 +9,10 @@
 <link:internal>Михаил Федорович</link:internal>
 <link:internal>Алексей Михайлович</link:internal>
 <link:internal>Федор Алексеевич</link:internal></note-content></text>
-  <last-change-date>2010-06-28T15:54:45.5287580+04:00</last-change-date>
-  <last-metadata-change-date>2010-06-28T15:54:45.5287580+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-29T15:40:16.5801010+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-29T15:40:16.5801010+04:00</last-metadata-change-date>
   <create-date>2010-06-28T11:12:38.3030180+04:00</create-date>
-  <cursor-position>104</cursor-position>
+  <cursor-position>71</cursor-position>
   <width>486</width>
   <height>805</height>
   <x>50</x>
