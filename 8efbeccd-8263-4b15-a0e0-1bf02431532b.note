@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Первая помощь при несчастных случаях</title>
+  <text xml:space="preserve"><note-content version="0.1">Первая помощь при несчастных случаях
+
+<bold>Остановка сердца</bold>
+
+<list><list-item dir="ltr">состояние клинической смерти продолжается всего 4-5 мин
+</list-item><list-item dir="ltr">непрямой массаж сердца и искусственое дыхание (ИД) не проводят: если уже прошло 10-15 мин после остановки сердца или если пострадавший без сознания, но у него присутствует дыхание и работает сердце
+</list-item><list-item dir="ltr">ИД нельзя проводить при открытом повреждении грудной клетки, подозрение на перелом ребер
+</list-item><list-item dir="ltr">укладывают на спину, под плечи подкоадывают валик, занимают позицию слева, кладут руку на руку на нижнюю треть грудной клетки и ритмично на нее надавливают (раз в сек)
+</list-item><list-item dir="ltr">об успешности судят по изменению окраски кожных покровов лица, появлению пульса на сонной артерии, сужению зрачков
+</list-item><list-item dir="ltr">прекращать массаж сердца можно только на 3-5 сек каждые 2 минуты, чтобы проверить состояние
+</list-item><list-item dir="ltr">при ИД очищают полость рта, зажимают нос, вдох, а затем выдох в рот пострадавшему
+</list-item><list-item dir="ltr">2-3 вдувания \ 6-8 нажатий</list-item></list>
+
+<bold>Кровотечения</bold>
+
+<list><list-item dir="ltr">артериальное - пульсирующая алая струя, венозная - медленная струя темно-вишневого цвета, капилярное
+</list-item><list-item dir="ltr">жгут; максимум 2 часа; каждые полчаса ослаблять на несколько минут
+</list-item><list-item dir="ltr">на коже надписыватеся время наложения
+</list-item><list-item dir="ltr">под него подкладку из бинта
+</list-item><list-item dir="ltr">кожу вокруг раны - йодом
+</list-item><list-item dir="ltr">саму рану прикрывают салфеткой
+</list-item><list-item dir="ltr">при повреждении крупных сосудов зажимают пальцем: артериальное - выше места повреждения; венозное - ниже</list-item></list>
+
+<bold>Ушибы</bold>
+
+<list><list-item dir="ltr">повреждение мягких тканей с образованием кровоподтеков
+</list-item><list-item dir="ltr">давящая повязка для устранения внутренних кровотечений, возвышенное положение и охлаждение места ушиба, фиксация</list-item></list>
+
+<bold>Вывихи</bold>
+
+<list><list-item dir="ltr">стойкое ненормальное смещение концов костей, происходящее при разрыве суставной сумки
+</list-item><list-item dir="ltr">признак - движения в суставе невозможны
+</list-item><list-item dir="ltr">холод и фиксация конечности
+</list-item><list-item dir="ltr">руку на косынку, ногу в том положении - в каком она оказалась
+</list-item><list-item dir="ltr">больница, самому не вправлять</list-item></list>
+
+<bold>Переломы</bold>
+
+<list><list-item dir="ltr">неестественная форма, припулость на месте перелома
+</list-item><list-item dir="ltr">уменьшение подвижности (шинная повязка),  стерильная повязка, обрабтка йодом вокруг раны
+</list-item><list-item dir="ltr">ни вправлять ни прятать осколки, вообще не трогать
+</list-item><list-item dir="ltr">лежать на здоровом боку, ногу фиксировать подушками
+</list-item><list-item dir="ltr">ладонь обращена к животу, пальцы сжимают шарик - не фиксировать пальцы в прямом положении !</list-item></list>
+</note-content></text>
+  <last-change-date>2010-07-02T14:23:24.7477670+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-02T14:23:24.7477670+04:00</last-metadata-change-date>
+  <create-date>2010-07-02T12:00:03.0830080+04:00</create-date>
+  <cursor-position>1875</cursor-position>
+  <width>773</width>
+  <height>360</height>
+  <x>521</x>
+  <y>394</y>
+  <open-on-startup>True</open-on-startup>
+</note>
