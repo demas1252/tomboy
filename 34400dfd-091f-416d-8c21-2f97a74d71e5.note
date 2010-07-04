@@ -21,12 +21,14 @@
 <link:internal>Блокировки</link:internal>
 <link:internal>Перенос job-ов на другой сервер</link:internal>
 
+<bold>Database Permissions</bold>
 
-</note-content></text>
-  <last-change-date>2009-09-24T14:36:59.8591530+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-24T14:36:59.8591530+04:00</last-metadata-change-date>
+<link:internal>MS SQL Server Permission Conflicts</link:internal>
+<link:internal>Сменить собственника объекта</link:internal></note-content></text>
+  <last-change-date>2010-06-08T13:06:34.8842130+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-08T13:06:34.8842130+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>402</cursor-position>
+  <cursor-position>492</cursor-position>
   <width>657</width>
   <height>810</height>
   <x>515</x>

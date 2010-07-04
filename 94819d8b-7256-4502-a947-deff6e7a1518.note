@@ -13,13 +13,15 @@
 <link:internal>Modules in Haskell</link:internal>
 <link:internal>Input and output in Haskell</link:internal>
 
+<link:internal>Практические примеры</link:internal>
+
 <link:internal>GHCi</link:internal>
 <link:internal>Ghc</link:internal>
 </note-content></text>
-  <last-change-date>2010-03-30T15:34:57.2745620+04:00</last-change-date>
-  <last-metadata-change-date>2010-03-30T15:34:57.2745620+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-08T13:55:04.9035760+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-08T13:55:04.9035760+04:00</last-metadata-change-date>
   <create-date>2009-10-11T09:54:36.6493690+04:00</create-date>
-  <cursor-position>193</cursor-position>
+  <cursor-position>202</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1174</x>

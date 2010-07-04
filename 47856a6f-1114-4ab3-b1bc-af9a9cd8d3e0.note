@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Апории Зенона</title>
+  <text xml:space="preserve"><note-content version="0.1">Апории Зенона
+
+Выдвинул ряд парадоксальных утверждений, с помощью которых хотел доказать, что бытие едино и неподвижно, а множественность и движение не могут быть мыслимы без противоречия:
+
+<list><list-item dir="ltr">невозможность мыслить движение
+</list-item><list-item dir="ltr">Ахилес никогда не сможет догнать черепаху
+</list-item><list-item dir="ltr">летящая стрела покоится, а значит движения нет</list-item></list>
+
+Хотя это и софизмы, здесь впервые обсуждаюся проблемы неприрывности и бесконечности.
+Понятие актуально бесконечного, введенное Зеноном, было исключено в греческой философии и заменено на потенциальную бесконечность.  То есть бесконечную делимость велечин признавали , но не признавали их составленности из бесконечно большого числа актуальных данных.</note-content></text>
+  <last-change-date>2010-06-17T12:20:36.3986080+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-17T12:20:36.3986080+04:00</last-metadata-change-date>
+  <create-date>2010-06-17T12:15:45.0813900+04:00</create-date>
+  <cursor-position>583</cursor-position>
+  <width>803</width>
+  <height>373</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

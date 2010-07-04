@@ -99,8 +99,8 @@ SELECT resource_type, resource_description, request_mode FROM sys.dm_tran_locks 
 
 
 </note-content></text>
-  <last-change-date>2009-10-17T22:10:56.4596050+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-17T22:10:56.4596050+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-17T14:32:51.0383440+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-17T14:32:51.0383440+04:00</last-metadata-change-date>
   <create-date>2008-03-28T23:07:53.6893070+03:00</create-date>
   <cursor-position>77</cursor-position>
   <width>450</width>

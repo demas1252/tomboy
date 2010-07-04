@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Практические примеры Clojure</title>
-  <text xml:space="preserve"><note-content version="0.1">Практические примеры Clojure
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>Практические примеры</link:internal> Clojure
 
 <link:internal>Суммирование первых n чисел</link:internal>
 <link:internal>Фибоначчи на Clojure</link:internal>
 <link:internal>Померять время работы функции в Clojure</link:internal></note-content></text>
-  <last-change-date>2009-08-07T10:57:57.6154530+04:00</last-change-date>
-  <last-metadata-change-date>2009-08-07T10:57:57.6154530+04:00</last-metadata-change-date>
+  <last-change-date>2010-06-08T13:55:05.3101740+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-08T13:55:05.3101740+04:00</last-metadata-change-date>
   <create-date>2009-07-30T16:49:59.4724470+04:00</create-date>
   <cursor-position>58</cursor-position>
   <width>450</width>
