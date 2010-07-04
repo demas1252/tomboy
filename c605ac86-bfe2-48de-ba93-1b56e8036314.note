@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>runImpersonated</title>
+  <text xml:space="preserve"><note-content version="0.1">runImpersonated
+
+Класс может запускаться из пакетной обработки или просто по Menu Item.
+
+RunOn определяет место исполнения в любом из этих случаев, а runsImpersonated только для пакетной обработки.
+
+Таким образом, если runsImpersonated == true, то runOn должен быть calledFrom или server:
+
+если он будет calledFrom, то при выполнении не из пакета, он сможет выполниться на клиенте, а если server он будет выполнятся на сервере в обоих случаях. </note-content></text>
+  <last-change-date>2010-06-06T09:50:24.5129230+04:00</last-change-date>
+  <last-metadata-change-date>2010-06-06T09:50:24.5129230+04:00</last-metadata-change-date>
+  <create-date>2010-06-06T09:48:39.2853530+04:00</create-date>
+  <cursor-position>272</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1230</x>
+  <y>23</y>
+  <open-on-startup>False</open-on-startup>
+</note>
