@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Понятия группы</title>
+  <text xml:space="preserve"><note-content version="0.1">Понятия группы
+
+<bold>Простейшие понятия теории множеств</bold>
+
+<list><list-item dir="ltr">B c A - B является подмножеством A
+</list-item><list-item dir="ltr">A U B - сумма множеств - состоит из всех элементов А и B
+</list-item><list-item dir="ltr">A П B - пересечение множеств - состоит из элементов, принадлежащих ко всем множествам данной совокупности
+</list-item><list-item dir="ltr">Если каждому а из множества А поставлен в соответствие b из B , то мы говроим, что множество A отображено <bold>во</bold> множетсво B.
+</list-item><list-item dir="ltr"><bold>На</bold> множество - если всем 'a' нашелся хотя бы один  'b'.
+</list-item><list-item dir="ltr">Пусть есть отображение f множества A на множество B. <italic>Прообразом</italic> элемента b при отображении f называется множество тех элементов A, которым при отображении f ставится в соответствие b. Это множество обозначается <italic>f^(-1)(b)</italic>.
+</list-item><list-item dir="ltr">Отображение взаимно однозначно, когда каждому 'a' соответствует только один 'b' (лошади и всадники).  
+</list-item><list-item dir="ltr">Может быть множество множеств - оно же "система множеств" или "совокупность множеств". 
+</list-item><list-item dir="ltr">Особый интерес представляет разбиение множества на попарно непересекающиеся множества - разбиение на классы.
+</list-item><list-item dir="ltr">Пусть множество М разбито на классы. Два элемента этого множества <italic>эквивалентны</italic> по отношению к данному разбиению, если они принадлежат одному и тому же классу.
+</list-item><list-item dir="ltr">Каждый элемент эквивалентен сам себе. Это свойство называется <italic>рефлексивностью</italic>.
+</list-item><list-item dir="ltr">Если два класса пересекаются (имеют хоты бы один общий элемент), то они непременно совпадают (каждый элемент одного класса является в то же время элементом другого класса).
+</list-item><list-item dir="ltr">Каждое разбиение на классы множества М определяет отношение эквивалентности, облажающее свойствами симметрии, транзитивности и рефлексивности.</list-item></list>
+
+<bold>Вводные примеры</bold>
+
+<list><list-item dir="ltr">Действия над целыми числами:
+<list><list-item dir="ltr">любые два числа можно сложить
+</list-item><list-item dir="ltr">(a+b)+c=a+(b+c)
+</list-item><list-item dir="ltr">a+0=a
+</list-item><list-item dir="ltr">a+(-a)=0
+</list-item><list-item dir="ltr">a+b=b+a
+</list-item></list></list-item><list-item dir="ltr">Действия над рациональными числами:
+<list><list-item dir="ltr">любые два числа можно перемножить
+</list-item><list-item dir="ltr">(a*b)*c=a*(b*c)
+</list-item><list-item dir="ltr">a*1=a
+</list-item><list-item dir="ltr">a*(a^-1)=1
+</list-item><list-item dir="ltr">a*b=b*a
+</list-item></list></list-item><list-item dir="ltr">Клейновская группа четвертого порядка:</list-item></list>
+
+          a0 a1 a2 a3
+   a0   a0 a1 a2 a3
+   a1   a1 a0 a3 a2
+   a2  a2 a3 a0 a1
+   a3  a3 a2 a1 a0
+
+Умножение удовлетворяет условия ассоциаивности и коммуникативности. a0 - обладает свойством единицы.
+
+<bold>Определение группы</bold>
+
+G - некое конечное или бесконечное множество на котором определена <italic>операция умножения</italic>.  То есть, определен закон, согласно которому каждой паре a и b из G сопоставляется еще один элемент из G.
+
+Предположим. что операция умнеожения обладает свойствами:
+
+<list><list-item dir="ltr">(a*b)*c=a*(b*c)
+</list-item><list-item dir="ltr">a*1=1*a=a
+</list-item><list-item dir="ltr">a*b=b*a=1 (существование обратного элемента)</list-item></list>
+
+Множество G c определенной на ней операцией умножения, облад-ей этими свойствами, называется <italic>группой</italic>. 
+
+Если выполняется еще и a*b=b*a -&gt; это <italic>коммутативная или абелева группа</italic>.
+
+<bold>Простейшие теоремы о группах</bold>
+
+<list><list-item dir="ltr">Правило раскрытия скобок
+</list-item><list-item dir="ltr">Единственность нейтрального элемента
+</list-item><list-item dir="ltr">Единстваенность обратного элемента</list-item></list></note-content></text>
+  <last-change-date>2010-07-05T15:36:04.9159910+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-05T15:36:04.9159910+04:00</last-metadata-change-date>
+  <create-date>2010-07-05T15:35:26.0720150+04:00</create-date>
+  <cursor-position>49</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1222</x>
+  <y>614</y>
+  <open-on-startup>False</open-on-startup>
+</note>

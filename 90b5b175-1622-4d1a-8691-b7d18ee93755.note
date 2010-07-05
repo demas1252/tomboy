@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Группы подстановок</title>
+  <text xml:space="preserve"><note-content version="0.1">Группы подстановок
+
+Всего n! возможных подстановок.
+
+<bold>Произведение подстановок</bold>
+
+(1 2 3)   (1 2 3)
+ 2  1 3     3 2 1
+
+1-&gt;2-&gt;2
+2-&gt;1-&gt;3
+3-&gt;3-&gt;1
+
+-&gt; (2 3 1)
+
+Обозначим через P0..P5 все возможные подстановки, тогда записав их произведение в виде таблицы можно обнаружить, что умножение перестановок обладает всем свойстваим, чтобы быть группой.
+
+Обозначим группу, как S3. Ее порядок равен 6.  Группа не обладает свойством коммутативности.
+
+<bold>Понятие подгруппы</bold>
+
+Пусть задана группа G. Тогда, если множество H, составленное из элементов G,  образует группу, то H называется <italic>подгруппой</italic> G.
+
+Из определения следует, что каждая подгруппа содержит нейтральный элемент. 
+
+
+</note-content></text>
+  <last-change-date>2010-07-05T16:49:16.3723910+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-05T16:49:16.3723910+04:00</last-metadata-change-date>
+  <create-date>2010-07-05T15:36:13.1692620+04:00</create-date>
+  <cursor-position>577</cursor-position>
+  <width>450</width>
+  <height>473</height>
+  <x>1092</x>
+  <y>404</y>
+  <open-on-startup>False</open-on-startup>
+</note>
