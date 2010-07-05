@@ -50,8 +50,8 @@
   <create-date>2010-07-02T12:00:03.0830080+04:00</create-date>
   <cursor-position>1875</cursor-position>
   <width>773</width>
-  <height>360</height>
+  <height>362</height>
   <x>521</x>
   <y>394</y>
-  <open-on-startup>True</open-on-startup>
+  <open-on-startup>False</open-on-startup>
 </note>
