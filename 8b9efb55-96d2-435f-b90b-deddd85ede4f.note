@@ -16,16 +16,17 @@
 <link:internal>Проблемы Аксапты со шрифтами</link:internal>
 <link:internal>Перекрестные ссылки</link:internal>
 <link:internal>Скопировать группу пользователей и ограничить ей права</link:internal>
+<link:internal>Установка обновлений</link:internal>
 
-<link:internal>RPC</link:internal> error: Client provided an invalid session ID 169.
+RPC error: Client provided an invalid session ID 169.
 АОС останавливается в событиях такая ошибка:.NET Runtime 2.0 Error Код (ID) 1000
 Faulting application ax32serv.exe, version 4.0.2501.116, stamp 46948f66, faulting module ax32serv.exe, version 4.0.2501.116, stamp 46948f66, debug? 0, fault address
 -&gt;
 <link:url>http://support.microsoft.com/default.aspx/kb/913384</link:url></note-content></text>
-  <last-change-date>2009-10-12T12:00:31.7823500+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:31.7823500+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-08T10:54:39.6699110+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-08T10:54:39.6699110+04:00</last-metadata-change-date>
   <create-date>2008-03-26T17:35:22.1101770+03:00</create-date>
-  <cursor-position>400</cursor-position>
+  <cursor-position>218</cursor-position>
   <width>725</width>
   <height>691</height>
   <x>117</x>

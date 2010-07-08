@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>lock and lockWindoUpdate</title>
+  <text xml:space="preserve"><note-content version="0.1">lock and lockWindoUpdate
+
+<link:url>http://axforum.info/forums/showthread.php?p=228108#post228108</link:url>
+
+Результаты моих исследований (позже опубликую в блоге):
+
+lockWindowUpdate - обертка над одноименным Win32 методом. 
+Он просто запрещает обновление выбранного окна на время выполнения какой-либо операции.
+(См. MSDN)
+Исходя из описания на MSDN, используется в паре с drag&amp;drop операциями.
+
+lock внутри также вызывает lockWindowUpdate, соответственно он делает то же самое, но, в добавок, он также запрещает автоматическое упорядочивание элементов управления в выбранном окне (за это отвечает движок IntelliMorph). Это существенно улучшает производительность выполнения операций, влияющих на отображение формы, если таких операций производится много.
+
+То бишь, думаю уместным будет всегда рекомендовать использование lock/unlock. 
+Для совсем обеспокоенных производительностью людей добавлю, что в unlock можно передать false для запрета перепозиционирования управляющих элементов в момент вызова метода. Правда, насколько я понял, контролы все равно периодически перерисовываются, поэтому сильно это производительности не улучшит.
+
+Если у кого-то есть, что добавить, пишите.</note-content></text>
+  <last-change-date>2010-07-08T17:08:13.9617080+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-08T17:08:13.9617080+04:00</last-metadata-change-date>
+  <create-date>2010-07-08T17:07:40.8256510+04:00</create-date>
+  <cursor-position>59</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
