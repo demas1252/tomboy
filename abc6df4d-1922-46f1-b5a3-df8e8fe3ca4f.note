@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Установка Python на Maemo</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>Установка Python</link:internal> на Maemo
+  <text xml:space="preserve"><note-content version="0.1">Установка Python на Maemo
 
 <link:internal>1</link:internal>. Разрешаете <link:internal>Maemo</link:internal> Extras в настройках менеджера программ.
 2. Устанавливаете nicotine (он виден в списке программ для установки), он за собой притащит <link:internal>python</link:internal>2.5-runtime
 3. Устанавливаете sdictviewer отсюда: <link:url>http://forum.internet-tablet.com/upload</link:url> … 0.Wall.deb Он лучше, чем обычный.
 4. Убиваете nicotine, если он вам не нужен.</note-content></text>
-  <last-change-date>2009-10-12T12:00:29.1023400+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:29.1023400+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-12T14:04:10.5624840+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-12T14:04:10.5624840+04:00</last-metadata-change-date>
   <create-date>2008-04-03T22:43:52.0552210+04:00</create-date>
   <cursor-position>54</cursor-position>
   <width>450</width>
