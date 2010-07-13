@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>hpricot</title>
+  <text xml:space="preserve"><note-content version="0.1">hpricot
+
+require 'hpricot'
+
+document= &lt;&lt;END
+&lt;p&gt;This is the first <link:internal>test</link:internal> pargraph.
+&lt;ul&gt;
+  &lt;li&gt;first item&lt;/li&gt;
+  &lt;li&gt;second item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p id="footer"&gt;footer paragraph&lt;/p&gt;
+END
+
+parser = Hpricot.parse(document)
+
+(parser/:li).each do | item |
+  puts item.inner_<link:internal>html</link:internal>
+end
+
+puts (parser/'#footer').inner_<link:internal>html</link:internal>
+</note-content></text>
+  <last-change-date>2010-07-13T10:44:23.8587220+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-13T10:44:23.8587220+04:00</last-metadata-change-date>
+  <create-date>2010-07-13T10:33:55.7412230+04:00</create-date>
+  <cursor-position>9</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
