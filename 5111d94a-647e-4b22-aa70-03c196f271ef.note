@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>История России</title>
-  <text xml:space="preserve"><note-content version="0.1">История России
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>История</link:internal> России
 
 <bold>Романовы</bold>
 
@@ -11,11 +11,12 @@
 <link:internal>Федор Алексеевич</link:internal>
 <link:internal>Иоанн Алексеевич и Софья</link:internal>
 <link:internal>Петр I</link:internal>
-<link:internal>Екатерина I</link:internal></note-content></text>
-  <last-change-date>2010-07-05T16:36:17.9177850+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-05T16:36:17.9177850+04:00</last-metadata-change-date>
+<link:internal>Екатерина I</link:internal>
+<link:internal>Петр II</link:internal></note-content></text>
+  <last-change-date>2010-07-12T18:58:58.4007840+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-12T18:58:58.4007840+04:00</last-metadata-change-date>
   <create-date>2010-06-28T11:12:38.3030180+04:00</create-date>
-  <cursor-position>144</cursor-position>
+  <cursor-position>156</cursor-position>
   <width>486</width>
   <height>517</height>
   <x>30</x>
