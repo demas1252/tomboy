@@ -11,7 +11,7 @@ find /dir -type f | xargs file | <link:internal>awk</link:internal> -F':' '$2 ~ 
   <last-change-date>2009-10-12T12:00:21.0808280+04:00</last-change-date>
   <last-metadata-change-date>2009-10-12T12:00:21.0808280+04:00</last-metadata-change-date>
   <create-date>2008-04-06T19:24:18.1347560+04:00</create-date>
-  <cursor-position>39</cursor-position>
+  <cursor-position>164</cursor-position>
   <width>506</width>
   <height>360</height>
   <x>723</x>

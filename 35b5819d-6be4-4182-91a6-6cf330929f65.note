@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>Virtual Box</title>
   <text xml:space="preserve"><note-content version="0.1">Virtual Box
@@ -20,7 +20,7 @@
   <last-change-date>2009-09-26T22:09:54.3535450+04:00</last-change-date>
   <last-metadata-change-date>2009-09-26T22:09:54.3535450+04:00</last-metadata-change-date>
   <create-date>2008-03-27T22:07:25.5517660+03:00</create-date>
-  <cursor-position>208</cursor-position>
+  <cursor-position>234</cursor-position>
   <width>618</width>
   <height>434</height>
   <x>972</x>
