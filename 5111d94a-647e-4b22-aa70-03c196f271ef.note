@@ -23,5 +23,5 @@
   <height>517</height>
   <x>27</x>
   <y>61</y>
-  <open-on-startup>False</open-on-startup>
+  <open-on-startup>True</open-on-startup>
 </note>
