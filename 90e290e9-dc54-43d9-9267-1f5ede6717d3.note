@@ -33,9 +33,9 @@ $awk -f awk_program file
   <last-change-date>2010-05-25T13:46:46.0356330+04:00</last-change-date>
   <last-metadata-change-date>2010-05-25T13:46:46.0356330+04:00</last-metadata-change-date>
   <create-date>2008-05-04T18:30:45.8726969+04:00</create-date>
-  <cursor-position>645</cursor-position>
-  <width>424</width>
-  <height>593</height>
+  <cursor-position>667</cursor-position>
+  <width>512</width>
+  <height>617</height>
   <x>1244</x>
   <y>422</y>
   <open-on-startup>False</open-on-startup>
