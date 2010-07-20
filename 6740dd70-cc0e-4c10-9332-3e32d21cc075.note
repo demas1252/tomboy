@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Bulk Load</title>
+  <text xml:space="preserve"><note-content version="0.1">Bulk Load
+
+<list><list-item dir="ltr"><bold>Экпорт</bold>:   bcp AdventureWorks.Sales.Currency out "some.txt" -T -c</list-item></list>
+		при этом котроль прав, как я понимаю, происходит средствами ОС
+
+<list><list-item dir="ltr"><bold>Импорт</bold>:  BULK INSERT AdventureWorks.Sales.Curreny FROM "c:\somess.txt"</list-item></list>
+		табличка перед этим должна быть создана, файл лежать на сервере, поля совпадать
+
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-07-20T18:18:35.1850580+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-20T18:18:35.1850580+04:00</last-metadata-change-date>
+  <create-date>2010-07-20T18:12:20.7875440+04:00</create-date>
+  <cursor-position>153</cursor-position>
+  <width>618</width>
+  <height>358</height>
+  <x>544</x>
+  <y>542</y>
+  <open-on-startup>False</open-on-startup>
+</note>
