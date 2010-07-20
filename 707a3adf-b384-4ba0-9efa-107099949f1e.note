@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Копировать список</title>
+  <text xml:space="preserve"><note-content version="0.1">Копировать список
+
+<italic>newlist = list(oldlist)</italic>
+
+или
+
+<italic>import copy
+newlist = copy.copy(oldlist)
+</italic>
+или
+
+<italic>newlist = oldlist[:]</italic></note-content></text>
+  <last-change-date>2010-07-20T16:37:45.0439220+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-20T16:37:45.0439220+04:00</last-metadata-change-date>
+  <create-date>2010-07-20T16:37:06.4195430+04:00</create-date>
+  <cursor-position>96</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>39</x>
+  <y>24</y>
+  <open-on-startup>False</open-on-startup>
+</note>
