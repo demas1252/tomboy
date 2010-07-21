@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание простейшего контроллера rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание простейшего контроллера rails
+
+<list><list-item dir="ltr">rails demo
+</list-item><list-item dir="ltr">ruby script/server - проверяем
+</list-item><list-item dir="ltr">ruby script/generate controller Say
+</list-item><list-item dir="ltr">в файл app/controllers/say_controller.rb добавляем</list-item></list>
+
+<italic>	def hello
+	end</italic>
+
+<list><list-item dir="ltr">Создаем класс app/views/say/hello.rhtml</list-item></list>
+
+	<italic>&lt;<link:internal>html</link:internal></italic><italic>&gt;
+	 &lt;head&gt;
+	  &lt;title&gt;Hello, Rails!&lt;/title&gt;
+	 &lt;/head&gt;
+	 &lt;body&gt;
+	  &lt;h1&gt;Hello from Rails!&lt;/h1&gt;
+	 &lt;/body&gt;
+	&lt;/<link:internal>html</link:internal></italic><italic>&gt;</italic>
+
+<list><list-item dir="ltr">Запускаем и проверяем</list-item></list>
+</note-content></text>
+  <last-change-date>2010-07-21T16:30:00.8670670+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T16:30:00.8670670+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T16:27:18.2971680+04:00</create-date>
+  <cursor-position>286</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1206</x>
+  <y>567</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Динамическое формирование view в rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Динамическое формирование view в rails
+
+Все так же, как и <link:internal>Создание простейшего контроллера rails</link:internal>
+
+Плюс в файл app/views/say/hello.rhtml добавляем строки:
+
+<italic>  &lt;ul&gt;
+   &lt;li&gt; Addition: &lt;%= 1+2 %&gt; &lt;/li&gt;
+   &lt;li&gt; Time: &lt;%= 1.hour.from_now %&gt; &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;% 3.times do %&gt;
+    Ho! &lt;br&gt;
+  &lt;% end %&gt;
+  Ready
+</italic></note-content></text>
+  <last-change-date>2010-07-21T16:35:40.7944240+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T16:35:40.7944240+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T16:30:33.6045010+04:00</create-date>
+  <cursor-position>301</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>725</x>
+  <y>300</y>
+  <open-on-startup>False</open-on-startup>
+</note>
