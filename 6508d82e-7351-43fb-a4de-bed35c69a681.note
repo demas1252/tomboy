@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Резервное копировани при простой модели восстановления</title>
+  <text xml:space="preserve"><note-content version="0.1">Резервное копировани при простой модели восстановления
+
+Поддерживает резервные копии БД и файлов, но не поддерживает рез копии журналов.
+Упрощает администрирование, но БД может быть восстановлена только до конца последней резервной копии данных.
+
+Допустим у нас были сделаны бекапы на моменты времени t1..t5. В t6 произошел сбой. Мы восстанавливаем бекап на t5.  Все сделанное после этого времени - теряется.  <link:internal>Вероятность</link:internal> потери данных увеличивается до тех пор, пока не буде выполнено очередное полное или <link:internal>разностное резервное копирование</link:internal>.
+
+При использовании этой модели <link:internal>журнал транзакций</link:internal> автоматом усекается.
+
+<bold>Практика</bold>
+
+В общем то, здесь все просто.  Мы можем делать полные бекапы и дифференциальные.
+Вещи которые надо помнить:
+
+<list><list-item dir="ltr">Полные бекапы мы можем восстанавливать как угодно
+</list-item><list-item dir="ltr">Для восстановления дифф бекапа
+<list><list-item dir="ltr">восстановить полный бекап непосредственно предшествующий дифференциальному с опцией NO RECOVERY (см вторую закладку). при этом база свалится в состояние RECOVERING
+</list-item><list-item dir="ltr">восстановить дифф бекап с опцией RECOVERY</list-item></list></list-item></list>
+
+<list><list-item dir="ltr">важно чтобы между дифф бекапом и полным не было еще полного</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-07-21T14:44:54.2208530+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T14:44:54.2208530+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T13:31:30.0210670+04:00</create-date>
+  <cursor-position>1026</cursor-position>
+  <width>776</width>
+  <height>536</height>
+  <x>840</x>
+  <y>393</y>
+  <open-on-startup>False</open-on-startup>
+</note>

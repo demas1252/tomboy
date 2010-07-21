@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>MS SQL Administration</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Administration
+  <text xml:space="preserve"><note-content version="0.1">MS SQL Administration
 
 
 Installing and Configuring <link:internal>MS SQL</link:internal>
@@ -39,13 +39,13 @@ Monitoring <link:internal>SQL</link:internal> Server
 
 <link:internal>MS SQL Server Permission Conflicts</link:internal>
 <link:internal>Сменить собственника объекта</link:internal></note-content></text>
-  <last-change-date>2010-07-21T06:59:52.9013830+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-21T06:59:52.9013830+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-21T08:56:12.0402030+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T08:56:12.0402030+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>56</cursor-position>
-  <width>657</width>
-  <height>810</height>
-  <x>868</x>
-  <y>146</y>
+  <cursor-position>98</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1222</x>
+  <y>200</y>
   <open-on-startup>False</open-on-startup>
 </note>

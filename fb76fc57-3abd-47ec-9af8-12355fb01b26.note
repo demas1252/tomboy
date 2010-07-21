@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Разностное резервное копирование</title>
+  <text xml:space="preserve"><note-content version="0.1">Разностное резервное копирование
+
+Изменения, созданные после создания последней ПОЛНОЙ резервной копии.
+
+-- Create a full database backup first.
+BACKUP DATABASE MyAdvWorks 
+   TO MyAdvWorks_1 
+   WITH INIT
+GO
+
+-- Time elapses.
+-- Create a differential database backup, appending the backup
+-- to the backup device containing the full database backup.
+BACKUP DATABASE MyAdvWorks
+   TO MyAdvWorks_1
+   WITH DIFFERENTIAL
+GO
+</note-content></text>
+  <last-change-date>2010-07-21T13:44:32.5445300+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T13:44:32.5445300+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T13:40:48.3759240+04:00</create-date>
+  <cursor-position>205</cursor-position>
+  <width>557</width>
+  <height>648</height>
+  <x>1032</x>
+  <y>268</y>
+  <open-on-startup>False</open-on-startup>
+</note>

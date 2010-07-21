@@ -3,14 +3,23 @@
   <title>Disaster Recovery</title>
   <text xml:space="preserve"><note-content version="0.1">Disaster Recovery
 
+<bold>Терминология</bold>
+
+<link:internal>Полная резервная копия БД</link:internal>
+<link:internal>Разностное резервное копирование</link:internal>
+
+<bold>Стратегии резервного копирования</bold>
+
+<link:internal>Резервное копировани при простой модели восстановления</link:internal>
+<link:internal>Резервное копирование при полной модели восстановления</link:internal>
 </note-content></text>
-  <last-change-date>2010-07-21T06:59:59.7372890+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-21T06:59:59.7372890+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-21T13:47:36.7169530+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T13:47:36.7169530+04:00</last-metadata-change-date>
   <create-date>2010-07-21T06:59:44.9066420+04:00</create-date>
-  <cursor-position>52</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>1222</x>
-  <y>200</y>
+  <cursor-position>186</cursor-position>
+  <width>644</width>
+  <height>393</height>
+  <x>910</x>
+  <y>512</y>
   <open-on-startup>False</open-on-startup>
 </note>

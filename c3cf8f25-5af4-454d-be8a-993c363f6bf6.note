@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Полная резервная копия БД</title>
+  <text xml:space="preserve"><note-content version="0.1">Полная резервная копия БД
+
+Вся база целиком. Влючая <link:internal>журнал транзакций</link:internal>.  Состояние на момент завершения резервного копирования.
+
+-- Back up the AdventureWorks2008R2 database to new media set.
+BACKUP DATABASE AdventureWorks2008R2
+    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2008R2SimpleRM.bak' 
+    WITH FORMAT;
+GO
+
+WITH FORMAT - перезаписать все существующие резервные копии
+
+<bold>При модели полного восстановления</bold>
+
+USE master;
+ALTER DATABASE AdventureWorks2008R2 SET RECOVERY FULL;
+GO
+
+-- Back up the AdventureWorks2008R2 database to new media set (backup set 1).
+BACKUP DATABASE AdventureWorks2008R2
+  TO DISK = 'Z:\SQLServerBackups\AdventureWorks2008R2FullRM.bak' 
+  WITH FORMAT;
+GO
+
+--Create a routine log backup (backup set 2).
+BACKUP LOG AdventureWorks2008R2 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2008R2FullRM.bak';
+GO
+</note-content></text>
+  <last-change-date>2010-07-21T13:40:20.7692180+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T13:40:20.7692180+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T13:37:38.9591000+04:00</create-date>
+  <cursor-position>0</cursor-position>
+  <width>624</width>
+  <height>416</height>
+  <x>978</x>
+  <y>488</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Резервное копирование при полной модели восстановления</title>
+  <text xml:space="preserve"><note-content version="0.1">Резервное копирование при полной модели восстановления
+
+Позволяет восстановить на любой момент времени до падения.
+
+t1 полный бекап
+t2 бекап логов 1
+t3 бекап логов 2
+t4 авария
+
+При восстановлении:
+
+<list><list-item dir="ltr">делается бекап журнала - LogFinal
+</list-item><list-item dir="ltr">восстанавливается Full, Log1, Log2 без восстановления <link:internal>базы данных</link:internal> и LogFinal с восстановлением</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-07-21T13:51:39.1618320+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T13:51:39.1618320+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T13:47:21.4071930+04:00</create-date>
+  <cursor-position>175</cursor-position>
+  <width>754</width>
+  <height>514</height>
+  <x>692</x>
+  <y>257</y>
+  <open-on-startup>False</open-on-startup>
+</note>
