@@ -4,11 +4,12 @@
   <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Collation
 
 <link:internal>Cyrillic_General_CI_AS vs Cyrillic_General_BIN</link:internal>
-<link:internal>Поменять Collation у существующей базы</link:internal></note-content></text>
-  <last-change-date>2009-09-20T14:41:03.4118430+04:00</last-change-date>
-  <last-metadata-change-date>2009-09-20T14:41:03.4118430+04:00</last-metadata-change-date>
+<link:internal>Поменять Collation у существующей базы</link:internal>
+<link:internal>Поменять Collation у сервера</link:internal></note-content></text>
+  <last-change-date>2010-07-21T07:29:57.3261000+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T07:29:57.3261000+04:00</last-metadata-change-date>
   <create-date>2009-01-22T11:32:13.1713610+03:00</create-date>
-  <cursor-position>65</cursor-position>
+  <cursor-position>104</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1157</x>

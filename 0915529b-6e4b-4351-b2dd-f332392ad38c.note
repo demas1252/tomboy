@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Поменять Collation у сервера</title>
+  <text xml:space="preserve"><note-content version="0.1">Поменять Collation у сервера
+
+You basically need to run the installation again to rebuild the master database with the new collation. You cannot change the entire server's collation any <link:internal>other</link:internal> way. </note-content></text>
+  <last-change-date>2010-07-21T07:30:14.4292930+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T07:30:14.4292930+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T07:29:46.6658380+04:00</create-date>
+  <cursor-position>63</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

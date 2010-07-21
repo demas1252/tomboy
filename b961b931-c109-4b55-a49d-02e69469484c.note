@@ -16,13 +16,14 @@ Django
 Google Apps Engine
 <link:internal>readline</link:internal>
 <link:internal>DistUtils</link:internal>
+<link:internal>TextTable</link:internal>
 
 <link:internal>Remote Python Call Frameworks</link:internal>
 </note-content></text>
-  <last-change-date>2009-10-12T12:00:16.1581570+04:00</last-change-date>
-  <last-metadata-change-date>2009-10-12T12:00:16.1581570+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-21T07:46:21.9734710+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T07:46:21.9734710+04:00</last-metadata-change-date>
   <create-date>2009-03-24T09:22:34.8348370+03:00</create-date>
-  <cursor-position>135</cursor-position>
+  <cursor-position>154</cursor-position>
   <width>450</width>
   <height>484</height>
   <x>1193</x>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>TextTable</title>
+  <text xml:space="preserve"><note-content version="0.1">TextTable
+
+yaourt -S <link:internal>python</link:internal>-texttable
+
+<link:url>http://jefke.free.fr/coding/python/texttable/</link:url>
+
+<italic>import texttable
+
+table = texttable.Texttable()
+table.set_cols_align(["l", "r", "c"])
+table.set_cols_valign(["t", "m", "b"])
+table.add_rows([ ["Name", "Age", "Nickname"],
+				 ["Mr\nXabier\nHuon", 32, "Xav"],
+				 ["Mr\nBaptiste\nClement", 1, "Baby"] ])
+print table.draw()
+</italic></note-content></text>
+  <last-change-date>2010-07-21T08:03:48.2197230+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T08:03:48.2197230+04:00</last-metadata-change-date>
+  <create-date>2010-07-21T07:46:09.2475330+04:00</create-date>
+  <cursor-position>39</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>399</x>
+  <y>274</y>
+  <open-on-startup>False</open-on-startup>
+</note>
