@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Связывание страниц</title>
+  <text xml:space="preserve"><note-content version="0.1">Связывание страниц
+
+В контроллере создаем еще один метод:
+
+<italic>  def goodbye
+  end  
+</italic>
+Ссылка в одном шаблоне на другой:
+
+<italic>  &lt;p&gt;
+    Time to say &lt;%= link_to "Goodbye!", :action =&gt; "goodbye" %&gt;
+  &lt;/p&gt;
+</italic>
+Обратная ссылка:
+
+<italic>    &lt;p&gt;
+      Time to say &lt;%= link_to "Hello", :action =&gt; "hello" %&gt;
+    &lt;/p&gt;
+</italic></note-content></text>
+  <last-change-date>2010-07-22T07:33:06.5641940+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T07:33:06.5641940+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T07:26:23.2604070+04:00</create-date>
+  <cursor-position>291</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1222</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

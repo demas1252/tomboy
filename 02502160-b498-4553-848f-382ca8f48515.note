@@ -9,7 +9,7 @@
 <link:internal>Базы данных</link:internal>
 <link:internal>Linux</link:internal>
 <link:internal>Emacs</link:internal>
-<link:internal>Git</link:internal>, <link:internal>Mercurial</link:internal>, <link:internal>Bazaar</link:internal>, <link:internal>Subversion</link:internal>, <link:internal>Maemo</link:internal>
+<link:internal>Git</link:internal>, <link:internal>Mercurial</link:internal>, <link:internal>Bazaar</link:internal>, <link:internal>Subversion</link:internal>, <link:internal>Maemo</link:internal>, <link:internal>Eclipse</link:internal>
 
 <link:internal>Спорт</link:internal>
 <link:internal>Проектирование</link:internal>   
@@ -26,10 +26,10 @@
 
 
  </note-content></text>
-  <last-change-date>2010-06-25T14:45:02.9253890+04:00</last-change-date>
-  <last-metadata-change-date>2010-06-25T14:45:02.9253890+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-21T17:12:16.5658680+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-21T17:12:16.5658680+04:00</last-metadata-change-date>
   <create-date>2008-02-19T15:55:13.0802880+03:00</create-date>
-  <cursor-position>115</cursor-position>
+  <cursor-position>117</cursor-position>
   <width>441</width>
   <height>491</height>
   <x>1145</x>

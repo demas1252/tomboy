@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Передача данных из controller в view</title>
+  <text xml:space="preserve"><note-content version="0.1">Передача данных из controller в view
+
+В контроллере:
+
+<italic>class SayController &lt; ApplicationController
+  def hello
+    @time = Time.now
+  end
+end
+</italic>
+
+В шаблоне:
+
+<italic>  It is now &lt;%= @time %&gt;</italic></note-content></text>
+  <last-change-date>2010-07-22T07:25:26.8887900+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T07:25:26.8887900+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T07:21:34.6290920+04:00</create-date>
+  <cursor-position>143</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1177</x>
+  <y>79</y>
+  <open-on-startup>False</open-on-startup>
+</note>
