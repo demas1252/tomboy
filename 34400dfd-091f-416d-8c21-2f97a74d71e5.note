@@ -4,7 +4,7 @@
   <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Administration
 
 
-Installing and Configuring <link:internal>MS SQL</link:internal>
+<link:internal>Installing and Configuring MS SQL</link:internal>
 <link:internal>Manages Databases and Files</link:internal>
 <link:internal>Disaster Recovery</link:internal>
 <link:internal>Managing Security</link:internal>
@@ -19,13 +19,8 @@ Monitoring <link:internal>SQL</link:internal> Server
 
 <link:internal>Все о размерах в MS SQL</link:internal>
 <link:internal>TempDb, Master и прочие системные таблицы</link:internal>
-<link:internal>Бекапы и MS SQL</link:internal>
 <link:internal>MS SQL и железо</link:internal> 
-<link:internal>Пользователи и их права в MS SQL</link:internal>
 <link:internal>Сетевые настройки MS SQL</link:internal>
-
-<link:internal>Установка MS SQL</link:internal>
-<link:internal>Зеркалирование</link:internal>
 <link:internal>MS SQL Clusters</link:internal>
 <link:internal>Пути к файлам по умолчанию</link:internal>
 <link:internal>Как узнать использовался ли индекс и каким запросом</link:internal>
@@ -35,17 +30,15 @@ Monitoring <link:internal>SQL</link:internal> Server
 <link:internal>Блокировки</link:internal>
 <link:internal>Перенос job-ов на другой сервер</link:internal>
 
-<bold>Database Permissions</bold>
 
-<link:internal>MS SQL Server Permission Conflicts</link:internal>
-<link:internal>Сменить собственника объекта</link:internal></note-content></text>
-  <last-change-date>2010-07-22T14:22:25.7168400+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T14:22:25.7168400+04:00</last-metadata-change-date>
+</note-content></text>
+  <last-change-date>2010-07-22T14:44:52.1622610+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T14:44:52.1622610+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>58</cursor-position>
+  <cursor-position>358</cursor-position>
   <width>525</width>
   <height>643</height>
-  <x>1074</x>
-  <y>372</y>
+  <x>820</x>
+  <y>158</y>
   <open-on-startup>False</open-on-startup>
 </note>

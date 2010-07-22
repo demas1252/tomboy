@@ -12,14 +12,16 @@
 <list><list-item dir="ltr">Останавливаем один из серверов
 </list-item><list-item dir="ltr">На втором база должна перейти в состояние Principal, Disconected
 </list-item><list-item dir="ltr">Запускаем первый и видим что база переходит в состояние Restoring
-</list-item><list-item dir="ltr">Переключаемся на второй и видим состояние Principal, Synchronized</list-item></list></note-content></text>
-  <last-change-date>2010-07-22T09:28:44.8220070+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T09:28:44.8220070+04:00</last-metadata-change-date>
+</list-item><list-item dir="ltr">Переключаемся на второй и видим состояние Principal, Synchronized</list-item></list>
+
+<link:internal>Зеркалирование</link:internal></note-content></text>
+  <last-change-date>2010-07-22T14:43:52.8407170+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T14:43:52.8407170+04:00</last-metadata-change-date>
   <create-date>2010-07-22T09:13:48.2925710+04:00</create-date>
   <cursor-position>555</cursor-position>
   <width>578</width>
   <height>480</height>
-  <x>994</x>
-  <y>421</y>
+  <x>163</x>
+  <y>272</y>
   <open-on-startup>False</open-on-startup>
 </note>
