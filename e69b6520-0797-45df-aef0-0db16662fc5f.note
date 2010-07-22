@@ -6,10 +6,10 @@
 
 В <link:internal>MS SQL</link:internal> Server нет load-balancing кластера, только failover cluster. Это совсем другая штука для совсем других целей.
 
-Если вы хотите увеличить количество серверов именно с целью увеличения производительности системы в целом, то кластер не поможет, нужно другие технологии использовать. Почитайте по ключевым словам Database Mirroring, Log Shipping, replication и т.д.
+Если вы хотите увеличить количество серверов именно с целью увеличения производительности системы в целом, то кластер не поможет, нужно другие технологии использовать. Почитайте по ключевым словам <link:internal>Database Mirroring</link:internal>, <link:internal>Log Shipping</link:internal>, replication и т.д.
 </note-content></text>
-  <last-change-date>2008-03-30T17:37:59.1203200+04:00</last-change-date>
-  <last-metadata-change-date>2008-03-30T17:37:59.1203200+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-22T09:14:14.0158110+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T09:14:14.0158110+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:37:56.5540710+04:00</create-date>
   <cursor-position>44</cursor-position>
   <width>450</width>

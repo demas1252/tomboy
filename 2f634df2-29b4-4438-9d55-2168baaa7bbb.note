@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Database Mirroring</title>
+  <text xml:space="preserve"><note-content version="0.1">Database Mirroring
+
+<list><list-item dir="ltr">На одном сервере делаем бекап <link:internal>базы данных</link:internal> и лога.
+</list-item><list-item dir="ltr">На втором сервере восстанваливаем базу и лог.  И то и другое с NORECOVERY.  База оказывается в состояни Restoring.
+</list-item><list-item dir="ltr">На первой базе данных  - Tasks - Mirror. Жмем Next, Mirror Server Instance - Connect, соединяемся со второй</list-item></list>
+
+<bold>Проверям Mirroring</bold>
+
+<list><list-item dir="ltr">Останавливаем один из серверов
+</list-item><list-item dir="ltr">На втором база должна перейти в состояние Principal, Disconected
+</list-item><list-item dir="ltr">Запускаем первый и видим что база переходит в состояние Restoring
+</list-item><list-item dir="ltr">Переключаемся на второй и видим состояние Principal, Synchronized</list-item></list></note-content></text>
+  <last-change-date>2010-07-22T09:28:44.8220070+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T09:28:44.8220070+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T09:13:48.2925710+04:00</create-date>
+  <cursor-position>555</cursor-position>
+  <width>578</width>
+  <height>480</height>
+  <x>994</x>
+  <y>421</y>
+  <open-on-startup>False</open-on-startup>
+</note>

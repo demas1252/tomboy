@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Log Shipping</title>
+  <text xml:space="preserve"><note-content version="0.1">Log Shipping
+
+В общем то, я пробовал настроить в рамках одного сервера. У меня не все вышло, но идеология я вроде понял:
+
+<list><list-item dir="ltr">Для обоих серверов проверяем Recovery Model = Full
+</list-item><list-item dir="ltr">На первой базе в настройках ставим галку Enable this as primary database for log shipping
+</list-item><list-item dir="ltr">Backup Settings - указываем сетевой путь, куда будут делаться бекапы + расписание (раз в 2 минуты)
+</list-item><list-item dir="ltr">В разделе Secondary <link:internal>Databases</link:internal> жмем Add, коннектимся к тому же серверу, но к другой базе данных
+</list-item><list-item dir="ltr">Initialize Secondary Database - Yes, generate a full backup of the primary and restore into the secondary
+</list-item><list-item dir="ltr">На закладке Copy пишем путь, куда их надо копировать + расписание
+</list-item><list-item dir="ltr">Закладка Restore Transaction Log - Standby mode + расписание
+</list-item><list-item dir="ltr">Убеждаемся, что целевая база данных в состоянии Standby/Read-Only
+</list-item><list-item dir="ltr">Проверяем, что запущен Агент
+</list-item><list-item dir="ltr"><link:internal>SQL</link:internal> Server Agent - Job Activity Monitor - View Job Activity
+</list-item><list-item dir="ltr">Смотрим, что все джобы запускаются и выполняются</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-07-22T09:13:12.7670910+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T09:13:12.7670910+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T08:19:37.1527750+04:00</create-date>
+  <cursor-position>676</cursor-position>
+  <width>697</width>
+  <height>482</height>
+  <x>871</x>
+  <y>425</y>
+  <open-on-startup>False</open-on-startup>
+</note>
