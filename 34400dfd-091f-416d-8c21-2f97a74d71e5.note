@@ -5,9 +5,9 @@
 
 
 Installing and Configuring <link:internal>MS SQL</link:internal>
-Manages <link:internal>Databases</link:internal> and Files
+<link:internal>Manages Databases and Files</link:internal>
 <link:internal>Disaster Recovery</link:internal>
-Managing Security
+<link:internal>Managing Security</link:internal>
 <link:internal>Transferring Data</link:internal> 
 Automating Administrtive Tasks
 Implementing Replication
@@ -39,13 +39,13 @@ Monitoring <link:internal>SQL</link:internal> Server
 
 <link:internal>MS SQL Server Permission Conflicts</link:internal>
 <link:internal>Сменить собственника объекта</link:internal></note-content></text>
-  <last-change-date>2010-07-22T09:23:19.8432440+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T09:23:19.8432440+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-22T14:22:25.7168400+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T14:22:25.7168400+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>103</cursor-position>
+  <cursor-position>58</cursor-position>
   <width>525</width>
   <height>643</height>
-  <x>1125</x>
-  <y>201</y>
+  <x>1074</x>
+  <y>372</y>
   <open-on-startup>False</open-on-startup>
 </note>

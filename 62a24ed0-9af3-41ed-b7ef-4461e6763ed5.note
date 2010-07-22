@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Managing Security</title>
+  <text xml:space="preserve"><note-content version="0.1">Managing Security
+
+Logins and Server-Scope Permissions
+Database Users and Database-Scope and <link:internal>Scheme</link:internal>-Scope Permissions
+<link:internal>Encrypting Data</link:internal>
+Implementing Audit</note-content></text>
+  <last-change-date>2010-07-22T12:14:30.7842820+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T12:14:30.7842820+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T12:12:48.0180020+04:00</create-date>
+  <cursor-position>152</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>742</x>
+  <y>432</y>
+  <open-on-startup>False</open-on-startup>
+</note>

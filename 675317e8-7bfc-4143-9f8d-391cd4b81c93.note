@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Encrypting Data</title>
+  <text xml:space="preserve"><note-content version="0.1">Encrypting Data
+
+<list><list-item dir="ltr">Позволяет зашитить файлы данных и резервные копии.
+</list-item><list-item dir="ltr">База все равно остается незащищенный от администратора и от тех, кто получил доступ к <link:internal>MS SQL</link:internal> Sever.</list-item></list>
+</note-content></text>
+  <last-change-date>2010-07-22T12:54:19.8023080+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T12:54:19.8023080+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T12:14:13.9292360+04:00</create-date>
+  <cursor-position>35</cursor-position>
+  <width>670</width>
+  <height>443</height>
+  <x>190</x>
+  <y>429</y>
+  <open-on-startup>False</open-on-startup>
+</note>
