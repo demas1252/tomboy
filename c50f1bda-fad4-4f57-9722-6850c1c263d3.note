@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Creating a Policy</title>
+  <text xml:space="preserve"><note-content version="0.1">Creating a Policy
+
+<list><list-item dir="ltr">Management - Facesets</list-item></list>
+
+	Находим нужный объект (Table) и создаем для него условие @Name like 'AW_%'
+
+<list><list-item dir="ltr">Management - Policies</list-item></list>
+
+        Связываем Faсeset с базой и моментом проверки</note-content></text>
+  <last-change-date>2010-07-22T14:38:08.7264160+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-22T14:38:08.7264160+04:00</last-metadata-change-date>
+  <create-date>2010-07-22T14:23:01.6984340+04:00</create-date>
+  <cursor-position>172</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1087</x>
+  <y>638</y>
+  <open-on-startup>False</open-on-startup>
+</note>
