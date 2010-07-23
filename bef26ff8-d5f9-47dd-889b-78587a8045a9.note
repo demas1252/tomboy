@@ -4,14 +4,15 @@
   <text xml:space="preserve"><note-content version="0.1">AxOther
 
 <link:internal>Сообщения Аксапты или что она пытается тебе сказать</link:internal>
-<link:internal>Axapta Continuous Integration</link:internal></note-content></text>
-  <last-change-date>2009-04-01T16:14:37.8735710+04:00</last-change-date>
-  <last-metadata-change-date>2009-04-01T16:14:37.8735710+04:00</last-metadata-change-date>
+<link:internal>Axapta Continuous Integration</link:internal>
+<link:internal>Исправить полосатость грида</link:internal></note-content></text>
+  <last-change-date>2010-07-23T11:13:46.0829500+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-23T11:13:46.0829500+04:00</last-metadata-change-date>
   <create-date>2008-03-26T17:35:24.5183500+03:00</create-date>
-  <cursor-position>61</cursor-position>
+  <cursor-position>118</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>302</x>
-  <y>605</y>
+  <x>331</x>
+  <y>565</y>
   <open-on-startup>False</open-on-startup>
 </note>
