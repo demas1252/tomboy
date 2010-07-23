@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Таблица и предстваление для ее заполнения</title>
+  <text xml:space="preserve"><note-content version="0.1">Таблица и предстваление для ее заполнения
+
+<list><list-item dir="ltr">проверяем config/database.yaml на предмет корректности <link:internal>подключения</link:internal> к базе
+</list-item><list-item dir="ltr">Генерим шаблон для модели <link:internal>ruby</link:internal> script/generate model product
+</list-item><list-item dir="ltr">Заполняем его примерно так:</list-item></list>
+
+<italic>	class CreateProducts &lt; ActiveRecord::Migration
+	  def self.up
+	    create_table :products do |t|
+	      t.column :title, :string
+	      t.column :description, :text
+	      t.column :image_url, :string
+	    end
+	  end
+
+	  def self.down
+	    drop_table :products
+	  end
+	end
+</italic>
+<list><list-item dir="ltr">Генерим:  <italic>rake <link:internal>db</link:internal></italic><italic>:migrate</italic>
+</list-item><list-item dir="ltr">Дальше надо создать представление.  В книжке сказано, что это делается так:</list-item></list>
+
+	<italic><link:internal>ruby</link:internal></italic><italic> script/generate controller admin
+
+      </italic>и вписываем туда <italic>scaffold :product</italic>
+
+      Но это не работает и google говорит, что этот способ устарел и scaffold выкинули.  Есть какой-то правильный способ (пока не знаю какой) или сделать через заглушку:
+
+	<italic><link:internal>ruby</link:internal></italic><italic> script/generate scaffold product title:string description:text image_url:string</italic>
+
+     Обращаться по <italic>product</italic>.
+
+</note-content></text>
+  <last-change-date>2010-07-23T06:52:17.7689790+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-23T06:52:17.7689790+04:00</last-metadata-change-date>
+  <create-date>2010-07-23T06:45:14.9626260+04:00</create-date>
+  <cursor-position>954</cursor-position>
+  <width>667</width>
+  <height>576</height>
+  <x>840</x>
+  <y>297</y>
+  <open-on-startup>False</open-on-startup>
+</note>
