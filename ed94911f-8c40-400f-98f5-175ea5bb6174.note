@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Исправить полосатость грида</title>
+  <text xml:space="preserve"><note-content version="0.1">Исправить полосатость грида
+
+Свойства Экрана -&gt; Оформление -&gt; Дополнительно -&gt; Граница неактивного окна
+
+Выбираем цвет белый, и вуаля Грид без полосок.</note-content></text>
+  <last-change-date>2010-07-23T11:15:01.9108890+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-23T11:15:01.9108890+04:00</last-metadata-change-date>
+  <create-date>2010-07-23T11:12:38.0543120+04:00</create-date>
+  <cursor-position>29</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>694</x>
+  <y>557</y>
+  <open-on-startup>False</open-on-startup>
+</note>
