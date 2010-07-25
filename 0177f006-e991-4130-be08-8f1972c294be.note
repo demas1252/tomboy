@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Индексирование XML</title>
+  <text xml:space="preserve"><note-content version="0.1">Индексирование XML
+
+<italic>CREATE PRIMARY XML INDEX
+CREATE XML INDEX</italic>
+
+Первый индекс всегда должен быть PRIMARY
+
+<italic>create table xml_table (
+	pk int identity(1,1) not null,
+	customername varchar(255) null,
+	customerphone varchar(255) null,
+	customeraddress xml null, 
+
+	constraint pk_xml_table primary key clustered (
+		pk asc
+	)
+)	
+
+insert into xml_table(customername, customerphone, customeraddress) 
+	   values ('monica', '666-8746', 
+			   '&lt;customer&gt;&lt;address1&gt;123 main street&lt;/address1&gt;&lt;city&gt;Newark&lt;/city&gt;&lt;state&gt;DE&lt;/state&gt;&lt;<link:internal>zip</link:internal></italic><italic>&gt;14785&lt;/<link:internal>zip</link:internal></italic><italic>&gt;&lt;/customer&gt;')
+			   
+insert into xml_table(customername, customerphone, customeraddress) 
+	   values ('jennifer', '555-2497', 
+			   '&lt;customer&gt;&lt;address1&gt;45 main street&lt;/address1&gt;&lt;city&gt;Clifton&lt;/city&gt;&lt;state&gt;AH&lt;/state&gt;&lt;<link:internal>zip</link:internal></italic><italic>&gt;18783&lt;/<link:internal>zip</link:internal></italic><italic>&gt;&lt;/customer&gt;')
+			   
+CREATE PRIMARY XML INDEX pk_xml_data_customeraddress ON XML_Table(customeraddress)		</italic>
+
+<italic>CREATE XML INDEX sd_xml_data_customeraddress ON XML_Table(customeraddress)
+	USING XML INDEX pk_xml_data_customeraddress FOR VALUE</italic></note-content></text>
+  <last-change-date>2010-07-25T20:49:24.3026730+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T20:49:24.3026730+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T19:27:37.1450070+04:00</create-date>
+  <cursor-position>318</cursor-position>
+  <width>827</width>
+  <height>715</height>
+  <x>649</x>
+  <y>227</y>
+  <open-on-startup>False</open-on-startup>
+</note>

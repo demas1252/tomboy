@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание страницы, наполняемой вручную</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание страницы, наполняемой вручную
+
+<list><list-item dir="ltr">генерим контроллер</list-item></list>
+
+	<italic><link:internal>ruby</link:internal></italic><italic> script/generate controller store index</italic>
+
+<list><list-item dir="ltr">добавляем в контроллер переменную</list-item></list>
+
+<italic>	class StoreController &lt; ApplicationController
+	  def index
+	    @products = Product.<link:internal>find</link:internal></italic><italic>_products_for_sale
+	  end
+	end
+</italic>
+<list><list-item dir="ltr">В модель:</list-item></list>
+
+<italic>	class Product &lt; ActiveRecord::Base
+	  def self.<link:internal>find</link:internal></italic><italic>_products_for_sale
+	    <link:internal>find</link:internal></italic><italic>(:all, :order =&gt; "title")
+	  end
+</italic>
+<list><list-item dir="ltr">Представление</list-item></list>
+
+<italic>	&lt;h1&gt;Your Pragmatic Catalog&lt;/h1&gt;
+	&lt;% for product in @products -%&gt;
+	  &lt;div class="entry"&gt;
+	    &lt;img src="&lt;%= product.image_url %&gt;" /&gt;
+	    &lt;h3&gt;&lt;%= h(product.title) %&gt;&lt;/h3&gt;
+	    &lt;%= product.description %&gt;
+	    &lt;span class="price"&gt;&lt;%= product.price %&gt;&lt;/span&gt;
+	  &lt;/div&gt;
+	&lt;% end %&gt;
+</italic></note-content></text>
+  <last-change-date>2010-07-25T19:05:39.1120890+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T19:05:39.1120890+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T19:02:25.7148650+04:00</create-date>
+  <cursor-position>264</cursor-position>
+  <width>693</width>
+  <height>726</height>
+  <x>0</x>
+  <y>304</y>
+  <open-on-startup>False</open-on-startup>
+</note>

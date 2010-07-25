@@ -3,14 +3,27 @@
   <title>Perfomance Tuning</title>
   <text xml:space="preserve"><note-content version="0.1">Perfomance Tuning
 
-<link:internal>Resource Governor</link:internal></note-content></text>
-  <last-change-date>2010-07-26T13:36:53.7918770+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T13:36:53.7918770+04:00</last-metadata-change-date>
+<link:internal>Resource Governor</link:internal>
+
+<bold>Остальное</bold>
+
+<link:internal>Logical Query Processing Phases</link:internal>
+<link:internal>Query Optimization</link:internal>
+<link:internal>Cluster Tables vs Heap Tables</link:internal>
+<link:internal>Когда полезен сбор статистики</link:internal>
+<link:internal>MS SQL - Ограничение на занятие ресурсов</link:internal>
+<link:internal>TempDB</link:internal>
+<link:internal>Сколько времени запрос тратит на выполнение</link:internal>
+<link:internal>Запертить использовать индексы в запросе</link:internal>
+<link:internal>Как определить неактивные индексы</link:internal>
+<link:internal>CPU time vs Elapsed Time</link:internal></note-content></text>
+  <last-change-date>2010-07-25T19:18:19.9376480+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T19:18:19.9376480+04:00</last-metadata-change-date>
   <create-date>2010-07-26T13:30:58.4152150+04:00</create-date>
   <cursor-position>36</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>601</x>
-  <y>376</y>
+  <x>873</x>
+  <y>334</y>
   <open-on-startup>False</open-on-startup>
 </note>

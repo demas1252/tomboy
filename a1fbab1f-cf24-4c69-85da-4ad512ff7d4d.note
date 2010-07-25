@@ -16,7 +16,7 @@
 <bold>Administration</bold>
 
 <link:internal>MS SQL Administration</link:internal>
-<link:internal>MS SQL Perfomance</link:internal>
+<link:broken>MS SQL Perfomance</link:broken>
 <link:internal>MS SQL Collation</link:internal>
 
 <bold><link:internal>Вопросы</link:internal></bold><bold> <link:internal>SQL</link:internal></bold>
@@ -36,10 +36,10 @@ Notification Services
 <link:internal>Usefull scripts</link:internal>
 <link:internal>MS SQL Profiler</link:internal>
 <link:internal>Sqlcmd - isql - osql</link:internal></note-content></text>
-  <last-change-date>2010-06-08T11:58:47.1323110+04:00</last-change-date>
-  <last-metadata-change-date>2010-06-08T11:58:47.1323110+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-25T19:18:34.0306040+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T19:18:34.0306040+04:00</last-metadata-change-date>
   <create-date>2008-03-26T17:35:55.2242980+03:00</create-date>
-  <cursor-position>155</cursor-position>
+  <cursor-position>162</cursor-position>
   <width>525</width>
   <height>697</height>
   <x>827</x>
