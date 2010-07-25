@@ -42,5 +42,5 @@ Monitoring <link:internal>SQL</link:internal> Server
   <height>643</height>
   <x>927</x>
   <y>261</y>
-  <open-on-startup>False</open-on-startup>
+  <open-on-startup>True</open-on-startup>
 </note>
