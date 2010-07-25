@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Implementing Data Compression</title>
+  <text xml:space="preserve"><note-content version="0.1">Implementing Data Compression
+
+Появилось в 2008-м.  Бывает:
+
+<list><list-item dir="ltr">row compression
+</list-item><list-item dir="ltr">page compression</list-item></list>
+
+Влияет на производительность.  Сжимаются таблицы и индексы. 
+Включение компрессии на уже существующих таблицах и индексах может занять время.
+
+<bold>Row compression</bold>
+
+Сжатие достигается за счет хранения данных как данных с переменной длинной.  То есть данные занимают ровно столько места, сколько зангимают.  Соответственное, если в реальлности данные занимают максимально возможный объем - сжатия не будет.  Будет даже небольшое увеличение объема за счет служебной информации.  
+
+Такой тип данных мало влияет на маленькие типы данных - tinyint, smalldatetime и т.д. Он также не влияет на данные, которые и так хранятся как данные переменной длинны - varchar, nvarchar, varbinary.  Специальные типы данных тоже не сжимаются - text, image, xml. 
+
+Когда мы включаем page compression - row compression включается автоматом
+
+<bold>Предварительная оценка степени сжатия</bold>
+
+<italic>sp_estimate_data_compression_savings</italic></note-content></text>
+  <last-change-date>2010-07-26T03:02:44.8637060+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T03:02:44.8637060+04:00</last-metadata-change-date>
+  <create-date>2010-07-26T02:51:32.2715680+04:00</create-date>
+  <cursor-position>952</cursor-position>
+  <width>631</width>
+  <height>634</height>
+  <x>85</x>
+  <y>250</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Using Sparse Columns</title>
+  <text xml:space="preserve"><note-content version="0.1">Using Sparse Columns
+
+Позволяют уменьшить место, занимаемое NULL значениями. Но увеличивают время на извлечение значений, которые не NULL.
+
+Рекомендуется использовать SPARCE там, где эта техника позволит съэкономить мимимум 20-40% объема.
+
+<italic>CREATE TABLE Planets (
+	PlanetID int IDENTITY PRIMARY KEY,
+	PlanetName nvarchar(50) SPARCE NULL,
+	Radius int SPARCE NULL
+	PlanetDescription XML COLUMN_SET FOR ALL_SPARCE_COLUMNS)</italic>
+
+Часть используетс с filtered indexes.</note-content></text>
+  <last-change-date>2010-07-26T03:09:50.1618150+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T03:09:50.1618150+04:00</last-metadata-change-date>
+  <create-date>2010-07-26T03:03:48.1338610+04:00</create-date>
+  <cursor-position>418</cursor-position>
+  <width>552</width>
+  <height>568</height>
+  <x>41</x>
+  <y>102</y>
+  <open-on-startup>False</open-on-startup>
+</note>

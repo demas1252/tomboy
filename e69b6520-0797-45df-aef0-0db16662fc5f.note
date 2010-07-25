@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>MS SQL Clusters</title>
-  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Clusters
+  <text xml:space="preserve"><note-content version="0.1">MS SQL Clusters
 
 
 В <link:internal>MS SQL</link:internal> Server нет load-balancing кластера, только failover cluster. Это совсем другая штука для совсем других целей.
 
 Если вы хотите увеличить количество серверов именно с целью увеличения производительности системы в целом, то кластер не поможет, нужно другие технологии использовать. Почитайте по ключевым словам <link:internal>Database Mirroring</link:internal>, <link:internal>Log Shipping</link:internal>, replication и т.д.
 </note-content></text>
-  <last-change-date>2010-07-22T09:14:14.0158110+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T09:14:14.0158110+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-26T02:55:32.8744260+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T02:55:32.8744260+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:37:56.5540710+04:00</create-date>
   <cursor-position>44</cursor-position>
   <width>450</width>

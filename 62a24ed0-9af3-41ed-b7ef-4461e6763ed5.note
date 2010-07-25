@@ -9,6 +9,7 @@ Database Users and Database-Scope and <link:internal>Scheme</link:internal>-Scop
 <link:internal>Implementing Audit</link:internal>
 <link:internal>Change Data Capture (CDC)</link:internal>
 DDL Triggers
+<link:internal>Domain Service Accounts vs Local Service Accounts</link:internal>
 
 <bold><link:internal>Прочее</link:internal></bold>
 
@@ -17,10 +18,10 @@ DDL Triggers
 <link:internal>Сменить пароль пользователю</link:internal>
 <link:internal>MS SQL Server Permission Conflicts</link:internal>
 <link:internal>Сменить собственника объекта</link:internal></note-content></text>
-  <last-change-date>2010-07-25T18:26:25.9590690+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-25T18:26:25.9590690+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-26T02:44:10.9101010+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T02:44:10.9101010+04:00</last-metadata-change-date>
   <create-date>2010-07-22T12:12:48.0180020+04:00</create-date>
-  <cursor-position>117</cursor-position>
+  <cursor-position>241</cursor-position>
   <width>537</width>
   <height>363</height>
   <x>667</x>

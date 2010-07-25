@@ -3,11 +3,13 @@
   <title>Manages Databases and Files</title>
   <text xml:space="preserve"><note-content version="0.1">Manages Databases and Files
 
-<link:internal>Creating a Policy</link:internal></note-content></text>
-  <last-change-date>2010-07-22T14:23:23.7320090+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T14:23:23.7320090+04:00</last-metadata-change-date>
+<link:internal>Creating a Policy</link:internal>
+<link:internal>Implementing Data Compression</link:internal>
+<link:internal>Using Sparse Columns</link:internal></note-content></text>
+  <last-change-date>2010-07-26T03:04:00.0620130+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T03:04:00.0620130+04:00</last-metadata-change-date>
   <create-date>2010-07-22T14:21:46.9577620+04:00</create-date>
-  <cursor-position>29</cursor-position>
+  <cursor-position>76</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>868</x>

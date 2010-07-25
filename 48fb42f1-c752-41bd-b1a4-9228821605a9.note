@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Заполнение таблиц демоданными</title>
+  <text xml:space="preserve"><note-content version="0.1">Заполнение таблиц демоданными
+
+<italic><link:internal>ruby</link:internal></italic><italic> script/generate migration add_<link:internal>test</link:internal></italic><italic>_data</italic>
+
+<italic><link:internal>db</link:internal></italic><italic>/migrate/...add_<link:internal>test</link:internal></italic><italic>_data</italic>:
+
+<italic>class AddTestData &lt; ActiveRecord::Migration
+  def self.up
+    Product.delete_all
+    Product.create(:title =&gt; 'Pragmatic Version Control',
+                   :description =&gt; 'Some',
+                   :image_url =&gt; 'images/some.jpg',
+                   :price =&gt; 28.50)
+  end
+
+  def self.down
+    Product.delete_all
+  end
+end
+</italic>
+<italic>rake <link:internal>db</link:internal></italic><italic>:migrate</italic>
+
+</note-content></text>
+  <last-change-date>2010-07-25T21:57:11.6965960+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T21:57:11.6965960+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T21:56:01.4779340+04:00</create-date>
+  <cursor-position>434</cursor-position>
+  <width>805</width>
+  <height>453</height>
+  <x>0</x>
+  <y>571</y>
+  <open-on-startup>False</open-on-startup>
+</note>

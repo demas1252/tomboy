@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Изменить оформление табличного представления</title>
+  <text xml:space="preserve"><note-content version="0.1">Изменить оформление табличного представления
+
+Во первых: app/views/products/index.<link:internal>html</link:internal>.erb - можно здесь править.
+А весь этот файл вставляется в app/views/layouts/products - тут можно css прописать свой.</note-content></text>
+  <last-change-date>2010-07-25T22:24:02.8539090+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T22:24:02.8539090+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T22:21:44.4051880+04:00</create-date>
+  <cursor-position>79</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1151</x>
+  <y>664</y>
+  <open-on-startup>False</open-on-startup>
+</note>

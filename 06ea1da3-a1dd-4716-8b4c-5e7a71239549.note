@@ -9,14 +9,16 @@
 <link:internal>Связывание страниц</link:internal>
 <link:internal>Таблица и предстваление для ее заполнения</link:internal>
 <link:internal>Добавлние поля в уже существующую таблицу и представление</link:internal>
-<link:internal>Добавление проверок в сохраняемые записи</link:internal></note-content></text>
-  <last-change-date>2010-07-25T14:50:03.4034590+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-25T14:50:03.4034590+04:00</last-metadata-change-date>
+<link:internal>Добавление проверок в сохраняемые записи</link:internal>
+<link:internal>Заполнение таблиц демоданными</link:internal>
+<link:internal>Изменить оформление табличного представления</link:internal></note-content></text>
+  <last-change-date>2010-07-25T22:21:56.1312940+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T22:21:56.1312940+04:00</last-metadata-change-date>
   <create-date>2010-07-21T16:26:28.4920620+04:00</create-date>
-  <cursor-position>289</cursor-position>
+  <cursor-position>364</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>922</x>
-  <y>100</y>
+  <x>1084</x>
+  <y>42</y>
   <open-on-startup>False</open-on-startup>
 </note>
