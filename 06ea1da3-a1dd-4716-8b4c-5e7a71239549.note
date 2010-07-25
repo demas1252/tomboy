@@ -7,14 +7,15 @@
 <link:internal>Динамическое формирование view в rails</link:internal>
 <link:internal>Передача данных из controller в view</link:internal>
 <link:internal>Связывание страниц</link:internal>
-<link:internal>Таблица и предстваление для ее заполнения</link:internal></note-content></text>
-  <last-change-date>2010-07-23T06:45:47.6544880+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-23T06:45:47.6544880+04:00</last-metadata-change-date>
+<link:internal>Таблица и предстваление для ее заполнения</link:internal>
+<link:internal>Добавлние поля в уже существующую таблицу и представление</link:internal></note-content></text>
+  <last-change-date>2010-07-25T14:32:27.2676260+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T14:32:27.2676260+04:00</last-metadata-change-date>
   <create-date>2010-07-21T16:26:28.4920620+04:00</create-date>
-  <cursor-position>177</cursor-position>
+  <cursor-position>92</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>1105</x>
-  <y>99</y>
+  <x>922</x>
+  <y>100</y>
   <open-on-startup>False</open-on-startup>
 </note>

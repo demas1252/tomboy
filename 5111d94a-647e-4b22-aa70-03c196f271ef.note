@@ -17,14 +17,19 @@
 <link:internal>Елизавета Петровна</link:internal>
 <link:internal>Петр III</link:internal>
 <link:internal>Екатерина II</link:internal>
-<link:internal>Павел I</link:internal></note-content></text>
-  <last-change-date>2010-07-24T21:40:09.8791330+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-24T21:40:09.8791330+04:00</last-metadata-change-date>
+<link:internal>Павел I</link:internal>
+<link:internal>Александр I</link:internal>
+Николай I
+Александр II
+Александр III
+Николай II</note-content></text>
+  <last-change-date>2010-07-25T10:12:26.9434270+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T10:12:26.9434270+04:00</last-metadata-change-date>
   <create-date>2010-06-28T11:12:38.3030180+04:00</create-date>
-  <cursor-position>136</cursor-position>
+  <cursor-position>229</cursor-position>
   <width>486</width>
   <height>517</height>
-  <x>1044</x>
-  <y>150</y>
+  <x>1082</x>
+  <y>39</y>
   <open-on-startup>False</open-on-startup>
 </note>
