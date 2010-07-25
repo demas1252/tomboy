@@ -6,7 +6,9 @@
 Logins and Server-Scope Permissions
 Database Users and Database-Scope and <link:internal>Scheme</link:internal>-Scope Permissions
 <link:internal>Encrypting Data</link:internal>
-Implementing Audit
+<link:internal>Implementing Audit</link:internal>
+<link:internal>Change Data Capture (CDC)</link:internal>
+DDL Triggers
 
 <bold><link:internal>Прочее</link:internal></bold>
 
@@ -15,13 +17,13 @@ Implementing Audit
 <link:internal>Сменить пароль пользователю</link:internal>
 <link:internal>MS SQL Server Permission Conflicts</link:internal>
 <link:internal>Сменить собственника объекта</link:internal></note-content></text>
-  <last-change-date>2010-07-22T14:43:31.3944020+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-22T14:43:31.3944020+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-25T18:26:25.9590690+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T18:26:25.9590690+04:00</last-metadata-change-date>
   <create-date>2010-07-22T12:12:48.0180020+04:00</create-date>
-  <cursor-position>124</cursor-position>
+  <cursor-position>117</cursor-position>
   <width>537</width>
   <height>363</height>
-  <x>122</x>
-  <y>280</y>
+  <x>667</x>
+  <y>597</y>
   <open-on-startup>False</open-on-startup>
 </note>

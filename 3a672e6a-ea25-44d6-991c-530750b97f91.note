@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Instances vs Default Instance</title>
+  <text xml:space="preserve"><note-content version="0.1">Instances vs Default Instance
+
+Installation == Instance
+
+<list><list-item dir="ltr">До 7-ки (включая ее) на сервер можно было поставить только один экземпляр сервера. 
+</list-item><list-item dir="ltr"><bold>Default инстанс</bold> - это то, что псоле установки будет иметь имя машины. Но так как имя машины одно, то и дефолтный инстанс только один.
+</list-item><list-item dir="ltr">Остальное - это <bold>именованные инстансы</bold>, на которые можно ссылаться как &lt;computername&gt;\&lt;instancename&gt;.
+</list-item><list-item dir="ltr">Каждый инстанс имеет свой набор настроек, файлов и так далее. На каждый инстанс можно ставить свой набор SP.
+</list-item><list-item dir="ltr">Integration Services ставятся только один раз на машину.
+</list-item><list-item dir="ltr">Default раюотает на порту 1433 (по умолчанию).  Именованные используют динамическое распределение портов. Browser Service слушает 1434 по UPD и выдает порт, когда кто-то пытается соединиться.</list-item></list>
+
+<bold>Ограничения</bold>
+
+<list><list-item dir="ltr">Так как экзепляры ничего не знают друг о друге, они не могут динамически разделять (share) ресурсы.
+</list-item><list-item dir="ltr"></list-item></list></note-content></text>
+  <last-change-date>2010-07-25T18:03:48.5238850+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T18:03:48.5238850+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T17:49:25.5856910+04:00</create-date>
+  <cursor-position>851</cursor-position>
+  <width>709</width>
+  <height>478</height>
+  <x>842</x>
+  <y>519</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Добавление проверок в сохраняемые записи</title>
+  <text xml:space="preserve"><note-content version="0.1">Добавление проверок в сохраняемые записи
+
+<italic>app/models/product.rb</italic>
+
+<italic>class Product &lt; ActiveRecord::Base
+  validates_presence_of :title, :description
+  validates_numericality_of :price
+  validates_uniqueness_of :title
+
+  protected
+  def validate
+    errors.add(:price, "should be at least 0.01") <link:internal>if</link:internal></italic><italic> price.nil? || price &lt; 0.01
+  end
+end
+</italic></note-content></text>
+  <last-change-date>2010-07-25T14:51:56.5277720+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T14:51:56.5277720+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T14:49:53.3112870+04:00</create-date>
+  <cursor-position>65</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1169</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

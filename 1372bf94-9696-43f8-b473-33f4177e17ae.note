@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Implementing Audit</title>
+  <text xml:space="preserve"><note-content version="0.1">Implementing Audit
+
+Протоколирует деятельность на сервере в log (file, <link:internal>windows</link:internal> application log или <link:internal>windows</link:internal> security log).
+
+<italic>CREATE SERVER AUDIT my_audit TO FILE ( FILEPATH='c:\audit\' );
+
+ALTER SERVER AUDIT my_audit WITH (STATE=ON);
+
+CREATE SERVER AUDIT SPECIFICATION MyFailedLoginSpec
+FOR SERVER AUDIT my_audit ADD(FAILED_LOGIN_GROUP);
+
+CREATE DATABASE AUDIT SPECIFICATION STableaSpec
+FOR SERVER AUDIT my_audit 
+ADD (SELECT, DELETE ON dbo.STable By dbo)
+WITH (STATE = ON)</italic>
+
+</note-content></text>
+  <last-change-date>2010-07-25T18:24:55.0157910+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-25T18:24:55.0157910+04:00</last-metadata-change-date>
+  <create-date>2010-07-25T18:08:47.4742170+04:00</create-date>
+  <cursor-position>471</cursor-position>
+  <width>617</width>
+  <height>572</height>
+  <x>760</x>
+  <y>328</y>
+  <open-on-startup>False</open-on-startup>
+</note>
