@@ -3,14 +3,84 @@
   <title>Resource Governor</title>
   <text xml:space="preserve"><note-content version="0.1">Resource Governor
 
+<link:url>http://www.rsdn.ru/article/<link:internal>db</link:internal></link:url><link:url>/ResourceGovernor.xml</link:url>
+
+<list><list-item dir="ltr">Создаем пулы:</list-item></list>
+
+<italic>create resource pool Pool1
+with (
+  min_cpu_percent = 30
+  , max_cpu_percent = 100
+)
+
+create resource pool Pool2
+with (
+  min_cpu_percent = 50
+  , max_cpu_percent = 70
+  
+)
+
+create resource pool Pool3
+with (
+  min_cpu_percent = 5
+  , max_cpu_percent = 100
+  
+)</italic>
+
+<list><list-item><list><list-item dir="ltr">MIN - в сумме должно быть не больше 100
+</list-item><list-item dir="ltr">MAX - каждый должен быть не больше 100
+</list-item><list-item dir="ltr">MIN - это то, что сервер гарантирует, MAX - если этому не помешает MIN других пулов</list-item></list></list-item></list>
+
+<list><list-item dir="ltr">Создаем группы нагрузки:</list-item></list>
+
+	<italic>create workload group Group1
+	using Pool1
+
+	create workload group Group2
+	using Pool2
+
+	create workload group Group3
+	using Pool3
+</italic>
+	Каждая группу привязывается к пулу
+
+<list><list-item dir="ltr">Пишем функцию, которая  будет определять к какой группе (а значит и пулу) относится та или иная сессия:</list-item></list>
+
+<italic>-- Классификатор может быть создан только в БД master.
+create function dbo.rg_class_simple() returns sysname
+with schemabinding -- обязательное требование к классификатору
+as begin
+    declare
+        @grp_name as sysname
+    
+    <link:internal>if</link:internal></italic><italic> (suser_name() = 'user1')
+        -- Нагрузка всех сессий user1 будет направлена в Group1
+        set @grp_name = 'Group1'
+
+    else <link:internal>if</link:internal></italic><italic> (suser_name() = 'user2')
+        -- Нагрузка всех сессий user2 будет направлена в Group2
+        set @grp_name = 'Group2'
+
+    else <link:internal>if</link:internal></italic><italic> (suser_name() = 'user3')
+        -- Нагрузка всех сессий user3 будет направлена в Group3
+        set @grp_name = 'Group3'
+        
+    -- Остальные сессии будут работать в контексте Default
+    
+    return @grp_name
+end</italic>
+
+<list><list-item dir="ltr">Активизируем настройки</list-item></list>
+
+Более подробно лучше смотреть все-таки статью
 </note-content></text>
-  <last-change-date>2010-07-26T13:37:17.9053200+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T13:37:17.9053200+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-26T15:43:30.3658370+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T15:43:30.3658370+04:00</last-metadata-change-date>
   <create-date>2010-07-26T13:36:43.1995910+04:00</create-date>
-  <cursor-position>52</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>708</x>
-  <y>509</y>
+  <cursor-position>1549</cursor-position>
+  <width>992</width>
+  <height>501</height>
+  <x>392</x>
+  <y>0</y>
   <open-on-startup>False</open-on-startup>
 </note>
