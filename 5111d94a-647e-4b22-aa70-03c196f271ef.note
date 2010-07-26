@@ -21,15 +21,15 @@
 <link:internal>Александр I</link:internal>
 <link:internal>Николай I</link:internal>
 <link:internal>Александр II</link:internal>
-Александр III
-Николай II</note-content></text>
-  <last-change-date>2010-07-26T09:55:11.8291730+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T09:55:11.8291730+04:00</last-metadata-change-date>
+<link:internal>Александр III</link:internal>
+<link:internal>Николай II</link:internal></note-content></text>
+  <last-change-date>2010-07-26T12:53:05.4957800+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T12:53:05.4957800+04:00</last-metadata-change-date>
   <create-date>2010-06-28T11:12:38.3030180+04:00</create-date>
-  <cursor-position>87</cursor-position>
+  <cursor-position>68</cursor-position>
   <width>486</width>
   <height>517</height>
-  <x>1082</x>
-  <y>39</y>
+  <x>973</x>
+  <y>65</y>
   <open-on-startup>False</open-on-startup>
 </note>

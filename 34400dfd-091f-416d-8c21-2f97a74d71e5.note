@@ -11,6 +11,7 @@
 <link:internal>Transferring Data</link:internal> 
 <link:internal>Automating Administrtive Tasks</link:internal>
 Implementing Replication
+<link:internal>Perfomance Tuning</link:internal>
 <link:internal>Mantaining High Ablility</link:internal>
 Monitoring <link:internal>SQL</link:internal> Server
 
@@ -32,10 +33,10 @@ Monitoring <link:internal>SQL</link:internal> Server
 
 
 </note-content></text>
-  <last-change-date>2010-07-26T09:03:56.4014500+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T09:03:56.4014500+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-26T13:31:10.9562090+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T13:31:10.9562090+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>166</cursor-position>
+  <cursor-position>158</cursor-position>
   <width>525</width>
   <height>643</height>
   <x>982</x>

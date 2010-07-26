@@ -3,6 +3,8 @@
   <title>Using The Data Collector</title>
   <text xml:space="preserve"><note-content version="0.1">Using The Data Collector
 
+<link:url>http://msdn.microsoft.com/en-us/library/bb677248.aspx</link:url>
+
 <bold>Базовая настройка</bold>
 
 <list><list-item dir="ltr">Management - Data Collection - Configure Management Data Warehouse
@@ -17,11 +19,19 @@
 <list><list-item dir="ltr">Data Collection - System Data Collection Set - Some - Collect and Upload Now
 </list-item><list-item dir="ltr">Data Collection - Reports - Management Data Warehouse </list-item></list>
 
-<bold>Тонкая настройка</bold></note-content></text>
-  <last-change-date>2010-07-26T09:54:16.0143320+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T09:54:16.0143320+04:00</last-metadata-change-date>
+<bold>Тонкая настройка</bold>
+
+<link:url>http://www.db-staff.com/index.php/microsoft-sql-server/81-performance-data-collection</link:url>
+
+<italic>sp_syscollector_create_collection_set </italic>
+
+<bold>collection mode</bold>
+
+The manner in which the data is collected and stored. Collection mode can be cached or non-cached. Cached mode supports continuous collection, whereas non-cached mode is intended for on-demand collection or a collection snapshot.</note-content></text>
+  <last-change-date>2010-07-26T13:29:20.7067620+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T13:29:20.7067620+04:00</last-metadata-change-date>
   <create-date>2010-07-26T09:11:19.7198050+04:00</create-date>
-  <cursor-position>221</cursor-position>
+  <cursor-position>26</cursor-position>
   <width>535</width>
   <height>411</height>
   <x>1015</x>
