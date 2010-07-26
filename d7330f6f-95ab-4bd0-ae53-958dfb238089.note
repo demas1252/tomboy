@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Policy-Based Management</title>
+  <text xml:space="preserve"><note-content version="0.1">Policy-Based Management
+
+Позволяет просматривать и выполнять настройки сразу на нескольких серверах. Появилось в 2008-м. 
+
+<italic>Management - Policy Management</italic>
+
+<link:internal>Creating a Policy</link:internal></note-content></text>
+  <last-change-date>2010-07-26T09:08:01.4245810+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T09:08:01.4245810+04:00</last-metadata-change-date>
+  <create-date>2010-07-26T09:04:16.5740860+04:00</create-date>
+  <cursor-position>155</cursor-position>
+  <width>581</width>
+  <height>406</height>
+  <x>72</x>
+  <y>536</y>
+  <open-on-startup>False</open-on-startup>
+</note>

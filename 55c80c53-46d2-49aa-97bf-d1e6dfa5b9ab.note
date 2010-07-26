@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Using The Data Collector</title>
+  <text xml:space="preserve"><note-content version="0.1">Using The Data Collector
+
+<bold>Базовая настройка</bold>
+
+<list><list-item dir="ltr">Management - Data Collection - Configure Management Data Warehouse
+</list-item><list-item dir="ltr">Create or upgrade a management data warehouse
+</list-item><list-item dir="ltr">Указываем базу данных, где будет храниться статистика</list-item></list>
+
+<list><list-item dir="ltr">Management - Data Collection - Configure Management Data Warehouse
+</list-item><list-item dir="ltr">Set up data collection
+</list-item><list-item dir="ltr">Указываем базу данных, ту же, что и на предыдущем шаге
+</list-item><list-item dir="ltr">И указываем временную директорию</list-item></list>
+
+<list><list-item dir="ltr">Data Collection - System Data Collection Set - Some - Collect and Upload Now
+</list-item><list-item dir="ltr">Data Collection - Reports - Management Data Warehouse </list-item></list>
+
+<bold>Тонкая настройка</bold></note-content></text>
+  <last-change-date>2010-07-26T09:54:16.0143320+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T09:54:16.0143320+04:00</last-metadata-change-date>
+  <create-date>2010-07-26T09:11:19.7198050+04:00</create-date>
+  <cursor-position>221</cursor-position>
+  <width>535</width>
+  <height>411</height>
+  <x>1015</x>
+  <y>558</y>
+  <open-on-startup>False</open-on-startup>
+</note>

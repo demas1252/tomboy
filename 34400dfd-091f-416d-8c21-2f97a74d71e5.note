@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>MS SQL Administration</title>
-  <text xml:space="preserve"><note-content version="0.1">MS SQL Administration
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>MS SQL</link:internal> Administration
 
 
 <link:internal>Installing and Configuring MS SQL</link:internal>
@@ -9,7 +9,7 @@
 <link:internal>Disaster Recovery</link:internal>
 <link:internal>Managing Security</link:internal>
 <link:internal>Transferring Data</link:internal> 
-Automating Administrtive Tasks
+<link:internal>Automating Administrtive Tasks</link:internal>
 Implementing Replication
 <link:internal>Mantaining High Ablility</link:internal>
 Monitoring <link:internal>SQL</link:internal> Server
@@ -32,13 +32,13 @@ Monitoring <link:internal>SQL</link:internal> Server
 
 
 </note-content></text>
-  <last-change-date>2010-07-23T21:33:11.1088550+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-23T21:33:11.1088550+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-26T09:03:56.4014500+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T09:03:56.4014500+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>380</cursor-position>
+  <cursor-position>166</cursor-position>
   <width>525</width>
   <height>643</height>
-  <x>730</x>
-  <y>324</y>
+  <x>982</x>
+  <y>46</y>
   <open-on-startup>False</open-on-startup>
 </note>
