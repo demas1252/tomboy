@@ -17,8 +17,11 @@ Monitoring <link:internal>SQL</link:internal> Server
 <link:internal>Sql Server XML Support</link:internal>
 
 
-
-
+<link:internal>Таблицы в MS SQL</link:internal>
+<link:internal>Индексы в MS SQL</link:internal>
+<link:internal>Журнал транзакций</link:internal>
+<link:internal>Блокировки - уровни изоляций - concurrency</link:internal>
+<link:internal>MS SQL Collation</link:internal>
 <link:internal>Все о размерах в MS SQL</link:internal>
 <link:internal>TempDb, Master и прочие системные таблицы</link:internal>
 <link:internal>MS SQL и железо</link:internal> 
@@ -33,11 +36,15 @@ Monitoring <link:internal>SQL</link:internal> Server
 <link:internal>Перенос job-ов на другой сервер</link:internal>
 
 
+<link:internal>Usefull scripts</link:internal>
+<link:internal>MS SQL Profiler</link:internal>
+<link:internal>Sqlcmd - isql - osql</link:internal>
+
 </note-content></text>
-  <last-change-date>2010-07-26T19:37:42.0282510+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-26T19:37:42.0282510+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-27T18:41:46.8545590+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-27T18:41:46.8545590+04:00</last-metadata-change-date>
   <create-date>2008-03-30T17:32:42.9359390+04:00</create-date>
-  <cursor-position>286</cursor-position>
+  <cursor-position>728</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>1086</x>
