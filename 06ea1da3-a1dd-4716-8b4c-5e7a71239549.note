@@ -13,14 +13,17 @@
 <link:internal>Заполнение таблиц демоданными</link:internal>
 <link:internal>Изменить оформление табличного представления</link:internal>
 <link:internal>Создание страницы, наполняемой вручную</link:internal>
-<link:internal>Привзяать layout к представлению</link:internal></note-content></text>
-  <last-change-date>2010-07-25T21:18:36.3362650+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-25T21:18:36.3362650+04:00</last-metadata-change-date>
+<link:internal>Привзяать layout к представлению</link:internal>
+<link:internal>Использование cookies в rails</link:internal>
+<link:internal>Обработка ошибок в rails</link:internal>
+ </note-content></text>
+  <last-change-date>2010-07-27T18:25:01.6480620+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-27T18:25:01.6480620+04:00</last-metadata-change-date>
   <create-date>2010-07-21T16:26:28.4920620+04:00</create-date>
-  <cursor-position>436</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>1086</x>
-  <y>378</y>
-  <open-on-startup>True</open-on-startup>
+  <cursor-position>492</cursor-position>
+  <width>525</width>
+  <height>379</height>
+  <x>1061</x>
+  <y>632</y>
+  <open-on-startup>False</open-on-startup>
 </note>

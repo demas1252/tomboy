@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование cookies в rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование cookies в rails
+
+<bold>Подготовка к использованию cookie</bold>
+
+<list><list-item dir="ltr">rake <link:internal>db</link:internal>:sessions:create
+</list-item><list-item dir="ltr">rake <link:internal>db</link:internal>:migrate
+</list-item><list-item dir="ltr">config.action_controller.session_store = :active_record_store в config/environment.erb</list-item></list>
+
+<bold>Использование</bold>
+
+<list><list-item dir="ltr">Добавляем во view клавишу добавляем клавишу:</list-item></list>
+
+	<italic>    &lt;%= button_to "Add to Card", :action =&gt; :add_to_cart, :id =&gt; product %&gt;</italic>
+
+<list><list-item dir="ltr">В контроллер <bold>этого</bold> view добавляем соответствующий метод:</list-item></list>
+
+<italic>	  def add_to_cart
+	    @cart = <link:internal>find</link:internal></italic><italic>_cart
+	    product = Product.<link:internal>find</link:internal></italic><italic>(params[:id])
+	    @cart.add_product(product)
+	  end
+  
+	  private
+
+	  def <link:internal>find</link:internal></italic><italic>_cart
+	    session[:cart] ||= Cart.new
+	  end
+</italic>
+<list><list-item dir="ltr">Создаем представление для этого вызова views/store/add_to_cart.<link:internal>html</link:internal>.erb:</list-item></list>
+
+<italic>	&lt;h1&gt; Your Pragmatic Cart &lt;/h1&gt;
+	&lt;ul&gt;
+	  &lt;% for item in @cart.items %&gt;
+	    &lt;li&gt; &lt;%= h(item.title) %&gt; &lt;/li&gt;
+	  &lt;% end %&gt;
+	&lt;/ul&gt;
+	&lt;/ul&gt;
+</italic>
+</note-content></text>
+  <last-change-date>2010-07-26T22:42:33.1245720+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-26T22:42:33.1245720+04:00</last-metadata-change-date>
+  <create-date>2010-07-26T22:29:15.1841060+04:00</create-date>
+  <cursor-position>213</cursor-position>
+  <width>662</width>
+  <height>716</height>
+  <x>827</x>
+  <y>111</y>
+  <open-on-startup>False</open-on-startup>
+</note>

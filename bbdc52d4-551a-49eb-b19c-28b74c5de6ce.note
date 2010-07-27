@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка ошибок в rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка ошибок в rails
+
+При обращении к несуществующему товару мы можем получить исключение:
+
+<italic>      product = Product.<link:internal>find</link:internal></italic><italic>(params[:id])</italic>
+
+Обработаем его:
+
+  def add_to_cart
+    begin
+      product = Product.<link:internal>find</link:internal>(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid product #{params[:id]}")
+      flash[:notice] = "Invalid product"
+      redirect_to :action =&gt; :index
+    else
+      @cart = <link:internal>find</link:internal>_cart
+      @cart.add_product(product)
+    end
+  end
+
+
+Здесь мы:
+
+<list><list-item dir="ltr">логируем ошибку
+</list-item><list-item dir="ltr">выводим сообщение пользователю (flash)
+</list-item><list-item dir="ltr">редиректим на существующую страницу</list-item></list></note-content></text>
+  <last-change-date>2010-07-27T18:02:36.1152940+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-27T18:02:36.1152940+04:00</last-metadata-change-date>
+  <create-date>2010-07-27T18:00:25.0960710+04:00</create-date>
+  <cursor-position>565</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1118</x>
+  <y>112</y>
+  <open-on-startup>False</open-on-startup>
+</note>
