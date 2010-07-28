@@ -3,7 +3,7 @@
   <title>Добавлять и удалять классы CSS элементам</title>
   <text xml:space="preserve"><note-content version="0.1">Добавлять и удалять классы CSS элементам
 
-<italic>    &lt;style type="text/css"&gt;
+<italic>    &lt;style type="text/<link:internal>css</link:internal></italic><italic>"&gt;
       a.<link:internal>test</link:internal></italic><italic> { font-weight: bold; }
     &lt;/style&gt;
 </italic>
@@ -18,8 +18,8 @@
 <italic>    &lt;a href="<link:url>http://jquery.com/"&gt;jQuery&lt;/a</link:url></italic><italic>&gt;</italic>
 
 </note-content></text>
-  <last-change-date>2009-12-13T10:25:47.8244570+03:00</last-change-date>
-  <last-metadata-change-date>2009-12-13T10:25:47.8244570+03:00</last-metadata-change-date>
+  <last-change-date>2010-07-28T12:55:28.9099690+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-28T12:55:28.9099690+04:00</last-metadata-change-date>
   <create-date>2009-12-13T10:25:20.4324490+03:00</create-date>
   <cursor-position>286</cursor-position>
   <width>450</width>

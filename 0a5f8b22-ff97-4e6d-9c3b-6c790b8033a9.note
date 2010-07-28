@@ -3,14 +3,15 @@
   <title>Web</title>
   <text xml:space="preserve"><note-content version="0.1">Web
 
+<link:internal>CSS</link:internal>
 <link:internal>HTML</link:internal>
 <link:internal>Javascript</link:internal>  
 <link:internal>Google Application Engine</link:internal>
 <link:internal>AJAX</link:internal></note-content></text>
-  <last-change-date>2010-03-21T18:14:02.5656570+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T18:14:02.5656570+03:00</last-metadata-change-date>
+  <last-change-date>2010-07-28T12:55:28.8574900+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-28T12:55:28.8574900+04:00</last-metadata-change-date>
   <create-date>2009-04-19T14:37:49.9447150+04:00</create-date>
-  <cursor-position>6</cursor-position>
+  <cursor-position>5</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>516</x>

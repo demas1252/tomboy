@@ -7,11 +7,12 @@
 <link:internal>fill factor</link:internal>
 <link:internal>Максимальное количество полей в индексе</link:internal>
 <link:internal>Пересоздание индексов</link:internal>
-<link:internal>Дефрагментация куч в ms sql 2008</link:internal></note-content></text>
-  <last-change-date>2009-04-12T18:40:37.8547210+04:00</last-change-date>
-  <last-metadata-change-date>2009-04-12T18:40:37.8547210+04:00</last-metadata-change-date>
+<link:internal>Дефрагментация куч в ms sql 2008</link:internal>
+<link:internal>Первичный ключ без кластерного индекса</link:internal></note-content></text>
+  <last-change-date>2010-07-28T12:58:51.2671660+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-28T12:58:51.2671660+04:00</last-metadata-change-date>
   <create-date>2009-04-12T13:44:13.5637380+04:00</create-date>
-  <cursor-position>117</cursor-position>
+  <cursor-position>150</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>505</x>
