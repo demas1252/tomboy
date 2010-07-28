@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>AJAX and Rails</title>
+  <text xml:space="preserve"><note-content version="0.1">AJAX and Rails
+
+1. Заменяем в представлении клавишу на вызов <link:internal>AJAX</link:internal> метода:
+
+   Вот это:
+
+	<italic> &lt;%= button_to "Add to Card", :action =&gt; :add_to_cart, :id =&gt; product %&gt;</italic>
+
+   на это:
+
+<italic>	    &lt;% form_remote_tag :url =&gt; { :action =&gt; :add_to_cart, :id =&gt; product } do %&gt;
+	      &lt;%= submit_tag "Add to Cart" %&gt;
+	    &lt;% end %&gt;</italic>
+
+2.  В view/layouts/store.<link:internal>html</link:internal>.erb прописываем опцию для <link:internal>AJAX</link:internal>:
+
+	<italic>&lt;%= <link:internal>javascript</link:internal></italic><italic>_include_tag :defaults %&gt;</italic>
+
+3. В контроллере убираем переадресацию
+4. view/store/add-to_cart.rjs:
+
+	<italic>page.replace_<link:internal>html</link:internal></italic><italic>("cart", :<link:internal>partial</link:internal></italic><italic> =&gt; "cart", :object =&gt; @cart)</italic>
+
+</note-content></text>
+  <last-change-date>2010-07-28T17:41:29.6720400+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-28T17:41:29.6720400+04:00</last-metadata-change-date>
+  <create-date>2010-07-28T17:37:11.7447970+04:00</create-date>
+  <cursor-position>73</cursor-position>
+  <width>651</width>
+  <height>450</height>
+  <x>804</x>
+  <y>80</y>
+  <open-on-startup>False</open-on-startup>
+</note>

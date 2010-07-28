@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Partial Templates в Rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Partial Templates в Rails
+
+Смысл в том, что в представлении мы можем написать так:
+
+<italic>&lt;table&gt;
+&lt;%= render(:<link:internal>partial</link:internal></italic><italic> =&gt; "cart_item", :collection =&gt; @cart.items) %&gt;
+&lt;/table&gt;
+</italic>
+И в той же директории создать файл _cart_item.<link:internal>html</link:internal>.erb:
+
+<italic>&lt;tr&gt;
+  &lt;td&gt; &lt;%= cart_item.quantity %&gt; times &lt;/td&gt;
+  &lt;td&gt; &lt;%= h(cart_item.title) %&gt; &lt;/td&gt;
+  &lt;td&gt; &lt;%= number_to_currency(cart_item.price) %&gt; &lt;/td&gt;
+&lt;/tr&gt;
+</italic>
+
+При этом, этот _cart_item можно использовать из нескольких мест одновременно.</note-content></text>
+  <last-change-date>2010-07-28T15:46:11.7100040+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-28T15:46:11.7100040+04:00</last-metadata-change-date>
+  <create-date>2010-07-28T15:44:20.2198710+04:00</create-date>
+  <cursor-position>377</cursor-position>
+  <width>643</width>
+  <height>514</height>
+  <x>582</x>
+  <y>221</y>
+  <open-on-startup>False</open-on-startup>
+</note>
