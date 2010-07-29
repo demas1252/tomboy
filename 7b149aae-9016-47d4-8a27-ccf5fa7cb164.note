@@ -17,14 +17,15 @@ insec['one']
 insec['three'] = 'five'
 
 <link:internal>Перестановки в Ruby с помощью Array</link:internal>
+<link:internal>Вычесть один Array из другого</link:internal>
 </note-content></text>
-  <last-change-date>2009-06-26T14:07:46.8063480+04:00</last-change-date>
-  <last-metadata-change-date>2009-06-26T14:07:46.8063480+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-29T10:12:13.4987830+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T10:12:13.4987830+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:24:21.7579310+03:00</create-date>
-  <cursor-position>168</cursor-position>
+  <cursor-position>204</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>1205</x>
+  <x>1165</x>
   <y>436</y>
   <open-on-startup>False</open-on-startup>
 </note>

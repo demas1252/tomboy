@@ -8,11 +8,12 @@ unless some &gt; 100
 else
   some
 end
-</note-content></text>
-  <last-change-date>2009-04-15T17:09:29.2565730+04:00</last-change-date>
-  <last-metadata-change-date>2009-04-15T17:09:29.2565730+04:00</last-metadata-change-date>
+
+<link:internal>Пример разворачивания циклов в map</link:internal></note-content></text>
+  <last-change-date>2010-07-29T10:29:28.4972920+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T10:29:28.4972920+04:00</last-metadata-change-date>
   <create-date>2009-04-15T17:09:08.0295680+04:00</create-date>
-  <cursor-position>89</cursor-position>
+  <cursor-position>43</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>287</x>

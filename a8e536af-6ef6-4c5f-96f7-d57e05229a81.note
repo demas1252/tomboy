@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Вычесть один Array из другого</title>
+  <text xml:space="preserve"><note-content version="0.1">Вычесть один Array из другого
+
+<italic>a = [[2, 1], [3, 3], [7, 2], [5, 6]]  
+b = [[2, 1], [6, 7], [9, 9], [4, 3]]  
+c = [[2, 1], [1, 1], [2, 2], [9, 9]]  
+d = [[2, 1], [9, 9], [2, 2], [3, 1]] 
+
+b = b - a
+c = c - b - a
+d = d -c - b -a
+
+puts a
+puts "---------"
+puts b
+puts "---------"
+puts c
+puts "---------"
+puts d</italic></note-content></text>
+  <last-change-date>2010-07-29T10:12:34.9841310+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T10:12:34.9841310+04:00</last-metadata-change-date>
+  <create-date>2010-07-29T10:11:54.8867160+04:00</create-date>
+  <cursor-position>306</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>432</x>
+  <y>177</y>
+  <open-on-startup>False</open-on-startup>
+</note>

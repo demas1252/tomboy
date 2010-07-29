@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Пример разворачивания циклов в map</title>
+  <text xml:space="preserve"><note-content version="0.1">Пример разворачивания циклов в map
+
+<italic>colour = ["red", "white", "orange", "black"]  
+x=[]  
+colour.each_with_index do |c, i|  
+   x[i] = "&lt;a href='<link:url>http://#{c}.test.com'&gt;#{c}&lt;/a</link:url></italic><italic>&gt;"  
+end  
+tags2 = x.join(", ")  
+p "The code ==&gt;#{tags2}&lt;=== " </italic>
+
+
+---------------------------
+
+<italic>tags2 = colour.<link:internal>map</link:internal></italic><italic> {|c| "&lt;a href='<link:url>http://#{c}.test.com'&gt;#{c}&lt;/a</link:url></italic><italic>&gt;" }.join(", ")
+</italic></note-content></text>
+  <last-change-date>2010-07-29T10:30:09.0083000+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T10:30:09.0083000+04:00</last-metadata-change-date>
+  <create-date>2010-07-29T10:29:19.7877860+04:00</create-date>
+  <cursor-position>349</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1166</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

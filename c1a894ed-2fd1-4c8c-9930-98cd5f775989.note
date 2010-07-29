@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>AJAX Effect in Rails</title>
+  <text xml:space="preserve"><note-content version="0.1">AJAX Effect in Rails
+
+1. Нам надо иметь переменную, которая будет указывать на только что добавленную книгу.  Поэтому в модель в метод добавления продукта добавляем код, возвращающий добавленные продукт:
+
+<italic>class Cart
+  attr_reader :items
+
+  def initialize
+    @items = []
+  end
+
+  def add_product(product)
+    current_item = @items.<link:internal>find</link:internal></italic><italic> { |item| item.product == product }
+    <link:internal>if</link:internal></italic><italic> current_item
+      current_item.increment_quantity
+    else
+      @items &lt;&lt; CartItem.new(product)
+    end
+<bold>    current_item</bold></italic><italic>
+  end
+end
+</italic>
+2. В контроллере сохраняем это значение в переменную:
+
+<italic>def add_to_cart
+    begin
+      product = Product.<link:internal>find</link:internal></italic><italic>(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid product #{params[:id]}")     
+      redirect_to_index("Invalid product")
+    else
+      @cart = <link:internal>find</link:internal></italic><italic>_cart
+<bold>      @current_item = @cart.add_product(product)      </bold></italic><italic>
+    end
+  end</italic>
+
+3. В представлении помечаем этот элемент специальным ID:
+
+<italic>&lt;tr&gt;
+
+<bold>  &lt;% <link:internal>if</link:internal></bold></italic><italic><bold> cart_item == @current_item %&gt;
+    &lt;tr id="current_item"&gt;
+  &lt;% else %&gt;
+    &lt;tr&gt;
+  &lt;% end %&gt;
+</bold></italic><italic>
+  &lt;td&gt; &lt;%= cart_item.quantity %&gt; times &lt;/td&gt;
+  &lt;td&gt; &lt;%= h(cart_item.title) %&gt; &lt;/td&gt;
+  &lt;td&gt; &lt;%= number_to_currency(cart_item.price) %&gt; &lt;/td&gt;
+&lt;/tr&gt;
+</italic>
+4. В js скрипте задаем опции подсвечивания:
+
+<italic>page.replace_<link:internal>html</link:internal></italic><italic>("cart", :<link:internal>partial</link:internal></italic><italic> =&gt; "cart", :object =&gt; @cart)
+
+<bold>page[:current_item].visual_effect :highlight,
+				  :startcolor =&gt; "#88ff88",
+				  :endcolor =&gt; "#114411"
+</bold></italic></note-content></text>
+  <last-change-date>2010-07-29T11:18:17.6607830+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T11:18:17.6607830+04:00</last-metadata-change-date>
+  <create-date>2010-07-29T11:14:45.3378670+04:00</create-date>
+  <cursor-position>1208</cursor-position>
+  <width>999</width>
+  <height>522</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
