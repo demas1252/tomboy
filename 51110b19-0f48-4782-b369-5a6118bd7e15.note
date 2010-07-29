@@ -4,11 +4,12 @@
   <text xml:space="preserve"><note-content version="0.1">Таблицы в MS SQL
 
 <link:internal>Trucate Talble in MSSQL</link:internal>
-<link:internal>Временные таблицы в MS SQL</link:internal></note-content></text>
-  <last-change-date>2009-11-05T16:12:00.1550170+03:00</last-change-date>
-  <last-metadata-change-date>2009-11-05T16:12:00.1550170+03:00</last-metadata-change-date>
+<link:internal>Временные таблицы в MS SQL</link:internal>
+<link:internal>Удалить NOT NULL constraint</link:internal></note-content></text>
+  <last-change-date>2010-07-29T14:23:23.2291060+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T14:23:23.2291060+04:00</last-metadata-change-date>
   <create-date>2009-04-12T13:45:20.4038770+04:00</create-date>
-  <cursor-position>42</cursor-position>
+  <cursor-position>96</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>604</x>

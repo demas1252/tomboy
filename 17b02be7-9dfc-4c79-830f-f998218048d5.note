@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Эквивалент питоновского in</title>
+  <text xml:space="preserve"><note-content version="0.1">Эквивалент питоновского in
+
+<link:internal>Python</link:internal> has really elegant syntax for checking a value against several patterns.
+
+<italic>2 in [1,2,4] #=&gt; True
+6 in [1,2,4] #=&gt; False
+</italic>
+Order in <link:internal>Ruby</link:internal> version just feels wrong:
+
+<italic>[1,2,4].include?(2)</italic>
+
+------------------
+
+<italic>class Object
+  def in(ar)
+    ar.include? self
+  end
+end
+
+irb(main):013:0&gt; 's'.in ['a', 'b', 'c']
+=&gt; false
+irb(main):014:0&gt; 's'.in ['a', 'b', 'c', 's']
+=&gt; true
+</italic>
+</note-content></text>
+  <last-change-date>2010-07-29T14:28:57.3976510+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T14:28:57.3976510+04:00</last-metadata-change-date>
+  <create-date>2010-07-29T14:27:27.3487040+04:00</create-date>
+  <cursor-position>215</cursor-position>
+  <width>504</width>
+  <height>361</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

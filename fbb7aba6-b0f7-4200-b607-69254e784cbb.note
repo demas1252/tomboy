@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
   <title>ООП в Ruby</title>
-  <text xml:space="preserve"><note-content version="0.1">ООП в Ruby
+  <text xml:space="preserve"><note-content version="0.1"><link:internal>ООП</link:internal> в Ruby
 
 <link:internal>Классы в Ruby</link:internal>
 <link:internal>Атрибуты классов в Ruby</link:internal>
@@ -10,12 +10,12 @@
 <link:internal>Методы в Ruby</link:internal>
 
 <link:internal>instance_eval()</link:internal>
-
+<link:internal>Эквивалент питоновского in</link:internal>
 </note-content></text>
-  <last-change-date>2010-04-15T22:54:02.1508470+04:00</last-change-date>
-  <last-metadata-change-date>2010-04-15T22:54:02.1508470+04:00</last-metadata-change-date>
+  <last-change-date>2010-07-29T14:27:36.4904030+04:00</last-change-date>
+  <last-metadata-change-date>2010-07-29T14:27:36.4904030+04:00</last-metadata-change-date>
   <create-date>2009-03-23T21:33:57.7635860+03:00</create-date>
-  <cursor-position>149</cursor-position>
+  <cursor-position>175</cursor-position>
   <width>450</width>
   <height>430</height>
   <x>946</x>
