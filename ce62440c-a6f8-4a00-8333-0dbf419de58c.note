@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обработка данных введенных в форму в Rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Обработка данных введенных в форму в Rails
+
+Как продоление предыдущего примера: <link:internal>Работа с формами в Rails</link:internal>
+
+<list><list-item dir="ltr">Раз мы в представлении привязали к нашей клавише методы save_order - надо его реализовывать.  В StoreController.</list-item></list>
+
+	<italic>  def save_order
+	    @cart = <link:internal>find</link:internal></italic><italic>_cart
+	    @order = Order.new(params[:order])
+	    @order.add_line_items_from_cart(@cart)
+	    <link:internal>if</link:internal></italic><italic> @order.save
+	      session[:cart] = nil
+	      redirect_to_index("Thank you for your order")
+	    else
+	      render :action =&gt; :checkout
+	    end
+	  end
+</italic>
+<list><list-item dir="ltr">В модели (Order) реализуем метод:</list-item></list>
+
+	<italic>    def add_line_items_from_cart(cart)
+	      cart.items.each do |item|
+		li = LineItem.from_cart_item(item)
+		line_items &lt;&lt; il
+	      end
+	    end
+
+</italic><list><list-item dir="ltr">В модели LineItem:</list-item></list>
+
+   <italic>	   def self.from_cart_item(cart_item)
+	      li = self.new
+	      li.product = cart_item.product
+	      li.quantity = cart_item.quantity
+	      li.total_price = cart_item.price
+	      li
+	    end
+</italic>
+<list><list-item dir="ltr">dsa</list-item></list><italic>
+</italic></note-content></text>
+  <last-change-date>2010-08-02T17:57:35.4143740+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-02T17:57:35.4143740+04:00</last-metadata-change-date>
+  <create-date>2010-08-02T17:36:02.8694330+04:00</create-date>
+  <cursor-position>723</cursor-position>
+  <width>673</width>
+  <height>393</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

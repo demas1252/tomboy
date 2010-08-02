@@ -19,14 +19,15 @@
 <link:internal>Partial Templates в Rails</link:internal> 
 <link:internal>AJAX and Rails</link:internal>
 <link:internal>AJAX Effect in Rails</link:internal>
-<link:internal>Работа с формами в Rails</link:internal></note-content></text>
-  <last-change-date>2010-08-02T17:32:23.5249810+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-02T17:32:23.5249810+04:00</last-metadata-change-date>
+<link:internal>Работа с формами в Rails</link:internal>
+<link:internal>Обработка данных введенных в форму в Rails</link:internal></note-content></text>
+  <last-change-date>2010-08-02T17:36:13.5140130+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-02T17:36:13.5140130+04:00</last-metadata-change-date>
   <create-date>2010-07-21T16:26:28.4920620+04:00</create-date>
-  <cursor-position>555</cursor-position>
+  <cursor-position>579</cursor-position>
   <width>525</width>
   <height>379</height>
-  <x>987</x>
-  <y>158</y>
+  <x>1061</x>
+  <y>632</y>
   <open-on-startup>False</open-on-startup>
 </note>
