@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Работа с формами в Rails</title>
+  <text xml:space="preserve"><note-content version="0.1">Работа с формами в Rails
+
+<list><list-item dir="ltr">На какое-нибудь представление добавляем клавишу, которая будет открывать форму:</list-item></list>
+
+	<italic>&lt;%= button_to "Checkout", :action =&gt; :checkout %&gt;</italic>
+
+<list><list-item dir="ltr">В контроллер добавляем метод:</list-item></list>
+
+	<italic>  def checkout
+	    @cart = <link:internal>find</link:internal></italic><italic>_cart
+	    <link:internal>if</link:internal></italic><italic> @cart.items.empty?
+	      redirect_to_index("Your cart is empty")
+	    else
+	      @order = Order.new
+	    end
+	  end
+</italic>
+<list><list-item dir="ltr">Соответсвующее представление:</list-item></list>
+
+<italic>&lt;div class="depot-form"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Please Enter Your Details&lt;/legend&gt;
+  
+    &lt;% form_for :order, :url =&gt; { :action =&gt; :save_order } do |form| %&gt;
+      &lt;p&gt;
+	&lt;label for="order_name"&gt;Name:&lt;/label&gt;
+	&lt;%= form.text_field :name, :size =&gt; 40 %&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;
+	&lt;label for="order_address"&gt;Address:&lt;/label&gt;
+	&lt;%= form.text_area :address, :rows =&gt; 3, :cols =&gt; 40 %&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;
+	&lt;label for="order_email"&gt;E-Mail:&lt;/label&gt;
+	&lt;%= form.text_field :email, :size =&gt; 40 %&gt;
+      &lt;/p&gt;
+
+      &lt;p&gt;
+	&lt;label for="order_pay_type"&gt;Pay with:&lt;/label&gt;
+	&lt;%=
+	  form.select :pay_type,
+		      Order::PAYMENT_TYPES,
+		      :prompt =&gt; "Select a payment method"
+	%&gt;
+      &lt;/p&gt;
+
+      &lt;%= submit_tag "Place Order", :class =&gt; "submit" %&gt;
+    &lt;% end %&gt;
+  &lt;/fieldset&gt;
+&lt;/div&gt;
+</italic></note-content></text>
+  <last-change-date>2010-08-02T17:34:59.9498000+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-02T17:34:59.9498000+04:00</last-metadata-change-date>
+  <create-date>2010-08-02T17:32:12.2744190+04:00</create-date>
+  <cursor-position>392</cursor-position>
+  <width>810</width>
+  <height>599</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
