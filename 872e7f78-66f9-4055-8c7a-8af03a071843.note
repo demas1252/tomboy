@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Reporting Services Architecture</title>
+  <text xml:space="preserve"><note-content version="0.1">Reporting Services Architecture
+
+<bold><link:internal>Базы данных</link:internal></bold>
+
+<list><list-item dir="ltr">ReportServer - вся информация об отчетах
+</list-item><list-item dir="ltr">ReportServerTempDB - закешированные копии отчетов, которые можно использовать для увеличения производительноси
+</list-item><list-item dir="ltr">RSExecutingLog - опциональная база данных, которая может быть создана после инсталляции и в которой хранится подробная информация о построении отчетов</list-item></list>
+
+<bold>Составные части сервера отчетов:</bold>
+
+<list><list-item dir="ltr">Програмный интерфейс
+</list-item><list-item dir="ltr">Слой аутентификации (с 2008)
+</list-item><list-item dir="ltr">Процессинг отчетов
+</list-item><list-item dir="ltr">Процессинг данных
+</list-item><list-item dir="ltr">Рендеринг отчетов
+</list-item><list-item dir="ltr">Планировщик построения и доставки отчетов</list-item></list>
+
+<bold>Клиентские приложения</bold>
+
+<list><list-item dir="ltr">Report Manager (<link:internal>web</link:internal> морда)
+</list-item><list-item dir="ltr">BIDS (Business Intelligence Development Studio)
+</list-item><list-item dir="ltr"><link:internal>Command</link:internal> Line Utilites
+<list><list-item dir="ltr">rs - process report services script
+</list-item><list-item dir="ltr">rsconfig - configure auth methods
+</list-item><list-item dir="ltr">rskeymgmt - manage ecryption keys
+</list-item></list></list-item><list-item dir="ltr">Custom Clients (Windos Forms, <link:internal>Web</link:internal> Apps)
+</list-item><list-item dir="ltr">Reporting Services Configuration Manager</list-item></list>
+
+<bold>Установка и конфигурирование</bold>
+
+<list><list-item dir="ltr">Ставятся как часть установки <link:internal>MS SQL</link:internal></list-item></list>
+
+<bold>Security</bold>
+
+<list><list-item dir="ltr">Dfined roles
+</list-item><list-item dir="ltr"><link:internal>Windows</link:internal> authentification
+</list-item><list-item dir="ltr"></list-item></list></note-content></text>
+  <last-change-date>2010-08-04T12:22:19.8880940+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-04T12:22:19.8880940+04:00</last-metadata-change-date>
+  <create-date>2010-08-04T12:07:33.5092290+04:00</create-date>
+  <cursor-position>949</cursor-position>
+  <width>689</width>
+  <height>388</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

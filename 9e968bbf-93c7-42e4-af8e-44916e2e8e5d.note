@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Процедура, которая ищет таблицы с указанным полем</title>
+  <text xml:space="preserve"><note-content version="0.1">Процедура, которая ищет таблицы с указанным полем
+
+<italic>CREATE PROCEDURE dbo.sp_FieldInfo
+(
+@Column_Name nvarchar(384) = NULL
+)
+AS
+SELECT Object_Name(id) as 'Table Name',
+rtrim(Name) as 'Field Name'
+FROM syscolumns
+WHERE name like @Column_Name
+GO
+</italic>
+Then to call this proc:
+
+<italic>sp_fieldinfo employeeid </italic></note-content></text>
+  <last-change-date>2010-08-04T12:37:39.0757350+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-04T12:37:39.0757350+04:00</last-metadata-change-date>
+  <create-date>2010-08-04T12:37:18.2815040+04:00</create-date>
+  <cursor-position>292</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

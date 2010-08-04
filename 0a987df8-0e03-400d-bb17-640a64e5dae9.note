@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Построение запросов в SSRS</title>
+  <text xml:space="preserve"><note-content version="0.1">Построение запросов в SSRS
+
+<list><list-item dir="ltr">реляционные <link:internal>базы данных</link:internal> (<link:internal>MS SQL</link:internal>, <link:internal>Oracle</link:internal>, MySql)
+</list-item><list-item dir="ltr">нереляционные (AD, LDAP)</list-item></list>
+
+Использует стандартные механизмы: OLEDB, ODBC, Net
+
+<link:internal>Процедура, которая ищет таблицы с указанным полем</link:internal>
+
+<bold>Требования к запросам:</bold>
+
+<list><list-item dir="ltr">возвращают точные данные
+</list-item><list-item dir="ltr">масштабируемы
+</list-item><list-item dir="ltr">используются во многих отчетах</list-item></list>
+
+<bold>Создание запросов:</bold>
+
+<list><list-item dir="ltr">графически (SSMS - Design Query in Editor) (в любом редакторе запросов)
+</list-item><list-item dir="ltr">создание параметризированной хранимой процедуры</list-item></list></note-content></text>
+  <last-change-date>2010-08-04T13:19:32.0090900+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-04T13:19:32.0090900+04:00</last-metadata-change-date>
+  <create-date>2010-08-04T12:23:37.7261530+04:00</create-date>
+  <cursor-position>156</cursor-position>
+  <width>611</width>
+  <height>474</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
