@@ -3,11 +3,16 @@
   <title>Дизайн отчетов в SSRS</title>
   <text xml:space="preserve"><note-content version="0.1">Дизайн отчетов в SSRS
 
-</note-content></text>
-  <last-change-date>2010-08-04T13:23:25.5054120+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-04T13:23:25.5054120+04:00</last-metadata-change-date>
+BIDS - File - New - Project - Report Server Project (Business Intelligence)
+
+Property of project:
+
+<list><list-item dir="ltr">TargetReportFolder
+</list-item><list-item dir="ltr">TargerServerURL</list-item></list></note-content></text>
+  <last-change-date>2010-08-04T14:36:54.0062550+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-04T14:36:54.0062550+04:00</last-metadata-change-date>
   <create-date>2010-08-04T13:21:05.6771750+04:00</create-date>
-  <cursor-position>56</cursor-position>
+  <cursor-position>100</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>0</x>
