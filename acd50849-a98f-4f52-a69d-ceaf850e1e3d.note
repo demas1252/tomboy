@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Построение отчетов в SSRS</title>
+  <text xml:space="preserve"><note-content version="0.1">Построение отчетов в SSRS
+
+<bold>Группировка </bold>
+
+В общем то, накликивается мышкой в дизайнере.
+Чтобы понять принцип, можно сгенерить мастером пару отчетов.
+
+<bold>Document Mapping</bold>
+
+Это дерево рядом с отчетом, позволяющее навигироваться по отчету. Выделяется строка группировки Row group - Group properties - Advanced - Document <link:internal>Map</link:internal>
+
+<bold>Interactive Sorting</bold>
+
+Щелчок на TextBox - TextBox Properties - Interactive sorting
+Точнее - делать это надо в header столбца - ячейке, где текстовый заголовок
+
+<bold>Bookmarks, Urls, Hyperlinks</bold>
+
+С этим я пока не стал разбираться
+
+<bold>Списки значений для параметров</bold>
+
+<bold>Параметры с множеством значений выбранных одновременно</bold>
+
+
+
+</note-content></text>
+  <last-change-date>2010-08-08T23:13:29.7600130+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-08T23:13:29.7600130+04:00</last-metadata-change-date>
+  <create-date>2010-08-08T20:36:25.1325780+04:00</create-date>
+  <cursor-position>628</cursor-position>
+  <width>572</width>
+  <height>539</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

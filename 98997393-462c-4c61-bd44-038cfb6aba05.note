@@ -5,11 +5,13 @@
 
 <link:internal>Reporting Services Architecture</link:internal>
 <link:internal>Построение запросов в SSRS</link:internal>
-<link:internal>Дизайн отчетов в SSRS</link:internal></note-content></text>
-  <last-change-date>2010-08-04T13:21:15.3512380+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-04T13:21:15.3512380+04:00</last-metadata-change-date>
+<link:internal>Дизайн отчетов в SSRS</link:internal>
+<link:internal>Построение отчетов в SSRS</link:internal>
+<link:internal>Использование net кода в SSRS</link:internal></note-content></text>
+  <last-change-date>2010-08-08T23:50:46.3922410+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-08T23:50:46.3922410+04:00</last-metadata-change-date>
   <create-date>2010-07-27T18:41:53.2355470+04:00</create-date>
-  <cursor-position>22</cursor-position>
+  <cursor-position>103</cursor-position>
   <width>521</width>
   <height>516</height>
   <x>239</x>

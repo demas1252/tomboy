@@ -5,17 +5,61 @@
 
 BIDS - File - New - Project - Report Server Project (Business Intelligence)
 
-Property of project:
+<bold>Property of project</bold>
 
 <list><list-item dir="ltr">TargetReportFolder
-</list-item><list-item dir="ltr">TargerServerURL</list-item></list></note-content></text>
-  <last-change-date>2010-08-04T14:36:54.0062550+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-04T14:36:54.0062550+04:00</last-metadata-change-date>
+</list-item><list-item dir="ltr">TargerServerURL</list-item></list>
+
+<bold>Report Definition Language (RDL)</bold>
+
+<list><list-item dir="ltr">XML-based schema (F7)
+</list-item><list-item dir="ltr">Report <link:internal>Builder</link:internal> - как я понимаю, это еще один построитель отчетов</list-item></list>
+
+<bold>Создание нового отчета</bold> -&gt; Reports - New Item (в Solution Explorer)
+
+<bold>Указание источников данных</bold>:
+
+<list><list-item dir="ltr">каждый отчет содержит <italic>datasource</italic> и <italic>dataset</italic>
+</list-item><list-item dir="ltr"><italic>datasource - </italic>коннекшен
+</list-item><list-item dir="ltr"><italic>dataset - </italic>набор данных, создается путем создания запроса (в виде текста или хранимой процедуры)
+</list-item><list-item dir="ltr"><italic>shared datasource - </italic>общие для разных отчетов
+</list-item><list-item dir="ltr">Shared datasource - Add new
+</list-item><list-item dir="ltr">В панели ReportData - New - Dataset</list-item></list>
+
+<bold>Вычисляемые поля</bold>
+
+На dataset - Add Calculated Field
+
+<bold>Указание параметров</bold>
+
+<list><list-item dir="ltr">query parameters </list-item></list>
+
+	select ... where id &gt; @porog
+        После этого в Parameters появился соответсвующий параметр - где можно указать его тип и прочие свойства. При запуске отчета в верхней его части запрашиваются значения параметров.
+
+<list><list-item dir="ltr">report parameters</list-item></list>
+
+<bold><link:internal>Фильтры</link:internal></bold><bold> и выражения</bold>
+
+<italic>=Fields!FieldName.Value</italic>
+<italic>=Parameters!ParameterName.Value</italic>
+
+<bold>Оформление </bold>
+
+Для строчных отчетов используем List
+Там еще много чего на эту тему, но так как это не имеет отношения к экзамену - пока не разбирался.
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-08-08T20:27:34.5027340+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-08T20:27:34.5027340+04:00</last-metadata-change-date>
   <create-date>2010-08-04T13:21:05.6771750+04:00</create-date>
-  <cursor-position>100</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>0</x>
-  <y>0</y>
+  <cursor-position>1129</cursor-position>
+  <width>468</width>
+  <height>799</height>
+  <x>1151</x>
+  <y>126</y>
   <open-on-startup>False</open-on-startup>
 </note>

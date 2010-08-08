@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Использование net кода в SSRS</title>
+  <text xml:space="preserve"><note-content version="0.1">Использование net кода в SSRS
+
+<bold>Назначение</bold>
+
+<list><list-item dir="ltr"> Написание каких-нибудь функций, например, возвращающий true/false, которые затем будут использоваться в фильтрах и параметрах
+</list-item><list-item dir="ltr">Чтение данных из каких-нибудь нестандартных источников данных</list-item></list>
+
+<bold>Варианты</bold>
+
+<list><list-item dir="ltr">Встраивание кода в отчет
+</list-item><list-item dir="ltr">Использование отдельных сборок</list-item></list>
+
+<bold>Встраивание кода в отчет</bold>
+
+<list><list-item dir="ltr">VB.NET only
+</list-item><list-item dir="ltr">все методы - методы экземпляра класса</list-item></list>
+
+Правой клавишей на дизайн - Report Property - Code - там просто пишем набор функций
+Затем iif(Code.FuncNAME(Sum(Fields...., Parameters ...))
+
+<bold>Доступ к внешним сборкам из встроенного кода</bold>
+
+Также в Report Properties - References - добавляем сборку
+
+<bold>Создание сборок</bold>
+
+Как обычно - новый проект - C# - Class Library
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-08-09T00:01:58.8500230+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-09T00:01:58.8500230+04:00</last-metadata-change-date>
+  <create-date>2010-08-08T23:50:35.7236990+04:00</create-date>
+  <cursor-position>651</cursor-position>
+  <width>677</width>
+  <height>436</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
