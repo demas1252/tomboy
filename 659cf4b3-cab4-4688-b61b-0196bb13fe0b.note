@@ -29,16 +29,21 @@
 
 Как обычно - новый проект - C# - Class Library
 
+<bold>Развертывание кастомных сборок</bold>
 
+<list><list-item dir="ltr">копируем сборку
+<list><list-item dir="ltr">... Visual Studio ... - для Report Designer
+</list-item><list-item dir="ltr">... <link:internal>MS SQL</link:internal> - для SSRS 2008
+</list-item></list></list-item><list-item dir="ltr">редактируем <italic>rssrvpolicy.config</italic></list-item></list>
 
 
 </note-content></text>
-  <last-change-date>2010-08-09T00:01:58.8500230+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-09T00:01:58.8500230+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-09T19:19:59.9434820+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-09T19:19:59.9434820+04:00</last-metadata-change-date>
   <create-date>2010-08-08T23:50:35.7236990+04:00</create-date>
-  <cursor-position>651</cursor-position>
+  <cursor-position>245</cursor-position>
   <width>677</width>
-  <height>436</height>
+  <height>758</height>
   <x>0</x>
   <y>0</y>
   <open-on-startup>False</open-on-startup>

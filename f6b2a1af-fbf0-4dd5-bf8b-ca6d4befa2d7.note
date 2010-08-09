@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Развертывание отчетов</title>
+  <text xml:space="preserve"><note-content version="0.1">Развертывание отчетов
+
+Загрузка RDL файла на SSRS2008.  
+
+<list><list-item dir="ltr">С помощью Report Manager интерфейс и <link:internal>Web</link:internal> Browser
+</list-item><list-item dir="ltr">Rerpot <link:internal>Builder</link:internal> 2
+</list-item><list-item dir="ltr">Deploy option в <link:internal>SQL</link:internal> Server BIDS
+</list-item><list-item dir="ltr">Deploy option в Visual Studio 2008
+</list-item><list-item dir="ltr">rs.exe
+</list-item><list-item dir="ltr">SOAP API</list-item></list>
+
+<bold>Report Manager</bold>
+
+Это тот самый <link:internal>web</link:internal> интерфейс.   Home - Upload file.
+
+<bold>BIDS и VS 2008</bold>
+
+В конфигурации проекта:
+
+<list><list-item dir="ltr">StartItem - имя под которым будет запускаться отчет
+</list-item><list-item dir="ltr">OwerwriteDataSources - заменять или нет источник данных при деплойменте
+</list-item><list-item dir="ltr">TargetDataSourceFolder - папка где лежат расшаренные источники данных
+</list-item><list-item dir="ltr">TargetReportFolder
+</list-item><list-item dir="ltr">TargetServerURL</list-item></list>
+
+<bold>Configuration Manager</bold>
+
+В Solution Explorer
+
+<bold>rs.exe</bold>
+
+Пишется скрипт, который обрабатывается rs.exe и разворячивает отчет
+
+
+</note-content></text>
+  <last-change-date>2010-08-09T20:20:11.2575450+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-09T20:20:11.2575450+04:00</last-metadata-change-date>
+  <create-date>2010-08-09T20:08:21.9491660+04:00</create-date>
+  <cursor-position>619</cursor-position>
+  <width>696</width>
+  <height>415</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

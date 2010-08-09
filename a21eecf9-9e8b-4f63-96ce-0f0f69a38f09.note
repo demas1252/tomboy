@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Отрисовка отчетов для Net приложений</title>
+  <text xml:space="preserve"><note-content version="0.1">Отрисовка отчетов для Net приложений
+
+<bold>Три способа</bold>
+
+<list><list-item dir="ltr">с помощью <link:internal>URI</link:internal>
+</list-item><list-item dir="ltr">используя SOAP API (Report Server <link:internal>Web</link:internal> Service)
+</list-item><list-item dir="ltr">Report Viewer control</list-item></list>
+
+<bold>Доступ с помощью <link:internal>URI</link:internal></bold><bold> </bold>
+
+<link:url>http://sever/virtualroot?[/pathinfo]&amp;prefix:param=value</link:url> [&amp;prefix:param=value]..
+
+Но вообще у меня примерно так работает:
+
+<italic>http:/localhost/Report/Pages/Report.aspx?ItemPath=%2fadem%2fReport1</italic>
+
+Хотя вроде и по инструкции все работает:
+
+<link:url>http://localhost/ReportServer?/adem/report1</link:url>
+<link:url>http://localhost/ReportServer?/adem/report1&amp;rs:format=pdf</link:url>
+<link:url>http://localhost/ReportServer?/adem/report1&amp;rc:toolbar=false</link:url>
+
+<bold>Интеграция SSRS 2008 c Net приложениями</bold>
+
+<list><list-item dir="ltr">WebBrowser Control
+</list-item><list-item dir="ltr">Report Viewer Control (есть компонент в Toolbox - Reporting)</list-item></list>
+
+<bold>Локальная отрисовка отчетов</bold>
+
+Позволяет отображать отчеты без использования SSRS 2008.
+Насколько я понял, не нужен только Reporting Services, но источники данных естественно нужны.
+
+</note-content></text>
+  <last-change-date>2010-08-09T20:07:01.2575640+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-09T20:07:01.2575640+04:00</last-metadata-change-date>
+  <create-date>2010-08-09T19:24:16.9436220+04:00</create-date>
+  <cursor-position>772</cursor-position>
+  <width>614</width>
+  <height>642</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
