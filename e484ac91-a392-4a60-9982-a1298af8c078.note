@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Простейшие группы самосовмещений</title>
+  <text xml:space="preserve"><note-content version="0.1">Простейшие группы самосовмещений
+
+<bold>Самосовмещением</bold> фигуры F называется такое ее перемещение, которое переводит F в саму себя.
+
+<list><list-item dir="ltr">всякое самосовмещение правильного n-угольника в его плокости есть поворот на угол k*2п/n
+</list-item><list-item dir="ltr">самосовмещений имеется n
+</list-item><list-item dir="ltr">эти самосовмещения образую группу</list-item></list>
+
+Группы самосовмещений правильных многоугольников - конечны.
+Группы самосвмещений прямой и окружности - бесконечны.
+</note-content></text>
+  <last-change-date>2010-08-10T14:12:11.5393220+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-10T14:12:11.5393220+04:00</last-metadata-change-date>
+  <create-date>2010-08-10T14:08:24.9079990+04:00</create-date>
+  <cursor-position>243</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>33</x>
+  <y>568</y>
+  <open-on-startup>False</open-on-startup>
+</note>

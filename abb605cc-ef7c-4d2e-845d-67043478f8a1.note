@@ -6,14 +6,15 @@
 <link:internal>Понятия группы</link:internal>
 <link:internal>Группы подстановок</link:internal>
 <link:internal>Изоморфные группы. Теорема Кэли</link:internal>.
-	</note-content></text>
-  <last-change-date>2010-07-29T17:10:02.3957380+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-29T17:10:02.3957380+04:00</last-metadata-change-date>
+<link:internal>Циклические группы</link:internal>
+<link:internal>Простейшие группы самосовмещений</link:internal>	</note-content></text>
+  <last-change-date>2010-08-10T14:08:44.6173000+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-10T14:08:44.6173000+04:00</last-metadata-change-date>
   <create-date>2010-06-30T10:52:59.1510630+04:00</create-date>
-  <cursor-position>82</cursor-position>
-  <width>586</width>
-  <height>439</height>
-  <x>1028</x>
-  <y>329</y>
+  <cursor-position>99</cursor-position>
+  <width>558</width>
+  <height>456</height>
+  <x>223</x>
+  <y>196</y>
   <open-on-startup>False</open-on-startup>
 </note>
