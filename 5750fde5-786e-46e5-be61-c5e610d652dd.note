@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Securing Reports</title>
+  <text xml:space="preserve"><note-content version="0.1">Securing Reports
+
+<bold><link:internal>Encrypting Data</link:internal></bold><bold> in SSRS</bold>
+
+<list><list-item dir="ltr">securing network traffic using ssl
+</list-item><list-item dir="ltr"></list-item></list></note-content></text>
+  <last-change-date>2010-08-10T17:47:27.5391190+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-10T17:47:27.5391190+04:00</last-metadata-change-date>
+  <create-date>2010-08-10T17:39:53.6811370+04:00</create-date>
+  <cursor-position>43</cursor-position>
+  <width>450</width>
+  <height>401</height>
+  <x>1183</x>
+  <y>518</y>
+  <open-on-startup>False</open-on-startup>
+</note>

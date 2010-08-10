@@ -9,14 +9,16 @@
 <link:internal>Построение отчетов в SSRS</link:internal>
 <link:internal>Использование net кода в SSRS</link:internal>
 <link:internal>Отрисовка отчетов для Net приложений</link:internal>
-<link:internal>Развертывание отчетов</link:internal></note-content></text>
-  <last-change-date>2010-08-09T20:08:59.9886270+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-09T20:08:59.9886270+04:00</last-metadata-change-date>
+<link:internal>Развертывание отчетов</link:internal>
+<link:internal>Managing Reports in SSRS</link:internal>
+<link:internal>Securing Reports</link:internal></note-content></text>
+  <last-change-date>2010-08-10T17:40:28.1940800+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-10T17:40:28.1940800+04:00</last-metadata-change-date>
   <create-date>2010-07-27T18:41:53.2355470+04:00</create-date>
-  <cursor-position>218</cursor-position>
+  <cursor-position>22</cursor-position>
   <width>521</width>
   <height>516</height>
-  <x>239</x>
-  <y>282</y>
+  <x>1002</x>
+  <y>493</y>
   <open-on-startup>False</open-on-startup>
 </note>

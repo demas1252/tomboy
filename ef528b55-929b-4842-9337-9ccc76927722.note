@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Managing Reports in SSRS</title>
+  <text xml:space="preserve"><note-content version="0.1">Managing Reports in SSRS
+
+<bold>Schedules</bold>
+
+Создаем schedule: <italic>Report Manager (<link:url>http://localhost/Report/Pages/Folder.aspx</link:url></italic><italic>) - Site Settings - Shedules</italic>
+Назначаем schedule отчету:  
+
+Важно, чтобы все параметры отчета имели значения по умолчанию, так как запущено будет в интерактивном режиме.
+
+Затем надо указать, чтобы логин и пароль доступа хранились на Report Server - Properties - DataSources - A custom - Credential stored in the report server - Use as <link:internal>Windows</link:internal> ... + ввести логин и пароль
+
+На закладке <link:internal>History</link:internal> назначить schedule.
+
+<bold>Snapshots</bold>
+
+Настраивается как и в пред пункте, только в пункте <link:internal>HIstory</link:internal> вручную жмется кнопка Create Snapshoot.
+
+<bold>Кеширование</bold>
+
+Закладка <italic>Execution</italic>.
+
+Как я понимаю, кешируется весь отчет.  Задается время хранения кеша в минутах или по schedule.
+
+<bold>Подписки</bold>
+
+По email, network share, принтер.
+
+<list><list-item dir="ltr">стандартные - задается статический список подписчиков
+</list-item><list-item dir="ltr">data-driven - список подписчиков формируется динамически</list-item></list>
+
+Если нет email - надо использовать Reporting Services Configureation Maager.
+
+<bold>SSRS логирование</bold>
+
+ExecutionLogStorage таблица
+
+
+</note-content></text>
+  <last-change-date>2010-08-10T17:37:38.1584720+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-10T17:37:38.1584720+04:00</last-metadata-change-date>
+  <create-date>2010-08-10T15:27:16.9037390+04:00</create-date>
+  <cursor-position>1020</cursor-position>
+  <width>675</width>
+  <height>661</height>
+  <x>983</x>
+  <y>278</y>
+  <open-on-startup>False</open-on-startup>
+</note>
