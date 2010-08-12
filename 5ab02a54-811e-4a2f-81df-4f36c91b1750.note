@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>BI &amp; SSRS</title>
+  <text xml:space="preserve"><note-content version="0.1">BI &amp; SSRS
+
+В общем то, отличий мало:
+
+<list><list-item dir="ltr">при создании источника данный тип указываем как MSAS
+</list-item><list-item dir="ltr">при построение отчета открывается дизайнер кубов</list-item></list>
+
+<bold>Интеграция с Sharepoint</bold>
+
+Report Services Add-ins for Sharepoint
+
+На эту тему много чего, но я пока не стал </note-content></text>
+  <last-change-date>2010-08-11T12:09:39.5260780+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-11T12:09:39.5260780+04:00</last-metadata-change-date>
+  <create-date>2010-08-11T11:05:07.5923010+04:00</create-date>
+  <cursor-position>168</cursor-position>
+  <width>708</width>
+  <height>435</height>
+  <x>767</x>
+  <y>319</y>
+  <open-on-startup>False</open-on-startup>
+</note>

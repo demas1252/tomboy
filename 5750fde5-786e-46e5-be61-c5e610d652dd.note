@@ -6,14 +6,39 @@
 <bold><link:internal>Encrypting Data</link:internal></bold><bold> in SSRS</bold>
 
 <list><list-item dir="ltr">securing network traffic using ssl
-</list-item><list-item dir="ltr"></list-item></list></note-content></text>
-  <last-change-date>2010-08-10T17:47:27.5391190+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-10T17:47:27.5391190+04:00</last-metadata-change-date>
+</list-item><list-item dir="ltr">пароли, строки <link:internal>подключения</link:internal> к источникам данных - encrypted keys
+<list><list-item dir="ltr">Report Services Configuration Manager
+</list-item><list-item dir="ltr">RSKeyMgmt
+</list-item></list></list-item><list-item dir="ltr">ключи генерятся, когда SSRS устанавливается или присоеднияется к <link:internal>web</link:internal> ферме</list-item></list>
+
+<bold>Аутентификация и доступ к данным</bold>
+
+Пять перднастроенных ролей:
+
+<list><list-item dir="ltr"><italic>browser</italic> - просмотр отчетов и управление подписками
+</list-item><list-item dir="ltr"><italic>content manager</italic> - могут все. Сюда автоматом добавляются администраторы.
+</list-item><list-item dir="ltr"><italic>my reports</italic> - 
+</list-item><list-item dir="ltr"><italic>publicher</italic> - права на публикацию отчетов
+</list-item><list-item dir="ltr"><italic>report <link:internal>builder</link:internal></italic> - для запуска report <link:internal>builder</link:internal> из report manager</list-item></list>
+
+<bold>Доступ на уровне записей </bold>
+
+User!UserID
+
+<bold>Аудит отчетов</bold>
+
+<list><list-item dir="ltr">report execution activity
+</list-item><list-item dir="ltr">parameter inputs for reports</list-item></list>
+
+
+</note-content></text>
+  <last-change-date>2010-08-11T11:00:37.9963340+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-11T11:00:37.9963340+04:00</last-metadata-change-date>
   <create-date>2010-08-10T17:39:53.6811370+04:00</create-date>
-  <cursor-position>43</cursor-position>
-  <width>450</width>
-  <height>401</height>
-  <x>1183</x>
-  <y>518</y>
+  <cursor-position>642</cursor-position>
+  <width>536</width>
+  <height>697</height>
+  <x>1097</x>
+  <y>222</y>
   <open-on-startup>False</open-on-startup>
 </note>
