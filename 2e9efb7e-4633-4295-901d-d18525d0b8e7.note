@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SSIS Packages</title>
+  <text xml:space="preserve"><note-content version="0.1">SSIS Packages
+
+<bold>Иерархия</bold>
+
+<list><list-item dir="ltr">package - root of hierarhy.  В проекте может быть несколько пакетов, но они не входят ни в какие <link:internal>контейнеры</link:internal>.
+</list-item><list-item dir="ltr">container
+</list-item><list-item dir="ltr">executable</list-item></list>
+
+Scope - видимость переменной на одной из этих
+Precedence constraints - условие, определяющее будет ли выполняться таск
+
+<bold><link:internal>Контейнеры</link:internal></bold>
+
+<list><list-item dir="ltr">Task Host
+</list-item><list-item dir="ltr">Foreach Loop
+</list-item><list-item dir="ltr">For Loop
+</list-item><list-item dir="ltr">Sequence</list-item></list>
+
+<bold>Checkpoints</bold>
+
+only at Control Flo task level
+
+<list><list-item dir="ltr">CheckpointFileName
+</list-item><list-item dir="ltr">CheckpointUsage
+</list-item><list-item dir="ltr">SaveCheckpoints</list-item></list>
+
+Надо разбиратья, но как я понимаю, сохраняются значения переменных + точка падения. 
+
+<bold>Event Handlers</bold>
+
+На событие одного таска можно навесить цепочку исполнения других тасков.
+
+<bold>Простейший пример</bold>
+
+<list><list-item dir="ltr">На Control View бросаем Data Flow Task
+</list-item><list-item dir="ltr">Double Click на него и переходим на Data Flow закладку
+</list-item><list-item dir="ltr">В области Connection Managers добавляем 2 коннекшена от источника-таблицы на таблицу назначение
+</list-item><list-item dir="ltr">Три компонента - ADO Net Source - Derived Column - ADO Net Destination
+</list-item><list-item dir="ltr">Соединяем source и destination с нашими источниками данных
+</list-item><list-item dir="ltr">Derived Column - задаем новый столбец, как сумму двух из источника
+</list-item><list-item dir="ltr">В destination настраиваем маппинг нового столбца на столбец destination</list-item></list>
+
+
+</note-content></text>
+  <last-change-date>2010-08-13T15:08:45.3167010+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-13T15:08:45.3167010+04:00</last-metadata-change-date>
+  <create-date>2010-08-13T13:13:43.8078440+04:00</create-date>
+  <cursor-position>742</cursor-position>
+  <width>527</width>
+  <height>558</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

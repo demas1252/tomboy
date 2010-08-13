@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Архитектура SSIS</title>
+  <text xml:space="preserve"><note-content version="0.1">Архитектура SSIS
+
+<list><list-item dir="ltr">SSIS designer
+</list-item><list-item dir="ltr">SSIS Wizards
+</list-item><list-item dir="ltr">DTEXEC - execute package
+</list-item><list-item dir="ltr">DtUtil - управляет пакетами</list-item></list>
+
+Пакеты (SSIS package) хранятся либо в msdb, либо в папке на диске.
+
+Custom Tasks, Log Providers, Enumerators, Connection Managers, Data Sources
+
+Виды трансформаций:
+
+<list><list-item dir="ltr">row (1:1)
+</list-item><list-item dir="ltr">parallely or semiblocking (merge)
+</list-item><list-item dir="ltr">blocking (aggregate)</list-item></list>
+
+Execution Tree
+Upgrade Aaadvisor Messges + Package Migration Wwwwwwizard для переноса DTS</note-content></text>
+  <last-change-date>2010-08-13T11:55:47.1539420+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-13T11:55:47.1539420+04:00</last-metadata-change-date>
+  <create-date>2010-08-13T09:37:27.2558200+04:00</create-date>
+  <cursor-position>386</cursor-position>
+  <width>517</width>
+  <height>402</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
