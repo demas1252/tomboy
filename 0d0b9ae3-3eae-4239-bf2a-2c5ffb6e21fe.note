@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SSIS Transformations</title>
+  <text xml:space="preserve"><note-content version="0.1">SSIS Transformations
+
+<bold>Data Viewer</bold>
+
+На <italic>DataFlow</italic> диаграмме надо выбрать стрелку-соединение и сказать <italic>Data Viewers</italic>.
+
+<list><list-item dir="ltr"><bold>Audit</bold> - Позволяет обратиться к системным переменным, таким как User Name, Machine Name ....
+</list-item><list-item dir="ltr"><bold>Character <link:internal>Map</link:internal></bold> - манипуляции над строками (lowercase, uppercase, katakana)
+</list-item><list-item dir="ltr"><bold>Conditional Split</bold> - обычное ветвление
+</list-item><list-item dir="ltr"><bold>Copy Column</bold> - дублирует столбец
+</list-item><list-item dir="ltr"><bold>Data Conversion</bold> - преобразует типы
+</list-item><list-item dir="ltr"><bold>Derived Column</bold> - порождает еще один столбец, как результат от имеющихся
+</list-item><list-item dir="ltr"><bold>Export Column</bold>
+</list-item><list-item dir="ltr"><bold>Import Column</bold>
+</list-item><list-item dir="ltr"><bold>Lookup</bold> - позволяет к каждой записи привязывать еще одну запись из другой таблицы
+</list-item><list-item dir="ltr"><bold>Merge</bold> - это не Union. Позволяет из двух записей составить одну. Записи должны быть предварительно отсортированы.
+</list-item><list-item dir="ltr"><bold>Merge Join</bold>
+</list-item><list-item dir="ltr"><bold>Multicast</bold> - размножает поток
+</list-item><list-item dir="ltr"><bold>OLE <link:internal>DB</link:internal></bold><bold> <link:internal>Command</link:internal></bold> - выполняет <link:internal>SQL</link:internal> запрос для каждой строки
+</list-item><list-item dir="ltr"><bold>Percentage Sampling</bold> - просто пропускает через себя определенный процент записей
+</list-item><list-item dir="ltr"><bold>Row Count</bold> - подсчитывет кол-во прошедших через него строк и запихивает это значение в переменную
+</list-item><list-item dir="ltr"><bold>Row Sampling</bold> - то же, что и Percentage Sampling, но задается не процент, а точное кол-во
+</list-item><list-item dir="ltr"><bold>Sort</bold> - сортирует. Эквивалент ORDER BY.
+</list-item><list-item dir="ltr"><bold>Union All</bold>
+</list-item><list-item dir="ltr"><bold>Aggregate</bold> - указываем столбцы, по которым группируем и агрегатные функции над остыльными
+</list-item><list-item dir="ltr"><bold>Data Mining Query</bold>
+</list-item><list-item dir="ltr"><bold>Fuzzy Grouping</bold> - как я понял, что же самое, что aggregate, но основывается не на четком равенстве, а на взвешенном индексе 0..1
+</list-item><list-item dir="ltr"><bold>Fuzzy Lookup</bold> - как я понял, что же самое, что lookup, но основывается не на четком равенстве, а на взвешенном индексе 0..1
+</list-item><list-item dir="ltr"><bold>Pivot</bold> - как я понимаю, здесь можно просто написать запрос, как goup by - а он отобразит его как pivot
+</list-item><list-item dir="ltr"><bold>Script Component</bold> 
+</list-item><list-item dir="ltr"><bold>Slowly Changing Dimension</bold> - апдейтит dimension (обновляя Type1 или добавляя исторические записи Type2).  На выходе дает три потока на которые можно повесить свои Ole <link:internal>Db</link:internal> <link:internal>Command</link:internal>
+</list-item><list-item dir="ltr"><bold>Term Extraction</bold> - извлекает из текста информацию по частоте встречания, длине слов и так далее
+</list-item><list-item dir="ltr"><bold>Term Lookup</bold>
+</list-item><list-item dir="ltr"><bold>Unpivot</bold>
+</list-item><list-item dir="ltr">
+</list-item><list-item dir="ltr"></list-item></list>
+</note-content></text>
+  <last-change-date>2010-08-15T08:46:24.9407390+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-15T08:46:24.9407390+04:00</last-metadata-change-date>
+  <create-date>2010-08-15T04:34:46.4959690+04:00</create-date>
+  <cursor-position>1908</cursor-position>
+  <width>608</width>
+  <height>396</height>
+  <x>934</x>
+  <y>340</y>
+  <open-on-startup>False</open-on-startup>
+</note>

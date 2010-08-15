@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Control Flow</title>
+  <text xml:space="preserve"><note-content version="0.1">Control Flow
+
+<bold>About variables</bold>
+
+[@myNamespace::theCounter]
+
+<bold>Transactions</bold>
+
+Distributes Transaction Coordinator
+<italic>TransactionOption</italic> property on the component;
+
+<list><list-item dir="ltr">Supported - join existing trans, но не создает свою
+</list-item><list-item dir="ltr">Not Supported - не присоединяется к существующей и не создает свою
+</list-item><list-item dir="ltr">Required - присоединятеся к существующей или создаст свою, если нет</list-item></list>
+
+<bold>For Loop Container</bold>
+
+<list><list-item dir="ltr">init expression
+</list-item><list-item dir="ltr">eval expression
+</list-item><list-item dir="ltr">assign expression</list-item></list>
+
+По сути, цикл for.
+
+<bold>Foreach Loop Container</bold>
+
+Выбирается enumerator:
+
+<list><list-item dir="ltr">file
+</list-item><list-item dir="ltr">item
+</list-item><list-item dir="ltr">ado
+</list-item><list-item dir="ltr">...</list-item></list>
+
+Примерный пример использования:
+
+<list><list-item dir="ltr">создаем коннект к бд
+</list-item><list-item dir="ltr">execute <link:internal>sql</link:internal> task ' select id from <link:internal>test</link:internal>
+</list-item><list-item dir="ltr">создаем 2 переменые - типа int и dataset
+</list-item><list-item dir="ltr">в execute task связываем результатирующий dataset c соответствующей переменной
+</list-item><list-item dir="ltr">к выходу execute привязываем foreach
+</list-item><list-item dir="ltr">там выбираем ado enumerator и наш датасет переменную
+</list-item><list-item dir="ltr">variable mappings - к int переменной меппинг индекс 0
+</list-item><list-item dir="ltr"><italic>внутрь</italic> foreach бросаем script task (read only var = ds, readwritevar = v (int))
+</list-item><list-item dir="ltr">edit script -&gt; System.Diagnostics.Debug.Print(Dts.Variables("v").Value.ToSting())</list-item></list>
+
+<bold>Sequence</bold>
+
+Группирует <link:internal>контейнеры</link:internal> и выполняет их в транзакции.  
+
+<bold>ActiveX Script Task</bold>
+<bold>AS Execute DLL Task</bold>
+<bold>AS Processing Task</bold>
+<bold>Bulk Insert Task</bold>
+<bold>Data Mining Query Task</bold>
+<bold>Execute DTS 2000 Package Task</bold>
+<bold>Execute Process Task</bold>	
+<bold>Execute <link:internal>Sql</link:internal></bold><bold> Task</bold>
+<bold>File System Task</bold>
+<bold>FTP Task</bold>
+<bold>Message Queue Task</bold>
+<bold>Script Task</bold>
+<bold>Send Mail</bold>
+<bold>Transfer Database</bold>
+<bold><link:internal>Web</link:internal></bold><bold> Service</bold></note-content></text>
+  <last-change-date>2010-08-14T08:21:45.7222010+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-14T08:21:45.7222010+04:00</last-metadata-change-date>
+  <create-date>2010-08-14T06:05:10.5750590+04:00</create-date>
+  <cursor-position>1376</cursor-position>
+  <width>627</width>
+  <height>527</height>
+  <x>870</x>
+  <y>471</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Maintenance Plans</title>
+  <text xml:space="preserve"><note-content version="0.1">Maintenance Plans
+
+Набор тасков, выполняющих задачи, которые обычно выполняет админ: backup database, check database integrity ...</note-content></text>
+  <last-change-date>2010-08-14T08:25:18.1820460+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-14T08:25:18.1820460+04:00</last-metadata-change-date>
+  <create-date>2010-08-14T08:24:08.1858780+04:00</create-date>
+  <cursor-position>130</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1017</x>
+  <y>663</y>
+  <open-on-startup>False</open-on-startup>
+</note>
