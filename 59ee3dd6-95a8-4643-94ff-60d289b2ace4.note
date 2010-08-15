@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>SSIS Security</title>
+  <text xml:space="preserve"><note-content version="0.1">SSIS Security
+
+<bold>Digitally Signing Packages</bold>
+
+Подписываем пакеты, чтобы иметь гарантию, что они не изменились
+
+<bold>Package <link:internal>Encryption</link:internal></bold>
+
+<list><list-item dir="ltr">PackagePassword
+</list-item><list-item dir="ltr">ProtectionLevel
+<list><list-item dir="ltr">DontSaveSensitive (пароли не сохраняются в пакете)
+</list-item><list-item dir="ltr">EncryptSensitiveWithUserKey (пароль сохраняется криптованным - при открытии пакета пароль будет доступен только пользователю, создавшему его)
+</list-item><list-item dir="ltr">EncryptSensitiveWithPassword (криптует с паролем в свойстве PasswordPackage)
+</list-item><list-item dir="ltr">EncryptAllWithUserKey
+</list-item><list-item dir="ltr">ServerStorage (только для пакетов, хранящихся в <link:internal>Sql</link:internal> Server-е, а не на файловой системе)</list-item></list></list-item></list>
+
+<bold>Package Access</bold>
+
+<list><list-item dir="ltr">Если пакет хранится на файловой системе -&gt; все определяется настройками NTFS и групп пользователей
+</list-item><list-item dir="ltr">Если в базе данных - настройки <link:internal>Sql</link:internal> Server-а. Там есть <link:internal>роли</link:internal> - <link:internal>db</link:internal>_dts* и набор хранимых процедур - sp_dts_*</list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-08-15T17:33:33.1375370+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-15T17:33:33.1375370+04:00</last-metadata-change-date>
+  <create-date>2010-08-15T17:14:18.3603970+04:00</create-date>
+  <cursor-position>674</cursor-position>
+  <width>624</width>
+  <height>438</height>
+  <x>892</x>
+  <y>564</y>
+  <open-on-startup>False</open-on-startup>
+</note>

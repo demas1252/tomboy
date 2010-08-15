@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Optimization for SSIS</title>
+  <text xml:space="preserve"><note-content version="0.1">Optimization for SSIS
+
+<list><list-item dir="ltr">Preprocessing vs postprocessing
+</list-item><list-item dir="ltr">Normalization vs denormalization
+</list-item><list-item dir="ltr"><link:internal>SQL</link:internal> Server partionong - hardware, horizontal, vertical</list-item></list>
+
+Есть смысл выкидывать шаги, чтобы определить какой занимет больше времени (как я понял, автоматом это не собирается ?? ).  Как правило большую часть времени занимает чтение из источника.
+
+<list><list-item dir="ltr"><link:internal>Windows</link:internal> Task Manager
+</list-item><list-item dir="ltr">Perfomance/System Monitor
+</list-item><list-item dir="ltr"><link:internal>SQL</link:internal> Server Profiler
+</list-item><list-item dir="ltr"></list-item></list></note-content></text>
+  <last-change-date>2010-08-15T11:55:41.9365030+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-15T11:55:41.9365030+04:00</last-metadata-change-date>
+  <create-date>2010-08-15T11:18:16.6921440+04:00</create-date>
+  <cursor-position>91</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>1134</x>
+  <y>645</y>
+  <open-on-startup>False</open-on-startup>
+</note>

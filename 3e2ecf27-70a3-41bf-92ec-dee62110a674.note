@@ -3,14 +3,25 @@
   <title>SSIS Destination</title>
   <text xml:space="preserve"><note-content version="0.1">SSIS Destination
 
+<list><list-item dir="ltr">Data Mining Model Training - SSAS
+</list-item><list-item dir="ltr">DataReader
+</list-item><list-item dir="ltr">Dimension Processing - SSAS
+</list-item><list-item dir="ltr"><link:internal>Excel</link:internal>
+</list-item><list-item dir="ltr">Flat File
+</list-item><list-item dir="ltr">OleDb
+</list-item><list-item dir="ltr">Partition Processing - SSAS
+</list-item><list-item dir="ltr">Raw File
+</list-item><list-item dir="ltr">Recordset
+</list-item><list-item dir="ltr"><link:internal>Sql</link:internal> Server
+</list-item><list-item dir="ltr"><link:internal>Sql</link:internal> Server Mobile</list-item></list>
 </note-content></text>
-  <last-change-date>2010-08-15T08:47:32.4263640+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-15T08:47:32.4263640+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-15T11:17:52.7317100+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-15T11:17:52.7317100+04:00</last-metadata-change-date>
   <create-date>2010-08-15T08:47:05.6607220+04:00</create-date>
-  <cursor-position>18</cursor-position>
+  <cursor-position>213</cursor-position>
   <width>450</width>
   <height>360</height>
-  <x>1169</x>
-  <y>0</y>
+  <x>168</x>
+  <y>636</y>
   <open-on-startup>False</open-on-startup>
 </note>
