@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Доступ к данным в MSAS</title>
+  <text xml:space="preserve"><note-content version="0.1">Доступ к данным в MSAS
+
+<italic>Data Source - New Data Source - Wizard</italic>
+
+потом
+
+<italic>Data Source View - New Data Source View - Wizard</italic> 
+(здесь просто выбираются таблички)
+
+<bold>Named Calculations</bold>
+
+</note-content></text>
+  <last-change-date>2010-08-16T12:12:20.7459510+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-16T12:12:20.7459510+04:00</last-metadata-change-date>
+  <create-date>2010-08-16T12:02:35.8276320+04:00</create-date>
+  <cursor-position>175</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

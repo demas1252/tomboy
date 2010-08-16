@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание измерений</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание измерений
+
+<bold>Создание  простейшего измерения</bold>
+
+Dimensions - New Dimension
+
+Самое главное на этом этапе:
+
+<list><list-item dir="ltr">чтобы у измерений был задан PRIMARY KEY
+</list-item><list-item dir="ltr">чтобы у таблицы фактов был задан PRIMARY KEY
+</list-item><list-item dir="ltr">чтобы между фактами и измерениями были созданы relations</list-item></list>
+
+Тогда при запуске wizard:
+
+<list><list-item dir="ltr">use an existing table
+</list-item><list-item dir="ltr">выбираем таблицу-измерение - ключ и имя автоматически заполнятся по PRIMARY_KEY
+</list-item><list-item dir="ltr">Select dimension attributes - выбираем аттрибуты, которые будут входить в измерение (например, наименование)</list-item></list>
+
+<bold>Иерархии изменений</bold>
+
+Допустим есть аналитика Дата с атрибутами - год, квартал, месяц.
+Щелкаем в измерении на Год и говорим Start New Hierarhy.
+
+А туда набрасывам поля Квартал и год
+
+<bold>Attribute Relations</bold>
+
+<bold>Parent Chlid Dimensions</bold>
+
+Основывается на рекурсивных таблицах
+
+</note-content></text>
+  <last-change-date>2010-08-16T15:10:35.7657260+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-16T15:10:35.7657260+04:00</last-metadata-change-date>
+  <create-date>2010-08-16T12:12:55.7155000+04:00</create-date>
+  <cursor-position>199</cursor-position>
+  <width>916</width>
+  <height>470</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

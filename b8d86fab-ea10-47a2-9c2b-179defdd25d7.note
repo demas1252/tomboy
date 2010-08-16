@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Основы BI</title>
+  <text xml:space="preserve"><note-content version="0.1">Основы BI
+
+<italic>Атрибуты</italic> - цвет, марка, размер - то есть, как я понимаю это аналог измерениям (?).
+Содержимое одного списка аттрибутов (красный, черный, зеленый) - это <italic>members</italic>.
+
+<italic>Ключевой аттрибут </italic>- тот который однозначно идентифицирует члены остальных атрибутов - например, артикул.
+
+Атрибуты собираются в <italic>иерархии</italic>.  Например, модель и в нее вкладывается цвет.  
+Иерархии могут быть многоуровневыми - например даты: год, квартал, месяц.
+
+Независимые атрибуты и иерархии - это <italic>измерения</italic>.  Кол-во данных в отчете равно произведению кол-ва членов в кажом измерении.  Измерение содержит только один атрибут.  Атрибуты принадлежат измерению.  Допустим, что у нас есть измерение - артикул.  Ему принадлежит атрибут Артикул.  Но если мы знаем Артикул - мы знаем и цвет и размер -&gt; эти атрибуты тоже принадлежат нашему измерению.
+
+Измерения - просто удобный способ группировать связанные атрибуты.  
+
+В таблице фактов лучше использовать суррогатные ключи, так как это уменьшает <link:internal>размер таблицы</link:internal>.   Измерения, в которых атрибуты могут меняться называются <italic>slowly changing dimensions</italic>.  </note-content></text>
+  <last-change-date>2010-08-16T11:56:15.0725450+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-16T11:56:15.0725450+04:00</last-metadata-change-date>
+  <create-date>2010-08-16T11:14:30.4870330+04:00</create-date>
+  <cursor-position>10</cursor-position>
+  <width>540</width>
+  <height>615</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -11,17 +11,17 @@
 
 <link:internal>MS Reporting Services</link:internal>
 <link:internal>MS Integration Services</link:internal>
-MS Business Intelligence
+<link:internal>MS Anlysis Services</link:internal>
 Notification Services
 
 
 
 
 </note-content></text>
-  <last-change-date>2010-08-13T09:10:25.6409420+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-13T09:10:25.6409420+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-16T10:44:29.6413870+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-16T10:44:29.6413870+04:00</last-metadata-change-date>
   <create-date>2008-03-26T17:35:55.2242980+03:00</create-date>
-  <cursor-position>132</cursor-position>
+  <cursor-position>183</cursor-position>
   <width>364</width>
   <height>379</height>
   <x>331</x>
