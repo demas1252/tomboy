@@ -3,14 +3,29 @@
   <title>Создание кубов в MSAS</title>
   <text xml:space="preserve"><note-content version="0.1">Создание кубов в MSAS
 
+Измерения бывают:
+
+<list><list-item dir="ltr">сами по себе
+</list-item><list-item dir="ltr">измерения, принадлежащие кубу
+</list-item><list-item dir="ltr">role-playing dimensions (тут я не разбирался)</list-item></list>
+
+<bold>Создание Calculate Member</bold>
+
+КЯП, позволяет создать measure, вычисляемые на основе других measures
+
+<list><list-item dir="ltr">в редакторе кубов - закладка Calculations
+</list-item><list-item dir="ltr">кнопка New Calculate Member
+</list-item><list-item dir="ltr">правим имя
+</list-item><list-item dir="ltr">из Metadata натаскиваем Measures и строим из них выражение</list-item></list>
+
 </note-content></text>
-  <last-change-date>2010-08-16T15:11:32.1741810+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-16T15:11:32.1741810+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-17T10:32:07.3199310+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-17T10:32:07.3199310+04:00</last-metadata-change-date>
   <create-date>2010-08-16T15:11:01.8594180+04:00</create-date>
-  <cursor-position>23</cursor-position>
-  <width>450</width>
-  <height>360</height>
-  <x>0</x>
-  <y>0</y>
+  <cursor-position>383</cursor-position>
+  <width>656</width>
+  <height>493</height>
+  <x>973</x>
+  <y>478</y>
   <open-on-startup>False</open-on-startup>
 </note>
