@@ -64,17 +64,35 @@ WHERE [Unit Sales]</italic>
 
 <italic>SELECT ORDER([Store].[Stores].[Strore].members, [Measures.[Store Sales], BDESC) ON COLUMNS FROM cube</italic>
 
+<bold>Более сложные функции</bold>
+
+<italic>SELECT [Customer].[Occupation].[Occupation].members ON COLUMNS,
+            NON EMPTY [Store].[Stores].[Store Country].members ON ROWS
+FROM cube
+WHERE ([Measures].[Store Sales], [Time].[Time].[Year].[1997])</italic>
+
+<bold>Оператор <link:internal>задания</link:internal></bold><bold> области действия</bold>
+
+SCOPE - что то связанное с подкубами
+пока не стал разбираться
+
+<bold>Roots, Leaves</bold>
+
+Подкубы на вершине или на самом нижнем уровне куба.
+
+
+
 
 
 
 </note-content></text>
-  <last-change-date>2010-08-18T12:59:42.3911050+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-18T12:59:42.3911050+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-18T15:57:48.2892450+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-18T15:57:48.2892450+04:00</last-metadata-change-date>
   <create-date>2010-08-18T12:20:57.7943230+04:00</create-date>
-  <cursor-position>2187</cursor-position>
+  <cursor-position>2531</cursor-position>
   <width>720</width>
   <height>361</height>
-  <x>83</x>
-  <y>49</y>
+  <x>855</x>
+  <y>583</y>
   <open-on-startup>False</open-on-startup>
 </note>
