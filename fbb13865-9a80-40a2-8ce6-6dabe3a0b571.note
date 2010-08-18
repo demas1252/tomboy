@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Меры в MSAS</title>
+  <text xml:space="preserve"><note-content version="0.1">Меры в MSAS
+
+<italic>Выражения мер (Measure Expression)</italic> - определение арифмитической операции вычисления меры из других мер куба.  Например, когда у нас есть мера - выручка в валюте и мы создаем еще одну меру - курс вылюты, получая тем самым выражение - выручка в рублях.
+
+</note-content></text>
+  <last-change-date>2010-08-18T10:09:58.6434760+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-18T10:09:58.6434760+04:00</last-metadata-change-date>
+  <create-date>2010-08-18T10:06:28.6593320+04:00</create-date>
+  <cursor-position>121</cursor-position>
+  <width>708</width>
+  <height>394</height>
+  <x>36</x>
+  <y>577</y>
+  <open-on-startup>False</open-on-startup>
+</note>

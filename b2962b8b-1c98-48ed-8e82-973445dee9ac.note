@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>MDX</title>
+  <text xml:space="preserve"><note-content version="0.1">MDX
+
+<bold>Select</bold>
+
+Результат Select - многомерное подпространство, подкуб, который содержит множество измерений - <italic>осей (axis)</italic>. При создании запроссанадо указать перечень осей.
+
+<italic>SELECT &lt;содержимое оси&gt; ON axis(0),
+           &lt;содержимое оси&gt; ON axis(2),
+           &lt;содержимое оси&gt; ON axis(3)
+from &lt;имя куба&gt;
+</italic>
+Слово axis можно опускать и писать - 0, 1, 2.   Еще: 0 - Columns, 1 - Rows, 2 - Pages
+
+Допусим куб имеет три измерения: магазины, товары, время и три меры: продажи, расходы и продано.
+
+<italic>SELECT {([Drink], [1997]), ([Drink], [1998]), ([Food], [1997]), ([Food], [1998])} ON COLUMNS,
+([Measures].[Sales], [Measures].[Cost], [Measures].[UnitSales]) ON ROWS
+FROM cube</italic>
+
+При этом мы не указали значение Магазины. Теперь система создает дополнительную ось среза со значением аттрибута по умолчанию.  Это значение мы задаем или система выберет его сама.  Обычно выбирается значение All.
+
+<italic>SELECT [Store].[Stores].Defaultmember ON COLUMNS From cube</italic>
+
+Если не устраивает стандартный срез - пишем WHERE
+
+<italic>SELECT {([Drink], [1997]), ([Drink], [1998]), ([Food], [1997]), ([Food], [1998])} ON COLUMNS,
+([Measures].[Sales], [Measures].[Cost], [Measures].[UnitSales]) ON ROWS
+FROM cube</italic>
+W<italic>HERE [Store].[Stores].[Strore Country].[Mexico]</italic>
+
+Здесь:
+
+<italic>[Store].[Stores].[Strore Country].[Mexico]</italic> - измерение.иерархия.уровень иерархиии.значение
+
+<bold>Операции над множествами</bold>
+
+SELECT UNION ({[Renton],[Redmon]}, {[Edmonds]}) ON COLUMNS FROM cube
+SELECT INTERSECT ({[Renton],[Redmon]}, {[Redmon]}) ON COLUMNS FROM cube
+SELECT EXCEPT ({[Renton],[Redmon]}, {[Redmon]}) ON COLUMNS FROM cube
+
+еще CrossJoin, Extract
+
+<bold>Функции MDX</bold>
+
+Для того, чтобы избежать долгих перечислений в запросах.
+
+<italic>SELECT [USA].Children ON COLUMNS FROM cube
+SELECT DESCENDANTS ([USA], [Store City]) ON COLUMNS FROM cube
+SELECT DESCENDANTS ([Store].[Stores].[Store County].[USA], , LEAVES) ON COLUMNS FROM cube
+
+</italic><bold>Функции для фильтрации</bold>
+
+<italic>SELECT
+FILTER([Store].[Stores].[Store].members,
+          ([Unit Sales],[1998]) &lt; ([Unit Sales], [1997])) ON COLUMNS
+          {[1997], [1998]} ON ROWS 
+FROM cube
+WHERE [Unit Sales]</italic>
+
+<bold>Функции для упорядочивания данных</bold>
+
+<italic>SELECT ORDER([Store].[Stores].[Strore].members, [Measures.[Store Sales], BDESC) ON COLUMNS FROM cube</italic>
+
+
+
+
+</note-content></text>
+  <last-change-date>2010-08-18T12:59:42.3911050+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-18T12:59:42.3911050+04:00</last-metadata-change-date>
+  <create-date>2010-08-18T12:20:57.7943230+04:00</create-date>
+  <cursor-position>2187</cursor-position>
+  <width>720</width>
+  <height>361</height>
+  <x>83</x>
+  <y>49</y>
+  <open-on-startup>False</open-on-startup>
+</note>

@@ -3,11 +3,19 @@
   <title>Создание кубов в MSAS</title>
   <text xml:space="preserve"><note-content version="0.1">Создание кубов в MSAS
 
-Измерения бывают:
+<list><list-item dir="ltr">КЯП, нельзя изменить измерение в кубе, можно изменить только сам куб.
+</list-item><list-item dir="ltr">AttributeHierarhyEnable - позволяет отключить иерархию атрибутов в кубе, если она есть в измерении в базе данных, но в кубе не нужна (например, дни в иерархии времени)
+</list-item><list-item dir="ltr">Перспективы, это как view над кубом, выбирающие часть данных из него.  Есть сильное подозрение, что в последних версиях MSAS их роль сильно упала.</list-item></list>
+
+<bold>Измерения бывают</bold>
 
 <list><list-item dir="ltr">сами по себе
 </list-item><list-item dir="ltr">измерения, принадлежащие кубу
 </list-item><list-item dir="ltr">role-playing dimensions (тут я не разбирался)</list-item></list>
+
+<bold>Dimension Usage</bold>
+
+Здесь по горизнотали - группы мер, по вертикали измерения.  На пересечении - как данное измерение будет использовать для работы с данной группой мер.  Например, там можно задать гранулярность иерархической аналитики.
 
 <bold>Создание Calculate Member</bold>
 
@@ -17,15 +25,14 @@
 </list-item><list-item dir="ltr">кнопка New Calculate Member
 </list-item><list-item dir="ltr">правим имя
 </list-item><list-item dir="ltr">из Metadata натаскиваем Measures и строим из них выражение</list-item></list>
-
 </note-content></text>
-  <last-change-date>2010-08-17T10:32:07.3199310+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-17T10:32:07.3199310+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-18T12:17:09.7799980+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-18T12:17:09.7799980+04:00</last-metadata-change-date>
   <create-date>2010-08-16T15:11:01.8594180+04:00</create-date>
-  <cursor-position>383</cursor-position>
+  <cursor-position>544</cursor-position>
   <width>656</width>
   <height>493</height>
-  <x>973</x>
-  <y>478</y>
+  <x>337</x>
+  <y>400</y>
   <open-on-startup>False</open-on-startup>
 </note>

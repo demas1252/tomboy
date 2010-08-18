@@ -32,17 +32,16 @@ Dimensions - New Dimension
 </list-item><list-item dir="ltr">AttributeHierarhyEnabled - наличие или отсутсвие иерархии атрбутов (по умолчанию - наличие)
 </list-item><list-item dir="ltr">....</list-item></list>
 
-<bold>Attribute Relations</bold>
 
 <bold>Parent Chlid Dimensions</bold>
 
 Основывается на рекурсивных таблицах
 
 </note-content></text>
-  <last-change-date>2010-08-17T16:20:58.4803770+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-17T16:20:58.4803770+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-18T10:05:12.7352530+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-18T10:05:12.7352530+04:00</last-metadata-change-date>
   <create-date>2010-08-16T12:12:55.7155000+04:00</create-date>
-  <cursor-position>684</cursor-position>
+  <cursor-position>952</cursor-position>
   <width>817</width>
   <height>653</height>
   <x>55</x>
