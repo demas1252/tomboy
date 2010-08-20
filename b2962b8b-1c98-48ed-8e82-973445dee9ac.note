@@ -51,6 +51,14 @@ SELECT EXCEPT ({[Renton],[Redmon]}, {[Redmon]}) ON COLUMNS FROM cube
 SELECT DESCENDANTS ([USA], [Store City]) ON COLUMNS FROM cube
 SELECT DESCENDANTS ([Store].[Stores].[Store County].[USA], , LEAVES) ON COLUMNS FROM cube
 
+</italic><bold>Функции для навигации в иерархии</bold>
+
+<italic>SELECT [Warehouse].[Warehouses].[State Provice].MEMBERS ON COLUMNS
+FROM cube
+
+SELECT [Warehouse].[Warehouses].CHILDREN ON COLUMNS
+FROM cube
+
 </italic><bold>Функции для фильтрации</bold>
 
 <italic>SELECT
@@ -80,19 +88,35 @@ SCOPE - что то связанное с подкубами
 
 Подкубы на вершине или на самом нижнем уровне куба.
 
+<bold>Полуаддитивные меры</bold>
+
+<list><list-item dir="ltr">NONE - вообще не агрегируется
+</list-item><list-item dir="ltr">FIRSTCHILD - агрегируется все, кроме времени. Время - первый потомок данного элемента.
+</list-item><list-item dir="ltr">LASTCHILD -  агрегируется все, кроме времени. Время - последний потомок данного элемента.
+</list-item><list-item dir="ltr">....</list-item></list>
+
+SELECT [Product].[Products].[Product Subcategory].[Oysters] ON COLUMNS,
+DESCENDANTS ([Time].[Time].[Year].[1997], [Time].[Time].[Date], BEFORE_AND_AFTER) ON ROWS
+FROM cube WHERE [Measures].[Units]
+
+1997 40
+  Q1   0
+  Q2   0
+  Q3  22
+  Q4  40
 
 
 
 
 
 </note-content></text>
-  <last-change-date>2010-08-18T15:57:48.2892450+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-18T15:57:48.2892450+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-19T17:43:46.8547310+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T17:43:46.8547310+04:00</last-metadata-change-date>
   <create-date>2010-08-18T12:20:57.7943230+04:00</create-date>
-  <cursor-position>2531</cursor-position>
+  <cursor-position>3244</cursor-position>
   <width>720</width>
-  <height>361</height>
-  <x>855</x>
-  <y>583</y>
+  <height>704</height>
+  <x>0</x>
+  <y>235</y>
   <open-on-startup>False</open-on-startup>
 </note>

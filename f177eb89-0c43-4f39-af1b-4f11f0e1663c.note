@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Шаблоны в Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Шаблоны в Django
+
+<italic>&gt;&gt;&gt; from <link:internal>django</link:internal></italic><italic>.template import Context, Template
+&gt;&gt;&gt; t = Template("My name is {{ name }}.")
+&gt;&gt;&gt; c = Context({"name": "Stephane"})
+&gt;&gt;&gt; t.render(c)
+'My name is Stephane.'</italic>
+
+<italic>&gt;&gt;&gt; from <link:internal>django</link:internal></italic><italic>.template import Template, Context
+&gt;&gt;&gt; person = {'name': 'Sally', 'age': '43'}
+&gt;&gt;&gt; t = Template('{{ person.name }} is {{ person.age }} years old.')
+&gt;&gt;&gt; c = Context({'person': person})
+&gt;&gt;&gt; t.render(c)
+'Sally is 43 years old.'</italic>
+
+То есть, в нашем view.py мы меняем метод так:
+
+<italic>from <link:internal>django</link:internal></italic><italic>.template import Template, Context
+from <link:internal>django</link:internal></italic><italic>.http import HttpResponse
+import datetime
+
+def current_datetime(request):
+  now = datetime.datetime.now()
+  t = Template("&lt;<link:internal>html</link:internal></italic><italic>&gt;&lt;body&gt;It is now {{ current_datetime }}. &lt;/body&gt;&lt;/<link:internal>html</link:internal></italic><italic>&gt;")
+  <link:internal>html</link:internal></italic><italic> = t.render(Context({'current_datetime' : now}))
+  return HttpResponse(<link:internal>html</link:internal></italic><italic>)</italic>
+
+Теперь осталось вынести шаблоны в отдельный файл:
+
+<list><list-item dir="ltr">В settings.py прописываем директорию</list-item></list>
+
+	<italic>TEMPLATE_DIRS = (
+	    '/home/demas/artefacts/dev/study/<link:internal>python</link:internal></italic><italic>/<link:internal>django</link:internal></italic><italic>/mysite/template'
+	)
+</italic>
+<list><list-item dir="ltr">Код:</list-item></list>
+
+	<italic>from <link:internal>django</link:internal></italic><italic>.template.loader import get_template
+	from <link:internal>django</link:internal></italic><italic>.template import Template, Context
+	from <link:internal>django</link:internal></italic><italic>.http import HttpResponse
+	import datetime
+
+	def current_datetime(request):
+	  now = datetime.datetime.now()
+	  t = get_template('current_datetime.<link:internal>html</link:internal></italic><italic>')
+	  <link:internal>html</link:internal></italic><italic> = t.render(Context({'current_datetime' : now}))
+	  return HttpResponse(<link:internal>html</link:internal></italic><italic>)</italic>
+
+<list><list-item dir="ltr">И в <link:internal>templates</link:internal> шаблон:</list-item></list>
+
+	<italic>&lt;<link:internal>html</link:internal></italic><italic>&gt;&lt;body&gt;It is now {{ current_datetime }}. &lt;/body&gt;&lt;/<link:internal>html</link:internal></italic><italic>&gt;</italic>
+
+Это же можно записать короче:
+
+<italic>rom <link:internal>django</link:internal></italic><italic>.shortcuts import render_to_response
+import datetime
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    return render_to_response('current_datetime.<link:internal>html</link:internal></italic><italic>', {'current_date': now})</italic></note-content></text>
+  <last-change-date>2010-08-19T16:27:50.5220350+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T16:27:50.5220350+04:00</last-metadata-change-date>
+  <create-date>2010-08-19T16:16:07.3000370+04:00</create-date>
+  <cursor-position>1667</cursor-position>
+  <width>546</width>
+  <height>593</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

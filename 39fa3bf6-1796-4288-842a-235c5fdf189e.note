@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Создание модели в Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Создание модели в Django
+
+<list><list-item dir="ltr">В settings.py прописываем подключение в базе данных
+</list-item><list-item dir="ltr">Создаем приложение</list-item></list>
+
+		<italic><link:internal>python</link:internal></italic><italic> manage.py startapp books</italic>
+
+<list><list-item dir="ltr">В получившейся папке в models.py рисуем модель:</list-item></list>
+
+<italic>from <link:internal>django</link:internal></italic><italic>.<link:internal>db</link:internal></italic><italic> import models
+
+class Publisher(models.Model):
+  name = models.CharField(max_length = 30)
+  address = models.CharField(max_length = 50)
+  
+  def __str__(self):
+    return self.name
+  
+class Author(models.Model):
+  salutation = models.CharField(max_length = 10)
+  email = models.EmailField()
+  
+  def __str__(self):
+    return self.email
+  
+class Book(models.Model):
+  title = models.CharField(max_length = 100)
+  authors = models.ManyToManyField(Author)
+  publisher = models.ForeignKey(Publisher)
+  pub_date = models.DateField()
+  
+  def __str__(self):
+    return self.title
+</italic>
+<list><list-item dir="ltr">Прописываем наше приложение в INSTALLED_APPS в конфиге
+</list-item><list-item dir="ltr">Отображаем модель на базу данных</list-item></list>
+
+	<italic><link:internal>python</link:internal></italic><italic> manage.py validate
+	<link:internal>python</link:internal></italic><italic> manage.py sqlall books
+	<link:internal>python</link:internal></italic><italic> manage.py syncdb</italic>
+</note-content></text>
+  <last-change-date>2010-08-20T12:34:40.9675640+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-20T12:34:40.9675640+04:00</last-metadata-change-date>
+  <create-date>2010-08-20T12:30:36.2386550+04:00</create-date>
+  <cursor-position>929</cursor-position>
+  <width>586</width>
+  <height>360</height>
+  <x>0</x>
+  <y>615</y>
+  <open-on-startup>False</open-on-startup>
+</note>

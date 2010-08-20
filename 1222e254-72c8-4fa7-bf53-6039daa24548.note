@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Панель администрирования Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Панель администрирования Django
+
+<list><list-item dir="ltr"><link:internal>django</link:internal>.contrib.admin в INSTALLED_APPS
+</list-item><list-item dir="ltr"><link:internal>python</link:internal> manage.py syncdb
+</list-item><list-item dir="ltr">urls.py</list-item></list>
+
+	<italic># Include these import statements...
+	from <link:internal>django</link:internal></italic><italic>.contrib import admin
+	admin.autodiscover()
+
+	# And include this URLpattern...
+	urlpatterns = patterns('',
+	    # ...
+	    (r'^admin/', include(admin.site.urls)),
+	    # ...
+	)
+</italic>
+<list><list-item dir="ltr"><link:url>http://127.0.0.1:8000/admin/</link:url>
+</list-item><list-item dir="ltr">Добавляем наши модели в админку.  Для этого создаем файл admin.py в подкаталоге приложения Books</list-item></list>
+		
+<italic>		from <link:internal>django</link:internal></italic><italic>.contrib import admin
+		from mysite.books.models import Publisher, Author, Book
+
+		admin.site.register(Publisher)
+		admin.site.register(Author)
+		admin.site.register(Book)
+</italic>
+<list><list-item dir="ltr"></list-item></list>
+
+</note-content></text>
+  <last-change-date>2010-08-20T17:36:57.6834640+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-20T17:36:57.6834640+04:00</last-metadata-change-date>
+  <create-date>2010-08-20T17:12:35.0306350+04:00</create-date>
+  <cursor-position>662</cursor-position>
+  <width>534</width>
+  <height>672</height>
+  <x>31</x>
+  <y>272</y>
+  <open-on-startup>False</open-on-startup>
+</note>

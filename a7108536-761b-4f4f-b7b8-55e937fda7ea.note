@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Динамический маппинг страниц в Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Динамический маппинг страниц в Django
+
+<list><list-item dir="ltr">Добавляем в urls.py</list-item></list>
+
+	<italic>from mysite.view import hours_ahead
+
+	urlpatterns = patterns('',
+	    (r'^time/$', current_datetime),
+	    (r'^time/plus/(\d{1,2})/$', hours_ahead),</italic>
+
+
+<list><list-item dir="ltr">Создаем метод:</list-item></list>
+
+<italic>def hours_ahead(request, offset):
+   offset = int(offset)
+   dt = datetime.datetime.now() + datetime.timedelta(hours = offset)
+   <link:internal>html</link:internal></italic><italic> = "&lt;<link:internal>html</link:internal></italic><italic>&gt;&lt;body&gt;In %s hours, it will be %s.&lt;/body&gt;&lt;/<link:internal>html</link:internal></italic><italic>&gt;" % (offset, dt)
+   return HttpResponse(<link:internal>html</link:internal></italic><italic>)</italic>
+
+Здесь <italic>(\d{1,2})</italic> очень важны круглые скобки, так как они говорят, что это будет параметром.</note-content></text>
+  <last-change-date>2010-08-19T16:11:12.6498380+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T16:11:12.6498380+04:00</last-metadata-change-date>
+  <create-date>2010-08-19T16:09:32.5771700+04:00</create-date>
+  <cursor-position>468</cursor-position>
+  <width>678</width>
+  <height>360</height>
+  <x>97</x>
+  <y>615</y>
+  <open-on-startup>False</open-on-startup>
+</note>

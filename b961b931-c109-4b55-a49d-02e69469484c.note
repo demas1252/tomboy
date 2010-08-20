@@ -12,7 +12,7 @@ SimPy
 <link:internal>Pyglet</link:internal>
 <link:internal>PyGame</link:internal>
 Twisted
-Django
+<link:internal>Django</link:internal>
 Google Apps Engine
 <link:internal>readline</link:internal>
 <link:internal>DistUtils</link:internal>
@@ -20,8 +20,8 @@ Google Apps Engine
 
 <link:internal>Remote Python Call Frameworks</link:internal>
 </note-content></text>
-  <last-change-date>2010-07-21T07:46:21.9734710+04:00</last-change-date>
-  <last-metadata-change-date>2010-07-21T07:46:21.9734710+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-19T11:51:46.6900340+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T11:51:46.6900340+04:00</last-metadata-change-date>
   <create-date>2009-03-24T09:22:34.8348370+03:00</create-date>
   <cursor-position>154</cursor-position>
   <width>727</width>

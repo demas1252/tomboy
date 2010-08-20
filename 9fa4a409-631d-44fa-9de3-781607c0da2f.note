@@ -9,11 +9,13 @@
 <link:internal>Меры в MSAS</link:internal>
 <link:internal>Создание кубов в MSAS</link:internal>
 <link:internal>Creating Advanced Measures and Calculations</link:internal>
-<link:internal>MDX</link:internal></note-content></text>
-  <last-change-date>2010-08-18T12:21:12.7235520+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-18T12:21:12.7235520+04:00</last-metadata-change-date>
+<link:internal>MDX</link:internal>
+<link:internal>KPI</link:internal>
+<link:internal>Actions (действия) в MSAS</link:internal></note-content></text>
+  <last-change-date>2010-08-19T18:02:41.8061640+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T18:02:41.8061640+04:00</last-metadata-change-date>
   <create-date>2010-08-16T10:44:18.7051420+04:00</create-date>
-  <cursor-position>155</cursor-position>
+  <cursor-position>170</cursor-position>
   <width>411</width>
   <height>387</height>
   <x>1147</x>

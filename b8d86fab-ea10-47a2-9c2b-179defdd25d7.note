@@ -45,6 +45,8 @@
 
 Функции агрегатирования могут быть простыми - аддитивными <italic>(additive)</italic> или сложными - полуаддитивными (<italic>semi-additive</italic>).  
 
+Вот пример полуаадитивной меры.  Допустим у нас есть куб с измерениеми <link:internal>склад</link:internal> и время и  мерами "количество товара на складе" и "инвентаризировано".  Кол-во на склады мы можем легко агрегировать, но вот Инвентаризировано агрегировать нельзя (исходя из смысла этой величины).  То есть, мера Инвентаризировано является агрегируемой по измерению <link:internal>Склад</link:internal>, но не агрегируемой по измерению Время = то есть <italic>полуаадитивной</italic>.
+
 <bold>Универсальная многомерная модель данных UDM</bold>
 
 Три метода взаимодействия хранилища и OLAP:
@@ -59,10 +61,10 @@
 
 
 </note-content></text>
-  <last-change-date>2010-08-17T16:08:34.0724020+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-17T16:08:34.0724020+04:00</last-metadata-change-date>
+  <last-change-date>2010-08-19T17:38:37.0269420+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T17:38:37.0269420+04:00</last-metadata-change-date>
   <create-date>2010-08-16T11:14:30.4870330+04:00</create-date>
-  <cursor-position>1156</cursor-position>
+  <cursor-position>2342</cursor-position>
   <width>540</width>
   <height>615</height>
   <x>28</x>

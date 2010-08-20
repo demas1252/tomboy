@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Запуск простейшего проекта Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Запуск простейшего проекта Django
+
+&gt;&gt; <link:internal>django</link:internal>-admin.py startproject myone
+
+cd myone
+
+&gt;&gt; <link:internal>python</link:internal> manage.py runserver
+
+<link:internal>python</link:internal> manage.py runserver</note-content></text>
+  <last-change-date>2010-08-19T11:53:02.0432050+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T11:53:02.0432050+04:00</last-metadata-change-date>
+  <create-date>2010-08-19T11:52:10.6041340+04:00</create-date>
+  <cursor-position>141</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>468</y>
+  <open-on-startup>False</open-on-startup>
+</note>

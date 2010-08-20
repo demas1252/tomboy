@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>KPI</title>
+  <text xml:space="preserve"><note-content version="0.1">KPI
+
+<list><list-item dir="ltr">Value expression и Goal expression - это две величины, которые будут сравниваться и на основании которых будет сниматься показатель.  Они могут быть сложными формулами, но можо просто перетащить в них две меры.
+</list-item><list-item dir="ltr">В Status Expession пишем так:</list-item></list>
+
+<italic>Case
+ When 
+  KpiValue("Reseller Revenue")/KpiGoal("Reseller Revenue")&gt;=.95
+   Then 1
+ When
+  KpiValue("Reseller Revenue")/KpiGoal("Reseller Revenue")&lt;.95
+   And 
+  KpiValue("Reseller Revenue")/KpiGoal("Reseller Revenue")&gt;=.85
+   Then 0
+  Else-1
+End
+</italic>
+Reseller Revenue - это имя текущего KPI.
+
+Потом разворачиваем куб, пересоединяемся и на закладке KPI жмем Browser View
+
+Еще есть Trend, но я с ним не разбирался.</note-content></text>
+  <last-change-date>2010-08-19T18:01:47.3122050+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T18:01:47.3122050+04:00</last-metadata-change-date>
+  <create-date>2010-08-19T17:05:08.8130700+04:00</create-date>
+  <cursor-position>501</cursor-position>
+  <width>660</width>
+  <height>360</height>
+  <x>601</x>
+  <y>534</y>
+  <open-on-startup>False</open-on-startup>
+</note>

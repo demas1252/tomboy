@@ -5,7 +5,7 @@
 
 <link:internal>If</link:internal> you're coming from CGI development and planning a small app, I'll give a plug for the WebStack[<link:internal>1</link:internal>] framework which basically reduces just about every option out there (CGI, <link:internal>mod</link:internal>_<link:internal>python</link:internal>, built-in BaseHTTPServer, and several othes) to a common API.
 
-However, I'd also recommend looking into one of the more powerful frameworks that abstracts away the server interface a bit more. I'm personally a Django[2] guy, but for <link:broken>some</link:broken> folks <link:internal>CherryPy</link:internal>[3], Pylons[4], TurboGears[5] or Zope[6] fills the bill.
+However, I'd also recommend looking into one of the more powerful frameworks that abstracts away the server interface a bit more. I'm personally a <link:internal>Django</link:internal>[2] guy, but for <link:broken>some</link:broken> folks <link:internal>CherryPy</link:internal>[3], Pylons[4], TurboGears[5] or Zope[6] fills the bill.
 
 [<link:internal>1</link:internal>] <link:url>http://www.boddie.org.uk/<link:internal>python</link:internal></link:url><link:url>/WebStack.html</link:url>
 [2] <link:url>http://www.djangoproject.com</link:url>
@@ -14,8 +14,8 @@ However, I'd also recommend looking into one of the more powerful frameworks tha
 [5] <link:url>http://turbogears.org</link:url>
 [6] <link:url>http://zope.org</link:url>
 [7] <link:url>http://twistedmatrix.com</link:url></note-content></text>
-  <last-change-date>2010-03-21T18:14:02.2890800+03:00</last-change-date>
-  <last-metadata-change-date>2010-03-21T18:14:02.2890800+03:00</last-metadata-change-date>
+  <last-change-date>2010-08-19T11:51:46.7774420+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T11:51:46.7774420+04:00</last-metadata-change-date>
   <create-date>2008-03-28T14:09:55.9101930+03:00</create-date>
   <cursor-position>67</cursor-position>
   <width>450</width>

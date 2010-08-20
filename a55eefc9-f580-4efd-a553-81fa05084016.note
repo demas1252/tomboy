@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Добавление динамической Web страницы в Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Добавление динамической Web страницы в Django
+
+<list><list-item dir="ltr">Создаем функцию, которая будет возвращать динамическую <link:internal>web</link:internal> страницу</list-item></list>
+
+	<italic>from <link:internal>django</link:internal></italic><italic>.http import HttpResponse
+	import datetime
+
+	def current_datetime(request):
+	    now = datetime.datetime.now()
+	    <link:internal>html</link:internal></italic><italic> = "&lt;<link:internal>html</link:internal></italic><italic>&gt;&lt;body&gt;It is now %s.&lt;/body&gt;&lt;/<link:internal>html</link:internal></italic><italic>&gt;" % now
+	    return HttpResponse(<link:internal>html</link:internal></italic><italic>)</italic>
+
+	КЯП, она может лежать где угодно - например, mysite/view.py
+
+<list><list-item dir="ltr">В urls.py прописываем меппинг на наш новый файл:</list-item></list>
+
+	<italic>from mysite.views import current_datetime
+
+	urlpatterns = patterns('',
+	    (r'^time/$', current_datetime),
+	)</italic></note-content></text>
+  <last-change-date>2010-08-19T15:49:43.2185670+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-19T15:49:43.2185670+04:00</last-metadata-change-date>
+  <create-date>2010-08-19T15:46:44.5491640+04:00</create-date>
+  <cursor-position>556</cursor-position>
+  <width>613</width>
+  <height>516</height>
+  <x>233</x>
+  <y>213</y>
+  <open-on-startup>False</open-on-startup>
+</note>
