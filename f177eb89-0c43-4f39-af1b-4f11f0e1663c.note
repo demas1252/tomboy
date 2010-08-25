@@ -68,6 +68,6 @@ def current_datetime(request):
   <width>546</width>
   <height>593</height>
   <x>0</x>
-  <y>0</y>
+  <y>143</y>
   <open-on-startup>False</open-on-startup>
 </note>

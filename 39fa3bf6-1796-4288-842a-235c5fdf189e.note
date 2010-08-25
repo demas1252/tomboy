@@ -45,7 +45,7 @@ class Book(models.Model):
   <last-change-date>2010-08-20T12:34:40.9675640+04:00</last-change-date>
   <last-metadata-change-date>2010-08-20T12:34:40.9675640+04:00</last-metadata-change-date>
   <create-date>2010-08-20T12:30:36.2386550+04:00</create-date>
-  <cursor-position>929</cursor-position>
+  <cursor-position>869</cursor-position>
   <width>586</width>
   <height>360</height>
   <x>0</x>

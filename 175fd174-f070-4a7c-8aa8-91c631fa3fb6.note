@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Обновление схемы при ихзменении модели в Django</title>
+  <text xml:space="preserve"><note-content version="0.1">Обновление схемы при ихзменении модели в Django
+
+<link:url>http://code.google.com/p/django-evolution/</link:url>
+<link:url>http://south.aeracode.org/</link:url>
+<link:url>http://habrahabr.ru/blogs/django/47004/</link:url></note-content></text>
+  <last-change-date>2010-08-24T18:25:35.1728980+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-24T18:25:35.1728980+04:00</last-metadata-change-date>
+  <create-date>2010-08-24T18:24:53.9487110+04:00</create-date>
+  <cursor-position>82</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>

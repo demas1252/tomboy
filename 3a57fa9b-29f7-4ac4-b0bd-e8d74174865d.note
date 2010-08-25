@@ -9,11 +9,13 @@
 <link:internal>Шаблоны в Django</link:internal>
 <link:internal>Создание модели в Django</link:internal>
 <link:internal>Панель администрирования Django</link:internal>
-<link:internal>Django Forms</link:internal></note-content></text>
-  <last-change-date>2010-08-20T17:43:57.2701790+04:00</last-change-date>
-  <last-metadata-change-date>2010-08-20T17:43:57.2701790+04:00</last-metadata-change-date>
+<link:internal>Django Forms</link:internal>
+
+<link:internal>Обновление схемы при ихзменении модели в Django</link:internal></note-content></text>
+  <last-change-date>2010-08-24T18:25:04.0505360+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-24T18:25:04.0505360+04:00</last-metadata-change-date>
   <create-date>2010-08-19T11:51:37.6597320+04:00</create-date>
-  <cursor-position>212</cursor-position>
+  <cursor-position>214</cursor-position>
   <width>450</width>
   <height>360</height>
   <x>94</x>

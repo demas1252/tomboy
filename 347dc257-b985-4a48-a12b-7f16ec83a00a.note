@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Относительные атомные и молекулярные массы</title>
+  <text xml:space="preserve"><note-content version="0.1">Относительные атомные и молекулярные массы
+
+Величину, которая показывает, во сколько раз масса атома данного химического элемента больше массы атома водорода, называют <italic>относительной атомной массой</italic>.
+
+A(O) = 16, A(H) = 1, A(C) = 12
+
+<italic>Молекулярная масса</italic> M(H2O) = 18
+
+</note-content></text>
+  <last-change-date>2010-08-25T18:15:38.3396510+04:00</last-change-date>
+  <last-metadata-change-date>2010-08-25T18:15:38.3396510+04:00</last-metadata-change-date>
+  <create-date>2010-08-25T18:12:53.7443680+04:00</create-date>
+  <cursor-position>249</cursor-position>
+  <width>450</width>
+  <height>360</height>
+  <x>0</x>
+  <y>0</y>
+  <open-on-startup>False</open-on-startup>
+</note>
